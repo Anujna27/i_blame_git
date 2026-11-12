@@ -7,7 +7,7 @@ from core.knowledge_graph import KnowledgeGraph
 class GraphStore:
     """Compatibility wrapper around the shared KnowledgeGraph."""
 
-    def __init__(self, path: str = "data/provenance_graph.json"):
+    def __init__(self, path: str = "data/knowledge_graph.json"):
         self._provenance = KnowledgeGraph(path=path)
 
     @property

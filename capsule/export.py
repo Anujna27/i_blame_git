@@ -6,10 +6,10 @@ from uuid import uuid4
 
 
 class CapsuleExporter:
-    def export(self, agent_name, all_nodes, provenance_graph, hash_chain, residual_risks, session_commits=None):
+    def export(self, agent_name, all_nodes, knowledge_graph, hash_chain, residual_risks, session_commits=None):
         capsule_id = str(uuid4())
         lifecycle_history = {n.node_id: list(getattr(n, "lifecycle", [])) for n in all_nodes}
-        edges = [{"parent": u, "child": v, "type": d.get("type", d.get("edge_type", "derived")), "metadata": dict(d)} for u, v, d in provenance_graph.graph.edges(data=True)]
+        edges = [{"parent": u, "child": v, "type": d.get("type", d.get("edge_type", "derived")), "metadata": dict(d)} for u, v, d in knowledge_graph.graph.edges(data=True)]
         capsule = {
             "@context": "https://mnemosyne.dev/schema/v1",
             "capsule_id": capsule_id,
@@ -21,8 +21,8 @@ class CapsuleExporter:
                                "dimension": 384, "rebuild_on_import": True,
                                "active_entity_ids": [n.node_id for n in all_nodes if n.deletion_state == "active"]},
             "lifecycle_history": lifecycle_history,
-            "derivation_graph": {"nodes": list(provenance_graph.graph.nodes), "edges": edges},
-            "session_commits": session_commits if session_commits is not None else getattr(provenance_graph, "session_commits", {}),
+            "derivation_graph": {"nodes": list(knowledge_graph.graph.nodes), "edges": edges},
+            "session_commits": session_commits if session_commits is not None else getattr(knowledge_graph, "session_commits", {}),
             "deletion_audit": {
                 "deleted_nodes": [n.node_id for n in all_nodes if n.deletion_state != "active"],
                 "invalidated_children": [n.node_id for n in all_nodes if n.deletion_state == "invalidated"],
