@@ -36,17 +36,42 @@ class ProvenanceGraph:
         return [x for x in self.get_descendants(node_id) if self.nodes.get(x) and self.nodes[x].deletion_state == "active"
                 and any(self.nodes.get(p) and self.nodes[p].deletion_state != "active" for p in self.graph.predecessors(x))]
 
+    def find_orphans(self):
+        return [n.node_id for n in self.get_all_active_nodes()
+                if any(self.nodes.get(p) and self.nodes[p].deletion_state != "active"
+                       for p in self.graph.predecessors(n.node_id))]
+
+    def heal_orphans(self, actor="graph-healer"):
+        """Reattach orphaned entities to their nearest active ancestor when possible."""
+        healed = []
+        for node_id in self.find_orphans():
+            node = self.nodes[node_id]
+            active_ancestors = [a for a in nx.ancestors(self.graph, node_id)
+                                if self.nodes.get(a) and self.nodes[a].deletion_state == "active"]
+            if active_ancestors:
+                parent = active_ancestors[-1]
+                self.graph.add_edge(parent, node_id, type="healed_provenance")
+                self.nodes[parent].add_derivation(node_id, "healed_provenance")
+                healed.append({"node_id": node_id, "parent_id": parent})
+            else:
+                node.record_lifecycle_event("quarantined", actor, "no active provenance root")
+                healed.append({"node_id": node_id, "parent_id": None})
+        if healed: self.persist()
+        return healed
+
     def get_all_active_nodes(self): return [n for n in self.nodes.values() if n.deletion_state == "active"]
     def get_deleted_nodes(self): return [n for n in self.nodes.values() if n.deletion_state != "active"]
 
     def persist(self):
         Path(self.path).parent.mkdir(parents=True, exist_ok=True)
-        payload = {"graph": nx.node_link_data(self.graph), "nodes": {k: v.to_jsonld() for k, v in self.nodes.items()}}
+        payload = {"graph": nx.node_link_data(self.graph, edges="edges"), "nodes": {k: v.to_jsonld() for k, v in self.nodes.items()}}
         with open(self.path, "w", encoding="utf-8") as f: json.dump(payload, f, indent=2, default=str)
 
     def load(self):
         if not os.path.exists(self.path): return
         with open(self.path, "r", encoding="utf-8") as f: payload = json.load(f)
         if "graph" in payload and "nodes" in payload:
-            self.graph = nx.node_link_graph(payload["graph"], directed=True)
+            graph_data = payload["graph"]
+            edge_key = "edges" if "edges" in graph_data else "links"
+            self.graph = nx.node_link_graph(graph_data, directed=True, edges=edge_key)
             self.nodes = {k: MemoryNode.from_jsonld(v) for k, v in payload["nodes"].items()}

@@ -57,7 +57,7 @@ class ErasureEngine:
         descendants=graph_store.get_descendants(node_id); invalidated=[]; failed=[]
         for cid in descendants:
             child=graph_store.get_node(cid)
-            if child: child.deletion_state="invalidated"; vector_store.remove_from_active_index(cid); invalidated.append(cid)
+            if child: child.transition("invalidated", deleted_by, f"derived from deleted entity: {reason}"); vector_store.remove_from_active_index(cid); invalidated.append(cid)
             else: failed.append(cid)
         hash_chain.append("delete_level_2", node_id, {"invalidated":invalidated,"failed":failed}, actor=deleted_by, reason=reason)
         st="passed" if not failed else ("partial" if invalidated else "failed")
