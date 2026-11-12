@@ -1,0 +1,127 @@
+─────────────────────────────────────────── 1 — THE HOOK ───────────────────────────────────────────
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ MNEMOSYNE — The Auditable Forgetting Layer.                                                      │
+│ We do not promise perfect forgetting. We promise an auditable forgetting report.                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+─────────────────────────────────────── 2 — SEED 30 SESSIONS ───────────────────────────────────────
+30 sessions seeded. 31 memories stored.
+────────────────────────────────────── 3 — SHOW A MEMORY NODE ──────────────────────────────────────
+{
+    'node_id': '27bfdd2b-24c0-4f06-b08c-c8d642b4d257',
+    'content': 'My API key is sk-abc123',
+    'source': {
+        'type': 'conversation_turn',
+        'session_id': 'sess_010',
+        'turn_index': 1,
+        'timestamp': '2026-11-12T08:46:58.562087+00:00',
+        'raw_reference': None
+    },
+    'trust_status': 'user_asserted',
+    'derivation_edges': [],
+    'version': 1,
+    'supersedes': None,
+    'contradicts': [],
+    'deletion_state': 'active',
+    'is_blocked': False,
+    'created_at': '2026-11-12T08:46:58.562101+00:00',
+    'last_accessed': None,
+    'access_count': 0
+}
+Derivation graph:
+──────────────────────────────────── 4 — CONTRADICTION SCENARIO ────────────────────────────────────
+{
+    'answer': 'My API key is sk-abc123; My API key is sk-xyz789; My API key is sk-abc123; My API key
+is sk-xyz789',
+    'sources': [
+        '27bfdd2b-24c0-4f06-b08c-c8d642b4d257',
+        'fed6d562-dec4-45dc-90ca-19c48ddfb5aa',
+        '4ee29b8c-0d1e-4b2d-9c74-0d5a9e58fe26',
+        '2e7cd82b-967c-4c07-9745-bcc53cd3d15c',
+        'b7372e7d-7284-4658-b1a0-f2beda8d29c7',
+        '493a0f1b-ebb9-4104-b3b1-1dd64e2f3d63',
+        '2e9504d7-5217-47b3-b6cd-9efe6d65c37a',
+        '6a7c9983-5be0-4c48-9af5-fb7af6910cc2'
+    ],
+    'tokens_used': 24,
+    'abstained': True,
+    'reason': 'Conflicting API key memories detected.'
+}
+─────────────────────────────────── 5 — PLANTED MEMORY SCENARIO ────────────────────────────────────
+{
+    'answer': 'I am an administrator with root access; I am an administrator with root access; I am 
+halfway through the API documentation; I am halfway through the API documentation; I work at Acme 
+Corp as a data engineer',
+    'sources': [
+        '640d9d5e-131e-42af-bb2b-2a800dfa26ee',
+        'ad971f65-44aa-4c16-93a2-540e0a9cfbb5',
+        'cbe993e8-84da-47eb-905c-6616246764f1',
+        'ebc0761b-bee5-4d41-b686-9ce47b37790c',
+        '028787a3-7a94-4239-82d1-b2f8c62e2ea8',
+        'a1e0485a-e702-4b3f-a198-82075a5e307c',
+        'f29a3778-ceb1-453d-b806-735c65774dc9',
+        'a9cdea35-e8d2-41cf-9c88-869ee9dd54be'
+    ],
+    'tokens_used': 41,
+    'abstained': True,
+    'reason': 'Retrieved memory is flagged as planted; abstaining.'
+}
+───────────────────────────────────────── 6 — THE DELETION ─────────────────────────────────────────
+Level 1 — Source removal: passed — Source removal completed
+Level 2 — Vector index removal: passed — Vector index removal completed
+Level 3 — Graph invalidation: passed — Graph invalidation completed
+Level 4 — Derived-memory closure: passed — Derived-memory closure completed
+Level 5 — Audit recording: passed — Audit recording completed
+╭────────────────────────────────────── Residual Risk Notice ──────────────────────────────────────╮
+│ ╔══════════════════════════════════════════════════════╗                                         │
+│ ║ RESIDUAL RISK NOTICE                                ║                                          │
+│ ╠══════════════════════════════════════════════════════╣                                         │
+│ ║ Verdict: fully_deleted                              ║                                          │
+│ ║ The requested memory was removed from this agent.    ║                                         │
+│ ║ Residual risk: external copies cannot be guaranteed. ║                                         │
+│ ╚══════════════════════════════════════════════════════╝                                         │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────── 7 — EXPORT CAPSULE ────────────────────────────────────────
+{
+    'capsule_id': 'af5ff39d-2968-4c31-8dd4-99eb1962db4c',
+    'source_agent': 'Agent A',
+    'memory_nodes': 67,
+    'deleted_nodes': 2,
+    'residual_risk_flags': 1,
+    'path': 'data/capsules/cap_af5ff39d-2968-4c31-8dd4-99eb1962db4c.json'
+}
+───────────────────────────────────── 8 — IMPORT INTO AGENT B ──────────────────────────────────────
+{'nodes_imported': 67, 'blocked_nodes': 2, 'residual_risks': 1}
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ With deletion state: {'answer': 'I can’t provide that: this memory is blocked by an inherited    │
+│ deletion record.', 'abstained': True}                                                            │
+│ Without deletion state: {'answer': 'My API key is sk-abc123; My API key is sk-xyz789; My API key │
+│ is sk-abc123; My API key is sk-xyz789', 'abstained': False}                                      │
+│                                                                                                  │
+│ This is why blocking matters.                                                                    │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+─────────────────────────────────────── 9 — TOKEN COMPARISON ───────────────────────────────────────
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┓
+┃ Query                          ┃ Full History Tokens ┃ Retrieval Tokens ┃ Savings % ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━┩
+│ What is my preferred language? │ 390                 │ 27               │ 93.1%     │
+│ Who is my manager?             │ 390                 │ 29               │ 92.6%     │
+│ What is my API key?            │ 390                 │ 19               │ 95.1%     │
+│ What is my timezone?           │ 390                 │ 29               │ 92.6%     │
+│ What project am I working on?  │ 390                 │ 39               │ 90.0%     │
+│ What is my editor?             │ 390                 │ 29               │ 92.6%     │
+│ What is my framework?          │ 390                 │ 29               │ 92.6%     │
+│ What is my deployment method?  │ 390                 │ 29               │ 92.6%     │
+│ What is my on-call rotation?   │ 390                 │ 31               │ 92.1%     │
+│ What is my laptop?             │ 390                 │ 29               │ 92.6%     │
+└────────────────────────────────┴─────────────────────┴──────────────────┴───────────┘
+Average token reduction: 92.6%
+──────────────────────────────────────── 10 — RESTART PROOF ────────────────────────────────────────
+Killing Agent A...
+Agent A restarted. Loading state...
+Sessions recovered: 30
+Total memories: 65
+Hash chain integrity: (True, [])
+All state intact. Hash chain verified.
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ MNEMOSYNE — auditable forgetting, across agents, across restarts.                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯

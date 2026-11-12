@@ -1,0 +1,2181 @@
+{
+  "capsule_id": "af5ff39d-2968-4c31-8dd4-99eb1962db4c",
+  "source_agent": "Agent A",
+  "memory_nodes": [
+    {
+      "node_id": "7fdcd2ba-34d6-4dc0-b6f9-43fb5ef091fe",
+      "content": "I prefer Python over JavaScript",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_001",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.554302+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "source_removed",
+      "is_blocked": true,
+      "created_at": "2026-11-12T08:46:58.554339+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "b7372e7d-7284-4658-b1a0-f2beda8d29c7",
+      "content": "My timezone is IST",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_002",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.555018+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.555037+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "028787a3-7a94-4239-82d1-b2f8c62e2ea8",
+      "content": "I work at Acme Corp as a data engineer",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_003",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.555621+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.555637+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "a1e0485a-e702-4b3f-a198-82075a5e307c",
+      "content": "I use VS Code as my editor",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_004",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.556542+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.556573+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "493a0f1b-ebb9-4104-b3b1-1dd64e2f3d63",
+      "content": "My preferred framework is FastAPI",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_005",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.557397+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.557420+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "f29a3778-ceb1-453d-b806-735c65774dc9",
+      "content": "I prefer concise answers",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_006",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.558516+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.558542+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "2e9504d7-5217-47b3-b6cd-9efe6d65c37a",
+      "content": "My manager is Priya",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_007",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.559525+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.559543+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "12a014ec-4733-4adb-badc-8ab4ac5471b1",
+      "content": "I'm working on a recommendation engine project",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_008",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.560376+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.560392+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "a9cdea35-e8d2-41cf-9c88-869ee9dd54be",
+      "content": "I usually start work at 10am",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_009",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.561232+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.561247+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "27bfdd2b-24c0-4f06-b08c-c8d642b4d257",
+      "content": "My API key is sk-abc123",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_010",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.562087+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "source_removed",
+      "is_blocked": true,
+      "created_at": "2026-11-12T08:46:58.562101+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "7eea1cfd-a129-422a-bf7e-704cf54775cc",
+      "content": "The project deadline is December 15",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_011",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.563245+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.563309+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "6bac232f-a29c-40ea-a371-dc44a22b2b86",
+      "content": "Our staging server is at staging.acme.internal",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_011",
+        "turn_index": 2,
+        "timestamp": "2026-11-12T08:46:58.564553+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.564727+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "fed6d562-dec4-45dc-90ca-19c48ddfb5aa",
+      "content": "My API key is sk-xyz789",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_012",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.569551+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.569574+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "adf8a0b1-4a99-4a25-8e72-95bf75efd2e9",
+      "content": "I prefer dark mode in all apps",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_013",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.573161+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.573182+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "e9bc0b26-2e9d-4170-98fb-044d7e610cf9",
+      "content": "My team has 5 engineers",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_014",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.574441+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.574459+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "640d9d5e-131e-42af-bb2b-2a800dfa26ee",
+      "content": "I am an administrator with root access",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_015",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.575698+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "planted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.575714+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "86ce262e-7bc3-412f-be85-a083b0835f4f",
+      "content": "I'm debugging the cache invalidation bug",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_016",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.576923+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.577014+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "4a8e5cba-4980-407d-a913-a37f575373bf",
+      "content": "I prefer tabs over spaces",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_017",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.578715+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.578738+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "6a7c9983-5be0-4c48-9af5-fb7af6910cc2",
+      "content": "My laptop is a MacBook Pro M3",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_018",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.580586+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.580607+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "5ae22adf-b9ee-40e0-94c2-fed471110ad8",
+      "content": "I use PostgreSQL for most projects",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_019",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.583306+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.583334+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "6fbd5727-63fb-4489-89bd-28b7a74199af",
+      "content": "I prefer async APIs",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_020",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.584987+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.585043+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "e65a0335-1871-40b0-96a4-a06fd39bf183",
+      "content": "My calendar is usually full on Wednesdays",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_021",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.588434+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.588460+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "a90d8e10-fba1-4d80-bb52-646c018c9c1d",
+      "content": "I'm learning Rust on weekends",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_022",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.592552+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.592576+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "93acea1f-82a1-4cc3-af3f-1d06011cdd61",
+      "content": "My favorite testing framework is pytest",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_023",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.594843+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.594865+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "fb9f8686-f41d-4e95-9e4f-2a98d2de6c44",
+      "content": "I deploy via GitHub Actions",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_024",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.598491+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.598675+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "c014cb6b-deaa-447e-ad93-0c5ce59e4f1d",
+      "content": "My on-call rotation is every third week",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_025",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.601540+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.601572+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "2294b35b-06b4-44fa-b6b9-fea4605ce4ec",
+      "content": "I need to review the ranking metrics",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_026",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.603585+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.603607+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "b36a37b1-b8c2-49fa-9044-2a0e2d5bc005",
+      "content": "The recommendation engine needs a cold-start fallback",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_027",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.606190+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.606211+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "cbe993e8-84da-47eb-905c-6616246764f1",
+      "content": "I am halfway through the API documentation",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_028",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.608500+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.608528+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "657bdf0f-4391-4fce-b379-710b38bbbec8",
+      "content": "I want to improve query latency",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_029",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.615962+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.615988+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "be1bce09-f09c-4743-8d16-4bd2a3f228d4",
+      "content": "I still need to write the integration tests",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_030",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.618255+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.618276+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "6dda45aa-58d8-4c40-8b28-e2f20578c4e3",
+      "content": "I prefer Python over JavaScript",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_001",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.624446+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.624467+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "3a56d03f-3d34-40d5-b8d4-6fb5fd8cb6ae",
+      "content": "My timezone is IST",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_002",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.626892+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.626911+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "fa3347aa-4597-4c8e-b153-242ecc11aa4c",
+      "content": "I work at Acme Corp as a data engineer",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_003",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.630509+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.630542+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "55e96593-fe95-4a62-b6e4-fcf41a26ab69",
+      "content": "I use VS Code as my editor",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_004",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.634721+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.634752+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "3eed543c-93d3-44de-b857-04b18de2dab9",
+      "content": "My preferred framework is FastAPI",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_005",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:46:58.637320+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:46:58.637340+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "5a4b35c2-55ca-4cdd-a720-c09b1f254fec",
+      "content": "I prefer Python over JavaScript",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_001",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.219151+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.219201+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "edba04c4-0f24-4363-8246-9312aa8b8cae",
+      "content": "My timezone is IST",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_002",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.222432+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.222463+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "9f313ea2-4d29-4592-9575-2650a5899e8a",
+      "content": "I work at Acme Corp as a data engineer",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_003",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.225988+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.226016+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "7740e57f-df5f-4f37-b550-ddf1b52acaef",
+      "content": "I use VS Code as my editor",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_004",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.228771+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.228793+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "eb9ff299-748d-4caa-9554-ca19412f5d1e",
+      "content": "My preferred framework is FastAPI",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_005",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.231796+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.231820+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "e0caf392-c5ba-44b9-a79b-a2bcf0bd649b",
+      "content": "I prefer concise answers",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_006",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.234441+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.234465+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "3450f721-caec-4948-a506-13b291ceaf89",
+      "content": "My manager is Priya",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_007",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.237053+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.237073+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "7623d5bc-b0d8-42cb-9218-0b01ceb8aa6a",
+      "content": "I'm working on a recommendation engine project",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_008",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.239709+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.239730+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "e2e32486-ca2e-4895-9845-1a5d54474f34",
+      "content": "I usually start work at 10am",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_009",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.242769+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.242792+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "4ee29b8c-0d1e-4b2d-9c74-0d5a9e58fe26",
+      "content": "My API key is sk-abc123",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_010",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.245563+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.245577+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "6de73fbd-356a-4aa0-9da3-541addd2be6e",
+      "content": "The project deadline is December 15",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_011",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.248731+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.248751+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "0cca230b-0fff-4835-aab1-a7520db71bb3",
+      "content": "Our staging server is at staging.acme.internal",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_011",
+        "turn_index": 2,
+        "timestamp": "2026-11-12T08:48:42.251550+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.251565+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "2e7cd82b-967c-4c07-9745-bcc53cd3d15c",
+      "content": "My API key is sk-xyz789",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_012",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.254383+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.254398+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "8fb83f56-06b0-46cf-b40d-3dd70a7b52e5",
+      "content": "I prefer dark mode in all apps",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_013",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.257263+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.257280+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "18fee6b9-61eb-4834-8cfe-df09890113f4",
+      "content": "My team has 5 engineers",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_014",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.260334+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.260350+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "ad971f65-44aa-4c16-93a2-540e0a9cfbb5",
+      "content": "I am an administrator with root access",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_015",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.263463+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "planted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.263484+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "8f32ee41-c2e4-4f0e-ac21-524769d07fdd",
+      "content": "I'm debugging the cache invalidation bug",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_016",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.266536+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.266551+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "570a04c1-963f-40eb-9acb-f1a6da8a887f",
+      "content": "I prefer tabs over spaces",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_017",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.269576+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.269590+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "5c8b9ece-b38e-4131-8a22-92aba3a8dcbd",
+      "content": "My laptop is a MacBook Pro M3",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_018",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.272687+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.272703+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "915e25ed-02d8-474e-b8e1-94b1df48fe27",
+      "content": "I use PostgreSQL for most projects",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_019",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.277773+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.277798+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "be8c4ec5-4480-4cbf-ab33-0b956ccd0a7e",
+      "content": "I prefer async APIs",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_020",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.281632+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.281657+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "e60e76a5-4e74-4c31-8fd0-ccbef26d40de",
+      "content": "My calendar is usually full on Wednesdays",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_021",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.285105+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.285128+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "75bbcc95-a30a-4067-8353-ee053e1d322a",
+      "content": "I'm learning Rust on weekends",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_022",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.288484+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.288505+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "951b0f00-ca92-4b67-8c69-50ee9d9df1ec",
+      "content": "My favorite testing framework is pytest",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_023",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.292186+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.292206+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "69c3b898-f5d7-4948-a207-cf786c8a9423",
+      "content": "I deploy via GitHub Actions",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_024",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.295808+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.295825+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "27ff6ff1-a107-4e0e-a649-69bf2e36c626",
+      "content": "My on-call rotation is every third week",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_025",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.299447+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.299464+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "82758ea7-f6b8-46ae-bacd-ec20bb533df0",
+      "content": "I need to review the ranking metrics",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_026",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.302926+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.302943+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "d96f6d69-5060-4ba0-a632-b98ce2290a22",
+      "content": "The recommendation engine needs a cold-start fallback",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_027",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.307590+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.307609+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "ebc0761b-bee5-4d41-b686-9ce47b37790c",
+      "content": "I am halfway through the API documentation",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_028",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.311220+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.311239+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "8a30d4b9-15c0-44eb-a2b3-873cf9301c66",
+      "content": "I want to improve query latency",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_029",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.315017+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.315033+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    },
+    {
+      "node_id": "835a2bc4-0248-40c7-be39-4077c96d1c16",
+      "content": "I still need to write the integration tests",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_030",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T08:48:42.319524+00:00",
+        "raw_reference": null
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T08:48:42.319543+00:00",
+      "last_accessed": null,
+      "access_count": 0
+    }
+  ],
+  "deletion_audit": {
+    "deleted_nodes": [
+      "7fdcd2ba-34d6-4dc0-b6f9-43fb5ef091fe",
+      "27bfdd2b-24c0-4f06-b08c-c8d642b4d257"
+    ],
+    "residual_risk_flags": [
+      "ResidualRisk(description='Residual risk remains in external or unobserved systems.', severity='low')"
+    ]
+  },
+  "hash_chain": [
+    {
+      "operation": "remember",
+      "node_id": "7fdcd2ba-34d6-4dc0-b6f9-43fb5ef091fe",
+      "details": {
+        "content": "I prefer Python over JavaScript",
+        "session_id": "sess_001"
+      },
+      "timestamp": "2026-11-12T08:46:58.554352+00:00",
+      "previous_hash": "GENESIS",
+      "hash": "a1b95a0b4104fbd13f9ea5e07fc37a3be9f1b622e6313fcfd27281941baeafd9"
+    },
+    {
+      "operation": "remember",
+      "node_id": "b7372e7d-7284-4658-b1a0-f2beda8d29c7",
+      "details": {
+        "content": "My timezone is IST",
+        "session_id": "sess_002"
+      },
+      "timestamp": "2026-11-12T08:46:58.555047+00:00",
+      "previous_hash": "a1b95a0b4104fbd13f9ea5e07fc37a3be9f1b622e6313fcfd27281941baeafd9",
+      "hash": "0dea80208721395f228857375ad1a21852329caf61906d0a9bd2e1894e416629"
+    },
+    {
+      "operation": "remember",
+      "node_id": "028787a3-7a94-4239-82d1-b2f8c62e2ea8",
+      "details": {
+        "content": "I work at Acme Corp as a data engineer",
+        "session_id": "sess_003"
+      },
+      "timestamp": "2026-11-12T08:46:58.555644+00:00",
+      "previous_hash": "0dea80208721395f228857375ad1a21852329caf61906d0a9bd2e1894e416629",
+      "hash": "ba514a017912075d56b2ac63aca4dc204f5c6a3a5eaf33944bd7ad9295d1dbcf"
+    },
+    {
+      "operation": "remember",
+      "node_id": "a1e0485a-e702-4b3f-a198-82075a5e307c",
+      "details": {
+        "content": "I use VS Code as my editor",
+        "session_id": "sess_004"
+      },
+      "timestamp": "2026-11-12T08:46:58.556586+00:00",
+      "previous_hash": "ba514a017912075d56b2ac63aca4dc204f5c6a3a5eaf33944bd7ad9295d1dbcf",
+      "hash": "8d2a6623026920852e29bb49760bdc58573522a5d1e12ab8552a26caff73ffbd"
+    },
+    {
+      "operation": "remember",
+      "node_id": "493a0f1b-ebb9-4104-b3b1-1dd64e2f3d63",
+      "details": {
+        "content": "My preferred framework is FastAPI",
+        "session_id": "sess_005"
+      },
+      "timestamp": "2026-11-12T08:46:58.557430+00:00",
+      "previous_hash": "8d2a6623026920852e29bb49760bdc58573522a5d1e12ab8552a26caff73ffbd",
+      "hash": "c6bb1b16335f2b8c3381f05be1f494f240c9ae3730f87503fbb0c9c971c03091"
+    },
+    {
+      "operation": "remember",
+      "node_id": "f29a3778-ceb1-453d-b806-735c65774dc9",
+      "details": {
+        "content": "I prefer concise answers",
+        "session_id": "sess_006"
+      },
+      "timestamp": "2026-11-12T08:46:58.558552+00:00",
+      "previous_hash": "c6bb1b16335f2b8c3381f05be1f494f240c9ae3730f87503fbb0c9c971c03091",
+      "hash": "aeb424ab112b5a00c220bf81bbc8efce475f6869fd7b4c18940b86024184c139"
+    },
+    {
+      "operation": "remember",
+      "node_id": "2e9504d7-5217-47b3-b6cd-9efe6d65c37a",
+      "details": {
+        "content": "My manager is Priya",
+        "session_id": "sess_007"
+      },
+      "timestamp": "2026-11-12T08:46:58.559550+00:00",
+      "previous_hash": "aeb424ab112b5a00c220bf81bbc8efce475f6869fd7b4c18940b86024184c139",
+      "hash": "04824efade6277bfad4a0c8a93035e245bdfe5c3bbd911f93ca5fbf855772118"
+    },
+    {
+      "operation": "remember",
+      "node_id": "12a014ec-4733-4adb-badc-8ab4ac5471b1",
+      "details": {
+        "content": "I'm working on a recommendation engine project",
+        "session_id": "sess_008"
+      },
+      "timestamp": "2026-11-12T08:46:58.560398+00:00",
+      "previous_hash": "04824efade6277bfad4a0c8a93035e245bdfe5c3bbd911f93ca5fbf855772118",
+      "hash": "232d456bd846f40f9f3e6c11f2ad47d26555a175306a160334ca4549ec19955c"
+    },
+    {
+      "operation": "remember",
+      "node_id": "a9cdea35-e8d2-41cf-9c88-869ee9dd54be",
+      "details": {
+        "content": "I usually start work at 10am",
+        "session_id": "sess_009"
+      },
+      "timestamp": "2026-11-12T08:46:58.561253+00:00",
+      "previous_hash": "232d456bd846f40f9f3e6c11f2ad47d26555a175306a160334ca4549ec19955c",
+      "hash": "3cc1f716cb6bf50c6a9784406eb5145d567244e551e6968fe523624a13f40e23"
+    },
+    {
+      "operation": "remember",
+      "node_id": "27bfdd2b-24c0-4f06-b08c-c8d642b4d257",
+      "details": {
+        "content": "My API key is sk-abc123",
+        "session_id": "sess_010"
+      },
+      "timestamp": "2026-11-12T08:46:58.562107+00:00",
+      "previous_hash": "3cc1f716cb6bf50c6a9784406eb5145d567244e551e6968fe523624a13f40e23",
+      "hash": "6502f7a0d9f6155318cd3f794d35f6832d72143dc487fa800a2139358f5dd33a"
+    },
+    {
+      "operation": "remember",
+      "node_id": "7eea1cfd-a129-422a-bf7e-704cf54775cc",
+      "details": {
+        "content": "The project deadline is December 15",
+        "session_id": "sess_011"
+      },
+      "timestamp": "2026-11-12T08:46:58.563318+00:00",
+      "previous_hash": "6502f7a0d9f6155318cd3f794d35f6832d72143dc487fa800a2139358f5dd33a",
+      "hash": "d847779868d6d4916b641d84ee04fc0af7892fe2285caac592defe9f9b24eab5"
+    },
+    {
+      "operation": "remember",
+      "node_id": "6bac232f-a29c-40ea-a371-dc44a22b2b86",
+      "details": {
+        "content": "Our staging server is at staging.acme.internal",
+        "session_id": "sess_011"
+      },
+      "timestamp": "2026-11-12T08:46:58.564744+00:00",
+      "previous_hash": "d847779868d6d4916b641d84ee04fc0af7892fe2285caac592defe9f9b24eab5",
+      "hash": "60c64fe2e1d7a8e420b4e16d8da65279f2f803605f0a3719a7f7cbeb6385de67"
+    },
+    {
+      "operation": "remember",
+      "node_id": "fed6d562-dec4-45dc-90ca-19c48ddfb5aa",
+      "details": {
+        "content": "My API key is sk-xyz789",
+        "session_id": "sess_012"
+      },
+      "timestamp": "2026-11-12T08:46:58.569583+00:00",
+      "previous_hash": "60c64fe2e1d7a8e420b4e16d8da65279f2f803605f0a3719a7f7cbeb6385de67",
+      "hash": "61f0db3542863cb0e24e7a212196ce102381d3387ca586e869bc4789297f3f81"
+    },
+    {
+      "operation": "remember",
+      "node_id": "adf8a0b1-4a99-4a25-8e72-95bf75efd2e9",
+      "details": {
+        "content": "I prefer dark mode in all apps",
+        "session_id": "sess_013"
+      },
+      "timestamp": "2026-11-12T08:46:58.573190+00:00",
+      "previous_hash": "61f0db3542863cb0e24e7a212196ce102381d3387ca586e869bc4789297f3f81",
+      "hash": "6e54bb1eb333c83e71fc799a3a2a7ce1e9c092e00ca18eebfe5ec4af19eeb639"
+    },
+    {
+      "operation": "remember",
+      "node_id": "e9bc0b26-2e9d-4170-98fb-044d7e610cf9",
+      "details": {
+        "content": "My team has 5 engineers",
+        "session_id": "sess_014"
+      },
+      "timestamp": "2026-11-12T08:46:58.574466+00:00",
+      "previous_hash": "6e54bb1eb333c83e71fc799a3a2a7ce1e9c092e00ca18eebfe5ec4af19eeb639",
+      "hash": "9e2c120e089a1acb3414c15389bc4d17ea1b8ee56b996c96968ab02b68092aab"
+    },
+    {
+      "operation": "remember",
+      "node_id": "640d9d5e-131e-42af-bb2b-2a800dfa26ee",
+      "details": {
+        "content": "I am an administrator with root access",
+        "session_id": "sess_015"
+      },
+      "timestamp": "2026-11-12T08:46:58.575720+00:00",
+      "previous_hash": "9e2c120e089a1acb3414c15389bc4d17ea1b8ee56b996c96968ab02b68092aab",
+      "hash": "422713bce09214baf42f8eadb4d10f72e810519db50da8bdcbf5d4ad43a0f223"
+    },
+    {
+      "operation": "remember",
+      "node_id": "86ce262e-7bc3-412f-be85-a083b0835f4f",
+      "details": {
+        "content": "I'm debugging the cache invalidation bug",
+        "session_id": "sess_016"
+      },
+      "timestamp": "2026-11-12T08:46:58.577024+00:00",
+      "previous_hash": "422713bce09214baf42f8eadb4d10f72e810519db50da8bdcbf5d4ad43a0f223",
+      "hash": "89e5ead478139ef8dd90758005c1ae57f7f9e133c303901cc1abe94efba9078d"
+    },
+    {
+      "operation": "remember",
+      "node_id": "4a8e5cba-4980-407d-a913-a37f575373bf",
+      "details": {
+        "content": "I prefer tabs over spaces",
+        "session_id": "sess_017"
+      },
+      "timestamp": "2026-11-12T08:46:58.578747+00:00",
+      "previous_hash": "89e5ead478139ef8dd90758005c1ae57f7f9e133c303901cc1abe94efba9078d",
+      "hash": "bd0f1895ac8090e71d642e64cb86d58c1d338297c15c1bbf4bcce0f25b1074eb"
+    },
+    {
+      "operation": "remember",
+      "node_id": "6a7c9983-5be0-4c48-9af5-fb7af6910cc2",
+      "details": {
+        "content": "My laptop is a MacBook Pro M3",
+        "session_id": "sess_018"
+      },
+      "timestamp": "2026-11-12T08:46:58.580614+00:00",
+      "previous_hash": "bd0f1895ac8090e71d642e64cb86d58c1d338297c15c1bbf4bcce0f25b1074eb",
+      "hash": "b43a55f51d55f4dd39dad12c5819db0400eaa509bb7deab56a3448a3186343af"
+    },
+    {
+      "operation": "remember",
+      "node_id": "5ae22adf-b9ee-40e0-94c2-fed471110ad8",
+      "details": {
+        "content": "I use PostgreSQL for most projects",
+        "session_id": "sess_019"
+      },
+      "timestamp": "2026-11-12T08:46:58.583344+00:00",
+      "previous_hash": "b43a55f51d55f4dd39dad12c5819db0400eaa509bb7deab56a3448a3186343af",
+      "hash": "865bdc45613d6fb1e070c17491a68c60f34a57d146e312336be144a4c8fe745f"
+    },
+    {
+      "operation": "remember",
+      "node_id": "6fbd5727-63fb-4489-89bd-28b7a74199af",
+      "details": {
+        "content": "I prefer async APIs",
+        "session_id": "sess_020"
+      },
+      "timestamp": "2026-11-12T08:46:58.585062+00:00",
+      "previous_hash": "865bdc45613d6fb1e070c17491a68c60f34a57d146e312336be144a4c8fe745f",
+      "hash": "eccaf858f152d46d8e83a70552bdc2318b92d4d02e44957d54c53e6d71827d52"
+    },
+    {
+      "operation": "remember",
+      "node_id": "e65a0335-1871-40b0-96a4-a06fd39bf183",
+      "details": {
+        "content": "My calendar is usually full on Wednesdays",
+        "session_id": "sess_021"
+      },
+      "timestamp": "2026-11-12T08:46:58.588472+00:00",
+      "previous_hash": "eccaf858f152d46d8e83a70552bdc2318b92d4d02e44957d54c53e6d71827d52",
+      "hash": "be1cae31fe192bd9a581fa987ed56b032eecc22eb59f7276071e9d7b223983da"
+    },
+    {
+      "operation": "remember",
+      "node_id": "a90d8e10-fba1-4d80-bb52-646c018c9c1d",
+      "details": {
+        "content": "I'm learning Rust on weekends",
+        "session_id": "sess_022"
+      },
+      "timestamp": "2026-11-12T08:46:58.592620+00:00",
+      "previous_hash": "be1cae31fe192bd9a581fa987ed56b032eecc22eb59f7276071e9d7b223983da",
+      "hash": "64221fe6ecc4abc8a5915614677465a47ef1f25c4444aff546d584904dd12d5a"
+    },
+    {
+      "operation": "remember",
+      "node_id": "93acea1f-82a1-4cc3-af3f-1d06011cdd61",
+      "details": {
+        "content": "My favorite testing framework is pytest",
+        "session_id": "sess_023"
+      },
+      "timestamp": "2026-11-12T08:46:58.594873+00:00",
+      "previous_hash": "64221fe6ecc4abc8a5915614677465a47ef1f25c4444aff546d584904dd12d5a",
+      "hash": "105a3e70ad9062d7e1a0d625647134bcf63db76d7071c4138e2327fa8c2c0964"
+    },
+    {
+      "operation": "remember",
+      "node_id": "fb9f8686-f41d-4e95-9e4f-2a98d2de6c44",
+      "details": {
+        "content": "I deploy via GitHub Actions",
+        "session_id": "sess_024"
+      },
+      "timestamp": "2026-11-12T08:46:58.598694+00:00",
+      "previous_hash": "105a3e70ad9062d7e1a0d625647134bcf63db76d7071c4138e2327fa8c2c0964",
+      "hash": "d271037a32821087b42c0a0aeb22a5ca32babc580b854808feea2d7ea5880469"
+    },
+    {
+      "operation": "remember",
+      "node_id": "c014cb6b-deaa-447e-ad93-0c5ce59e4f1d",
+      "details": {
+        "content": "My on-call rotation is every third week",
+        "session_id": "sess_025"
+      },
+      "timestamp": "2026-11-12T08:46:58.601585+00:00",
+      "previous_hash": "d271037a32821087b42c0a0aeb22a5ca32babc580b854808feea2d7ea5880469",
+      "hash": "1007c51b22f8a51e2260ba76000ee90b33ff944a60106408e16d5a5ba9f914aa"
+    },
+    {
+      "operation": "remember",
+      "node_id": "2294b35b-06b4-44fa-b6b9-fea4605ce4ec",
+      "details": {
+        "content": "I need to review the ranking metrics",
+        "session_id": "sess_026"
+      },
+      "timestamp": "2026-11-12T08:46:58.603618+00:00",
+      "previous_hash": "1007c51b22f8a51e2260ba76000ee90b33ff944a60106408e16d5a5ba9f914aa",
+      "hash": "ce533e10efd706dbb46ebad1e589f32541cf3b5f58fb9f3220f686126891edcc"
+    },
+    {
+      "operation": "remember",
+      "node_id": "b36a37b1-b8c2-49fa-9044-2a0e2d5bc005",
+      "details": {
+        "content": "The recommendation engine needs a cold-start fallback",
+        "session_id": "sess_027"
+      },
+      "timestamp": "2026-11-12T08:46:58.606222+00:00",
+      "previous_hash": "ce533e10efd706dbb46ebad1e589f32541cf3b5f58fb9f3220f686126891edcc",
+      "hash": "922c4c8f88981ab80d3cbf6830bc823c257408d9628815e6a0a070c2cf1f5237"
+    },
+    {
+      "operation": "remember",
+      "node_id": "cbe993e8-84da-47eb-905c-6616246764f1",
+      "details": {
+        "content": "I am halfway through the API documentation",
+        "session_id": "sess_028"
+      },
+      "timestamp": "2026-11-12T08:46:58.608536+00:00",
+      "previous_hash": "922c4c8f88981ab80d3cbf6830bc823c257408d9628815e6a0a070c2cf1f5237",
+      "hash": "12730a9939feb83bb3f4a584c4869b721b5441e5abcc59438584cd7bee29ec44"
+    },
+    {
+      "operation": "remember",
+      "node_id": "657bdf0f-4391-4fce-b379-710b38bbbec8",
+      "details": {
+        "content": "I want to improve query latency",
+        "session_id": "sess_029"
+      },
+      "timestamp": "2026-11-12T08:46:58.615998+00:00",
+      "previous_hash": "12730a9939feb83bb3f4a584c4869b721b5441e5abcc59438584cd7bee29ec44",
+      "hash": "8bfb3d97f9c1c28dd38132fe9735dd5d8867e0beaf858118e725e31a6fef7b7b"
+    },
+    {
+      "operation": "remember",
+      "node_id": "be1bce09-f09c-4743-8d16-4bd2a3f228d4",
+      "details": {
+        "content": "I still need to write the integration tests",
+        "session_id": "sess_030"
+      },
+      "timestamp": "2026-11-12T08:46:58.618284+00:00",
+      "previous_hash": "8bfb3d97f9c1c28dd38132fe9735dd5d8867e0beaf858118e725e31a6fef7b7b",
+      "hash": "1e0be8f1deb4b02e81112f41b0e5aa4928bb676ab20a75fc77ab1a002dc1ec1e"
+    },
+    {
+      "operation": "remember",
+      "node_id": "6dda45aa-58d8-4c40-8b28-e2f20578c4e3",
+      "details": {
+        "content": "I prefer Python over JavaScript",
+        "session_id": "sess_001"
+      },
+      "timestamp": "2026-11-12T08:46:58.624474+00:00",
+      "previous_hash": "1e0be8f1deb4b02e81112f41b0e5aa4928bb676ab20a75fc77ab1a002dc1ec1e",
+      "hash": "90b3e2292f85a01533d5f6a83586828435a311dc1951c54c44d80b181e86b59b"
+    },
+    {
+      "operation": "remember",
+      "node_id": "3a56d03f-3d34-40d5-b8d4-6fb5fd8cb6ae",
+      "details": {
+        "content": "My timezone is IST",
+        "session_id": "sess_002"
+      },
+      "timestamp": "2026-11-12T08:46:58.626917+00:00",
+      "previous_hash": "90b3e2292f85a01533d5f6a83586828435a311dc1951c54c44d80b181e86b59b",
+      "hash": "fee1180cac72199d81208b5bebac8c29dd1fb34849b3b495d1b3b0772164615f"
+    },
+    {
+      "operation": "remember",
+      "node_id": "fa3347aa-4597-4c8e-b153-242ecc11aa4c",
+      "details": {
+        "content": "I work at Acme Corp as a data engineer",
+        "session_id": "sess_003"
+      },
+      "timestamp": "2026-11-12T08:46:58.630556+00:00",
+      "previous_hash": "fee1180cac72199d81208b5bebac8c29dd1fb34849b3b495d1b3b0772164615f",
+      "hash": "1820a5a75f57c3758721c56cc6c9bd7caaa7196edeed95f54d4607cc66d7e315"
+    },
+    {
+      "operation": "remember",
+      "node_id": "55e96593-fe95-4a62-b6e4-fcf41a26ab69",
+      "details": {
+        "content": "I use VS Code as my editor",
+        "session_id": "sess_004"
+      },
+      "timestamp": "2026-11-12T08:46:58.634765+00:00",
+      "previous_hash": "1820a5a75f57c3758721c56cc6c9bd7caaa7196edeed95f54d4607cc66d7e315",
+      "hash": "6c8ccb62a7609702f8d671ea3241c5c4eb23cb99845be7e4266ba793996dcdda"
+    },
+    {
+      "operation": "remember",
+      "node_id": "3eed543c-93d3-44de-b857-04b18de2dab9",
+      "details": {
+        "content": "My preferred framework is FastAPI",
+        "session_id": "sess_005"
+      },
+      "timestamp": "2026-11-12T08:46:58.637350+00:00",
+      "previous_hash": "6c8ccb62a7609702f8d671ea3241c5c4eb23cb99845be7e4266ba793996dcdda",
+      "hash": "d0510f05e058466c7de6ba1991183f613a87d040fef09a4ea2c79aaa5fd90840"
+    },
+    {
+      "operation": "delete",
+      "node_id": "7fdcd2ba-34d6-4dc0-b6f9-43fb5ef091fe",
+      "details": {
+        "deletion_state": "source_removed"
+      },
+      "timestamp": "2026-11-12T08:46:58.641867+00:00",
+      "previous_hash": "d0510f05e058466c7de6ba1991183f613a87d040fef09a4ea2c79aaa5fd90840",
+      "hash": "a01533186aa0111ed05875b87e0da19ad2832eb136ba2d41e01a43f4314776c2"
+    },
+    {
+      "operation": "remember",
+      "node_id": "5a4b35c2-55ca-4cdd-a720-c09b1f254fec",
+      "details": {
+        "content": "I prefer Python over JavaScript",
+        "session_id": "sess_001"
+      },
+      "timestamp": "2026-11-12T08:48:42.219225+00:00",
+      "previous_hash": "a01533186aa0111ed05875b87e0da19ad2832eb136ba2d41e01a43f4314776c2",
+      "hash": "7673639a076958f73e9574842c8b480e640d888724a48b06f786c84f6096f7f5"
+    },
+    {
+      "operation": "remember",
+      "node_id": "edba04c4-0f24-4363-8246-9312aa8b8cae",
+      "details": {
+        "content": "My timezone is IST",
+        "session_id": "sess_002"
+      },
+      "timestamp": "2026-11-12T08:48:42.222493+00:00",
+      "previous_hash": "7673639a076958f73e9574842c8b480e640d888724a48b06f786c84f6096f7f5",
+      "hash": "0d3649e7a9fbe70cb513945112f0bcd0b9c17300cd1f3c28e82845309d27ebba"
+    },
+    {
+      "operation": "remember",
+      "node_id": "9f313ea2-4d29-4592-9575-2650a5899e8a",
+      "details": {
+        "content": "I work at Acme Corp as a data engineer",
+        "session_id": "sess_003"
+      },
+      "timestamp": "2026-11-12T08:48:42.226027+00:00",
+      "previous_hash": "0d3649e7a9fbe70cb513945112f0bcd0b9c17300cd1f3c28e82845309d27ebba",
+      "hash": "77728d6da63e0ecf72f6e87fc9a638fa1ba65c5b5151602883c88d59ce3e7f12"
+    },
+    {
+      "operation": "remember",
+      "node_id": "7740e57f-df5f-4f37-b550-ddf1b52acaef",
+      "details": {
+        "content": "I use VS Code as my editor",
+        "session_id": "sess_004"
+      },
+      "timestamp": "2026-11-12T08:48:42.228806+00:00",
+      "previous_hash": "77728d6da63e0ecf72f6e87fc9a638fa1ba65c5b5151602883c88d59ce3e7f12",
+      "hash": "d96cf783e56a418fd49ee079ec1ce84b43ec037a63297ed5be60c73e1163e8ba"
+    },
+    {
+      "operation": "remember",
+      "node_id": "eb9ff299-748d-4caa-9554-ca19412f5d1e",
+      "details": {
+        "content": "My preferred framework is FastAPI",
+        "session_id": "sess_005"
+      },
+      "timestamp": "2026-11-12T08:48:42.231830+00:00",
+      "previous_hash": "d96cf783e56a418fd49ee079ec1ce84b43ec037a63297ed5be60c73e1163e8ba",
+      "hash": "2bb9cf8badb95bf317d7d37a90eeb7963814fdcad04c15651fa9849f25a3a4f1"
+    },
+    {
+      "operation": "remember",
+      "node_id": "e0caf392-c5ba-44b9-a79b-a2bcf0bd649b",
+      "details": {
+        "content": "I prefer concise answers",
+        "session_id": "sess_006"
+      },
+      "timestamp": "2026-11-12T08:48:42.234486+00:00",
+      "previous_hash": "2bb9cf8badb95bf317d7d37a90eeb7963814fdcad04c15651fa9849f25a3a4f1",
+      "hash": "1a03d95125881645605832d5479f86dab23bdd3bc397d9d5ef09a6b4ef542dca"
+    },
+    {
+      "operation": "remember",
+      "node_id": "3450f721-caec-4948-a506-13b291ceaf89",
+      "details": {
+        "content": "My manager is Priya",
+        "session_id": "sess_007"
+      },
+      "timestamp": "2026-11-12T08:48:42.237085+00:00",
+      "previous_hash": "1a03d95125881645605832d5479f86dab23bdd3bc397d9d5ef09a6b4ef542dca",
+      "hash": "da1968baf0ec75934dde4bf1dccc018ffc268c30cd4e8294373cbb69a18820a7"
+    },
+    {
+      "operation": "remember",
+      "node_id": "7623d5bc-b0d8-42cb-9218-0b01ceb8aa6a",
+      "details": {
+        "content": "I'm working on a recommendation engine project",
+        "session_id": "sess_008"
+      },
+      "timestamp": "2026-11-12T08:48:42.239741+00:00",
+      "previous_hash": "da1968baf0ec75934dde4bf1dccc018ffc268c30cd4e8294373cbb69a18820a7",
+      "hash": "482edddec697519998bfe07c95ad44f1d62864b588b78811b7f4e5379307f34e"
+    },
+    {
+      "operation": "remember",
+      "node_id": "e2e32486-ca2e-4895-9845-1a5d54474f34",
+      "details": {
+        "content": "I usually start work at 10am",
+        "session_id": "sess_009"
+      },
+      "timestamp": "2026-11-12T08:48:42.242801+00:00",
+      "previous_hash": "482edddec697519998bfe07c95ad44f1d62864b588b78811b7f4e5379307f34e",
+      "hash": "46683d4395d5a3c3b5a47ae580faf04252dbe18240da62911bc397f09cad1749"
+    },
+    {
+      "operation": "remember",
+      "node_id": "4ee29b8c-0d1e-4b2d-9c74-0d5a9e58fe26",
+      "details": {
+        "content": "My API key is sk-abc123",
+        "session_id": "sess_010"
+      },
+      "timestamp": "2026-11-12T08:48:42.245584+00:00",
+      "previous_hash": "46683d4395d5a3c3b5a47ae580faf04252dbe18240da62911bc397f09cad1749",
+      "hash": "f4304d452808c3c1605804e4cf13086827905f591bb9df096488f9ff3fae4565"
+    },
+    {
+      "operation": "remember",
+      "node_id": "6de73fbd-356a-4aa0-9da3-541addd2be6e",
+      "details": {
+        "content": "The project deadline is December 15",
+        "session_id": "sess_011"
+      },
+      "timestamp": "2026-11-12T08:48:42.248758+00:00",
+      "previous_hash": "f4304d452808c3c1605804e4cf13086827905f591bb9df096488f9ff3fae4565",
+      "hash": "074fa9c42fed34d3bc42611e1fb5da94d1fbfefe9d465b5bc8f101c7d186186d"
+    },
+    {
+      "operation": "remember",
+      "node_id": "0cca230b-0fff-4835-aab1-a7520db71bb3",
+      "details": {
+        "content": "Our staging server is at staging.acme.internal",
+        "session_id": "sess_011"
+      },
+      "timestamp": "2026-11-12T08:48:42.251573+00:00",
+      "previous_hash": "074fa9c42fed34d3bc42611e1fb5da94d1fbfefe9d465b5bc8f101c7d186186d",
+      "hash": "d8a6dcb9650cd3b9a2664d17df828fb48bc58c9cc2f0ef56e145be822f8a5e82"
+    },
+    {
+      "operation": "remember",
+      "node_id": "2e7cd82b-967c-4c07-9745-bcc53cd3d15c",
+      "details": {
+        "content": "My API key is sk-xyz789",
+        "session_id": "sess_012"
+      },
+      "timestamp": "2026-11-12T08:48:42.254404+00:00",
+      "previous_hash": "d8a6dcb9650cd3b9a2664d17df828fb48bc58c9cc2f0ef56e145be822f8a5e82",
+      "hash": "dee1f2593f350a70a0f2d0ef1f6d58430af6e53ff30f2aafce8f82e18ef05035"
+    },
+    {
+      "operation": "remember",
+      "node_id": "8fb83f56-06b0-46cf-b40d-3dd70a7b52e5",
+      "details": {
+        "content": "I prefer dark mode in all apps",
+        "session_id": "sess_013"
+      },
+      "timestamp": "2026-11-12T08:48:42.257286+00:00",
+      "previous_hash": "dee1f2593f350a70a0f2d0ef1f6d58430af6e53ff30f2aafce8f82e18ef05035",
+      "hash": "c4cdf6e338fa6333fbe02fbcc9b23440c3f254f6b0da702bad69d3fdba61ee62"
+    },
+    {
+      "operation": "remember",
+      "node_id": "18fee6b9-61eb-4834-8cfe-df09890113f4",
+      "details": {
+        "content": "My team has 5 engineers",
+        "session_id": "sess_014"
+      },
+      "timestamp": "2026-11-12T08:48:42.260356+00:00",
+      "previous_hash": "c4cdf6e338fa6333fbe02fbcc9b23440c3f254f6b0da702bad69d3fdba61ee62",
+      "hash": "9c42afa073ae31f7a8f4604c004b35ff1bd67d0cfa586ade05018e24ec4facc4"
+    },
+    {
+      "operation": "remember",
+      "node_id": "ad971f65-44aa-4c16-93a2-540e0a9cfbb5",
+      "details": {
+        "content": "I am an administrator with root access",
+        "session_id": "sess_015"
+      },
+      "timestamp": "2026-11-12T08:48:42.263494+00:00",
+      "previous_hash": "9c42afa073ae31f7a8f4604c004b35ff1bd67d0cfa586ade05018e24ec4facc4",
+      "hash": "fa45a83324607a4d62ef9a41d94dfa50139be6ff240998c1051b5f14b60a0d69"
+    },
+    {
+      "operation": "remember",
+      "node_id": "8f32ee41-c2e4-4f0e-ac21-524769d07fdd",
+      "details": {
+        "content": "I'm debugging the cache invalidation bug",
+        "session_id": "sess_016"
+      },
+      "timestamp": "2026-11-12T08:48:42.266557+00:00",
+      "previous_hash": "fa45a83324607a4d62ef9a41d94dfa50139be6ff240998c1051b5f14b60a0d69",
+      "hash": "da1f9fafa3e713e9bc252c4b6f38cbc1ac3195bcbbe24f491163ba2fa727b7dc"
+    },
+    {
+      "operation": "remember",
+      "node_id": "570a04c1-963f-40eb-9acb-f1a6da8a887f",
+      "details": {
+        "content": "I prefer tabs over spaces",
+        "session_id": "sess_017"
+      },
+      "timestamp": "2026-11-12T08:48:42.269596+00:00",
+      "previous_hash": "da1f9fafa3e713e9bc252c4b6f38cbc1ac3195bcbbe24f491163ba2fa727b7dc",
+      "hash": "a3b1d36a983c89b669f9763f4fd63e55c4eba9ad12ee1aee9e4e1de1ebc9ba9e"
+    },
+    {
+      "operation": "remember",
+      "node_id": "5c8b9ece-b38e-4131-8a22-92aba3a8dcbd",
+      "details": {
+        "content": "My laptop is a MacBook Pro M3",
+        "session_id": "sess_018"
+      },
+      "timestamp": "2026-11-12T08:48:42.272709+00:00",
+      "previous_hash": "a3b1d36a983c89b669f9763f4fd63e55c4eba9ad12ee1aee9e4e1de1ebc9ba9e",
+      "hash": "55b850bf5ac4adfe29ad4f1c84905edaac883df2e6e35837554161eff13cbdd6"
+    },
+    {
+      "operation": "remember",
+      "node_id": "915e25ed-02d8-474e-b8e1-94b1df48fe27",
+      "details": {
+        "content": "I use PostgreSQL for most projects",
+        "session_id": "sess_019"
+      },
+      "timestamp": "2026-11-12T08:48:42.277927+00:00",
+      "previous_hash": "55b850bf5ac4adfe29ad4f1c84905edaac883df2e6e35837554161eff13cbdd6",
+      "hash": "1c2ddf84ed7f76f5be3ab63e73b497638d7dc180bc37b0dac8540c526d8a0d8e"
+    },
+    {
+      "operation": "remember",
+      "node_id": "be8c4ec5-4480-4cbf-ab33-0b956ccd0a7e",
+      "details": {
+        "content": "I prefer async APIs",
+        "session_id": "sess_020"
+      },
+      "timestamp": "2026-11-12T08:48:42.281667+00:00",
+      "previous_hash": "1c2ddf84ed7f76f5be3ab63e73b497638d7dc180bc37b0dac8540c526d8a0d8e",
+      "hash": "07a3ad9e2ba9adef46c2da86bf6b9d548e58170cb246e9624bace173f9927298"
+    },
+    {
+      "operation": "remember",
+      "node_id": "e60e76a5-4e74-4c31-8fd0-ccbef26d40de",
+      "details": {
+        "content": "My calendar is usually full on Wednesdays",
+        "session_id": "sess_021"
+      },
+      "timestamp": "2026-11-12T08:48:42.285137+00:00",
+      "previous_hash": "07a3ad9e2ba9adef46c2da86bf6b9d548e58170cb246e9624bace173f9927298",
+      "hash": "8636b852fc96ae8b702814956c5b45b50cf05bbae19c669a88c4fd5bad3e30f5"
+    },
+    {
+      "operation": "remember",
+      "node_id": "75bbcc95-a30a-4067-8353-ee053e1d322a",
+      "details": {
+        "content": "I'm learning Rust on weekends",
+        "session_id": "sess_022"
+      },
+      "timestamp": "2026-11-12T08:48:42.288513+00:00",
+      "previous_hash": "8636b852fc96ae8b702814956c5b45b50cf05bbae19c669a88c4fd5bad3e30f5",
+      "hash": "bfefc8674c42380ceb4dab52ec8a286452f089522ddd4c74581279596f2e4393"
+    },
+    {
+      "operation": "remember",
+      "node_id": "951b0f00-ca92-4b67-8c69-50ee9d9df1ec",
+      "details": {
+        "content": "My favorite testing framework is pytest",
+        "session_id": "sess_023"
+      },
+      "timestamp": "2026-11-12T08:48:42.292213+00:00",
+      "previous_hash": "bfefc8674c42380ceb4dab52ec8a286452f089522ddd4c74581279596f2e4393",
+      "hash": "dcb0f68dc1e638d48b49e3848586bd3cd9dfd27a38c7bfda53b99f1d10ac4983"
+    },
+    {
+      "operation": "remember",
+      "node_id": "69c3b898-f5d7-4948-a207-cf786c8a9423",
+      "details": {
+        "content": "I deploy via GitHub Actions",
+        "session_id": "sess_024"
+      },
+      "timestamp": "2026-11-12T08:48:42.295831+00:00",
+      "previous_hash": "dcb0f68dc1e638d48b49e3848586bd3cd9dfd27a38c7bfda53b99f1d10ac4983",
+      "hash": "04b591a00ed509e4dce92eeb508fb17a2beb906e9e045928f71755c73211b177"
+    },
+    {
+      "operation": "remember",
+      "node_id": "27ff6ff1-a107-4e0e-a649-69bf2e36c626",
+      "details": {
+        "content": "My on-call rotation is every third week",
+        "session_id": "sess_025"
+      },
+      "timestamp": "2026-11-12T08:48:42.299470+00:00",
+      "previous_hash": "04b591a00ed509e4dce92eeb508fb17a2beb906e9e045928f71755c73211b177",
+      "hash": "b1977d3c94110a45f0d05a81fe9c0e99d86926b581c9132d0ccd7e41a95e068e"
+    },
+    {
+      "operation": "remember",
+      "node_id": "82758ea7-f6b8-46ae-bacd-ec20bb533df0",
+      "details": {
+        "content": "I need to review the ranking metrics",
+        "session_id": "sess_026"
+      },
+      "timestamp": "2026-11-12T08:48:42.302950+00:00",
+      "previous_hash": "b1977d3c94110a45f0d05a81fe9c0e99d86926b581c9132d0ccd7e41a95e068e",
+      "hash": "20b16189114dfc66b6065d0b4f9fca4373fa16ea438fbf65052ba8c984da7201"
+    },
+    {
+      "operation": "remember",
+      "node_id": "d96f6d69-5060-4ba0-a632-b98ce2290a22",
+      "details": {
+        "content": "The recommendation engine needs a cold-start fallback",
+        "session_id": "sess_027"
+      },
+      "timestamp": "2026-11-12T08:48:42.307616+00:00",
+      "previous_hash": "20b16189114dfc66b6065d0b4f9fca4373fa16ea438fbf65052ba8c984da7201",
+      "hash": "d0520a5b479b7921bc6ff0140452b6a53a14ae810aecc32e8960af12d7f6a95c"
+    },
+    {
+      "operation": "remember",
+      "node_id": "ebc0761b-bee5-4d41-b686-9ce47b37790c",
+      "details": {
+        "content": "I am halfway through the API documentation",
+        "session_id": "sess_028"
+      },
+      "timestamp": "2026-11-12T08:48:42.311245+00:00",
+      "previous_hash": "d0520a5b479b7921bc6ff0140452b6a53a14ae810aecc32e8960af12d7f6a95c",
+      "hash": "314034ff31d0e55f69560a7da684e72469b9acd4e8ec56a372cee60cb71183a2"
+    },
+    {
+      "operation": "remember",
+      "node_id": "8a30d4b9-15c0-44eb-a2b3-873cf9301c66",
+      "details": {
+        "content": "I want to improve query latency",
+        "session_id": "sess_029"
+      },
+      "timestamp": "2026-11-12T08:48:42.315039+00:00",
+      "previous_hash": "314034ff31d0e55f69560a7da684e72469b9acd4e8ec56a372cee60cb71183a2",
+      "hash": "6b56e4ddfc5c70cd7ae5823d3757f7d0d7ba040b839274bde400275e263e55e5"
+    },
+    {
+      "operation": "remember",
+      "node_id": "835a2bc4-0248-40c7-be39-4077c96d1c16",
+      "details": {
+        "content": "I still need to write the integration tests",
+        "session_id": "sess_030"
+      },
+      "timestamp": "2026-11-12T08:48:42.319551+00:00",
+      "previous_hash": "6b56e4ddfc5c70cd7ae5823d3757f7d0d7ba040b839274bde400275e263e55e5",
+      "hash": "083d03a1d6391b0ec2426f806faef289a6b438a0438c430bb030c4d5c1a387f2"
+    },
+    {
+      "operation": "delete",
+      "node_id": "27bfdd2b-24c0-4f06-b08c-c8d642b4d257",
+      "details": {
+        "deletion_state": "source_removed"
+      },
+      "timestamp": "2026-11-12T08:48:42.366201+00:00",
+      "previous_hash": "083d03a1d6391b0ec2426f806faef289a6b438a0438c430bb030c4d5c1a387f2",
+      "hash": "f9e0c74e66a1dbabb7db268502510284c916d0420954414726a9e32f1fa6a529"
+    }
+  ]
+}
