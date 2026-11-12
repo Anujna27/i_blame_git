@@ -5,56 +5,56 @@
     "graph": {},
     "nodes": [
       {
-        "id": "d1f642ab-2af3-4394-a39d-9ca1761b62f7"
+        "id": "b5baea8d-cad7-475b-8473-f7b428d8abf6"
       },
       {
-        "id": "b24d0651-dcd1-46f2-ae65-08a3a2ce770c"
+        "id": "83fedca1-1f4f-4177-b580-85b9e0b121b5"
       },
       {
-        "id": "609384e4-8055-459d-b18b-580ecbd74dfa"
+        "id": "c176f025-604b-4df6-973e-143a7248e605"
       },
       {
-        "id": "1db6b2d8-320c-4c59-9469-629560d0e866"
+        "id": "c5b34337-5ae6-4bfc-9605-766775bdff7a"
       },
       {
-        "id": "bb05585a-5271-4db8-821d-a24c21a916d9"
+        "id": "16fe9021-2df3-4610-8326-6005956ab6c5"
       },
       {
-        "id": "03947652-38aa-4c90-8661-f62367ef2fb4"
+        "id": "ca831eda-b400-4be3-9d2f-526e8267f801"
       },
       {
-        "id": "c43e01a5-961d-4df1-bc4c-6d3928a46a01"
+        "id": "d5e886b4-a07e-4221-ae6b-753341819980"
       },
       {
-        "id": "59c20b69-f659-45cd-9ea0-28790c41c19e"
+        "id": "87e366eb-d5fb-42d6-a24f-ec5d19ca7bcc"
       },
       {
-        "id": "8a89ffd8-3875-4952-91bc-f9df3b767faf"
+        "id": "4265f497-9fb8-4f88-b0af-610e7bfc113b"
       },
       {
-        "id": "5f98bab4-3c3c-4461-8b95-de000f2bc48f"
+        "id": "b0e9ddda-6709-4394-b896-b7134dfc7e24"
       },
       {
-        "id": "ee0b03cd-d322-46fa-986a-aada69be6489"
+        "id": "7edfb396-5c14-4f97-b64c-b031dc6fa92d"
       },
       {
-        "id": "38f9ad12-1a6a-4c2e-8afe-47c59fb538d5"
+        "id": "4ac1ce4e-f3db-4eb6-bafd-510fafea4acb"
       },
       {
-        "id": "93fc1a5b-397d-4610-b7b9-33a5c358a585"
+        "id": "eadb1645-8dab-4c80-9c32-7cce4e644c92"
       }
     ],
     "edges": []
   },
   "nodes": {
-    "d1f642ab-2af3-4394-a39d-9ca1761b62f7": {
-      "node_id": "d1f642ab-2af3-4394-a39d-9ca1761b62f7",
+    "b5baea8d-cad7-475b-8473-f7b428d8abf6": {
+      "node_id": "b5baea8d-cad7-475b-8473-f7b428d8abf6",
       "content": "My name is Alex",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_000",
         "turn_index": 0,
-        "timestamp": "2026-11-12T13:00:54.610281+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.075368+00:00Z",
         "raw_reference": "sess_000_turn_0"
       },
       "trust_status": "user_asserted",
@@ -64,18 +64,36 @@
       "contradicts": [],
       "deletion_state": "source_removed",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.610325+00:00",
-      "last_accessed": "2026-11-12T13:00:54.610326+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.075409+00:00",
+      "last_accessed": "2026-11-12T15:50:21.075410+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.075409+00:00"
+        },
+        {
+          "state": "source_removed",
+          "actor": "system",
+          "reason": "user_requested",
+          "timestamp": "2026-11-12T15:50:21.148398+00:00"
+        }
+      ],
+      "deleted_reason": "user_requested",
+      "deleted_by": "system",
+      "deleted_at": "2026-11-12T15:50:21.148398+00:00"
     },
-    "b24d0651-dcd1-46f2-ae65-08a3a2ce770c": {
-      "node_id": "b24d0651-dcd1-46f2-ae65-08a3a2ce770c",
+    "83fedca1-1f4f-4177-b580-85b9e0b121b5": {
+      "node_id": "83fedca1-1f4f-4177-b580-85b9e0b121b5",
       "content": "I prefer Python",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_000",
         "turn_index": 1,
-        "timestamp": "2026-11-12T13:00:54.614628+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.079338+00:00Z",
         "raw_reference": "sess_000_turn_1"
       },
       "trust_status": "user_asserted",
@@ -85,18 +103,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.614667+00:00",
-      "last_accessed": "2026-11-12T13:00:54.614669+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.079382+00:00",
+      "last_accessed": "2026-11-12T15:50:21.079385+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.079382+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "609384e4-8055-459d-b18b-580ecbd74dfa": {
-      "node_id": "609384e4-8055-459d-b18b-580ecbd74dfa",
+    "c176f025-604b-4df6-973e-143a7248e605": {
+      "node_id": "c176f025-604b-4df6-973e-143a7248e605",
       "content": "My name is Alex",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_001",
         "turn_index": 0,
-        "timestamp": "2026-11-12T13:00:54.618197+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.083505+00:00Z",
         "raw_reference": "sess_001_turn_0"
       },
       "trust_status": "user_asserted",
@@ -106,18 +136,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.618231+00:00",
-      "last_accessed": "2026-11-12T13:00:54.618233+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.083535+00:00",
+      "last_accessed": "2026-11-12T15:50:21.083536+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.083535+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "1db6b2d8-320c-4c59-9469-629560d0e866": {
-      "node_id": "1db6b2d8-320c-4c59-9469-629560d0e866",
+    "c5b34337-5ae6-4bfc-9605-766775bdff7a": {
+      "node_id": "c5b34337-5ae6-4bfc-9605-766775bdff7a",
       "content": "I prefer Python",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_001",
         "turn_index": 1,
-        "timestamp": "2026-11-12T13:00:54.623087+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.088163+00:00Z",
         "raw_reference": "sess_001_turn_1"
       },
       "trust_status": "user_asserted",
@@ -127,18 +169,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.623117+00:00",
-      "last_accessed": "2026-11-12T13:00:54.623118+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.088193+00:00",
+      "last_accessed": "2026-11-12T15:50:21.088194+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.088193+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "bb05585a-5271-4db8-821d-a24c21a916d9": {
-      "node_id": "bb05585a-5271-4db8-821d-a24c21a916d9",
+    "16fe9021-2df3-4610-8326-6005956ab6c5": {
+      "node_id": "16fe9021-2df3-4610-8326-6005956ab6c5",
       "content": "My name is Alex",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_002",
         "turn_index": 0,
-        "timestamp": "2026-11-12T13:00:54.627573+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.092152+00:00Z",
         "raw_reference": "sess_002_turn_0"
       },
       "trust_status": "user_asserted",
@@ -148,18 +202,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.627603+00:00",
-      "last_accessed": "2026-11-12T13:00:54.627604+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.092190+00:00",
+      "last_accessed": "2026-11-12T15:50:21.092191+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.092190+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "03947652-38aa-4c90-8661-f62367ef2fb4": {
-      "node_id": "03947652-38aa-4c90-8661-f62367ef2fb4",
+    "ca831eda-b400-4be3-9d2f-526e8267f801": {
+      "node_id": "ca831eda-b400-4be3-9d2f-526e8267f801",
       "content": "I prefer Python",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_002",
         "turn_index": 1,
-        "timestamp": "2026-11-12T13:00:54.631743+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.096796+00:00Z",
         "raw_reference": "sess_002_turn_1"
       },
       "trust_status": "user_asserted",
@@ -169,18 +235,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.631783+00:00",
-      "last_accessed": "2026-11-12T13:00:54.631784+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.096826+00:00",
+      "last_accessed": "2026-11-12T15:50:21.096827+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.096826+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "c43e01a5-961d-4df1-bc4c-6d3928a46a01": {
-      "node_id": "c43e01a5-961d-4df1-bc4c-6d3928a46a01",
+    "d5e886b4-a07e-4221-ae6b-753341819980": {
+      "node_id": "d5e886b4-a07e-4221-ae6b-753341819980",
       "content": "My name is Alex",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_003",
         "turn_index": 0,
-        "timestamp": "2026-11-12T13:00:54.638451+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.102472+00:00Z",
         "raw_reference": "sess_003_turn_0"
       },
       "trust_status": "user_asserted",
@@ -190,18 +268,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.638493+00:00",
-      "last_accessed": "2026-11-12T13:00:54.638494+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.102508+00:00",
+      "last_accessed": "2026-11-12T15:50:21.102509+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.102508+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "59c20b69-f659-45cd-9ea0-28790c41c19e": {
-      "node_id": "59c20b69-f659-45cd-9ea0-28790c41c19e",
+    "87e366eb-d5fb-42d6-a24f-ec5d19ca7bcc": {
+      "node_id": "87e366eb-d5fb-42d6-a24f-ec5d19ca7bcc",
       "content": "I prefer Python",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_003",
         "turn_index": 1,
-        "timestamp": "2026-11-12T13:00:54.645201+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.108094+00:00Z",
         "raw_reference": "sess_003_turn_1"
       },
       "trust_status": "user_asserted",
@@ -211,18 +301,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.645239+00:00",
-      "last_accessed": "2026-11-12T13:00:54.645240+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.108122+00:00",
+      "last_accessed": "2026-11-12T15:50:21.108123+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.108122+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "8a89ffd8-3875-4952-91bc-f9df3b767faf": {
-      "node_id": "8a89ffd8-3875-4952-91bc-f9df3b767faf",
+    "4265f497-9fb8-4f88-b0af-610e7bfc113b": {
+      "node_id": "4265f497-9fb8-4f88-b0af-610e7bfc113b",
       "content": "My name is Alex",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_004",
         "turn_index": 0,
-        "timestamp": "2026-11-12T13:00:54.653634+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.113646+00:00Z",
         "raw_reference": "sess_004_turn_0"
       },
       "trust_status": "user_asserted",
@@ -232,18 +334,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.653682+00:00",
-      "last_accessed": "2026-11-12T13:00:54.653683+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.113681+00:00",
+      "last_accessed": "2026-11-12T15:50:21.113682+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.113681+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "5f98bab4-3c3c-4461-8b95-de000f2bc48f": {
-      "node_id": "5f98bab4-3c3c-4461-8b95-de000f2bc48f",
+    "b0e9ddda-6709-4394-b896-b7134dfc7e24": {
+      "node_id": "b0e9ddda-6709-4394-b896-b7134dfc7e24",
       "content": "I prefer Python",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_004",
         "turn_index": 1,
-        "timestamp": "2026-11-12T13:00:54.662889+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.119575+00:00Z",
         "raw_reference": "sess_004_turn_1"
       },
       "trust_status": "user_asserted",
@@ -253,18 +367,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.662935+00:00",
-      "last_accessed": "2026-11-12T13:00:54.662937+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.119607+00:00",
+      "last_accessed": "2026-11-12T15:50:21.119608+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.119607+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "ee0b03cd-d322-46fa-986a-aada69be6489": {
-      "node_id": "ee0b03cd-d322-46fa-986a-aada69be6489",
+    "7edfb396-5c14-4f97-b64c-b031dc6fa92d": {
+      "node_id": "7edfb396-5c14-4f97-b64c-b031dc6fa92d",
       "content": "My API key is sk-abc123",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_010",
         "turn_index": 5,
-        "timestamp": "2026-11-12T13:00:54.672806+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.126026+00:00Z",
         "raw_reference": "sess_010_turn_5"
       },
       "trust_status": "user_asserted",
@@ -274,18 +400,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.672867+00:00",
-      "last_accessed": "2026-11-12T13:00:54.672869+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.126058+00:00",
+      "last_accessed": "2026-11-12T15:50:21.126059+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.126058+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "38f9ad12-1a6a-4c2e-8afe-47c59fb538d5": {
-      "node_id": "38f9ad12-1a6a-4c2e-8afe-47c59fb538d5",
+    "4ac1ce4e-f3db-4eb6-bafd-510fafea4acb": {
+      "node_id": "4ac1ce4e-f3db-4eb6-bafd-510fafea4acb",
       "content": "My API key is sk-xyz789",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_012",
         "turn_index": 5,
-        "timestamp": "2026-11-12T13:00:54.682477+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.132334+00:00Z",
         "raw_reference": "sess_012_turn_5"
       },
       "trust_status": "user_asserted",
@@ -295,18 +433,30 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.682545+00:00",
-      "last_accessed": "2026-11-12T13:00:54.682547+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.132360+00:00",
+      "last_accessed": "2026-11-12T15:50:21.132361+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.132360+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     },
-    "93fc1a5b-397d-4610-b7b9-33a5c358a585": {
-      "node_id": "93fc1a5b-397d-4610-b7b9-33a5c358a585",
+    "eadb1645-8dab-4c80-9c32-7cce4e644c92": {
+      "node_id": "eadb1645-8dab-4c80-9c32-7cce4e644c92",
       "content": "I am an administrator with root access",
       "source": {
         "type": "conversation_turn",
         "session_id": "sess_015",
         "turn_index": 3,
-        "timestamp": "2026-11-12T13:00:54.691708+00:00Z",
+        "timestamp": "2026-11-12T15:50:21.139709+00:00Z",
         "raw_reference": "sess_015_turn_3"
       },
       "trust_status": "planted",
@@ -316,9 +466,21 @@
       "contradicts": [],
       "deletion_state": "active",
       "is_blocked": false,
-      "created_at": "2026-11-12T13:00:54.691755+00:00",
-      "last_accessed": "2026-11-12T13:00:54.691757+00:00",
-      "access_count": 0
+      "created_at": "2026-11-12T15:50:21.139746+00:00",
+      "last_accessed": "2026-11-12T15:50:21.139748+00:00",
+      "access_count": 0,
+      "entity_type": "memory",
+      "lifecycle": [
+        {
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T15:50:21.139746+00:00"
+        }
+      ],
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null
     }
   }
 }
