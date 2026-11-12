@@ -84,6 +84,13 @@ class KnowledgeGraph:
             "properties": properties,
         }
 
+        source = data.get("source") or properties.get("source") or {}
+        if not isinstance(source, dict):
+            source = dict(getattr(source, "__dict__", {}))
+        canonical["source"] = source
+        if "source" not in canonical["properties"]:
+            canonical["properties"]["source"] = source
+
         # Store any remaining non-canonical keys inside properties if not already present
         for k, v in data.items():
             if k not in canonical and k not in canonical["properties"]:
@@ -184,6 +191,8 @@ class KnowledgeGraph:
         meta = dict(metadata or {})
         edge_attrs = {
             "relationship": relationship,
+            "type": meta.get("type", relationship),
+            "edge_type": meta.get("edge_type", relationship),
             "created_at": meta.get("created_at") or datetime.now(timezone.utc).isoformat(),
             "created_by": meta.get("actor") or meta.get("created_by") or "system",
             "confidence": float(meta.get("confidence", 1.0)),
@@ -305,12 +314,52 @@ class KnowledgeGraph:
             edges.append(edge_dict)
         return edges
 
+    def _make_memory_node(self, attrs: dict) -> MemoryNode:
+        data = dict(attrs)
+        if not data.get("source") and "properties" in data and isinstance(data["properties"], dict):
+            if "source" in data["properties"]:
+                data["source"] = data["properties"]["source"]
+        valid_fields = {
+            "node_id", "content", "source", "trust_status", "derivation_edges",
+            "version", "supersedes", "contradicts", "deletion_state", "is_blocked",
+            "created_at", "last_accessed", "access_count", "entity_type", "properties",
+            "session_id", "lifecycle", "deleted_reason", "deleted_by", "deleted_at",
+            "summary_l0", "summary_l1", "content_l2"
+        }
+        filtered = {}
+        props = dict(data.get("properties") or {})
+        for k, v in data.items():
+            if k in valid_fields:
+                filtered[k] = v
+            else:
+                props[k] = v
+        filtered["properties"] = props
+        return MemoryNode.from_jsonld(filtered)
+
     def persist(self) -> None:
         """Save the graph to self.path using networkx.node_link_data. mkdir parent if missing."""
         if not self.path:
             return
         path_obj = Path(self.path)
         path_obj.parent.mkdir(parents=True, exist_ok=True)
+
+        # Sync node state from self.nodes to self.graph before persist
+        for nid, node in list(self.nodes.items()):
+            if self.graph.has_node(nid):
+                del_state = getattr(node, "deletion_state", None)
+                if del_state is not None:
+                    self.graph.nodes[nid]["deletion_state"] = del_state
+                if hasattr(node, "deleted_by") and node.deleted_by:
+                    self.graph.nodes[nid]["deleted_by"] = node.deleted_by
+                if hasattr(node, "deleted_reason") and node.deleted_reason:
+                    self.graph.nodes[nid]["deleted_reason"] = node.deleted_reason
+                if hasattr(node, "deleted_at") and node.deleted_at:
+                    self.graph.nodes[nid]["deleted_at"] = (
+                        node.deleted_at.isoformat() if hasattr(node.deleted_at, "isoformat") else str(node.deleted_at)
+                    )
+                if hasattr(node, "lifecycle") and node.lifecycle:
+                    self.graph.nodes[nid]["lifecycle"] = list(node.lifecycle)
+
         data = nx.node_link_data(self.graph)
 
         def _json_serial(obj):
@@ -337,7 +386,7 @@ class KnowledgeGraph:
             self.graph = nx.node_link_graph(graph_data, directed=True, edges=edge_key)
             for k, v in data["nodes"].items():
                 try:
-                    node_obj = MemoryNode.from_jsonld(v) if isinstance(v, dict) else v
+                    node_obj = self._make_memory_node(v) if isinstance(v, dict) else v
                     self.nodes[k] = node_obj
                     if self.graph.has_node(k):
                         attrs = v if isinstance(v, dict) else node_obj.to_jsonld()
@@ -351,6 +400,11 @@ class KnowledgeGraph:
         for nid in list(self.graph.nodes):
             if "node_id" not in self.graph.nodes[nid]:
                 self.graph.nodes[nid]["node_id"] = str(nid)
+            if nid not in self.nodes:
+                try:
+                    self.nodes[nid] = self._make_memory_node(dict(self.graph.nodes[nid]))
+                except Exception:
+                    pass
 
     def stats(self) -> dict:
         """Return {node_count, edge_count, active_count, orphan_count, relationship_counts: dict}."""
@@ -397,11 +451,17 @@ class KnowledgeGraph:
 
     def get_node(self, node_id: str) -> Optional[MemoryNode]:
         if node_id in self.nodes and isinstance(self.nodes[node_id], MemoryNode):
+            if self.graph.has_node(node_id):
+                graph_state = self.graph.nodes[node_id].get("deletion_state")
+                if graph_state and self.nodes[node_id].deletion_state != graph_state:
+                    self.nodes[node_id].deletion_state = graph_state
             return self.nodes[node_id]
         ent = self.get_entity(node_id)
         if ent:
             try:
-                return MemoryNode.from_jsonld(ent)
+                node = self._make_memory_node(ent)
+                self.nodes[node_id] = node
+                return node
             except Exception:
                 pass
         return None
@@ -429,24 +489,29 @@ class KnowledgeGraph:
         active = []
         for ent in self.get_active_entities():
             nid = ent["node_id"]
-            if nid in self.nodes and isinstance(self.nodes[nid], MemoryNode):
-                active.append(self.nodes[nid])
-            else:
-                try:
-                    active.append(MemoryNode.from_jsonld(ent))
-                except Exception:
-                    pass
+            node = self.get_node(nid)
+            if node and node.deletion_state == "active":
+                active.append(node)
         return active
 
     def get_deleted_nodes(self) -> list[MemoryNode]:
         deleted = []
         for nid, data in self.graph.nodes.items():
             if data.get("deletion_state") != "active":
-                if nid in self.nodes and isinstance(self.nodes[nid], MemoryNode):
-                    deleted.append(self.nodes[nid])
-                else:
-                    try:
-                        deleted.append(MemoryNode.from_jsonld(dict(data)))
-                    except Exception:
-                        pass
+                node = self.get_node(nid)
+                if node:
+                    deleted.append(node)
         return deleted
+
+    def heal_orphans(self, actor: str = "graph_healer", vector_store=None, hash_chain=None, **kwargs):
+        """Backward-compatibility delegator to GraphHealer."""
+        from core.graph_healer import GraphHealer
+
+        healer = GraphHealer(
+            graph=self,
+            vector_store=vector_store,
+            audit_chain=hash_chain,
+            **{k: v for k, v in kwargs.items() if k in ("similarity_threshold", "high_confidence_threshold")},
+        )
+        session_id = kwargs.get("session_id")
+        return healer.heal_orphans(session_id=session_id)
