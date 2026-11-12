@@ -24,7 +24,7 @@ class AgentA:
         self.abstention = AbstentionEngine()
         self.residual_risks = []
         self.blocked_ids = load_blocked_ids()
-        self.all_nodes = {}
+        self.all_nodes = dict(self.graph.nodes)
         self.last_report = None
         self.session_store = SessionStore()
         self.sessions = self.session_store
@@ -103,8 +103,8 @@ class AgentA:
             return {"answer": "Retrieval error.", "sources": [], "tokens_used": 0, "ranking_explanations": [], "abstained": True, "reason": str(error)}
         return {"answer": context.text, "sources": [entity.node_id for entity in context.entities], "tokens_used": context.token_count, "ranking_explanations": context.ranking_explanations, "abstained": not bool(context.entities)}
 
-    def forget(self, node_id, reason="user_requested", deleted_by="system"):
-        report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain, reason, deleted_by)
+    def forget(self, node_id, reason="user_requested_erasure", deleted_by="user"):
+        report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain, reason=reason, deleted_by=deleted_by)
         self.last_report = report
         self.residual_risks.extend(report.residual_risks)
         self.blocked_ids = load_blocked_ids()
@@ -121,12 +121,14 @@ class AgentA:
         return [n for n in self.all_nodes.values() if n.session_id == session_id and n.deletion_state == "active"]
 
     def export_memory(self):
-        return CapsuleExporter().export("agent_a", list(self.all_nodes.values()), self.graph, self.hash_chain, self.residual_risks)
+        return CapsuleExporter().export("agent_a", list(self.all_nodes.values()), self.graph, self.hash_chain,
+                                        self.residual_risks, session_commits=self.sessions._sessions)
 
     def restart(self):
         self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")
         self.graph = ProvenanceGraph()
         self.hash_chain = HashChain()
         self.blocked_ids = load_blocked_ids()
+        self.all_nodes = dict(self.graph.nodes)
         self.session_store = SessionStore()
         self.sessions = self.session_store
