@@ -52,6 +52,7 @@ class GraphStore:
         vector_store: Any = None,
         audit_chain: Any = None,
         similarity_threshold: float = 0.82,
+        llm_suggester: Any = None,
     ):
         self.path = path
         self.kg = KnowledgeGraph(path=path)
@@ -60,6 +61,7 @@ class GraphStore:
             vector_store=vector_store,
             audit_chain=audit_chain,
             similarity_threshold=similarity_threshold,
+            llm_suggester=llm_suggester,
         )
         self._memory_nodes: dict[str, MemoryNode] = {}
 

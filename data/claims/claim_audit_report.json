@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-12T19:30:28.508019+00:00",
-  "commit": "9ba0448",
+  "timestamp": "2026-11-12T19:40:56.588255+00:00",
+  "commit": "8ab755d",
   "python_version": "3.14.6",
   "context": {
     "claims_only": false,
@@ -50,17 +50,24 @@
     },
     {
       "name": "Capsule export preserves deletion state",
-      "status": "SKIP",
-      "details": "Requires legacy capsule blocked-state contract not exposed by current importer",
-      "evidence": {},
-      "error": "interface mismatch"
+      "status": "PASS",
+      "details": "capsule deletion state checked",
+      "evidence": {
+        "parent_blocked": true,
+        "child_state": "invalidated"
+      },
+      "error": null
     },
     {
       "name": "Capsule import preserves residual risks",
-      "status": "SKIP",
-      "details": "Agent B exposes risks through import metadata only; no residual-risk registry contract",
-      "evidence": {},
-      "error": "interface mismatch"
+      "status": "PASS",
+      "details": "residual-risk registry compared",
+      "evidence": {
+        "original_risk_count": 1,
+        "imported_risk_count": 1,
+        "match": true
+      },
+      "error": null
     },
     {
       "name": "Session commit auto-triggers healing",
@@ -118,25 +125,25 @@
       "details": "audit entry checked",
       "evidence": {
         "entry": {
-          "entry_id": "4f0e97c9-484f-499e-b86a-6889a086b93a",
-          "event_id": "4f0e97c9-484f-499e-b86a-6889a086b93a",
+          "entry_id": "3eabf3d3-cef3-4f67-8925-010130cfaa7b",
+          "event_id": "3eabf3d3-cef3-4f67-8925-010130cfaa7b",
           "operation": "deletion_completed",
-          "node_id": "37dffbb4-95b5-4a63-b1f4-5f814ec2ba19",
-          "entity_id": "37dffbb4-95b5-4a63-b1f4-5f814ec2ba19",
+          "node_id": "bdbb8325-b0b3-496b-adb3-c0931b5f8e61",
+          "entity_id": "bdbb8325-b0b3-496b-adb3-c0931b5f8e61",
           "actor": "agent",
           "reason": "erasure_request",
           "metadata": {},
           "details": {
             "verdict": "fully_deleted",
-            "signature": "11c160f5510a30315465d315d9e99e2c393aadcd5a0f58c860b1d8bc4324f443",
+            "signature": "6ef0eee095b0af59f9ed228f2ec77c52772bdbb2129a3eae0e685b625671bec6",
             "actor": "alice",
             "reason": "GDPR request",
             "content_digest": "b19b2022fbca5eebe2f23af94ff755f30bbd176d59e5e1c746e11b0adde61a7a",
             "content_redacted": true
           },
-          "prev_hash": "bb2b1c4c50687cfb3df7981b7baf4afb45114358759bc0912a69cfe966d6cbfe",
-          "timestamp": "2026-11-12T19:30:27.751645+00:00",
-          "hash": "890878cbf129bc45b1785975ab2b77dcea86322b58d89aa7f85c1aa476586037"
+          "prev_hash": "bbeea9fc4308183e193ca2d527be812ab3c8eac471c135f38cb816205fe1aff1",
+          "timestamp": "2026-11-12T19:40:55.737337+00:00",
+          "hash": "7bc790018aaf795771f76596dca432c7ad37b1d4fe4d704056cd887f1f801430"
         },
         "has_actor": true,
         "has_reason": true,
@@ -146,10 +153,14 @@
     },
     {
       "name": "Legacy capsules import correctly",
-      "status": "SKIP",
-      "details": "Legacy capsule fixture needs isolated importer contract",
-      "evidence": {},
-      "error": "not safely inferable"
+      "status": "PASS",
+      "details": "legacy capsule imported",
+      "evidence": {
+        "import_ok": true,
+        "node_count": 1,
+        "errors": []
+      },
+      "error": null
     },
     {
       "name": "30 sessions survive restart",
@@ -164,33 +175,45 @@
     },
     {
       "name": "Cross-agent hand-over mid-task preserves task state",
-      "status": "SKIP",
-      "details": "Task-state entity contract is not distinct from generic memory",
-      "evidence": {},
-      "error": "interface mismatch"
+      "status": "PASS",
+      "details": "task capsule checked",
+      "evidence": {
+        "task_context_preserved": true,
+        "memories_preserved": 2,
+        "deleted_blocked": true
+      },
+      "error": null
     }
   ],
   "adversarial": [
     {
       "name": "Adversarial: Import broken capsule",
-      "status": "SKIP",
-      "details": "Requires isolated capsule fixture",
-      "evidence": {},
-      "error": "not implemented"
+      "status": "PASS",
+      "details": "broken capsule rejected",
+      "evidence": {
+        "rejected": true
+      },
+      "error": null
     },
     {
       "name": "Adversarial: Delete missing node",
-      "status": "SKIP",
-      "details": "Requires adversarial mock-store harness",
-      "evidence": {},
-      "error": "not implemented"
+      "status": "PASS",
+      "details": "missing deletion checked",
+      "evidence": {
+        "verdict": "failed",
+        "level_1": "failed"
+      },
+      "error": null
     },
     {
       "name": "Adversarial: Delete twice",
-      "status": "SKIP",
-      "details": "Requires adversarial mock-store harness",
-      "evidence": {},
-      "error": "not implemented"
+      "status": "PASS",
+      "details": "double deletion checked",
+      "evidence": {
+        "second_verdict": "failed",
+        "hash_ok": true
+      },
+      "error": null
     },
     {
       "name": "Contradiction detection returns both nodes",
@@ -265,13 +288,13 @@
   ],
   "summary": {
     "claims_total": 14,
-    "claims_passed": 10,
+    "claims_passed": 14,
     "claims_failed": 0,
-    "claims_skipped": 4,
+    "claims_skipped": 0,
     "adversarial_total": 10,
-    "adversarial_passed": 7,
+    "adversarial_passed": 10,
     "adversarial_failed": 0,
-    "adversarial_skipped": 3,
-    "overall_status": "YELLOW"
+    "adversarial_skipped": 0,
+    "overall_status": "GREEN"
   }
 }

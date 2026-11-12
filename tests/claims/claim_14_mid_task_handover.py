@@ -1,4 +1,4 @@
-from ._helpers import result
+from ._helpers import claim
 
-def run(context): return result("Cross-agent hand-over mid-task preserves task state","SKIP","Task-state entity contract is not distinct from generic memory",{}, "interface mismatch")
+def run(context): return claim("handover", context)
 

@@ -52,6 +52,15 @@ class ErasureEngine:
         entity_type = getattr(node, "entity_type", "memory") if node else "memory"
         original_content = node.content if node else ""
         content_digest = hashlib.sha256(original_content.encode("utf-8")).hexdigest() if node else None
+        if node is not None and node.deletion_state != "active":
+            details = {"state": node.deletion_state, "actor": deleted_by, "reason": reason}
+            hash_chain.append("deletion_repeated", node_id, details, actor=deleted_by, reason=reason)
+            levels = [LevelResult(1, "Source Record Removed", "failed", "Entity was already deleted; operation is idempotent.", details)]
+            for number, name in [(2, "Derived Artifacts Invalidated"), (3, "Inference Blocked"), (4, "Non-Inferability Checked"), (5, "State Restoration Checked")]:
+                levels.append(LevelResult(number, name, "passed", "No additional mutation performed.", {}))
+            payload = {"node_id": node_id, "verdict": "failed", "timestamp": timestamp, "repeat": True}
+            signature = hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
+            return ErasureReport(node_id, "", levels, "failed", [], timestamp, signature, entity_type, deleted_by, reason)
         if node:
             node.transition("source_removed", deleted_by, reason)
             vector_store.remove_from_active_index(node_id)
@@ -70,7 +79,14 @@ class ErasureEngine:
         risks=[]; candidates=[]
         try: candidates=vector_store.query(original_content, top_k=3)
         except Exception: candidates=[]
-        if not candidates: candidates=graph_store.get_all_active_nodes()[:50]
+        # Always supplement vector neighbors with active graph entities so
+        # semantic deletion risk is not hidden by a narrow top-k result.
+        try:
+            graph_candidates = graph_store.get_all_active_nodes()[:50]
+            seen_ids = {getattr(candidate, "node_id", None) for candidate in candidates}
+            candidates.extend(candidate for candidate in graph_candidates if candidate.node_id not in seen_ids)
+        except Exception:
+            if not candidates: candidates=[]
         for n in candidates:
             if n.node_id == node_id: continue
             sim=self._similar(original_content, n.content)

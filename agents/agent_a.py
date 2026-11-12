@@ -12,6 +12,9 @@ from agents.blocked_loader import load_blocked_ids
 from stores.session_store import SessionStore
 from core.active_context import ActiveContext, ContextBuilder
 from core.healing_scheduler import HealingScheduler
+from core.entity_extractor import EntityExtractor
+from core.summary_generator import SummaryGenerator
+from stores.filesystem_memory import FilesystemMemory
 
 
 class AgentA:
@@ -30,11 +33,16 @@ class AgentA:
         self.session_store = SessionStore()
         self.sessions = self.session_store
         self.healing_scheduler = HealingScheduler(self.build_knowledge_graph)
+        self.entity_extractor = EntityExtractor()
+        self.summary_generator = SummaryGenerator()
+        self.filesystem_memory = FilesystemMemory()
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
         source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
                   "timestamp": datetime.now(timezone.utc).isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
         node = MemoryNode(content=content, source=source, session_id=session_id, trust_status=trust_status)
+        summaries = self.summary_generator.generate(content)
+        node.summary_l0, node.summary_l1, node.content_l2 = summaries["l0"], summaries["l1"], summaries["l2"]
         try:
             conflicts = self.contradiction.detect(node, self.graph.get_all_active_nodes())
             if conflicts:
@@ -77,6 +85,10 @@ class AgentA:
 
     def commit_session(self, session_id, actor="harness", reason="session_end"):
         entity_ids = [node.node_id for node in self.all_nodes.values() if node.session_id == session_id]
+        session_nodes = [self.all_nodes[node_id] for node_id in entity_ids if node_id in self.all_nodes]
+        self.entity_extractor.extract([node.content for node in session_nodes])
+        for node in session_nodes:
+            self.filesystem_memory.write_entity(node)
         session = self.sessions.commit_session(session_id, entity_ids, actor)
         self.hash_chain.append("session_commit", session_id, {**session, "reason": reason})
         self.graph.heal_orphans(actor=actor, vector_store=self.vector_store, hash_chain=self.hash_chain)
