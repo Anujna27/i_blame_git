@@ -1,14 +1,14 @@
 from typing import Optional
 
 from core.memory_node import MemoryNode
-from core.provenance_graph import ProvenanceGraph
+from core.knowledge_graph import KnowledgeGraph
 
 
 class GraphStore:
-    """Wrapper around ProvenanceGraph providing persistent graph storage for MemoryNodes."""
+    """Compatibility wrapper around the shared KnowledgeGraph."""
 
     def __init__(self, path: str = "data/provenance_graph.json"):
-        self._provenance = ProvenanceGraph(path=path)
+        self._provenance = KnowledgeGraph(path=path)
 
     @property
     def graph(self):
