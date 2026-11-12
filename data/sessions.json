@@ -75,5 +75,42 @@
     "entity_ids": [
       "c68e82a6-d0a8-4ba7-b2e5-0a57af2ea950"
     ]
+  },
+  "quick_test": {
+    "session_id": "quick_test",
+    "status": "committed",
+    "committed_at": "2026-11-12T20:53:34.480506+00:00",
+    "committed_by": "manual-user",
+    "entity_ids": [
+      "c5373960-35c4-40c7-a577-47b384db0f66",
+      "0e0eb9fe-249f-466e-a6d6-916a517b519a"
+    ]
+  },
+  "delete_test_84721": {
+    "session_id": "delete_test_84721",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "d7770fc5-0f0e-4ac8-8fcc-379319604038"
+    ]
+  },
+  "comparison_421ec1fa": {
+    "session_id": "comparison_421ec1fa",
+    "status": "committed",
+    "committed_at": "2026-11-12T20:58:43.103426+00:00",
+    "committed_by": "comparison-test",
+    "entity_ids": [
+      "eab6c039-d9f3-4ab7-bfc5-6773de55e441"
+    ]
+  },
+  "comparison_60014f12": {
+    "session_id": "comparison_60014f12",
+    "status": "committed",
+    "committed_at": "2026-11-12T20:58:48.477256+00:00",
+    "committed_by": "comparison-test",
+    "entity_ids": [
+      "5ccf9891-c5d3-4977-b395-b3f6dbc6cf2f"
+    ]
   }
 }

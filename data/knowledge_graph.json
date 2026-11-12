@@ -650,6 +650,306 @@
         "raw_reference": "sess_015_turn_3"
       },
       "id": "c68e82a6-d0a8-4ba7-b2e5-0a57af2ea950"
+    },
+    {
+      "node_id": "c5373960-35c4-40c7-a577-47b384db0f66",
+      "entity_type": "generic",
+      "content": "I prefer Python and FastAPI.",
+      "session_id": "quick_test",
+      "deletion_state": "quarantined",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "3610f141-bfbb-48a8-80eb-43e6b9de07ea",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T20:53:34.447437+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "cb521150-26a7-473c-9448-d4a3c8629839",
+          "state": "quarantined",
+          "actor": "graph_healer",
+          "reason": "no safe relationship could be inferred",
+          "timestamp": "2026-11-12T20:53:34.519313+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "conversation_turn",
+          "session_id": "quick_test",
+          "turn_index": 0,
+          "timestamp": "2026-11-12T20:53:34.447370+00:00Z",
+          "raw_reference": "quick_test_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-12T20:53:34.447430+00:00",
+        "last_accessed": "2026-11-12T20:53:34.447431+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "I prefer Python and FastAPI",
+        "summary_l1": "I prefer Python and FastAPI",
+        "content_l2": "I prefer Python and FastAPI."
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "quick_test",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T20:53:34.447370+00:00Z",
+        "raw_reference": "quick_test_turn_0"
+      },
+      "deleted_by": "graph_healer",
+      "deleted_reason": "no safe relationship could be inferred",
+      "deleted_at": "2026-11-12T20:53:34.519313+00:00",
+      "id": "c5373960-35c4-40c7-a577-47b384db0f66"
+    },
+    {
+      "node_id": "0e0eb9fe-249f-466e-a6d6-916a517b519a",
+      "entity_type": "generic",
+      "content": "My temporary test key is sk-delete-me.",
+      "session_id": "quick_test",
+      "deletion_state": "quarantined",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "54c20a1d-8703-42b1-a8aa-91a481b9fd98",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T20:53:34.462623+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "1128fa93-ea47-43dc-a245-aeba2bc0958f",
+          "state": "quarantined",
+          "actor": "graph_healer",
+          "reason": "no safe relationship could be inferred",
+          "timestamp": "2026-11-12T20:53:34.522749+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "conversation_turn",
+          "session_id": "quick_test",
+          "turn_index": 0,
+          "timestamp": "2026-11-12T20:53:34.462558+00:00Z",
+          "raw_reference": "quick_test_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-12T20:53:34.462612+00:00",
+        "last_accessed": "2026-11-12T20:53:34.462614+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "My temporary test key is sk-delete-me",
+        "summary_l1": "My temporary test key is sk-delete-me",
+        "content_l2": "My temporary test key is sk-delete-me."
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "quick_test",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T20:53:34.462558+00:00Z",
+        "raw_reference": "quick_test_turn_0"
+      },
+      "deleted_by": "graph_healer",
+      "deleted_reason": "no safe relationship could be inferred",
+      "deleted_at": "2026-11-12T20:53:34.522749+00:00",
+      "id": "0e0eb9fe-249f-466e-a6d6-916a517b519a"
+    },
+    {
+      "node_id": "d7770fc5-0f0e-4ac8-8fcc-379319604038",
+      "entity_type": "generic",
+      "content": "UNIQUE_DELETE_TEST_84721 temporary credential",
+      "session_id": "delete_test_84721",
+      "deletion_state": "source_removed",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "f2df4917-4326-4c66-ac2d-36c04786aa31",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T20:56:02.705331+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "72aa0796-8cbe-4eaf-af2d-d8e22068b3eb",
+          "state": "deleted",
+          "actor": "manual-user",
+          "reason": "manual deletion test",
+          "timestamp": "2026-11-12T20:56:02.761023+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "conversation_turn",
+          "session_id": "delete_test_84721",
+          "turn_index": 0,
+          "timestamp": "2026-11-12T20:56:02.705258+00:00Z",
+          "raw_reference": "delete_test_84721_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-12T20:56:02.705322+00:00",
+        "last_accessed": "2026-11-12T20:56:02.705324+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "UNIQUE_DELETE_TEST_84721 temporary credential",
+        "summary_l1": "UNIQUE_DELETE_TEST_84721 temporary credential",
+        "content_l2": "UNIQUE_DELETE_TEST_84721 temporary credential"
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "delete_test_84721",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T20:56:02.705258+00:00Z",
+        "raw_reference": "delete_test_84721_turn_0"
+      },
+      "deleted_by": "manual-user",
+      "deleted_reason": "manual deletion test",
+      "deleted_at": "2026-11-12T20:56:02.761023+00:00",
+      "id": "d7770fc5-0f0e-4ac8-8fcc-379319604038"
+    },
+    {
+      "node_id": "eab6c039-d9f3-4ab7-bfc5-6773de55e441",
+      "entity_type": "generic",
+      "content": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability.",
+      "session_id": "comparison_421ec1fa",
+      "deletion_state": "quarantined",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "a39d0515-8dff-4222-ad1a-dc801b89a0ab",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T20:58:43.079652+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "19706206-a525-4ee9-b87e-5c2d437496f1",
+          "state": "quarantined",
+          "actor": "graph_healer",
+          "reason": "no safe relationship could be inferred",
+          "timestamp": "2026-11-12T20:58:43.132194+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "conversation_turn",
+          "session_id": "comparison_421ec1fa",
+          "turn_index": 1,
+          "timestamp": "2026-11-12T20:58:43.079580+00:00Z",
+          "raw_reference": "comparison_421ec1fa_turn_1"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-12T20:58:43.079643+00:00",
+        "last_accessed": "2026-11-12T20:58:43.079644+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval",
+        "summary_l1": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability",
+        "content_l2": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability."
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "comparison_421ec1fa",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T20:58:43.079580+00:00Z",
+        "raw_reference": "comparison_421ec1fa_turn_1"
+      },
+      "deleted_by": "graph_healer",
+      "deleted_reason": "no safe relationship could be inferred",
+      "deleted_at": "2026-11-12T20:58:43.132194+00:00",
+      "id": "eab6c039-d9f3-4ab7-bfc5-6773de55e441"
+    },
+    {
+      "node_id": "5ccf9891-c5d3-4977-b395-b3f6dbc6cf2f",
+      "entity_type": "generic",
+      "content": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability.",
+      "session_id": "comparison_60014f12",
+      "deletion_state": "quarantined",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "c6815168-210e-411d-93f2-d5ab250b53bb",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-12T20:58:44.660838+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "973de8b3-f760-40f9-b355-a581f46ee70c",
+          "state": "quarantined",
+          "actor": "graph_healer",
+          "reason": "no safe relationship could be inferred",
+          "timestamp": "2026-11-12T20:58:51.967485+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "conversation_turn",
+          "session_id": "comparison_60014f12",
+          "turn_index": 1,
+          "timestamp": "2026-11-12T20:58:44.660778+00:00Z",
+          "raw_reference": "comparison_60014f12_turn_1"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-12T20:58:44.660831+00:00",
+        "last_accessed": "2026-11-12T20:58:44.660832+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Himanshu is developing MNEMOSYNE, a memory system combining knowledge graphs and vector retrieval. He prefers Python and requires deletion accountability.",
+        "summary_l1": "Himanshu is building MNEMOSYNE, a memory system that integrates a knowledge graph with vector retrieval capabilities. His primary programming language preference is Python. A key requirement for the system is deletion accountability, ensuring that data removal is tracked and auditable.",
+        "content_l2": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability."
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "comparison_60014f12",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T20:58:44.660778+00:00Z",
+        "raw_reference": "comparison_60014f12_turn_1"
+      },
+      "deleted_by": "graph_healer",
+      "deleted_reason": "no safe relationship could be inferred",
+      "deleted_at": "2026-11-12T20:58:51.967485+00:00",
+      "id": "5ccf9891-c5d3-4977-b395-b3f6dbc6cf2f"
     }
   ],
   "edges": []
