@@ -1,0 +1,40 @@
+{
+  "node_id": "0e0eb9fe-249f-466e-a6d6-916a517b519a",
+  "content": "My temporary test key is sk-delete-me.",
+  "source": {
+    "type": "conversation_turn",
+    "session_id": "quick_test",
+    "turn_index": 0,
+    "timestamp": "2026-11-12T20:53:34.462558+00:00Z",
+    "raw_reference": "quick_test_turn_0"
+  },
+  "trust_status": "user_asserted",
+  "derivation_edges": [],
+  "version": 1,
+  "supersedes": null,
+  "contradicts": [],
+  "deletion_state": "active",
+  "is_blocked": false,
+  "created_at": "2026-11-12T20:53:34.462612+00:00",
+  "last_accessed": "2026-11-12T20:53:34.462614+00:00",
+  "access_count": 0,
+  "entity_type": "generic",
+  "properties": {},
+  "session_id": "quick_test",
+  "lifecycle": [
+    {
+      "event_id": "54c20a1d-8703-42b1-a8aa-91a481b9fd98",
+      "state": "created",
+      "actor": "system",
+      "reason": "entity_created",
+      "timestamp": "2026-11-12T20:53:34.462623+00:00",
+      "metadata": {}
+    }
+  ],
+  "deleted_reason": null,
+  "deleted_by": null,
+  "deleted_at": null,
+  "summary_l0": "My temporary test key is sk-delete-me",
+  "summary_l1": "My temporary test key is sk-delete-me",
+  "content_l2": "My temporary test key is sk-delete-me."
+}
