@@ -10,6 +10,7 @@ from stores.vector_store import VectorStore
 from capsule.export import CapsuleExporter
 from agents.blocked_loader import load_blocked_ids
 from stores.session_store import SessionStore
+from core.active_context import ActiveContext
 
 
 class AgentA:
@@ -48,9 +49,50 @@ class AgentA:
         self.hash_chain.append("write", node.node_id, {"preview": content[:50], "trust_status": node.trust_status})
         return node
 
+    def update_entity(self, node_id, content, actor="system", reason="entity_updated"):
+        node = self.graph.get_node(node_id)
+        if node is None:
+            raise KeyError(node_id)
+        old_content = node.content
+        node.content = content
+        node.version += 1
+        node.lifecycle.append({"state": "updated", "actor": actor, "reason": reason,
+                               "old_value": old_content, "new_value": content,
+                               "timestamp": datetime.now(timezone.utc).isoformat()})
+        self.vector_store.add(node)
+        self.graph.persist()
+        self.sessions.add(node)
+        self.hash_chain.append("entity_updated", node_id, {"actor": actor, "reason": reason,
+                                                              "old_value": old_content, "new_value": content})
+        return node
+
+    def commit_session(self, session_id, actor="harness", reason="session_end"):
+        event = self.sessions.commit(session_id, actor, reason)
+        self.hash_chain.append("session_commit", session_id, event)
+        return event
+
+    def build_active_context(self, query, token_budget=2000):
+        retrieved = self.vector_store.query(query, top_k=5)
+        vector_ids = [node.node_id for node in retrieved]
+        entities = list(retrieved)
+        seen = set(vector_ids)
+        graph_ids = []
+        for node in retrieved:
+            for node_id in self.graph.get_ancestors(node.node_id) + self.graph.get_descendants(node.node_id):
+                related = self.graph.get_node(node_id)
+                if related and related.deletion_state == "active" and node_id not in seen:
+                    graph_ids.append(node_id); entities.append(related); seen.add(node_id)
+        selected = []
+        tokens = 0
+        for entity in entities:
+            cost = len(entity.content.split())
+            if tokens + cost > token_budget: continue
+            selected.append(entity); tokens += cost
+        return ActiveContext(query, selected, tokens, vector_ids, graph_ids)
+
     def recall(self, query, token_budget=2000):
         try:
-            retrieved = self.vector_store.query(query, top_k=5)
+            retrieved = self.build_active_context(query, token_budget).entities
         except Exception as error:
             return {"answer": "Retrieval error.", "sources": [], "tokens_used": 0, "abstained": True, "reason": str(error)}
         blocked_present = any(node.node_id in self.blocked_ids for node in retrieved)

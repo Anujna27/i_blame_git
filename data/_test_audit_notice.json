@@ -816,5 +816,75 @@
     "prev_hash": "7e08326ab16c7fdede258eb2604f950920f1d2882d1a140750463349d58f7a84",
     "timestamp": "2026-11-12T15:50:19.695256+00:00",
     "hash": "00513d73051daa18af7db3c9a6dabbf93c3be2aeb5d92307b6e09a3b373bc258"
+  },
+  {
+    "entry_id": "673a1aed-b228-4066-8ef8-7d3126437e8f",
+    "operation": "delete_level_1",
+    "node_id": "534054ec-19f7-4285-94dd-36ea3891bb13",
+    "details": {
+      "action": "source_removed",
+      "reason": "user_requested",
+      "deleted_by": "system"
+    },
+    "prev_hash": "00513d73051daa18af7db3c9a6dabbf93c3be2aeb5d92307b6e09a3b373bc258",
+    "timestamp": "2026-11-12T16:39:27.446735+00:00",
+    "hash": "feb3e97c00ee7b6badeded0dfbf7b26bce72615da40baa48bd4a538c2dcf9b83"
+  },
+  {
+    "entry_id": "275dab7e-4732-4036-bcc5-8647a0d4499d",
+    "operation": "delete_level_2",
+    "node_id": "534054ec-19f7-4285-94dd-36ea3891bb13",
+    "details": {
+      "invalidated": [],
+      "failed": []
+    },
+    "prev_hash": "feb3e97c00ee7b6badeded0dfbf7b26bce72615da40baa48bd4a538c2dcf9b83",
+    "timestamp": "2026-11-12T16:39:27.450304+00:00",
+    "hash": "a72317df49a7f42321350069d786d30b02d14f185761761b3838382dee847bbb"
+  },
+  {
+    "entry_id": "afd79ea6-5710-4afe-be29-43e792f7726a",
+    "operation": "delete_level_3",
+    "node_id": "534054ec-19f7-4285-94dd-36ea3891bb13",
+    "details": {
+      "blocked_set_size": 13
+    },
+    "prev_hash": "a72317df49a7f42321350069d786d30b02d14f185761761b3838382dee847bbb",
+    "timestamp": "2026-11-12T16:39:27.454106+00:00",
+    "hash": "1c0ce93688ac520a21792b4c3c3553defecfaee2766357c62434d33a676d58e1"
+  },
+  {
+    "entry_id": "e5162c4d-d003-4465-a2e5-888e2a3c0d02",
+    "operation": "delete_level_4",
+    "node_id": "534054ec-19f7-4285-94dd-36ea3891bb13",
+    "details": {
+      "risks_found": 0
+    },
+    "prev_hash": "1c0ce93688ac520a21792b4c3c3553defecfaee2766357c62434d33a676d58e1",
+    "timestamp": "2026-11-12T16:39:27.457467+00:00",
+    "hash": "ea9c03eba2bf3a9b765e95b588840ed7b52448b51ad7a6df8b582e163e978055"
+  },
+  {
+    "entry_id": "43ca131b-3a73-4c5c-bdf5-27e327beb5e0",
+    "operation": "delete_level_5",
+    "node_id": "534054ec-19f7-4285-94dd-36ea3891bb13",
+    "details": {
+      "non_reversible_artifacts": []
+    },
+    "prev_hash": "ea9c03eba2bf3a9b765e95b588840ed7b52448b51ad7a6df8b582e163e978055",
+    "timestamp": "2026-11-12T16:39:27.460943+00:00",
+    "hash": "6600ae709ba97ff8759964176cc9d510165ecefb055e515ff82d79c46a9d81bc"
+  },
+  {
+    "entry_id": "68b22e27-2c9f-4581-ad4a-7c9d6bb45e6b",
+    "operation": "deletion_completed",
+    "node_id": "534054ec-19f7-4285-94dd-36ea3891bb13",
+    "details": {
+      "verdict": "fully_deleted",
+      "signature": "6fd489435e7acdfa5a50ecfb2ef53b5e2187e98364eebac50f703622d2991e56"
+    },
+    "prev_hash": "6600ae709ba97ff8759964176cc9d510165ecefb055e515ff82d79c46a9d81bc",
+    "timestamp": "2026-11-12T16:39:27.463492+00:00",
+    "hash": "a147c19418663f5cf74099bbca76dcfbc0a7715392e6d8c0d6db43f03d739e50"
   }
 ]
