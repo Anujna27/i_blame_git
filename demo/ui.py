@@ -93,8 +93,9 @@ with tabs[4]:
             else:
                 st.session_state.agent_b = AgentB()
                 path = f"data/capsules/cap_{st.session_state.capsule['capsule_id']}.json"
-                st.session_state.agent_b.import_memory(path)
-                st.success(f"Imported. Blocked nodes: {len(st.session_state.agent_b.blocked_ids)}")
+                summary = st.session_state.agent_b.import_memory(path)
+                st.session_state.agent_b_import_summary = summary
+                st.success(f"Imported {summary['imported']} nodes. Blocked nodes: {summary['blocked']}. Risks inherited: {summary['risks']}.")
     if "agent_b" in st.session_state:
         query = st.text_input("Query", value="What is my API key?")
         if st.button("Ask Agent B"):

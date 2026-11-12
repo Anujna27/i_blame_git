@@ -22,7 +22,7 @@ class AgentA:
         self.abstention = AbstentionEngine()
         self.residual_risks = []
         self.blocked_ids = load_blocked_ids()
-        self.all_nodes = {}
+        self.all_nodes = dict(self.graph.nodes)
         self.last_report = None
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
@@ -79,3 +79,4 @@ class AgentA:
         self.graph = ProvenanceGraph()
         self.hash_chain = HashChain()
         self.blocked_ids = load_blocked_ids()
+        self.all_nodes = dict(self.graph.nodes)
