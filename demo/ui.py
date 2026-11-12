@@ -72,6 +72,20 @@ st.markdown(
         width: 100% !important;
         overflow: visible;
     }
+    [data-testid="stSidebar"] [data-testid="stMultiSelectTagsContainer"] {
+        width: 100% !important;
+        min-height: 30rem !important;
+        align-items: flex-start !important;
+        align-content: flex-start !important;
+        overflow: visible !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stMultiSelectTagsContainer"] > span[role="group"] {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-content: flex-start !important;
+        gap: 0.55rem !important;
+    }
     [data-testid="stSidebar"] .stMultiSelect span,
     [data-testid="stSidebar"] div[data-baseweb="tag"],
     [data-testid="stSidebar"] div[data-baseweb="tag"] span {
