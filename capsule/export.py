@@ -1,7 +1,12 @@
+import dataclasses
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
+
+
+def _serialize_residual_risk(risk):
+    return dataclasses.asdict(risk) if dataclasses.is_dataclass(risk) else dict(risk)
 
 
 class CapsuleExporter:
@@ -10,14 +15,14 @@ class CapsuleExporter:
         capsule = {
             "@context": "https://mnemosyne.dev/schema/v1",
             "capsule_id": capsule_id,
-            "exported_at": datetime.utcnow().isoformat() + "Z",
+            "exported_at": datetime.now(timezone.utc).isoformat(),
             "source_agent": agent_name,
             "memory_nodes": [n.to_jsonld() for n in all_nodes],
             "derivation_graph": {"edges": [{"parent": u, "child": v, "type": d.get("edge_type", "derived")} for u, v, d in provenance_graph.graph.edges(data=True)]},
             "deletion_audit": {
                 "deleted_nodes": [n.node_id for n in all_nodes if n.deletion_state != "active"],
                 "invalidated_children": [n.node_id for n in all_nodes if n.deletion_state == "invalidated"],
-                "residual_risk_flags": [r.model_dump() for r in residual_risks],
+                "residual_risk_flags": [_serialize_residual_risk(r) for r in residual_risks],
             },
             "hash_chain": {"entries": hash_chain.get_entries(), "integrity_verified": hash_chain.verify_integrity()[0]},
             "retrieval_hints": {"token_budget_default": 2000, "preferred_stores": {"preferences": "graph", "documents": "vector", "task_context": "prompt", "procedures": "code"}},
