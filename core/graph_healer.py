@@ -63,12 +63,14 @@ class GraphHealer:
         audit_chain: Any = None,
         similarity_threshold: float = 0.82,
         high_confidence_threshold: float = 0.92,
+        llm_suggester: Any = None,
     ):
         self.graph = graph
         self.vector_store = vector_store
         self.audit_chain = audit_chain
         self.similarity_threshold = similarity_threshold
         self.high_confidence_threshold = high_confidence_threshold
+        self.llm_suggester = llm_suggester
 
     def find_orphans(self, session_id: Optional[str] = None) -> list[OrphanRecord]:
         """Detect all orphan types.
@@ -346,6 +348,26 @@ class GraphHealer:
         duplicates.sort(key=lambda dp: dp.similarity, reverse=True)
         return duplicates
 
+    def merge_duplicate(self, keep_node_id: str, remove_node_id: str, actor="system", reason="explicit_duplicate_merge"):
+        """Explicitly merge one duplicate into another; never called implicitly."""
+        keep = self.graph.get_entity(keep_node_id); remove = self.graph.get_entity(remove_node_id)
+        if not keep or not remove or keep.get("deletion_state") != "active" or remove.get("deletion_state") != "active":
+            raise ValueError("both entities must be active before an explicit merge")
+        merged_properties = dict(remove.get("properties") or {}); merged_properties.update(keep.get("properties") or {})
+        keep["properties"] = merged_properties
+        self.graph.graph.nodes[keep_node_id]["properties"] = merged_properties
+        for source, _, attrs in list(self.graph.graph.in_edges(remove_node_id, data=True)):
+            if source != keep_node_id and source != keep_node_id:
+                try: self.graph.add_relationship(source, keep_node_id, attrs.get("relationship", "RELATED_TO"), metadata={"merged_from": remove_node_id})
+                except Exception: pass
+        self.graph.graph.nodes[remove_node_id]["deletion_state"] = "merged"
+        self.graph.graph.nodes[remove_node_id]["properties"] = {"merged_into": keep_node_id, "merge_reason": reason}
+        self.graph.persist()
+        self._audit("graph_entities_merged", remove_node_id, {"kept_entity": keep_node_id, "actor": actor, "reason": reason})
+        if self.vector_store is not None and hasattr(self.vector_store, "remove"):
+            self.vector_store.remove(remove_node_id)
+        return {"kept_entity": keep_node_id, "merged_entity": remove_node_id, "reason": reason}
+
     def _deterministic_repair(self, orphan: OrphanRecord) -> Optional[HealingAction]:
         ent = self.graph.get_entity(orphan.node_id) or {}
 
@@ -548,6 +570,24 @@ class GraphHealer:
             reason=reason,
         )
 
+    def _llm_repair(self, orphan: OrphanRecord) -> Optional[HealingAction]:
+        """Use an injected LLM suggestion only when it returns a valid target."""
+        if not self.llm_suggester:
+            return None
+        try:
+            suggestion = self.llm_suggester(self.graph.get_entity(orphan.node_id) or {},
+                                            self.graph.get_active_entities())
+            target = suggestion.get("target_node_id") if isinstance(suggestion, dict) else None
+            confidence = float(suggestion.get("confidence", 0.0)) if isinstance(suggestion, dict) else 0.0
+            relationship = (suggestion.get("relationship", "RELATED_TO") if isinstance(suggestion, dict) else "RELATED_TO")
+            if not target or target == orphan.node_id or confidence < self.similarity_threshold or not self.graph.has_entity(target):
+                return None
+            self.graph.add_relationship(orphan.node_id, target, relationship, metadata={"healing_method":"llm_suggestion", "confidence":confidence, "actor":"graph_healer"})
+            return HealingAction(orphan.node_id, "similarity_link", "llm_suggestion", target, relationship, confidence, "Linked from injected LLM suggestion")
+        except Exception as exc:
+            warnings.warn(f"llm_suggester failed: {exc}", UserWarning, stacklevel=2)
+            return None
+
     def _quarantine(self, orphan: OrphanRecord) -> HealingAction:
         ent = self.graph.get_entity(orphan.node_id) or {}
         if ent.get("deletion_state") == "quarantined":
@@ -650,8 +690,10 @@ class GraphHealer:
                 continue
 
             action = None
+            if self.llm_suggester is not None:
+                action = self._llm_repair(orphan)
             if self.vector_store is not None:
-                action = self._similarity_repair(orphan)
+                action = action or self._similarity_repair(orphan)
 
             if action is not None:
                 actions_taken.append(action)

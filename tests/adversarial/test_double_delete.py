@@ -1,4 +1,4 @@
-from tests.claims._helpers import result
+from tests.claims._helpers import claim
 
-def run(context): return result("Adversarial: Delete twice","SKIP","Requires adversarial mock-store harness",{}, "not implemented")
+def run(context): return claim("double_delete", context)
 

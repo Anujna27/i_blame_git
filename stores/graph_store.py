@@ -52,6 +52,7 @@ class GraphStore:
         vector_store: Any = None,
         audit_chain: Any = None,
         similarity_threshold: float = 0.82,
+        llm_suggester: Any = None,
     ):
         self.path = path
         self.kg = KnowledgeGraph(path=path)
@@ -60,6 +61,7 @@ class GraphStore:
             vector_store=vector_store,
             audit_chain=audit_chain,
             similarity_threshold=similarity_threshold,
+            llm_suggester=llm_suggester,
         )
         self._memory_nodes: dict[str, MemoryNode] = {}
 
@@ -130,6 +132,9 @@ class GraphStore:
     def find_duplicates(self, threshold: float = 0.95):
         """Delegate to self.healer.find_duplicates. Read-only, no persist."""
         return self.healer.find_duplicates(threshold=threshold)
+
+    def merge_duplicate(self, keep_node_id: str, remove_node_id: str, actor="system", reason="explicit_duplicate_merge"):
+        return self.healer.merge_duplicate(keep_node_id, remove_node_id, actor, reason)
 
     def on_session_commit(self, session_id: str) -> dict:
         """Hook called by Person 1's agent.commit_session().
