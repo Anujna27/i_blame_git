@@ -3,3 +3,4 @@ try:
     import faiss  # noqa: F401
 except Exception:
     pass
+
