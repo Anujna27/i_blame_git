@@ -60,7 +60,7 @@ def reset_demo_state():
     for path in ("data/audit_log.json", "data/provenance_graph.json", "data/blocked_inference.json"):
         if os.path.exists(path):
             os.remove(path)
-    for path in ("chroma_data", ".chroma", "data/chroma", "data/vector_store"):
+    for path in ("chroma_data", ".chroma", "data/chroma", "data/chroma_db", "data/vector_store"):
         if os.path.exists(path):
             shutil.rmtree(path)
     capsule_dir = Path("data/capsules")
