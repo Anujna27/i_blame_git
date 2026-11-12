@@ -1,0 +1,1 @@
+"""MNEMOSYNE core engine."""
