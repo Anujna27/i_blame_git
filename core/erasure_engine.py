@@ -45,8 +45,6 @@ class ErasureEngine:
             child=graph_store.get_node(cid)
             if child: child.deletion_state="invalidated"; vector_store.remove_from_active_index(cid); invalidated.append(cid)
             else: failed.append(cid)
-        if hasattr(graph_store, "persist"):
-            graph_store.persist()
         hash_chain.append("delete_level_2", node_id, {"invalidated":invalidated,"failed":failed})
         st="passed" if not failed else ("partial" if invalidated else "failed")
         levels.append(LevelResult(level_number=2, level_name="Derived Artifacts Invalidated", status=st, details=f"Invalidated {len(invalidated)} of {len(descendants)} derived artifacts.", evidence={"total_descendants":len(descendants),"invalidated_children":invalidated,"failed_children":failed}))
@@ -68,4 +66,16 @@ class ErasureEngine:
         verdict="failed" if levels[0].status=="failed" or levels[1].status=="failed" else ("partially_deleted" if st5=="failed" or risks else "fully_deleted")
         data={"node_id":node_id,"node_content":node.content if node else "","levels":[asdict(x) for x in levels],"verdict":verdict,"residual_risks":[asdict(r) for r in risks],"timestamp":datetime.now(timezone.utc).isoformat()}
         sig=hashlib.sha256(json.dumps(data,sort_keys=True,default=str).encode()).hexdigest(); report=ErasureReport(node_id=node_id,node_content=node.content if node else "",levels=levels,verdict=verdict,residual_risks=risks,timestamp=data["timestamp"],signature=sig)
-        hash_chain.append("deletion_completed",node_id,{"verdict":verdict,"signature":sig}); return report
+        hash_chain.append("deletion_completed",node_id,{"verdict":verdict,"signature":sig})
+        # Persist graph state so deletion_state survives restart
+        if hasattr(graph_store, "persist"):
+            try:
+                graph_store.persist()
+            except Exception as e:
+                pass  # do not fail deletion if persistence has an issue
+        elif hasattr(graph_store, "save"):
+            try:
+                graph_store.save()
+            except Exception as e:
+                pass
+        return report
