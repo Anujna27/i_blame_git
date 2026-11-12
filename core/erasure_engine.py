@@ -18,7 +18,12 @@ class ErasureReport:
     reason: str = "user_requested_erasure"
 
     def to_dict(self):
-        return asdict(self)
+        data = asdict(self)
+        data.update({"entity_id": self.node_id, "entity_type": self.entity_type,
+                     "content_preview": self.node_content[:120], "deleted_at": self.timestamp})
+        data.pop("node_id", None)
+        data.pop("node_content", None)
+        return data
 
 class ErasureEngine:
     _model = None
@@ -46,12 +51,8 @@ class ErasureEngine:
         timestamp = datetime.now(timezone.utc).isoformat()
         entity_type = getattr(node, "entity_type", "memory") if node else "memory"
         if node:
-            lifecycle = getattr(node, "lifecycle", None)
-            if lifecycle is None:
-                lifecycle = []
-                setattr(node, "lifecycle", lifecycle)
-            lifecycle.append({"event_id": str(__import__("uuid").uuid4()), "state": "deleted", "actor": deleted_by, "reason": reason, "timestamp": timestamp, "metadata": {"entity_id": node_id}})
-            node.deletion_state="source_removed"; vector_store.remove_from_active_index(node_id)
+            node.transition("source_removed", deleted_by, reason)
+            vector_store.remove_from_active_index(node_id)
         hash_chain.append("delete_level_1", node_id, {"action":"source_removed", "actor":deleted_by, "reason":reason, "timestamp":timestamp}, actor=deleted_by, reason=reason)
         levels.append(LevelResult(level_number=1, level_name="Source Record Removed", status="passed" if node else "failed", details="Source record removed from active store and index.", evidence={"vector_store_cleared": bool(node), "graph_deletion_state": "source_removed" if node else None}))
         descendants=graph_store.get_descendants(node_id); invalidated=[]; failed=[]

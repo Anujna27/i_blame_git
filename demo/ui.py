@@ -155,6 +155,7 @@ with tabs[3]:
             report = agent.forget(node_id)
             st.info("The running agent uses the legacy deletion interface; the erasure report was still recorded.")
         st.json({"entity_id": report.node_id, "entity_type": getattr(report, "entity_type", "memory"), "deleted_by": getattr(report, "deleted_by", deleted_by), "deleted_at": report.timestamp, "reason": getattr(report, "reason", deletion_reason), "verdict": report.verdict})
+        st.caption(f"Content preview: {report.node_content[:120]}")
         for level in report.levels:
             with st.expander(f"Level {level.level_number} — {level.level_name} — {level.status.upper()}", expanded=True):
                 st.write(level.details)
@@ -166,6 +167,11 @@ with tabs[3]:
         else:
             st.success(report.verdict)
         st.json(agent.hash_chain.get_entries()[-10:])
+        invalidated = report.levels[1].evidence.get("invalidated_children", [])
+        st.subheader("Related invalidated entities")
+        st.json(invalidated)
+        if invalidated and st.button("Heal or quarantine resulting orphans"):
+            st.json(agent.graph.heal_orphans())
 
 with tabs[4]:
     st.header("Agent Hand-Over")

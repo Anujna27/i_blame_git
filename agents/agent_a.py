@@ -121,7 +121,8 @@ class AgentA:
         return [n for n in self.all_nodes.values() if n.session_id == session_id and n.deletion_state == "active"]
 
     def export_memory(self):
-        return CapsuleExporter().export("agent_a", list(self.all_nodes.values()), self.graph, self.hash_chain, self.residual_risks)
+        return CapsuleExporter().export("agent_a", list(self.all_nodes.values()), self.graph, self.hash_chain,
+                                        self.residual_risks, session_commits=self.sessions._sessions)
 
     def restart(self):
         self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")

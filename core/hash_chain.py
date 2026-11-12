@@ -21,7 +21,8 @@ class HashChain:
         return hashlib.sha256(payload.encode()).hexdigest()
 
     def append(self, operation, node_id, details, actor="system", reason="", metadata=None):
-        entry = {"entry_id": str(uuid.uuid4()), "operation": operation, "node_id": node_id,
+        event_id = str(uuid.uuid4())
+        entry = {"entry_id": event_id, "event_id": event_id, "operation": operation, "node_id": node_id,
                  "entity_id": node_id, "actor": actor, "reason": reason,
                  "metadata": metadata or {}, "details": details, "prev_hash": self.get_last_hash(),
                  "timestamp": datetime.now(timezone.utc).isoformat(), "hash": ""}
