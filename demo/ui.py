@@ -28,12 +28,49 @@ st.markdown(
         letter-spacing: -0.02em;
         color: #203746;
     }
+    h1 a, h2 a, h3 a { display: none !important; }
     h1 { font-weight: 700; font-size: 3rem; }
     h2 { font-weight: 650; }
     p, label, .stMarkdown { line-height: 1.6; }
     [data-testid="stSidebar"] {
         background: #d9edf3;
         border-right: 1px solid #c4e0e8;
+    }
+    [data-testid="stSidebar"] > div {
+        min-height: 100vh;
+        padding: 2.5rem 1rem;
+        overflow: visible;
+    }
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+        font-size: 1.2rem;
+        line-height: 1.45;
+    }
+    [data-testid="stSidebar"] [data-testid="stMultiSelect"] {
+        width: 100%;
+        min-height: 65vh;
+    }
+    [data-testid="stSidebar"] [data-baseweb="select"] {
+        min-height: 20rem;
+        width: 100%;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+    [data-testid="stSidebar"] [data-baseweb="value-container"] {
+        align-content: flex-start;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        padding: 0.7rem;
+        min-height: 18rem;
+        overflow: visible;
+    }
+    [data-testid="stSidebar"] [data-baseweb="tag"] {
+        font-size: 1.1rem;
+        line-height: 1.25;
+        padding: 0.45rem 0.65rem;
+        max-width: 100%;
     }
     [data-testid="stTab"] {
         font-weight: 600;
