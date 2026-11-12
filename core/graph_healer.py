@@ -348,6 +348,26 @@ class GraphHealer:
         duplicates.sort(key=lambda dp: dp.similarity, reverse=True)
         return duplicates
 
+    def merge_duplicate(self, keep_node_id: str, remove_node_id: str, actor="system", reason="explicit_duplicate_merge"):
+        """Explicitly merge one duplicate into another; never called implicitly."""
+        keep = self.graph.get_entity(keep_node_id); remove = self.graph.get_entity(remove_node_id)
+        if not keep or not remove or keep.get("deletion_state") != "active" or remove.get("deletion_state") != "active":
+            raise ValueError("both entities must be active before an explicit merge")
+        merged_properties = dict(remove.get("properties") or {}); merged_properties.update(keep.get("properties") or {})
+        keep["properties"] = merged_properties
+        self.graph.graph.nodes[keep_node_id]["properties"] = merged_properties
+        for source, _, attrs in list(self.graph.graph.in_edges(remove_node_id, data=True)):
+            if source != keep_node_id and source != keep_node_id:
+                try: self.graph.add_relationship(source, keep_node_id, attrs.get("relationship", "RELATED_TO"), metadata={"merged_from": remove_node_id})
+                except Exception: pass
+        self.graph.graph.nodes[remove_node_id]["deletion_state"] = "merged"
+        self.graph.graph.nodes[remove_node_id]["properties"] = {"merged_into": keep_node_id, "merge_reason": reason}
+        self.graph.persist()
+        self._audit("graph_entities_merged", remove_node_id, {"kept_entity": keep_node_id, "actor": actor, "reason": reason})
+        if self.vector_store is not None and hasattr(self.vector_store, "remove"):
+            self.vector_store.remove(remove_node_id)
+        return {"kept_entity": keep_node_id, "merged_entity": remove_node_id, "reason": reason}
+
     def _deterministic_repair(self, orphan: OrphanRecord) -> Optional[HealingAction]:
         ent = self.graph.get_entity(orphan.node_id) or {}
 

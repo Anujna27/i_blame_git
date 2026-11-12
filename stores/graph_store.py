@@ -133,6 +133,9 @@ class GraphStore:
         """Delegate to self.healer.find_duplicates. Read-only, no persist."""
         return self.healer.find_duplicates(threshold=threshold)
 
+    def merge_duplicate(self, keep_node_id: str, remove_node_id: str, actor="system", reason="explicit_duplicate_merge"):
+        return self.healer.merge_duplicate(keep_node_id, remove_node_id, actor, reason)
+
     def on_session_commit(self, session_id: str) -> dict:
         """Hook called by Person 1's agent.commit_session().
 
