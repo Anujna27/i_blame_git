@@ -46,7 +46,7 @@ with tabs[0]:
         n = nodes[[f"{x.node_id[:8]} — {x.content[:50]}" for x in nodes].index(label)]
         st.text_area("Content", n.content)
         st.json(n.source)
-        st.table(n.derivation_edges)
+        st.json(n.derivation_edges)
 
 with tabs[1]:
     st.header("Active Contradictions")
@@ -92,7 +92,7 @@ with tabs[3]:
         else: 
             st.warning(report.verdict)
             
-        st.table(agent.hash_chain.get_entries()[-10:])
+        st.json(agent.hash_chain.get_entries()[-10:])
 
 with tabs[4]:
     st.header("Cross-Agent Hand-Over")
@@ -133,7 +133,7 @@ with tabs[5]:
         for result in results: 
             result["savings_pct"] = (1 - result["retrieval"]/result["full_history"]) * 100 if result["full_history"] else 0
             
-        st.table(results)
+        st.json(results)
         st.metric("Average token reduction", f"{sum(r['savings_pct'] for r in results)/len(results):.1f}%")
 
 with tabs[6]:
