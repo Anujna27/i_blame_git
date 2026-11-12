@@ -4,11 +4,11 @@
 
 from core.memory_node import MemoryNode
 from core.hash_chain import HashChain
-from core.provenance_graph import ProvenanceGraph
+from core.knowledge_graph import KnowledgeGraph
 from core.erasure_engine import ErasureEngine
 from core.residual_risk import ResidualRiskReporter
 
-## MemoryNode
+## MemoryNode and KnowledgeGraph
 
 Fields: node_id, content, source, trust_status, derivation_edges, version, supersedes, contradicts, deletion_state, is_blocked, created_at, last_accessed, access_count
 
@@ -33,7 +33,7 @@ The engine calls these methods on your stores:
 
 vector_store.remove_from_active_index(node_id) -> None
 vector_store.query(query_text, top_k=3) -> list[MemoryNode]
-graph_store.get_node(node_id) -> Optional[MemoryNode]
+knowledge_graph.get_node(node_id) -> Optional[MemoryNode]
 graph_store.get_descendants(node_id) -> list[str]
 graph_store.get_all_active_nodes() -> list[MemoryNode]
 

@@ -5,7 +5,8 @@ import networkx as nx
 from .memory_node import MemoryNode
 
 
-class ProvenanceGraph:
+class KnowledgeGraph:
+    """Persistent entity/relationship graph used as the system's knowledge memory."""
     def __init__(self, path="data/provenance_graph.json"):
         self.path = path
         self.graph = nx.DiGraph()
@@ -50,3 +51,7 @@ class ProvenanceGraph:
         if "graph" in payload and "nodes" in payload:
             self.graph = nx.node_link_graph(payload["graph"], directed=True)
             self.nodes = {k: MemoryNode.from_jsonld(v) for k, v in payload["nodes"].items()}
+
+
+# Backwards-compatible import for older integrations and capsule fixtures.
+ProvenanceGraph = KnowledgeGraph

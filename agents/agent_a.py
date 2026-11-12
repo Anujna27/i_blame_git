@@ -5,7 +5,7 @@ from core.contradiction import ContradictionEngine
 from core.erasure_engine import ErasureEngine
 from core.hash_chain import HashChain
 from core.memory_node import MemoryNode
-from core.provenance_graph import ProvenanceGraph
+from core.knowledge_graph import KnowledgeGraph
 from stores.vector_store import VectorStore
 from capsule.export import CapsuleExporter
 from agents.blocked_loader import load_blocked_ids
@@ -14,7 +14,7 @@ from agents.blocked_loader import load_blocked_ids
 class AgentA:
     def __init__(self):
         self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")
-        self.graph = ProvenanceGraph()
+        self.graph = KnowledgeGraph()
         self.graph_store = self.graph
         self.hash_chain = HashChain()
         self.erasure = ErasureEngine()
@@ -76,6 +76,6 @@ class AgentA:
 
     def restart(self):
         self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")
-        self.graph = ProvenanceGraph()
+        self.graph = KnowledgeGraph()
         self.hash_chain = HashChain()
         self.blocked_ids = load_blocked_ids()

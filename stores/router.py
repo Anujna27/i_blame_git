@@ -18,7 +18,11 @@ _ROUTE_MAP = {
 
 
 class StorageRouter:
-    """Routes knowledge to the optimal store type and benchmarks store retrieval performance."""
+    """Deprecated compatibility helper; AgentA uses Graph + Vector directly.
+
+    New application code should use ContextBuilder instead of routing knowledge
+    to one of several unrelated stores.
+    """
 
     def route(self, knowledge_type: str, content: str) -> str:
         """Return target store ('graph' | 'vector' | 'prompt' | 'code') for a knowledge_type."""
