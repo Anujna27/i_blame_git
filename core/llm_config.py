@@ -1,5 +1,6 @@
 import json
 import os
+import time
 
 def _load_dotenv():
     path = os.getenv("MNEMOSYNE_ENV_FILE", ".env")
@@ -22,6 +23,7 @@ class ConfiguredLLM:
         self.model = os.getenv("MNEMOSYNE_LLM_MODEL", "llama-3.1-8b-instant" if self.provider == "groq" else "gpt-4o-mini")
         self.api_key = os.getenv("GROQ_API_KEY") if self.provider == "groq" else os.getenv("OPENAI_API_KEY")
         self._client = None
+        self.calls = 0; self.failures = 0; self.input_tokens = 0; self.output_tokens = 0
 
     @property
     def enabled(self):
@@ -42,13 +44,20 @@ class ConfiguredLLM:
     def json_call(self, system, user):
         client = self._get_client()
         if client is None: return None
-        response = client.chat.completions.create(
-            model=self.model,
-            temperature=0,
-            response_format={"type": "json_object"},
-            messages=[{"role":"system","content":system},{"role":"user","content":user}],
-        )
-        return json.loads(response.choices[0].message.content)
+        attempts = int(os.getenv("MNEMOSYNE_LLM_RETRIES", "3"))
+        for attempt in range(attempts):
+            try:
+                response = client.chat.completions.create(model=self.model, temperature=0, response_format={"type":"json_object"}, messages=[{"role":"system","content":system},{"role":"user","content":user}])
+                self.calls += 1; usage = getattr(response, "usage", None)
+                self.input_tokens += int(getattr(usage, "prompt_tokens", 0) or 0); self.output_tokens += int(getattr(usage, "completion_tokens", 0) or 0)
+                return json.loads(response.choices[0].message.content)
+            except Exception:
+                self.failures += 1
+                if attempt == attempts - 1: raise
+                time.sleep(2 ** attempt)
+
+    def telemetry(self):
+        return {"provider": self.provider, "model": self.model, "enabled": self.enabled, "calls": self.calls, "failures": self.failures, "input_tokens": self.input_tokens, "output_tokens": self.output_tokens}
 
     def summarize(self, content):
         return self.json_call(

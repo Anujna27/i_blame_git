@@ -254,3 +254,31 @@ Remove-Item Env:GROQ_API_KEY -ErrorAction SilentlyContinue
 ```
 
 Never commit API keys or `.env` files containing credentials. Use environment variables or a secret manager.
+
+## Healing worker and retrieval benchmark
+
+Run one healing pass:
+
+```powershell
+python scripts/run_healing_worker.py --once
+```
+
+Run the persistent worker:
+
+```powershell
+python scripts/run_healing_worker.py --interval 900
+```
+
+Benchmark hybrid retrieval:
+
+```powershell
+python scripts/benchmark_retrieval.py --sessions 30 --token-budget 500
+```
+
+LLM usage telemetry is available from an `AgentA` instance:
+
+```python
+agent.llm_telemetry()
+```
+
+It reports provider, model, calls, failures, and token counts without exposing credentials.

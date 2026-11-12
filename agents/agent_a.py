@@ -118,6 +118,13 @@ class AgentA:
             selected.append(entity); tokens += cost
         return ActiveContext(query, selected, tokens, vector_ids, graph_ids)
 
+    def merge_duplicate_entities(self, keep_node_id, remove_node_id, actor="user", reason="explicit_duplicate_merge"):
+        from core.graph_healer import GraphHealer
+        healer = GraphHealer(self.graph, self.vector_store, self.hash_chain)
+        result = healer.merge_duplicate(keep_node_id, remove_node_id, actor, reason)
+        self.all_nodes.pop(remove_node_id, None)
+        return result
+
     def recall(self, query, token_budget=2000):
         try:
             builder = ContextBuilder(self.vector_store, self.graph, self.session_store, token_budget)
@@ -138,7 +145,9 @@ class AgentA:
         return report
 
     def build_knowledge_graph(self):
-        return self.graph_store.build_knowledge_graph(self.vector_store, self.hash_chain)
+        report = self.graph_healer.heal_orphans()
+        return {"orphans_found": len(report.orphans_found), "healed": report.healed_count,
+                "quarantined": len(report.quarantined), "actions": [a.__dict__ for a in report.actions_taken]}
 
     def start_graph_healing(self, interval_seconds=900):
         self.healing_scheduler.interval_seconds = interval_seconds
@@ -146,6 +155,9 @@ class AgentA:
 
     def stop_graph_healing(self):
         self.healing_scheduler.stop()
+
+    def llm_telemetry(self):
+        return self.llm.telemetry()
 
     def save_healing_schedule(self):
         self.healing_scheduler.save_config()

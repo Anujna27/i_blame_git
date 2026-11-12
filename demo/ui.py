@@ -96,6 +96,15 @@ with tabs[0]:
         st.text_area("Content", node.content)
         st.json(node.source)
         st.json(node.derivation_edges)
+    st.subheader("Duplicate entities")
+    duplicates = agent.graph_store.find_duplicates() if hasattr(agent.graph_store, "find_duplicates") else []
+    if duplicates:
+        pair = duplicates[0]
+        st.write(f"Similarity {pair.similarity:.2f}: {pair.node_a_id[:8]} ↔ {pair.node_b_id[:8]}")
+        if st.button("Merge duplicate into first entity"):
+            st.json(agent.merge_duplicate_entities(pair.node_a_id, pair.node_b_id))
+    else:
+        st.caption("No duplicate candidates detected.")
         st.subheader("Lifecycle history")
         st.json(getattr(node, "lifecycle", []))
         st.subheader("Related entities")
