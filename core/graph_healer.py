@@ -563,6 +563,15 @@ class GraphHealer:
 
         if self.graph.graph.has_node(orphan.node_id):
             self.graph.graph.nodes[orphan.node_id]["deletion_state"] = "quarantined"
+            if hasattr(self.graph, "nodes") and orphan.node_id in self.graph.nodes:
+                node_obj = self.graph.nodes[orphan.node_id]
+                if hasattr(node_obj, "transition"):
+                    try:
+                        node_obj.transition("quarantined", actor="graph_healer", reason="no safe relationship could be inferred")
+                    except Exception:
+                        setattr(node_obj, "deletion_state", "quarantined")
+                elif hasattr(node_obj, "deletion_state"):
+                    setattr(node_obj, "deletion_state", "quarantined")
             self.graph.persist()
 
         return HealingAction(

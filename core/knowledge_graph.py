@@ -343,12 +343,23 @@ class KnowledgeGraph:
         path_obj = Path(self.path)
         path_obj.parent.mkdir(parents=True, exist_ok=True)
 
-        # Sync node state from self.nodes to self.graph before persist
+        # Sync node state between self.nodes and self.graph before persist
         for nid, node in list(self.nodes.items()):
             if self.graph.has_node(nid):
-                del_state = getattr(node, "deletion_state", None)
-                if del_state is not None:
-                    self.graph.nodes[nid]["deletion_state"] = del_state
+                node_del = getattr(node, "deletion_state", None)
+                graph_del = self.graph.nodes[nid].get("deletion_state")
+
+                if node_del and node_del != "active":
+                    effective_state = node_del
+                elif graph_del and graph_del != "active":
+                    effective_state = graph_del
+                else:
+                    effective_state = "active"
+
+                self.graph.nodes[nid]["deletion_state"] = effective_state
+                if hasattr(node, "deletion_state"):
+                    node.deletion_state = effective_state
+
                 if hasattr(node, "deleted_by") and node.deleted_by:
                     self.graph.nodes[nid]["deleted_by"] = node.deleted_by
                 if hasattr(node, "deleted_reason") and node.deleted_reason:
@@ -452,9 +463,16 @@ class KnowledgeGraph:
     def get_node(self, node_id: str) -> Optional[MemoryNode]:
         if node_id in self.nodes and isinstance(self.nodes[node_id], MemoryNode):
             if self.graph.has_node(node_id):
-                graph_state = self.graph.nodes[node_id].get("deletion_state")
-                if graph_state and self.nodes[node_id].deletion_state != graph_state:
-                    self.nodes[node_id].deletion_state = graph_state
+                node_del = getattr(self.nodes[node_id], "deletion_state", None)
+                graph_del = self.graph.nodes[node_id].get("deletion_state")
+                if node_del and node_del != "active":
+                    effective = node_del
+                elif graph_del and graph_del != "active":
+                    effective = graph_del
+                else:
+                    effective = "active"
+                self.nodes[node_id].deletion_state = effective
+                self.graph.nodes[node_id]["deletion_state"] = effective
             return self.nodes[node_id]
         ent = self.get_entity(node_id)
         if ent:
