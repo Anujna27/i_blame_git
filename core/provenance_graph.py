@@ -36,6 +36,30 @@ class ProvenanceGraph:
         return [x for x in self.get_descendants(node_id) if self.nodes.get(x) and self.nodes[x].deletion_state == "active"
                 and any(self.nodes.get(p) and self.nodes[p].deletion_state != "active" for p in self.graph.predecessors(x))]
 
+    def find_orphans(self):
+        return [n.node_id for n in self.get_all_active_nodes()
+                if any(self.nodes.get(p) and self.nodes[p].deletion_state != "active"
+                       for p in self.graph.predecessors(n.node_id))]
+
+    def heal_orphans(self, actor="graph-healer"):
+        """Reattach orphaned entities to their nearest active ancestor when possible."""
+        healed = []
+        for node_id in self.find_orphans():
+            node = self.nodes[node_id]
+            active_ancestors = [a for a in nx.ancestors(self.graph, node_id)
+                                if self.nodes.get(a) and self.nodes[a].deletion_state == "active"]
+            if active_ancestors:
+                parent = active_ancestors[-1]
+                self.graph.add_edge(parent, node_id, type="healed_provenance")
+                self.nodes[parent].add_derivation(node_id, "healed_provenance")
+                healed.append({"node_id": node_id, "parent_id": parent})
+            else:
+                node.lifecycle.append({"state": "orphan_quarantined", "actor": actor,
+                                       "reason": "no active provenance root", "timestamp": __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()})
+                healed.append({"node_id": node_id, "parent_id": None})
+        if healed: self.persist()
+        return healed
+
     def get_all_active_nodes(self): return [n for n in self.nodes.values() if n.deletion_state == "active"]
     def get_deleted_nodes(self): return [n for n in self.nodes.values() if n.deletion_state != "active"]
 

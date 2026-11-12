@@ -35,15 +35,15 @@ class ErasureEngine:
                             ("sk-" in a.lower() or "api key" in a.lower()) and
                             ("sk-" in b.lower() or "api key" in b.lower()))
         return max(cosine, 0.80 if security_overlap else 0.0)
-    def delete(self, node_id, vector_store, graph_store, hash_chain):
+    def delete(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested", deleted_by="system"):
         node = graph_store.get_node(node_id); levels=[]
-        if node: node.deletion_state="source_removed"; vector_store.remove_from_active_index(node_id)
-        hash_chain.append("delete_level_1", node_id, {"action":"source_removed"})
+        if node: node.transition("source_removed", deleted_by, reason); vector_store.remove_from_active_index(node_id)
+        hash_chain.append("delete_level_1", node_id, {"action":"source_removed", "reason": reason, "deleted_by": deleted_by})
         levels.append(LevelResult(level_number=1, level_name="Source Record Removed", status="passed" if node else "failed", details="Source record removed from active store and index.", evidence={"vector_store_cleared": bool(node), "graph_deletion_state": "source_removed" if node else None}))
         descendants=graph_store.get_descendants(node_id); invalidated=[]; failed=[]
         for cid in descendants:
             child=graph_store.get_node(cid)
-            if child: child.deletion_state="invalidated"; vector_store.remove_from_active_index(cid); invalidated.append(cid)
+            if child: child.transition("invalidated", deleted_by, f"derived from deleted entity: {reason}"); vector_store.remove_from_active_index(cid); invalidated.append(cid)
             else: failed.append(cid)
         hash_chain.append("delete_level_2", node_id, {"invalidated":invalidated,"failed":failed})
         st="passed" if not failed else ("partial" if invalidated else "failed")
