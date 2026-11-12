@@ -29,9 +29,10 @@ st.markdown(
         color: #203746;
     }
     h1 a, h2 a, h3 a { display: none !important; }
-    h1 { font-weight: 700; font-size: 3rem; }
-    h2 { font-weight: 650; }
-    p, label, .stMarkdown { line-height: 1.6; }
+    h1 { font-weight: 700; font-size: 4.5rem; line-height: 1.05; }
+    h2 { font-weight: 650; font-size: 2.2rem; }
+    h3 { font-size: 1.65rem; }
+    p, label, .stMarkdown { font-size: 1.12rem; line-height: 1.7; }
     [data-testid="stSidebar"] {
         background: #d9edf3;
         border-right: 1px solid #c4e0e8;
@@ -48,10 +49,10 @@ st.markdown(
     }
     [data-testid="stSidebar"] [data-testid="stMultiSelect"] {
         width: 100%;
-        min-height: 65vh;
+        min-height: 75vh;
     }
     [data-testid="stSidebar"] [data-baseweb="select"] {
-        min-height: 20rem;
+        min-height: 28rem;
         width: 100%;
         align-items: flex-start;
         align-content: flex-start;
@@ -63,7 +64,7 @@ st.markdown(
         flex-wrap: wrap;
         gap: 0.45rem;
         padding: 0.7rem;
-        min-height: 18rem;
+        min-height: 26rem;
         overflow: visible;
     }
     [data-testid="stSidebar"] [data-baseweb="tag"] {
@@ -73,8 +74,11 @@ st.markdown(
         max-width: 100%;
     }
     [data-testid="stTab"] {
-        font-weight: 600;
+        font-size: 1.15rem;
+        font-weight: 700;
         color: #49616d;
+        min-height: 3.4rem;
+        padding: 0.8rem 1rem;
     }
     [data-testid="stTab"][aria-selected="true"] {
         color: #d76565;
@@ -84,8 +88,9 @@ st.markdown(
         border-radius: 10px;
         background: #f28c8c;
         color: #ffffff;
+        font-size: 1.05rem;
         font-weight: 600;
-        padding: 0.55rem 1.1rem;
+        padding: 0.75rem 1.25rem;
         transition: background 120ms ease, transform 120ms ease;
     }
     .stButton > button:hover {
