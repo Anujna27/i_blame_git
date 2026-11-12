@@ -53,17 +53,17 @@ class ErasureEngine:
         if node:
             node.transition("source_removed", deleted_by, reason)
             vector_store.remove_from_active_index(node_id)
-        hash_chain.append("delete_level_1", node_id, {"action":"source_removed", "actor":deleted_by, "reason":reason, "timestamp":timestamp}, actor=deleted_by, reason=reason)
+        hash_chain.append("delete_level_1", node_id, {"action":"source_removed", "actor":deleted_by, "reason":reason, "timestamp":timestamp}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=1, level_name="Source Record Removed", status="passed" if node else "failed", details="Source record removed from active store and index.", evidence={"vector_store_cleared": bool(node), "graph_deletion_state": "source_removed" if node else None}))
         descendants=graph_store.get_descendants(node_id); invalidated=[]; failed=[]
         for cid in descendants:
             child=graph_store.get_node(cid)
             if child: child.transition("invalidated", deleted_by, f"derived from deleted entity: {reason}"); vector_store.remove_from_active_index(cid); invalidated.append(cid)
             else: failed.append(cid)
-        hash_chain.append("delete_level_2", node_id, {"invalidated":invalidated,"failed":failed}, actor=deleted_by, reason=reason)
+        hash_chain.append("delete_level_2", node_id, {"invalidated":invalidated,"failed":failed}, actor="agent", reason="erasure_request")
         st="passed" if not failed else ("partial" if invalidated else "failed")
         levels.append(LevelResult(level_number=2, level_name="Derived Artifacts Invalidated", status=st, details=f"Invalidated {len(invalidated)} of {len(descendants)} derived artifacts.", evidence={"total_descendants":len(descendants),"invalidated_children":invalidated,"failed_children":failed}))
-        self.blocked_ids.add(node_id); self._save_blocked_set(); hash_chain.append("delete_level_3", node_id, {"blocked_set_size":len(self.blocked_ids)}, actor=deleted_by, reason=reason)
+        self.blocked_ids.add(node_id); self._save_blocked_set(); hash_chain.append("delete_level_3", node_id, {"blocked_set_size":len(self.blocked_ids)}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=3, level_name="Inference Blocked", status="passed", details="Node added to persistent inference block list. All retrieval paths check this set.", evidence={"blocked_set_size":len(self.blocked_ids)}))
         risks=[]; candidates=[]
         try: candidates=vector_store.query(node.content if node else "", top_k=3)
@@ -73,15 +73,15 @@ class ErasureEngine:
             if n.node_id == node_id: continue
             sim=self._similar(node.content if node else "", n.content)
             if sim > .75: risks.append(ResidualRisk(risk_type="semantic_neighbor_proximity", cluster=n.node_id, description=f"Deleted content may be partially reconstructable from {n.node_id} (similarity {sim:.2f}); related content: {n.content}", severity="high" if sim>.85 else "medium", affected_node_ids=[n.node_id]))
-        hash_chain.append("delete_level_4", node_id, {"risks_found":len(risks)}, actor=deleted_by, reason=reason)
+        hash_chain.append("delete_level_4", node_id, {"risks_found":len(risks)}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=4, level_name="Non-Inferability Checked", status="partial" if risks else "passed", details="No semantic neighbors above threshold." if not risks else f"{len(risks)} semantic neighbor(s) may partially reconstruct the deleted content.", evidence={"neighbors_checked":len(candidates),"risks_found":len(risks),"risks":[asdict(r) for r in risks]}))
         st5="failed" if descendants else "passed"; detail5=(f"LLM consolidation is non-deterministic. {len(descendants)} derived artifacts were generated from the deleted content and cannot be deterministically reversed. Return to 'never-written' state is not guaranteed." if descendants else "No derived artifacts were generated; state restoration is possible.")
-        hash_chain.append("delete_level_5", node_id, {"non_reversible_artifacts":descendants}, actor=deleted_by, reason=reason)
+        hash_chain.append("delete_level_5", node_id, {"non_reversible_artifacts":descendants}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=5, level_name="State Restoration Checked", status=st5, details=detail5, evidence={"non_reversible_artifacts":descendants}))
         verdict="failed" if levels[0].status=="failed" or levels[1].status=="failed" else ("partially_deleted" if st5=="failed" or risks else "fully_deleted")
         data={"node_id":node_id,"node_content":node.content if node else "","levels":[asdict(x) for x in levels],"verdict":verdict,"residual_risks":[asdict(r) for r in risks],"timestamp":datetime.now(timezone.utc).isoformat()}
         sig=hashlib.sha256(json.dumps(data,sort_keys=True,default=str).encode()).hexdigest(); report=ErasureReport(node_id=node_id,node_content=node.content if node else "",levels=levels,verdict=verdict,residual_risks=risks,timestamp=data["timestamp"],signature=sig,entity_type=entity_type,deleted_by=deleted_by,reason=reason)
-        hash_chain.append("deletion_completed",node_id,{"verdict":verdict,"signature":sig,"actor":deleted_by,"reason":reason}, actor=deleted_by, reason=reason)
+        hash_chain.append("deletion_completed",node_id,{"verdict":verdict,"signature":sig,"actor":deleted_by,"reason":reason}, actor="agent", reason="erasure_request")
         # Persist graph state so deletion_state survives restart
         if hasattr(graph_store, "persist"):
             try:

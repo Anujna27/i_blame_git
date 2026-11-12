@@ -27,9 +27,9 @@ class CapsuleExporter:
                 "deleted_nodes": [n.node_id for n in all_nodes if n.deletion_state != "active"],
                 "invalidated_children": [n.node_id for n in all_nodes if n.deletion_state == "invalidated"],
                 "entries": [{"entity_id": n.node_id, "entity_type": n.entity_type,
-                             "deleted_by": n.deleted_by,
-                             "deleted_at": n.deleted_at.isoformat() if n.deleted_at else None,
-                             "reason": n.deleted_reason,
+                             "deleted_by": getattr(n, "deleted_by", None),
+                             "deleted_at": n.deleted_at.isoformat() if getattr(n, "deleted_at", None) else None,
+                             "reason": getattr(n, "deleted_reason", None),
                              "verdict": "partially_deleted" if n.deletion_state == "invalidated" else "fully_deleted"}
                             for n in all_nodes if n.deletion_state != "active"],
                 "residual_risk_flags": [dataclasses.asdict(r) for r in residual_risks],
