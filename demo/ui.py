@@ -44,34 +44,42 @@ st.markdown(
     }
     [data-testid="stSidebar"] label,
     [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
-        font-size: 1.2rem;
+        font-size: 1.35rem !important;
+        font-weight: 650;
         line-height: 1.45;
     }
+    [data-testid="stSidebar"] .stMultiSelect,
     [data-testid="stSidebar"] [data-testid="stMultiSelect"] {
-        width: 100%;
+        width: 100% !important;
         min-height: 75vh;
     }
+    [data-testid="stSidebar"] .stMultiSelect > div,
     [data-testid="stSidebar"] [data-baseweb="select"] {
         min-height: 28rem;
-        width: 100%;
+        width: 100% !important;
         align-items: flex-start;
         align-content: flex-start;
         flex-wrap: wrap;
         overflow: visible;
     }
+    [data-testid="stSidebar"] .stMultiSelect [data-baseweb="value-container"],
     [data-testid="stSidebar"] [data-baseweb="value-container"] {
         align-content: flex-start;
         flex-wrap: wrap;
         gap: 0.45rem;
         padding: 0.7rem;
         min-height: 26rem;
+        width: 100% !important;
         overflow: visible;
     }
-    [data-testid="stSidebar"] [data-baseweb="tag"] {
-        font-size: 1.1rem;
+    [data-testid="stSidebar"] .stMultiSelect span,
+    [data-testid="stSidebar"] div[data-baseweb="tag"],
+    [data-testid="stSidebar"] div[data-baseweb="tag"] span {
+        font-size: 16px !important;
         line-height: 1.25;
         padding: 0.45rem 0.65rem;
         max-width: 100%;
+        white-space: normal;
     }
     [data-testid="stTab"] {
         font-size: 1.15rem;
