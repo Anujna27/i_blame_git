@@ -19,6 +19,8 @@ htmlcov/
 .env
 .env.*
 
-# Generated test artifacts
+# Generated test & capsule artifacts
 data/_test_*
-
+data/capsules/*.json
+!data/capsules/.gitkeep
+data/chroma_db/
