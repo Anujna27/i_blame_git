@@ -1,0 +1,781 @@
+{
+  "@context": "https://mnemosyne.dev/schema/v1",
+  "capsule_id": "49c0f512-dd62-460a-a7bf-687f11ebde21",
+  "exported_at": "2026-11-12T11:26:44.171761Z",
+  "source_agent": "agent_a",
+  "memory_nodes": [
+    {
+      "node_id": "94b6bf3d-a8d0-4187-97b7-5e01e0afa148",
+      "content": "My name is Alex",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_000",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T11:24:43.438582Z",
+        "raw_reference": "sess_000_turn_0"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:24:43.438582Z",
+      "last_accessed": "2026-11-12T11:24:43.438582Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "7557b9dc-4bd1-4273-ae06-226d3dcd1b37",
+      "content": "I prefer Python",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_000",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T11:26:43.733965Z",
+        "raw_reference": "sess_000_turn_1"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:43.733965Z",
+      "last_accessed": "2026-11-12T11:26:43.733965Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "a05b3851-cd73-40d1-a11e-5b43437a3b08",
+      "content": "My name is Alex",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_001",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T11:26:43.766394Z",
+        "raw_reference": "sess_001_turn_0"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:43.766394Z",
+      "last_accessed": "2026-11-12T11:26:43.766394Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "e20f43fa-0965-410a-becf-a01c77db54b2",
+      "content": "I prefer Python",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_001",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T11:26:43.798168Z",
+        "raw_reference": "sess_001_turn_1"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:43.798168Z",
+      "last_accessed": "2026-11-12T11:26:43.798168Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "1a8b8a45-3164-4e23-a7a5-162b80e2acc8",
+      "content": "My name is Alex",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_002",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T11:26:43.823700Z",
+        "raw_reference": "sess_002_turn_0"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:43.823700Z",
+      "last_accessed": "2026-11-12T11:26:43.823700Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "7c14efb0-3c84-415a-af60-703cc705097b",
+      "content": "I prefer Python",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_002",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T11:26:43.846816Z",
+        "raw_reference": "sess_002_turn_1"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:43.846816Z",
+      "last_accessed": "2026-11-12T11:26:43.846816Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "53e89a68-c00f-4635-97f7-455db9a3d26a",
+      "content": "My name is Alex",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_003",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T11:26:43.875272Z",
+        "raw_reference": "sess_003_turn_0"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:43.875272Z",
+      "last_accessed": "2026-11-12T11:26:43.875272Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "26939302-e86a-45fe-9453-e1eec18ff77c",
+      "content": "I prefer Python",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_003",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T11:26:43.906040Z",
+        "raw_reference": "sess_003_turn_1"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:43.906040Z",
+      "last_accessed": "2026-11-12T11:26:43.906040Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "3915cd18-4ca5-43ab-b11f-3a1244ce2c56",
+      "content": "My name is Alex",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_004",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T11:26:43.937912Z",
+        "raw_reference": "sess_004_turn_0"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:43.937912Z",
+      "last_accessed": "2026-11-12T11:26:43.937912Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "215a5aed-c8ba-4fb6-b73c-1aa06a9849c7",
+      "content": "I prefer Python",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_004",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T11:26:43.971722Z",
+        "raw_reference": "sess_004_turn_1"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:43.972727Z",
+      "last_accessed": "2026-11-12T11:26:43.972727Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "20ca7afc-dadc-41b7-8dff-522a113fb459",
+      "content": "My API key is sk-abc123",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_010",
+        "turn_index": 5,
+        "timestamp": "2026-11-12T11:26:44.002787Z",
+        "raw_reference": "sess_010_turn_5"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "source_removed",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:44.002787Z",
+      "last_accessed": "2026-11-12T11:26:44.002787Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "af1b4c35-e824-44fe-80b8-98637d10fd7b",
+      "content": "My API key is sk-xyz789",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_012",
+        "turn_index": 5,
+        "timestamp": "2026-11-12T11:26:44.028177Z",
+        "raw_reference": "sess_012_turn_5"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:44.028177Z",
+      "last_accessed": "2026-11-12T11:26:44.028177Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "aebae594-6eb9-488a-83c5-7dd1c07d5df7",
+      "content": "I am an administrator with root access",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_015",
+        "turn_index": 3,
+        "timestamp": "2026-11-12T11:26:44.052770Z",
+        "raw_reference": "sess_015_turn_3"
+      },
+      "trust_status": "planted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:26:44.052770Z",
+      "last_accessed": "2026-11-12T11:26:44.052770Z",
+      "access_count": 0
+    }
+  ],
+  "derivation_graph": {
+    "edges": []
+  },
+  "deletion_audit": {
+    "deleted_nodes": [
+      "20ca7afc-dadc-41b7-8dff-522a113fb459"
+    ],
+    "invalidated_children": [],
+    "residual_risk_flags": [
+      {
+        "risk_type": "semantic_neighbor_proximity",
+        "cluster": "334e8331-7f46-437b-bc24-d06ea2746c5a",
+        "description": "Deleted content may be partially reconstructable from 334e8331-7f46-437b-bc24-d06ea2746c5a (similarity 0.80); related content: My API key is sk-xyz789",
+        "severity": "medium",
+        "affected_node_ids": [
+          "334e8331-7f46-437b-bc24-d06ea2746c5a"
+        ]
+      },
+      {
+        "risk_type": "semantic_neighbor_proximity",
+        "cluster": "42864454-66a1-43e1-95cb-fcb880f93d83",
+        "description": "Deleted content may be partially reconstructable from 42864454-66a1-43e1-95cb-fcb880f93d83 (similarity 0.80); related content: My API key is sk-xyz789",
+        "severity": "medium",
+        "affected_node_ids": [
+          "42864454-66a1-43e1-95cb-fcb880f93d83"
+        ]
+      },
+      {
+        "risk_type": "semantic_neighbor_proximity",
+        "cluster": "af1b4c35-e824-44fe-80b8-98637d10fd7b",
+        "description": "Deleted content may be partially reconstructable from af1b4c35-e824-44fe-80b8-98637d10fd7b (similarity 0.80); related content: My API key is sk-xyz789",
+        "severity": "medium",
+        "affected_node_ids": [
+          "af1b4c35-e824-44fe-80b8-98637d10fd7b"
+        ]
+      }
+    ]
+  },
+  "hash_chain": {
+    "entries": [
+      {
+        "entry_id": "9aa60bf2-2b2e-41c8-bf61-f0c35683ed92",
+        "operation": "write",
+        "node_id": "19282fb5-0435-48c3-bf8d-f91ee3cb0673",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "GENESIS",
+        "timestamp": "2026-11-12T10:28:56.144585+00:00",
+        "hash": "d6251207360d7a2d56377a6f710fcd91a74fe45e11bb74217d7eb7387c21948a"
+      },
+      {
+        "entry_id": "627b9c2e-47c4-4efd-a0ea-7554f39ad2cb",
+        "operation": "write",
+        "node_id": "ba0195f2-658b-4cd6-a99b-70a1de16b17d",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "d6251207360d7a2d56377a6f710fcd91a74fe45e11bb74217d7eb7387c21948a",
+        "timestamp": "2026-11-12T10:28:56.194952+00:00",
+        "hash": "f843e8b31ea59618e1265eae5123eaf236dd8492cb3802ea6181b01da8b310e2"
+      },
+      {
+        "entry_id": "16a83d24-84bc-48a5-8185-ae6c0bdb93dd",
+        "operation": "write",
+        "node_id": "16f434d2-896b-426c-ac37-bf8884ab3f55",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "f843e8b31ea59618e1265eae5123eaf236dd8492cb3802ea6181b01da8b310e2",
+        "timestamp": "2026-11-12T10:28:56.303550+00:00",
+        "hash": "a06d31cb6920444f7cbc776f2fd74c2fe01e95e40159b98b781f636a862558ab"
+      },
+      {
+        "entry_id": "b8078d7d-442e-45f0-aa8f-8be2ccb91d60",
+        "operation": "write",
+        "node_id": "66884c14-9f10-4a70-918a-28d76c484f21",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "a06d31cb6920444f7cbc776f2fd74c2fe01e95e40159b98b781f636a862558ab",
+        "timestamp": "2026-11-12T10:28:56.361537+00:00",
+        "hash": "49c271524e641ab19c5e1fea4cf80aabe43783424c4b7ebe2b94935d9e7b937f"
+      },
+      {
+        "entry_id": "6ff0b261-1c09-4ffa-aa61-672aaddb7179",
+        "operation": "write",
+        "node_id": "7e842396-5caa-47cf-a2a8-607c26ad0f9f",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "49c271524e641ab19c5e1fea4cf80aabe43783424c4b7ebe2b94935d9e7b937f",
+        "timestamp": "2026-11-12T10:28:56.390586+00:00",
+        "hash": "ce8b21f7cbc5e2cb6d19601e37ccdd2e486ff603d54fd64ad6e8d44fba810a99"
+      },
+      {
+        "entry_id": "4b81e766-60f9-47a3-bb6f-13ee5e9315ff",
+        "operation": "write",
+        "node_id": "2b88d0a3-b79d-4a0d-b901-45a382d1cba8",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "ce8b21f7cbc5e2cb6d19601e37ccdd2e486ff603d54fd64ad6e8d44fba810a99",
+        "timestamp": "2026-11-12T10:28:56.435589+00:00",
+        "hash": "0eea360ea1b0375e6481f0d6ae698f36ad583bcd707156df455e6e7f7ff5a6b4"
+      },
+      {
+        "entry_id": "cdc868a9-647d-49f9-bb12-59bbcb438e89",
+        "operation": "write",
+        "node_id": "892698d6-fa0d-4542-927d-5a3886adb2c5",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "0eea360ea1b0375e6481f0d6ae698f36ad583bcd707156df455e6e7f7ff5a6b4",
+        "timestamp": "2026-11-12T10:28:56.465626+00:00",
+        "hash": "955ddcb74ac6d8e11c94056a091d765f1e01f8bbc0288221ea741bbcf1ef83b6"
+      },
+      {
+        "entry_id": "8ca0b0e4-24f1-4cfc-addf-436b3c256039",
+        "operation": "write",
+        "node_id": "5c698bd5-ee49-4805-b58c-d4f2f3ef8617",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "955ddcb74ac6d8e11c94056a091d765f1e01f8bbc0288221ea741bbcf1ef83b6",
+        "timestamp": "2026-11-12T10:28:56.495784+00:00",
+        "hash": "84c4bde2411b99092f3e50ef566652adb91a3665f95e07a31c99dcf97886df22"
+      },
+      {
+        "entry_id": "33673d3a-7c93-40b2-9e2b-00e873cdd115",
+        "operation": "write",
+        "node_id": "0caef1b4-caea-4148-8ede-29a69b293174",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "84c4bde2411b99092f3e50ef566652adb91a3665f95e07a31c99dcf97886df22",
+        "timestamp": "2026-11-12T10:28:56.515764+00:00",
+        "hash": "7d40aed5726528c2998412d922dd0eb475b390e03c754737c8f046b5fc8fc2df"
+      },
+      {
+        "entry_id": "5bc56662-857d-40a4-9e83-143d3a4e953f",
+        "operation": "write",
+        "node_id": "7125e5a6-712b-41aa-b54d-1e3e7c1a09e1",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "7d40aed5726528c2998412d922dd0eb475b390e03c754737c8f046b5fc8fc2df",
+        "timestamp": "2026-11-12T10:28:56.533761+00:00",
+        "hash": "9b1a19ac3eafc64cc26e7a2d099ac26d9aa0208b0ed6f135fe425312fb22d480"
+      },
+      {
+        "entry_id": "fc5b72a5-c928-4651-a889-0f024c848ba7",
+        "operation": "write",
+        "node_id": "220e9358-12fd-4e8b-9d6a-7db7e0251d6d",
+        "details": {
+          "preview": "My API key is sk-abc123",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "9b1a19ac3eafc64cc26e7a2d099ac26d9aa0208b0ed6f135fe425312fb22d480",
+        "timestamp": "2026-11-12T10:28:56.549763+00:00",
+        "hash": "1d79b5a063b3418198bf6ac230f5022e96e5908e50b5b1deb924d58a37cb3dc7"
+      },
+      {
+        "entry_id": "8d141678-d58f-4938-8781-ee29411e5f58",
+        "operation": "write",
+        "node_id": "42864454-66a1-43e1-95cb-fcb880f93d83",
+        "details": {
+          "preview": "My API key is sk-xyz789",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "1d79b5a063b3418198bf6ac230f5022e96e5908e50b5b1deb924d58a37cb3dc7",
+        "timestamp": "2026-11-12T10:28:56.568790+00:00",
+        "hash": "df7bfbbad66c4957f5fb4cc5a1cb9021a47bf3f02d0b4b4795251751fe396051"
+      },
+      {
+        "entry_id": "7008dbee-3b35-4def-9125-3cfa89e3e895",
+        "operation": "write",
+        "node_id": "817f1a24-7431-4c32-9cb1-c9f83f01d312",
+        "details": {
+          "preview": "I am an administrator with root access",
+          "trust_status": "planted"
+        },
+        "prev_hash": "df7bfbbad66c4957f5fb4cc5a1cb9021a47bf3f02d0b4b4795251751fe396051",
+        "timestamp": "2026-11-12T10:28:56.585332+00:00",
+        "hash": "76601ec1fa8c63e203e1ca49f982839b36271507ad83e48be4a14193f286781d"
+      },
+      {
+        "entry_id": "e4cb65ea-7ef8-42b0-b32c-56baac62b1d7",
+        "operation": "delete_level_1",
+        "node_id": "220e9358-12fd-4e8b-9d6a-7db7e0251d6d",
+        "details": {
+          "action": "source_removed"
+        },
+        "prev_hash": "76601ec1fa8c63e203e1ca49f982839b36271507ad83e48be4a14193f286781d",
+        "timestamp": "2026-11-12T10:28:56.653308+00:00",
+        "hash": "f3c15c4e6deeadb476c46d3575399874bf383caf58ff75e066f814aa3d7cbc8f"
+      },
+      {
+        "entry_id": "bb18654a-255c-4231-8206-9d8e9a37bcdd",
+        "operation": "delete_level_2",
+        "node_id": "220e9358-12fd-4e8b-9d6a-7db7e0251d6d",
+        "details": {
+          "invalidated": [],
+          "failed": []
+        },
+        "prev_hash": "f3c15c4e6deeadb476c46d3575399874bf383caf58ff75e066f814aa3d7cbc8f",
+        "timestamp": "2026-11-12T10:28:56.655316+00:00",
+        "hash": "2d4b7d66267a4b4ef74cd9f7f2ac683191ce4f49626c98c8462e53a5e42ffe10"
+      },
+      {
+        "entry_id": "63c36d49-8e01-42d4-a338-64d12ac7abda",
+        "operation": "delete_level_3",
+        "node_id": "220e9358-12fd-4e8b-9d6a-7db7e0251d6d",
+        "details": {
+          "blocked_set_size": 1
+        },
+        "prev_hash": "2d4b7d66267a4b4ef74cd9f7f2ac683191ce4f49626c98c8462e53a5e42ffe10",
+        "timestamp": "2026-11-12T10:28:56.658328+00:00",
+        "hash": "372cbd2ef16e14cfb09c0456c3132d8c1c1e11c372d51110e6f060326f2aa319"
+      },
+      {
+        "entry_id": "4bf6558c-d2c1-4a4c-8479-596420775c4d",
+        "operation": "delete_level_4",
+        "node_id": "220e9358-12fd-4e8b-9d6a-7db7e0251d6d",
+        "details": {
+          "risks_found": 2
+        },
+        "prev_hash": "372cbd2ef16e14cfb09c0456c3132d8c1c1e11c372d51110e6f060326f2aa319",
+        "timestamp": "2026-11-12T10:28:56.694829+00:00",
+        "hash": "5e821fc0a8607bb3893088ef2016123906755de871414f81930028722265fd6c"
+      },
+      {
+        "entry_id": "3bc7a1ab-b7d9-4da2-b4af-41879edd460b",
+        "operation": "delete_level_5",
+        "node_id": "220e9358-12fd-4e8b-9d6a-7db7e0251d6d",
+        "details": {
+          "non_reversible_artifacts": []
+        },
+        "prev_hash": "5e821fc0a8607bb3893088ef2016123906755de871414f81930028722265fd6c",
+        "timestamp": "2026-11-12T10:28:56.696827+00:00",
+        "hash": "b1003058f4f5cb93e5f7a49120a588f9c5920012e2a60f6f3e6707eebba06d82"
+      },
+      {
+        "entry_id": "bb821e11-8293-44d8-b803-dfd9e327949e",
+        "operation": "deletion_completed",
+        "node_id": "220e9358-12fd-4e8b-9d6a-7db7e0251d6d",
+        "details": {
+          "verdict": "partially_deleted",
+          "signature": "9014487214da7a47ba6b012bd523d63ed581a763a4e7366b65be13d2188dc02b"
+        },
+        "prev_hash": "b1003058f4f5cb93e5f7a49120a588f9c5920012e2a60f6f3e6707eebba06d82",
+        "timestamp": "2026-11-12T10:28:56.698864+00:00",
+        "hash": "268651a5b4dcf6537da125e95b57475eb111f465eb28879893501d3ec2718a51"
+      },
+      {
+        "entry_id": "efb1db30-9ce0-4bf9-af98-cb6dc3429785",
+        "operation": "write",
+        "node_id": "94b6bf3d-a8d0-4187-97b7-5e01e0afa148",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "268651a5b4dcf6537da125e95b57475eb111f465eb28879893501d3ec2718a51",
+        "timestamp": "2026-11-12T11:26:43.730785+00:00",
+        "hash": "f5f92892b8c535f344ba7b20b6529d79b91f9e58c024ff2c2e891c1080fb3c1d"
+      },
+      {
+        "entry_id": "2cccd694-bcfb-47a3-a192-dedbcf5a7928",
+        "operation": "write",
+        "node_id": "7557b9dc-4bd1-4273-ae06-226d3dcd1b37",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "f5f92892b8c535f344ba7b20b6529d79b91f9e58c024ff2c2e891c1080fb3c1d",
+        "timestamp": "2026-11-12T11:26:43.763382+00:00",
+        "hash": "b04d7f8fc7b60ae6240ac57611fa77e9b58fdd5211b7f2dec48bfa184359e94e"
+      },
+      {
+        "entry_id": "44bf2f35-52a1-4527-aa58-9b6e303c8306",
+        "operation": "write",
+        "node_id": "a05b3851-cd73-40d1-a11e-5b43437a3b08",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "b04d7f8fc7b60ae6240ac57611fa77e9b58fdd5211b7f2dec48bfa184359e94e",
+        "timestamp": "2026-11-12T11:26:43.796145+00:00",
+        "hash": "4dca8c95957686b85b5efa5b90b4d178fac9c34be28e831e8b596830e1ac2dbc"
+      },
+      {
+        "entry_id": "07dfef72-ecbb-4f60-a655-9c1dc431379c",
+        "operation": "write",
+        "node_id": "e20f43fa-0965-410a-becf-a01c77db54b2",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "4dca8c95957686b85b5efa5b90b4d178fac9c34be28e831e8b596830e1ac2dbc",
+        "timestamp": "2026-11-12T11:26:43.821701+00:00",
+        "hash": "21c3c3196a41f63a77be43da250f952d898e8678131f49edd890d0fe8d8f1177"
+      },
+      {
+        "entry_id": "30f8950d-d2aa-4e56-b6cc-3e915f6b826d",
+        "operation": "write",
+        "node_id": "1a8b8a45-3164-4e23-a7a5-162b80e2acc8",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "21c3c3196a41f63a77be43da250f952d898e8678131f49edd890d0fe8d8f1177",
+        "timestamp": "2026-11-12T11:26:43.844809+00:00",
+        "hash": "4cdb093724b6f4c053fcbaf8ed4717feb5bd6cd47f80b35ae19f62b6ac619299"
+      },
+      {
+        "entry_id": "b4f5c7d5-b9fe-493a-b385-88a61bd4489d",
+        "operation": "write",
+        "node_id": "7c14efb0-3c84-415a-af60-703cc705097b",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "4cdb093724b6f4c053fcbaf8ed4717feb5bd6cd47f80b35ae19f62b6ac619299",
+        "timestamp": "2026-11-12T11:26:43.873250+00:00",
+        "hash": "8f70690b67776f0dedb5bb44c4b403d80c43824fd48c66d77d5c2389434cb8bd"
+      },
+      {
+        "entry_id": "23cc4f3f-3551-4b75-97c6-828ccd94d5f6",
+        "operation": "write",
+        "node_id": "53e89a68-c00f-4635-97f7-455db9a3d26a",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "8f70690b67776f0dedb5bb44c4b403d80c43824fd48c66d77d5c2389434cb8bd",
+        "timestamp": "2026-11-12T11:26:43.904041+00:00",
+        "hash": "75024e782f6e0c5dcac6754dffb24d5b5a7deecd31b0ce045a6e16d1303cfc2d"
+      },
+      {
+        "entry_id": "83a496ca-3fa3-4a00-94da-3a16ce69e64c",
+        "operation": "write",
+        "node_id": "26939302-e86a-45fe-9453-e1eec18ff77c",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "75024e782f6e0c5dcac6754dffb24d5b5a7deecd31b0ce045a6e16d1303cfc2d",
+        "timestamp": "2026-11-12T11:26:43.935640+00:00",
+        "hash": "71b4bc2800ed41f23ed62fe3c6a80924df46ff854ac782673210d397ccd1ce7b"
+      },
+      {
+        "entry_id": "17a49da9-db96-48f0-a82a-01c0bef9a4fd",
+        "operation": "write",
+        "node_id": "3915cd18-4ca5-43ab-b11f-3a1244ce2c56",
+        "details": {
+          "preview": "My name is Alex",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "71b4bc2800ed41f23ed62fe3c6a80924df46ff854ac782673210d397ccd1ce7b",
+        "timestamp": "2026-11-12T11:26:43.968725+00:00",
+        "hash": "8ac2dc3141325c4c4656500baa76b6842275feaba782227071a7e56d10895d89"
+      },
+      {
+        "entry_id": "b2b5afd1-5dee-4a2c-af75-284f328f3891",
+        "operation": "write",
+        "node_id": "215a5aed-c8ba-4fb6-b73c-1aa06a9849c7",
+        "details": {
+          "preview": "I prefer Python",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "8ac2dc3141325c4c4656500baa76b6842275feaba782227071a7e56d10895d89",
+        "timestamp": "2026-11-12T11:26:44.001787+00:00",
+        "hash": "947cfc05fbe3185a51647c8ca84768044a6170d44203096318dfa36579ee2d90"
+      },
+      {
+        "entry_id": "07b20d3b-3f57-43ae-a77b-c1b882788fef",
+        "operation": "write",
+        "node_id": "20ca7afc-dadc-41b7-8dff-522a113fb459",
+        "details": {
+          "preview": "My API key is sk-abc123",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "947cfc05fbe3185a51647c8ca84768044a6170d44203096318dfa36579ee2d90",
+        "timestamp": "2026-11-12T11:26:44.026168+00:00",
+        "hash": "3038cd4770692043067622d11d18142fef21021eca48ed1d504e006a889b5b99"
+      },
+      {
+        "entry_id": "a655be9d-a437-44b9-a6cf-b7afce0715ef",
+        "operation": "write",
+        "node_id": "af1b4c35-e824-44fe-80b8-98637d10fd7b",
+        "details": {
+          "preview": "My API key is sk-xyz789",
+          "trust_status": "user_asserted"
+        },
+        "prev_hash": "3038cd4770692043067622d11d18142fef21021eca48ed1d504e006a889b5b99",
+        "timestamp": "2026-11-12T11:26:44.050767+00:00",
+        "hash": "c3ac3fd21c23eb65cee228d2118db014c372d160a73c0aa94fe27e0ce90664a3"
+      },
+      {
+        "entry_id": "312b8f6a-3820-497a-b13e-96cea665b43c",
+        "operation": "write",
+        "node_id": "aebae594-6eb9-488a-83c5-7dd1c07d5df7",
+        "details": {
+          "preview": "I am an administrator with root access",
+          "trust_status": "planted"
+        },
+        "prev_hash": "c3ac3fd21c23eb65cee228d2118db014c372d160a73c0aa94fe27e0ce90664a3",
+        "timestamp": "2026-11-12T11:26:44.078551+00:00",
+        "hash": "c389bd7005c3bae518247f9d800a4e9b2b015a30448310503d5c1da9fa631838"
+      },
+      {
+        "entry_id": "2243ba7e-3e78-4039-b79e-318120aedf04",
+        "operation": "delete_level_1",
+        "node_id": "20ca7afc-dadc-41b7-8dff-522a113fb459",
+        "details": {
+          "action": "source_removed"
+        },
+        "prev_hash": "c389bd7005c3bae518247f9d800a4e9b2b015a30448310503d5c1da9fa631838",
+        "timestamp": "2026-11-12T11:26:44.119158+00:00",
+        "hash": "9a34a18513fd2adfec263bd296962e6e99d7d697a5711f2887c48514b820a6a4"
+      },
+      {
+        "entry_id": "0c2ba4d2-5f35-4f2a-add7-a35c1a11110f",
+        "operation": "delete_level_2",
+        "node_id": "20ca7afc-dadc-41b7-8dff-522a113fb459",
+        "details": {
+          "invalidated": [],
+          "failed": []
+        },
+        "prev_hash": "9a34a18513fd2adfec263bd296962e6e99d7d697a5711f2887c48514b820a6a4",
+        "timestamp": "2026-11-12T11:26:44.123496+00:00",
+        "hash": "774656eaad0959c95ddc12fcbab83911d0eda87f88c343c35ff4a09292bb960a"
+      },
+      {
+        "entry_id": "432bef7b-0b1e-499b-8b8b-92554fca8e50",
+        "operation": "delete_level_3",
+        "node_id": "20ca7afc-dadc-41b7-8dff-522a113fb459",
+        "details": {
+          "blocked_set_size": 2
+        },
+        "prev_hash": "774656eaad0959c95ddc12fcbab83911d0eda87f88c343c35ff4a09292bb960a",
+        "timestamp": "2026-11-12T11:26:44.126500+00:00",
+        "hash": "9bf9a0a54402c15ec600fce71c1ea8a884463673d58f40689feb99cc8aa491b5"
+      },
+      {
+        "entry_id": "036448f3-0613-40c6-a35d-ae61204bbabd",
+        "operation": "delete_level_4",
+        "node_id": "20ca7afc-dadc-41b7-8dff-522a113fb459",
+        "details": {
+          "risks_found": 3
+        },
+        "prev_hash": "9bf9a0a54402c15ec600fce71c1ea8a884463673d58f40689feb99cc8aa491b5",
+        "timestamp": "2026-11-12T11:26:44.154722+00:00",
+        "hash": "502213b9ec9294b8b2110a4910fc999a1cd192a231753c12bf4b4f0b61238b6f"
+      },
+      {
+        "entry_id": "c7d4f987-041d-4109-a77c-770ec5d73900",
+        "operation": "delete_level_5",
+        "node_id": "20ca7afc-dadc-41b7-8dff-522a113fb459",
+        "details": {
+          "non_reversible_artifacts": []
+        },
+        "prev_hash": "502213b9ec9294b8b2110a4910fc999a1cd192a231753c12bf4b4f0b61238b6f",
+        "timestamp": "2026-11-12T11:26:44.157708+00:00",
+        "hash": "fbbde07911556ccb3f989bff00618fa8c4120dc6da1b98080d95caf44dbced2f"
+      },
+      {
+        "entry_id": "91b6e9ad-a50a-44a0-b997-2ed612ffed48",
+        "operation": "deletion_completed",
+        "node_id": "20ca7afc-dadc-41b7-8dff-522a113fb459",
+        "details": {
+          "verdict": "partially_deleted",
+          "signature": "7a3e5d4d8e070be22e1f87bd71eef63a19e7509b657e585714a2c85b88aa0133"
+        },
+        "prev_hash": "fbbde07911556ccb3f989bff00618fa8c4120dc6da1b98080d95caf44dbced2f",
+        "timestamp": "2026-11-12T11:26:44.159733+00:00",
+        "hash": "876ee78e437c3897cb03260931195c057e5b276a32d84225ac1dd7f065bff6ee"
+      }
+    ],
+    "integrity_verified": true
+  },
+  "retrieval_hints": {
+    "token_budget_default": 2000,
+    "preferred_stores": {
+      "preferences": "graph",
+      "documents": "vector",
+      "task_context": "prompt",
+      "procedures": "code"
+    }
+  }
+}
