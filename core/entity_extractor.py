@@ -8,8 +8,11 @@ class EntityExtractor:
 
     def extract(self, texts):
         if self.llm:
-            value = self.llm(texts)
-            if isinstance(value, list): return value
+            try:
+                value = self.llm.extract(texts) if hasattr(self.llm, "extract") else self.llm(texts)
+                if isinstance(value, list): return value
+            except Exception:
+                pass
         entities = []
         for text in texts:
             for match in re.findall(r"(?:I prefer|I use|my [\w ]+ is|user [\w ]+)", text, flags=re.I):

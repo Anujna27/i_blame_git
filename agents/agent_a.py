@@ -15,6 +15,8 @@ from core.healing_scheduler import HealingScheduler
 from core.entity_extractor import EntityExtractor
 from core.summary_generator import SummaryGenerator
 from stores.filesystem_memory import FilesystemMemory
+from core.llm_config import ConfiguredLLM
+from core.graph_healer import GraphHealer
 
 
 class AgentA:
@@ -33,9 +35,12 @@ class AgentA:
         self.session_store = SessionStore()
         self.sessions = self.session_store
         self.healing_scheduler = HealingScheduler(self.build_knowledge_graph)
-        self.entity_extractor = EntityExtractor()
-        self.summary_generator = SummaryGenerator()
+        self.llm = ConfiguredLLM()
+        self.entity_extractor = EntityExtractor(self.llm if self.llm.enabled else None)
+        self.summary_generator = SummaryGenerator(self.llm if self.llm.enabled else None)
         self.filesystem_memory = FilesystemMemory()
+        self.graph_healer = GraphHealer(self.graph, self.vector_store, self.hash_chain,
+                                        llm_suggester=self.llm.suggest_link if self.llm.enabled else None)
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
         source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
@@ -91,7 +96,7 @@ class AgentA:
             self.filesystem_memory.write_entity(node)
         session = self.sessions.commit_session(session_id, entity_ids, actor)
         self.hash_chain.append("session_commit", session_id, {**session, "reason": reason})
-        self.graph.heal_orphans(actor=actor, vector_store=self.vector_store, hash_chain=self.hash_chain)
+        self.graph_healer.heal_orphans(session_id=session_id)
         return session
 
     def build_active_context(self, query, token_budget=2000):
@@ -141,6 +146,9 @@ class AgentA:
 
     def stop_graph_healing(self):
         self.healing_scheduler.stop()
+
+    def save_healing_schedule(self):
+        self.healing_scheduler.save_config()
 
     def recall_session(self, session_id):
         return [n for n in self.all_nodes.values() if n.session_id == session_id and n.deletion_state == "active"]

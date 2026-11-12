@@ -5,9 +5,12 @@ class SummaryGenerator:
 
     def generate(self, content):
         if self.llm:
-            value = self.llm(content)
-            if isinstance(value, dict):
-                return {"l0": value.get("l0", ""), "l1": value.get("l1", ""), "l2": value.get("l2", content)}
+            try:
+                value = self.llm.summarize(content) if hasattr(self.llm, "summarize") else self.llm(content)
+                if isinstance(value, dict):
+                    return {"l0": value.get("l0", ""), "l1": value.get("l1", ""), "l2": value.get("l2", content)}
+            except Exception:
+                pass
         sentences = [s.strip() for s in content.replace("!", ".").replace("?", ".").split(".") if s.strip()]
         l0 = (sentences[0] if sentences else content)[:240]
         l1 = ". ".join(sentences[:4])[:2000]

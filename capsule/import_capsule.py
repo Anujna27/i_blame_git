@@ -28,4 +28,5 @@ class CapsuleImporter:
                        "audit_entries": capsule.get("hash_chain", {}).get("entries", []),
                        "source_agent": capsule["source_agent"],
                        "session_commits": capsule.get("session_commits", {}),
-                       "graph": capsule.get("derivation_graph", {})}
+                       "graph": capsule.get("derivation_graph", {}),
+                       "vector_snapshot": capsule.get("vector_snapshot")}
