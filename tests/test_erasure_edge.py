@@ -82,3 +82,16 @@ def test_partially_deleted_notice_with_real_risk(tmp_path):
     notice = ResidualRiskReporter().generate_notice(report)
     print("\n===== PARTIALLY DELETED NOTICE (demo scenario) =====\n")
     print(notice)
+
+def test_real_store_contract_adapter(tmp_path):
+    node = MemoryNode(content="contract node", source=_source())
+    class FakeVectorStore:
+        def remove_from_active_index(self, node_id): pass
+        def query(self, query_text, top_k=3): return []
+    class FakeGraphStore:
+        def get_node(self, node_id): return node if node_id == node.node_id else None
+        def get_descendants(self, node_id): return []
+        def get_all_active_nodes(self): return [node]
+    report = ErasureEngine(str(tmp_path / "blocked.json")).delete(node.node_id, FakeVectorStore(), FakeGraphStore(), HashChain(str(tmp_path / "audit.json")))
+    assert len(report.levels) == 5
+    assert report.verdict == "fully_deleted"

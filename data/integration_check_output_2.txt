@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "D:\sahyadri\scripts\integration_check.py", line 18, in main
+    from stores.vector_store import VectorStore
+[FATAL] Import failed: No module named 'chromadb'
+  File "D:\sahyadri\stores\__init__.py", line 2, in <module>
+    from .vector_store import VectorStore
+  File "D:\sahyadri\stores\vector_store.py", line 5, in <module>
+    import chromadb
+ModuleNotFoundError: No module named 'chromadb'
