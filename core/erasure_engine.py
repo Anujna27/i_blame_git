@@ -50,6 +50,8 @@ class ErasureEngine:
         node = graph_store.get_node(node_id); levels=[]
         timestamp = datetime.now(timezone.utc).isoformat()
         entity_type = getattr(node, "entity_type", "memory") if node else "memory"
+        original_content = node.content if node else ""
+        content_digest = hashlib.sha256(original_content.encode("utf-8")).hexdigest() if node else None
         if node:
             node.transition("source_removed", deleted_by, reason)
             vector_store.remove_from_active_index(node_id)
@@ -66,12 +68,12 @@ class ErasureEngine:
         self.blocked_ids.add(node_id); self._save_blocked_set(); hash_chain.append("delete_level_3", node_id, {"blocked_set_size":len(self.blocked_ids)}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=3, level_name="Inference Blocked", status="passed", details="Node added to persistent inference block list. All retrieval paths check this set.", evidence={"blocked_set_size":len(self.blocked_ids)}))
         risks=[]; candidates=[]
-        try: candidates=vector_store.query(node.content if node else "", top_k=3)
+        try: candidates=vector_store.query(original_content, top_k=3)
         except Exception: candidates=[]
         if not candidates: candidates=graph_store.get_all_active_nodes()[:50]
         for n in candidates:
             if n.node_id == node_id: continue
-            sim=self._similar(node.content if node else "", n.content)
+            sim=self._similar(original_content, n.content)
             if sim > .75: risks.append(ResidualRisk(risk_type="semantic_neighbor_proximity", cluster=n.node_id, description=f"Deleted content may be partially reconstructable from {n.node_id} (similarity {sim:.2f}); related content: {n.content}", severity="high" if sim>.85 else "medium", affected_node_ids=[n.node_id]))
         hash_chain.append("delete_level_4", node_id, {"risks_found":len(risks)}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=4, level_name="Non-Inferability Checked", status="partial" if risks else "passed", details="No semantic neighbors above threshold." if not risks else f"{len(risks)} semantic neighbor(s) may partially reconstruct the deleted content.", evidence={"neighbors_checked":len(candidates),"risks_found":len(risks),"risks":[asdict(r) for r in risks]}))
@@ -79,9 +81,33 @@ class ErasureEngine:
         hash_chain.append("delete_level_5", node_id, {"non_reversible_artifacts":descendants}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=5, level_name="State Restoration Checked", status=st5, details=detail5, evidence={"non_reversible_artifacts":descendants}))
         verdict="failed" if levels[0].status=="failed" or levels[1].status=="failed" else ("partially_deleted" if st5=="failed" or risks else "fully_deleted")
-        data={"node_id":node_id,"node_content":node.content if node else "","levels":[asdict(x) for x in levels],"verdict":verdict,"residual_risks":[asdict(r) for r in risks],"timestamp":datetime.now(timezone.utc).isoformat()}
+        data={"node_id":node_id,"node_content":original_content,"levels":[asdict(x) for x in levels],"verdict":verdict,"residual_risks":[asdict(r) for r in risks],"timestamp":datetime.now(timezone.utc).isoformat()}
         sig=hashlib.sha256(json.dumps(data,sort_keys=True,default=str).encode()).hexdigest(); report=ErasureReport(node_id=node_id,node_content=node.content if node else "",levels=levels,verdict=verdict,residual_risks=risks,timestamp=data["timestamp"],signature=sig,entity_type=entity_type,deleted_by=deleted_by,reason=reason)
-        hash_chain.append("deletion_completed",node_id,{"verdict":verdict,"signature":sig,"actor":deleted_by,"reason":reason}, actor="agent", reason="erasure_request")
+        hash_chain.append("deletion_completed",node_id,{"verdict":verdict,"signature":sig,"actor":deleted_by,"reason":reason,"content_digest":content_digest,"content_redacted":True}, actor="agent", reason="erasure_request")
+        # Retain lifecycle/audit metadata but remove the deleted entity's
+        # content and vector representation from persistent memory.
+        if node:
+            node.content = ""
+            node.summary_l0 = ""
+            node.summary_l1 = ""
+            node.content_l2 = ""
+            node.properties = {}
+            if hasattr(vector_store, "remove"):
+                vector_store.remove(node_id)
+            if hasattr(graph_store, "remove_entity_edges"):
+                graph_store.remove_entity_edges(node_id)
+            elif hasattr(graph_store, "graph") and graph_store.graph.has_node(node_id):
+                graph_store.graph.remove_edges_from(list(graph_store.graph.in_edges(node_id)) + list(graph_store.graph.out_edges(node_id)))
+        for cid in invalidated:
+            child = graph_store.get_node(cid)
+            if child:
+                child.content = ""
+                child.summary_l0 = ""
+                child.summary_l1 = ""
+                child.content_l2 = ""
+                child.properties = {}
+                if hasattr(vector_store, "remove"):
+                    vector_store.remove(cid)
         # Persist graph state so deletion_state survives restart
         if hasattr(graph_store, "persist"):
             try:

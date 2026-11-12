@@ -1,6 +1,6 @@
 # MNEMOSYNE — CLAIM AUDIT REPORT
-Generated: 2026-11-12T18:47:22.953555+00:00
-Commit: f7abc9a
+Generated: 2026-11-12T19:30:28.508019+00:00
+Commit: 9ba0448
 Python: 3.14.6
 Context: `{"adversarial": null, "adversarial_only": false, "claim": null, "claims_only": false, "heal_threshold": 0.75, "list": false, "node_count": 1, "output": "both", "quiet": true, "seed": 42, "sessions": 30, "token_budget": 200}`
 
@@ -17,7 +17,7 @@ Context: `{"adversarial": null, "adversarial_only": false, "claim": null, "claim
 | 8 | Token budget is respected | PASS | `{"budget": 200, "actual_tokens": 100}` |
 | 9 | Contradiction detection returns both nodes | PASS | `{"conflict_detected": true}` |
 | 10 | Abstention triggers on insufficient evidence | PASS | `{"abstained": true, "reason": "I don't have verified information about unknown fact. No relevant memories were retrieved."}` |
-| 11 | Lifecycle audit records who/what/when/why | PASS | `{"entry": {"entry_id": "7d22a47e-c3c8-4c80-8873-f649803fa0c4", "event_id": "7d22a47e-c3c8-4c80-8873-f649803fa0c4", "operation": "deletion_completed", "node_id": "d45c8157-49dc-4065-91e3-73465a43fd0a", "entity_id": "d45c8157-49dc-4065-91e3-73465a43fd0a", "actor": "agent", "reason": "erasure_request", "metadata": {}, "details": {"verdict": "fully_deleted", "signature": "bed2c91129871d30b0a19c32b9fc0f59c53d21ff46889c78aedf9c6c9005b9cc", "actor": "alice", "reason": "GDPR request"}, "prev_hash": "af00ee2cb81762ac798e1aa31f4f38dbf483badda33a6c35172a7d9f34c90433", "timestamp": "2026-11-12T18:47:22.168384+00:00", "hash": "ce4d903e921470de1a7fd4344fa7b57265301a26d2e090712551ec95b9c1ecb1"}, "has_actor": true, "has_reason": true, "has_timestamp": true}` |
+| 11 | Lifecycle audit records who/what/when/why | PASS | `{"entry": {"entry_id": "4f0e97c9-484f-499e-b86a-6889a086b93a", "event_id": "4f0e97c9-484f-499e-b86a-6889a086b93a", "operation": "deletion_completed", "node_id": "37dffbb4-95b5-4a63-b1f4-5f814ec2ba19", "entity_id": "37dffbb4-95b5-4a63-b1f4-5f814ec2ba19", "actor": "agent", "reason": "erasure_request", "metadata": {}, "details": {"verdict": "fully_deleted", "signature": "11c160f5510a30315465d315d9e99e2c393aadcd5a0f58c860b1d8bc4324f443", "actor": "alice", "reason": "GDPR request", "content_digest": "b19b2022fbca5eebe2f23af94ff755f30bbd176d59e5e1c746e11b0adde61a7a", "content_redacted": true}, "prev_hash": "bb2b1c4c50687cfb3df7981b7baf4afb45114358759bc0912a69cfe966d6cbfe", "timestamp": "2026-11-12T19:30:27.751645+00:00", "hash": "890878cbf129bc45b1785975ab2b77dcea86322b58d89aa7f85c1aa476586037"}, "has_actor": true, "has_reason": true, "has_timestamp": true}` |
 | 12 | Legacy capsules import correctly | SKIP | `{}` |
 | 13 | 30 sessions survive restart | PASS | `{"sessions_written": 30, "sessions_reloaded": 30, "hash_ok": true}` |
 | 14 | Cross-agent hand-over mid-task preserves task state | SKIP | `{}` |

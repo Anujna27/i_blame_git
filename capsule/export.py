@@ -33,6 +33,8 @@ class CapsuleExporter:
                              "verdict": "partially_deleted" if n.deletion_state == "invalidated" else "fully_deleted"}
                             for n in all_nodes if n.deletion_state != "active"],
                 "residual_risk_flags": [dataclasses.asdict(r) for r in residual_risks],
+                "blocked_inference_ids": sorted({n.node_id for n in all_nodes if n.deletion_state != "active"} |
+                                                   {nid for r in residual_risks for nid in r.affected_node_ids}),
             },
             "hash_chain": {"entries": hash_chain.get_entries(), "integrity_verified": hash_chain.verify_integrity()[0]},
             "retrieval_hints": {"token_budget_default": 2000, "preferred_stores": {"preferences": "graph", "documents": "vector", "task_context": "prompt", "procedures": "code"}},
