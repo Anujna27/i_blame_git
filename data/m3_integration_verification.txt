@@ -1,0 +1,13 @@
+============================================================
+M3 AgentA Integration Verification
+============================================================
+[INFO] stores/vector_store.py imports faiss
+[INFO] Using M2's real VectorStore (FAISS-backed)
+  [PASS] has erasure engine
+  [PASS] has vector_store
+  [FAIL] has graph_store
+  [PASS] has hash_chain
+  [PASS] has forget method
+  [PASS] has remember method
+
+[STOP] AgentA internal state is incomplete. Report to M3.
