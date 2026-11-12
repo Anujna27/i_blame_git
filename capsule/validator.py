@@ -1,5 +1,6 @@
 import hashlib
 import json
+from datetime import datetime
 
 
 def validate_capsule(capsule):
@@ -16,7 +17,28 @@ def validate_capsule(capsule):
             errors.append(f"hash chain broken at entry {entry.get('entry_id')}")
         previous_hash = entry.get("hash", "")
     deleted = capsule.get("deletion_audit", {}).get("deleted_nodes", [])
+    entity_ids = {node.get("node_id") for node in capsule.get("memory_nodes", [])}
+    graph = capsule.get("derivation_graph", {})
+    for edge in graph.get("edges", []):
+        if edge.get("parent") not in entity_ids or edge.get("child") not in entity_ids:
+            errors.append(f"graph edge references missing entity: {edge}")
     for node in capsule.get("memory_nodes", []):
         if node.get("deletion_state") == "active" and node.get("node_id") in deleted:
             errors.append(f"inconsistent deletion state for node {node.get('node_id')}")
+    for node_id, events in capsule.get("lifecycle_history", {}).items():
+        if node_id not in entity_ids:
+            errors.append(f"lifecycle history references missing entity: {node_id}")
+        for event in events:
+            for key in ("event_id", "state", "actor", "reason", "timestamp", "metadata"):
+                if key not in event:
+                    errors.append(f"lifecycle event missing {key}: {node_id}")
+            try:
+                datetime.fromisoformat(event.get("timestamp", "").replace("Z", "+00:00"))
+            except ValueError:
+                errors.append(f"invalid lifecycle timestamp: {node_id}")
+    for entry in entries:
+        if entry.get("operation", "").startswith("delete") or entry.get("operation") == "deletion_completed":
+            for key in ("actor", "reason", "timestamp"):
+                if key not in entry:
+                    errors.append(f"audit entry missing {key}: {entry.get('entry_id')}")
     return len(errors) == 0, errors

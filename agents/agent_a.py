@@ -60,8 +60,8 @@ class AgentA:
         tokens = sum(len(node.content.split()) for node in safe)
         return {"answer": " | ".join(node.content for node in safe), "sources": [node.node_id for node in safe], "tokens_used": tokens, "abstained": False, "reason": ""}
 
-    def forget(self, node_id):
-        report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain)
+    def forget(self, node_id, reason="user_requested_erasure", deleted_by="user"):
+        report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain, reason=reason, deleted_by=deleted_by)
         self.last_report = report
         self.residual_risks.extend(report.residual_risks)
         self.blocked_ids = load_blocked_ids()

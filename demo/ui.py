@@ -42,6 +42,27 @@ with tabs[0]:
         st.text_area("Content", node.content)
         st.json(node.source)
         st.json(node.derivation_edges)
+        st.subheader("Lifecycle history")
+        st.json(getattr(node, "lifecycle", []))
+        st.subheader("Related entities")
+        related = []
+        for related_id in agent.graph.get_descendants(node.node_id) + agent.graph.get_ancestors(node.node_id):
+            related_node = agent.graph.get_node(related_id)
+            if related_node:
+                related.append({"node_id": related_id, "content": related_node.content, "deletion_state": related_node.deletion_state})
+        st.json(related)
+        if hasattr(agent.graph, "graph"):
+            dot = ["digraph provenance {"]
+            for graph_id in agent.graph.graph.nodes:
+                graph_node = agent.graph.get_node(graph_id)
+                if graph_node:
+                    color = "gray" if graph_node.deletion_state != "active" else "lightblue"
+                    dot.append(f'"{graph_id}" [label="{graph_id[:8]}", style=filled, fillcolor="{color}"];')
+            for source_id, target_id, edge_data in agent.graph.graph.edges(data=True):
+                edge_type = edge_data.get("type", "related")
+                dot.append(f'"{source_id}" -> "{target_id}" [label="{edge_type}"];')
+            dot.append("}")
+            st.graphviz_chart("\n".join(dot), use_container_width=True)
 
 with tabs[1]:
     st.header("Active Contradictions")
@@ -68,8 +89,11 @@ with tabs[3]:
     active = agent.graph.get_all_active_nodes()
     options = {f"{node.node_id[:8]} — {node.content[:50]}": node.node_id for node in active}
     selected = st.selectbox("Select memory to delete", list(options) or ["No memories"])
+    deletion_reason = st.text_input("Reason for deletion", value="user_requested_erasure")
+    deleted_by = st.text_input("Deleted by", value="user")
     if st.button("Delete memory", type="primary") and options:
-        report = agent.forget(options[selected])
+        report = agent.forget(options[selected], reason=deletion_reason, deleted_by=deleted_by)
+        st.json({"entity_id": report.node_id, "entity_type": report.entity_type, "deleted_by": report.deleted_by, "deleted_at": report.timestamp, "reason": report.reason, "verdict": report.verdict})
         for level in report.levels:
             with st.expander(f"Level {level.level_number} — {level.level_name} — {level.status.upper()}", expanded=True):
                 st.write(level.details)
