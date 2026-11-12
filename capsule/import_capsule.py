@@ -22,4 +22,9 @@ class CapsuleImporter:
             if node.node_id in lifecycle_history:
                 setattr(node, "lifecycle", lifecycle_history[node.node_id])
             nodes.append(node)
-        return nodes, {"residual_risks": capsule["deletion_audit"]["residual_risk_flags"], "audit_verified": True, "source_agent": capsule["source_agent"], "session_commits": capsule.get("session_commits", {}), "graph": capsule.get("derivation_graph", {})}
+        return nodes, {"residual_risks": capsule["deletion_audit"]["residual_risk_flags"],
+                       "audit_verified": capsule.get("hash_chain", {}).get("integrity_verified", False),
+                       "audit_entries": capsule.get("hash_chain", {}).get("entries", []),
+                       "source_agent": capsule["source_agent"],
+                       "session_commits": capsule.get("session_commits", {}),
+                       "graph": capsule.get("derivation_graph", {})}

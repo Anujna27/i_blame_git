@@ -54,7 +54,7 @@ class ProvenanceGraph:
                 self.nodes[parent].add_derivation(node_id, "healed_provenance")
                 healed.append({"node_id": node_id, "parent_id": parent})
             else:
-                node.record_lifecycle_event("quarantined", actor, "no active provenance root")
+                node.transition("quarantined", actor, "no active provenance root")
                 healed.append({"node_id": node_id, "parent_id": None})
         if healed: self.persist()
         return healed
