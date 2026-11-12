@@ -1,0 +1,38 @@
+from typing import Optional
+
+from core.memory_node import MemoryNode
+from capsule.import_capsule import CapsuleImporter
+
+
+class AgentB:
+    def __init__(self):
+        self.nodes = []
+        self.blocked_ids = set()
+        self.risk_registry = []
+
+    def import_memory(self, capsule_path: str) -> dict:
+        nodes, meta = CapsuleImporter().import_capsule(capsule_path, "agent_b")
+        self.nodes = nodes
+        self.blocked_ids = {node.node_id for node in nodes if node.is_blocked}
+        self.risk_registry = meta["residual_risks"]
+        return {"imported": len(nodes), "blocked": len(self.blocked_ids), "risks": len(self.risk_registry), "source_agent": meta["source_agent"]}
+
+    def _best_match(self, query: str) -> Optional[MemoryNode]:
+        query_words = set(query.lower().split())
+        scored = [(len(query_words & set(node.content.lower().split())), node) for node in self.nodes]
+        scored = [(score, node) for score, node in scored if score > 0]
+        return max(scored, key=lambda item: item[0])[1] if scored else None
+
+    def recall(self, query: str) -> dict:
+        best = self._best_match(query)
+        if best and best.node_id in self.blocked_ids:
+            return {"answer": "This information was requested for deletion. Source storage was cleared. Residual semantic risk remains. I cannot confirm non-inferability.", "abstained": True}
+        if best:
+            return {"answer": best.content, "abstained": False}
+        return {"answer": "I don't have this information.", "abstained": True}
+
+    def recall_full(self, query: str) -> dict:
+        best = self._best_match(query)
+        if best:
+            return {"answer": best.content, "abstained": False}
+        return {"answer": "I don't have this information.", "abstained": True}
