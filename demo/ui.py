@@ -1,5 +1,6 @@
 import os
 import sys
+import inspect
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
@@ -16,7 +17,7 @@ st.title("MNEMOSYNE")
 st.caption("An auditable memory system that can explain what it forgot, what it retained, and where uncertainty remains.")
 st.divider()
 
-if "agent_a" not in st.session_state:
+if "agent_a" not in st.session_state or "reason" not in inspect.signature(st.session_state.agent_a.forget).parameters:
     st.session_state.agent_a = AgentA()
 if "demo_seeded" not in st.session_state:
     st.session_state.demo_seeded = False
