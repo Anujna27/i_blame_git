@@ -73,7 +73,10 @@ with tabs[3]:
                 st.json(level.evidence)
         st.subheader("Residual Risk Notice")
         st.code(ResidualRiskReporter().generate_notice(report))
-        st.success(report.verdict) if report.verdict == "fully_deleted" else st.warning(report.verdict)
+        if report.verdict == "partially_deleted":
+            st.warning(report.verdict)
+        else:
+            st.success(report.verdict)
         st.json(agent.hash_chain.get_entries()[-10:])
 
 with tabs[4]:
