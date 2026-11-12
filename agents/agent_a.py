@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 
 from core.abstention import AbstentionEngine
 from core.contradiction import ContradictionEngine
@@ -15,6 +15,7 @@ class AgentA:
     def __init__(self):
         self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")
         self.graph = ProvenanceGraph()
+        self.graph_store = self.graph
         self.hash_chain = HashChain()
         self.erasure = ErasureEngine()
         self.contradiction = ContradictionEngine()
@@ -26,7 +27,7 @@ class AgentA:
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
         source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
-                  "timestamp": datetime.utcnow().isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
+                  "timestamp": datetime.now(timezone.utc).isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
         node = MemoryNode(content=content, source=source, trust_status=trust_status)
         try:
             conflicts = self.contradiction.detect(node, self.graph.get_all_active_nodes())

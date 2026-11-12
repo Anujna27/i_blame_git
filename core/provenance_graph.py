@@ -1,5 +1,6 @@
 import json
 import os
+from pathlib import Path
 import networkx as nx
 from .memory_node import MemoryNode
 
@@ -39,12 +40,13 @@ class ProvenanceGraph:
     def get_deleted_nodes(self): return [n for n in self.nodes.values() if n.deletion_state != "active"]
 
     def persist(self):
-        os.makedirs(os.path.dirname(self.path) or ".", exist_ok=True)
+        Path(self.path).parent.mkdir(parents=True, exist_ok=True)
         payload = {"graph": nx.node_link_data(self.graph), "nodes": {k: v.to_jsonld() for k, v in self.nodes.items()}}
-        with open(self.path, "w", encoding="utf-8") as f: json.dump(payload, f, indent=2)
+        with open(self.path, "w", encoding="utf-8") as f: json.dump(payload, f, indent=2, default=str)
 
     def load(self):
-        with open(self.path, encoding="utf-8") as f: payload = json.load(f)
+        if not os.path.exists(self.path): return
+        with open(self.path, "r", encoding="utf-8") as f: payload = json.load(f)
         if "graph" in payload and "nodes" in payload:
             self.graph = nx.node_link_graph(payload["graph"], directed=True)
             self.nodes = {k: MemoryNode.from_jsonld(v) for k, v in payload["nodes"].items()}

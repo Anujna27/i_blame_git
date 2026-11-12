@@ -1,13 +1,15 @@
 import hashlib, json, os
+from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from typing import Literal
-from pydantic import BaseModel
 from .residual_risk import ResidualRisk
 
-class LevelResult(BaseModel):
+@dataclass
+class LevelResult:
     level_number: int; level_name: str; status: Literal["passed", "partial", "failed"]; details: str; evidence: dict
 
-class ErasureReport(BaseModel):
+@dataclass
+class ErasureReport:
     node_id: str; node_content: str; levels: list[LevelResult]
     verdict: Literal["fully_deleted", "partially_deleted", "failed"]
     residual_risks: list[ResidualRisk]; timestamp: str; signature: str
@@ -43,6 +45,8 @@ class ErasureEngine:
             child=graph_store.get_node(cid)
             if child: child.deletion_state="invalidated"; vector_store.remove_from_active_index(cid); invalidated.append(cid)
             else: failed.append(cid)
+        if hasattr(graph_store, "persist"):
+            graph_store.persist()
         hash_chain.append("delete_level_2", node_id, {"invalidated":invalidated,"failed":failed})
         st="passed" if not failed else ("partial" if invalidated else "failed")
         levels.append(LevelResult(level_number=2, level_name="Derived Artifacts Invalidated", status=st, details=f"Invalidated {len(invalidated)} of {len(descendants)} derived artifacts.", evidence={"total_descendants":len(descendants),"invalidated_children":invalidated,"failed_children":failed}))
@@ -57,11 +61,11 @@ class ErasureEngine:
             sim=self._similar(node.content if node else "", n.content)
             if sim > .75: risks.append(ResidualRisk(risk_type="semantic_neighbor_proximity", cluster=n.node_id, description=f"Deleted content may be partially reconstructable from {n.node_id} (similarity {sim:.2f}); related content: {n.content}", severity="high" if sim>.85 else "medium", affected_node_ids=[n.node_id]))
         hash_chain.append("delete_level_4", node_id, {"risks_found":len(risks)})
-        levels.append(LevelResult(level_number=4, level_name="Non-Inferability Checked", status="partial" if risks else "passed", details="No semantic neighbors above threshold." if not risks else f"{len(risks)} semantic neighbor(s) may partially reconstruct the deleted content.", evidence={"neighbors_checked":len(candidates),"risks_found":len(risks),"risks":[r.model_dump() for r in risks]}))
+        levels.append(LevelResult(level_number=4, level_name="Non-Inferability Checked", status="partial" if risks else "passed", details="No semantic neighbors above threshold." if not risks else f"{len(risks)} semantic neighbor(s) may partially reconstruct the deleted content.", evidence={"neighbors_checked":len(candidates),"risks_found":len(risks),"risks":[asdict(r) for r in risks]}))
         st5="failed" if descendants else "passed"; detail5=(f"LLM consolidation is non-deterministic. {len(descendants)} derived artifacts were generated from the deleted content and cannot be deterministically reversed. Return to 'never-written' state is not guaranteed." if descendants else "No derived artifacts were generated; state restoration is possible.")
         hash_chain.append("delete_level_5", node_id, {"non_reversible_artifacts":descendants})
         levels.append(LevelResult(level_number=5, level_name="State Restoration Checked", status=st5, details=detail5, evidence={"non_reversible_artifacts":descendants}))
         verdict="failed" if levels[0].status=="failed" or levels[1].status=="failed" else ("partially_deleted" if st5=="failed" or risks else "fully_deleted")
-        data={"node_id":node_id,"node_content":node.content if node else "","levels":[x.model_dump() for x in levels],"verdict":verdict,"residual_risks":[r.model_dump() for r in risks],"timestamp":datetime.now(timezone.utc).isoformat()}
-        sig=hashlib.sha256(json.dumps(data,sort_keys=True,default=str).encode()).hexdigest(); report=ErasureReport(**data,signature=sig)
+        data={"node_id":node_id,"node_content":node.content if node else "","levels":[asdict(x) for x in levels],"verdict":verdict,"residual_risks":[asdict(r) for r in risks],"timestamp":datetime.now(timezone.utc).isoformat()}
+        sig=hashlib.sha256(json.dumps(data,sort_keys=True,default=str).encode()).hexdigest(); report=ErasureReport(node_id=node_id,node_content=node.content if node else "",levels=levels,verdict=verdict,residual_risks=risks,timestamp=data["timestamp"],signature=sig)
         hash_chain.append("deletion_completed",node_id,{"verdict":verdict,"signature":sig}); return report
