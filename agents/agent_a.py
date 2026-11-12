@@ -11,6 +11,7 @@ from capsule.export import CapsuleExporter
 from agents.blocked_loader import load_blocked_ids
 from stores.session_store import SessionStore
 from core.active_context import ActiveContext, ContextBuilder
+from core.healing_scheduler import HealingScheduler
 
 
 class AgentA:
@@ -28,6 +29,7 @@ class AgentA:
         self.last_report = None
         self.session_store = SessionStore()
         self.sessions = self.session_store
+        self.healing_scheduler = HealingScheduler(self.build_knowledge_graph)
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
         source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
@@ -58,6 +60,9 @@ class AgentA:
             raise KeyError(node_id)
         old_content = node.content
         node.content = new_content
+        node.content_l2 = new_content
+        node.summary_l0 = new_content[:240]
+        node.summary_l1 = new_content[:2000]
         node.version += 1
         metadata = {"old_content": old_content}
         node.record_lifecycle_event("updated", actor, reason, metadata=metadata)
@@ -117,6 +122,13 @@ class AgentA:
 
     def build_knowledge_graph(self):
         return self.graph_store.build_knowledge_graph(self.vector_store, self.hash_chain)
+
+    def start_graph_healing(self, interval_seconds=900):
+        self.healing_scheduler.interval_seconds = interval_seconds
+        self.healing_scheduler.start()
+
+    def stop_graph_healing(self):
+        self.healing_scheduler.stop()
 
     def recall_session(self, session_id):
         return [n for n in self.all_nodes.values() if n.session_id == session_id and n.deletion_state == "active"]

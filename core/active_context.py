@@ -13,7 +13,7 @@ class ActiveContext:
 
     @property
     def text(self):
-        return "\n".join(entity.content for entity in self.entities)
+        return "\n".join(entity.summary_l1 or entity.content for entity in self.entities)
 
 
 class ContextBuilder:

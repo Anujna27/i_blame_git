@@ -275,6 +275,15 @@ class ContradictionEngine:
             if self._verified_overrides(new_node, existing):
                 continue
 
+            shared_keys = set(new_node.properties) & set(existing.properties)
+            property_conflict = any(new_node.properties[key] != existing.properties[key]
+                                    for key in shared_keys)
+            if property_conflict and (new_node.entity_type == existing.entity_type or
+                                      not new_node.entity_type or not existing.entity_type):
+                conflicts.append(Conflict(node_a_id=new_node.node_id, node_b_id=existing.node_id,
+                                          description="conflicting entity properties"))
+                continue
+
             similarity = topic_cosine_similarity(new_node.content, existing.content)
             if similarity <= self.similarity_threshold:
                 continue

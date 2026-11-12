@@ -25,9 +25,18 @@ class MemoryNode:
     deleted_reason: Optional[str] = None
     deleted_by: Optional[str] = None
     deleted_at: Optional[datetime] = None
+    summary_l0: str = ""
+    summary_l1: str = ""
+    content_l2: str = ""
     def __post_init__(self):
         if not self.session_id:
             self.session_id = str(self.source.get("session_id", ""))
+        if not self.content_l2:
+            self.content_l2 = self.content
+        if not self.summary_l0:
+            self.summary_l0 = self.content[:240]
+        if not self.summary_l1:
+            self.summary_l1 = self.content[:2000]
         if not self.lifecycle:
             self.record_lifecycle_event("created", "system", "entity_created")
     def to_jsonld(self):
