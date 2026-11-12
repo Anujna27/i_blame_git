@@ -1,0 +1,139 @@
+{
+  "@context": "https://mnemosyne.dev/schema/v1",
+  "capsule_id": "db5838f3-6350-47e4-b7c4-77427978dcc5",
+  "exported_at": "2026-11-12T09:20:49.441078Z",
+  "source_agent": "test_agent",
+  "memory_nodes": [
+    {
+      "node_id": "node-1",
+      "content": "active",
+      "source": {
+        "type": "test",
+        "session_id": "smoke",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T00:00:00Z",
+        "raw_reference": "smoke"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [
+        {
+          "child_id": "node-2",
+          "type": "derived"
+        }
+      ],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T09:20:49.394079Z",
+      "last_accessed": "2026-11-12T09:20:49.394079Z",
+      "access_count": 0
+    },
+    {
+      "node_id": "node-2",
+      "content": "removed",
+      "source": {
+        "type": "test",
+        "session_id": "smoke",
+        "turn_index": 0,
+        "timestamp": "2026-11-12T00:00:00Z",
+        "raw_reference": "smoke"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "source_removed",
+      "is_blocked": false,
+      "created_at": "2026-11-12T09:20:49.394079Z",
+      "last_accessed": "2026-11-12T09:20:49.394079Z",
+      "access_count": 0
+    }
+  ],
+  "derivation_graph": {
+    "edges": [
+      {
+        "parent": "node-1",
+        "child": "node-2",
+        "type": "derived"
+      }
+    ]
+  },
+  "deletion_audit": {
+    "deleted_nodes": [
+      "node-2"
+    ],
+    "invalidated_children": [],
+    "residual_risk_flags": [
+      {
+        "risk_type": "derived_content",
+        "cluster": "test",
+        "description": "possible residue",
+        "severity": "low",
+        "affected_node_ids": [
+          "node-2"
+        ]
+      }
+    ]
+  },
+  "hash_chain": {
+    "entries": [
+      {
+        "entry_id": "7d96dcd9-7e87-40b1-938d-d2edd2887a79",
+        "operation": "create",
+        "node_id": "node-1",
+        "details": {
+          "source": "smoke"
+        },
+        "prev_hash": "GENESIS",
+        "timestamp": "2026-11-12T09:20:35.932168+00:00",
+        "hash": "7c0343983cb6d69698e4221a67e31ee20fc66044eba3a92f9d8f77004f7c0609"
+      },
+      {
+        "entry_id": "fe724cb3-2075-4e8d-9203-25af953f18f5",
+        "operation": "delete",
+        "node_id": "node-2",
+        "details": {
+          "reason": "source_removed"
+        },
+        "prev_hash": "7c0343983cb6d69698e4221a67e31ee20fc66044eba3a92f9d8f77004f7c0609",
+        "timestamp": "2026-11-12T09:20:35.934166+00:00",
+        "hash": "f08515bd3fef94d4dc65ef9c74c084c6657d28917bc916e6e7cf61e8e6850eab"
+      },
+      {
+        "entry_id": "a62225b1-394a-47f5-956b-a3e2570755d9",
+        "operation": "create",
+        "node_id": "node-1",
+        "details": {
+          "source": "smoke"
+        },
+        "prev_hash": "f08515bd3fef94d4dc65ef9c74c084c6657d28917bc916e6e7cf61e8e6850eab",
+        "timestamp": "2026-11-12T09:20:49.438081+00:00",
+        "hash": "3c34c6ff5320dbaa8f63473ad1a33320f5648ccbca46d1602e06e46a17c6fc4e"
+      },
+      {
+        "entry_id": "d8ee9f82-3e14-43c7-86c0-4650756ff520",
+        "operation": "delete",
+        "node_id": "node-2",
+        "details": {
+          "reason": "source_removed"
+        },
+        "prev_hash": "3c34c6ff5320dbaa8f63473ad1a33320f5648ccbca46d1602e06e46a17c6fc4e",
+        "timestamp": "2026-11-12T09:20:49.440101+00:00",
+        "hash": "7a2cad60d2e17eed1e2bb22cb92d888acef66ca9a32b36cfdba1b79a5dd45a53"
+      }
+    ],
+    "integrity_verified": true
+  },
+  "retrieval_hints": {
+    "token_budget_default": 2000,
+    "preferred_stores": {
+      "preferences": "graph",
+      "documents": "vector",
+      "task_context": "prompt",
+      "procedures": "code"
+    }
+  }
+}
