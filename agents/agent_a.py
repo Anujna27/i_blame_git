@@ -10,7 +10,7 @@ from stores.vector_store import VectorStore
 from capsule.export import CapsuleExporter
 from agents.blocked_loader import load_blocked_ids
 from stores.session_store import SessionStore
-from core.active_context import ActiveContext
+from core.active_context import ActiveContext, ContextBuilder
 
 
 class AgentA:
@@ -26,7 +26,8 @@ class AgentA:
         self.blocked_ids = load_blocked_ids()
         self.all_nodes = {}
         self.last_report = None
-        self.sessions = SessionStore()
+        self.session_store = SessionStore()
+        self.sessions = self.session_store
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
         source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
@@ -96,27 +97,11 @@ class AgentA:
 
     def recall(self, query, token_budget=2000):
         try:
-            retrieved = self.build_active_context(query, token_budget).entities
+            builder = ContextBuilder(self.vector_store, self.graph, self.session_store, token_budget)
+            context = builder.build_context(query, session_id="sess_001")
         except Exception as error:
-            return {"answer": "Retrieval error.", "sources": [], "tokens_used": 0, "abstained": True, "reason": str(error)}
-        blocked_present = any(node.node_id in self.blocked_ids for node in retrieved)
-        safe = [node for node in retrieved if node.node_id not in self.blocked_ids]
-        # The knowledge graph is memory context, not just an audit index: include
-        # active provenance neighbours of retrieved entities in the harness context.
-        related = []
-        for node in list(safe):
-            for nid in self.graph.get_ancestors(node.node_id) + self.graph.get_descendants(node.node_id):
-                neighbour = self.graph.get_node(nid)
-                if neighbour and neighbour.deletion_state == "active" and nid not in {n.node_id for n in safe}:
-                    related.append(neighbour)
-        safe.extend(related[:5])
-        if blocked_present and not safe:
-            return {"answer": "This information was requested for deletion. Source storage was cleared. Residual semantic risk remains. I cannot confirm non-inferability.", "sources": [], "tokens_used": 0, "abstained": True, "reason": "blocked_by_erasure"}
-        abstain, reason = self.abstention.should_abstain(query, safe)
-        if abstain:
-            return {"answer": reason, "sources": [], "tokens_used": 0, "abstained": True, "reason": reason}
-        tokens = sum(len(node.content.split()) for node in safe)
-        return {"answer": " | ".join(node.content for node in safe), "sources": [node.node_id for node in safe], "tokens_used": tokens, "abstained": False, "reason": ""}
+            return {"answer": "Retrieval error.", "sources": [], "tokens_used": 0, "ranking_explanations": [], "abstained": True, "reason": str(error)}
+        return {"answer": context.text, "sources": [entity.node_id for entity in context.entities], "tokens_used": context.token_count, "ranking_explanations": context.ranking_explanations, "abstained": not bool(context.entities)}
 
     def forget(self, node_id, reason="user_requested", deleted_by="system"):
         report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain, reason, deleted_by)
@@ -143,4 +128,5 @@ class AgentA:
         self.graph = ProvenanceGraph()
         self.hash_chain = HashChain()
         self.blocked_ids = load_blocked_ids()
-        self.sessions = SessionStore()
+        self.session_store = SessionStore()
+        self.sessions = self.session_store
