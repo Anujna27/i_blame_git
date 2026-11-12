@@ -31,7 +31,7 @@ class AgentA:
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
         source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
                   "timestamp": datetime.now(timezone.utc).isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
-        node = MemoryNode(content=content, source=source, trust_status=trust_status)
+        node = MemoryNode(content=content, source=source, session_id=session_id, trust_status=trust_status)
         try:
             conflicts = self.contradiction.detect(node, self.graph.get_all_active_nodes())
             if conflicts:
@@ -44,32 +44,36 @@ class AgentA:
             print(f"[remember] contradiction.detect failed: {error}")
         self.vector_store.add(node)
         self.graph.add_node(node)
-        self.sessions.add(node)
         self.all_nodes[node.node_id] = node
-        self.hash_chain.append("write", node.node_id, {"preview": content[:50], "trust_status": node.trust_status})
+        existing_session = self.sessions.get_session(session_id)
+        entity_ids = list(dict.fromkeys((existing_session or {}).get("entity_ids", []) + [node.node_id]))
+        self.sessions.save_session(session_id, entity_ids=entity_ids)
+        self.hash_chain.append("entity_created", node.node_id, {"session_id": session_id, "trust_status": node.trust_status})
         return node
 
-    def update_entity(self, node_id, content, actor="system", reason="entity_updated"):
-        node = self.graph.get_node(node_id)
+    def update_entity(self, node_id, new_content, actor="user", reason="user corrected preference"):
+        node = self.all_nodes.get(node_id) or self.graph.get_node(node_id)
         if node is None:
             raise KeyError(node_id)
         old_content = node.content
-        node.content = content
+        node.content = new_content
         node.version += 1
-        node.lifecycle.append({"state": "updated", "actor": actor, "reason": reason,
-                               "old_value": old_content, "new_value": content,
-                               "timestamp": datetime.now(timezone.utc).isoformat()})
+        metadata = {"old_content": old_content}
+        node.record_lifecycle_event("updated", actor, reason, metadata=metadata)
         self.vector_store.add(node)
         self.graph.persist()
-        self.sessions.add(node)
-        self.hash_chain.append("entity_updated", node_id, {"actor": actor, "reason": reason,
-                                                              "old_value": old_content, "new_value": content})
+        session = self.sessions.get_session(node.session_id)
+        if session:
+            self.sessions.save_session(node.session_id, entity_ids=session["entity_ids"], status=session["status"],
+                                       committed_at=session["committed_at"], committed_by=session["committed_by"])
+        self.hash_chain.append("entity_updated", node_id, {"actor": actor, "reason": reason, "old_content": old_content})
         return node
 
     def commit_session(self, session_id, actor="harness", reason="session_end"):
-        event = self.sessions.commit(session_id, actor, reason)
-        self.hash_chain.append("session_commit", session_id, event)
-        return event
+        entity_ids = [node.node_id for node in self.all_nodes.values() if node.session_id == session_id]
+        session = self.sessions.commit_session(session_id, entity_ids, actor)
+        self.hash_chain.append("session_commit", session_id, {**session, "reason": reason})
+        return session
 
     def build_active_context(self, query, token_budget=2000):
         retrieved = self.vector_store.query(query, top_k=5)
@@ -129,7 +133,7 @@ class AgentA:
         return self.graph_store.build_knowledge_graph()
 
     def recall_session(self, session_id):
-        return [n for n in self.sessions.get(session_id) if n.deletion_state == "active"]
+        return [n for n in self.all_nodes.values() if n.session_id == session_id and n.deletion_state == "active"]
 
     def export_memory(self):
         return CapsuleExporter().export("agent_a", list(self.all_nodes.values()), self.graph, self.hash_chain, self.residual_risks)
@@ -139,3 +143,4 @@ class AgentA:
         self.graph = ProvenanceGraph()
         self.hash_chain = HashChain()
         self.blocked_ids = load_blocked_ids()
+        self.sessions = SessionStore()
