@@ -1,0 +1,275 @@
+{
+  "timestamp": "2026-11-12T18:47:22.953555+00:00",
+  "commit": "f7abc9a",
+  "python_version": "3.14.6",
+  "context": {
+    "claims_only": false,
+    "adversarial_only": false,
+    "claim": null,
+    "adversarial": null,
+    "node_count": 1,
+    "sessions": 30,
+    "token_budget": 200,
+    "seed": 42,
+    "heal_threshold": 0.75,
+    "list": false,
+    "output": "both",
+    "quiet": true
+  },
+  "claims": [
+    {
+      "name": "Five-level erasure runs correctly on all scenarios",
+      "status": "PASS",
+      "details": "five-level report evaluated",
+      "evidence": {
+        "levels": 5,
+        "verdict": "partially_deleted"
+      },
+      "error": null
+    },
+    {
+      "name": "Deletion state survives restart",
+      "status": "PASS",
+      "details": "reload checked",
+      "evidence": {
+        "parent_state": "source_removed",
+        "child_state": "invalidated",
+        "hash_ok": true
+      },
+      "error": null
+    },
+    {
+      "name": "Hash chain detects tampering",
+      "status": "PASS",
+      "details": "in-memory tamper checked",
+      "evidence": {
+        "original_ok": true,
+        "post_tamper_ok": false
+      },
+      "error": null
+    },
+    {
+      "name": "Capsule export preserves deletion state",
+      "status": "SKIP",
+      "details": "Requires legacy capsule blocked-state contract not exposed by current importer",
+      "evidence": {},
+      "error": "interface mismatch"
+    },
+    {
+      "name": "Capsule import preserves residual risks",
+      "status": "SKIP",
+      "details": "Agent B exposes risks through import metadata only; no residual-risk registry contract",
+      "evidence": {},
+      "error": "interface mismatch"
+    },
+    {
+      "name": "Session commit auto-triggers healing",
+      "status": "PASS",
+      "details": "healing checked",
+      "evidence": {
+        "isolated_before": 1,
+        "isolated_after": 1,
+        "quarantined": 1
+      },
+      "error": null
+    },
+    {
+      "name": "Vector retrieval respects trust filter",
+      "status": "PASS",
+      "details": "trust ordering checked",
+      "evidence": {
+        "verified_rank": 0,
+        "planted_returned": true
+      },
+      "error": null
+    },
+    {
+      "name": "Token budget is respected",
+      "status": "PASS",
+      "details": "bounded active context checked",
+      "evidence": {
+        "budget": 200,
+        "actual_tokens": 100
+      },
+      "error": null
+    },
+    {
+      "name": "Contradiction detection returns both nodes",
+      "status": "PASS",
+      "details": "contradiction engine checked",
+      "evidence": {
+        "conflict_detected": true
+      },
+      "error": null
+    },
+    {
+      "name": "Abstention triggers on insufficient evidence",
+      "status": "PASS",
+      "details": "I don't have verified information about unknown fact. No relevant memories were retrieved.",
+      "evidence": {
+        "abstained": true,
+        "reason": "I don't have verified information about unknown fact. No relevant memories were retrieved."
+      },
+      "error": null
+    },
+    {
+      "name": "Lifecycle audit records who/what/when/why",
+      "status": "PASS",
+      "details": "audit entry checked",
+      "evidence": {
+        "entry": {
+          "entry_id": "7d22a47e-c3c8-4c80-8873-f649803fa0c4",
+          "event_id": "7d22a47e-c3c8-4c80-8873-f649803fa0c4",
+          "operation": "deletion_completed",
+          "node_id": "d45c8157-49dc-4065-91e3-73465a43fd0a",
+          "entity_id": "d45c8157-49dc-4065-91e3-73465a43fd0a",
+          "actor": "agent",
+          "reason": "erasure_request",
+          "metadata": {},
+          "details": {
+            "verdict": "fully_deleted",
+            "signature": "bed2c91129871d30b0a19c32b9fc0f59c53d21ff46889c78aedf9c6c9005b9cc",
+            "actor": "alice",
+            "reason": "GDPR request"
+          },
+          "prev_hash": "af00ee2cb81762ac798e1aa31f4f38dbf483badda33a6c35172a7d9f34c90433",
+          "timestamp": "2026-11-12T18:47:22.168384+00:00",
+          "hash": "ce4d903e921470de1a7fd4344fa7b57265301a26d2e090712551ec95b9c1ecb1"
+        },
+        "has_actor": true,
+        "has_reason": true,
+        "has_timestamp": true
+      },
+      "error": null
+    },
+    {
+      "name": "Legacy capsules import correctly",
+      "status": "SKIP",
+      "details": "Legacy capsule fixture needs isolated importer contract",
+      "evidence": {},
+      "error": "not safely inferable"
+    },
+    {
+      "name": "30 sessions survive restart",
+      "status": "PASS",
+      "details": "sessions reloaded",
+      "evidence": {
+        "sessions_written": 30,
+        "sessions_reloaded": 30,
+        "hash_ok": true
+      },
+      "error": null
+    },
+    {
+      "name": "Cross-agent hand-over mid-task preserves task state",
+      "status": "SKIP",
+      "details": "Task-state entity contract is not distinct from generic memory",
+      "evidence": {},
+      "error": "interface mismatch"
+    }
+  ],
+  "adversarial": [
+    {
+      "name": "Adversarial: Import broken capsule",
+      "status": "SKIP",
+      "details": "Requires isolated capsule fixture",
+      "evidence": {},
+      "error": "not implemented"
+    },
+    {
+      "name": "Adversarial: Delete missing node",
+      "status": "SKIP",
+      "details": "Requires adversarial mock-store harness",
+      "evidence": {},
+      "error": "not implemented"
+    },
+    {
+      "name": "Adversarial: Delete twice",
+      "status": "SKIP",
+      "details": "Requires adversarial mock-store harness",
+      "evidence": {},
+      "error": "not implemented"
+    },
+    {
+      "name": "Contradiction detection returns both nodes",
+      "status": "PASS",
+      "details": "contradiction engine checked",
+      "evidence": {
+        "conflict_detected": true
+      },
+      "error": null
+    },
+    {
+      "name": "Abstention triggers on insufficient evidence",
+      "status": "PASS",
+      "details": "I don't have verified information about unknown fact. No relevant memories were retrieved.",
+      "evidence": {
+        "abstained": true,
+        "reason": "I don't have verified information about unknown fact. No relevant memories were retrieved."
+      },
+      "error": null
+    },
+    {
+      "name": "Vector retrieval respects trust filter",
+      "status": "PASS",
+      "details": "trust ordering checked",
+      "evidence": {
+        "verified_rank": 0,
+        "planted_returned": true
+      },
+      "error": null
+    },
+    {
+      "name": "Abstention triggers on insufficient evidence",
+      "status": "PASS",
+      "details": "I don't have verified information about unknown fact. No relevant memories were retrieved.",
+      "evidence": {
+        "abstained": true,
+        "reason": "I don't have verified information about unknown fact. No relevant memories were retrieved."
+      },
+      "error": null
+    },
+    {
+      "name": "Deletion state survives restart",
+      "status": "PASS",
+      "details": "reload checked",
+      "evidence": {
+        "parent_state": "source_removed",
+        "child_state": "invalidated",
+        "hash_ok": true
+      },
+      "error": null
+    },
+    {
+      "name": "Hash chain detects tampering",
+      "status": "PASS",
+      "details": "in-memory tamper checked",
+      "evidence": {
+        "original_ok": true,
+        "post_tamper_ok": false
+      },
+      "error": null
+    },
+    {
+      "name": "Token budget is respected",
+      "status": "PASS",
+      "details": "bounded active context checked",
+      "evidence": {
+        "budget": 10,
+        "actual_tokens": 0
+      },
+      "error": null
+    }
+  ],
+  "summary": {
+    "claims_total": 14,
+    "claims_passed": 10,
+    "claims_failed": 0,
+    "claims_skipped": 4,
+    "adversarial_total": 10,
+    "adversarial_passed": 7,
+    "adversarial_failed": 0,
+    "adversarial_skipped": 3,
+    "overall_status": "YELLOW"
+  }
+}
