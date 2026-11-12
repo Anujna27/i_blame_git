@@ -13,6 +13,59 @@ from core.residual_risk import ResidualRiskReporter
 
 
 st.set_page_config(page_title="Mnemosyne", layout="wide")
+st.markdown(
+    """
+    <style>
+    html, body, [class*="stApp"] {
+        font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+        color: #263746;
+    }
+    [class*="stApp"] {
+        background: linear-gradient(135deg, #eef7fa 0%, #e4f0f5 100%);
+    }
+    h1, h2, h3 {
+        font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+        letter-spacing: -0.02em;
+        color: #203746;
+    }
+    h1 { font-weight: 700; font-size: 3rem; }
+    h2 { font-weight: 650; }
+    p, label, .stMarkdown { line-height: 1.6; }
+    [data-testid="stSidebar"] {
+        background: #d9edf3;
+        border-right: 1px solid #c4e0e8;
+    }
+    [data-testid="stTab"] {
+        font-weight: 600;
+        color: #49616d;
+    }
+    [data-testid="stTab"][aria-selected="true"] {
+        color: #d76565;
+    }
+    .stButton > button {
+        border: 1px solid #e58b8b;
+        border-radius: 10px;
+        background: #f28c8c;
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0.55rem 1.1rem;
+        transition: background 120ms ease, transform 120ms ease;
+    }
+    .stButton > button:hover {
+        background: #df7373;
+        color: #ffffff;
+        transform: translateY(-1px);
+    }
+    [data-testid="stExpander"], [data-testid="stMetric"] {
+        border: 1px solid #c8e0e7;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.62);
+    }
+    [data-testid="stMetric"] { padding: 0.8rem; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 st.title("MNEMOSYNE")
 st.caption("An auditable memory system that can explain what it forgot, what it retained, and where uncertainty remains.")
 st.divider()
