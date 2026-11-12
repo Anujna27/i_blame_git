@@ -54,8 +54,7 @@ class ProvenanceGraph:
                 self.nodes[parent].add_derivation(node_id, "healed_provenance")
                 healed.append({"node_id": node_id, "parent_id": parent})
             else:
-                node.lifecycle.append({"state": "orphan_quarantined", "actor": actor,
-                                       "reason": "no active provenance root", "timestamp": __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()})
+                node.record_lifecycle_event("quarantined", actor, "no active provenance root")
                 healed.append({"node_id": node_id, "parent_id": None})
         if healed: self.persist()
         return healed
@@ -65,12 +64,14 @@ class ProvenanceGraph:
 
     def persist(self):
         Path(self.path).parent.mkdir(parents=True, exist_ok=True)
-        payload = {"graph": nx.node_link_data(self.graph), "nodes": {k: v.to_jsonld() for k, v in self.nodes.items()}}
+        payload = {"graph": nx.node_link_data(self.graph, edges="edges"), "nodes": {k: v.to_jsonld() for k, v in self.nodes.items()}}
         with open(self.path, "w", encoding="utf-8") as f: json.dump(payload, f, indent=2, default=str)
 
     def load(self):
         if not os.path.exists(self.path): return
         with open(self.path, "r", encoding="utf-8") as f: payload = json.load(f)
         if "graph" in payload and "nodes" in payload:
-            self.graph = nx.node_link_graph(payload["graph"], directed=True)
+            graph_data = payload["graph"]
+            edge_key = "edges" if "edges" in graph_data else "links"
+            self.graph = nx.node_link_graph(graph_data, directed=True, edges=edge_key)
             self.nodes = {k: MemoryNode.from_jsonld(v) for k, v in payload["nodes"].items()}
