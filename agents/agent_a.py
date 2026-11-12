@@ -22,6 +22,7 @@ class AgentA:
         self.residual_risks = []
         self.blocked_ids = load_blocked_ids()
         self.all_nodes = {}
+        self.last_report = None
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
         source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
@@ -60,6 +61,7 @@ class AgentA:
 
     def forget(self, node_id):
         report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain)
+        self.last_report = report
         self.residual_risks.extend(report.residual_risks)
         self.blocked_ids = load_blocked_ids()
         for nid in list(self.all_nodes):
