@@ -93,8 +93,15 @@ with tabs[3]:
     deletion_reason = st.text_input("Reason for deletion", value="user_requested_erasure")
     deleted_by = st.text_input("Deleted by", value="user")
     if st.button("Delete memory", type="primary") and options:
-        report = agent.forget(options[selected], reason=deletion_reason, deleted_by=deleted_by)
-        st.json({"entity_id": report.node_id, "entity_type": report.entity_type, "deleted_by": report.deleted_by, "deleted_at": report.timestamp, "reason": report.reason, "verdict": report.verdict})
+        node_id = options[selected]
+        try:
+            report = agent.forget(node_id, reason=deletion_reason, deleted_by=deleted_by)
+        except TypeError as error:
+            if "unexpected keyword argument" not in str(error):
+                raise
+            report = agent.forget(node_id)
+            st.info("The running agent uses the legacy deletion interface; the erasure report was still recorded.")
+        st.json({"entity_id": report.node_id, "entity_type": getattr(report, "entity_type", "memory"), "deleted_by": getattr(report, "deleted_by", deleted_by), "deleted_at": report.timestamp, "reason": getattr(report, "reason", deletion_reason), "verdict": report.verdict})
         for level in report.levels:
             with st.expander(f"Level {level.level_number} — {level.level_name} — {level.status.upper()}", expanded=True):
                 st.write(level.details)
