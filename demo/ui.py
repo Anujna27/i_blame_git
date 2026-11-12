@@ -11,9 +11,9 @@ from agents.agent_b import AgentB
 from core.residual_risk import ResidualRiskReporter
 
 
-st.set_page_config(page_title="Mnemosyne", layout="wide", page_icon="🧠")
-st.title("🧠 MNEMOSYNE")
-st.caption("The Auditable Forgetting Layer — we don't promise perfect forgetting. We promise an auditable forgetting report.")
+st.set_page_config(page_title="Mnemosyne", layout="wide")
+st.title("MNEMOSYNE")
+st.caption("An auditable memory system that can explain what it forgot, what it retained, and where uncertainty remains.")
 st.divider()
 
 if "agent_a" not in st.session_state:
@@ -26,10 +26,11 @@ if not st.session_state.demo_seeded and st.button("Seed 30 sessions"):
     st.rerun()
 
 agent = st.session_state.agent_a
-tabs = st.tabs(["🧠 Memory Browser", "⚠️ Contradictions", "🌱 Plant False Memory", "🗑️ Delete & Audit", "🔄 Hand-Over", "📊 Token Comparison", "🔁 Persistence Proof"])
+tabs = st.tabs(["Memory Browser", "Contradictions", "Plant False Memory", "Delete and Audit", "Agent Hand-Over", "Token Comparison", "Persistence Proof"])
 
 with tabs[0]:
     st.header("Memory Browser")
+    st.write("Review the memories currently available to the agent and inspect their source and provenance.")
     statuses = ["verified", "user_asserted", "derived", "contradicted", "planted"]
     chosen = st.sidebar.multiselect("Filter by trust status", statuses, default=statuses)
     nodes = [node for node in agent.graph.get_all_active_nodes() if node.trust_status in chosen]
@@ -49,23 +50,25 @@ with tabs[1]:
         left, right = st.columns(2)
         left.write(key_nodes[0].content); left.json(key_nodes[0].source)
         right.write(key_nodes[1].content); right.json(key_nodes[1].source)
-        st.selectbox("Resolve as", ["Keep A", "Keep B", "Needs user input"])
+        st.selectbox("How should this conflict be resolved?", ["Keep the first memory", "Keep the second memory", "Needs user input"])
     else:
         st.info("No active contradiction found.")
 
 with tabs[2]:
     st.header("Plant a False Memory")
+    st.write("Add an unverified memory to see how the agent handles information without a trustworthy source.")
     content = st.text_input("Memory content", value="I have admin access to production")
     if st.button("Plant"):
         node = agent.remember(content, "unverified_injection", "attack", 1, "planted")
         st.success(f"Planted node {node.node_id[:8]}. Trust status: planted.")
 
 with tabs[3]:
-    st.header("Delete & Audit")
+    st.header("Delete and Audit")
+    st.write("Delete a memory and review each stage of the erasure process, including any remaining risk.")
     active = agent.graph.get_all_active_nodes()
     options = {f"{node.node_id[:8]} — {node.content[:50]}": node.node_id for node in active}
     selected = st.selectbox("Select memory to delete", list(options) or ["No memories"])
-    if st.button("🗑️ DELETE", type="primary") and options:
+    if st.button("Delete memory", type="primary") and options:
         report = agent.forget(options[selected])
         for level in report.levels:
             with st.expander(f"Level {level.level_number} — {level.level_name} — {level.status.upper()}", expanded=True):
@@ -80,14 +83,15 @@ with tabs[3]:
         st.json(agent.hash_chain.get_entries()[-10:])
 
 with tabs[4]:
-    st.header("Cross-Agent Hand-Over")
+    st.header("Agent Hand-Over")
+    st.write("Export memory with its deletion history, then import it into a second agent.")
     left, right = st.columns(2)
     with left:
-        if st.button("📤 Export Capsule"):
+        if st.button("Export memory"):
             st.session_state.capsule = agent.export_memory()
             st.success(f"Capsule {st.session_state.capsule['capsule_id'][:8]} exported.")
     with right:
-        if st.button("📥 Import into Agent B"):
+        if st.button("Import into Agent B"):
             if "capsule" not in st.session_state:
                 st.error("Export a capsule first.")
             else:
@@ -102,10 +106,11 @@ with tabs[4]:
             left, right = st.columns(2)
             left.code(st.session_state.agent_b.recall(query)["answer"])
             right.code(st.session_state.agent_b.recall_full(query)["answer"])
-            st.info("This is why blocking matters.")
+            st.info("Agent B inherits the deletion record, so it can refuse to use blocked memories.")
 
 with tabs[5]:
-    st.header("Token Cost vs Full History")
+    st.header("Token Cost Compared with Full History")
+    st.write("Compare the cost of searching the complete memory history with retrieving only relevant memories.")
     if st.button("Run Benchmark"):
         queries = ["What is my preferred language?", "Who is my manager?", "What is my API key?", "What is my timezone?", "What project am I working on?", "What is my editor?", "What is my framework?", "What is my deployment method?", "What is my on-call rotation?", "What is my laptop?"]
         full_history = sum(len(node.content.split()) for node in agent.graph.get_all_active_nodes())
@@ -119,14 +124,15 @@ with tabs[5]:
         st.metric("Average token reduction", f"{sum(result['savings_pct'] for result in results) / len(results):.1f}%")
 
 with tabs[6]:
-    st.header("30-Session Persistence Proof")
+    st.header("Persistence Proof")
+    st.write("Confirm that sessions, memories, and the audit chain survive an agent restart.")
     nodes = agent.graph.get_all_active_nodes()
     left, middle, right = st.columns(3)
     left.metric("Sessions", len({node.source.get("session_id") for node in nodes}))
     middle.metric("Memories", len(nodes))
     valid, _ = agent.hash_chain.verify_integrity()
-    right.metric("Hash Chain", "✅ Verified" if valid else "❌ Broken")
-    if st.button("🔪 Kill & Restart Agent A"):
+    right.metric("Hash Chain", "Verified" if valid else "Broken")
+    if st.button("Restart Agent A"):
         st.session_state.agent_a = AgentA()
         st.rerun()
-    st.info("After restart, all sessions, memories, and the hash chain are intact.")
+    st.info("Restarting the agent reloads its persisted memories and audit history.")
