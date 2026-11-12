@@ -1,0 +1,104 @@
+{
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "id": "c6c7e143-f288-4cd6-bbc0-31843e89bacf"
+      },
+      {
+        "id": "5b393f73-906b-400b-86b6-59efd9040435"
+      },
+      {
+        "id": "509d410e-8b4b-4dba-b66c-612925e41b31"
+      }
+    ],
+    "edges": [
+      {
+        "type": "derived",
+        "source": "c6c7e143-f288-4cd6-bbc0-31843e89bacf",
+        "target": "5b393f73-906b-400b-86b6-59efd9040435"
+      },
+      {
+        "type": "derived",
+        "source": "c6c7e143-f288-4cd6-bbc0-31843e89bacf",
+        "target": "509d410e-8b4b-4dba-b66c-612925e41b31"
+      }
+    ]
+  },
+  "nodes": {
+    "c6c7e143-f288-4cd6-bbc0-31843e89bacf": {
+      "node_id": "c6c7e143-f288-4cd6-bbc0-31843e89bacf",
+      "content": "User API key is sk-abc123",
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "s1",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T00:00:00Z",
+        "raw_reference": "s1_t1"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [
+        {
+          "child_id": "5b393f73-906b-400b-86b6-59efd9040435",
+          "type": "derived"
+        },
+        {
+          "child_id": "509d410e-8b4b-4dba-b66c-612925e41b31",
+          "type": "derived"
+        }
+      ],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:25:01.427838Z",
+      "last_accessed": "2026-11-12T11:25:01.427844Z",
+      "access_count": 0
+    },
+    "5b393f73-906b-400b-86b6-59efd9040435": {
+      "node_id": "5b393f73-906b-400b-86b6-59efd9040435",
+      "content": "Summary: user API key begins sk-",
+      "source": {
+        "type": "derived",
+        "session_id": "s1",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T00:00:00Z",
+        "raw_reference": "s1_t1"
+      },
+      "trust_status": "derived",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:25:01.427878Z",
+      "last_accessed": "2026-11-12T11:25:01.427880Z",
+      "access_count": 0
+    },
+    "509d410e-8b4b-4dba-b66c-612925e41b31": {
+      "node_id": "509d410e-8b4b-4dba-b66c-612925e41b31",
+      "content": "config = {key: sk-abc123}",
+      "source": {
+        "type": "derived",
+        "session_id": "s1",
+        "turn_index": 1,
+        "timestamp": "2026-11-12T00:00:00Z",
+        "raw_reference": "s1_t1"
+      },
+      "trust_status": "derived",
+      "derivation_edges": [],
+      "version": 1,
+      "supersedes": null,
+      "contradicts": [],
+      "deletion_state": "active",
+      "is_blocked": false,
+      "created_at": "2026-11-12T11:25:01.427906Z",
+      "last_accessed": "2026-11-12T11:25:01.427908Z",
+      "access_count": 0
+    }
+  }
+}
