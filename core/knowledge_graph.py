@@ -331,21 +331,20 @@ class KnowledgeGraph:
         with open(path_obj, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        if "graph" in data and isinstance(data["graph"], dict):
+        if isinstance(data.get("nodes"), dict) and "graph" in data:
             graph_data = data["graph"]
             edge_key = "edges" if "edges" in graph_data else "links"
             self.graph = nx.node_link_graph(graph_data, directed=True, edges=edge_key)
-            if "nodes" in data and isinstance(data["nodes"], dict):
-                for k, v in data["nodes"].items():
-                    try:
-                        node_obj = MemoryNode.from_jsonld(v) if isinstance(v, dict) else v
-                        self.nodes[k] = node_obj
-                        if self.graph.has_node(k):
-                            attrs = v if isinstance(v, dict) else node_obj.to_jsonld()
-                            for attr, val in attrs.items():
-                                self.graph.nodes[k][attr] = val
-                    except Exception:
-                        pass
+            for k, v in data["nodes"].items():
+                try:
+                    node_obj = MemoryNode.from_jsonld(v) if isinstance(v, dict) else v
+                    self.nodes[k] = node_obj
+                    if self.graph.has_node(k):
+                        attrs = v if isinstance(v, dict) else node_obj.to_jsonld()
+                        for attr, val in attrs.items():
+                            self.graph.nodes[k][attr] = val
+                except Exception:
+                    pass
         else:
             self.graph = nx.node_link_graph(data, directed=True)
 
