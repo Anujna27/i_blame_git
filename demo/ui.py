@@ -74,13 +74,17 @@ st.markdown(
     }
     [data-testid="stSidebar"] [data-testid="stMultiSelectTagsContainer"] {
         width: 100% !important;
-        min-height: 30rem !important;
+        height: 35rem !important;
+        min-height: 35rem !important;
+        box-sizing: border-box !important;
         align-items: flex-start !important;
         align-content: flex-start !important;
         overflow: visible !important;
     }
     [data-testid="stSidebar"] [data-testid="stMultiSelectTagsContainer"] > span[role="group"] {
         width: 100% !important;
+        height: auto !important;
+        min-height: 33rem !important;
         display: flex !important;
         flex-wrap: wrap !important;
         align-content: flex-start !important;
