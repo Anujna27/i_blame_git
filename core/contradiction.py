@@ -5,7 +5,7 @@ import re
 from typing import Literal, Optional
 import uuid
 
-from pydantic import BaseModel, Field
+from dataclasses import dataclass, field
 
 from core.memory_node import MemoryNode
 
@@ -203,8 +203,9 @@ def topic_cosine_similarity(text_a: str, text_b: str) -> float:
     return float(dot / (na * nb)) if na and nb else 0.0
 
 
-class Conflict(BaseModel):
-    conflict_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+@dataclass(kw_only=True)
+class Conflict:
+    conflict_id: str = field(default_factory=lambda: str(uuid.uuid4()))
     node_a_id: str
     node_b_id: str
     description: str
@@ -272,6 +273,15 @@ class ContradictionEngine:
             if existing.deletion_state != "active" or new_node.deletion_state != "active":
                 continue
             if self._verified_overrides(new_node, existing):
+                continue
+
+            shared_keys = set(new_node.properties) & set(existing.properties)
+            property_conflict = any(new_node.properties[key] != existing.properties[key]
+                                    for key in shared_keys)
+            if property_conflict and (new_node.entity_type == existing.entity_type or
+                                      not new_node.entity_type or not existing.entity_type):
+                conflicts.append(Conflict(node_a_id=new_node.node_id, node_b_id=existing.node_id,
+                                          description="conflicting entity properties"))
                 continue
 
             similarity = topic_cosine_similarity(new_node.content, existing.content)

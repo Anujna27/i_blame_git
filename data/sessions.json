@@ -1,0 +1,79 @@
+{
+  "sess_000": {
+    "session_id": "sess_000",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "a85aec83-7856-46b4-8e10-77a28744358e",
+      "8d781282-bb73-47d2-9c43-a270eda79645"
+    ]
+  },
+  "sess_001": {
+    "session_id": "sess_001",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "32fb7bb2-cadc-4c4b-8e0b-d50370f021ed",
+      "2430113c-911d-425d-a864-8ad4f1ba6133"
+    ]
+  },
+  "sess_002": {
+    "session_id": "sess_002",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "931cee9f-84a9-47d6-8247-d0807374bb5a",
+      "d2893a1a-98fd-485d-a8df-2c983f62fbd1"
+    ]
+  },
+  "sess_003": {
+    "session_id": "sess_003",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "3519eaa0-261e-41ae-8ee3-28f322be85ab",
+      "8a228d12-2b6a-435a-af75-b5b3542b9610"
+    ]
+  },
+  "sess_004": {
+    "session_id": "sess_004",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "856a5b6d-7c57-42a3-8e3a-7093ecd0a31b",
+      "1d1a4ad5-5eac-4662-b888-c9135f5ab17c"
+    ]
+  },
+  "sess_010": {
+    "session_id": "sess_010",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "85b27dc3-1065-4da8-b55e-50684becb7a7"
+    ]
+  },
+  "sess_012": {
+    "session_id": "sess_012",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "718bd9a3-f22f-48a6-bad7-95963b5be786"
+    ]
+  },
+  "sess_015": {
+    "session_id": "sess_015",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "8987fca9-f81c-452b-bb7a-05e5e738771c"
+    ]
+  }
+}

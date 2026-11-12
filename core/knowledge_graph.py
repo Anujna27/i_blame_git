@@ -1,10 +1,13 @@
 from collections import deque
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 from typing import Any, Optional, Union
 
 import networkx as nx
+
+from core.memory_node import MemoryNode
 
 ALLOWED_RELATIONSHIPS = {
     "PREFERS",
@@ -22,8 +25,15 @@ class KnowledgeGraph:
     """NetworkX DiGraph-backed Knowledge Graph for entity memory and relationships."""
 
     def __init__(self, path: str = "data/knowledge_graph.json"):
+        if (
+            path == "data/knowledge_graph.json"
+            and not os.path.exists(path)
+            and os.path.exists("data/provenance_graph.json")
+        ):
+            path = "data/provenance_graph.json"
         self.path = str(path) if path else ""
         self.graph = nx.DiGraph()
+        self.nodes: dict[str, Any] = {}
         if self.path and Path(self.path).exists():
             self.load()
 
@@ -87,6 +97,9 @@ class KnowledgeGraph:
         If node_id already exists, updates content/metadata but keeps history.
         Returns the stored dict.
         """
+        if isinstance(node, MemoryNode):
+            self.nodes[node.node_id] = node
+
         canonical = self._normalize_entity(node)
         node_id = canonical["node_id"]
 
@@ -317,7 +330,25 @@ class KnowledgeGraph:
             return
         with open(path_obj, "r", encoding="utf-8") as f:
             data = json.load(f)
-        self.graph = nx.node_link_graph(data, directed=True)
+
+        if "graph" in data and isinstance(data["graph"], dict):
+            graph_data = data["graph"]
+            edge_key = "edges" if "edges" in graph_data else "links"
+            self.graph = nx.node_link_graph(graph_data, directed=True, edges=edge_key)
+            if "nodes" in data and isinstance(data["nodes"], dict):
+                for k, v in data["nodes"].items():
+                    try:
+                        node_obj = MemoryNode.from_jsonld(v) if isinstance(v, dict) else v
+                        self.nodes[k] = node_obj
+                        if self.graph.has_node(k):
+                            attrs = v if isinstance(v, dict) else node_obj.to_jsonld()
+                            for attr, val in attrs.items():
+                                self.graph.nodes[k][attr] = val
+                    except Exception:
+                        pass
+        else:
+            self.graph = nx.node_link_graph(data, directed=True)
+
         for nid in list(self.graph.nodes):
             if "node_id" not in self.graph.nodes[nid]:
                 self.graph.nodes[nid]["node_id"] = str(nid)
@@ -345,3 +376,78 @@ class KnowledgeGraph:
             "relationship_counts": relationship_counts,
         }
 
+    # --- Backward-Compatibility Methods for Core Integration ---
+
+    def add_node(self, node: MemoryNode) -> None:
+        self.nodes[node.node_id] = node
+        self.add_entity(node)
+
+    def add_edge(self, parent_id: str, child_id: str, edge_type: str = "DERIVED_FROM", **metadata) -> None:
+        rel = str(edge_type).upper()
+        if rel == "DERIVED":
+            rel = "DERIVED_FROM"
+        elif rel not in ALLOWED_RELATIONSHIPS:
+            rel = "RELATED_TO"
+        try:
+            self.add_relationship(parent_id, child_id, rel, metadata=metadata)
+        except Exception:
+            self.graph.add_edge(parent_id, child_id, relationship=rel, **metadata)
+        if parent_id in self.nodes and hasattr(self.nodes[parent_id], "add_derivation"):
+            self.nodes[parent_id].add_derivation(child_id, edge_type)
+        self.persist()
+
+    def get_node(self, node_id: str) -> Optional[MemoryNode]:
+        if node_id in self.nodes and isinstance(self.nodes[node_id], MemoryNode):
+            return self.nodes[node_id]
+        ent = self.get_entity(node_id)
+        if ent:
+            try:
+                return MemoryNode.from_jsonld(ent)
+            except Exception:
+                pass
+        return None
+
+    def get_descendants(self, node_id: str) -> list[str]:
+        return list(nx.descendants(self.graph, node_id)) if node_id in self.graph else []
+
+    def get_ancestors(self, node_id: str) -> list[str]:
+        return list(nx.ancestors(self.graph, node_id)) if node_id in self.graph else []
+
+    def get_orphaned_children(self, node_id: str) -> list[str]:
+        descendants = self.get_descendants(node_id)
+        orphans = []
+        for x in descendants:
+            ent = self.get_entity(x)
+            if ent and ent.get("deletion_state") == "active":
+                if any(
+                    self.get_entity(p) and self.get_entity(p).get("deletion_state") != "active"
+                    for p in self.graph.predecessors(x)
+                ):
+                    orphans.append(x)
+        return orphans
+
+    def get_all_active_nodes(self) -> list[MemoryNode]:
+        active = []
+        for ent in self.get_active_entities():
+            nid = ent["node_id"]
+            if nid in self.nodes and isinstance(self.nodes[nid], MemoryNode):
+                active.append(self.nodes[nid])
+            else:
+                try:
+                    active.append(MemoryNode.from_jsonld(ent))
+                except Exception:
+                    pass
+        return active
+
+    def get_deleted_nodes(self) -> list[MemoryNode]:
+        deleted = []
+        for nid, data in self.graph.nodes.items():
+            if data.get("deletion_state") != "active":
+                if nid in self.nodes and isinstance(self.nodes[nid], MemoryNode):
+                    deleted.append(self.nodes[nid])
+                else:
+                    try:
+                        deleted.append(MemoryNode.from_jsonld(dict(data)))
+                    except Exception:
+                        pass
+        return deleted

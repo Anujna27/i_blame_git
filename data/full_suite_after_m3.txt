@@ -1,0 +1,87 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\HIMAMSHU S\AppData\Local\Programs\Python\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: D:\sahyadri
+plugins: anyio-4.14.2
+collecting ... collected 17 items
+
+tests/test_contradiction.py::test_two_contradictory_user_asserted_nodes_produce_conflict PASSED [  5%]
+tests/test_contradiction.py::test_is_are_opposite_polarity_produces_conflict PASSED [ 11%]
+tests/test_contradiction.py::test_verified_vs_user_asserted_no_conflict_and_verified_wins_retrieval PASSED [ 17%]
+tests/test_contradiction.py::test_abstention_when_only_planted_memory_exists PASSED [ 23%]
+tests/test_contradiction.py::test_abstention_when_no_memory_exists PASSED [ 29%]
+tests/test_contradiction.py::test_non_abstention_when_verified_memory_covers_query PASSED [ 35%]
+tests/test_contradiction.py::test_abstention_when_single_node_below_min_similarity PASSED [ 41%]
+tests/test_contradiction.py::test_vector_store_soft_delete_and_graph_store_and_router PASSED [ 47%]
+tests/test_erasure.py::test_erasure PASSED                               [ 52%]
+tests/test_erasure_edge.py::test_delete_missing_node PASSED              [ 58%]
+tests/test_erasure_edge.py::test_delete_leaf_node PASSED                 [ 64%]
+tests/test_erasure_edge.py::test_notice_for_fully_deleted PASSED         [ 70%]
+tests/test_erasure_edge.py::test_partially_deleted_notice_with_real_risk PASSED [ 76%]
+tests/test_erasure_edge.py::test_real_store_contract_adapter PASSED      [ 82%]
+tests/test_handover.py::test_full_handover PASSED                        [ 88%]
+tests/test_restart.py::test_restart_preserves_state FAILED               [ 94%]
+tests/test_restart.py::test_deletion_state_survives_restart FAILED       [100%]
+
+================================== FAILURES ===================================
+________________________ test_restart_preserves_state _________________________
+
+    def test_restart_preserves_state():
+        reset_demo_state()
+        agent = AgentA()
+>       seed_demo_data(agent, 30)
+
+tests\test_restart.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+agents\__init__.py:8: in seed_demo_data
+    agent.remember("My name is Alex", session_id=session_id, turn_index=0)
+agents\agent_a.py:42: in remember
+    self.graph.add_node(node)
+core\provenance_graph.py:20: in add_node
+    self.persist()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <core.provenance_graph.ProvenanceGraph object at 0x000001C17F79F9D0>
+
+    def persist(self):
+        os.makedirs(os.path.dirname(self.path) or ".", exist_ok=True)
+        payload = {"graph": nx.node_link_data(self.graph), "nodes": {k: v.to_jsonld() for k, v in self.nodes.items()}}
+>       with open(self.path, "w", encoding="utf-8") as f: json.dump(payload, f, indent=2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       OSError: [Errno 22] Invalid argument: 'data/provenance_graph.json'
+
+core\provenance_graph.py:44: OSError
+____________________ test_deletion_state_survives_restart _____________________
+
+    def test_deletion_state_survives_restart():
+        reset_demo_state()
+        agent = AgentA()
+        seed_demo_data(agent, 5)
+        target = agent.graph.get_all_active_nodes()[0]
+        agent.forget(target.node_id)
+        del agent
+        new_agent = AgentA()
+        reloaded = new_agent.graph.get_node(target.node_id)
+        assert reloaded is not None
+>       assert reloaded.deletion_state != "active"
+E       AssertionError: assert 'active' != 'active'
+E        +  where 'active' = MemoryNode(node_id='d7762807-7aa6-48bb-a066-f6c91fe998c1', content='My name is Alex', source={'type': 'conversation_turn', 'session_id': 'sess_000', 'turn_index': 0, 'timestamp': '2026-11-12T12:07:17.046677Z', 'raw_reference': 'sess_000_turn_0'}, trust_status='user_asserted', derivation_edges=[], version=1, supersedes=None, contradicts=[], deletion_state='active', is_blocked=False, created_at=datetime.datetime(2026, 11, 12, 12, 7, 17, 46755, tzinfo=TzInfo(0)), last_accessed=datetime.datetime(2026, 11, 12, 12, 7, 17, 46760, tzinfo=TzInfo(0)), access_count=0).deletion_state
+
+tests\test_restart.py:33: AssertionError
+---------------------------- Captured stdout call -----------------------------
+Seeded 5 sessions (13 nodes total)
+============================== warnings summary ===============================
+tests/test_handover.py: 13 warnings
+tests/test_restart.py: 56 warnings
+  D:\sahyadri\agents\agent_a.py:29: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "timestamp": datetime.utcnow().isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
+
+tests/test_handover.py::test_full_handover
+  D:\sahyadri\capsule\export.py:13: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "exported_at": datetime.utcnow().isoformat() + "Z",
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_restart.py::test_restart_preserves_state - OSError: [Errno ...
+FAILED tests/test_restart.py::test_deletion_state_survives_restart - Assertio...
+================== 2 failed, 15 passed, 70 warnings in 2.65s ==================

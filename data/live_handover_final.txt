@@ -1,0 +1,40 @@
+============================================================
+M3 AgentA Integration Verification
+============================================================
+[INFO] stores/vector_store.py imports faiss
+[INFO] Using M2's real VectorStore (FAISS-backed)
+  [PASS] has erasure engine
+  [PASS] has vector_store
+  [PASS] has graph_store
+  [PASS] has hash_chain
+  [PASS] has forget method
+  [PASS] has remember method
+[REPORT] verdict=partially_deleted
+[PASS] last_report=True
+[PASS] hash chain integrity: (True, [])
+
+--- NOTICE ---
+╔══════════════════════════════════════════════════════════════╗
+║              RESIDUAL RISK NOTICE                            ║
+║              Deletion Request #53fcf1a4                      ║
+╠══════════════════════════════════════════════════════════════╣
+║  FACT: "User API key is sk-abc123"                           ║
+║                                                              ║
+║  LEVEL 1 — Source Record Removed .....................     ✅ ║
+║  LEVEL 2 — Derived Artifacts Invalidated .............     ✅ ║
+║    ├─ d5122439-9b5f-4e9c-a4c0-953c31e62dd3 ..................║
+║  LEVEL 3 — Inference Blocked .........................     ✅ ║
+║  LEVEL 4 — Non-Inferability Checked .................      ⚠️║
+║    └─ RISK: Deleted content may be partially reconstructable ║
+║  LEVEL 5 — State Restoration Checked ................      ❌ ║
+║    └─ LLM consolidation is non-deterministic. 1 derived ar...║
+╠══════════════════════════════════════════════════════════════╣
+║  VERDICT: PARTIALLY DELETED                                  ║
+║  Residual risk remains at: 386a8ddb-b352-4cf1-adb8-59c1abe42e║
+║  This notice is cryptographically signed and logged.         ║
+╚══════════════════════════════════════════════════════════════╝
+--- END NOTICE ---
+
+============================================================
+ALL CHECKS PASSED
+============================================================

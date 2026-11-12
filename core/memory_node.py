@@ -1,41 +1,77 @@
+from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
-from typing import Literal, Optional
+from typing import Optional
 import uuid
-from pydantic import BaseModel, Field, field_validator
 
-
-class MemoryNode(BaseModel):
-    node_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    content: str
-    source: dict
-    trust_status: Literal["verified", "user_asserted", "derived", "contradicted", "planted"] = "user_asserted"
-    derivation_edges: list[dict] = Field(default_factory=list)
+@dataclass
+class MemoryNode:
+    node_id: str = field(default_factory=lambda: str(uuid.uuid4()))
+    content: str = ""
+    source: dict = field(default_factory=dict)
+    trust_status: str = "user_asserted"
+    derivation_edges: list[dict] = field(default_factory=list)
     version: int = 1
     supersedes: Optional[str] = None
-    contradicts: list[str] = Field(default_factory=list)
-    deletion_state: Literal["active", "source_removed", "invalidated"] = "active"
+    contradicts: list[str] = field(default_factory=list)
+    deletion_state: str = "active"
     is_blocked: bool = False
-    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-    last_accessed: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    created_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    last_accessed: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
     access_count: int = 0
-
-    @field_validator("source")
+    entity_type: str = "generic"
+    properties: dict = field(default_factory=dict)
+    session_id: str = ""
+    lifecycle: list[dict] = field(default_factory=list)
+    deleted_reason: Optional[str] = None
+    deleted_by: Optional[str] = None
+    deleted_at: Optional[datetime] = None
+    summary_l0: str = ""
+    summary_l1: str = ""
+    content_l2: str = ""
+    def __post_init__(self):
+        if not self.session_id:
+            self.session_id = str(self.source.get("session_id", ""))
+        if not self.content_l2:
+            self.content_l2 = self.content
+        if not self.summary_l0:
+            self.summary_l0 = self.content[:240]
+        if not self.summary_l1:
+            self.summary_l1 = self.content[:2000]
+        if not self.lifecycle:
+            self.record_lifecycle_event("created", "system", "entity_created")
+    def to_jsonld(self):
+        data=asdict(self)
+        for key in ("created_at", "last_accessed", "deleted_at"):
+            if data.get(key) is not None:
+                data[key] = data[key].isoformat()
+        return data
     @classmethod
-    def validate_source(cls, value):
-        required = {"type", "session_id", "turn_index", "timestamp", "raw_reference"}
-        missing = required - set(value)
-        if missing:
-            raise ValueError(f"source missing keys: {sorted(missing)}")
-        return value
+    def from_jsonld(cls,data):
+        values=dict(data)
+        for key in ("created_at","last_accessed","deleted_at"):
+            if isinstance(values.get(key),str): values[key]=datetime.fromisoformat(values[key])
+        return cls(**values)
 
-    def to_jsonld(self) -> dict:
-        return self.model_dump(mode="json")
+    def transition(self, state: str, actor: str = "system", reason: str = ""):
+        """Record every entity state transition, including deletion provenance."""
+        now = datetime.now(timezone.utc)
+        self.deletion_state = state
+        lifecycle_state = {"source_removed": "deleted"}.get(state, state)
+        self.record_lifecycle_event(lifecycle_state, actor, reason, timestamp=now)
+        if state != "active":
+            self.deleted_by, self.deleted_reason, self.deleted_at = actor, reason, now
 
-    @classmethod
-    def from_jsonld(cls, data: dict) -> "MemoryNode":
-        return cls.model_validate(data)
-
-    def add_derivation(self, child_id: str, edge_type: str) -> None:
-        edge = {"child_id": child_id, "type": edge_type}
-        if edge not in self.derivation_edges:
-            self.derivation_edges.append(edge)
+    def record_lifecycle_event(self, state: str, actor: str = "system", reason: str = "",
+                               metadata: Optional[dict] = None, timestamp: Optional[datetime] = None):
+        event_time = timestamp or datetime.now(timezone.utc)
+        self.lifecycle.append({
+            "event_id": str(uuid.uuid4()),
+            "state": state,
+            "actor": actor,
+            "reason": reason,
+            "timestamp": event_time.isoformat(),
+            "metadata": metadata or {},
+        })
+    def add_derivation(self,child_id,edge_type):
+        edge={"child_id":child_id,"type":edge_type}
+        if edge not in self.derivation_edges: self.derivation_edges.append(edge)

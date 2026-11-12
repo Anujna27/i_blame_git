@@ -26,4 +26,7 @@ def __getattr__(name):
                 super().__init__(path=path, *args, **kwargs)
 
         return ProvenanceGraph
+    if name == "KnowledgeGraph":
+        from core.knowledge_graph import KnowledgeGraph
+        return KnowledgeGraph
     raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
