@@ -186,3 +186,99 @@ python scripts/run_claim_audit.py
 ```
 
 The pytest suite validates implementation behavior. The claim audit translates the system’s public claims into standalone, judge-facing evidence.
+
+## Optional LLM configuration
+
+LLM-backed extraction and summarization are opt-in. If a `.env` file exists, MNEMOSYNE loads it automatically; without valid provider configuration, deterministic local fallbacks are used.
+
+### Enable OpenAI-backed extraction and summaries
+
+PowerShell:
+
+```powershell
+$env:MNEMOSYNE_LLM_PROVIDER = "openai"
+$env:MNEMOSYNE_LLM_MODEL = "gpt-4o-mini"
+$env:OPENAI_API_KEY = "your-api-key"
+python -m pytest -q
+python scripts/run_claim_audit.py
+```
+
+For deterministic unit tests, disable network-backed features explicitly:
+
+```powershell
+$env:MNEMOSYNE_LLM_PROVIDER = "none"
+python -m pytest -q
+```
+
+Optional OpenAI-compatible endpoints are supported:
+
+```powershell
+$env:MNEMOSYNE_LLM_PROVIDER = "openai_compatible"
+$env:MNEMOSYNE_LLM_BASE_URL = "https://your-endpoint.example/v1"
+$env:MNEMOSYNE_LLM_MODEL = "your-model"
+$env:OPENAI_API_KEY = "your-api-key"
+```
+
+Groq is supported through its OpenAI-compatible endpoint:
+
+```powershell
+$env:MNEMOSYNE_LLM_PROVIDER = "groq"
+$env:MNEMOSYNE_LLM_MODEL = "llama-3.1-8b-instant"
+$env:GROQ_API_KEY = "your-groq-api-key"
+```
+
+The default Groq endpoint is `https://api.groq.com/openai/v1`. Override it with `MNEMOSYNE_LLM_BASE_URL` if needed. When using Groq, configure `GROQ_API_KEY`; when using OpenAI or another compatible endpoint, configure `OPENAI_API_KEY`.
+
+The optional Python SDK must be installed in the active environment:
+
+```powershell
+python -m pip install openai
+```
+
+When enabled, the provider is used for:
+
+- session entity extraction during `commit_session()`;
+- generated L0/L1/L2 summaries;
+- future injectable graph-healing suggestions.
+
+The adapter requests JSON-only responses and validates the returned shape. If the SDK is unavailable, credentials are missing, or a provider call fails, the local deterministic fallback remains available to the application.
+
+To disable the provider for the current PowerShell session:
+
+```powershell
+Remove-Item Env:MNEMOSYNE_LLM_PROVIDER -ErrorAction SilentlyContinue
+Remove-Item Env:MNEMOSYNE_LLM_MODEL -ErrorAction SilentlyContinue
+Remove-Item Env:MNEMOSYNE_LLM_BASE_URL -ErrorAction SilentlyContinue
+Remove-Item Env:OPENAI_API_KEY -ErrorAction SilentlyContinue
+Remove-Item Env:GROQ_API_KEY -ErrorAction SilentlyContinue
+```
+
+Never commit API keys or `.env` files containing credentials. Use environment variables or a secret manager.
+
+## Healing worker and retrieval benchmark
+
+Run one healing pass:
+
+```powershell
+python scripts/run_healing_worker.py --once
+```
+
+Run the persistent worker:
+
+```powershell
+python scripts/run_healing_worker.py --interval 900
+```
+
+Benchmark hybrid retrieval:
+
+```powershell
+python scripts/benchmark_retrieval.py --sessions 30 --token-budget 500
+```
+
+LLM usage telemetry is available from an `AgentA` instance:
+
+```python
+agent.llm_telemetry()
+```
+
+It reports provider, model, calls, failures, and token counts without exposing credentials.

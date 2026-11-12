@@ -1,4 +1,4 @@
-from tests.claims._helpers import result
+from tests.claims._helpers import claim
 
-def run(context): return result("Adversarial: Import broken capsule","SKIP","Requires isolated capsule fixture",{}, "not implemented")
+def run(context): return claim("broken_capsule", context)
 

@@ -12,6 +12,11 @@ from agents.blocked_loader import load_blocked_ids
 from stores.session_store import SessionStore
 from core.active_context import ActiveContext, ContextBuilder
 from core.healing_scheduler import HealingScheduler
+from core.entity_extractor import EntityExtractor
+from core.summary_generator import SummaryGenerator
+from stores.filesystem_memory import FilesystemMemory
+from core.llm_config import ConfiguredLLM
+from core.graph_healer import GraphHealer
 
 
 class AgentA:
@@ -30,11 +35,19 @@ class AgentA:
         self.session_store = SessionStore()
         self.sessions = self.session_store
         self.healing_scheduler = HealingScheduler(self.build_knowledge_graph)
+        self.llm = ConfiguredLLM()
+        self.entity_extractor = EntityExtractor(self.llm if self.llm.enabled else None)
+        self.summary_generator = SummaryGenerator(self.llm if self.llm.enabled else None)
+        self.filesystem_memory = FilesystemMemory()
+        self.graph_healer = GraphHealer(self.graph, self.vector_store, self.hash_chain,
+                                        llm_suggester=self.llm.suggest_link if self.llm.enabled else None)
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
         source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
                   "timestamp": datetime.now(timezone.utc).isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
         node = MemoryNode(content=content, source=source, session_id=session_id, trust_status=trust_status)
+        summaries = self.summary_generator.generate(content)
+        node.summary_l0, node.summary_l1, node.content_l2 = summaries["l0"], summaries["l1"], summaries["l2"]
         try:
             conflicts = self.contradiction.detect(node, self.graph.get_all_active_nodes())
             if conflicts:
@@ -77,9 +90,13 @@ class AgentA:
 
     def commit_session(self, session_id, actor="harness", reason="session_end"):
         entity_ids = [node.node_id for node in self.all_nodes.values() if node.session_id == session_id]
+        session_nodes = [self.all_nodes[node_id] for node_id in entity_ids if node_id in self.all_nodes]
+        self.entity_extractor.extract([node.content for node in session_nodes])
+        for node in session_nodes:
+            self.filesystem_memory.write_entity(node)
         session = self.sessions.commit_session(session_id, entity_ids, actor)
         self.hash_chain.append("session_commit", session_id, {**session, "reason": reason})
-        self.graph.heal_orphans(actor=actor, vector_store=self.vector_store, hash_chain=self.hash_chain)
+        self.graph_healer.heal_orphans(session_id=session_id)
         return session
 
     def build_active_context(self, query, token_budget=2000):
@@ -101,6 +118,13 @@ class AgentA:
             selected.append(entity); tokens += cost
         return ActiveContext(query, selected, tokens, vector_ids, graph_ids)
 
+    def merge_duplicate_entities(self, keep_node_id, remove_node_id, actor="user", reason="explicit_duplicate_merge"):
+        from core.graph_healer import GraphHealer
+        healer = GraphHealer(self.graph, self.vector_store, self.hash_chain)
+        result = healer.merge_duplicate(keep_node_id, remove_node_id, actor, reason)
+        self.all_nodes.pop(remove_node_id, None)
+        return result
+
     def recall(self, query, token_budget=2000):
         try:
             builder = ContextBuilder(self.vector_store, self.graph, self.session_store, token_budget)
@@ -121,7 +145,9 @@ class AgentA:
         return report
 
     def build_knowledge_graph(self):
-        return self.graph_store.build_knowledge_graph(self.vector_store, self.hash_chain)
+        report = self.graph_healer.heal_orphans()
+        return {"orphans_found": len(report.orphans_found), "healed": report.healed_count,
+                "quarantined": len(report.quarantined), "actions": [a.__dict__ for a in report.actions_taken]}
 
     def start_graph_healing(self, interval_seconds=900):
         self.healing_scheduler.interval_seconds = interval_seconds
@@ -130,12 +156,18 @@ class AgentA:
     def stop_graph_healing(self):
         self.healing_scheduler.stop()
 
+    def llm_telemetry(self):
+        return self.llm.telemetry()
+
+    def save_healing_schedule(self):
+        self.healing_scheduler.save_config()
+
     def recall_session(self, session_id):
         return [n for n in self.all_nodes.values() if n.session_id == session_id and n.deletion_state == "active"]
 
     def export_memory(self):
         return CapsuleExporter().export("agent_a", list(self.all_nodes.values()), self.graph, self.hash_chain,
-                                        self.residual_risks, session_commits=self.sessions._sessions)
+                                        self.residual_risks, session_commits=self.sessions._sessions, vector_store=self.vector_store)
 
     def restart(self):
         self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")

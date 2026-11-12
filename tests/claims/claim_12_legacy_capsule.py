@@ -1,4 +1,4 @@
-from ._helpers import result
+from ._helpers import claim
 
-def run(context): return result("Legacy capsules import correctly","SKIP","Legacy capsule fixture needs isolated importer contract",{}, "not safely inferable")
+def run(context): return claim("legacy", context)
 

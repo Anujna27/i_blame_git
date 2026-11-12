@@ -1,4 +1,4 @@
-from ._helpers import result
+from ._helpers import claim
 
-def run(context): return result("Capsule export preserves deletion state","SKIP","Requires legacy capsule blocked-state contract not exposed by current importer",{}, "interface mismatch")
+def run(context): return claim("capsule_deletion", context)
 

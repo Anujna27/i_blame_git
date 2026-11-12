@@ -1,4 +1,4 @@
-from ._helpers import result
+from ._helpers import claim
 
-def run(context): return result("Capsule import preserves residual risks","SKIP","Agent B exposes risks through import metadata only; no residual-risk registry contract",{}, "interface mismatch")
+def run(context): return claim("capsule_risk", context)
 

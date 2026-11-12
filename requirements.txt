@@ -4,3 +4,4 @@ chromadb
 rich
 pytest
 streamlit
+openai

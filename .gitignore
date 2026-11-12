@@ -18,3 +18,5 @@ data/*_stub.json
 *.swp
 
 data/chroma_db/
+
+.env
