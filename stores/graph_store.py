@@ -50,6 +50,11 @@ class GraphStore:
         """Return all soft-deleted or invalidated MemoryNodes in the graph."""
         return self._provenance.get_deleted_nodes()
 
+    def build_knowledge_graph(self):
+        """Normalize the entity graph and heal edges made invalid by lifecycle changes."""
+        healed = self._provenance.heal_orphans()
+        return {"entities": len(self.nodes), "edges": self.graph.number_of_edges(), "healed": healed}
+
     def persist(self) -> None:
         """Persist the provenance graph state to disk."""
         self._provenance.persist()

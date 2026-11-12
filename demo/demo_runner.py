@@ -55,18 +55,21 @@ def load_notice_snapshot(path="data/demo_notice_snapshot.json"):
 
 def reset_demo_state():
     """Wipe persisted runtime state so the demo starts from a clean baseline."""
-    import os
-    import shutil
-    for path in ("data/audit_log.json", "data/provenance_graph.json", "data/blocked_inference.json"):
-        if os.path.exists(path):
-            os.remove(path)
-    for path in ("chroma_data", ".chroma", "data/chroma", "data/chroma_db", "data/vector_store"):
-        if os.path.exists(path):
-            shutil.rmtree(path)
-    capsule_dir = Path("data/capsules")
-    if capsule_dir.exists():
-        shutil.rmtree(capsule_dir)
-    capsule_dir.mkdir(parents=True, exist_ok=True)
+    data_dir = Path("data")
+    for path in data_dir.glob("*.json"):
+        try:
+            path.unlink(missing_ok=True)
+        except OSError:
+            pass
+
+    for directory in (data_dir / "capsules", data_dir / "chroma_db"):
+        directory.mkdir(parents=True, exist_ok=True)
+        for path in directory.rglob("*"):
+            if path.is_file():
+                try:
+                    path.unlink(missing_ok=True)
+                except OSError:
+                    pass
 
 
 def run(output):

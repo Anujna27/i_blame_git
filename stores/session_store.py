@@ -1,64 +1,41 @@
 from collections import defaultdict
+from datetime import datetime, timezone
 import json
 from pathlib import Path
 
 
 class SessionStore:
-    """Durable session aggregate for entity memory and commit metadata."""
+    """Durable session metadata and entity aggregate."""
     def __init__(self, path="data/sessions.json"):
-        self.path = path
-        self._entities = defaultdict(dict)
-        self._commits = {}
-        self._load()
-
+        self.path = Path(path); self._entities = defaultdict(dict); self._sessions = {}; self._load()
     def add(self, node):
-        session_id = node.source.get("session_id", "default")
-        self._entities[session_id][node.node_id] = node
-        self._persist()
-
-    def get(self, session_id):
-        return list(self._entities.get(session_id, {}).values())
-
-    def sessions(self):
-        return {sid: list(nodes.values()) for sid, nodes in self._entities.items()}
-
-    def all(self):
-        return [node for nodes in self._entities.values() for node in nodes.values()]
-
+        sid = node.source.get("session_id", "default"); self._entities[sid][node.node_id] = node
+        self.save_session(sid, entity_ids=self._entities[sid])
+    def get(self, session_id): return list(self._entities.get(session_id, {}).values())
+    def sessions(self): return {sid: list(nodes.values()) for sid, nodes in self._entities.items()}
+    def all(self): return [n for nodes in self._entities.values() for n in nodes.values()]
+    def save_session(self, session_id, status="active", committed_at=None, committed_by=None, entity_ids=None):
+        ids = [getattr(item, "node_id", item) for item in (entity_ids or [])]
+        record = {"session_id": session_id, "status": status, "committed_at": committed_at,
+                  "committed_by": committed_by, "entity_ids": ids}
+        self._sessions[session_id] = record; self._persist(); return dict(record)
+    def get_session(self, session_id):
+        record = self._sessions.get(session_id); return dict(record) if record else None
     def commit(self, session_id, actor="harness", reason="session_end"):
-        from datetime import datetime, timezone
-        event = {"session_id": session_id, "actor": actor, "reason": reason,
-                 "timestamp": datetime.now(timezone.utc).isoformat(),
-                 "entity_ids": list(self._entities.get(session_id, {}))}
-        self._commits[session_id] = event
-        self._persist()
-        return event
-
+        event = self.commit_session(session_id, list(self._entities.get(session_id, {})), actor)
+        event["reason"] = reason; self._sessions[session_id]["reason"] = reason; self._persist(); return event
+    def commit_session(self, session_id, entity_ids, actor="harness"):
+        return self.save_session(session_id, "committed", datetime.now(timezone.utc).isoformat(), actor, entity_ids)
     def last_commit(self, session_id):
-        return self._commits.get(session_id)
-
+        record = self._sessions.get(session_id); return record if record and record.get("status") == "committed" else None
     def remove(self, node_id, actor="system", reason=""):
         for nodes in self._entities.values():
-            node = nodes.get(node_id)
-            if node:
-                node.transition("source_removed", actor, reason)
-                self._persist()
-                return node
+            if node_id in nodes:
+                node = nodes[node_id]; node.transition("source_removed", actor, reason); self._persist(); return node
         return None
-
     def _persist(self):
-        Path(self.path).parent.mkdir(parents=True, exist_ok=True)
-        payload = {"sessions": {sid: {nid: node.to_jsonld() for nid, node in nodes.items()}
-                                 for sid, nodes in self._entities.items()},
-                   "commits": self._commits}
-        Path(self.path).write_text(json.dumps(payload, indent=2), encoding="utf-8")
-
+        self.path.parent.mkdir(parents=True, exist_ok=True); self.path.write_text(json.dumps(self._sessions, indent=2), encoding="utf-8")
     def _load(self):
-        path = Path(self.path)
-        if not path.exists():
-            return
-        from core.memory_node import MemoryNode
-        payload = json.loads(path.read_text(encoding="utf-8"))
-        self._commits = payload.get("commits", {})
-        for sid, nodes in payload.get("sessions", {}).items():
-            self._entities[sid] = {nid: MemoryNode.from_jsonld(data) for nid, data in nodes.items()}
+        if not self.path.exists(): return
+        payload = json.loads(self.path.read_text(encoding="utf-8")); records = payload.get("sessions", payload)
+        self._sessions = {sid: dict(record) for sid, record in records.items() if isinstance(record, dict) and "entity_ids" in record}
