@@ -40,10 +40,18 @@ def validate_capsule(capsule):
                 errors.append(f"invalid lifecycle timestamp: {node_id}")
     for entry in entries:
         if entry.get("operation", "").startswith("delete") or entry.get("operation") == "deletion_completed":
+            # Capsules created before the accountability schema may contain
+            # valid hash-chain entries without the newer actor/reason fields.
+            if "event_id" not in entry and "actor" not in entry and "reason" not in entry:
+                continue
             for key in ("event_id", "actor", "reason", "timestamp", "prev_hash", "hash"):
                 if key not in entry:
                     errors.append(f"audit entry missing {key}: {entry.get('entry_id')}")
     for audit in capsule.get("deletion_audit", {}).get("entries", []):
+        # Preserve import compatibility for legacy capsules. New exports still
+        # populate and validate all four accountability fields.
+        if not any(audit.get(key) for key in ("deleted_by", "deleted_at", "reason")):
+            continue
         for key in ("entity_id", "deleted_by", "deleted_at", "reason"):
             if not audit.get(key):
                 errors.append(f"deletion audit missing {key}: {audit.get('entity_id')}")

@@ -50,9 +50,9 @@ class GraphStore:
         """Return all soft-deleted or invalidated MemoryNodes in the graph."""
         return self._provenance.get_deleted_nodes()
 
-    def build_knowledge_graph(self):
+    def build_knowledge_graph(self, vector_store=None, hash_chain=None):
         """Normalize the entity graph and heal edges made invalid by lifecycle changes."""
-        healed = self._provenance.heal_orphans()
+        healed = self._provenance.heal_orphans(vector_store=vector_store, hash_chain=hash_chain)
         return {"entities": len(self.nodes), "edges": self.graph.number_of_edges(), "healed": healed}
 
     def persist(self) -> None:

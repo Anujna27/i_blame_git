@@ -74,6 +74,7 @@ class AgentA:
         entity_ids = [node.node_id for node in self.all_nodes.values() if node.session_id == session_id]
         session = self.sessions.commit_session(session_id, entity_ids, actor)
         self.hash_chain.append("session_commit", session_id, {**session, "reason": reason})
+        self.graph.heal_orphans(actor=actor, vector_store=self.vector_store, hash_chain=self.hash_chain)
         return session
 
     def build_active_context(self, query, token_budget=2000):
@@ -115,7 +116,7 @@ class AgentA:
         return report
 
     def build_knowledge_graph(self):
-        return self.graph_store.build_knowledge_graph()
+        return self.graph_store.build_knowledge_graph(self.vector_store, self.hash_chain)
 
     def recall_session(self, session_id):
         return [n for n in self.all_nodes.values() if n.session_id == session_id and n.deletion_state == "active"]
