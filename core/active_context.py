@@ -9,6 +9,9 @@ class ActiveContext:
     token_count: int = 0
     vector_entity_ids: list[str] = field(default_factory=list)
     graph_entity_ids: list[str] = field(default_factory=list)
+    session_entity_ids: list[str] = field(default_factory=list)
+    ranking_explanations: dict = field(default_factory=dict)
+    warnings: list[str] = field(default_factory=list)
 
     @property
     def text(self):
