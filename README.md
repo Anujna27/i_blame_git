@@ -313,13 +313,9 @@ Never commit API keys or `.env` files containing credentials. Use environment va
 
 ## WSL Ollama MCP inter-session and inter-agent test
 
-This is the live acceptance test for the local Ollama/MNEMOSYNE workflow. It
-uses Ollama inside WSL, the MCP server over stdio, and the shared persistent
-MNEMOSYNE stores. Observal is not required.
+Use these commands in Ubuntu/WSL. Observal is not required.
 
-### 1. Prepare WSL
-
-Run these commands in Ubuntu/WSL from the repository root:
+### 1. Install once
 
 ```bash
 cd /mnt/d/devhost/mnemosyne
@@ -333,81 +329,60 @@ python -m pip install faiss-cpu
 python -c "import faiss, mcp; print('dependencies ready')"
 ```
 
-### 2. Start Ollama in WSL
+### 2. Start Ollama once
 
-Use a separate WSL terminal and leave the server running:
+In Terminal 1:
 
 ```bash
 ollama serve
 ```
 
-In another terminal, verify it and install a small tool-capable model:
+If it says `address already in use`, Ollama is already running. In Terminal 2:
 
 ```bash
-curl http://127.0.0.1:11434/api/tags
-ollama pull qwen3:1.7b
-ollama list
-```
-
-### 2a. Enable the core Ollama provider
-
-Set these variables in the same WSL terminal that launches the MCP runner:
-
-```bash
+cd /mnt/d/devhost/mnemosyne
+source .venv/bin/activate
+export MODEL=qwen3:1.7b
 export MNEMOSYNE_LLM_PROVIDER=ollama
 export MNEMOSYNE_LLM_MODEL=qwen3:1.7b
 export MNEMOSYNE_LLM_BASE_URL=http://127.0.0.1:11434/v1
+curl http://127.0.0.1:11434/api/tags
+ollama pull qwen3:1.7b
 ```
 
-The MCP path still uses the core MNEMOSYNE pipeline. `remember` performs the
-normal graph, contradiction, vector, session, and audit work. `recall` applies
-bounded retrieval and abstention. `commit_session` runs entity extraction,
-graph healing, and the dreaming consolidation pass. Laya evaluates dreaming
-candidates locally when its gate checkpoint is available; only ambiguous or
-low-confidence candidates escalate to Ollama. The MCP `dream_session` tool can
-also request an explicit pass.
-
-Repeated preference evidence is consolidated before it is sent to the model.
-For example, 20 active mentions of vanilla and 15 of chocolate produce a
-counted preference summary rather than sending all 35 duplicate sentences.
-
-### 3. Create durable memory with Agent A
-
-From the project root with `.venv` active:
+### 3. Agent A creates memory
 
 ```bash
 python scripts/ollama_mcp_cli.py \
   --model qwen3:1.7b \
-  --conversation memory-demo-a \
+  --conversation demo-agent-a \
   --agent ollama-agent-a
 ```
 
-At the `You:` prompt, enter:
+At `You:`, enter:
 
 ```text
-Remember this test fact exactly: DELETE_TEST_2026 — my temporary test color is orange.
+Remember this exact fact: DEMO_AGENT_2026 — I love drinking coffee.
 ```
 
-The response should show `[tool] remember`. Verify it before exiting:
+Then:
 
 ```text
-Use MNEMOSYNE recall to retrieve DELETE_TEST_2026 and show the exact memory ID.
+What do I love drinking?
 ```
 
-Record the returned UUID. Exit cleanly:
+The response should be `coffee`. Exit:
 
 ```text
 /exit
 ```
 
-### 4. Resume in a new session and agent
-
-This creates a new session linked to the previous session:
+### 4. Agent B uses a new session
 
 ```bash
 python scripts/ollama_mcp_cli.py \
   --model qwen3:1.7b \
-  --conversation memory-demo-a \
+  --conversation demo-agent-a \
   --agent ollama-agent-b \
   --resume
 ```
@@ -415,98 +390,95 @@ python scripts/ollama_mcp_cli.py \
 Ask:
 
 ```text
-Use MNEMOSYNE recall to retrieve DELETE_TEST_2026. What temporary color was stored?
+What do I love drinking?
 ```
 
-The response should show `[tool] recall` and return `orange`. This verifies
-inter-session and inter-agent continuity.
+Expected answer: `coffee`.
 
-### 5. Recall from an independent conversation
+Exit:
 
-Do not use `--resume` and use a different conversation ID:
+```text
+/exit
+```
+
+### 5. Agent C uses an independent conversation
+
+Do not use `--resume`:
 
 ```bash
 python scripts/ollama_mcp_cli.py \
   --model qwen3:1.7b \
-  --conversation memory-demo-independent \
+  --conversation demo-agent-c \
   --agent ollama-agent-c
 ```
 
 Ask:
 
 ```text
-Use MNEMOSYNE recall to find DELETE_TEST_2026. What temporary color was stored?
+Use MNEMOSYNE recall with the exact query "what do I love drinking?" before answering.
 ```
 
-It should still return `orange`, because durable memories are shared across
-agents and conversations. A normal question without asking the model to use
-recall may not trigger the tool in a small local model.
+Expected answer: `coffee`.
 
-### 6. Preview and delete from another agent
-
-Start a separate deletion test conversation:
-
-```bash
-python scripts/ollama_mcp_cli.py \
-  --model qwen3:1.7b \
-  --conversation deletion-demo \
-  --agent ollama-deletion-agent
-```
-
-First retrieve the exact UUID:
-
-```text
-Use MNEMOSYNE recall to find DELETE_TEST_2026 and show the exact memory ID.
-```
-
-Then preview it using the UUID returned by recall, not the text
-`DELETE_TEST_2026`:
-
-```text
-Call preview_delete using the exact memory ID for DELETE_TEST_2026 and show the deletion impact.
-```
-
-Review relevance, access count, descendants, and residual-risk information.
-Only then request deletion:
-
-```text
-Call delete_memory using that exact memory ID with confirmation=true. Delete only DELETE_TEST_2026.
-```
-
-The response should show `[tool] delete_memory` and an erasure verdict. The
-current MCP adapter exposes hard deletion only. It preserves audit metadata
-and removes the active content/vector representation.
-
-Exit with:
+Exit:
 
 ```text
 /exit
 ```
 
-### 7. Verify deletion from a fresh agent
+### 6. Delete from another agent
 
-Start another independent conversation:
+Start a new conversation:
 
 ```bash
 python scripts/ollama_mcp_cli.py \
   --model qwen3:1.7b \
-  --conversation deletion-verification \
+  --conversation demo-delete \
+  --agent ollama-deletion-agent
+```
+
+At `You:`, enter these in order:
+
+```text
+Use MNEMOSYNE recall to find DEMO_AGENT_2026 and show its exact memory ID.
+```
+
+Then use the UUID returned by recall:
+
+```text
+Call preview_delete using that exact memory ID.
+```
+
+Then:
+
+```text
+Call delete_memory using that exact memory ID with confirmation=true.
+```
+
+Exit:
+
+```text
+/exit
+```
+
+### 7. Verify deletion
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation demo-verify-delete \
   --agent ollama-verification-agent
 ```
 
 Ask:
 
 ```text
-Use MNEMOSYNE recall to search for DELETE_TEST_2026. Do not rely on chat history.
+Use MNEMOSYNE recall to search for DEMO_AGENT_2026. Do not rely on chat history.
 ```
 
-The deleted memory must not be returned as active context. An abstention or
-`no active memory found` result is expected.
-
-These tests create persistent files under `data/`, including the audit log,
-vector metadata, graph data, session state, and `data/ollama_sessions/`. Use a
-unique test marker and do not use real personal data. The deletion step is
-irreversible.
+Expected result: no active memory or an abstention response. The deletion is
+hard deletion; audit metadata remains. These commands write test data under
+`data/`, so use only test facts.
 
 ## Healing worker and retrieval benchmark
 
