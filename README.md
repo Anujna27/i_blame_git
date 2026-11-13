@@ -243,6 +243,8 @@ When enabled, the provider is used for:
 
 The adapter requests JSON-only responses and validates the returned shape. If the SDK is unavailable, credentials are missing, or a provider call fails, the local deterministic fallback remains available to the application.
 
+Groq rate and request limits apply to all LLM-backed features. In particular, orphan-link healing can build a larger prompt than summary generation because it includes graph context. If Groq reports an input-tokens-per-minute error such as `Requested 7624` against a `7000` ITPM limit, the healing suggestion call will fail gracefully and the local healing path will continue. Use a smaller graph/session scope, a model or service tier with a higher ITPM limit, or run healing with the LLM provider disabled when deterministic behavior is preferred. Summary generation and session commit are not discarded when an optional healing suggestion fails.
+
 To disable the provider for the current PowerShell session:
 
 ```powershell
