@@ -15,8 +15,7 @@ from mcp_server import (
     recall,
     forget,
     forget_topic,
-    run_automated_benchmark,
-    run_bemula_benchmark,
+    run_memory_audit,
 )
 
 
@@ -99,23 +98,22 @@ def test_forget_topic_no_matches():
     assert ("No memories found" in res) or ("none explicitly contained" in res) or ("Nothing deleted" in res)
 
 
-def test_run_automated_benchmark_tool():
-    report = run_automated_benchmark(num_profiles=2)
-    assert isinstance(report, str)
-    assert "=== AUTOMATED SYNTHETIC BENCHMARK ===" in report
-    assert "Profiles Tested: 2" in report
-    assert "Request Pass Rate (RPR): 100.00%" in report
-    assert "Deletion Accuracy: 100.00% (0 leaks)" in report
-    assert "Preservation Accuracy: 100.00%" in report
-
-
-def test_run_bemula_benchmark_tool():
-    # Run smoke evaluation
-    report = run_bemula_benchmark(max_questions=50)
-    assert isinstance(report, str)
-    assert "BEMULA-SCALE SYNTHETIC REPLICATION" in report
-    assert "System              | Question Acc | Request Pass Rate" in report
-    assert "Real-Stack Agent" in report
-    assert "Per-question-type breakdown" in report
-    assert "Improvement over 1.5% baseline" in report
+def test_run_memory_audit_tool():
+    log = run_memory_audit(num_users=2)
+    assert isinstance(log, str)
+    assert "STARTING LIVE AUDIT FOR 2 USERS" in log
+    assert "--- USER 1 ---" in log
+    assert "--- USER 2 ---" in log
+    assert "[Level 1] Source Record Removed: PASS" in log
+    assert "[Level 2] Derived Artifacts Invalidated: PASS" in log
+    assert "[Level 3] Inference Blocked: PASS" in log
+    assert "[Level 4] Non-Inferability Checked: PASS" in log
+    assert "[Level 5] State Restoration Checked: PASS" in log
+    assert "[Recall API Key] Abstained: True" in log
+    assert "[Recall Fav Color] Preserved: True" in log
+    assert "FINAL AUDIT REPORT" in log
+    assert "Users Tested:         2" in log
+    assert "Request Pass Rate:    100.00%" in log
+    assert "Forget Accuracy:      100.00% (Zero Leaks)" in log
+    assert "Preservation Accuracy:100.00%" in log
 
