@@ -135,46 +135,85 @@ export MNEMOSYNE_LLM_BASE_URL=http://127.0.0.1:11434/v1
 ollama pull "$MODEL"
 ```
 
-Agent A stores the memory:
+### Within one session
+
+Start one agent:
 
 ```bash
-python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-shared --agent agent-a
+python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-within-session --agent agent-a
+```
+
+Enter these messages in the same prompt:
+
+```text
+Remember exactly: WITHIN_SESSION_2026 — I love drinking coffee.
+Use MNEMOSYNE recall to find WITHIN_SESSION_2026. What do I love drinking?
+/exit
+```
+
+The second question is answered from the same session.
+
+### Between sessions
+
+Start Agent A and store a memory:
+
+```bash
+python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-between-sessions --agent agent-a
 ```
 
 Enter:
 
 ```text
-Remember exactly: DEMO_AGENT_2026 — I love drinking coffee.
+Remember exactly: BETWEEN_SESSIONS_2026 — I love drinking tea.
 /exit
 ```
 
-Agent B resumes the same conversation. This tests a new session and a different agent:
+Start a new process with the same conversation and `--resume`:
 
 ```bash
-python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-shared --agent agent-b --resume
+python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-between-sessions --agent agent-a --resume
 ```
 
 Ask:
 
 ```text
-Use MNEMOSYNE recall to find DEMO_AGENT_2026. What do I love drinking?
+Use MNEMOSYNE recall to find BETWEEN_SESSIONS_2026. What do I love drinking?
 /exit
 ```
 
-Agent C uses a completely new conversation. This tests shared durable memory between agents:
+The answer should be `tea`. This proves that the memory survives a stopped session and a new session process.
+
+### Between agents
+
+Start Agent A and store a memory:
 
 ```bash
-python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-independent --agent agent-c
+python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-between-agents-a --agent agent-a
+```
+
+Enter:
+
+```text
+Remember exactly: BETWEEN_AGENTS_2026 — I love drinking coffee.
+/exit
+```
+
+Start Agent B with a different conversation and no `--resume`:
+
+```bash
+python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-between-agents-b --agent agent-b
 ```
 
 Ask:
 
 ```text
-Use MNEMOSYNE recall to find DEMO_AGENT_2026. What do I love drinking?
+Use MNEMOSYNE recall to find BETWEEN_AGENTS_2026. What do I love drinking?
 /exit
 ```
 
-The answer should be `coffee`. Use synthetic test markers only; these commands write persistent state under `data/`.
+The answer should be `coffee`. This proves that independent agents can access shared durable memory. Explicitly asking for `MNEMOSYNE recall` is recommended with small local models.
+
+Use synthetic test markers only; these commands write persistent state under `data/`.
 
 To stop Ollama, press `Ctrl+C` in Terminal 1. To stop a runner, type `/exit`.
 
