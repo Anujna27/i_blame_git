@@ -277,6 +277,22 @@ Benchmark hybrid retrieval:
 python scripts/benchmark_retrieval.py --sessions 30 --token-budget 500
 ```
 
+Benchmark end-to-end deletion completion over an isolated synthetic corpus:
+
+```powershell
+python scripts/benchmark_deletion_rate.py --count 1000
+```
+
+The benchmark creates a target, a derived child, an unrelated entity, and filesystem-memory records for every request in a temporary directory. It simulates a restart and counts a request as successful only when the target and derived records are non-active in the graph, absent from vectors, redacted from filesystem memory, inference-blocked, auditable, and unrelated data remains available. It compares this strict operational rate with the 1.5% benchmark baseline. Use `--count 1000` for a larger run. The benchmark does not modify the repository's normal `data/` stores.
+
+Simulate a realistic customer account-erasure request:
+
+```powershell
+python scripts/simulate_real_life_deletion.py
+```
+
+This creates a customer profile, preferences, purchase history, a derived support summary, and an unrelated second customer. It then deletes the first customer's profile and prints the deletion report plus a post-erasure inventory. The expected result is that the first customer's records are non-active, redacted, and absent from the vector store, while the unrelated customer's record remains active. A `partially_deleted` verdict is expected when derived history prevents a literal return to a never-written state; this is distinct from failure to remove active records.
+
 LLM usage telemetry is available from an `AgentA` instance:
 
 ```python

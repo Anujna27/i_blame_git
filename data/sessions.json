@@ -5,8 +5,8 @@
     "committed_at": null,
     "committed_by": null,
     "entity_ids": [
-      "6acbea91-8ef2-48ea-bdc2-b7a2ff3d09d0",
-      "fdd4226c-9f37-4cba-819e-34366966894f"
+      "c7ebf93a-b740-4198-93bd-eda56f9ae9b0",
+      "c2109499-9ddb-480e-a8e6-c7b2c1e888dd"
     ]
   },
   "sess_001": {
@@ -15,8 +15,8 @@
     "committed_at": null,
     "committed_by": null,
     "entity_ids": [
-      "e29dd5b3-d793-4dcb-b1a5-d9662aa1f800",
-      "f65f9244-1a49-4110-93fb-15f6f65f6408"
+      "17645c02-534d-4cd7-a8de-00098f895762",
+      "5b77a104-f265-493d-a813-b41fe62753af"
     ]
   },
   "sess_002": {
@@ -25,8 +25,8 @@
     "committed_at": null,
     "committed_by": null,
     "entity_ids": [
-      "11128324-0cd3-4a65-90fb-335033ea9a19",
-      "01102045-c7fd-4e15-942b-314a431e02b4"
+      "c7239e37-821d-4586-a225-229f7bb538e1",
+      "91feea92-cf67-498c-92b7-0f0346e2d50d"
     ]
   },
   "sess_003": {
@@ -35,8 +35,8 @@
     "committed_at": null,
     "committed_by": null,
     "entity_ids": [
-      "1d1ac756-7ae4-4bae-84e8-1aa0087725c0",
-      "146c581a-14bb-40a3-a59d-19b0ebf081e5"
+      "285e1343-d43d-4fe2-b661-093ff6633016",
+      "62f817ed-79bc-4268-90c9-9e294ea98361"
     ]
   },
   "sess_004": {
@@ -45,8 +45,8 @@
     "committed_at": null,
     "committed_by": null,
     "entity_ids": [
-      "59956d0c-d397-405a-a6fc-847b399b5a92",
-      "1de9f88f-1f94-4d52-8840-876b6cce2544"
+      "b083cd57-d6e5-4c8a-9358-123f0328281a",
+      "69bdf884-1dd4-4787-9a09-07915528b586"
     ]
   },
   "sess_010": {
@@ -55,7 +55,7 @@
     "committed_at": null,
     "committed_by": null,
     "entity_ids": [
-      "715e8efb-afa2-450e-b0e9-978894c3d38d"
+      "cb08d9d6-f069-4e62-beba-5e54d80631b1"
     ]
   },
   "sess_012": {
@@ -64,7 +64,7 @@
     "committed_at": null,
     "committed_by": null,
     "entity_ids": [
-      "eeb9812c-f854-4f25-8817-a11428f03196"
+      "56ec738e-483f-4dc6-9375-5920274621b9"
     ]
   },
   "sess_015": {
@@ -73,44 +73,7 @@
     "committed_at": null,
     "committed_by": null,
     "entity_ids": [
-      "c68e82a6-d0a8-4ba7-b2e5-0a57af2ea950"
-    ]
-  },
-  "quick_test": {
-    "session_id": "quick_test",
-    "status": "committed",
-    "committed_at": "2026-11-12T20:53:34.480506+00:00",
-    "committed_by": "manual-user",
-    "entity_ids": [
-      "c5373960-35c4-40c7-a577-47b384db0f66",
-      "0e0eb9fe-249f-466e-a6d6-916a517b519a"
-    ]
-  },
-  "delete_test_84721": {
-    "session_id": "delete_test_84721",
-    "status": "active",
-    "committed_at": null,
-    "committed_by": null,
-    "entity_ids": [
-      "d7770fc5-0f0e-4ac8-8fcc-379319604038"
-    ]
-  },
-  "comparison_421ec1fa": {
-    "session_id": "comparison_421ec1fa",
-    "status": "committed",
-    "committed_at": "2026-11-12T20:58:43.103426+00:00",
-    "committed_by": "comparison-test",
-    "entity_ids": [
-      "eab6c039-d9f3-4ab7-bfc5-6773de55e441"
-    ]
-  },
-  "comparison_60014f12": {
-    "session_id": "comparison_60014f12",
-    "status": "committed",
-    "committed_at": "2026-11-12T20:58:48.477256+00:00",
-    "committed_by": "comparison-test",
-    "entity_ids": [
-      "5ccf9891-c5d3-4977-b395-b3f6dbc6cf2f"
+      "73e9b7e9-5958-48ac-aa47-8bc02c2815a3"
     ]
   }
 }

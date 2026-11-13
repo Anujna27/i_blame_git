@@ -46,7 +46,7 @@ class ErasureEngine:
                             ("sk-" in a.lower() or "api key" in a.lower()) and
                             ("sk-" in b.lower() or "api key" in b.lower()))
         return max(cosine, 0.80 if security_overlap else 0.0)
-    def delete(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested_erasure", deleted_by="user"):
+    def delete(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested_erasure", deleted_by="user", filesystem_store=None):
         node = graph_store.get_node(node_id); levels=[]
         timestamp = datetime.now(timezone.utc).isoformat()
         entity_type = getattr(node, "entity_type", "memory") if node else "memory"
@@ -114,6 +114,8 @@ class ErasureEngine:
                 graph_store.remove_entity_edges(node_id)
             elif hasattr(graph_store, "graph") and graph_store.graph.has_node(node_id):
                 graph_store.graph.remove_edges_from(list(graph_store.graph.in_edges(node_id)) + list(graph_store.graph.out_edges(node_id)))
+            if filesystem_store is not None and hasattr(filesystem_store, "delete_entity"):
+                filesystem_store.delete_entity(node_id)
         for cid in invalidated:
             child = graph_store.get_node(cid)
             if child:
@@ -124,6 +126,8 @@ class ErasureEngine:
                 child.properties = {}
                 if hasattr(vector_store, "remove"):
                     vector_store.remove(cid)
+                if filesystem_store is not None and hasattr(filesystem_store, "delete_entity"):
+                    filesystem_store.delete_entity(cid)
         # Persist graph state so deletion_state survives restart
         if hasattr(graph_store, "persist"):
             try:

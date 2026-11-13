@@ -25,3 +25,11 @@ class FilesystemMemory:
     def list_entities(self, namespace="user/memories"):
         directory = self.root / namespace
         return [json.loads(path.read_text(encoding="utf-8")) for path in directory.glob("*.json")] if directory.exists() else []
+
+    def delete_entity(self, entity_id, namespace="user/memories"):
+        """Remove the persisted filesystem copy of an entity if present."""
+        path = self._path(namespace, entity_id)
+        if not path.exists():
+            return False
+        path.unlink()
+        return True
