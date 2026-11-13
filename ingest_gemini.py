@@ -1,6 +1,19 @@
-import json
+import os
 import sys
 from pathlib import Path
+
+# Automatically ensure project virtual environment is used if available
+ROOT_DIR = Path(__file__).resolve().parent
+VENV_PYTHON = ROOT_DIR / "venv" / "Scripts" / "python.exe"
+if VENV_PYTHON.exists() and Path(sys.executable).resolve() != VENV_PYTHON.resolve():
+    import subprocess
+    sys.exit(subprocess.call([str(VENV_PYTHON), str(Path(__file__).resolve())] + sys.argv[1:]))
+
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+os.chdir(ROOT_DIR)
+
+import json
 
 try:
     from bs4 import BeautifulSoup
@@ -14,7 +27,7 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 
-GEMINI_PATH = Path("data/gemini_import/gemini_chat.json")
+GEMINI_PATH = ROOT_DIR / "data" / "gemini_import" / "gemini_chat.json"
 
 
 def clean_html(raw_html: str) -> str:
