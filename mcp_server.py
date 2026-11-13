@@ -302,7 +302,7 @@ def forget_topic(topic: str, reason: str = "user_requested_erasure", actor: str 
 
 
 @mcp.tool()
-def run_memory_audit(num_users: int = 5) -> str:
+def run_memory_audit(num_users: int = 50) -> str:
     """
     Runs the REAL BEMULA evaluation engine strictly on N synthetic users.
     Generates a detailed accountability report and residual risk analysis.
