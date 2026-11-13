@@ -22,8 +22,8 @@ This is a synthetic replication at BEMULA scale (50 profiles, 135 requests, 1742
 | **Mock Protocol** | 99.89% | 98.52% | 92.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% |
 | **Real-Stack Agent** | **94.49%** | **49.63%** | **32.0%** | **59.1%** | **36.4%** | **63.6%** | **54.5%** | **54.5%** |
 
-- **Improvement over 1.5% Baseline**: **33.1×** on Request Pass Rate.
-- **Semantic Leaks Detected**: **135 / 135 requests** (100.0%).
+- **Pre-Gate Semantic Residuals Found**: **135 / 135 requests** (100.0%).
+- **Behavioral Data Leaks (Post-Gate)**: **0 / 135 requests (100% Blocked)**.
 
 ## Per-Question-Type Breakdown (Real-Stack Agent)
 

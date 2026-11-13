@@ -69,9 +69,10 @@ class AgentA:
         self.dreaming = HonchoDreaming()
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0,
-                 trust_status="user_asserted", context_id=None, entity_refs=None):
-        source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
-                  "timestamp": datetime.now(timezone.utc).isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
+                 trust_status="user_asserted", context_id=None, entity_refs=None, source=None, **kwargs):
+        if source is None:
+            source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
+                      "timestamp": datetime.now(timezone.utc).isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
         properties = {}
         if context_id:
             properties["erasure_context_id"] = context_id
@@ -134,9 +135,13 @@ class AgentA:
         session = self.sessions.commit_session(session_id, entity_ids, actor)
         self.hash_chain.append("session_commit", session_id, {**session, "reason": reason})
         self.graph_healer.heal_orphans(session_id=session_id)
-        session["dreaming"] = self.dream_session(
+        dreaming_report = self.dream_session(
             session_id, actor=actor, reason="after_session_commit"
         )
+        session["dreaming"] = dreaming_report
+        if hasattr(self.sessions, "_sessions") and session_id in self.sessions._sessions:
+            self.sessions._sessions[session_id]["dreaming"] = dreaming_report
+            self.sessions._persist()
         return session
 
     def dream_session(self, session_id, actor="honcho", reason="dreaming_consolidation", token_budget=256):
@@ -214,14 +219,15 @@ class AgentA:
             return {"answer": "Retrieval error.", "sources": [], "tokens_used": 0, "ranking_explanations": [], "abstained": True, "reason": str(error)}
         return {"answer": context.text, "sources": [entity.node_id for entity in context.entities], "tokens_used": context.token_count, "ranking_explanations": context.ranking_explanations, "abstained": not bool(context.entities)}
 
-    def forget(self, node_id, reason="user_requested_erasure", deleted_by="user", context_id=None, entity_refs=None):
+    def forget(self, node_id, reason="user_requested_erasure", deleted_by="user", context_id=None, entity_refs=None, actor=None, **kwargs):
+        actor_name = actor or deleted_by
         report = self.erasure.delete(
             node_id,
             self.vector_store,
             self.graph,
             self.hash_chain,
             reason=reason,
-            deleted_by=deleted_by,
+            deleted_by=actor_name,
             filesystem_store=self.filesystem_memory,
             semantic_cleanup=True,
             context_id=context_id,
@@ -237,6 +243,18 @@ class AgentA:
             if refreshed is not None:
                 self.all_nodes[nid] = refreshed
         return report
+
+    def forget_topic(self, topic, reason="user_requested_erasure", deleted_by="user", actor=None):
+        actor_name = actor or deleted_by
+        results = self.vector_store.query(topic, top_k=50)
+        reports = []
+        for node in results:
+            nid = getattr(node, "node_id", None) or (node.get("node_id") if isinstance(node, dict) else None)
+            l2 = getattr(node, "content_l2", "") or getattr(node, "content", "") or ""
+            if topic.lower() in l2.lower():
+                r = self.forget(nid, reason=reason, deleted_by=actor_name)
+                reports.append(r)
+        return reports
 
     def build_knowledge_graph(self):
         report = self.graph_healer.heal_orphans()
