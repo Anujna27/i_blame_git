@@ -111,7 +111,7 @@ def test_run_automated_benchmark_tool():
 
 def test_run_bemula_benchmark_tool():
     # Run smoke evaluation
-    report = run_bemula_benchmark(smoke=True, limit=2)
+    report = run_bemula_benchmark(max_questions=50)
     assert isinstance(report, str)
     assert "BEMULA-SCALE SYNTHETIC REPLICATION" in report
     assert "System              | Question Acc | Request Pass Rate" in report

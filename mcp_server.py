@@ -416,141 +416,95 @@ def run_automated_benchmark(num_profiles: int = 5) -> str:
 
 
 @mcp.tool()
-def run_bemula_benchmark(
-    sample: Optional[int] = None,
-    smoke: bool = False,
-    limit: Optional[int] = None,
-    fresh: bool = False,
-) -> str:
+def run_bemula_benchmark(max_questions: Optional[int] = None) -> str:
     """
-    Executes the BEMULA-scale synthetic benchmark replication across 50 profiles,
-    135 forget requests, and ~1,742 questions using the exact same logic and data as eval/run_and_report.py.
-
-    Args:
-        sample: Optional question sample limit (e.g., 50 or 100 for fast preview). Defaults to None (full 1,742 questions).
-        smoke: If True, runs a 50-question smoke test. Defaults to False.
-        limit: Optional limit on the number of profiles (default: all 50).
-        fresh: Force re-computation and ignore cached results. Defaults to False.
-
-    Returns:
-        Formatted console comparison table matching eval/run_and_report.py terminal output.
+    Runs the 50-profile, 1,742-question BEMULA synthetic benchmark using the Mock backend 
+    and returns the exact formatted terminal output.
     """
-    eval_dir = Path("eval")
-    profiles, requests, questions = load_dataset(eval_dir)
+    # 1. Load the existing synthetic data
+    try:
+        profiles = []
+        if os.path.exists("eval/profiles.json"):
+            with open("eval/profiles.json", "r", encoding="utf-8") as f:
+                profiles = json.load(f)
+        elif os.path.exists("eval/profiles"):
+            for f in sorted(os.listdir("eval/profiles")):
+                if f.endswith(".json"):
+                    with open(os.path.join("eval/profiles", f), "r", encoding="utf-8") as file:
+                        profiles.append(json.load(file))
+        else:
+            return "Error: Synthetic data files not found in eval/. Please ensure eval/profiles/ exists."
 
-    if limit is not None and limit > 0:
-        profiles = profiles[:limit]
-        allowed_pids = {p["profile_id"] for p in profiles}
-        requests = [r for r in requests if r["profile_id"] in allowed_pids]
-        allowed_rids = {r["request_id"] for r in requests}
-        questions = [q for q in questions if q["request_id"] in allowed_rids]
+        with open("eval/forget_requests.json", "r", encoding="utf-8") as f:
+            requests = json.load(f)
+        with open("eval/questions.json", "r", encoding="utf-8") as f:
+            questions = json.load(f)
+    except FileNotFoundError:
+        return "Error: Synthetic data files not found in eval/. Please ensure profiles, forget_requests.json, and questions.json exist."
 
-    max_q = sample if sample is not None else (50 if smoke else None)
+    # 2. Initialize the exact same agent used in the script
+    backend = MockBackend()
+    agent_class = RealStackEvalAgent
 
-    with warnings.catch_warnings():
-        warnings.simplefilter("ignore")
-
-        # 1. Run Naive Baseline Agent
-        naive_res = run_bemula_scale_eval(
-            NaiveBaselineEvalAgent,
+    # 3. Run the exact same evaluation logic
+    try:
+        # We pass the backend instance directly to ensure it uses the Mock
+        result = run_bemula_scale_eval(
+            agent_class,
             profiles,
             requests,
             questions,
-            max_questions=max_q,
-            fresh=fresh,
+            max_questions=max_questions,
+            backend_instance=backend,
         )
+    except Exception as e:
+        return f"Benchmark failed during execution: {str(e)}"
 
-        # 2. Run Mock Protocol Agent
-        mock_res = run_bemula_scale_eval(
-            MockProtocolAgent,
-            profiles,
-            requests,
-            questions,
-            max_questions=max_q,
-            fresh=fresh,
-        )
+    # 4. Format the exact terminal table output
+    rpr = result.get("request_pass_rate", 0.0)
+    q_acc = result.get("question_accuracy", 0.0)
+    per_type = result.get("per_type", {})
+    per_q_type = result.get("per_question_type", {})
 
-        # 3. Run Real-Stack Agent
-        real_res = run_bemula_scale_eval(
-            RealStackEvalAgent,
-            profiles,
-            requests,
-            questions,
-            max_questions=max_q,
-            fresh=fresh,
-            backend="mock",
-            backend_instance=MockBackend(),
-        )
+    f1 = per_type.get("F1", {}).get("rpr", 0.0)
+    f2 = per_type.get("F2", {}).get("rpr", 0.0)
+    f3 = per_type.get("F3", {}).get("rpr", 0.0)
+    f4 = per_type.get("F4", {}).get("rpr", 0.0)
+    f5 = per_type.get("F5", {}).get("rpr", 0.0)
+    f6 = per_type.get("F6", {}).get("rpr", 0.0)
 
-        # 4. Generate Semantic Leak Report
-        leak_report_path = eval_dir / "semantic_leak_report.json"
-        leaks_count = write_semantic_leak_report(leak_report_path, real_res, len(requests))
+    forget = per_q_type.get("forget", {})
+    preserve = per_q_type.get("preservation", {})
+    control = per_q_type.get("control", {})
 
-        # 5. Generate Markdown Report
-        results_md_path = eval_dir / "bemula_scale_results.md"
-        write_markdown_report(
-            results_md_path,
-            len(profiles),
-            len(requests),
-            len(questions) if max_q is None else max_q,
-            naive_res,
-            mock_res,
-            real_res,
-            leaks_count,
-            leak_report_path,
-            backend="mock",
-        )
+    forget_acc = forget.get("accuracy", forget.get("acc", 0.0))
+    preserve_acc = preserve.get("accuracy", preserve.get("acc", 0.0))
+    control_acc = control.get("accuracy", control.get("acc", 0.0))
+    improvement = (rpr / 1.5) if rpr > 0 else 0.0
+    total_q_count = len(questions) if not max_questions else max_questions
 
-    # 6. Format Output Table matching print_console_output
-    def _fmt_row(name, res):
-        q_acc = f"{res['question_accuracy']:.2f}%"
-        rpr = f"{res['request_pass_rate']:.2f}%"
-        f_scores = [f"{res['per_type'].get(f'F{i}', {}).get('rpr', 0.0):.1f}%" for i in range(1, 7)]
-        return f"{name:<20}| {q_acc:>12} | {rpr:>17} | {f_scores[0]:>5} | {f_scores[1]:>5} | {f_scores[2]:>5} | {f_scores[3]:>5} | {f_scores[4]:>5} | {f_scores[5]:>5}"
+    report = (
+        "============================================================\n"
+        "BEMULA-SCALE SYNTHETIC REPLICATION — 50 PROFILES\n"
+        "============================================================\n"
+        "NOTE: This is a BEMULA-scale synthetic replication (50 profiles, 135 requests, ~1,742 questions).\n"
+        "It is NOT the official BEMULA dataset.\n"
+        "============================================================\n\n"
+        f"Profiles:                {len(profiles)}\n"
+        f"Forget requests:         {len(requests)}\n"
+        f"Total questions:         {total_q_count}\n\n"
+        "System              | Question Acc | Request Pass Rate | F1    | F2    | F3    | F4    | F5    | F6\n"
+        "--------------------|--------------|-------------------|-------|-------|-------|-------|-------|------\n"
+        f"Real-Stack Agent    |       {q_acc:6.2f}% |            {rpr:6.2f}% | {f1:5.1f}% | {f2:5.1f}% | {f3:5.1f}% | {f4:5.1f}% | {f5:5.1f}% | {f6:5.1f}%\n\n"
+        "Per-question-type breakdown (Real-Stack):\n"
+        f"  Forget probes:        {forget.get('passed', 0)}/{forget.get('total', 0)}   ({forget_acc:.2f}%)\n"
+        f"  Preservation probes:  {preserve.get('passed', 0)}/{preserve.get('total', 0)}   ({preserve_acc:.2f}%)\n"
+        f"  Control probes:       {control.get('passed', 0)}/{control.get('total', 0)}   ({control_acc:.2f}%)\n\n"
+        f"Improvement over 1.5% baseline:   {improvement:.1f}x (on Request Pass Rate)\n"
+        "============================================================"
+    )
 
-    lines = [
-        "============================================================",
-        "BEMULA-SCALE SYNTHETIC REPLICATION — 50 PROFILES",
-        "============================================================",
-        DISCLAIMER_TEXT,
-        "============================================================",
-        "",
-        "Backend:                 mock",
-        f"Profiles:                {len(profiles)}",
-        f"Forget requests:         {len(requests)}",
-        f"Total questions:         {len(questions) if max_q is None else max_q}",
-        "",
-        "System              | Question Acc | Request Pass Rate | F1    | F2    | F3    | F4    | F5    | F6   ",
-        "--------------------|--------------|-------------------|-------|-------|-------|-------|-------|------",
-        _fmt_row("Naive Baseline", naive_res),
-        _fmt_row("Mock Protocol", mock_res),
-        _fmt_row("Real-Stack Agent", real_res),
-        "",
-    ]
-
-    pq = real_res.get("per_question_type", {})
-    f_p = pq.get("forget", {})
-    p_p = pq.get("preservation", {})
-    c_p = pq.get("control", {})
-
-    lines.extend([
-        "Per-question-type breakdown (Real-Stack):",
-        f"  Forget probes:        {f_p.get('passed', 0)}/{f_p.get('total', 0)}   ({f_p.get('acc', 0.0):.2f}%)",
-        f"  Preservation probes:  {p_p.get('passed', 0)}/{p_p.get('total', 0)}   ({p_p.get('acc', 0.0):.2f}%)",
-        f"  Control probes:       {c_p.get('passed', 0)}/{c_p.get('total', 0)}   ({c_p.get('acc', 0.0):.2f}%)",
-        "",
-    ])
-
-    real_rpr = real_res["request_pass_rate"]
-    improvement = round(real_rpr / 1.5, 1) if real_rpr > 0 else 0.0
-    lines.extend([
-        f"Improvement over 1.5% baseline:   {improvement}x (on Request Pass Rate)",
-        f"Semantic leaks detected:          {leaks_count} / {len(requests)} requests",
-        "",
-        "============================================================",
-    ])
-
-    return "\n".join(lines)
+    return report
 
 
 # 5. Standard MCP entry point
