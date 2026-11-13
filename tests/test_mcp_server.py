@@ -9,7 +9,15 @@ Tests for the FastMCP memory server (mcp_server.py) exposing:
 
 import json
 import pytest
-from mcp_server import mcp, remember, recall, forget, forget_topic, run_automated_benchmark
+from mcp_server import (
+    mcp,
+    remember,
+    recall,
+    forget,
+    forget_topic,
+    run_automated_benchmark,
+    run_bemula_benchmark,
+)
 
 
 def test_mcp_server_initialization():
@@ -99,4 +107,15 @@ def test_run_automated_benchmark_tool():
     assert "Request Pass Rate (RPR): 100.00%" in report
     assert "Deletion Accuracy: 100.00% (0 leaks)" in report
     assert "Preservation Accuracy: 100.00%" in report
+
+
+def test_run_bemula_benchmark_tool():
+    # Run smoke evaluation
+    report = run_bemula_benchmark(smoke=True, limit=2)
+    assert isinstance(report, str)
+    assert "BEMULA-SCALE SYNTHETIC REPLICATION" in report
+    assert "System              | Question Acc | Request Pass Rate" in report
+    assert "Real-Stack Agent" in report
+    assert "Per-question-type breakdown" in report
+    assert "Improvement over 1.5% baseline" in report
 

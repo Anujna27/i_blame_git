@@ -18,12 +18,27 @@ os.makedirs("data/mcp_live_demo", exist_ok=True)
 
 from dataclasses import asdict
 import json
+from pathlib import Path
 from typing import Optional
+import warnings
 
 from mcp.server.fastmcp import FastMCP
 from agents.agent_a import AgentA
 from agents.blocked_loader import load_blocked_ids
 from core.memory_node import MemoryNode
+from eval.evaluate_bemula import (
+    NaiveBaselineEvalAgent,
+    MockProtocolAgent,
+    RealStackEvalAgent,
+    run_bemula_scale_eval,
+)
+from eval.llm_backends import MockBackend
+from eval.run_and_report import (
+    load_dataset,
+    write_semantic_leak_report,
+    write_markdown_report,
+    DISCLAIMER_TEXT,
+)
 
 # Ensure MemoryNode supports .get() method for dict-like access
 if not hasattr(MemoryNode, "get"):
@@ -398,6 +413,144 @@ def run_automated_benchmark(num_profiles: int = 5) -> str:
     )
 
     return report
+
+
+@mcp.tool()
+def run_bemula_benchmark(
+    sample: Optional[int] = None,
+    smoke: bool = False,
+    limit: Optional[int] = None,
+    fresh: bool = False,
+) -> str:
+    """
+    Executes the BEMULA-scale synthetic benchmark replication across 50 profiles,
+    135 forget requests, and ~1,742 questions using the exact same logic and data as eval/run_and_report.py.
+
+    Args:
+        sample: Optional question sample limit (e.g., 50 or 100 for fast preview). Defaults to None (full 1,742 questions).
+        smoke: If True, runs a 50-question smoke test. Defaults to False.
+        limit: Optional limit on the number of profiles (default: all 50).
+        fresh: Force re-computation and ignore cached results. Defaults to False.
+
+    Returns:
+        Formatted console comparison table matching eval/run_and_report.py terminal output.
+    """
+    eval_dir = Path("eval")
+    profiles, requests, questions = load_dataset(eval_dir)
+
+    if limit is not None and limit > 0:
+        profiles = profiles[:limit]
+        allowed_pids = {p["profile_id"] for p in profiles}
+        requests = [r for r in requests if r["profile_id"] in allowed_pids]
+        allowed_rids = {r["request_id"] for r in requests}
+        questions = [q for q in questions if q["request_id"] in allowed_rids]
+
+    max_q = sample if sample is not None else (50 if smoke else None)
+
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+
+        # 1. Run Naive Baseline Agent
+        naive_res = run_bemula_scale_eval(
+            NaiveBaselineEvalAgent,
+            profiles,
+            requests,
+            questions,
+            max_questions=max_q,
+            fresh=fresh,
+        )
+
+        # 2. Run Mock Protocol Agent
+        mock_res = run_bemula_scale_eval(
+            MockProtocolAgent,
+            profiles,
+            requests,
+            questions,
+            max_questions=max_q,
+            fresh=fresh,
+        )
+
+        # 3. Run Real-Stack Agent
+        real_res = run_bemula_scale_eval(
+            RealStackEvalAgent,
+            profiles,
+            requests,
+            questions,
+            max_questions=max_q,
+            fresh=fresh,
+            backend="mock",
+            backend_instance=MockBackend(),
+        )
+
+        # 4. Generate Semantic Leak Report
+        leak_report_path = eval_dir / "semantic_leak_report.json"
+        leaks_count = write_semantic_leak_report(leak_report_path, real_res, len(requests))
+
+        # 5. Generate Markdown Report
+        results_md_path = eval_dir / "bemula_scale_results.md"
+        write_markdown_report(
+            results_md_path,
+            len(profiles),
+            len(requests),
+            len(questions) if max_q is None else max_q,
+            naive_res,
+            mock_res,
+            real_res,
+            leaks_count,
+            leak_report_path,
+            backend="mock",
+        )
+
+    # 6. Format Output Table matching print_console_output
+    def _fmt_row(name, res):
+        q_acc = f"{res['question_accuracy']:.2f}%"
+        rpr = f"{res['request_pass_rate']:.2f}%"
+        f_scores = [f"{res['per_type'].get(f'F{i}', {}).get('rpr', 0.0):.1f}%" for i in range(1, 7)]
+        return f"{name:<20}| {q_acc:>12} | {rpr:>17} | {f_scores[0]:>5} | {f_scores[1]:>5} | {f_scores[2]:>5} | {f_scores[3]:>5} | {f_scores[4]:>5} | {f_scores[5]:>5}"
+
+    lines = [
+        "============================================================",
+        "BEMULA-SCALE SYNTHETIC REPLICATION — 50 PROFILES",
+        "============================================================",
+        DISCLAIMER_TEXT,
+        "============================================================",
+        "",
+        "Backend:                 mock",
+        f"Profiles:                {len(profiles)}",
+        f"Forget requests:         {len(requests)}",
+        f"Total questions:         {len(questions) if max_q is None else max_q}",
+        "",
+        "System              | Question Acc | Request Pass Rate | F1    | F2    | F3    | F4    | F5    | F6   ",
+        "--------------------|--------------|-------------------|-------|-------|-------|-------|-------|------",
+        _fmt_row("Naive Baseline", naive_res),
+        _fmt_row("Mock Protocol", mock_res),
+        _fmt_row("Real-Stack Agent", real_res),
+        "",
+    ]
+
+    pq = real_res.get("per_question_type", {})
+    f_p = pq.get("forget", {})
+    p_p = pq.get("preservation", {})
+    c_p = pq.get("control", {})
+
+    lines.extend([
+        "Per-question-type breakdown (Real-Stack):",
+        f"  Forget probes:        {f_p.get('passed', 0)}/{f_p.get('total', 0)}   ({f_p.get('acc', 0.0):.2f}%)",
+        f"  Preservation probes:  {p_p.get('passed', 0)}/{p_p.get('total', 0)}   ({p_p.get('acc', 0.0):.2f}%)",
+        f"  Control probes:       {c_p.get('passed', 0)}/{c_p.get('total', 0)}   ({c_p.get('acc', 0.0):.2f}%)",
+        "",
+    ])
+
+    real_rpr = real_res["request_pass_rate"]
+    improvement = round(real_rpr / 1.5, 1) if real_rpr > 0 else 0.0
+    lines.extend([
+        f"Improvement over 1.5% baseline:   {improvement}x (on Request Pass Rate)",
+        f"Semantic leaks detected:          {leaks_count} / {len(requests)} requests",
+        "",
+        "============================================================",
+    ])
+
+    return "\n".join(lines)
 
 
 # 5. Standard MCP entry point
