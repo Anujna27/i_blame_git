@@ -1,19 +1,13 @@
+import html
+import json
 import os
+import re
 import sys
 from pathlib import Path
 
-# Automatically ensure project virtual environment is used if available
 ROOT_DIR = Path(__file__).resolve().parent
-VENV_PYTHON = ROOT_DIR / "venv" / "Scripts" / "python.exe"
-if VENV_PYTHON.exists() and Path(sys.executable).resolve() != VENV_PYTHON.resolve():
-    import subprocess
-    sys.exit(subprocess.call([str(VENV_PYTHON), str(Path(__file__).resolve())] + sys.argv[1:]))
-
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
-os.chdir(ROOT_DIR)
-
-import json
 
 try:
     from bs4 import BeautifulSoup
@@ -39,8 +33,6 @@ def clean_html(raw_html: str) -> str:
             return BeautifulSoup(raw_html, "html.parser").get_text(" ", strip=True)
         except Exception:
             pass
-    import html
-    import re
     text = re.sub(r"<[^>]+>", " ", raw_html)
     return html.unescape(" ".join(text.split()))
 
@@ -92,5 +84,11 @@ def ingest_gemini(path=GEMINI_PATH):
 
 
 if __name__ == "__main__":
+    # If run outside the project virtual environment, automatically switch to it
+    venv_python = ROOT_DIR / "venv" / "Scripts" / "python.exe"
+    if venv_python.exists() and Path(sys.executable).resolve() != venv_python.resolve():
+        import subprocess
+        sys.exit(subprocess.call([str(venv_python), str(Path(__file__).resolve())] + sys.argv[1:]))
+
     target_path = sys.argv[1] if len(sys.argv) > 1 else GEMINI_PATH
     ingest_gemini(target_path)
