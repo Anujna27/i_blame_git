@@ -111,8 +111,6 @@ def print_console_output(
     print("")
 
     real_rpr = real_res["request_pass_rate"]
-    improvement = round(real_rpr / 1.5, 1) if real_rpr > 0 else 0.0
-    print(f"Improvement over 1.5% baseline:   {improvement}x (on Request Pass Rate)")
     print(f"Semantic leaks detected:          {leaks_count} / {requests_count} requests")
     print("")
     print("============================================================")
@@ -304,6 +302,12 @@ Semantic leak diagnostic details are persisted in [{leak_report_path.name}](file
 
 def main():
     parser = argparse.ArgumentParser(description="BEMULA-Scale Synthetic Replication Harness")
+    parser.add_argument(
+        "--users",
+        type=int,
+        default=50,
+        help="Number of user profiles to test (scales questions proportionally).",
+    )
     parser.add_argument("--limit", type=int, default=None, help="Limit number of profiles (default: all 50)")
     parser.add_argument("--fresh", action="store_true", help="Ignore partial results and force fresh run")
     parser.add_argument("--smoke", action="store_true", help="Run 50-question smoke test")
@@ -314,7 +318,6 @@ def main():
         help="Answer generator backend (default: mock)",
     )
     parser.add_argument("--model", type=str, default=None, help="Model override for LLM backend")
-    parser.add_argument("--sample", type=int, default=None, help="Sample N questions for cost control")
     parser.add_argument(
         "--delay",
         type=float,
@@ -346,7 +349,7 @@ def main():
     if args.backend != "mock":
         print(
             "WARNING: Real LLM backend enabled. Estimated cost for 1,742 questions: check your provider pricing. "
-            "Use --sample 100 for a cost-controlled run first."
+            "Use --users 5 for a cost-controlled run first."
         )
 
     if not VECTOR_STORE_AVAILABLE:
@@ -356,14 +359,22 @@ def main():
     # Load dataset
     profiles, requests, questions = load_dataset(eval_dir)
 
-    if args.limit is not None and args.limit > 0:
-        profiles = profiles[:args.limit]
-        allowed_pids = {p["profile_id"] for p in profiles}
-        requests = [r for r in requests if r["profile_id"] in allowed_pids]
-        allowed_rids = {r["request_id"] for r in requests}
-        questions = [q for q in questions if q["request_id"] in allowed_rids]
+    total_profiles = len(profiles)
+    requested_users = args.limit if args.limit is not None else args.users
+    num_users = min(requested_users, total_profiles)
+    ratio = num_users / total_profiles
 
-    max_q = args.sample if args.sample is not None else (50 if args.smoke else None)
+    profiles = profiles[:num_users]
+    profile_ids = {p.get("profile_id") for p in profiles}
+
+    # Scale questions and requests proportionally
+    target_req_count = int(len(requests) * ratio)
+    target_q_count = int(len(questions) * ratio)
+
+    requests = [r for r in requests if r.get("profile_id") in profile_ids][:target_req_count]
+    questions = [q for q in questions if q.get("profile_id") in profile_ids][:target_q_count]
+
+    max_q = 50 if args.smoke else None
 
     # 1. Run Naive Baseline Agent
     naive_res = run_bemula_scale_eval(
