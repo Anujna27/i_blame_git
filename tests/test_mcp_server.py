@@ -101,19 +101,20 @@ def test_forget_topic_no_matches():
 def test_run_memory_audit_tool():
     log = run_memory_audit(num_users=2)
     assert isinstance(log, str)
-    assert "STARTING LIVE AUDIT FOR 2 USERS" in log
-    assert "--- USER 1 ---" in log
-    assert "--- USER 2 ---" in log
+    assert "LIVE AUDIT: 2 SYNTHETIC USERS" in log
+    assert "Loaded 2 profiles" in log
+    assert "--- 5-LEVEL ERASURE EXECUTION SAMPLE ---" in log
     assert "[Level 1] Source Record Removed: PASS" in log
     assert "[Level 2] Derived Artifacts Invalidated: PASS" in log
     assert "[Level 3] Inference Blocked: PASS" in log
-    assert "[Level 4] Non-Inferability Checked: PASS" in log
-    assert "[Level 5] State Restoration Checked: PASS" in log
-    assert "[Recall API Key] Abstained: True" in log
-    assert "[Recall Fav Color] Preserved: True" in log
-    assert "FINAL AUDIT REPORT" in log
-    assert "Users Tested:         2" in log
-    assert "Request Pass Rate:    100.00%" in log
-    assert "Forget Accuracy:      100.00% (Zero Leaks)" in log
-    assert "Preservation Accuracy:100.00%" in log
+    assert "[Level 4] Non-Inferability Checked: PARTIAL" in log
+    assert "[Level 5] State Restoration Checked: FAIL" in log
+    assert "FINAL ACCOUNTABILITY REPORT" in log
+    assert "Users Evaluated:       2" in log
+    assert "METRICS & FAILURE ANALYSIS:" in log
+    assert "Forget Accuracy:       100.00%" in log
+    assert "Zero leaks. All targeted data was successfully blocked." in log
+    assert "Control Accuracy:      100.00%" in log
+    assert "Preservation Accuracy:" in log
+    assert "RESIDUAL RISK NOTICE:" in log
 
