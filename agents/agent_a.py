@@ -17,6 +17,7 @@ from core.summary_generator import SummaryGenerator
 from stores.filesystem_memory import FilesystemMemory
 from core.llm_config import ConfiguredLLM
 from core.graph_healer import GraphHealer
+from core.erasure_recovery import ErasureRecovery
 
 
 class AgentA:
@@ -27,6 +28,7 @@ class AgentA:
         self.hash_chain = HashChain()
         self.erasure = ErasureEngine()
         self.pending_erasures = self.erasure.journal.pending()
+        self.erasure_recovery = ErasureRecovery(self.erasure)
         self.contradiction = ContradictionEngine()
         self.abstention = AbstentionEngine()
         self.residual_risks = []
@@ -159,6 +161,16 @@ class AgentA:
 
     def llm_telemetry(self):
         return self.llm.telemetry()
+
+    def recover_pending_erasures(self):
+        result = self.erasure_recovery.reconcile(
+            self.vector_store,
+            self.graph,
+            self.hash_chain,
+            self.filesystem_memory,
+        )
+        self.pending_erasures = self.erasure.journal.pending()
+        return result
 
     def save_healing_schedule(self):
         self.healing_scheduler.save_config()

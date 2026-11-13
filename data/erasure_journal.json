@@ -1,13 +1,13 @@
 [
   {
-    "operation_id": "8b19a72d-67d4-4298-9f6f-2f88e37f3973",
-    "entity_id": "4a98122b-337c-45b6-a405-6f384f1ae6c8",
+    "operation_id": "df9bbff2-8434-4158-9763-67b73c587479",
+    "entity_id": "801a02b1-e5ac-446a-9b56-04c4fbfeace9",
     "actor": "user",
     "reason": "user_requested_erasure",
-    "started_at": "2026-11-13T08:26:25.816659+00:00",
+    "started_at": "2026-11-13T08:29:05.267141+00:00",
     "phase": "completed",
     "completed": true,
     "verdict": "partially_deleted",
-    "completed_at": "2026-11-13T08:26:25.855323+00:00"
+    "completed_at": "2026-11-13T08:29:05.315168+00:00"
   }
 ]
