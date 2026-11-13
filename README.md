@@ -271,6 +271,16 @@ Ollama is local and does not require an API key. The adapter uses its
 OpenAI-compatible `/v1` endpoint. Set `MNEMOSYNE_LLM_PROVIDER=none` to run
 without LLM calls.
 
+For the WSL MCP runner, set these variables in the same WSL terminal before
+starting the runner so core summaries, dreaming escalation, and graph-healing
+suggestions use the same local Ollama model:
+
+```bash
+export MNEMOSYNE_LLM_PROVIDER=ollama
+export MNEMOSYNE_LLM_MODEL=qwen3:1.7b
+export MNEMOSYNE_LLM_BASE_URL=http://127.0.0.1:11434/v1
+```
+
 The default Groq endpoint is `https://api.groq.com/openai/v1`. Override it with `MNEMOSYNE_LLM_BASE_URL` if needed. When using Groq, configure `GROQ_API_KEY`; when using OpenAI or another compatible endpoint, configure `OPENAI_API_KEY`.
 
 The optional Python SDK must be installed in the active environment:
@@ -338,6 +348,28 @@ curl http://127.0.0.1:11434/api/tags
 ollama pull qwen3:1.7b
 ollama list
 ```
+
+### 2a. Enable the core Ollama provider
+
+Set these variables in the same WSL terminal that launches the MCP runner:
+
+```bash
+export MNEMOSYNE_LLM_PROVIDER=ollama
+export MNEMOSYNE_LLM_MODEL=qwen3:1.7b
+export MNEMOSYNE_LLM_BASE_URL=http://127.0.0.1:11434/v1
+```
+
+The MCP path still uses the core MNEMOSYNE pipeline. `remember` performs the
+normal graph, contradiction, vector, session, and audit work. `recall` applies
+bounded retrieval and abstention. `commit_session` runs entity extraction,
+graph healing, and the dreaming consolidation pass. Laya evaluates dreaming
+candidates locally when its gate checkpoint is available; only ambiguous or
+low-confidence candidates escalate to Ollama. The MCP `dream_session` tool can
+also request an explicit pass.
+
+Repeated preference evidence is consolidated before it is sent to the model.
+For example, 20 active mentions of vanilla and 15 of chocolate produce a
+counted preference summary rather than sending all 35 duplicate sentences.
 
 ### 3. Create durable memory with Agent A
 
@@ -554,9 +586,12 @@ Run an online RLHF smoke update:
 .\.venv-dpo\Scripts\python.exe scripts/rlhf_grpo_compaction.py --max-train-samples 8 --max-steps 2 --output-dir outputs/mnemosyne-rlhf-grpo
 ```
 
-`AgentA.dream_session(session_id)` consolidates active session entities. Laya
-accepts supported candidates locally; unsupported or low-confidence candidates
-are escalated to the configured LLM. Accepted or LLM-resolved summaries are
-stored as derived entities with `DERIVED_FROM` edges and hash-chain records.
+`AgentA.dream_session(session_id)` consolidates active session entities, and
+`commit_session()` invokes it automatically after the session is committed.
+Laya accepts supported candidates locally; unsupported or low-confidence
+candidates are escalated to the configured LLM. Accepted or LLM-resolved
+summaries are stored as derived entities with `DERIVED_FROM` edges and
+hash-chain records. The MCP server also exposes `dream_session` for an
+explicit consolidation pass.
 If Laya is unavailable, the system escalates and does not silently persist the
 candidate.

@@ -112,7 +112,9 @@ async def run(args: argparse.Namespace) -> None:
         messages = [{"role": "system", "content": (
             "You are a local Ollama agent using MNEMOSYNE for durable memory. "
             "The runner has already initialized the MNEMOSYNE session. Use recall "
-            "for context, remember durable facts, and commit_session before exit."
+            "for context, remember durable facts, and commit_session before exit. "
+            "Commit automatically runs the core dreaming consolidation; use "
+            "dream_session when an explicit consolidation pass is needed."
         )}]
 
     project_root = Path(__file__).resolve().parents[1]

@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from typing import Any, Iterable, Optional
 
@@ -28,6 +29,11 @@ _STOPWORDS = {
     "a", "an", "and", "are", "be", "for", "from", "in", "is", "it", "of", "on", "or",
     "that", "the", "to", "use", "uses", "with", "will", "this", "user", "keep", "active",
 }
+
+_PREFERENCE_RE = re.compile(
+    r"\b(?:i|user)\s+(?:like|likes|prefer|prefers)\s+(?:the\s+)?(.+?)(?:[.!?]|$)",
+    re.IGNORECASE,
+)
 
 
 def _evidence_support(context: Any, candidate: str) -> tuple[bool, str]:
@@ -142,14 +148,43 @@ class HonchoDreaming:
 
     @staticmethod
     def candidate_from_nodes(nodes: Iterable[Any], token_budget: int = 256) -> str:
+        active = [node for node in nodes if getattr(node, "deletion_state", "active") == "active"]
+        preference_counts: Counter[str] = Counter()
+        preference_display: dict[str, str] = {}
+        for node in active:
+            text = getattr(node, "content", "") or getattr(node, "summary_l1", "")
+            match = _PREFERENCE_RE.search(text)
+            if not match:
+                continue
+            value = re.sub(r"\s+", " ", match.group(1).strip(" ."))
+            key = value.casefold()
+            preference_counts[key] += 1
+            preference_display.setdefault(key, value)
+
         lines: list[str] = []
         tokens = 0
-        for node in nodes:
-            if getattr(node, "deletion_state", "active") != "active":
-                continue
+        if preference_counts:
+            ranked = preference_counts.most_common()
+            winner_key, winner_count = ranked[0]
+            lines.append(
+                f"Preference evidence: {preference_display[winner_key]} "
+                f"({winner_count} mention(s); consolidated from active memory)."
+            )
+            if len(ranked) > 1:
+                alternatives = ", ".join(
+                    f"{preference_display[key]} ({count})" for key, count in ranked[1:]
+                )
+                lines.append(f"Alternative preference evidence: {alternatives}.")
+
+        for node in active:
             text = getattr(node, "summary_l1", "") or getattr(node, "content", "")
             cost = len(text.split())
             if tokens + cost > token_budget:
+                continue
+            # Repeated preference evidence is represented by the counted
+            # consolidation above; do not spend the bounded dream context on
+            # every identical sentence.
+            if preference_counts and _PREFERENCE_RE.search(text):
                 continue
             lines.append(text)
             tokens += cost
@@ -161,7 +196,20 @@ class HonchoDreaming:
                     "deletion_state": n.deletion_state} for n in nodes
                    if getattr(n, "deletion_state", "active") == "active"]
         candidate = self.candidate_from_nodes(nodes, token_budget=token_budget)
-        decision = self.gate.decide(context, candidate, {"source_node_ids": [n.node_id for n in nodes]})
+        preference_counts = Counter()
+        for node in nodes:
+            match = _PREFERENCE_RE.search(getattr(node, "content", ""))
+            if match:
+                preference_counts[re.sub(r"\s+", " ", match.group(1).strip(" .")).casefold()] += 1
+        decision = self.gate.decide(
+            context,
+            candidate,
+            {
+                "source_node_ids": [n.node_id for n in nodes],
+                "preference_counts": dict(preference_counts),
+            },
+        )
+        decision.metadata["preference_counts"] = dict(preference_counts)
         if decision.action == "accept" or llm is None:
             return decision
         try:

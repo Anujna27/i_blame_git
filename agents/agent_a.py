@@ -134,12 +134,17 @@ class AgentA:
         session = self.sessions.commit_session(session_id, entity_ids, actor)
         self.hash_chain.append("session_commit", session_id, {**session, "reason": reason})
         self.graph_healer.heal_orphans(session_id=session_id)
+        session["dreaming"] = self.dream_session(
+            session_id, actor=actor, reason="after_session_commit"
+        )
         return session
 
     def dream_session(self, session_id, actor="honcho", reason="dreaming_consolidation", token_budget=256):
         """Run local Laya gating, escalate ambiguity to the configured LLM, and persist accepted memory."""
         source_nodes = [node for node in self.all_nodes.values()
-                        if node.session_id == session_id and node.deletion_state == "active"]
+                        if node.session_id == session_id
+                        and node.deletion_state == "active"
+                        and node.entity_type != "dream_summary"]
         decision = self.dreaming.consolidate(source_nodes, llm=self.llm if self.llm.enabled else None,
                                              token_budget=token_budget)
         report = decision.to_dict()
