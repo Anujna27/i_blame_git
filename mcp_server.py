@@ -4,7 +4,7 @@ mcp_server.py
 Model Context Protocol (MCP) server exposing Mnemosyne memory tools to external AI agents.
 Uses the official mcp Python SDK (FastMCP) to expose memory operations:
 - remember: Store memory with provenance and contradiction detection
-- recall: Retrieve bounded, deletion-safe context (or abstain with "I don't know.")
+- recall: Retrieve bounded, deletion-safe context (or abstain with "Request unavailable.")
 - forget: Execute 5-level cryptographic erasure and return the accountability report
 """
 
@@ -121,15 +121,15 @@ def recall(query: str, token_budget: int = 2000) -> str:
                 filtered_context.append(content)
 
         if not filtered_context:
-            return "I don't know."
+            return "Request unavailable."
 
         return "\n".join(filtered_context)
 
     # Fallback if vector_store isn't exposed directly
     result = agent.recall(query, token_budget)
     if result.get("abstained", False):
-        return "I don't know."
-    return result.get("answer", "I don't know.")
+        return "Request unavailable."
+    return result.get("answer", "Request unavailable.")
 
 
 @mcp.tool()

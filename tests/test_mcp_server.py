@@ -42,9 +42,10 @@ def test_recall_tool_hit_and_abstention():
     assert "54329" in context
 
     # Non-existent or empty query behavior
-    # Even if some unrelated memories exist, recall returns string
+    # Even if some unrelated memories exist, recall returns secure abstention
     unknown = recall("xyznonexistentunrelated99881122")
     assert isinstance(unknown, str)
+    assert unknown == "Request unavailable."
 
 
 def test_forget_tool_accountability_report():
