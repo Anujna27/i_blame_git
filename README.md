@@ -105,107 +105,80 @@ The MCP server exposes the memory operations used by an agent:
 
 ## WSL Ollama MCP inter-session and inter-agent test
 
-This is the smallest real-agent acceptance test. It uses Ollama in WSL, the MCP server over stdio, and the shared persistent MNEMOSYNE stores.
+Use two WSL terminals. The Ollama server must be running only once.
 
-### 1. Prepare WSL
+### Terminal 1: install and start Ollama
 
 ```bash
-cd /mnt/d/sahyadri
+cd /mnt/d/devhost/mnemosyne
 sudo apt update
-sudo apt install -y python3-venv python3-pip build-essential
+sudo apt install -y python3-venv python3-pip build-essential zstd
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 python -m pip install faiss-cpu
 python -c "import faiss, mcp; print('dependencies ready')"
-```
-
-In a separate WSL terminal, start Ollama and install the model:
-
-```bash
 ollama serve
-curl http://127.0.0.1:11434/api/tags
-ollama pull qwen3:1.7b
 ```
 
-In the WSL terminal that launches the runner, configure the same provider:
+If `ollama serve` says `address already in use`, Ollama is already running. Leave it running and continue in Terminal 2.
+
+### Terminal 2: configure and run
 
 ```bash
+cd /mnt/d/devhost/mnemosyne
+source .venv/bin/activate
+export MODEL=qwen3:1.7b
 export MNEMOSYNE_LLM_PROVIDER=ollama
-export MNEMOSYNE_LLM_MODEL=qwen3:1.7b
+export MNEMOSYNE_LLM_MODEL="$MODEL"
 export MNEMOSYNE_LLM_BASE_URL=http://127.0.0.1:11434/v1
+ollama pull "$MODEL"
 ```
 
-### 2. Agent A stores a fact
+Agent A stores the memory:
 
 ```bash
-python scripts/ollama_mcp_cli.py --model qwen3:1.7b --conversation memory-demo-a --agent ollama-agent-a
+python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-shared --agent agent-a
 ```
 
-At the prompt, enter:
+Enter:
 
 ```text
-Remember exactly: DELETE_TEST_2026 — my temporary test color is orange.
-Use MNEMOSYNE recall to retrieve DELETE_TEST_2026 and show its exact memory ID.
+Remember exactly: DEMO_AGENT_2026 — I love drinking coffee.
 /exit
 ```
 
-Record the UUID printed by recall.
-
-### 3. Agent B resumes the same conversation
+Agent B resumes the same conversation. This tests a new session and a different agent:
 
 ```bash
-python scripts/ollama_mcp_cli.py --model qwen3:1.7b --conversation memory-demo-a --agent ollama-agent-b --resume
+python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-shared --agent agent-b --resume
 ```
 
 Ask:
 
 ```text
-What do I love drinking?
+Use MNEMOSYNE recall to find DEMO_AGENT_2026. What do I love drinking?
+/exit
 ```
 
-The answer should be `orange`. This proves handoff across a new session and agent.
-
-### 4. Agent C uses an independent conversation
+Agent C uses a completely new conversation. This tests shared durable memory between agents:
 
 ```bash
-python scripts/ollama_mcp_cli.py --model qwen3:1.7b --conversation memory-demo-independent --agent ollama-agent-c
-```
-
-Ask the agent to use MNEMOSYNE recall for `DELETE_TEST_2026`. It should also find `orange`, because durable memory is shared across conversations. Explicitly asking for the tool is useful with small local models.
-
-### 5. Delete and verify from another agent
-
-Start a separate conversation:
-
-```bash
-python scripts/ollama_mcp_cli.py --model qwen3:1.7b --conversation deletion-demo --agent ollama-deletion-agent
-```
-
-Ask it to:
-
-```text
-Use MNEMOSYNE recall to find DELETE_TEST_2026 and show the exact memory ID.
-Call preview_delete with that exact ID and show the impact.
-After reviewing the impact, call delete_memory with that exact ID and confirmation=true.
-```
-
-Then start a fresh verification agent:
-
-```bash
-python scripts/ollama_mcp_cli.py --model qwen3:1.7b --conversation deletion-verification --agent ollama-verification-agent
+python scripts/ollama_mcp_cli.py --model "$MODEL" --conversation demo-independent --agent agent-c
 ```
 
 Ask:
 
 ```text
-Use MNEMOSYNE recall to search for DEMO_AGENT_2026. Do not rely on chat history.
+Use MNEMOSYNE recall to find DEMO_AGENT_2026. What do I love drinking?
+/exit
 ```
 
-The deleted memory must not be returned as active context. The deletion response should include the actor, reason, timestamp, lifecycle result, and residual-risk checks. This test writes persistent state under `data/`, including `data/ollama_sessions/`; use synthetic markers only.
+The answer should be `coffee`. Use synthetic test markers only; these commands write persistent state under `data/`.
 
-The runner is implemented in `scripts/ollama_mcp_cli.py`. It starts `mcp_server.server` over stdio, saves conversation state, starts a new MNEMOSYNE session for each process, and links a resumed session through `parent_session_id`.
+To stop Ollama, press `Ctrl+C` in Terminal 1. To stop a runner, type `/exit`.
+
+The runner is implemented in `scripts/ollama_mcp_cli.py`. It starts the MCP server over stdio, saves conversation state, and links a resumed session through `parent_session_id`.
 
 ## Essential checks
 
