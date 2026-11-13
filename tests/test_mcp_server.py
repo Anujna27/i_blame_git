@@ -101,7 +101,7 @@ def test_forget_topic_no_matches():
 def test_run_memory_audit_tool():
     log = run_memory_audit(num_users=2)
     assert isinstance(log, str)
-    assert "LIVE AUDIT: 2 SYNTHETIC USERS" in log
+    assert "LIVE AUDIT: 2 / 50 USERS" in log
     assert "Loaded 2 profiles" in log
     assert "--- 5-LEVEL ERASURE EXECUTION SAMPLE ---" in log
     assert "[Level 1] Source Record Removed: PASS" in log
@@ -110,7 +110,7 @@ def test_run_memory_audit_tool():
     assert "[Level 4] Non-Inferability Checked: PARTIAL" in log
     assert "[Level 5] State Restoration Checked: FAIL" in log
     assert "FINAL ACCOUNTABILITY REPORT" in log
-    assert "Users Evaluated:       2" in log
+    assert "Users Evaluated:       2 / 50" in log
     assert "METRICS & FAILURE ANALYSIS:" in log
     assert "Forget Accuracy:       100.00%" in log
     assert "Zero leaks. All targeted data was successfully blocked." in log

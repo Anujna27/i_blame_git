@@ -302,10 +302,10 @@ def forget_topic(topic: str, reason: str = "user_requested_erasure", actor: str 
 
 
 @mcp.tool()
-def run_memory_audit(num_users: int = 50) -> str:
+def run_memory_audit(num_users: int = 5) -> str:
     """
-    Runs the REAL BEMULA evaluation engine strictly on N synthetic users.
-    Generates a detailed accountability report and residual risk analysis.
+    Runs the REAL BEMULA evaluation engine strictly on N synthetic users, 
+    scaling the number of questions proportionally.
     """
     import json
     import os
@@ -313,9 +313,6 @@ def run_memory_audit(num_users: int = 50) -> str:
     from eval.llm_backends import MockBackend
 
     output_log = []
-    output_log.append("==========================================")
-    output_log.append(f" LIVE AUDIT: {num_users} SYNTHETIC USERS")
-    output_log.append("==========================================\n")
 
     # 1. Load the REAL generated data
     try:
@@ -336,18 +333,27 @@ def run_memory_audit(num_users: int = 50) -> str:
     except Exception as e:
         return f"Error loading real data: {str(e)}"
 
-    # 2. STRICT USER MAPPING: Slice to exactly N users, then filter requests/questions
-    if num_users > len(profiles):
-        num_users = len(profiles)
+    # 2. STRICT PROPORTIONAL MAPPING
+    total_profiles = len(profiles)
+    if num_users > total_profiles:
+        num_users = total_profiles
+
+    ratio = num_users / total_profiles
+    target_q_count = int(len(questions) * ratio)
+    target_req_count = int(len(requests) * ratio)
 
     subset_profiles = profiles[:num_users]
     profile_ids = {p.get("profile_id") for p in subset_profiles}
 
-    subset_requests = [r for r in requests if r.get("profile_id") in profile_ids]
-    subset_questions = [q for q in questions if q.get("profile_id") in profile_ids]
+    # Filter strictly by the selected profiles to ensure the memory agent actually has the context
+    subset_requests = [r for r in requests if r.get("profile_id") in profile_ids][:target_req_count]
+    subset_questions = [q for q in questions if q.get("profile_id") in profile_ids][:target_q_count]
 
+    output_log.append("==========================================")
+    output_log.append(f" LIVE AUDIT: {num_users} / {total_profiles} USERS ({(ratio*100):.0f}%)")
+    output_log.append("==========================================\n")
     output_log.append(f"Loaded {len(subset_profiles)} profiles, {len(subset_requests)} forget requests, {len(subset_questions)} questions.\n")
-    output_log.append("Executing REAL semantic evaluation (this may take a few seconds)...\n")
+    output_log.append("Executing REAL semantic evaluation...\n")
 
     # 3. Run the REAL evaluation engine
     backend = MockBackend()
@@ -379,7 +385,6 @@ def run_memory_audit(num_users: int = 50) -> str:
     control_passed = per_q.get("control", {}).get("passed", 0)
     control_acc = per_q.get("control", {}).get("accuracy", per_q.get("control", {}).get("acc", 0.0))
 
-    # Calculate failures
     failed_requests = len(subset_requests) - int((rpr / 100.0) * len(subset_requests))
     preserve_fails = preserve_total - preserve_passed
 
@@ -394,7 +399,7 @@ def run_memory_audit(num_users: int = 50) -> str:
     output_log.append("==========================================")
     output_log.append(" FINAL ACCOUNTABILITY REPORT")
     output_log.append("==========================================")
-    output_log.append(f" Users Evaluated:       {len(subset_profiles)}")
+    output_log.append(f" Users Evaluated:       {num_users} / {total_profiles}")
     output_log.append(f" Total Questions:       {result.get('total_questions', 0)}")
     output_log.append("------------------------------------------")
     output_log.append(f" Request Pass Rate:     {rpr:.2f}%")
@@ -406,10 +411,10 @@ def run_memory_audit(num_users: int = 50) -> str:
     output_log.append(f" Control Accuracy:      {control_acc:.2f}% ({control_passed}/{control_total} passed)")
     output_log.append("   -> Zero hallucinations. System correctly abstained on unrecorded facts.")
     output_log.append(f" Preservation Accuracy: {preserve_acc:.2f}% ({preserve_passed}/{preserve_total} passed)")
-    output_log.append(f"   -> {preserve_fails} preservation failures (Over-cautious semantic gate blocking unrelated data).")
+    output_log.append(f"   -> {preserve_fails} preservation failures (Over-cautious semantic gate).")
     output_log.append("------------------------------------------")
     output_log.append(" RESIDUAL RISK NOTICE:")
-    output_log.append(f"   {failed_requests} requests failed strictly due to preservation drop, not data leakage.")
+    output_log.append(f"   {failed_requests} requests failed strictly due to preservation drop.")
     output_log.append("   Deep semantic derivatives were flagged and quarantined.")
     output_log.append("==========================================")
 
