@@ -68,6 +68,12 @@ def commit_session(session_id: str, agent_id: str, reason: str = "session_end") 
 
 
 @mcp.tool()
+def dream_session(session_id: str, agent_id: str, token_budget: int = 256) -> dict[str, Any]:
+    """Consolidate active session memories through the local dreaming gate."""
+    return service.dream_session(session_id, agent_id, token_budget)
+
+
+@mcp.tool()
 def preview_delete(node_id: str) -> dict[str, Any]:
     """Inspect relevance, usage, descendants, and risks before deletion."""
     return service.preview_delete(node_id)

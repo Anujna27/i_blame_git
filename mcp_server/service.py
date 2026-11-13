@@ -99,19 +99,32 @@ class MnemosyneService:
         # existing AgentA behavior used by the demo and claim tests.
         context = builder.build_context(query, session_id=session_id)
         entities = context.entities[:top_k]
+        abstained, abstention_reason = self.agent.abstention.should_abstain(query, entities)
         return {
-            "answer": "\n".join(entity.summary_l1 or entity.content for entity in entities),
-            "memory_ids": [entity.node_id for entity in entities],
-            "memories": [self._node_summary(entity) for entity in entities],
+            "answer": "" if abstained else "\n".join(entity.summary_l1 or entity.content for entity in entities),
+            "memory_ids": [] if abstained else [entity.node_id for entity in entities],
+            "memories": [] if abstained else [self._node_summary(entity) for entity in entities],
             "tokens_used": sum(len((entity.summary_l1 or entity.content).split()) for entity in entities),
             "ranking_explanations": context.ranking_explanations[:top_k],
-            "abstained": not bool(entities),
+            "abstained": abstained,
+            "abstention_reason": abstention_reason,
             "session_id": session_id,
         }
 
     def commit_session(self, session_id: str, agent_id: str, reason: str = "session_end") -> dict[str, Any]:
         result = self.agent.commit_session(session_id, actor=agent_id, reason=reason)
         return {"session_id": session_id, "agent_id": agent_id, "commit": result}
+
+    def dream_session(self, session_id: str, agent_id: str, token_budget: int = 256) -> dict[str, Any]:
+        """Run the local dreaming/Laya gate for a session on demand."""
+        if token_budget <= 0:
+            raise ValueError("token_budget must be positive")
+        return self.agent.dream_session(
+            session_id,
+            actor=agent_id,
+            reason="mcp_dreaming_request",
+            token_budget=token_budget,
+        )
 
     def preview_delete(self, node_id: str) -> dict[str, Any]:
         node = self.agent.graph.get_node(node_id)

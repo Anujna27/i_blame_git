@@ -30,7 +30,8 @@ Tools:
 - `start_session`: resume durable context for an agent and session.
 - `remember`: persist a memory with session and agent identity.
 - `recall`: retrieve deletion-safe session-aware context.
-- `commit_session`: persist a handover point.
+- `commit_session`: persist a handover point and run core dreaming consolidation.
+- `dream_session`: explicitly run the local dreaming/Laya gate for a session.
 - `preview_delete`: inspect relevance, frequency, descendants, and risks.
 - `delete_memory`: permanently delete after explicit confirmation.
 - `export_context_capsule`: create a portable memory capsule.
