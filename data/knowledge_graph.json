@@ -68,7 +68,7 @@
       "entity_type": "generic",
       "content": "I prefer Python",
       "session_id": "sess_000",
-      "deletion_state": "active",
+      "deletion_state": "source_removed",
       "version": 1,
       "lifecycle": [
         {
@@ -77,6 +77,14 @@
           "actor": "system",
           "reason": "entity_created",
           "timestamp": "2026-11-12T20:09:04.308448+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "3708f5aa-91ee-4702-9804-c3c8c629d3de",
+          "state": "deleted",
+          "actor": "user",
+          "reason": "user_requested_erasure",
+          "timestamp": "2026-11-12T22:47:23.970252+00:00",
           "metadata": {}
         }
       ],
@@ -110,6 +118,9 @@
         "timestamp": "2026-11-12T20:09:04.308403+00:00Z",
         "raw_reference": "sess_000_turn_1"
       },
+      "deleted_by": "user",
+      "deleted_reason": "user_requested_erasure",
+      "deleted_at": "2026-11-12T22:47:23.970252+00:00",
       "id": "fdd4226c-9f37-4cba-819e-34366966894f"
     },
     {
@@ -117,7 +128,7 @@
       "entity_type": "generic",
       "content": "My name is Alex",
       "session_id": "sess_001",
-      "deletion_state": "active",
+      "deletion_state": "source_removed",
       "version": 1,
       "lifecycle": [
         {
@@ -126,6 +137,14 @@
           "actor": "system",
           "reason": "entity_created",
           "timestamp": "2026-11-12T20:09:04.313662+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "6d537aa4-7344-4fae-975b-25b46ab50074",
+          "state": "deleted",
+          "actor": "user",
+          "reason": "user_requested_erasure",
+          "timestamp": "2026-11-12T23:08:52.550315+00:00",
           "metadata": {}
         }
       ],
@@ -159,6 +178,9 @@
         "timestamp": "2026-11-12T20:09:04.313605+00:00Z",
         "raw_reference": "sess_001_turn_0"
       },
+      "deleted_by": "user",
+      "deleted_reason": "user_requested_erasure",
+      "deleted_at": "2026-11-12T23:08:52.550315+00:00",
       "id": "e29dd5b3-d793-4dcb-b1a5-d9662aa1f800"
     },
     {
@@ -264,7 +286,7 @@
       "entity_type": "generic",
       "content": "I prefer Python",
       "session_id": "sess_002",
-      "deletion_state": "active",
+      "deletion_state": "source_removed",
       "version": 1,
       "lifecycle": [
         {
@@ -273,6 +295,14 @@
           "actor": "system",
           "reason": "entity_created",
           "timestamp": "2026-11-12T20:09:04.331290+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "dff3d90c-e154-43d9-85a5-3106eb0f8c7f",
+          "state": "deleted",
+          "actor": "user",
+          "reason": "user_requested_erasure",
+          "timestamp": "2026-11-12T23:00:17.295045+00:00",
           "metadata": {}
         }
       ],
@@ -306,6 +336,9 @@
         "timestamp": "2026-11-12T20:09:04.331253+00:00Z",
         "raw_reference": "sess_002_turn_1"
       },
+      "deleted_by": "user",
+      "deleted_reason": "user_requested_erasure",
+      "deleted_at": "2026-11-12T23:00:17.295045+00:00",
       "id": "01102045-c7fd-4e15-942b-314a431e02b4"
     },
     {
