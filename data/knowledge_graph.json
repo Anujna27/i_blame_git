@@ -61,6 +61,17 @@
       "deleted_by": "user",
       "deleted_reason": "user_requested_erasure",
       "deleted_at": "2026-11-12T20:09:04.405165+00:00",
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681500+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681508+00:00",
+      "access_count": 0,
+      "summary_l0": "My name is Alex",
+      "summary_l1": "My name is Alex",
+      "content_l2": "My name is Alex",
       "id": "6acbea91-8ef2-48ea-bdc2-b7a2ff3d09d0"
     },
     {
@@ -121,6 +132,17 @@
       "deleted_by": "user",
       "deleted_reason": "user_requested_erasure",
       "deleted_at": "2026-11-12T22:47:23.970252+00:00",
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681532+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681533+00:00",
+      "access_count": 0,
+      "summary_l0": "I prefer Python",
+      "summary_l1": "I prefer Python",
+      "content_l2": "I prefer Python",
       "id": "fdd4226c-9f37-4cba-819e-34366966894f"
     },
     {
@@ -181,6 +203,17 @@
       "deleted_by": "user",
       "deleted_reason": "user_requested_erasure",
       "deleted_at": "2026-11-12T23:08:52.550315+00:00",
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681546+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681546+00:00",
+      "access_count": 0,
+      "summary_l0": "My name is Alex",
+      "summary_l1": "My name is Alex",
+      "content_l2": "My name is Alex",
       "id": "e29dd5b3-d793-4dcb-b1a5-d9662aa1f800"
     },
     {
@@ -230,6 +263,20 @@
         "timestamp": "2026-11-12T20:09:04.318245+00:00Z",
         "raw_reference": "sess_001_turn_1"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681554+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681554+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "I prefer Python",
+      "summary_l1": "I prefer Python",
+      "content_l2": "I prefer Python",
       "id": "f65f9244-1a49-4110-93fb-15f6f65f6408"
     },
     {
@@ -279,6 +326,20 @@
         "timestamp": "2026-11-12T20:09:04.325063+00:00Z",
         "raw_reference": "sess_002_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681562+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681563+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "My name is Alex",
+      "summary_l1": "My name is Alex",
+      "content_l2": "My name is Alex",
       "id": "11128324-0cd3-4a65-90fb-335033ea9a19"
     },
     {
@@ -339,6 +400,17 @@
       "deleted_by": "user",
       "deleted_reason": "user_requested_erasure",
       "deleted_at": "2026-11-12T23:00:17.295045+00:00",
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681644+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681646+00:00",
+      "access_count": 0,
+      "summary_l0": "I prefer Python",
+      "summary_l1": "I prefer Python",
+      "content_l2": "I prefer Python",
       "id": "01102045-c7fd-4e15-942b-314a431e02b4"
     },
     {
@@ -388,6 +460,20 @@
         "timestamp": "2026-11-12T20:09:04.337919+00:00Z",
         "raw_reference": "sess_003_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681664+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681664+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "My name is Alex",
+      "summary_l1": "My name is Alex",
+      "content_l2": "My name is Alex",
       "id": "1d1ac756-7ae4-4bae-84e8-1aa0087725c0"
     },
     {
@@ -437,6 +523,20 @@
         "timestamp": "2026-11-12T20:09:04.344280+00:00Z",
         "raw_reference": "sess_003_turn_1"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681677+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681677+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "I prefer Python",
+      "summary_l1": "I prefer Python",
+      "content_l2": "I prefer Python",
       "id": "146c581a-14bb-40a3-a59d-19b0ebf081e5"
     },
     {
@@ -486,6 +586,20 @@
         "timestamp": "2026-11-12T20:09:04.352511+00:00Z",
         "raw_reference": "sess_004_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681687+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681688+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "My name is Alex",
+      "summary_l1": "My name is Alex",
+      "content_l2": "My name is Alex",
       "id": "59956d0c-d397-405a-a6fc-847b399b5a92"
     },
     {
@@ -535,6 +649,20 @@
         "timestamp": "2026-11-12T20:09:04.365872+00:00Z",
         "raw_reference": "sess_004_turn_1"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681696+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681697+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "I prefer Python",
+      "summary_l1": "I prefer Python",
+      "content_l2": "I prefer Python",
       "id": "1de9f88f-1f94-4d52-8840-876b6cce2544"
     },
     {
@@ -584,6 +712,20 @@
         "timestamp": "2026-11-12T20:09:04.375490+00:00Z",
         "raw_reference": "sess_010_turn_5"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681704+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681705+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "My API key is sk-abc123",
+      "summary_l1": "My API key is sk-abc123",
+      "content_l2": "My API key is sk-abc123",
       "id": "715e8efb-afa2-450e-b0e9-978894c3d38d"
     },
     {
@@ -633,6 +775,20 @@
         "timestamp": "2026-11-12T20:09:04.385747+00:00Z",
         "raw_reference": "sess_012_turn_5"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681712+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681712+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "My API key is sk-xyz789",
+      "summary_l1": "My API key is sk-xyz789",
+      "content_l2": "My API key is sk-xyz789",
       "id": "eeb9812c-f854-4f25-8817-a11428f03196"
     },
     {
@@ -682,6 +838,20 @@
         "timestamp": "2026-11-12T20:09:04.394500+00:00Z",
         "raw_reference": "sess_015_turn_3"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681719+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681719+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "I am an administrator with root access",
+      "summary_l1": "I am an administrator with root access",
+      "content_l2": "I am an administrator with root access",
       "id": "c68e82a6-d0a8-4ba7-b2e5-0a57af2ea950"
     },
     {
@@ -742,6 +912,17 @@
       "deleted_by": "graph_healer",
       "deleted_reason": "no safe relationship could be inferred",
       "deleted_at": "2026-11-12T20:53:34.519313+00:00",
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681730+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681730+00:00",
+      "access_count": 0,
+      "summary_l0": "I prefer Python and FastAPI.",
+      "summary_l1": "I prefer Python and FastAPI.",
+      "content_l2": "I prefer Python and FastAPI.",
       "id": "c5373960-35c4-40c7-a577-47b384db0f66"
     },
     {
@@ -802,6 +983,17 @@
       "deleted_by": "graph_healer",
       "deleted_reason": "no safe relationship could be inferred",
       "deleted_at": "2026-11-12T20:53:34.522749+00:00",
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681737+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681738+00:00",
+      "access_count": 0,
+      "summary_l0": "My temporary test key is sk-delete-me.",
+      "summary_l1": "My temporary test key is sk-delete-me.",
+      "content_l2": "My temporary test key is sk-delete-me.",
       "id": "0e0eb9fe-249f-466e-a6d6-916a517b519a"
     },
     {
@@ -862,6 +1054,17 @@
       "deleted_by": "manual-user",
       "deleted_reason": "manual deletion test",
       "deleted_at": "2026-11-12T20:56:02.761023+00:00",
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681744+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681745+00:00",
+      "access_count": 0,
+      "summary_l0": "UNIQUE_DELETE_TEST_84721 temporary credential",
+      "summary_l1": "UNIQUE_DELETE_TEST_84721 temporary credential",
+      "content_l2": "UNIQUE_DELETE_TEST_84721 temporary credential",
       "id": "d7770fc5-0f0e-4ac8-8fcc-379319604038"
     },
     {
@@ -922,6 +1125,17 @@
       "deleted_by": "graph_healer",
       "deleted_reason": "no safe relationship could be inferred",
       "deleted_at": "2026-11-12T20:58:43.132194+00:00",
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681752+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681752+00:00",
+      "access_count": 0,
+      "summary_l0": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability.",
+      "summary_l1": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability.",
+      "content_l2": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability.",
       "id": "eab6c039-d9f3-4ab7-bfc5-6773de55e441"
     },
     {
@@ -982,6 +1196,17 @@
       "deleted_by": "graph_healer",
       "deleted_reason": "no safe relationship could be inferred",
       "deleted_at": "2026-11-12T20:58:51.967485+00:00",
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681759+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681759+00:00",
+      "access_count": 0,
+      "summary_l0": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability.",
+      "summary_l1": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability.",
+      "content_l2": "Himanshu is building MNEMOSYNE, a memory system using a knowledge graph and vector retrieval. He prefers Python and wants deletion accountability.",
       "id": "5ccf9891-c5d3-4977-b395-b3f6dbc6cf2f"
     },
     {
@@ -1031,6 +1256,20 @@
         "timestamp": "2026-11-13T12:23:18.653027+00:00Z",
         "raw_reference": "gemini_bridge_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681765+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681765+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of tec",
+      "summary_l1": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?4. Explain how researchers can use bibliographic databases to find relevant literature.5. How technical reading is different from general reading? 6. Write the general steps followed for technical reading.7. Explain the three main functions of citation.8. Explain basic search operators used in search option.9. How do the title and keywords of a research paper influence its citation impact10. What does the Author should acknowledge? List and explain.",
+      "content_l2": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?4. Explain how researchers can use bibliographic databases to find relevant literature.5. How technical reading is different from general reading? 6. Write the general steps followed for technical reading.7. Explain the three main functions of citation.8. Explain basic search operators used in search option.9. How do the title and keywords of a research paper influence its citation impact10. What does the Author should acknowledge? List and explain.",
       "id": "2927aa07-2217-4647-8bc5-b9e2c9683660"
     },
     {
@@ -1080,6 +1319,20 @@
         "timestamp": "2026-11-13T12:24:02.239370+00:00Z",
         "raw_reference": "gemini_bridge_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681776+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681777+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding gr",
+      "summary_l1": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows . Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators . Module 2 Evaluate and assess results, and use filters . Module 2 Modify the search as needed . Module 2 Look at the citations and references of relevant articles when they are found . Module 2 Perform this entire process multiple times as a continuous and cyclical routine that goes back and forth until the end of the research project . Module 2 2. Describe the role of bibliographic databases in academic research Bibliographic databases function as abstracting and indexing services that are useful for collecting citation-related information and abstracts of research articles from scholarly literature, making them available through search . Their roles and benefits include: Module 2 Allowing researchers to perform simultaneous searches across large collections of literature . Module 2 Providing access to peer-reviewed journal articles, conference proceedings, and other scholarly resources with better quality control and search functionality compared to open web searches . Module 2 + 1 Assisting researchers in evaluating, narrowing, or broadening search results based on subject areas, dates, publication types, and built-in fields (such as title, author, and topic) . Module 2 + 2 3. Explain the different ways that research choices matter from an ethical perspective and influence the effects of technology? (Note: The provided text focuses on literature review, technical reading, citations, and acknowledgments, and does not contain information regarding ethical choices and their specific influence on the effects of technology.) 4. Explain how researchers can use bibliographic databases to find relevant literature Researchers can use bi",
+      "content_l2": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows . Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators . Module 2 Evaluate and assess results, and use filters . Module 2 Modify the search as needed . Module 2 Look at the citations and references of relevant articles when they are found . Module 2 Perform this entire process multiple times as a continuous and cyclical routine that goes back and forth until the end of the research project . Module 2 2. Describe the role of bibliographic databases in academic research Bibliographic databases function as abstracting and indexing services that are useful for collecting citation-related information and abstracts of research articles from scholarly literature, making them available through search . Their roles and benefits include: Module 2 Allowing researchers to perform simultaneous searches across large collections of literature . Module 2 Providing access to peer-reviewed journal articles, conference proceedings, and other scholarly resources with better quality control and search functionality compared to open web searches . Module 2 + 1 Assisting researchers in evaluating, narrowing, or broadening search results based on subject areas, dates, publication types, and built-in fields (such as title, author, and topic) . Module 2 + 2 3. Explain the different ways that research choices matter from an ethical perspective and influence the effects of technology? (Note: The provided text focuses on literature review, technical reading, citations, and acknowledgments, and does not contain information regarding ethical choices and their specific influence on the effects of technology.) 4. Explain how researchers can use bibliographic databases to find relevant literature Researchers can use bibliographic databases to find relevant literature by: Selecting databases that match their specific subject area, date coverage, and publication type . Module 2 Using built-in dropdown fields (such as title, topic, author, or address) to target specific areas of interest . Module 2 Utilizing tools like the \"Cited reference search\" to trace articles that have cited a previously published paper, revealing how a familiar idea has been applied, improved, or extended . Module 2 Applying filters, narrowing panels, and sorting options (such as sorting by highest-to-lowest citations or publication date) to isolate peer-reviewed journal articles and relevant materials . Module 2 5. How technical reading is different from general reading? Technical reading differs from general reading (such as reading a newspaper) in several distinct ways: Goal: The goal of reading an engineering research paper is to understand the specific technical contributions made by the authors . Module 2 Complexity & Audience: Scholarly content is written for fellow experts and students at the edge of knowledge; it is considerably more complex and advanced than general magazines or newspapers . Module 2 + 1 Time and Effort: Technical reading is not a quick read; it requires a purposeful approach, can take many hours, and often necessitates rereading the paper multiple times . Module 2 + 1 6. Write the general steps followed for technical reading The general steps for skimming and reading a technical paper include: Title and Keywords: Read these first to see if they catch your interest; if not, stop and look elsewhere . Module 2 Abstract: Read the abstract to get an overview of the paper in minimum time. Stop reading further if it is not relevant to your field . Module 2 Conclusions, Figures, and Tables: If the abstract is interesting, skip to the conclusions, then read the figures, tables, and their captions to gain a broad idea of what was done . Module 2 Introduction: Delve into the introduction to understand background information, why the study was conducted, and how it furthers the state of the art . Module 2 Results and Discussion: Read these sections next, as they form the \"heart of the paper\" . Module 2 Experimental Setup / Modeling: Read these deeper technical sections only if you are deeply interested and need to understand exactly how the data was gathered and interpreted . Module 2 7. Explain the three main functions of citation The three main functions of citation are: Verification function: Offers readers a chance to ascertain whether an original source is justified, whether assertions are properly described, and allows for the detection of intentional or unintentional distortions or misleading statements . Module 2 Acknowledgment function: Gives researchers credit for their work, playing a crucial role in individual promotions, continued employment, reputation enhancement, and securing research funding from reputed organizations . Module 2 + 1 Documentation function: Used to document scientific concepts and trace the historical progress of a particular technology over the years . Module 2 8. Explain basic search operators used in search option The basic search operators include: OR: Broadens the search by capturing synonyms or variant spellings of a concept . Module 2 Brackets / Parentheses () : Gathers \"OR'd\" synonyms of a concept together while combining them with another concept . Module 2 Quotation marks \"\" : Narrows the search by finding words together as an exact phrase rather than separately . Module 2 Site: Limits the search results to a specific domain or website . Module 2 File type: Limits the search results to a specific file extension (such as PDFs, PowerPoint presentations, or Excel spreadsheets) . Module 2 9. How do the title and keywords of a research paper influence its citation impact Titles: The title is the most important attribute for making a paper traceable and marketing it during a literature survey . Module 2 + 1 Longer titles that include study methodology and/or results in more detail tend to attract more attention and citations . Module 2 Titles containing question marks, colons, or geographical references are generally associated with lower citation rates, while result-describing titles usually receive more citations than method-describing titles . Module 2 Keywords: Including at least two keywords in the title increases the chances of an article being found, read, and cited . Module 2 Keywords represent the essential information and main content of an article, which search engines, digital libraries, and indexing services use to categorize the topic and direct it to the relevant audience . Module 2 10. What does the Author should acknowledge? List and explain. Authors should acknowledge the contributions of others to demonstrate academic integrity . According to the text, authors should acknowledge: Module 2 + 2 Quotations: Direct quotations (exact words/sentences in original order enclosed in quotation marks) and indirect quotations (summarized or paraphrased quotes) must be properly acknowledged with names, dates, and proper attribution . Module 2 Ideas, Facts, and Paraphrasing: External concepts, facts, or paraphrased insights used in the text must be credited to their original creators . Module 2 People (Scientific and Technical Guidance): Acknowledge individuals who provided technical guidance, participated in discussions, shared information, or assisted experimentally and theoretically (such as assistants, students, or technicians) . Module 2 + 1 Funding Organizations: If financial grants were used in the reported work, full details of the funding program and grant number must be acknowledged . Module 2 Oral Discussions or Support: Contributions from discussions or moral/technical support should be credited . Module 2 + 1 Laboratory and Computer Work: Services, facilities, or computational work utilized from centers or organizations with which the authors are not formally affiliated should be gratefully acknowledged . Module 2 + 1",
       "id": "82371b30-d4ca-43b6-aa16-bffd34ae05f5"
     },
     {
@@ -1129,6 +1382,20 @@
         "timestamp": "2026-11-13T12:24:02.296648+00:00Z",
         "raw_reference": "gemini_bridge_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681783+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681784+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Page number",
+      "summary_l1": "Page number",
+      "content_l2": "Page number",
       "id": "e054c0be-92da-499e-9311-ef06c31f13ff"
     },
     {
@@ -1178,6 +1445,20 @@
         "timestamp": "2026-11-13T12:24:02.322111+00:00Z",
         "raw_reference": "gemini_bridge_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681789+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681789+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in ",
+      "summary_l1": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5 . Module 2 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?: Not covered in the provided source document. 4. Explain how researchers can use bibliographic databases to find relevant literature: Found on Page 5 . Module 2 5. How technical reading is different from general reading?: Found on Page 8 . Module 2 6. Write the general steps followed for technical reading: Found on Page 9 . Module 2 7. Explain the three main functions of citation: Found on Page 15 . Module 2 8. Explain basic search operators used in search option: Found on Page 6 . Module 2 9. How do the title and keywords of a research paper influence its citation impact: Found on Page 16 and Page 17 . Module 2 + 1 10. What does the Author should acknowledge? List and explain: Found on Page 21 and Page 22 . Module 2 + 1",
+      "content_l2": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5 . Module 2 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?: Not covered in the provided source document. 4. Explain how researchers can use bibliographic databases to find relevant literature: Found on Page 5 . Module 2 5. How technical reading is different from general reading?: Found on Page 8 . Module 2 6. Write the general steps followed for technical reading: Found on Page 9 . Module 2 7. Explain the three main functions of citation: Found on Page 15 . Module 2 8. Explain basic search operators used in search option: Found on Page 6 . Module 2 9. How do the title and keywords of a research paper influence its citation impact: Found on Page 16 and Page 17 . Module 2 + 1 10. What does the Author should acknowledge? List and explain: Found on Page 21 and Page 22 . Module 2 + 1",
       "id": "62957fab-088d-4116-bf54-a758ad7e8573"
     },
     {
@@ -1227,6 +1508,20 @@
         "timestamp": "2026-11-13T12:48:08.978659+00:00Z",
         "raw_reference": "gemini_bridge_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681795+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681796+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of tec",
+      "summary_l1": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?4. Explain how researchers can use bibliographic databases to find relevant literature.5. How technical reading is different from general reading? 6. Write the general steps followed for technical reading.7. Explain the three main functions of citation.8. Explain basic search operators used in search option.9. How do the title and keywords of a research paper influence its citation impact10. What does the Author should acknowledge? List and explain.",
+      "content_l2": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?4. Explain how researchers can use bibliographic databases to find relevant literature.5. How technical reading is different from general reading? 6. Write the general steps followed for technical reading.7. Explain the three main functions of citation.8. Explain basic search operators used in search option.9. How do the title and keywords of a research paper influence its citation impact10. What does the Author should acknowledge? List and explain.",
       "id": "ece81273-4b01-4de9-b58c-398fa29fc0cf"
     },
     {
@@ -1276,6 +1571,20 @@
         "timestamp": "2026-11-13T12:48:25.332163+00:00Z",
         "raw_reference": "gemini_bridge_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681801+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681802+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding gr",
+      "summary_l1": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows . Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators . Module 2 Evaluate and assess results, and use filters . Module 2 Modify the search as needed . Module 2 Look at the citations and references of relevant articles when they are found . Module 2 Perform this entire process multiple times as a continuous and cyclical routine that goes back and forth until the end of the research project . Module 2 2. Describe the role of bibliographic databases in academic research Bibliographic databases function as abstracting and indexing services that are useful for collecting citation-related information and abstracts of research articles from scholarly literature, making them available through search . Their roles and benefits include: Module 2 Allowing researchers to perform simultaneous searches across large collections of literature . Module 2 Providing access to peer-reviewed journal articles, conference proceedings, and other scholarly resources with better quality control and search functionality compared to open web searches . Module 2 + 1 Assisting researchers in evaluating, narrowing, or broadening search results based on subject areas, dates, publication types, and built-in fields (such as title, author, and topic) . Module 2 + 2 3. Explain the different ways that research choices matter from an ethical perspective and influence the effects of technology? (Note: The provided text focuses on literature review, technical reading, citations, and acknowledgments, and does not contain information regarding ethical choices and their specific influence on the effects of technology.) 4. Explain how researchers can use bibliographic databases to find relevant literature Researchers can use bi",
+      "content_l2": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows . Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators . Module 2 Evaluate and assess results, and use filters . Module 2 Modify the search as needed . Module 2 Look at the citations and references of relevant articles when they are found . Module 2 Perform this entire process multiple times as a continuous and cyclical routine that goes back and forth until the end of the research project . Module 2 2. Describe the role of bibliographic databases in academic research Bibliographic databases function as abstracting and indexing services that are useful for collecting citation-related information and abstracts of research articles from scholarly literature, making them available through search . Their roles and benefits include: Module 2 Allowing researchers to perform simultaneous searches across large collections of literature . Module 2 Providing access to peer-reviewed journal articles, conference proceedings, and other scholarly resources with better quality control and search functionality compared to open web searches . Module 2 + 1 Assisting researchers in evaluating, narrowing, or broadening search results based on subject areas, dates, publication types, and built-in fields (such as title, author, and topic) . Module 2 + 2 3. Explain the different ways that research choices matter from an ethical perspective and influence the effects of technology? (Note: The provided text focuses on literature review, technical reading, citations, and acknowledgments, and does not contain information regarding ethical choices and their specific influence on the effects of technology.) 4. Explain how researchers can use bibliographic databases to find relevant literature Researchers can use bibliographic databases to find relevant literature by: Selecting databases that match their specific subject area, date coverage, and publication type . Module 2 Using built-in dropdown fields (such as title, topic, author, or address) to target specific areas of interest . Module 2 Utilizing tools like the \"Cited reference search\" to trace articles that have cited a previously published paper, revealing how a familiar idea has been applied, improved, or extended . Module 2 Applying filters, narrowing panels, and sorting options (such as sorting by highest-to-lowest citations or publication date) to isolate peer-reviewed journal articles and relevant materials . Module 2 5. How technical reading is different from general reading? Technical reading differs from general reading (such as reading a newspaper) in several distinct ways: Goal: The goal of reading an engineering research paper is to understand the specific technical contributions made by the authors . Module 2 Complexity & Audience: Scholarly content is written for fellow experts and students at the edge of knowledge; it is considerably more complex and advanced than general magazines or newspapers . Module 2 + 1 Time and Effort: Technical reading is not a quick read; it requires a purposeful approach, can take many hours, and often necessitates rereading the paper multiple times . Module 2 + 1 6. Write the general steps followed for technical reading The general steps for skimming and reading a technical paper include: Title and Keywords: Read these first to see if they catch your interest; if not, stop and look elsewhere . Module 2 Abstract: Read the abstract to get an overview of the paper in minimum time. Stop reading further if it is not relevant to your field . Module 2 Conclusions, Figures, and Tables: If the abstract is interesting, skip to the conclusions, then read the figures, tables, and their captions to gain a broad idea of what was done . Module 2 Introduction: Delve into the introduction to understand background information, why the study was conducted, and how it furthers the state of the art . Module 2 Results and Discussion: Read these sections next, as they form the \"heart of the paper\" . Module 2 Experimental Setup / Modeling: Read these deeper technical sections only if you are deeply interested and need to understand exactly how the data was gathered and interpreted . Module 2 7. Explain the three main functions of citation The three main functions of citation are: Verification function: Offers readers a chance to ascertain whether an original source is justified, whether assertions are properly described, and allows for the detection of intentional or unintentional distortions or misleading statements . Module 2 Acknowledgment function: Gives researchers credit for their work, playing a crucial role in individual promotions, continued employment, reputation enhancement, and securing research funding from reputed organizations . Module 2 + 1 Documentation function: Used to document scientific concepts and trace the historical progress of a particular technology over the years . Module 2 8. Explain basic search operators used in search option The basic search operators include: OR: Broadens the search by capturing synonyms or variant spellings of a concept . Module 2 Brackets / Parentheses () : Gathers \"OR'd\" synonyms of a concept together while combining them with another concept . Module 2 Quotation marks \"\" : Narrows the search by finding words together as an exact phrase rather than separately . Module 2 Site: Limits the search results to a specific domain or website . Module 2 File type: Limits the search results to a specific file extension (such as PDFs, PowerPoint presentations, or Excel spreadsheets) . Module 2 9. How do the title and keywords of a research paper influence its citation impact Titles: The title is the most important attribute for making a paper traceable and marketing it during a literature survey . Module 2 + 1 Longer titles that include study methodology and/or results in more detail tend to attract more attention and citations . Module 2 Titles containing question marks, colons, or geographical references are generally associated with lower citation rates, while result-describing titles usually receive more citations than method-describing titles . Module 2 Keywords: Including at least two keywords in the title increases the chances of an article being found, read, and cited . Module 2 Keywords represent the essential information and main content of an article, which search engines, digital libraries, and indexing services use to categorize the topic and direct it to the relevant audience . Module 2 10. What does the Author should acknowledge? List and explain. Authors should acknowledge the contributions of others to demonstrate academic integrity . According to the text, authors should acknowledge: Module 2 + 2 Quotations: Direct quotations (exact words/sentences in original order enclosed in quotation marks) and indirect quotations (summarized or paraphrased quotes) must be properly acknowledged with names, dates, and proper attribution . Module 2 Ideas, Facts, and Paraphrasing: External concepts, facts, or paraphrased insights used in the text must be credited to their original creators . Module 2 People (Scientific and Technical Guidance): Acknowledge individuals who provided technical guidance, participated in discussions, shared information, or assisted experimentally and theoretically (such as assistants, students, or technicians) . Module 2 + 1 Funding Organizations: If financial grants were used in the reported work, full details of the funding program and grant number must be acknowledged . Module 2 Oral Discussions or Support: Contributions from discussions or moral/technical support should be credited . Module 2 + 1 Laboratory and Computer Work: Services, facilities, or computational work utilized from centers or organizations with which the authors are not formally affiliated should be gratefully acknowledged . Module 2 + 1",
       "id": "06fa4fda-1359-434a-bc90-0f698c62b67e"
     },
     {
@@ -1325,6 +1634,20 @@
         "timestamp": "2026-11-13T12:48:25.417142+00:00Z",
         "raw_reference": "gemini_bridge_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681807+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681808+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Page number",
+      "summary_l1": "Page number",
+      "content_l2": "Page number",
       "id": "10578539-4bf0-4c9a-a4f4-3b28ece5eb1e"
     },
     {
@@ -1374,8 +1697,422 @@
         "timestamp": "2026-11-13T12:48:25.446762+00:00Z",
         "raw_reference": "gemini_bridge_turn_0"
       },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:57:15.681813+00:00",
+      "last_accessed": "2026-11-13T20:57:15.681813+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in ",
+      "summary_l1": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5 . Module 2 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?: Not covered in the provided source document. 4. Explain how researchers can use bibliographic databases to find relevant literature: Found on Page 5 . Module 2 5. How technical reading is different from general reading?: Found on Page 8 . Module 2 6. Write the general steps followed for technical reading: Found on Page 9 . Module 2 7. Explain the three main functions of citation: Found on Page 15 . Module 2 8. Explain basic search operators used in search option: Found on Page 6 . Module 2 9. How do the title and keywords of a research paper influence its citation impact: Found on Page 16 and Page 17 . Module 2 + 1 10. What does the Author should acknowledge? List and explain: Found on Page 21 and Page 22 . Module 2 + 1",
+      "content_l2": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5 . Module 2 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?: Not covered in the provided source document. 4. Explain how researchers can use bibliographic databases to find relevant literature: Found on Page 5 . Module 2 5. How technical reading is different from general reading?: Found on Page 8 . Module 2 6. Write the general steps followed for technical reading: Found on Page 9 . Module 2 7. Explain the three main functions of citation: Found on Page 15 . Module 2 8. Explain basic search operators used in search option: Found on Page 6 . Module 2 9. How do the title and keywords of a research paper influence its citation impact: Found on Page 16 and Page 17 . Module 2 + 1 10. What does the Author should acknowledge? List and explain: Found on Page 21 and Page 22 . Module 2 + 1",
       "id": "88106099-b153-4465-b985-aa176d0f44b3"
+    },
+    {
+      "node_id": "422f9906-9356-4f8a-ab8a-b72cd1684043",
+      "entity_type": "generic",
+      "content": "i love drinking coffee",
+      "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+      "deletion_state": "quarantined",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "b6756b72-2e61-4fa1-afe8-c1efcce80f0a",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T20:58:06.593900+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "2d743f71-c348-4f30-82b8-ff56041498e0",
+          "state": "quarantined",
+          "actor": "graph_healer",
+          "reason": "no safe relationship could be inferred",
+          "timestamp": "2026-11-13T21:02:59.769949+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "last_agent_id": "ollama-agent-a"
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T20:58:06.593769+00:00Z",
+        "raw_reference": "cc184011-30ad-46df-ada1-c1ab86e19a81_turn_0"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T20:58:06.593885+00:00",
+      "last_accessed": "2026-11-13T20:58:06.593887+00:00",
+      "access_count": 0,
+      "deleted_reason": "no safe relationship could be inferred",
+      "deleted_by": "graph_healer",
+      "deleted_at": "2026-11-13T21:02:59.769949+00:00",
+      "summary_l0": "You're a coffee enthusiast!",
+      "summary_l1": "This passion for coffee reflects a deep appreciation for its role in daily life and its ability to provide energy and enjoyment. It's a simple yet satisfying habit that many find rewarding.",
+      "content_l2": "i love drinking coffee",
+      "id": "422f9906-9356-4f8a-ab8a-b72cd1684043"
+    },
+    {
+      "node_id": "bbda7959-3735-480e-9e5c-c5799357845a",
+      "entity_type": "dream_summary",
+      "content": "The user's query was to generate a JSON with specific keys. l0 is under 100 tokens, l1 under 500 tokens, and l2 must include the full source. The response should be in JSON format without any additional text.",
+      "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "aaabe2fc-c8fc-4008-8baf-9f96a5ce7240",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T21:04:55.995051+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "dreaming_decision": {
+          "action": "resolved_by_llm",
+          "confidence": 0.0,
+          "candidate": "The user's query was to generate a JSON with specific keys. l0 is under 100 tokens, l1 under 500 tokens, and l2 must include the full source. The response should be in JSON format without any additional text.",
+          "reason": "laya_escalated_to_llm",
+          "laya_available": false,
+          "llm_used": true,
+          "metadata": {
+            "source_node_ids": [],
+            "preference_counts": {}
+          },
+          "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+          "source_node_ids": []
+        }
+      },
+      "source": {
+        "type": "dreaming_summary",
+        "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+        "source_node_ids": [],
+        "actor": "ollama-agent-a",
+        "reason": "after_session_commit"
+      },
+      "trust_status": "derived",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T21:04:55.995040+00:00",
+      "last_accessed": "2026-11-13T21:04:55.995044+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Sample data",
+      "summary_l1": "This is a sample response generated following the specified constraints.",
+      "content_l2": "{\"l0\": \"Sample data\", \"l1\": \"This is a sample response...\"}",
+      "id": "bbda7959-3735-480e-9e5c-c5799357845a"
+    },
+    {
+      "node_id": "ee2fa4b2-75af-42c5-af34-eb34c29419df",
+      "entity_type": "generic",
+      "content": "I like apples",
+      "session_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "8bba115f-2d56-4b02-b4be-082a2c1cba17",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T21:48:59.982989+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "last_agent_id": "ollama-agent-a"
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T21:48:59.982870+00:00Z",
+        "raw_reference": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca_turn_0"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T21:48:59.982980+00:00",
+      "last_accessed": "2026-11-13T21:48:59.982981+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "The user expresses a preference for apples.",
+      "summary_l1": "The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.",
+      "content_l2": "I like apples.",
+      "id": "ee2fa4b2-75af-42c5-af34-eb34c29419df"
+    },
+    {
+      "node_id": "fc99f9d7-574a-4d87-9c03-05d93066a0fc",
+      "entity_type": "dream_summary",
+      "content": "The user's query was to generate a JSON with specific keys. l0 is under 100 tokens, l1 under 500 tokens, and l2 must include the full source. The response should be in JSON format without any additional text.",
+      "session_id": "b5f32195-b7e1-41d1-8b47-610f1843dcc0",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "71da6b2a-86cc-4158-8d82-455583e58feb",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T22:00:14.925874+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "dreaming_decision": {
+          "action": "resolved_by_llm",
+          "confidence": 0.0,
+          "candidate": "The user's query was to generate a JSON with specific keys. l0 is under 100 tokens, l1 under 500 tokens, and l2 must include the full source. The response should be in JSON format without any additional text.",
+          "reason": "laya_escalated_to_llm",
+          "laya_available": false,
+          "llm_used": true,
+          "metadata": {
+            "source_node_ids": [],
+            "preference_counts": {}
+          },
+          "session_id": "b5f32195-b7e1-41d1-8b47-610f1843dcc0",
+          "source_node_ids": []
+        }
+      },
+      "source": {
+        "type": "dreaming_summary",
+        "session_id": "b5f32195-b7e1-41d1-8b47-610f1843dcc0",
+        "source_node_ids": [],
+        "actor": "ollama-agent-b",
+        "reason": "after_session_commit"
+      },
+      "trust_status": "derived",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T22:00:14.925865+00:00",
+      "last_accessed": "2026-11-13T22:00:14.925868+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Sample data",
+      "summary_l1": "This is a sample response generated following the specified constraints.",
+      "content_l2": "{\"l0\": \"Sample data\", \"l1\": \"This is a sample response...\"}",
+      "id": "fc99f9d7-574a-4d87-9c03-05d93066a0fc"
+    },
+    {
+      "node_id": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+      "entity_type": "generic",
+      "content": "I like apples",
+      "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "681fd820-c30a-4d15-bc82-967b66dd1d95",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T22:02:19.529968+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "last_agent_id": "ollama-agent-a"
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T22:02:19.529878+00:00Z",
+        "raw_reference": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c_turn_0"
+      },
+      "trust_status": "user_asserted",
+      "derivation_edges": [
+        {
+          "child_id": "e343fe64-8695-4e89-998f-aa6b091cb7d1",
+          "type": "DERIVED_FROM"
+        }
+      ],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T22:02:19.529958+00:00",
+      "last_accessed": "2026-11-13T22:02:19.529960+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "The user expresses a preference for apples.",
+      "summary_l1": "The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.",
+      "content_l2": "I like apples.",
+      "id": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9"
+    },
+    {
+      "node_id": "e343fe64-8695-4e89-998f-aa6b091cb7d1",
+      "entity_type": "dream_summary",
+      "content": "Preference evidence: apples (1 mention(s); consolidated from active memory). The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.",
+      "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "abe9cdfe-7406-4e02-9535-5ba38823747d",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T22:05:36.885267+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "dreaming_decision": {
+          "action": "resolved_by_llm",
+          "confidence": 0.0,
+          "candidate": "Preference evidence: apples (1 mention(s); consolidated from active memory). The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.",
+          "reason": "laya_escalated_to_llm",
+          "laya_available": false,
+          "llm_used": true,
+          "metadata": {
+            "source_node_ids": [
+              "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9"
+            ],
+            "preference_counts": {
+              "apples": 1
+            }
+          },
+          "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+          "source_node_ids": [
+            "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9"
+          ]
+        }
+      },
+      "source": {
+        "type": "dreaming_summary",
+        "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+        "source_node_ids": [
+          "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9"
+        ],
+        "actor": "ollama-agent-a",
+        "reason": "after_session_commit"
+      },
+      "trust_status": "derived",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T22:05:36.885260+00:00",
+      "last_accessed": "2026-11-13T22:05:36.885263+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.",
+      "summary_l1": "Preference evidence: apples (1 mention(s); consolidated from active memory). The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.",
+      "content_l2": "Preference evidence: apples (1 mention(s); consolidated from active memory). The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.",
+      "id": "e343fe64-8695-4e89-998f-aa6b091cb7d1"
+    },
+    {
+      "node_id": "53d4bc2a-8153-46db-99fa-9be5bba85006",
+      "entity_type": "dream_summary",
+      "content": "The user's query was to generate a JSON with specific keys. l0 is under 100 tokens, l1 under 500 tokens, and l2 must include the full source. The response should be in JSON format without any additional text.",
+      "session_id": "a8ce2e14-090c-4655-b69d-137554bfa2c1",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "0c419dfb-1638-4281-9cd1-f53e499e4487",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T22:11:38.881632+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "dreaming_decision": {
+          "action": "resolved_by_llm",
+          "confidence": 0.0,
+          "candidate": "The user's query was to generate a JSON with specific keys. l0 is under 100 tokens, l1 under 500 tokens, and l2 must include the full source. The response should be in JSON format without any additional text.",
+          "reason": "laya_escalated_to_llm",
+          "laya_available": false,
+          "llm_used": true,
+          "metadata": {
+            "source_node_ids": [],
+            "preference_counts": {}
+          },
+          "session_id": "a8ce2e14-090c-4655-b69d-137554bfa2c1",
+          "source_node_ids": []
+        }
+      },
+      "source": {
+        "type": "dreaming_summary",
+        "session_id": "a8ce2e14-090c-4655-b69d-137554bfa2c1",
+        "source_node_ids": [],
+        "actor": "ollama-agent-b",
+        "reason": "after_session_commit"
+      },
+      "trust_status": "derived",
+      "derivation_edges": [],
+      "supersedes": null,
+      "contradicts": [],
+      "is_blocked": false,
+      "created_at": "2026-11-13T22:11:38.881620+00:00",
+      "last_accessed": "2026-11-13T22:11:38.881625+00:00",
+      "access_count": 0,
+      "deleted_reason": null,
+      "deleted_by": null,
+      "deleted_at": null,
+      "summary_l0": "Sample data",
+      "summary_l1": "This is a sample response generated following the specified constraints.",
+      "content_l2": "{\"l0\": \"Sample data\", \"l1\": \"This is a sample response...\"}",
+      "id": "53d4bc2a-8153-46db-99fa-9be5bba85006"
     }
   ],
-  "edges": []
+  "edges": [
+    {
+      "relationship": "RELATED_TO",
+      "type": "RELATED_TO",
+      "edge_type": "RELATED_TO",
+      "created_at": "2026-11-13T22:04:12.521739+00:00",
+      "created_by": "graph_healer",
+      "confidence": 1.0,
+      "source_session": "",
+      "healing_method": "vector_similarity",
+      "actor": "graph_healer",
+      "source": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+      "target": "ee2fa4b2-75af-42c5-af34-eb34c29419df"
+    },
+    {
+      "relationship": "DERIVED_FROM",
+      "type": "DERIVED_FROM",
+      "edge_type": "DERIVED_FROM",
+      "created_at": "2026-11-13T22:05:36.972790+00:00",
+      "created_by": "ollama-agent-a",
+      "confidence": 1.0,
+      "source_session": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+      "actor": "ollama-agent-a",
+      "source": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+      "target": "e343fe64-8695-4e89-998f-aa6b091cb7d1"
+    }
+  ]
 }

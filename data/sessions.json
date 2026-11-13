@@ -567,5 +567,65 @@
       "10578539-4bf0-4c9a-a4f4-3b28ece5eb1e",
       "88106099-b153-4465-b985-aa176d0f44b3"
     ]
+  },
+  "cc184011-30ad-46df-ada1-c1ab86e19a81": {
+    "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+    "status": "committed",
+    "committed_at": "2026-11-13T21:01:00.915121+00:00",
+    "committed_by": "ollama-agent-a",
+    "entity_ids": [
+      "422f9906-9356-4f8a-ab8a-b72cd1684043"
+    ]
+  },
+  "054a38fc-56b2-4e94-9dcb-8a07c320a69a": {
+    "session_id": "054a38fc-56b2-4e94-9dcb-8a07c320a69a",
+    "status": "committed",
+    "committed_at": "2026-11-13T21:06:46.484441+00:00",
+    "committed_by": "ollama-agent-b",
+    "entity_ids": []
+  },
+  "0c80bd9b-4d89-4a6e-b92d-33668ed5e5aa": {
+    "session_id": "0c80bd9b-4d89-4a6e-b92d-33668ed5e5aa",
+    "status": "committed",
+    "committed_at": "2026-11-13T21:35:30.071631+00:00",
+    "committed_by": "ollama-agent-c",
+    "entity_ids": []
+  },
+  "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca": {
+    "session_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+    "status": "committed",
+    "committed_at": "2026-11-13T21:52:53.023598+00:00",
+    "committed_by": "ollama-agent-a",
+    "entity_ids": [
+      "ee2fa4b2-75af-42c5-af34-eb34c29419df"
+    ]
+  },
+  "b5f32195-b7e1-41d1-8b47-610f1843dcc0": {
+    "session_id": "b5f32195-b7e1-41d1-8b47-610f1843dcc0",
+    "status": "committed",
+    "committed_at": "2026-11-13T21:59:27.225553+00:00",
+    "committed_by": "ollama-agent-b",
+    "entity_ids": [
+      "fc99f9d7-574a-4d87-9c03-05d93066a0fc"
+    ]
+  },
+  "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c": {
+    "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+    "status": "committed",
+    "committed_at": "2026-11-13T22:03:10.160134+00:00",
+    "committed_by": "ollama-agent-a",
+    "entity_ids": [
+      "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+      "e343fe64-8695-4e89-998f-aa6b091cb7d1"
+    ]
+  },
+  "a8ce2e14-090c-4655-b69d-137554bfa2c1": {
+    "session_id": "a8ce2e14-090c-4655-b69d-137554bfa2c1",
+    "status": "committed",
+    "committed_at": "2026-11-13T22:10:47.145067+00:00",
+    "committed_by": "ollama-agent-b",
+    "entity_ids": [
+      "53d4bc2a-8153-46db-99fa-9be5bba85006"
+    ]
   }
 }

@@ -1,0 +1,50 @@
+{
+  "conversation_id": "independent-agent-a",
+  "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+  "agent_id": "ollama-agent-a",
+  "parent_session_id": null,
+  "model": "qwen3:1.7b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a local Ollama agent using MNEMOSYNE for durable memory. The runner has already initialized the MNEMOSYNE session. Use recall for context, remember durable facts, and commit_session before exit. Commit automatically runs the core dreaming consolidation; use dream_session when an explicit consolidation pass is needed."
+    },
+    {
+      "role": "system",
+      "content": "MNEMOSYNE context:\n{\n  \"session_id\": \"256c6eca-6b1e-4bad-85a6-7c5597fe2a8c\",\n  \"agent_id\": \"ollama-agent-a\",\n  \"parent_session_id\": null,\n  \"existing\": false,\n  \"session\": null,\n  \"active_memories\": [],\n  \"parent_summary\": null\n}"
+    },
+    {
+      "role": "user",
+      "content": "remember that i like apple"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Okay, the user wants to remember that they like apples. Let me check the available tools. There's the 'remember' function which requires content, session_id, and agent_id. The session_id and agent_id are provided in the MNEMOSYNE context. The user's message is simple, so I'll use the content as \"I like apples\". I need to make sure to include the session_id and agent_id from the context. Since the user hasn't provided specific values for those, I'll use the existing ones from the session. Then, call the remember function with those parameters. No need for any other tools here since it's a straightforward memory recall.\n",
+      "tool_calls": [
+        {
+          "id": "call_il1dr2n4",
+          "function": {
+            "index": 0,
+            "name": "remember",
+            "arguments": {
+              "content": "I like apples",
+              "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+              "agent_id": "ollama-agent-a"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_name": "remember",
+      "content": "{\n  \"node_id\": \"0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9\",\n  \"content\": \"I like apples\",\n  \"summary\": \"The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.\",\n  \"deletion_state\": \"active\",\n  \"trust_status\": \"user_asserted\",\n  \"session_id\": \"256c6eca-6b1e-4bad-85a6-7c5597fe2a8c\",\n  \"access_count\": 0,\n  \"last_accessed\": \"2026-11-13T22:02:19.529960+00:00\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "Your preference for apples has been recorded! Apples are rich in vitamins and have a delightful taste. Let me know if you'd like to explore more about healthy eating or need help with anything else! \ud83c\udf4e",
+      "thinking": "Okay, the user wanted to remember that they like apples. I used the remember function with their agent ID and the content \"I like apples\". The response from the tool shows that the memory was successfully added with a node ID and a summary. The trust status is user_asserted, which means it's confirmed by the user. The deletion state is active, so it's not yet deleted. The session ID matches the one in the initial context. I should inform the user that their preference was recorded and maybe mention the benefits of apples, like their nutritional value. Also, check if they need anything else.\n"
+    }
+  ]
+}

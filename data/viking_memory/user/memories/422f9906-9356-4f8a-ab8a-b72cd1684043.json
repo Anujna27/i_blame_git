@@ -1,0 +1,42 @@
+{
+  "node_id": "422f9906-9356-4f8a-ab8a-b72cd1684043",
+  "content": "i love drinking coffee",
+  "source": {
+    "type": "conversation_turn",
+    "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+    "turn_index": 0,
+    "timestamp": "2026-11-13T20:58:06.593769+00:00Z",
+    "raw_reference": "cc184011-30ad-46df-ada1-c1ab86e19a81_turn_0"
+  },
+  "trust_status": "user_asserted",
+  "derivation_edges": [],
+  "version": 1,
+  "supersedes": null,
+  "contradicts": [],
+  "deletion_state": "active",
+  "is_blocked": false,
+  "created_at": "2026-11-13T20:58:06.593885+00:00",
+  "last_accessed": "2026-11-13T20:58:06.593887+00:00",
+  "access_count": 0,
+  "entity_type": "generic",
+  "properties": {
+    "last_agent_id": "ollama-agent-a"
+  },
+  "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+  "lifecycle": [
+    {
+      "event_id": "b6756b72-2e61-4fa1-afe8-c1efcce80f0a",
+      "state": "created",
+      "actor": "system",
+      "reason": "entity_created",
+      "timestamp": "2026-11-13T20:58:06.593900+00:00",
+      "metadata": {}
+    }
+  ],
+  "deleted_reason": null,
+  "deleted_by": null,
+  "deleted_at": null,
+  "summary_l0": "You're a coffee enthusiast!",
+  "summary_l1": "This passion for coffee reflects a deep appreciation for its role in daily life and its ability to provide energy and enjoyment. It's a simple yet satisfying habit that many find rewarding.",
+  "content_l2": "i love drinking coffee"
+}
