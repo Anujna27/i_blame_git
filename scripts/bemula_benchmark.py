@@ -363,7 +363,7 @@ def do_delete(st: Stack, node_id: str, g=None, v=None, a=None):
     t = time.perf_counter()
     try:
         rep = st.erasure.delete(node_id, v or st.vectors, g or st.graph, a or st.audit,
-                                reason="BEMULA rigorous unlearning request", deleted_by="bemula-rigorous-harness")
+                                reason="BEMULA rigorous unlearning request", deleted_by="bemula-rigorous-harness", semantic_cleanup=True)
         return rep, None, time.perf_counter() - t
     except Exception as e:  # noqa: BLE001
         return None, e, time.perf_counter() - t

@@ -137,7 +137,7 @@ class AgentA:
         return {"answer": context.text, "sources": [entity.node_id for entity in context.entities], "tokens_used": context.token_count, "ranking_explanations": context.ranking_explanations, "abstained": not bool(context.entities)}
 
     def forget(self, node_id, reason="user_requested_erasure", deleted_by="user"):
-        report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain, reason=reason, deleted_by=deleted_by, filesystem_store=self.filesystem_memory)
+        report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain, reason=reason, deleted_by=deleted_by, filesystem_store=self.filesystem_memory, semantic_cleanup=True)
         self.last_report = report
         self.residual_risks.extend(report.residual_risks)
         self.blocked_ids = load_blocked_ids()
