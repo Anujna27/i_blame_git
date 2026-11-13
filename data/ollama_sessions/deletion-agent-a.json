@@ -1,0 +1,82 @@
+{
+  "conversation_id": "deletion-agent-a",
+  "session_id": "960f2ba8-c7f7-4435-9b45-1ac23a99452d",
+  "agent_id": "ollama-agent-a",
+  "parent_session_id": null,
+  "model": "qwen3:1.7b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a local Ollama agent using MNEMOSYNE for durable memory. The runner has already initialized the MNEMOSYNE session. Use recall for context, remember durable facts, and commit_session before exit."
+    },
+    {
+      "role": "system",
+      "content": "MNEMOSYNE context:\n{\n  \"session_id\": \"960f2ba8-c7f7-4435-9b45-1ac23a99452d\",\n  \"agent_id\": \"ollama-agent-a\",\n  \"parent_session_id\": null,\n  \"existing\": false,\n  \"session\": null,\n  \"active_memories\": [],\n  \"parent_summary\": null\n}"
+    },
+    {
+      "role": "user",
+      "content": "Remember this temporary test fact exactly: DELETE_TEST_2026 \u2014 my temporary test color is orange."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Okay, the user wants me to remember a temporary test fact. The fact is that their temporary test color is orange. Let me check the available tools.\n\nThere's a function called 'remember' which requires content, session_id, and agent_id. The user hasn't provided session_id or agent_id yet, but since they're using the MNEMOSYNE session, maybe the session_id is already set. Wait, in the MNEMOSYNE context, the session_id is provided as \"960f2ba8-c7f7-4435-9b45-1ac23a99452d\" and agent_id is \"ollama-agent-a\". So I can use those values.\n\nSo the content is \"DELETE_TEST_2026 \u2014 my temporary test color is orange\". The session_id is the one from the context, and agent_id is \"ollama-agent-a\". I need to structure the arguments as {\"content\": \"DELETE_TEST_2026 \u2014 my temporary test color is orange\", \"session_id\": \"960f2ba8-c7f7-4435-9b45-1ac23a99452d\", \"agent_id\": \"ollama-agent-a\"}.\n\nI should call the remember function with these arguments to store the memory durably.\n",
+      "tool_calls": [
+        {
+          "id": "call_8zn6yj58",
+          "function": {
+            "index": 0,
+            "name": "remember",
+            "arguments": {
+              "agent_id": "ollama-agent-a",
+              "content": "DELETE_TEST_2026 \u2014 my temporary test color is orange",
+              "session_id": "960f2ba8-c7f7-4435-9b45-1ac23a99452d"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_name": "remember",
+      "content": "{\n  \"node_id\": \"100749a3-fb93-4e40-9a9d-016fc37069d4\",\n  \"content\": \"DELETE_TEST_2026 \u2014 my temporary test color is orange\",\n  \"summary\": \"DELETE_TEST_2026 \u2014 my temporary test color is orange\",\n  \"deletion_state\": \"active\",\n  \"trust_status\": \"user_asserted\",\n  \"session_id\": \"960f2ba8-c7f7-4435-9b45-1ac23a99452d\",\n  \"access_count\": 0,\n  \"last_accessed\": \"2026-11-13T17:40:12.292041+00:00\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "The fact \"DELETE_TEST_2026 \u2014 my temporary test color is orange\" has been successfully stored in the session. This memory is active and trusted by the user. Let me know if you need to retrieve it or perform further actions!",
+      "thinking": "Okay, the user asked to remember a temporary test fact about their color being orange. I used the remember function with the provided session ID and agent ID. The response from the tool shows the node ID and confirms the content is active and trusted. Now, I need to check if there's anything else the user might need. Since they just remembered the fact, maybe they want to verify it or use it later. I should inform them that the fact is stored and offer further help if needed. No additional functions are required here because the task is complete.\n"
+    },
+    {
+      "role": "user",
+      "content": "Use MNEMOSYNE recall to retrieve DELETE_TEST_2026 and show me its memory ID."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Okay, the user wants to retrieve the memory ID for DELETE_TEST_2026 using MNEMOSYNE recall. Let me check the tools available.\n\nThe recall function requires a query and session_id. The user already has the session_id from the previous interaction. The query should be the content they want to retrieve. Since they specified \"DELETE_TEST_2026\", I'll use that as the query.\n\nI need to make sure the arguments are correctly formatted. The session_id is \"960f2ba8-c7f7-4435-9b45-1ac23a99452d\" as before. The token_budget and top_k are optional, but since they weren't specified, I'll leave them out.\n\nSo the tool call should be recall with the query set to \"DELETE_TEST_2026\" and the session_id. The response will give the memory ID, which the user wants to see. I'll present that once the tool responds.\n",
+      "tool_calls": [
+        {
+          "id": "call_o93f53fa",
+          "function": {
+            "index": 0,
+            "name": "recall",
+            "arguments": {
+              "query": "DELETE_TEST_2026",
+              "session_id": "960f2ba8-c7f7-4435-9b45-1ac23a99452d"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_name": "recall",
+      "content": "{\n  \"answer\": \"DELETE_TEST_2026 \u2014 my temporary test color is orange\",\n  \"memory_ids\": [\n    \"100749a3-fb93-4e40-9a9d-016fc37069d4\"\n  ],\n  \"memories\": [\n    {\n      \"node_id\": \"100749a3-fb93-4e40-9a9d-016fc37069d4\",\n      \"content\": \"DELETE_TEST_2026 \u2014 my temporary test color is orange\",\n      \"summary\": \"DELETE_TEST_2026 \u2014 my temporary test color is orange\",\n      \"deletion_state\": \"active\",\n      \"trust_status\": \"user_asserted\",\n      \"session_id\": \"960f2ba8-c7f7-4435-9b45-1ac23a99452d\",\n      \"access_count\": 0,\n      \"last_accessed\": \"2026-11-13T17:40:12.292041+00:00\"\n    }\n  ],\n  \"tokens_used\": 8,\n  \"ranking_explanations\": [\n    {\n      \"node_id\": \"100749a3-fb93-4e40-9a9d-016fc37069d4\",\n      \"source\": \"vector\",\n      \"reason\": \"semantic retrieval\"\n    }\n  ],\n  \"abstained\": false,\n  \"session_id\": \"960f2ba8-c7f7-4435-9b45-1ac23a99452d\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "The memory \"DELETE_TEST_2026 \u2014 my temporary test color is orange\" has been successfully retrieved. Its memory ID is **`100749a3-fb93-4e40-9a9d-016fc37069d4`**. This memory is currently **active** and **trusted** by the user. Let me know if you need to delete it, continue the session, or retrieve another fact!",
+      "thinking": "Okay, the user asked to retrieve the memory ID for DELETE_TEST_2026 using MNEMOSYNE recall. I called the recall function with the query set to \"DELETE_TEST_2026\" and the session ID. The response came back with the memory details.\n\nLooking at the response, the memory ID is \"100749a3-fb93-4e40-9a9d-016fc37069d4\" and the content matches what the user wanted. The deletion state is active, and the trust status is user asserted. So the memory is still active and trusted.\n\nThe user wants to see the memory ID, so I need to present that clearly. I should confirm that the memory was retrieved and provide the ID. Also, mention that the memory is active and trusted. Maybe add a prompt asking if they need further actions, like deleting it or continuing the session. Keep the response straightforward and helpful.\n"
+    }
+  ]
+}

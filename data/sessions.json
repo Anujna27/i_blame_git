@@ -551,5 +551,51 @@
     "entity_ids": [
       "5ccf9891-c5d3-4977-b395-b3f6dbc6cf2f"
     ]
+  },
+  "a9c71ed9-ac78-411c-93a7-7b9d151f2442": {
+    "session_id": "a9c71ed9-ac78-411c-93a7-7b9d151f2442",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "10416c5f-6e10-4ea0-add4-3a3a5987ff4d"
+    ]
+  },
+  "28fe2e9e-21b3-4fe8-a2de-7d6ee0fe5348": {
+    "session_id": "28fe2e9e-21b3-4fe8-a2de-7d6ee0fe5348",
+    "status": "committed",
+    "committed_at": "2026-11-13T16:29:05.280961+00:00",
+    "committed_by": "ollama-agent-b",
+    "entity_ids": []
+  },
+  "8febcd7e-581d-4545-8e5b-bcc3654d18e3": {
+    "session_id": "8febcd7e-581d-4545-8e5b-bcc3654d18e3",
+    "status": "committed",
+    "committed_at": "2026-11-13T16:45:25.137397+00:00",
+    "committed_by": "ollama-agent-c",
+    "entity_ids": []
+  },
+  "3985415e-2135-469e-920d-0d95f56ff7d0": {
+    "session_id": "3985415e-2135-469e-920d-0d95f56ff7d0",
+    "status": "committed",
+    "committed_at": "2026-11-13T17:39:00.360507+00:00",
+    "committed_by": "ollama-agent-b",
+    "entity_ids": []
+  },
+  "960f2ba8-c7f7-4435-9b45-1ac23a99452d": {
+    "session_id": "960f2ba8-c7f7-4435-9b45-1ac23a99452d",
+    "status": "committed",
+    "committed_at": "2026-11-13T17:41:52.387447+00:00",
+    "committed_by": "ollama-agent-a",
+    "entity_ids": [
+      "100749a3-fb93-4e40-9a9d-016fc37069d4"
+    ]
+  },
+  "55bd83e4-1329-4b7d-a786-a14f0c1bc410": {
+    "session_id": "55bd83e4-1329-4b7d-a786-a14f0c1bc410",
+    "status": "committed",
+    "committed_at": "2026-11-13T17:48:31.044769+00:00",
+    "committed_by": "ollama-agent-b",
+    "entity_ids": []
   }
 }

@@ -5,3 +5,4 @@ rich
 pytest
 streamlit
 openai
+mcp>=2.0,<3

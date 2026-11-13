@@ -983,6 +983,115 @@
       "deleted_reason": "no safe relationship could be inferred",
       "deleted_at": "2026-11-12T20:58:51.967485+00:00",
       "id": "5ccf9891-c5d3-4977-b395-b3f6dbc6cf2f"
+    },
+    {
+      "node_id": "10416c5f-6e10-4ea0-add4-3a3a5987ff4d",
+      "entity_type": "generic",
+      "content": "User prefers dark mode and the project is called MNEMOSYNE.",
+      "session_id": "a9c71ed9-ac78-411c-93a7-7b9d151f2442",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "69fa31f6-2506-46cf-8978-acbb9f53b163",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T16:15:00.948790+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "user",
+          "session_id": "a9c71ed9-ac78-411c-93a7-7b9d151f2442",
+          "turn_index": 1,
+          "timestamp": "2026-11-13T16:15:00.947666+00:00Z",
+          "raw_reference": "a9c71ed9-ac78-411c-93a7-7b9d151f2442_turn_1"
+        },
+        "trust_status": "trusted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T16:15:00.948427+00:00",
+        "last_accessed": "2026-11-13T16:15:00.948430+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "User prefers dark mode and the project is called MNEMOSYNE",
+        "summary_l1": "User prefers dark mode and the project is called MNEMOSYNE",
+        "content_l2": "User prefers dark mode and the project is called MNEMOSYNE."
+      },
+      "source": {
+        "type": "user",
+        "session_id": "a9c71ed9-ac78-411c-93a7-7b9d151f2442",
+        "turn_index": 1,
+        "timestamp": "2026-11-13T16:15:00.947666+00:00Z",
+        "raw_reference": "a9c71ed9-ac78-411c-93a7-7b9d151f2442_turn_1"
+      },
+      "id": "10416c5f-6e10-4ea0-add4-3a3a5987ff4d"
+    },
+    {
+      "node_id": "100749a3-fb93-4e40-9a9d-016fc37069d4",
+      "entity_type": "generic",
+      "content": "DELETE_TEST_2026 \u2014 my temporary test color is orange",
+      "session_id": "960f2ba8-c7f7-4435-9b45-1ac23a99452d",
+      "deletion_state": "quarantined",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "dd4dce3f-1deb-4c93-87b4-54434d32ebb0",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T17:40:12.292057+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "f381f324-8aa6-4cc0-93c7-0d868bf61152",
+          "state": "quarantined",
+          "actor": "graph_healer",
+          "reason": "no safe relationship could be inferred",
+          "timestamp": "2026-11-13T17:41:52.686037+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "conversation_turn",
+          "session_id": "960f2ba8-c7f7-4435-9b45-1ac23a99452d",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T17:40:12.291929+00:00Z",
+          "raw_reference": "960f2ba8-c7f7-4435-9b45-1ac23a99452d_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T17:40:12.292039+00:00",
+        "last_accessed": "2026-11-13T17:40:12.292041+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "DELETE_TEST_2026 \u2014 my temporary test color is orange",
+        "summary_l1": "DELETE_TEST_2026 \u2014 my temporary test color is orange",
+        "content_l2": "DELETE_TEST_2026 \u2014 my temporary test color is orange"
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "960f2ba8-c7f7-4435-9b45-1ac23a99452d",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T17:40:12.291929+00:00Z",
+        "raw_reference": "960f2ba8-c7f7-4435-9b45-1ac23a99452d_turn_0"
+      },
+      "deleted_by": "graph_healer",
+      "deleted_reason": "no safe relationship could be inferred",
+      "deleted_at": "2026-11-13T17:41:52.686037+00:00",
+      "id": "100749a3-fb93-4e40-9a9d-016fc37069d4"
     }
   ],
   "edges": []

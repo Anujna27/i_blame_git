@@ -271,6 +271,181 @@ Remove-Item Env:GROQ_API_KEY -ErrorAction SilentlyContinue
 
 Never commit API keys or `.env` files containing credentials. Use environment variables or a secret manager.
 
+## WSL Ollama MCP inter-session and inter-agent test
+
+This is the live acceptance test for the local Ollama/MNEMOSYNE workflow. It
+uses Ollama inside WSL, the MCP server over stdio, and the shared persistent
+MNEMOSYNE stores. Observal is not required.
+
+### 1. Prepare WSL
+
+Run these commands in Ubuntu/WSL from the repository root:
+
+```bash
+cd /mnt/d/devhost/mnemosyne
+sudo apt update
+sudo apt install -y python3-venv python3-pip build-essential zstd
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install faiss-cpu
+python -c "import faiss, mcp; print('dependencies ready')"
+```
+
+### 2. Start Ollama in WSL
+
+Use a separate WSL terminal and leave the server running:
+
+```bash
+ollama serve
+```
+
+In another terminal, verify it and install a small tool-capable model:
+
+```bash
+curl http://127.0.0.1:11434/api/tags
+ollama pull qwen3:1.7b
+ollama list
+```
+
+### 3. Create durable memory with Agent A
+
+From the project root with `.venv` active:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation memory-demo-a \
+  --agent ollama-agent-a
+```
+
+At the `You:` prompt, enter:
+
+```text
+Remember this test fact exactly: DELETE_TEST_2026 — my temporary test color is orange.
+```
+
+The response should show `[tool] remember`. Verify it before exiting:
+
+```text
+Use MNEMOSYNE recall to retrieve DELETE_TEST_2026 and show the exact memory ID.
+```
+
+Record the returned UUID. Exit cleanly:
+
+```text
+/exit
+```
+
+### 4. Resume in a new session and agent
+
+This creates a new session linked to the previous session:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation memory-demo-a \
+  --agent ollama-agent-b \
+  --resume
+```
+
+Ask:
+
+```text
+Use MNEMOSYNE recall to retrieve DELETE_TEST_2026. What temporary color was stored?
+```
+
+The response should show `[tool] recall` and return `orange`. This verifies
+inter-session and inter-agent continuity.
+
+### 5. Recall from an independent conversation
+
+Do not use `--resume` and use a different conversation ID:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation memory-demo-independent \
+  --agent ollama-agent-c
+```
+
+Ask:
+
+```text
+Use MNEMOSYNE recall to find DELETE_TEST_2026. What temporary color was stored?
+```
+
+It should still return `orange`, because durable memories are shared across
+agents and conversations. A normal question without asking the model to use
+recall may not trigger the tool in a small local model.
+
+### 6. Preview and delete from another agent
+
+Start a separate deletion test conversation:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation deletion-demo \
+  --agent ollama-deletion-agent
+```
+
+First retrieve the exact UUID:
+
+```text
+Use MNEMOSYNE recall to find DELETE_TEST_2026 and show the exact memory ID.
+```
+
+Then preview it using the UUID returned by recall, not the text
+`DELETE_TEST_2026`:
+
+```text
+Call preview_delete using the exact memory ID for DELETE_TEST_2026 and show the deletion impact.
+```
+
+Review relevance, access count, descendants, and residual-risk information.
+Only then request deletion:
+
+```text
+Call delete_memory using that exact memory ID with confirmation=true. Delete only DELETE_TEST_2026.
+```
+
+The response should show `[tool] delete_memory` and an erasure verdict. The
+current MCP adapter exposes hard deletion only. It preserves audit metadata
+and removes the active content/vector representation.
+
+Exit with:
+
+```text
+/exit
+```
+
+### 7. Verify deletion from a fresh agent
+
+Start another independent conversation:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation deletion-verification \
+  --agent ollama-verification-agent
+```
+
+Ask:
+
+```text
+Use MNEMOSYNE recall to search for DELETE_TEST_2026. Do not rely on chat history.
+```
+
+The deleted memory must not be returned as active context. An abstention or
+`no active memory found` result is expected.
+
+These tests create persistent files under `data/`, including the audit log,
+vector metadata, graph data, session state, and `data/ollama_sessions/`. Use a
+unique test marker and do not use real personal data. The deletion step is
+irreversible.
+
 ## Healing worker and retrieval benchmark
 
 Run one healing pass:
