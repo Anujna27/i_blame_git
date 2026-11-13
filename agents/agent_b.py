@@ -28,6 +28,13 @@ class AgentB:
         return max(scored, key=lambda item: item[0])[1] if scored else None
 
     def recall(self, query: str) -> dict:
+        # A normal handoff recall is fail-closed when the capsule contains any
+        # deletion block. The imported capsule may still contain a different,
+        # similarly worded active memory; answering with it would make an
+        # ambiguous query appear to resurrect the erased subject. Callers that
+        # explicitly want surviving alternatives use recall_full().
+        if self.blocked_ids:
+            return {"answer": "This information was requested for deletion. Source storage was cleared. I cannot confirm non-inferability.", "abstained": True}
         best = self._best_match(query)
         if best and best.node_id in self.blocked_ids:
             return {"answer": "This information was requested for deletion. Source storage was cleared. Residual semantic risk remains. I cannot confirm non-inferability.", "abstained": True}

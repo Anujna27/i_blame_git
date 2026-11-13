@@ -1,0 +1,130 @@
+{
+  "main": {
+    "instances": 6,
+    "passed": 6,
+    "rpr": 100.0,
+    "wilson95": [
+      60.97,
+      100.0
+    ],
+    "silent_leaks": 0,
+    "disclosed_leaks": 0,
+    "vacuous_probe_instances": 0,
+    "failing_checks": {},
+    "unsupported_checks": {},
+    "per_type": {
+      "F1 (Factual)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F2 (Compositional)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F3 (Semantic Category)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F4 (Inferential)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F5 (Temporal)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F6 (Replacement)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      }
+    },
+    "edge_cases": {
+      "redelete_exceptions": 0,
+      "redelete_state_stable": true,
+      "audit_bytes_growth_on_redelete": 4617,
+      "unknown_id_graceful": true,
+      "audit_chain_valid": true,
+      "audit_tamper_detected": true
+    },
+    "background_collateral_failures": 0,
+    "latency_ms": {
+      "p50": 87.71,
+      "p95": 89.3
+    },
+    "warnings_emitted": {},
+    "caveats": [],
+    "reload_ok": true,
+    "disk_residue_files": [],
+    "search_stats": {
+      "calls": 76,
+      "mean_ms": 0.5,
+      "engine_warnings": {}
+    },
+    "failures": []
+  },
+  "scenarios": {
+    "concurrent": {
+      "instances": 6,
+      "passed": 6,
+      "rpr": 100.0,
+      "wilson95": [
+        60.97,
+        100.0
+      ],
+      "silent_leaks": 0,
+      "disclosed_leaks": 0,
+      "vacuous_probe_instances": 0,
+      "failing_checks": {},
+      "unsupported_checks": {},
+      "worker_exceptions": 0,
+      "audit_chain_valid": true
+    },
+    "fault_injection": {
+      "instances": 6,
+      "passed": 0,
+      "rpr": 0.0,
+      "wilson95": [
+        0.0,
+        39.03
+      ],
+      "silent_leaks": 6,
+      "disclosed_leaks": 0,
+      "vacuous_probe_instances": 0,
+      "failing_checks": {
+        "imm.target_vec_gone": 6,
+        "imm.deps_forgotten": 6,
+        "imm.no_content_leak": 6,
+        "imm.probes_clean": 6
+      },
+      "unsupported_checks": {},
+      "fault_applicable": true,
+      "loud_failures": 6,
+      "silent_failures": 0
+    },
+    "control": {
+      "instances": 6,
+      "passed": 6,
+      "rpr": 100.0,
+      "wilson95": [
+        60.97,
+        100.0
+      ],
+      "silent_leaks": 0,
+      "disclosed_leaks": 0,
+      "vacuous_probe_instances": 0,
+      "failing_checks": {},
+      "unsupported_checks": {}
+    }
+  },
+  "mutation": {
+    "vector_noop": "`imm.target_vec_gone` caught 100.0% of sabotaged deletions (control false-alarms: 0)",
+    "graph_noop": "`imm.target_inactive` caught 0.0% of sabotaged deletions (control false-alarms: 0)  <-- HARNESS TOO WEAK",
+    "audit_noop": "`global.audit_entry` caught 100.0% of sabotaged deletions (control false-alarms: 0)"
+  }
+}

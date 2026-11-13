@@ -47,10 +47,17 @@ class AgentA:
                                         llm_suggester=self.llm.suggest_link if self.llm.enabled else None)
         self.dreaming = HonchoDreaming()
 
-    def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted"):
+    def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0,
+                 trust_status="user_asserted", context_id=None, entity_refs=None):
         source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
                   "timestamp": datetime.now(timezone.utc).isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
-        node = MemoryNode(content=content, source=source, session_id=session_id, trust_status=trust_status)
+        properties = {}
+        if context_id:
+            properties["erasure_context_id"] = context_id
+        if entity_refs:
+            properties["entity_refs"] = list(dict.fromkeys(str(ref) for ref in entity_refs))
+        node = MemoryNode(content=content, source=source, session_id=session_id,
+                          trust_status=trust_status, properties=properties)
         summaries = self.summary_generator.generate(content)
         node.summary_l0, node.summary_l1, node.content_l2 = summaries["l0"], summaries["l1"], summaries["l2"]
         try:
@@ -94,7 +101,11 @@ class AgentA:
         return node
 
     def commit_session(self, session_id, actor="harness", reason="session_end"):
-        entity_ids = [node.node_id for node in self.all_nodes.values() if node.session_id == session_id]
+        entity_ids = [
+            node.node_id
+            for node in self.all_nodes.values()
+            if node.session_id == session_id and node.deletion_state == "active"
+        ]
         session_nodes = [self.all_nodes[node_id] for node_id in entity_ids if node_id in self.all_nodes]
         self.entity_extractor.extract([node.content for node in session_nodes])
         for node in session_nodes:
@@ -177,10 +188,23 @@ class AgentA:
             return {"answer": "Retrieval error.", "sources": [], "tokens_used": 0, "ranking_explanations": [], "abstained": True, "reason": str(error)}
         return {"answer": context.text, "sources": [entity.node_id for entity in context.entities], "tokens_used": context.token_count, "ranking_explanations": context.ranking_explanations, "abstained": not bool(context.entities)}
 
-    def forget(self, node_id, reason="user_requested_erasure", deleted_by="user"):
-        report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain, reason=reason, deleted_by=deleted_by, filesystem_store=self.filesystem_memory, semantic_cleanup=True)
+    def forget(self, node_id, reason="user_requested_erasure", deleted_by="user", context_id=None, entity_refs=None):
+        report = self.erasure.delete(
+            node_id,
+            self.vector_store,
+            self.graph,
+            self.hash_chain,
+            reason=reason,
+            deleted_by=deleted_by,
+            filesystem_store=self.filesystem_memory,
+            semantic_cleanup=True,
+            context_id=context_id,
+            entity_refs=entity_refs,
+        )
         self.last_report = report
         self.residual_risks.extend(report.residual_risks)
+        if hasattr(self.sessions, "remove_ids"):
+            self.sessions.remove_ids(report.erased_entity_ids, actor=deleted_by, reason=reason)
         self.blocked_ids = load_blocked_ids()
         for nid in list(self.all_nodes):
             refreshed = self.graph.get_node(nid)

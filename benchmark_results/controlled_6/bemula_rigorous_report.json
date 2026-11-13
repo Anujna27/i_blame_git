@@ -1,0 +1,263 @@
+{
+  "main": {
+    "instances": 6,
+    "passed": 0,
+    "rpr": 0.0,
+    "wilson95": [
+      0.0,
+      39.03
+    ],
+    "silent_leaks": 0,
+    "disclosed_leaks": 6,
+    "vacuous_probe_instances": 0,
+    "failing_checks": {
+      "imm.deps_forgotten": 6,
+      "imm.no_content_leak": 6,
+      "imm.probes_clean": 6,
+      "imm.report_clean": 6,
+      "reload.target_scrubbed": 6,
+      "reload.deps_forgotten": 6,
+      "reload.no_content_leak": 6,
+      "reload.probes_clean": 6,
+      "global.disk_clean": 6
+    },
+    "unsupported_checks": {},
+    "per_type": {
+      "F1 (Factual)": {
+        "passed": 0,
+        "total": 1,
+        "rpr": 0.0
+      },
+      "F2 (Compositional)": {
+        "passed": 0,
+        "total": 1,
+        "rpr": 0.0
+      },
+      "F3 (Semantic Category)": {
+        "passed": 0,
+        "total": 1,
+        "rpr": 0.0
+      },
+      "F4 (Inferential)": {
+        "passed": 0,
+        "total": 1,
+        "rpr": 0.0
+      },
+      "F5 (Temporal)": {
+        "passed": 0,
+        "total": 1,
+        "rpr": 0.0
+      },
+      "F6 (Replacement)": {
+        "passed": 0,
+        "total": 1,
+        "rpr": 0.0
+      }
+    },
+    "edge_cases": {
+      "redelete_exceptions": 0,
+      "redelete_state_stable": true,
+      "audit_bytes_growth_on_redelete": 4620,
+      "unknown_id_graceful": true,
+      "audit_chain_valid": true,
+      "audit_tamper_detected": true
+    },
+    "background_collateral_failures": 0,
+    "latency_ms": {
+      "p50": 139.01,
+      "p95": 160.84
+    },
+    "warnings_emitted": {
+      "Warning: Contradicting user-asserted memories detected (c23fe033-13ba-495d-96bd-": 1,
+      "Warning: Contradicting user-asserted memories detected (62ce9699-381d-435a-ba3f-": 2,
+      "Warning: Contradicting user-asserted memories detected (72abba16-a264-4eda-9066-": 1,
+      "Warning: Contradicting user-asserted memories detected (346dbd61-89a2-45d4-8f7b-": 8,
+      "Warning: Contradicting user-asserted memories detected (2a7d6303-7cba-483d-822e-": 1,
+      "Warning: Contradicting user-asserted memories detected (0e6ebb67-c456-46ab-a38d-": 1,
+      "Warning: Contradicting user-asserted memories detected (d66b5d16-e725-4d16-8af6-": 1,
+      "Warning: Contradicting user-asserted memories detected (9e213284-d114-47d3-bbc8-": 2,
+      "Warning: Contradicting user-asserted memories detected (c26b3d60-f115-4d39-929f-": 1,
+      "Warning: Contradicting user-asserted memories detected (68370ad1-d2cc-4348-9f81-": 3
+    },
+    "caveats": [],
+    "reload_ok": true,
+    "disk_residue_files": [
+      "knowledge_graph.json",
+      "vectors\\bemula_main_meta.json",
+      "viking_memory\\user\\memories\\0498aaeb-bf36-4095-b203-a78b850416f0.json",
+      "viking_memory\\user\\memories\\0f830bc8-d1ef-46b7-ad7e-f9879f931a59.json",
+      "viking_memory\\user\\memories\\10c312b3-c676-4c65-a2d6-671f746830f0.json",
+      "viking_memory\\user\\memories\\3f31c2ac-ed4b-4599-9aea-e6b36053db4f.json",
+      "viking_memory\\user\\memories\\5a38cc39-4f23-430d-ab02-c8fe68035732.json",
+      "viking_memory\\user\\memories\\820c2174-6cd2-451c-9d73-b8c89e351867.json",
+      "viking_memory\\user\\memories\\d66b5d16-e725-4d16-8af6-759d06f60d3c.json"
+    ],
+    "search_stats": {
+      "calls": 96,
+      "mean_ms": 360.2,
+      "engine_warnings": {
+        "Warning: Contradicting user-asserted memories detected (<id> vs <id>). Returning both.": 2292
+      }
+    },
+    "failures": [
+      {
+        "instance": 1,
+        "type": "F1 (Factual)",
+        "reasons": [
+          "imm.deps_forgotten",
+          "imm.no_content_leak",
+          "imm.probes_clean",
+          "imm.report_clean",
+          "reload.target_scrubbed",
+          "reload.deps_forgotten",
+          "reload.no_content_leak",
+          "reload.probes_clean",
+          "global.disk_clean"
+        ],
+        "details": {
+          "imm.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "imm.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_para@graph', 'dup_para@vector']",
+          "imm.probes_clean": "probe0@k5: forgotten id 0498aaeb; probe0@k25: forgotten id 0498aaeb; probe1@k1: forgotten id 0498aaeb; probe1@k5: forgotten id 0498aaeb",
+          "imm.report_clean": "2 residual risks reported",
+          "reload.target_scrubbed": "target tombstone still carries content/metadata",
+          "reload.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "reload.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_para@graph', 'dup_para@vector']",
+          "reload.probes_clean": "probe0@k5: forgotten id 0498aaeb; probe0@k25: forgotten id 0498aaeb; probe1@k1: forgotten id 0498aaeb; probe1@k5: forgotten id 0498aaeb",
+          "global.disk_clean": "residue in ['knowledge_graph.json', 'vectors\\\\bemula_main_meta.json', 'viking_memory\\\\user\\\\memories\\\\0498aaeb-bf36-4095-b203-a78b850416f0.json']"
+        }
+      },
+      {
+        "instance": 2,
+        "type": "F2 (Compositional)",
+        "reasons": [
+          "imm.deps_forgotten",
+          "imm.no_content_leak",
+          "imm.probes_clean",
+          "imm.report_clean",
+          "reload.target_scrubbed",
+          "reload.deps_forgotten",
+          "reload.no_content_leak",
+          "reload.probes_clean",
+          "global.disk_clean"
+        ],
+        "details": {
+          "imm.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "imm.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_para@graph', 'dup_para@vector']",
+          "imm.probes_clean": "probe0@k1: forgotten id 5a38cc39; probe0@k5: forgotten id 5a38cc39; probe0@k25: forgotten id 5a38cc39; probe1@k1: forgotten id 5a38cc39",
+          "imm.report_clean": "1 residual risks reported",
+          "reload.target_scrubbed": "target tombstone still carries content/metadata",
+          "reload.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "reload.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_para@graph', 'dup_para@vector']",
+          "reload.probes_clean": "probe0@k1: forgotten id 5a38cc39; probe0@k5: forgotten id 5a38cc39; probe0@k25: forgotten id 5a38cc39; probe1@k1: forgotten id 5a38cc39",
+          "global.disk_clean": "residue in ['knowledge_graph.json', 'vectors\\\\bemula_main_meta.json', 'viking_memory\\\\user\\\\memories\\\\5a38cc39-4f23-430d-ab02-c8fe68035732.json']"
+        }
+      },
+      {
+        "instance": 3,
+        "type": "F3 (Semantic Category)",
+        "reasons": [
+          "imm.deps_forgotten",
+          "imm.no_content_leak",
+          "imm.probes_clean",
+          "imm.report_clean",
+          "reload.target_scrubbed",
+          "reload.deps_forgotten",
+          "reload.no_content_leak",
+          "reload.probes_clean",
+          "global.disk_clean"
+        ],
+        "details": {
+          "imm.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "imm.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_verbatim@vector', 'dup_para@graph', 'dup_para@vector']",
+          "imm.probes_clean": "probe0@k1: forgotten id 25aa46d8; probe0@k5: forgotten id 25aa46d8; probe0@k5: forgotten id d66b5d16; probe0@k25: forgotten id 25aa46d8",
+          "imm.report_clean": "3 residual risks reported",
+          "reload.target_scrubbed": "target tombstone still carries content/metadata",
+          "reload.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "reload.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_verbatim@vector', 'dup_para@graph', 'dup_para@vector']",
+          "reload.probes_clean": "probe0@k1: forgotten id 25aa46d8; probe0@k5: forgotten id 25aa46d8; probe0@k5: forgotten id d66b5d16; probe0@k25: forgotten id 25aa46d8",
+          "global.disk_clean": "residue in ['knowledge_graph.json', 'vectors\\\\bemula_main_meta.json', 'viking_memory\\\\user\\\\memories\\\\d66b5d16-e725-4d16-8af6-759d06f60d3c.json']"
+        }
+      },
+      {
+        "instance": 4,
+        "type": "F4 (Inferential)",
+        "reasons": [
+          "imm.deps_forgotten",
+          "imm.no_content_leak",
+          "imm.probes_clean",
+          "imm.report_clean",
+          "reload.target_scrubbed",
+          "reload.deps_forgotten",
+          "reload.no_content_leak",
+          "reload.probes_clean",
+          "global.disk_clean"
+        ],
+        "details": {
+          "imm.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "imm.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_verbatim@vector', 'dup_para@graph', 'dup_para@vector']",
+          "imm.probes_clean": "probe0@k1: forgotten id bd13f402; probe0@k5: forgotten id bd13f402; probe0@k5: forgotten id 820c2174; probe0@k25: forgotten id bd13f402",
+          "imm.report_clean": "2 residual risks reported",
+          "reload.target_scrubbed": "target tombstone still carries content/metadata",
+          "reload.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "reload.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_verbatim@vector', 'dup_para@graph', 'dup_para@vector']",
+          "reload.probes_clean": "probe0@k1: forgotten id bd13f402; probe0@k5: forgotten id bd13f402; probe0@k5: forgotten id 820c2174; probe0@k25: forgotten id bd13f402",
+          "global.disk_clean": "residue in ['knowledge_graph.json', 'vectors\\\\bemula_main_meta.json', 'viking_memory\\\\user\\\\memories\\\\820c2174-6cd2-451c-9d73-b8c89e351867.json']"
+        }
+      },
+      {
+        "instance": 5,
+        "type": "F5 (Temporal)",
+        "reasons": [
+          "imm.deps_forgotten",
+          "imm.no_content_leak",
+          "imm.probes_clean",
+          "imm.report_clean",
+          "reload.target_scrubbed",
+          "reload.deps_forgotten",
+          "reload.no_content_leak",
+          "reload.probes_clean",
+          "global.disk_clean"
+        ],
+        "details": {
+          "imm.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "imm.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_para@graph', 'dup_para@vector']",
+          "imm.probes_clean": "probe0@k1: forgotten id 10c312b3; probe0@k5: forgotten id 10c312b3; probe0@k25: forgotten id 10c312b3; probe1@k1: forgotten id 10c312b3",
+          "imm.report_clean": "1 residual risks reported",
+          "reload.target_scrubbed": "target tombstone still carries content/metadata",
+          "reload.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para']",
+          "reload.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_para@graph', 'dup_para@vector']",
+          "reload.probes_clean": "probe0@k1: forgotten id 10c312b3; probe0@k5: forgotten id 10c312b3; probe0@k25: forgotten id 10c312b3; probe1@k1: forgotten id 10c312b3",
+          "global.disk_clean": "residue in ['knowledge_graph.json', 'vectors\\\\bemula_main_meta.json', 'viking_memory\\\\user\\\\memories\\\\10c312b3-c676-4c65-a2d6-671f746830f0.json']"
+        }
+      },
+      {
+        "instance": 6,
+        "type": "F6 (Replacement)",
+        "reasons": [
+          "imm.deps_forgotten",
+          "imm.no_content_leak",
+          "imm.probes_clean",
+          "imm.report_clean",
+          "reload.target_scrubbed",
+          "reload.deps_forgotten",
+          "reload.no_content_leak",
+          "reload.probes_clean",
+          "global.disk_clean"
+        ],
+        "details": {
+          "imm.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para', 'replacement_record']",
+          "imm.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_para@graph', 'dup_para@vector', 'replacement_record@graph', 'replacement_record@vector']",
+          "imm.probes_clean": "probe0@k1: forgotten id 0f830bc8; probe0@k5: forgotten id 0f830bc8; probe0@k5: forgotten id 3f31c2ac; probe0@k25: forgotten id 0f830bc8",
+          "imm.report_clean": "3 residual risks reported",
+          "reload.target_scrubbed": "target tombstone still carries content/metadata",
+          "reload.deps_forgotten": "dependents still live: ['dup_verbatim', 'dup_para', 'replacement_record']",
+          "reload.no_content_leak": "secret present in: ['dup_verbatim@graph', 'dup_para@graph', 'dup_para@vector', 'replacement_record@graph', 'replacement_record@vector']",
+          "reload.probes_clean": "probe0@k1: forgotten id 0f830bc8; probe0@k5: forgotten id 0f830bc8; probe0@k5: forgotten id 3f31c2ac; probe0@k25: forgotten id 0f830bc8",
+          "global.disk_clean": "residue in ['knowledge_graph.json', 'vectors\\\\bemula_main_meta.json', 'viking_memory\\\\user\\\\memories\\\\0f830bc8-d1ef-46b7-ad7e-f9879f931a59.json', 'viking_memory\\\\user\\\\memories\\\\3f31c2ac-ed4b-4599-9aea-e6b36053db4f.json']"
+        }
+      }
+    ]
+  },
+  "scenarios": {},
+  "mutation": {}
+}

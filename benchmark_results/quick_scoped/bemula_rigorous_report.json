@@ -1,0 +1,73 @@
+{
+  "main": {
+    "instances": 6,
+    "passed": 6,
+    "rpr": 100.0,
+    "wilson95": [
+      60.97,
+      100.0
+    ],
+    "silent_leaks": 0,
+    "disclosed_leaks": 0,
+    "vacuous_probe_instances": 0,
+    "failing_checks": {},
+    "unsupported_checks": {},
+    "per_type": {
+      "F1 (Factual)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F2 (Compositional)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F3 (Semantic Category)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F4 (Inferential)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F5 (Temporal)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      },
+      "F6 (Replacement)": {
+        "passed": 1,
+        "total": 1,
+        "rpr": 100.0
+      }
+    },
+    "edge_cases": {
+      "redelete_exceptions": 0,
+      "redelete_state_stable": true,
+      "audit_bytes_growth_on_redelete": 4617,
+      "unknown_id_graceful": true,
+      "audit_chain_valid": true,
+      "audit_tamper_detected": true
+    },
+    "background_collateral_failures": 0,
+    "latency_ms": {
+      "p50": 82.35,
+      "p95": 88.22
+    },
+    "warnings_emitted": {},
+    "caveats": [],
+    "reload_ok": true,
+    "disk_residue_files": [],
+    "search_stats": {
+      "calls": 76,
+      "mean_ms": 0.5,
+      "engine_warnings": {}
+    },
+    "failures": []
+  },
+  "scenarios": {},
+  "mutation": {}
+}
