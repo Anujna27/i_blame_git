@@ -1,208 +1,247 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1587 1123" role="img" aria-labelledby="title desc">
-  <title id="title">MNEMOSYNE implemented architecture</title>
-  <desc id="desc">A3 landscape architecture board showing high, mid, and low level implemented components of MNEMOSYNE.</desc>
+  <title id="title">MNEMOSYNE implemented architecture at high, mid, and low levels</title>
+  <desc id="desc">A3 landscape architecture sheet showing agent harnesses, MemoryNode identity, hybrid memory, accountable erasure, retrieval, handoff, and the implemented storage records.</desc>
+
   <style>
+    /* Hallmark v2.0.0 | custom architecture sheet | A3 landscape */
+    /* Critique: make the MemoryNode UUID the visible spine across every implemented projection. */
     :root {
-      --paper: #f5f1e8;
-      --ink: #20242a;
-      --muted: #687078;
-      --line: #c9c2b6;
-      --navy: #17324d;
-      --blue: #d9e7ef;
-      --coral: #e77b63;
-      --coral-soft: #f5d7ce;
-      --sage: #d9e4d3;
-      --sand: #efe2c4;
-      --white: #fffdf8;
-      --mono: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
-      --sans: "Aptos", "Segoe UI", Arial, sans-serif;
+      --paper: #edf2f0;
+      --paper-soft: #f8fbfa;
+      --ink: #102b31;
+      --muted: #5d7378;
+      --line: #c7d7d4;
+      --line-strong: #98b4b1;
+      --teal: #1b7775;
+      --teal-soft: #d7ece8;
+      --coral: #e7664f;
+      --coral-soft: #f7ddd7;
+      --amber: #c38b2f;
+      --amber-soft: #f5e7bd;
+      --cyan: #2d6f8d;
+      --cyan-soft: #dcebf1;
+      --deep: #163e48;
+      --white: #ffffff;
+      --font-display: "Aptos Display", "Segoe UI", Arial, sans-serif;
+      --font-sans: "Aptos", "Segoe UI", Arial, sans-serif;
+      --font-mono: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
     }
+
     * { box-sizing: border-box; }
-    text { font-family: var(--sans); fill: var(--ink); }
-    .mono { font-family: var(--mono); }
-    .small { font-size: 13px; letter-spacing: .02em; }
-    .label { font-size: 12px; fill: var(--muted); }
-    .title { font-size: 39px; font-weight: 700; letter-spacing: -.04em; fill: var(--navy); }
+    text { font-family: var(--font-sans); fill: var(--ink); }
+    .mono { font-family: var(--font-mono); }
+    .meta { font-size: 12px; fill: var(--muted); }
+    .title { font-family: var(--font-display); font-size: 39px; font-weight: 700; letter-spacing: -1.5px; fill: var(--deep); }
     .subtitle { font-size: 16px; fill: var(--muted); }
-    .level { font-size: 14px; font-weight: 700; fill: var(--coral); }
-    .section { font-size: 17px; font-weight: 700; fill: var(--navy); }
-    .box-title { font-size: 16px; font-weight: 700; fill: var(--navy); }
-    .box-copy { font-size: 12px; fill: var(--ink); }
-    .tag { font-size: 11px; font-weight: 700; fill: var(--navy); }
+    .tier { font-size: 13px; font-weight: 700; fill: var(--coral); }
+    .section { font-family: var(--font-display); font-size: 20px; font-weight: 700; fill: var(--deep); }
+    .panel-title { font-size: 17px; font-weight: 700; fill: var(--deep); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .body-muted { font-size: 12px; fill: var(--muted); }
+    .small-mono { font-family: var(--font-mono); font-size: 11px; fill: var(--muted); }
+    .tag-text { font-size: 11px; font-weight: 700; fill: var(--deep); }
+    .step-number { font-size: 12px; font-weight: 700; fill: var(--white); }
     .paper { fill: var(--paper); }
-    .panel { fill: var(--white); stroke: var(--line); stroke-width: 1.2; }
-    .high { fill: var(--blue); stroke: var(--navy); stroke-width: 1.4; }
-    .mid { fill: var(--sage); stroke: #5e7959; stroke-width: 1.3; }
-    .data { fill: var(--sand); stroke: #a58b54; stroke-width: 1.3; }
-    .risk { fill: var(--coral-soft); stroke: #b75542; stroke-width: 1.3; }
-    .optional { fill: #e9e0ef; stroke: #765c85; stroke-width: 1.3; stroke-dasharray: 6 5; }
-    .thin { stroke: var(--line); stroke-width: 1; fill: none; }
-    .flow { stroke: var(--navy); stroke-width: 2; fill: none; marker-end: url(#arrow); }
-    .flow-soft { stroke: #5e7959; stroke-width: 1.6; fill: none; marker-end: url(#arrowSage); }
-    .dashed { stroke-dasharray: 7 6; }
-    .number { fill: var(--coral); }
-    .white { fill: var(--white); }
+    .paper-soft { fill: var(--paper-soft); }
+    .frame { fill: none; stroke: var(--deep); stroke-width: 2; }
+    .hairline { fill: none; stroke: var(--line); stroke-width: 1; }
+    .rule { fill: none; stroke: var(--line-strong); stroke-width: 1.3; }
+    .high-panel { fill: var(--cyan-soft); stroke: var(--cyan); stroke-width: 1.4; }
+    .identity-panel { fill: var(--teal-soft); stroke: var(--teal); stroke-width: 1.4; }
+    .store-panel { fill: var(--amber-soft); stroke: var(--amber); stroke-width: 1.4; }
+    .account-panel { fill: var(--coral-soft); stroke: var(--coral); stroke-width: 1.4; }
+    .neutral-panel { fill: var(--paper-soft); stroke: var(--line-strong); stroke-width: 1.2; }
+    .optional-panel { fill: var(--paper-soft); stroke: var(--teal); stroke-width: 1.4; stroke-dasharray: 7 5; }
+    .spine { fill: none; stroke: var(--deep); stroke-width: 2; }
+    .teal-flow { fill: none; stroke: var(--teal); stroke-width: 1.8; marker-end: url(#arrow-teal); }
+    .deep-flow { fill: none; stroke: var(--deep); stroke-width: 1.8; marker-end: url(#arrow-deep); }
+    .coral-flow { fill: none; stroke: var(--coral); stroke-width: 1.8; marker-end: url(#arrow-coral); }
+    .optional-flow { fill: none; stroke: var(--teal); stroke-width: 1.6; stroke-dasharray: 7 5; marker-end: url(#arrow-teal); }
+    .pill-teal { fill: var(--teal); }
+    .pill-coral { fill: var(--coral); }
+    .pill-amber { fill: var(--amber); }
+    .pill-cyan { fill: var(--cyan); }
+    .pill-white { fill: var(--white); stroke: var(--line); stroke-width: 1; }
+    .number-teal { fill: var(--teal); }
+    .number-coral { fill: var(--coral); }
+    .number-amber { fill: var(--amber); }
+    .arrow-teal { fill: var(--teal); }
+    .arrow-deep { fill: var(--deep); }
+    .arrow-coral { fill: var(--coral); }
   </style>
 
   <defs>
-    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
-      <path d="M0,0 L9,4.5 L0,9 z" fill="#17324d"/>
+    <marker id="arrow-teal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 Z" class="arrow-teal"/>
     </marker>
-    <marker id="arrowSage" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
-      <path d="M0,0 L9,4.5 L0,9 z" fill="#5e7959"/>
+    <marker id="arrow-deep" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 Z" class="arrow-deep"/>
+    </marker>
+    <marker id="arrow-coral" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 Z" class="arrow-coral"/>
     </marker>
     <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M28 0H0V28" class="thin" opacity=".35"/>
+      <path d="M28 0 H0 V28" class="hairline" opacity=".42"/>
     </pattern>
   </defs>
 
   <rect width="1587" height="1123" class="paper"/>
   <rect x="34" y="34" width="1519" height="1055" fill="url(#grid)" opacity=".18"/>
-  <rect x="34" y="34" width="1519" height="1055" fill="none" stroke="var(--navy)" stroke-width="2"/>
+  <rect x="34" y="34" width="1519" height="1055" class="frame"/>
 
   <!-- Header -->
-  <text x="74" y="88" class="label mono">MNEMOSYNE / IMPLEMENTED ARCHITECTURE / A3 LANDSCAPE</text>
-  <text x="74" y="139" class="title">Memory that can explain itself.</text>
-  <text x="76" y="169" class="subtitle">Session-scoped entities, hybrid retrieval, auditable lifecycle, and deletion with recovery evidence.</text>
-  <rect x="1290" y="70" width="205" height="80" rx="4" class="panel"/>
-  <text x="1310" y="96" class="label">IMPLEMENTATION STATUS</text>
-  <text x="1310" y="126" class="box-title">implemented core</text>
-  <text x="1310" y="143" class="label">optional LLM paths marked</text>
+  <text x="67" y="75" class="meta mono">MNEMOSYNE / implemented architecture / A3 landscape</text>
+  <text x="67" y="126" class="title">One identity. Four projections. One accountable lifecycle.</text>
+  <text x="69" y="155" class="subtitle">The implemented path from agent harness to durable memory, context transfer, and evidence-backed erasure.</text>
 
-  <!-- Level dividers -->
-  <line x1="74" y1="213" x2="1513" y2="213" class="thin"/>
-  <text x="74" y="241" class="level">01 / HIGH LEVEL</text>
-  <text x="245" y="241" class="section">The system boundary</text>
+  <rect x="1245" y="61" width="250" height="95" rx="8" class="neutral-panel"/>
+  <text x="1265" y="88" class="meta">Sheet status</text>
+  <text x="1265" y="116" class="panel-title">Implemented core</text>
+  <text x="1265" y="139" class="body-muted">Dashed paths are optional providers.</text>
 
-  <!-- High-level boxes -->
-  <rect x="74" y="265" width="285" height="102" rx="8" class="high"/>
-  <text x="98" y="298" class="box-title">Harness layer</text>
-  <text x="98" y="322" class="box-copy">AgentA coordinates live memory work.</text>
-  <text x="98" y="342" class="box-copy">AgentB imports portable capsules.</text>
-  <rect x="98" y="349" width="92" height="20" rx="10" class="white" opacity=".8"/>
-  <text x="112" y="363" class="tag">AGENT API</text>
+  <!-- High level -->
+  <line x1="67" y1="188" x2="1495" y2="188" class="rule"/>
+  <text x="67" y="216" class="tier">01 / High level</text>
+  <text x="222" y="216" class="section">System boundary and ownership</text>
 
-  <rect x="414" y="265" width="285" height="102" rx="8" class="mid"/>
-  <text x="438" y="298" class="box-title">Memory core</text>
-  <text x="438" y="322" class="box-copy">MemoryNode identity, sessions, context.</text>
-  <text x="438" y="342" class="box-copy">Extraction and summaries are injectable.</text>
-  <rect x="438" y="349" width="112" height="20" rx="10" class="white" opacity=".8"/>
-  <text x="451" y="363" class="tag">ENTITY FIRST</text>
+  <rect x="67" y="239" width="305" height="117" rx="9" class="high-panel"/>
+  <text x="89" y="271" class="panel-title">Harnesses</text>
+  <text x="89" y="297" class="body">AgentA owns live memory work.</text>
+  <text x="89" y="318" class="body">AgentB receives portable capsules.</text>
+  <rect x="89" y="331" width="131" height="19" rx="9" class="pill-white"/>
+  <text x="103" y="344" class="tag-text">remember · recall · forget</text>
 
-  <rect x="754" y="265" width="285" height="102" rx="8" class="data"/>
-  <text x="778" y="298" class="box-title">Memory substrates</text>
-  <text x="778" y="322" class="box-copy">Knowledge graph plus FAISS vectors.</text>
-  <text x="778" y="342" class="box-copy">Filesystem tiers preserve inspectable memory.</text>
-  <rect x="778" y="349" width="105" height="20" rx="10" class="white" opacity=".8"/>
-  <text x="791" y="363" class="tag">HYBRID MEMORY</text>
+  <rect x="404" y="239" width="305" height="117" rx="9" class="identity-panel"/>
+  <text x="426" y="271" class="panel-title">Memory identity</text>
+  <text x="426" y="297" class="body">MemoryNode carries the UUID, session,</text>
+  <text x="426" y="318" class="body">trust, summaries, properties, and lifecycle.</text>
+  <rect x="426" y="331" width="146" height="19" rx="9" class="pill-white"/>
+  <text x="440" y="344" class="tag-text">entity first</text>
 
-  <rect x="1094" y="265" width="401" height="102" rx="8" class="risk"/>
-  <text x="1118" y="298" class="box-title">Accountability and recovery</text>
-  <text x="1118" y="322" class="box-copy">ErasureEngine, HashChain, residual risk,</text>
-  <text x="1118" y="342" class="box-copy">journaled recovery, and graph healing.</text>
-  <rect x="1118" y="349" width="108" height="20" rx="10" class="white" opacity=".8"/>
-  <text x="1131" y="363" class="tag">AUDITABLE FLOW</text>
+  <rect x="741" y="239" width="350" height="117" rx="9" class="store-panel"/>
+  <text x="763" y="271" class="panel-title">Hybrid memory</text>
+  <text x="763" y="297" class="body">KnowledgeGraph and FAISS support recall.</text>
+  <text x="763" y="318" class="body">FilesystemMemory keeps inspectable records.</text>
+  <rect x="763" y="331" width="127" height="19" rx="9" class="pill-white"/>
+  <text x="777" y="344" class="tag-text">graph plus vector</text>
 
-  <path d="M359 316 H414" class="flow"/>
-  <path d="M699 316 H754" class="flow"/>
-  <path d="M1039 316 H1094" class="flow"/>
+  <rect x="1123" y="239" width="372" height="117" rx="9" class="account-panel"/>
+  <text x="1145" y="271" class="panel-title">Accountability</text>
+  <text x="1145" y="297" class="body">ErasureEngine, HashChain, journaled recovery,</text>
+  <text x="1145" y="318" class="body">risk reporting, and graph healing surround memory.</text>
+  <rect x="1145" y="331" width="135" height="19" rx="9" class="pill-white"/>
+  <text x="1159" y="344" class="tag-text">auditable flow</text>
 
-  <text x="74" y="407" class="label">One identity crosses every store: the MemoryNode UUID.</text>
-  <text x="1290" y="407" class="label mono">shared persistence · capsule handoff</text>
+  <path d="M372 298 H404" class="deep-flow"/>
+  <path d="M709 298 H741" class="deep-flow"/>
+  <path d="M1091 298 H1123" class="deep-flow"/>
+
+  <line x1="67" y1="381" x2="1495" y2="381" class="hairline"/>
+  <text x="67" y="403" class="body-muted">The same MemoryNode UUID is the join key across graph, vector, filesystem, session, capsule, and audit records.</text>
+  <text x="1154" y="403" class="small-mono">one identity boundary</text>
 
   <!-- Mid level -->
-  <line x1="74" y1="438" x2="1513" y2="438" class="thin"/>
-  <text x="74" y="466" class="level">02 / MID LEVEL</text>
-  <text x="245" y="466" class="section">The working flows</text>
+  <line x1="67" y1="428" x2="1495" y2="428" class="rule"/>
+  <text x="67" y="456" class="tier">02 / Mid level</text>
+  <text x="222" y="456" class="section">The working flows</text>
 
-  <!-- Mid process lane -->
-  <rect x="74" y="493" width="435" height="242" rx="8" class="panel"/>
-  <text x="98" y="526" class="box-title">Write and commit</text>
-  <circle cx="105" cy="559" r="13" class="number"/><text x="101" y="564" class="white small">1</text>
-  <text x="130" y="564" class="box-copy">remember() creates a MemoryNode</text>
-  <circle cx="105" cy="600" r="13" class="number"/><text x="101" y="605" class="white small">2</text>
-  <text x="130" y="605" class="box-copy">summaries, contradiction checks</text>
-  <circle cx="105" cy="641" r="13" class="number"/><text x="101" y="646" class="white small">3</text>
-  <text x="130" y="646" class="box-copy">graph, vector, session, audit writes</text>
-  <circle cx="105" cy="682" r="13" class="number"/><text x="101" y="687" class="white small">4</text>
-  <text x="130" y="687" class="box-copy">commit writes filesystem tiers and heals</text>
-  <path d="M105 574 V585 M105 615 V626 M105 656 V667" class="flow-soft"/>
-  <text x="98" y="718" class="label mono">AgentA → stores → commit journal</text>
+  <!-- Write flow -->
+  <rect x="67" y="479" width="466" height="250" rx="9" class="neutral-panel"/>
+  <text x="91" y="513" class="panel-title">Write and consolidate</text>
+  <circle cx="101" cy="550" r="14" class="number-teal"/><text x="97" y="555" class="step-number">1</text>
+  <text x="128" y="555" class="body">AgentA.remember creates a MemoryNode.</text>
+  <circle cx="101" cy="589" r="14" class="number-teal"/><text x="97" y="594" class="step-number">2</text>
+  <text x="128" y="594" class="body">VectorStore and KnowledgeGraph receive it.</text>
+  <circle cx="101" cy="628" r="14" class="number-teal"/><text x="97" y="633" class="step-number">3</text>
+  <text x="128" y="633" class="body">SessionStore and HashChain record the write.</text>
+  <circle cx="101" cy="667" r="14" class="number-teal"/><text x="97" y="672" class="step-number">4</text>
+  <text x="128" y="672" class="body">commit_session writes filesystem memory.</text>
+  <path d="M101 564 V575 M101 603 V614 M101 642 V653" class="teal-flow"/>
+  <text x="91" y="704" class="small-mono">commit also invokes graph healing</text>
 
-  <rect x="575" y="493" width="435" height="242" rx="8" class="panel"/>
-  <text x="599" y="526" class="box-title">Read and compose context</text>
-  <rect x="599" y="552" width="170" height="47" rx="6" class="high"/>
-  <text x="617" y="580" class="tag">FAISS VECTOR SEARCH</text>
-  <rect x="816" y="552" width="170" height="47" rx="6" class="mid"/>
-  <text x="838" y="580" class="tag">GRAPH EXPANSION</text>
-  <path d="M769 575 H816" class="flow"/>
-  <rect x="707" y="632" width="170" height="47" rx="6" class="data"/>
-  <text x="728" y="660" class="tag">TOKEN-BOUNDED CONTEXT</text>
-  <path d="M684 599 V615 H792 V632" class="flow-soft"/>
-  <path d="M901 599 V615 H792 V632" class="flow-soft"/>
-  <text x="599" y="718" class="label">ActiveContext exposes selected entity text to the harness.</text>
+  <!-- Read and handoff -->
+  <rect x="560" y="479" width="466" height="250" rx="9" class="neutral-panel"/>
+  <text x="584" y="513" class="panel-title">Read and hand off context</text>
+  <rect x="584" y="535" width="187" height="44" rx="7" class="high-panel"/>
+  <text x="604" y="562" class="tag-text">VectorStore.query</text>
+  <rect x="815" y="535" width="187" height="44" rx="7" class="identity-panel"/>
+  <text x="842" y="562" class="tag-text">graph expansion</text>
+  <path d="M771 557 H815" class="deep-flow"/>
+  <rect x="699" y="607" width="212" height="44" rx="7" class="store-panel"/>
+  <text x="725" y="634" class="tag-text">ContextBuilder → ActiveContext</text>
+  <path d="M678 579 V592 H805 V607" class="teal-flow"/>
+  <path d="M909 579 V592 H805 V607" class="teal-flow"/>
+  <text x="584" y="679" class="body-muted">Token budget, abstention, and contradiction checks gate what reaches the harness.</text>
+  <path d="M805 651 V669" class="deep-flow"/>
+  <text x="584" y="704" class="small-mono">CapsuleExporter → capsule JSON → CapsuleImporter → AgentB</text>
 
-  <rect x="1076" y="493" width="419" height="242" rx="8" class="panel"/>
-  <text x="1100" y="526" class="box-title">Delete and recover</text>
-  <rect x="1100" y="552" width="168" height="47" rx="6" class="risk"/>
-  <text x="1124" y="580" class="tag">ERASURE ENGINE</text>
-  <rect x="1290" y="552" width="168" height="47" rx="6" class="data"/>
-  <text x="1311" y="580" class="tag">ERASURE JOURNAL</text>
-  <path d="M1268 575 H1290" class="flow"/>
-  <rect x="1195" y="632" width="168" height="47" rx="6" class="mid"/>
-  <text x="1216" y="660" class="tag">RECOVERY / VERIFY</text>
-  <path d="M1184 599 V615 H1279 V632" class="flow-soft"/>
-  <path d="M1374 599 V615 H1279 V632" class="flow-soft"/>
-  <text x="1100" y="718" class="label">Graph, vectors, filesystem, blocks, and audit are checked.</text>
+  <!-- Erasure flow -->
+  <rect x="1053" y="479" width="442" height="250" rx="9" class="neutral-panel"/>
+  <text x="1077" y="513" class="panel-title">Delete and recover</text>
+  <rect x="1077" y="535" width="178" height="44" rx="7" class="account-panel"/>
+  <text x="1105" y="562" class="tag-text">AgentA.forget</text>
+  <rect x="1290" y="535" width="181" height="44" rx="7" class="store-panel"/>
+  <text x="1307" y="562" class="tag-text">scoped manifest</text>
+  <path d="M1255 557 H1290" class="coral-flow"/>
+  <rect x="1170" y="607" width="212" height="44" rx="7" class="account-panel"/>
+  <text x="1190" y="634" class="tag-text">scrub every projection</text>
+  <path d="M1166 579 V592 H1276 V607" class="coral-flow"/>
+  <path d="M1381 579 V592 H1276 V607" class="coral-flow"/>
+  <text x="1077" y="679" class="body-muted">Graph, vectors, filesystem, sessions, blocked IDs, and audit are checked.</text>
+  <text x="1077" y="704" class="small-mono">ErasureJournal → ErasureRecovery on interruption</text>
 
   <!-- Low level -->
-  <line x1="74" y1="786" x2="1513" y2="786" class="thin"/>
-  <text x="74" y="814" class="level">03 / LOW LEVEL</text>
-  <text x="245" y="814" class="section">The implemented records and interfaces</text>
+  <line x1="67" y1="762" x2="1495" y2="762" class="rule"/>
+  <text x="67" y="790" class="tier">03 / Low level</text>
+  <text x="222" y="790" class="section">Records, interfaces, and persistence</text>
 
-  <rect x="74" y="842" width="342" height="192" rx="8" class="high"/>
-  <text x="98" y="875" class="box-title">MemoryNode record</text>
-  <text x="98" y="902" class="box-copy mono">node_id · session_id · content</text>
-  <text x="98" y="923" class="box-copy mono">entity_type · properties · trust_status</text>
-  <text x="98" y="944" class="box-copy mono">summary_l0 · summary_l1 · content_l2</text>
-  <text x="98" y="965" class="box-copy mono">lifecycle · deletion_state · edges</text>
-  <text x="98" y="1005" class="label">One UUID binds all representations.</text>
+  <rect x="67" y="813" width="344" height="213" rx="9" class="identity-panel"/>
+  <text x="91" y="846" class="panel-title">MemoryNode record</text>
+  <text x="91" y="876" class="small-mono">node_id · session_id · entity_type</text>
+  <text x="91" y="898" class="small-mono">content · properties · trust_status</text>
+  <text x="91" y="920" class="small-mono">summary_l0 · summary_l1 · content_l2</text>
+  <text x="91" y="942" class="small-mono">lifecycle · deletion_state · edges</text>
+  <line x1="91" y1="963" x2="387" y2="963" class="hairline"/>
+  <text x="91" y="989" class="body-muted">UUID binds every representation.</text>
 
-  <rect x="442" y="842" width="342" height="192" rx="8" class="data"/>
-  <text x="466" y="875" class="box-title">Persistent files</text>
-  <text x="466" y="902" class="box-copy mono">knowledge_graph.json</text>
-  <text x="466" y="923" class="box-copy mono">FAISS index + metadata JSON</text>
-  <text x="466" y="944" class="box-copy mono">sessions.json</text>
-  <text x="466" y="965" class="box-copy mono">viking_memory/.../entity.json</text>
-  <text x="466" y="986" class="box-copy mono">audit_log.json · erasure_journal.json</text>
-  <text x="466" y="1005" class="label">Capsules package the same state for handoff.</text>
+  <rect x="432" y="813" width="344" height="213" rx="9" class="store-panel"/>
+  <text x="456" y="846" class="panel-title">Durable projections</text>
+  <text x="456" y="876" class="small-mono">knowledge_graph.json</text>
+  <text x="456" y="898" class="small-mono">FAISS index and metadata JSON</text>
+  <text x="456" y="920" class="small-mono">sessions.json</text>
+  <text x="456" y="942" class="small-mono">viking_memory/.../entity.json</text>
+  <text x="456" y="964" class="small-mono">audit_log · erasure_journal</text>
+  <text x="456" y="989" class="body-muted">Capsules package portable state.</text>
 
-  <rect x="810" y="842" width="342" height="192" rx="8" class="risk"/>
-  <text x="834" y="875" class="box-title">Deletion contract</text>
-  <text x="834" y="902" class="box-copy">source removal</text>
-  <text x="834" y="923" class="box-copy">derived invalidation</text>
-  <text x="834" y="944" class="box-copy">inference block</text>
-  <text x="834" y="965" class="box-copy">semantic-risk report</text>
-  <text x="834" y="986" class="box-copy">filesystem and vector cleanup</text>
-  <text x="834" y="1005" class="label">ErasureReport records the result.</text>
+  <rect x="797" y="813" width="344" height="213" rx="9" class="account-panel"/>
+  <text x="821" y="846" class="panel-title">Accountability contract</text>
+  <text x="821" y="876" class="body">Source removal</text>
+  <text x="821" y="898" class="body">Derived invalidation</text>
+  <text x="821" y="920" class="body">Inference blocking</text>
+  <text x="821" y="942" class="body">Non-inferability checks</text>
+  <text x="821" y="964" class="body">State restoration checks</text>
+  <text x="821" y="989" class="body-muted">ErasureReport records actor, reason, time, and result.</text>
 
-  <rect x="1178" y="842" width="317" height="192" rx="8" class="optional"/>
-  <text x="1202" y="875" class="box-title">Optional LLM paths</text>
-  <text x="1202" y="902" class="box-copy">ConfiguredLLM</text>
-  <text x="1202" y="923" class="box-copy">entity extraction</text>
-  <text x="1202" y="944" class="box-copy">generated summaries</text>
-  <text x="1202" y="965" class="box-copy">orphan-link suggestions</text>
-  <text x="1202" y="1005" class="label">Deterministic fallback remains available.</text>
+  <rect x="1162" y="813" width="333" height="213" rx="9" class="optional-panel"/>
+  <text x="1186" y="846" class="panel-title">Provider and policy paths</text>
+  <text x="1186" y="876" class="body">ConfiguredLLM: Groq or Ollama</text>
+  <text x="1186" y="898" class="body">EntityExtractor and SummaryGenerator</text>
+  <text x="1186" y="920" class="body">HonchoDreaming with Laya gate</text>
+  <text x="1186" y="942" class="body">GraphHealer link suggestions</text>
+  <text x="1186" y="964" class="body">Deterministic fallbacks remain active</text>
+  <text x="1186" y="989" class="body-muted">Optional means disabled by default, not absent.</text>
 
-  <!-- Footer legend -->
-  <line x1="74" y1="1060" x2="1513" y2="1060" class="thin"/>
-  <text x="74" y="1081" class="label mono">implemented now</text>
-  <rect x="178" y="1070" width="14" height="14" rx="2" class="high"/>
-  <text x="214" y="1081" class="label mono">storage / process</text>
-  <rect x="335" y="1070" width="14" height="14" rx="2" class="data"/>
-  <text x="371" y="1081" class="label mono">accountability / deletion</text>
-  <rect x="534" y="1070" width="14" height="14" rx="2" class="risk"/>
-  <text x="575" y="1081" class="label mono">optional provider</text>
-  <rect x="710" y="1070" width="14" height="14" rx="2" class="optional"/>
-  <text x="1290" y="1081" class="label mono">v1.0 · architecture board · source: implemented repository modules</text>
+  <!-- Footer -->
+  <line x1="67" y1="1051" x2="1495" y2="1051" class="hairline"/>
+  <rect x="67" y="1065" width="13" height="13" rx="2" class="pill-cyan"/>
+  <text x="89" y="1076" class="meta">harness and context</text>
+  <rect x="237" y="1065" width="13" height="13" rx="2" class="pill-teal"/>
+  <text x="259" y="1076" class="meta">identity and graph</text>
+  <rect x="407" y="1065" width="13" height="13" rx="2" class="pill-amber"/>
+  <text x="429" y="1076" class="meta">storage and retrieval</text>
+  <rect x="602" y="1065" width="13" height="13" rx="2" class="pill-coral"/>
+  <text x="624" y="1076" class="meta">accountability and erasure</text>
+  <rect x="830" y="1065" width="13" height="13" rx="2" class="optional-panel"/>
+  <text x="852" y="1076" class="meta">optional provider path</text>
+  <text x="1160" y="1076" class="small-mono">source: implemented repository modules</text>
 </svg>
