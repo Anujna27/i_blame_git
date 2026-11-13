@@ -1,0 +1,460 @@
+{
+  "profile_id": "profile_001",
+  "name": "Reese Patel",
+  "domain_bundle": "medical",
+  "sessions": [
+    {
+      "session_id": "sess_profile_001_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_001_001",
+          "content": "The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October.",
+          "entity_type": "vaccination",
+          "fact": "influenza",
+          "label": "recent immunizations",
+          "session_id": "sess_profile_001_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my recent immunizations. Specifically, The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your recent immunizations details."
+        }
+      ],
+      "summary_l1": "Session 1: Reese Patel confirmed their recent immunizations details stating that The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October."
+    },
+    {
+      "session_id": "sess_profile_001_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_001_002",
+          "content": "The user's verified past surgical procedures record is knee arthroscopy performed at Swedish Medical Center.",
+          "entity_type": "hospital",
+          "fact": "Swedish",
+          "label": "past surgical procedures",
+          "session_id": "sess_profile_001_02",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my past surgical procedures. Specifically, The user's verified past surgical procedures record is knee arthroscopy performed at Swedish Medical Center."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your past surgical procedures details."
+        }
+      ],
+      "summary_l1": "Session 2: Reese Patel confirmed their past surgical procedures details stating that The user's verified past surgical procedures record is knee arthroscopy performed at Swedish Medical Center."
+    },
+    {
+      "session_id": "sess_profile_001_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_001_003",
+          "content": "The user's verified skin conditions record is moderate eczema managed by Dr. Harris.",
+          "entity_type": "condition",
+          "fact": "Harris",
+          "label": "skin conditions",
+          "session_id": "sess_profile_001_03",
+          "created_at": "2026-10-04T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my skin conditions. Specifically, The user's verified skin conditions record is moderate eczema managed by Dr. Harris."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your skin conditions details."
+        }
+      ],
+      "summary_l1": "Session 3: Reese Patel confirmed their skin conditions details stating that The user's verified skin conditions record is moderate eczema managed by Dr. Harris."
+    },
+    {
+      "session_id": "sess_profile_001_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_001_004",
+          "content": "The user's verified blood type record is blood type O-negative registered with Red Cross.",
+          "entity_type": "blood_type",
+          "fact": "O-negative",
+          "label": "blood type",
+          "session_id": "sess_profile_001_04",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my blood type. Specifically, The user's verified blood type record is blood type O-negative registered with Red Cross."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your blood type details."
+        }
+      ],
+      "summary_l1": "Session 4: Reese Patel confirmed their blood type details stating that The user's verified blood type record is blood type O-negative registered with Red Cross."
+    },
+    {
+      "session_id": "sess_profile_001_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_001_005",
+          "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021.",
+          "entity_type": "allergy",
+          "fact": "penicillin",
+          "label": "medical allergies",
+          "session_id": "sess_profile_001_05",
+          "created_at": "2026-10-06T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my medical allergies. Specifically, The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your medical allergies details."
+        }
+      ],
+      "summary_l1": "Session 5: Reese Patel confirmed their medical allergies details stating that The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021."
+    },
+    {
+      "session_id": "sess_profile_001_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_001_006",
+          "content": "The user's verified health insurance policy ID record is health insurance policy member ID POL-8829104-BCBS.",
+          "entity_type": "insurance",
+          "fact": "POL-8829104",
+          "label": "health insurance policy ID",
+          "session_id": "sess_profile_001_06",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my health insurance policy ID. Specifically, The user's verified health insurance policy ID record is health insurance policy member ID POL-8829104-BCBS."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your health insurance policy ID details."
+        }
+      ],
+      "summary_l1": "Session 6: Reese Patel confirmed their health insurance policy ID details stating that The user's verified health insurance policy ID record is health insurance policy member ID POL-8829104-BCBS."
+    },
+    {
+      "session_id": "sess_profile_001_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_001_007",
+          "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status.",
+          "entity_type": "loyalty",
+          "fact": "Diamond",
+          "label": "airline loyalty status",
+          "session_id": "sess_profile_001_07",
+          "created_at": "2026-10-08T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my airline loyalty status. Specifically, The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your airline loyalty status details."
+        }
+      ],
+      "summary_l1": "Session 7: Reese Patel confirmed their airline loyalty status details stating that The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status."
+    },
+    {
+      "session_id": "sess_profile_001_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_001_008",
+          "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen.",
+          "entity_type": "manager",
+          "fact": "Sarah",
+          "label": "direct reporting manager",
+          "session_id": "sess_profile_001_08",
+          "created_at": "2026-10-09T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_001_009",
+          "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp.",
+          "entity_type": "employer",
+          "fact": "Acme",
+          "label": "current employer",
+          "session_id": "sess_profile_001_08",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_001_010",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford.",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_001_08",
+          "created_at": "2026-10-11T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_001_011",
+          "content": "The user: The user volunteers weekly at a local community animal shelter.",
+          "entity_type": "preference",
+          "fact": "shelter",
+          "label": "community volunteer work",
+          "session_id": "sess_profile_001_08",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_001_012",
+          "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park.",
+          "entity_type": "preference",
+          "fact": "Rainier",
+          "label": "backcountry hiking destination",
+          "session_id": "sess_profile_001_08",
+          "created_at": "2026-10-13T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_001_013",
+          "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3.",
+          "entity_type": "preference",
+          "fact": "Tesla",
+          "label": "electric vehicle model",
+          "session_id": "sess_profile_001_08",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_001_014",
+          "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast.",
+          "entity_type": "preference",
+          "fact": "matcha",
+          "label": "breakfast tea beverage",
+          "session_id": "sess_profile_001_08",
+          "created_at": "2026-10-15T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my direct reporting manager. Specifically, The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your direct reporting manager details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my current employer: The user's verified current employer record is employed as Principal Architect at Acme Corp."
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with current employer."
+        }
+      ],
+      "summary_l1": "Session 8: Reese Patel confirmed their direct reporting manager details stating that The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen."
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_001_001",
+      "content": "The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October.",
+      "entity_type": "vaccination",
+      "fact": "influenza",
+      "label": "recent immunizations",
+      "session_id": "sess_profile_001_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_002",
+      "content": "The user's verified past surgical procedures record is knee arthroscopy performed at Swedish Medical Center.",
+      "entity_type": "hospital",
+      "fact": "Swedish",
+      "label": "past surgical procedures",
+      "session_id": "sess_profile_001_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_003",
+      "content": "The user's verified skin conditions record is moderate eczema managed by Dr. Harris.",
+      "entity_type": "condition",
+      "fact": "Harris",
+      "label": "skin conditions",
+      "session_id": "sess_profile_001_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_004",
+      "content": "The user's verified blood type record is blood type O-negative registered with Red Cross.",
+      "entity_type": "blood_type",
+      "fact": "O-negative",
+      "label": "blood type",
+      "session_id": "sess_profile_001_04",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_005",
+      "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021.",
+      "entity_type": "allergy",
+      "fact": "penicillin",
+      "label": "medical allergies",
+      "session_id": "sess_profile_001_05",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_006",
+      "content": "The user's verified health insurance policy ID record is health insurance policy member ID POL-8829104-BCBS.",
+      "entity_type": "insurance",
+      "fact": "POL-8829104",
+      "label": "health insurance policy ID",
+      "session_id": "sess_profile_001_06",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_007",
+      "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status.",
+      "entity_type": "loyalty",
+      "fact": "Diamond",
+      "label": "airline loyalty status",
+      "session_id": "sess_profile_001_07",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_008",
+      "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen.",
+      "entity_type": "manager",
+      "fact": "Sarah",
+      "label": "direct reporting manager",
+      "session_id": "sess_profile_001_08",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_009",
+      "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp.",
+      "entity_type": "employer",
+      "fact": "Acme",
+      "label": "current employer",
+      "session_id": "sess_profile_001_08",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_010",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford.",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_001_08",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_011",
+      "content": "The user: The user volunteers weekly at a local community animal shelter.",
+      "entity_type": "preference",
+      "fact": "shelter",
+      "label": "community volunteer work",
+      "session_id": "sess_profile_001_08",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_012",
+      "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park.",
+      "entity_type": "preference",
+      "fact": "Rainier",
+      "label": "backcountry hiking destination",
+      "session_id": "sess_profile_001_08",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_013",
+      "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3.",
+      "entity_type": "preference",
+      "fact": "Tesla",
+      "label": "electric vehicle model",
+      "session_id": "sess_profile_001_08",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_014",
+      "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast.",
+      "entity_type": "preference",
+      "fact": "matcha",
+      "label": "breakfast tea beverage",
+      "session_id": "sess_profile_001_08",
+      "created_at": "2026-10-15T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_001_001",
+      "content": "The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October.",
+      "entity_type": "vaccination",
+      "fact": "influenza",
+      "label": "recent immunizations",
+      "session_id": "sess_profile_001_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_002",
+      "content": "The user's verified past surgical procedures record is knee arthroscopy performed at Swedish Medical Center.",
+      "entity_type": "hospital",
+      "fact": "Swedish",
+      "label": "past surgical procedures",
+      "session_id": "sess_profile_001_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_001_003",
+      "content": "The user's verified skin conditions record is moderate eczema managed by Dr. Harris.",
+      "entity_type": "condition",
+      "fact": "Harris",
+      "label": "skin conditions",
+      "session_id": "sess_profile_001_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_001_01",
+      "content": "The user has an unrecorded private collection of Bordeaux grand cru vintage wines.",
+      "entity_type": "wine_cellar",
+      "label": "wine cellar collection"
+    },
+    {
+      "control_id": "ctrl_profile_001_02",
+      "content": "The user has an unrecorded FCC amateur radio operator callsign K9XYZ.",
+      "entity_type": "ham_radio",
+      "label": "amateur radio callsign"
+    },
+    {
+      "control_id": "ctrl_profile_001_03",
+      "content": "The user has an unrecorded national competitive sabre fencing tournament medal.",
+      "entity_type": "fencing",
+      "label": "fencing sports rank"
+    },
+    {
+      "control_id": "ctrl_profile_001_04",
+      "content": "The user has an unrecorded ceramic pottery wheel studio membership in Portland.",
+      "entity_type": "pottery",
+      "label": "pottery studio membership"
+    }
+  ]
+}

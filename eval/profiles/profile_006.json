@@ -1,0 +1,538 @@
+{
+  "profile_id": "profile_006",
+  "name": "Casey Hall",
+  "domain_bundle": "academic",
+  "sessions": [
+    {
+      "session_id": "sess_profile_006_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_006_001",
+          "content": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics.",
+          "entity_type": "gpa",
+          "fact": "3.92",
+          "label": "undergraduate GPA",
+          "session_id": "sess_profile_006_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_002",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Casey Hall)",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_006_01",
+          "created_at": "2026-10-03T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_003",
+          "content": "The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society.",
+          "entity_type": "society",
+          "fact": "Phi Beta Kappa",
+          "label": "academic honor society",
+          "session_id": "sess_profile_006_01",
+          "created_at": "2026-10-04T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my undergraduate GPA. Specifically, The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Casey. I have recorded your undergraduate GPA details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my graduate degree university: The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Casey Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with graduate degree university."
+        }
+      ],
+      "summary_l1": "Session 1: Casey Hall confirmed their undergraduate GPA details stating that The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics."
+    },
+    {
+      "session_id": "sess_profile_006_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_006_004",
+          "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Casey Hall)",
+          "entity_type": "advisor",
+          "fact": "Manning",
+          "label": "thesis academic advisor",
+          "session_id": "sess_profile_006_02",
+          "created_at": "2026-10-05T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_005",
+          "content": "The user's verified academic research laboratory record is conducted robotics research at Artificial Intelligence Laboratory.",
+          "entity_type": "lab",
+          "fact": "Robotics",
+          "label": "academic research laboratory",
+          "session_id": "sess_profile_006_02",
+          "created_at": "2026-10-06T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_006",
+          "content": "The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018.",
+          "entity_type": "scholarship",
+          "fact": "Dean",
+          "label": "academic scholarship award",
+          "session_id": "sess_profile_006_02",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my thesis academic advisor. Specifically, The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Casey Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Casey. I have recorded your thesis academic advisor details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my academic research laboratory: The user's verified academic research laboratory record is conducted robotics research at Artificial Intelligence Laboratory."
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with academic research laboratory."
+        }
+      ],
+      "summary_l1": "Session 2: Casey Hall confirmed their thesis academic advisor details stating that The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Casey Hall)"
+    },
+    {
+      "session_id": "sess_profile_006_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_006_007",
+          "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Casey Hall)",
+          "entity_type": "employer",
+          "fact": "Acme",
+          "label": "current employer",
+          "session_id": "sess_profile_006_03",
+          "created_at": "2026-10-08T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_008",
+          "content": "The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Casey Hall)",
+          "entity_type": "checking",
+          "fact": "Chase-8839201948",
+          "label": "bank checking account",
+          "session_id": "sess_profile_006_03",
+          "created_at": "2026-10-09T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_009",
+          "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Casey Hall)",
+          "entity_type": "allergy",
+          "fact": "penicillin",
+          "label": "medical allergies",
+          "session_id": "sess_profile_006_03",
+          "created_at": "2026-10-10T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my current employer. Specifically, The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Casey Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Casey. I have recorded your current employer details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my bank checking account: The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Casey Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with bank checking account."
+        }
+      ],
+      "summary_l1": "Session 3: Casey Hall confirmed their current employer details stating that The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Casey Hall)"
+    },
+    {
+      "session_id": "sess_profile_006_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_006_010",
+          "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Casey Hall)",
+          "entity_type": "prescription",
+          "fact": "Ventolin",
+          "label": "prescription medications",
+          "session_id": "sess_profile_006_04",
+          "created_at": "2026-10-11T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_011",
+          "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Casey Hall)",
+          "entity_type": "preference",
+          "fact": "Tesla",
+          "label": "electric vehicle model",
+          "session_id": "sess_profile_006_04",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_012",
+          "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Casey Hall)",
+          "entity_type": "preference",
+          "fact": "photography",
+          "label": "photography hobby",
+          "session_id": "sess_profile_006_04",
+          "created_at": "2026-10-13T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my prescription medications. Specifically, The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Casey Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Casey. I have recorded your prescription medications details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my electric vehicle model: The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Casey Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with electric vehicle model."
+        }
+      ],
+      "summary_l1": "Session 4: Casey Hall confirmed their prescription medications details stating that The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Casey Hall)"
+    },
+    {
+      "session_id": "sess_profile_006_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_006_013",
+          "content": "The user: The user plays the acoustic guitar musical instrument in the evening.",
+          "entity_type": "preference",
+          "fact": "guitar",
+          "label": "musical instrument",
+          "session_id": "sess_profile_006_05",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_014",
+          "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends.",
+          "entity_type": "preference",
+          "fact": "sourdough",
+          "label": "artisan bread",
+          "session_id": "sess_profile_006_05",
+          "created_at": "2026-10-15T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_015",
+          "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Casey Hall)",
+          "entity_type": "preference",
+          "fact": "Rainier",
+          "label": "backcountry hiking destination",
+          "session_id": "sess_profile_006_05",
+          "created_at": "2026-10-16T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my musical instrument. Specifically, The user: The user plays the acoustic guitar musical instrument in the evening."
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Casey. I have recorded your musical instrument details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my artisan bread: The user: The user bakes fresh artisanal sourdough bread loaves on weekends."
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with artisan bread."
+        }
+      ],
+      "summary_l1": "Session 5: Casey Hall confirmed their musical instrument details stating that The user: The user plays the acoustic guitar musical instrument in the evening."
+    },
+    {
+      "session_id": "sess_profile_006_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_006_016",
+          "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Casey Hall)",
+          "entity_type": "preference",
+          "fact": "marathon",
+          "label": "athletic marathon race",
+          "session_id": "sess_profile_006_06",
+          "created_at": "2026-10-17T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_017",
+          "content": "The user: The user speaks the Japanese foreign language with native fluency.",
+          "entity_type": "preference",
+          "fact": "Japanese",
+          "label": "foreign language",
+          "session_id": "sess_profile_006_06",
+          "created_at": "2026-10-18T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_006_018",
+          "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Casey Hall)",
+          "entity_type": "preference",
+          "fact": "shelter",
+          "label": "community volunteer work",
+          "session_id": "sess_profile_006_06",
+          "created_at": "2026-10-19T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my athletic marathon race. Specifically, The user: The user completed an athletic marathon race in Chicago last October. (Registered for Casey Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Casey. I have recorded your athletic marathon race details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my foreign language: The user: The user speaks the Japanese foreign language with native fluency."
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with foreign language."
+        }
+      ],
+      "summary_l1": "Session 6: Casey Hall confirmed their athletic marathon race details stating that The user: The user completed an athletic marathon race in Chicago last October. (Registered for Casey Hall)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_006_001",
+      "content": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics.",
+      "entity_type": "gpa",
+      "fact": "3.92",
+      "label": "undergraduate GPA",
+      "session_id": "sess_profile_006_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_002",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Casey Hall)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_006_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_003",
+      "content": "The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society.",
+      "entity_type": "society",
+      "fact": "Phi Beta Kappa",
+      "label": "academic honor society",
+      "session_id": "sess_profile_006_01",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_004",
+      "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Casey Hall)",
+      "entity_type": "advisor",
+      "fact": "Manning",
+      "label": "thesis academic advisor",
+      "session_id": "sess_profile_006_02",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_005",
+      "content": "The user's verified academic research laboratory record is conducted robotics research at Artificial Intelligence Laboratory.",
+      "entity_type": "lab",
+      "fact": "Robotics",
+      "label": "academic research laboratory",
+      "session_id": "sess_profile_006_02",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_006",
+      "content": "The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018.",
+      "entity_type": "scholarship",
+      "fact": "Dean",
+      "label": "academic scholarship award",
+      "session_id": "sess_profile_006_02",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_007",
+      "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Casey Hall)",
+      "entity_type": "employer",
+      "fact": "Acme",
+      "label": "current employer",
+      "session_id": "sess_profile_006_03",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_008",
+      "content": "The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Casey Hall)",
+      "entity_type": "checking",
+      "fact": "Chase-8839201948",
+      "label": "bank checking account",
+      "session_id": "sess_profile_006_03",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_009",
+      "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Casey Hall)",
+      "entity_type": "allergy",
+      "fact": "penicillin",
+      "label": "medical allergies",
+      "session_id": "sess_profile_006_03",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_010",
+      "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Casey Hall)",
+      "entity_type": "prescription",
+      "fact": "Ventolin",
+      "label": "prescription medications",
+      "session_id": "sess_profile_006_04",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_011",
+      "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Casey Hall)",
+      "entity_type": "preference",
+      "fact": "Tesla",
+      "label": "electric vehicle model",
+      "session_id": "sess_profile_006_04",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_012",
+      "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Casey Hall)",
+      "entity_type": "preference",
+      "fact": "photography",
+      "label": "photography hobby",
+      "session_id": "sess_profile_006_04",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_013",
+      "content": "The user: The user plays the acoustic guitar musical instrument in the evening.",
+      "entity_type": "preference",
+      "fact": "guitar",
+      "label": "musical instrument",
+      "session_id": "sess_profile_006_05",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_014",
+      "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends.",
+      "entity_type": "preference",
+      "fact": "sourdough",
+      "label": "artisan bread",
+      "session_id": "sess_profile_006_05",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_015",
+      "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Casey Hall)",
+      "entity_type": "preference",
+      "fact": "Rainier",
+      "label": "backcountry hiking destination",
+      "session_id": "sess_profile_006_05",
+      "created_at": "2026-10-16T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_016",
+      "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Casey Hall)",
+      "entity_type": "preference",
+      "fact": "marathon",
+      "label": "athletic marathon race",
+      "session_id": "sess_profile_006_06",
+      "created_at": "2026-10-17T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_017",
+      "content": "The user: The user speaks the Japanese foreign language with native fluency.",
+      "entity_type": "preference",
+      "fact": "Japanese",
+      "label": "foreign language",
+      "session_id": "sess_profile_006_06",
+      "created_at": "2026-10-18T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_018",
+      "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Casey Hall)",
+      "entity_type": "preference",
+      "fact": "shelter",
+      "label": "community volunteer work",
+      "session_id": "sess_profile_006_06",
+      "created_at": "2026-10-19T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_006_001",
+      "content": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics.",
+      "entity_type": "gpa",
+      "fact": "3.92",
+      "label": "undergraduate GPA",
+      "session_id": "sess_profile_006_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_002",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Casey Hall)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_006_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_006_003",
+      "content": "The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society.",
+      "entity_type": "society",
+      "fact": "Phi Beta Kappa",
+      "label": "academic honor society",
+      "session_id": "sess_profile_006_01",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_006_01",
+      "content": "The user has an unrecorded handcrafted German antique cello musical instrument.",
+      "entity_type": "cello",
+      "label": "antique cello instrument"
+    },
+    {
+      "control_id": "ctrl_profile_006_02",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    },
+    {
+      "control_id": "ctrl_profile_006_03",
+      "content": "The user has an unrecorded ceramic pottery wheel studio membership in Portland.",
+      "entity_type": "pottery",
+      "label": "pottery studio membership"
+    },
+    {
+      "control_id": "ctrl_profile_006_04",
+      "content": "The user has an unrecorded commercial maritime yacht captain license CAPT-4819.",
+      "entity_type": "boat_license",
+      "label": "boat captain license"
+    }
+  ]
+}

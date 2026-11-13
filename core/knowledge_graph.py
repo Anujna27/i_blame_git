@@ -98,7 +98,7 @@ class KnowledgeGraph:
 
         return canonical
 
-    def add_entity(self, node: Any) -> dict:
+    def add_entity(self, node: Any, persist: bool = True) -> dict:
         """Accepts MemoryNode or dict. Normalizes to canonical dict.
 
         If node_id already exists, updates content/metadata but keeps history.
@@ -133,7 +133,8 @@ class KnowledgeGraph:
             canonical["properties"] = merged_props
 
         self.graph.add_node(node_id, **canonical)
-        self.persist()
+        if persist:
+            self.persist()
         return dict(self.graph.nodes[node_id])
 
     def get_entity(self, node_id: str) -> Optional[dict]:
@@ -148,7 +149,7 @@ class KnowledgeGraph:
         """Check whether an entity exists in the graph."""
         return self.graph.has_node(node_id)
 
-    def remove_entity_edges(self, node_id: str) -> int:
+    def remove_entity_edges(self, node_id: str, persist: bool = True) -> int:
         """Remove ALL edges (in and out) incident to node_id. Do NOT remove the node itself. Return count of edges removed."""
         if not self.graph.has_node(node_id):
             return 0
@@ -162,7 +163,8 @@ class KnowledgeGraph:
             if self.graph.has_edge(u, v):
                 self.graph.remove_edge(u, v)
 
-        self.persist()
+        if persist:
+            self.persist()
         return count
 
     def add_relationship(
@@ -171,6 +173,7 @@ class KnowledgeGraph:
         target_id: str,
         relationship: str,
         metadata: Optional[dict] = None,
+        persist: bool = True,
     ) -> dict:
         """Add typed edge. Both endpoints must exist (raise ValueError if not). Relationship must be in ALLOWED_RELATIONSHIPS.
 
@@ -204,7 +207,8 @@ class KnowledgeGraph:
                 edge_attrs[k] = v
 
         self.graph.add_edge(source_id, target_id, **edge_attrs)
-        self.persist()
+        if persist:
+            self.persist()
         return dict(self.graph.edges[source_id, target_id])
 
     def get_neighbors(
@@ -356,22 +360,16 @@ class KnowledgeGraph:
                 else:
                     effective_state = "active"
 
-                self.graph.nodes[nid]["deletion_state"] = effective_state
-                if hasattr(node, "deletion_state"):
-                    node.deletion_state = effective_state
+                # Keep every graph projection synchronized with the live
+                # MemoryNode, not only its lifecycle state. Without this,
+                # scrubbing a node in memory left the old content and
+                # properties embedded in knowledge_graph.json after restart.
+                node.deletion_state = effective_state
+                serialized = node.to_jsonld() if hasattr(node, "to_jsonld") else {}
+                serialized["deletion_state"] = effective_state
+                self.graph.nodes[nid].update(serialized)
 
-                if hasattr(node, "deleted_by") and node.deleted_by:
-                    self.graph.nodes[nid]["deleted_by"] = node.deleted_by
-                if hasattr(node, "deleted_reason") and node.deleted_reason:
-                    self.graph.nodes[nid]["deleted_reason"] = node.deleted_reason
-                if hasattr(node, "deleted_at") and node.deleted_at:
-                    self.graph.nodes[nid]["deleted_at"] = (
-                        node.deleted_at.isoformat() if hasattr(node.deleted_at, "isoformat") else str(node.deleted_at)
-                    )
-                if hasattr(node, "lifecycle") and node.lifecycle:
-                    self.graph.nodes[nid]["lifecycle"] = list(node.lifecycle)
-
-        data = nx.node_link_data(self.graph)
+        data = nx.node_link_data(self.graph, edges="edges")
 
         def _json_serial(obj):
             if hasattr(obj, "isoformat"):
@@ -406,7 +404,8 @@ class KnowledgeGraph:
                 except Exception:
                     pass
         else:
-            self.graph = nx.node_link_graph(data, directed=True)
+            edge_key = "edges" if "edges" in data else "links"
+            self.graph = nx.node_link_graph(data, directed=True, edges=edge_key)
 
         for nid in list(self.graph.nodes):
             if "node_id" not in self.graph.nodes[nid]:
@@ -442,23 +441,24 @@ class KnowledgeGraph:
 
     # --- Backward-Compatibility Methods for Core Integration ---
 
-    def add_node(self, node: MemoryNode) -> None:
+    def add_node(self, node: MemoryNode, persist: bool = True) -> None:
         self.nodes[node.node_id] = node
-        self.add_entity(node)
+        self.add_entity(node, persist=persist)
 
-    def add_edge(self, parent_id: str, child_id: str, edge_type: str = "DERIVED_FROM", **metadata) -> None:
+    def add_edge(self, parent_id: str, child_id: str, edge_type: str = "DERIVED_FROM", persist: bool = True, **metadata) -> None:
         rel = str(edge_type).upper()
         if rel == "DERIVED":
             rel = "DERIVED_FROM"
         elif rel not in ALLOWED_RELATIONSHIPS:
             rel = "RELATED_TO"
         try:
-            self.add_relationship(parent_id, child_id, rel, metadata=metadata)
+            self.add_relationship(parent_id, child_id, rel, metadata=metadata, persist=persist)
         except Exception:
             self.graph.add_edge(parent_id, child_id, relationship=rel, **metadata)
         if parent_id in self.nodes and hasattr(self.nodes[parent_id], "add_derivation"):
             self.nodes[parent_id].add_derivation(child_id, edge_type)
-        self.persist()
+        if persist:
+            self.persist()
 
     def get_node(self, node_id: str) -> Optional[MemoryNode]:
         if node_id in self.nodes and isinstance(self.nodes[node_id], MemoryNode):

@@ -1,0 +1,588 @@
+{
+  "profile_id": "profile_032",
+  "name": "Elliot Perez",
+  "domain_bundle": "financial",
+  "sessions": [
+    {
+      "session_id": "sess_profile_032_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_032_001",
+          "content": "The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Elliot Perez)",
+          "entity_type": "loan",
+          "fact": "Nelnet",
+          "label": "education loan provider",
+          "session_id": "sess_profile_032_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_002",
+          "content": "The user's verified retirement account strategy record is annual backdoor Roth IRA contributions maximized. (Registered for Elliot Perez)",
+          "entity_type": "retirement",
+          "fact": "Roth",
+          "label": "retirement account strategy",
+          "session_id": "sess_profile_032_01",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my education loan provider. Specifically, The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Elliot. I have recorded your education loan provider details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my retirement account strategy: The user's verified retirement account strategy record is annual backdoor Roth IRA contributions maximized. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with retirement account strategy."
+        }
+      ],
+      "summary_l1": "Session 1: Elliot Perez confirmed their education loan provider details stating that The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Elliot Perez)"
+    },
+    {
+      "session_id": "sess_profile_032_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_032_003",
+          "content": "The user's verified credit score rating record is FICO credit score of 785 recorded in September. (Registered for Elliot Perez)",
+          "entity_type": "credit_score",
+          "fact": "785",
+          "label": "credit score rating",
+          "session_id": "sess_profile_032_02",
+          "created_at": "2026-10-04T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_004",
+          "content": "The user's verified tax preparation accountant record is CPA accountant Marcus Vance preparing annual 1040 return. (Registered for Elliot Perez)",
+          "entity_type": "tax_filing",
+          "fact": "Marcus",
+          "label": "tax preparation accountant",
+          "session_id": "sess_profile_032_02",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my credit score rating. Specifically, The user's verified credit score rating record is FICO credit score of 785 recorded in September. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Elliot. I have recorded your credit score rating details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my tax preparation accountant: The user's verified tax preparation accountant record is CPA accountant Marcus Vance preparing annual 1040 return. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with tax preparation accountant."
+        }
+      ],
+      "summary_l1": "Session 2: Elliot Perez confirmed their credit score rating details stating that The user's verified credit score rating record is FICO credit score of 785 recorded in September. (Registered for Elliot Perez)"
+    },
+    {
+      "session_id": "sess_profile_032_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_032_005",
+          "content": "The user's verified crypto asset storage record is cold hardware storage wallet Ledger Nano X backup. (Registered for Elliot Perez)",
+          "entity_type": "crypto",
+          "fact": "Ledger",
+          "label": "crypto asset storage",
+          "session_id": "sess_profile_032_03",
+          "created_at": "2026-10-06T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_006",
+          "content": "The user's verified brokerage investments record is forty shares of index ETF VOO held in Vanguard. (Registered for Elliot Perez)",
+          "entity_type": "brokerage",
+          "fact": "VOO",
+          "label": "brokerage investments",
+          "session_id": "sess_profile_032_03",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my crypto asset storage. Specifically, The user's verified crypto asset storage record is cold hardware storage wallet Ledger Nano X backup. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Elliot. I have recorded your crypto asset storage details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my brokerage investments: The user's verified brokerage investments record is forty shares of index ETF VOO held in Vanguard. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with brokerage investments."
+        }
+      ],
+      "summary_l1": "Session 3: Elliot Perez confirmed their crypto asset storage details stating that The user's verified crypto asset storage record is cold hardware storage wallet Ledger Nano X backup. (Registered for Elliot Perez)"
+    },
+    {
+      "session_id": "sess_profile_032_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_032_007",
+          "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Elliot Perez)",
+          "entity_type": "passport",
+          "fact": "USA-P98124019",
+          "label": "passport travel number",
+          "session_id": "sess_profile_032_04",
+          "created_at": "2026-10-08T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_008",
+          "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Elliot Perez)",
+          "entity_type": "loyalty",
+          "fact": "Diamond",
+          "label": "airline loyalty status",
+          "session_id": "sess_profile_032_04",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my passport travel number. Specifically, The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Elliot. I have recorded your passport travel number details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my airline loyalty status: The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with airline loyalty status."
+        }
+      ],
+      "summary_l1": "Session 4: Elliot Perez confirmed their passport travel number details stating that The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Elliot Perez)"
+    },
+    {
+      "session_id": "sess_profile_032_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_032_009",
+          "content": "The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Elliot Perez)",
+          "entity_type": "anniversary",
+          "fact": "June 18th",
+          "label": "wedding anniversary date",
+          "session_id": "sess_profile_032_05",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_010",
+          "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Elliot Perez)",
+          "entity_type": "allergy",
+          "fact": "penicillin",
+          "label": "medical allergies",
+          "session_id": "sess_profile_032_05",
+          "created_at": "2026-10-11T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my wedding anniversary date. Specifically, The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Elliot. I have recorded your wedding anniversary date details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my medical allergies: The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with medical allergies."
+        }
+      ],
+      "summary_l1": "Session 5: Elliot Perez confirmed their wedding anniversary date details stating that The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Elliot Perez)"
+    },
+    {
+      "session_id": "sess_profile_032_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_032_011",
+          "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Elliot Perez)",
+          "entity_type": "preference",
+          "fact": "marathon",
+          "label": "athletic marathon race",
+          "session_id": "sess_profile_032_06",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_012",
+          "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Elliot Perez)",
+          "entity_type": "preference",
+          "fact": "telescope",
+          "label": "stargazing equipment",
+          "session_id": "sess_profile_032_06",
+          "created_at": "2026-10-13T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my athletic marathon race. Specifically, The user: The user completed an athletic marathon race in Chicago last October. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Elliot. I have recorded your athletic marathon race details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my stargazing equipment: The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with stargazing equipment."
+        }
+      ],
+      "summary_l1": "Session 6: Elliot Perez confirmed their athletic marathon race details stating that The user: The user completed an athletic marathon race in Chicago last October. (Registered for Elliot Perez)"
+    },
+    {
+      "session_id": "sess_profile_032_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_032_013",
+          "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Elliot Perez)",
+          "entity_type": "preference",
+          "fact": "guitar",
+          "label": "musical instrument",
+          "session_id": "sess_profile_032_07",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_014",
+          "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. (Registered for Elliot Perez)",
+          "entity_type": "preference",
+          "fact": "matcha",
+          "label": "breakfast tea beverage",
+          "session_id": "sess_profile_032_07",
+          "created_at": "2026-10-15T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my musical instrument. Specifically, The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Elliot. I have recorded your musical instrument details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my breakfast tea beverage: The user: The user orders an iced ceremonial matcha tea beverage for breakfast. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with breakfast tea beverage."
+        }
+      ],
+      "summary_l1": "Session 7: Elliot Perez confirmed their musical instrument details stating that The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Elliot Perez)"
+    },
+    {
+      "session_id": "sess_profile_032_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_032_015",
+          "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Elliot Perez)",
+          "entity_type": "preference",
+          "fact": "Rainier",
+          "label": "backcountry hiking destination",
+          "session_id": "sess_profile_032_08",
+          "created_at": "2026-10-16T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_016",
+          "content": "The user: The user speaks the Japanese foreign language with native fluency. (Registered for Elliot Perez)",
+          "entity_type": "preference",
+          "fact": "Japanese",
+          "label": "foreign language",
+          "session_id": "sess_profile_032_08",
+          "created_at": "2026-10-17T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_017",
+          "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Elliot Perez)",
+          "entity_type": "preference",
+          "fact": "Tesla",
+          "label": "electric vehicle model",
+          "session_id": "sess_profile_032_08",
+          "created_at": "2026-10-18T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_032_018",
+          "content": "The user: The user collects rare vinyl records from Blue Note Records. (Registered for Elliot Perez)",
+          "entity_type": "preference",
+          "fact": "Blue Note",
+          "label": "vinyl record collection",
+          "session_id": "sess_profile_032_08",
+          "created_at": "2026-10-19T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my backcountry hiking destination. Specifically, The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Elliot. I have recorded your backcountry hiking destination details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my foreign language: The user: The user speaks the Japanese foreign language with native fluency. (Registered for Elliot Perez)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with foreign language."
+        }
+      ],
+      "summary_l1": "Session 8: Elliot Perez confirmed their backcountry hiking destination details stating that The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Elliot Perez)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_032_001",
+      "content": "The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Elliot Perez)",
+      "entity_type": "loan",
+      "fact": "Nelnet",
+      "label": "education loan provider",
+      "session_id": "sess_profile_032_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_002",
+      "content": "The user's verified retirement account strategy record is annual backdoor Roth IRA contributions maximized. (Registered for Elliot Perez)",
+      "entity_type": "retirement",
+      "fact": "Roth",
+      "label": "retirement account strategy",
+      "session_id": "sess_profile_032_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_003",
+      "content": "The user's verified credit score rating record is FICO credit score of 785 recorded in September. (Registered for Elliot Perez)",
+      "entity_type": "credit_score",
+      "fact": "785",
+      "label": "credit score rating",
+      "session_id": "sess_profile_032_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_004",
+      "content": "The user's verified tax preparation accountant record is CPA accountant Marcus Vance preparing annual 1040 return. (Registered for Elliot Perez)",
+      "entity_type": "tax_filing",
+      "fact": "Marcus",
+      "label": "tax preparation accountant",
+      "session_id": "sess_profile_032_02",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_005",
+      "content": "The user's verified crypto asset storage record is cold hardware storage wallet Ledger Nano X backup. (Registered for Elliot Perez)",
+      "entity_type": "crypto",
+      "fact": "Ledger",
+      "label": "crypto asset storage",
+      "session_id": "sess_profile_032_03",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_006",
+      "content": "The user's verified brokerage investments record is forty shares of index ETF VOO held in Vanguard. (Registered for Elliot Perez)",
+      "entity_type": "brokerage",
+      "fact": "VOO",
+      "label": "brokerage investments",
+      "session_id": "sess_profile_032_03",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_007",
+      "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Elliot Perez)",
+      "entity_type": "passport",
+      "fact": "USA-P98124019",
+      "label": "passport travel number",
+      "session_id": "sess_profile_032_04",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_008",
+      "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Elliot Perez)",
+      "entity_type": "loyalty",
+      "fact": "Diamond",
+      "label": "airline loyalty status",
+      "session_id": "sess_profile_032_04",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_009",
+      "content": "The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Elliot Perez)",
+      "entity_type": "anniversary",
+      "fact": "June 18th",
+      "label": "wedding anniversary date",
+      "session_id": "sess_profile_032_05",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_010",
+      "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Elliot Perez)",
+      "entity_type": "allergy",
+      "fact": "penicillin",
+      "label": "medical allergies",
+      "session_id": "sess_profile_032_05",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_011",
+      "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Elliot Perez)",
+      "entity_type": "preference",
+      "fact": "marathon",
+      "label": "athletic marathon race",
+      "session_id": "sess_profile_032_06",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_012",
+      "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Elliot Perez)",
+      "entity_type": "preference",
+      "fact": "telescope",
+      "label": "stargazing equipment",
+      "session_id": "sess_profile_032_06",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_013",
+      "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Elliot Perez)",
+      "entity_type": "preference",
+      "fact": "guitar",
+      "label": "musical instrument",
+      "session_id": "sess_profile_032_07",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_014",
+      "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. (Registered for Elliot Perez)",
+      "entity_type": "preference",
+      "fact": "matcha",
+      "label": "breakfast tea beverage",
+      "session_id": "sess_profile_032_07",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_015",
+      "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Elliot Perez)",
+      "entity_type": "preference",
+      "fact": "Rainier",
+      "label": "backcountry hiking destination",
+      "session_id": "sess_profile_032_08",
+      "created_at": "2026-10-16T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_016",
+      "content": "The user: The user speaks the Japanese foreign language with native fluency. (Registered for Elliot Perez)",
+      "entity_type": "preference",
+      "fact": "Japanese",
+      "label": "foreign language",
+      "session_id": "sess_profile_032_08",
+      "created_at": "2026-10-17T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_017",
+      "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Elliot Perez)",
+      "entity_type": "preference",
+      "fact": "Tesla",
+      "label": "electric vehicle model",
+      "session_id": "sess_profile_032_08",
+      "created_at": "2026-10-18T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_018",
+      "content": "The user: The user collects rare vinyl records from Blue Note Records. (Registered for Elliot Perez)",
+      "entity_type": "preference",
+      "fact": "Blue Note",
+      "label": "vinyl record collection",
+      "session_id": "sess_profile_032_08",
+      "created_at": "2026-10-19T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_032_001",
+      "content": "The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Elliot Perez)",
+      "entity_type": "loan",
+      "fact": "Nelnet",
+      "label": "education loan provider",
+      "session_id": "sess_profile_032_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_002",
+      "content": "The user's verified retirement account strategy record is annual backdoor Roth IRA contributions maximized. (Registered for Elliot Perez)",
+      "entity_type": "retirement",
+      "fact": "Roth",
+      "label": "retirement account strategy",
+      "session_id": "sess_profile_032_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_032_003",
+      "content": "The user's verified credit score rating record is FICO credit score of 785 recorded in September. (Registered for Elliot Perez)",
+      "entity_type": "credit_score",
+      "fact": "785",
+      "label": "credit score rating",
+      "session_id": "sess_profile_032_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_032_01",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    },
+    {
+      "control_id": "ctrl_profile_032_02",
+      "content": "The user has an unrecorded commercial maritime yacht captain license CAPT-4819.",
+      "entity_type": "boat_license",
+      "label": "boat captain license"
+    },
+    {
+      "control_id": "ctrl_profile_032_03",
+      "content": "The user has an unrecorded FCC amateur radio operator callsign K9XYZ.",
+      "entity_type": "ham_radio",
+      "label": "amateur radio callsign"
+    },
+    {
+      "control_id": "ctrl_profile_032_04",
+      "content": "The user has an unrecorded handcrafted German antique cello musical instrument.",
+      "entity_type": "cello",
+      "label": "antique cello instrument"
+    }
+  ]
+}

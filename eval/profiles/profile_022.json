@@ -1,0 +1,563 @@
+{
+  "profile_id": "profile_022",
+  "name": "Blair Thompson",
+  "domain_bundle": "travel",
+  "sessions": [
+    {
+      "session_id": "sess_profile_022_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_022_001",
+          "content": "The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Blair Thompson)",
+          "entity_type": "flight",
+          "fact": "LH455",
+          "label": "upcoming flight booking",
+          "session_id": "sess_profile_022_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_002",
+          "content": "The user's verified metro transit card record is monthly subway ORCA transit card reloaded automatically. (Registered for Blair Thompson)",
+          "entity_type": "transit",
+          "fact": "ORCA",
+          "label": "metro transit card",
+          "session_id": "sess_profile_022_01",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my upcoming flight booking. Specifically, The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Blair. I have recorded your upcoming flight booking details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my metro transit card: The user's verified metro transit card record is monthly subway ORCA transit card reloaded automatically. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with metro transit card."
+        }
+      ],
+      "summary_l1": "Session 1: Blair Thompson confirmed their upcoming flight booking details stating that The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Blair Thompson)"
+    },
+    {
+      "session_id": "sess_profile_022_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_022_003",
+          "content": "The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Blair Thompson)",
+          "entity_type": "hotel",
+          "fact": "Hyatt",
+          "label": "hotel lodging reservation",
+          "session_id": "sess_profile_022_02",
+          "created_at": "2026-10-04T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_004",
+          "content": "The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Blair Thompson)",
+          "entity_type": "destination",
+          "fact": "Reykjavik",
+          "label": "international travel destination",
+          "session_id": "sess_profile_022_02",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my hotel lodging reservation. Specifically, The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Blair. I have recorded your hotel lodging reservation details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my international travel destination: The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with international travel destination."
+        }
+      ],
+      "summary_l1": "Session 2: Blair Thompson confirmed their hotel lodging reservation details stating that The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Blair Thompson)"
+    },
+    {
+      "session_id": "sess_profile_022_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_022_005",
+          "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Blair Thompson)",
+          "entity_type": "passport",
+          "fact": "USA-P98124019",
+          "label": "passport travel number",
+          "session_id": "sess_profile_022_03",
+          "created_at": "2026-10-06T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_006",
+          "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Blair Thompson)",
+          "entity_type": "loyalty",
+          "fact": "Diamond",
+          "label": "airline loyalty status",
+          "session_id": "sess_profile_022_03",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my passport travel number. Specifically, The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Blair. I have recorded your passport travel number details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my airline loyalty status: The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with airline loyalty status."
+        }
+      ],
+      "summary_l1": "Session 3: Blair Thompson confirmed their passport travel number details stating that The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Blair Thompson)"
+    },
+    {
+      "session_id": "sess_profile_022_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_022_007",
+          "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Blair Thompson)",
+          "entity_type": "spouse",
+          "fact": "David",
+          "label": "spouse name",
+          "session_id": "sess_profile_022_04",
+          "created_at": "2026-10-08T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_008",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Blair Thompson)",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_022_04",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my spouse name. Specifically, The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Blair. I have recorded your spouse name details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my graduate degree university: The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with graduate degree university."
+        }
+      ],
+      "summary_l1": "Session 4: Blair Thompson confirmed their spouse name details stating that The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Blair Thompson)"
+    },
+    {
+      "session_id": "sess_profile_022_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_022_009",
+          "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Blair Thompson)",
+          "entity_type": "prescription",
+          "fact": "Ventolin",
+          "label": "prescription medications",
+          "session_id": "sess_profile_022_05",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_010",
+          "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Blair Thompson)",
+          "entity_type": "manager",
+          "fact": "Sarah",
+          "label": "direct reporting manager",
+          "session_id": "sess_profile_022_05",
+          "created_at": "2026-10-11T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my prescription medications. Specifically, The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Blair. I have recorded your prescription medications details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my direct reporting manager: The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with direct reporting manager."
+        }
+      ],
+      "summary_l1": "Session 5: Blair Thompson confirmed their prescription medications details stating that The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Blair Thompson)"
+    },
+    {
+      "session_id": "sess_profile_022_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_022_011",
+          "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Blair Thompson)",
+          "entity_type": "preference",
+          "fact": "Tesla",
+          "label": "electric vehicle model",
+          "session_id": "sess_profile_022_06",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_012",
+          "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Blair Thompson)",
+          "entity_type": "preference",
+          "fact": "telescope",
+          "label": "stargazing equipment",
+          "session_id": "sess_profile_022_06",
+          "created_at": "2026-10-13T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my electric vehicle model. Specifically, The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Blair. I have recorded your electric vehicle model details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my stargazing equipment: The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with stargazing equipment."
+        }
+      ],
+      "summary_l1": "Session 6: Blair Thompson confirmed their electric vehicle model details stating that The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Blair Thompson)"
+    },
+    {
+      "session_id": "sess_profile_022_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_022_013",
+          "content": "The user: The user cooks traditional Indian butter chicken curry on weekends. (Registered for Blair Thompson)",
+          "entity_type": "preference",
+          "fact": "butter chicken",
+          "label": "cooking curry",
+          "session_id": "sess_profile_022_07",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_014",
+          "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Blair Thompson)",
+          "entity_type": "preference",
+          "fact": "Rainier",
+          "label": "backcountry hiking destination",
+          "session_id": "sess_profile_022_07",
+          "created_at": "2026-10-15T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_015",
+          "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Blair Thompson)",
+          "entity_type": "preference",
+          "fact": "Arch Linux",
+          "label": "Linux distribution",
+          "session_id": "sess_profile_022_07",
+          "created_at": "2026-10-16T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_016",
+          "content": "The user: The user is studying the conversational Mandarin foreign language. (Registered for Blair Thompson)",
+          "entity_type": "preference",
+          "fact": "Mandarin",
+          "label": "language study",
+          "session_id": "sess_profile_022_07",
+          "created_at": "2026-10-17T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_017",
+          "content": "The user: The user's favorite sci-fi author is science fiction writer Isaac Asimov. (Registered for Blair Thompson)",
+          "entity_type": "preference",
+          "fact": "Asimov",
+          "label": "favorite sci-fi author",
+          "session_id": "sess_profile_022_07",
+          "created_at": "2026-10-18T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_022_018",
+          "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Blair Thompson)",
+          "entity_type": "preference",
+          "fact": "photography",
+          "label": "photography hobby",
+          "session_id": "sess_profile_022_07",
+          "created_at": "2026-10-19T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my cooking curry. Specifically, The user: The user cooks traditional Indian butter chicken curry on weekends. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Blair. I have recorded your cooking curry details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my backcountry hiking destination: The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Blair Thompson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with backcountry hiking destination."
+        }
+      ],
+      "summary_l1": "Session 7: Blair Thompson confirmed their cooking curry details stating that The user: The user cooks traditional Indian butter chicken curry on weekends. (Registered for Blair Thompson)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_022_001",
+      "content": "The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Blair Thompson)",
+      "entity_type": "flight",
+      "fact": "LH455",
+      "label": "upcoming flight booking",
+      "session_id": "sess_profile_022_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_002",
+      "content": "The user's verified metro transit card record is monthly subway ORCA transit card reloaded automatically. (Registered for Blair Thompson)",
+      "entity_type": "transit",
+      "fact": "ORCA",
+      "label": "metro transit card",
+      "session_id": "sess_profile_022_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_003",
+      "content": "The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Blair Thompson)",
+      "entity_type": "hotel",
+      "fact": "Hyatt",
+      "label": "hotel lodging reservation",
+      "session_id": "sess_profile_022_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_004",
+      "content": "The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Blair Thompson)",
+      "entity_type": "destination",
+      "fact": "Reykjavik",
+      "label": "international travel destination",
+      "session_id": "sess_profile_022_02",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_005",
+      "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Blair Thompson)",
+      "entity_type": "passport",
+      "fact": "USA-P98124019",
+      "label": "passport travel number",
+      "session_id": "sess_profile_022_03",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_006",
+      "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Blair Thompson)",
+      "entity_type": "loyalty",
+      "fact": "Diamond",
+      "label": "airline loyalty status",
+      "session_id": "sess_profile_022_03",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_007",
+      "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Blair Thompson)",
+      "entity_type": "spouse",
+      "fact": "David",
+      "label": "spouse name",
+      "session_id": "sess_profile_022_04",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_008",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Blair Thompson)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_022_04",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_009",
+      "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Blair Thompson)",
+      "entity_type": "prescription",
+      "fact": "Ventolin",
+      "label": "prescription medications",
+      "session_id": "sess_profile_022_05",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_010",
+      "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Blair Thompson)",
+      "entity_type": "manager",
+      "fact": "Sarah",
+      "label": "direct reporting manager",
+      "session_id": "sess_profile_022_05",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_011",
+      "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Blair Thompson)",
+      "entity_type": "preference",
+      "fact": "Tesla",
+      "label": "electric vehicle model",
+      "session_id": "sess_profile_022_06",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_012",
+      "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Blair Thompson)",
+      "entity_type": "preference",
+      "fact": "telescope",
+      "label": "stargazing equipment",
+      "session_id": "sess_profile_022_06",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_013",
+      "content": "The user: The user cooks traditional Indian butter chicken curry on weekends. (Registered for Blair Thompson)",
+      "entity_type": "preference",
+      "fact": "butter chicken",
+      "label": "cooking curry",
+      "session_id": "sess_profile_022_07",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_014",
+      "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Blair Thompson)",
+      "entity_type": "preference",
+      "fact": "Rainier",
+      "label": "backcountry hiking destination",
+      "session_id": "sess_profile_022_07",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_015",
+      "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Blair Thompson)",
+      "entity_type": "preference",
+      "fact": "Arch Linux",
+      "label": "Linux distribution",
+      "session_id": "sess_profile_022_07",
+      "created_at": "2026-10-16T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_016",
+      "content": "The user: The user is studying the conversational Mandarin foreign language. (Registered for Blair Thompson)",
+      "entity_type": "preference",
+      "fact": "Mandarin",
+      "label": "language study",
+      "session_id": "sess_profile_022_07",
+      "created_at": "2026-10-17T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_017",
+      "content": "The user: The user's favorite sci-fi author is science fiction writer Isaac Asimov. (Registered for Blair Thompson)",
+      "entity_type": "preference",
+      "fact": "Asimov",
+      "label": "favorite sci-fi author",
+      "session_id": "sess_profile_022_07",
+      "created_at": "2026-10-18T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_018",
+      "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Blair Thompson)",
+      "entity_type": "preference",
+      "fact": "photography",
+      "label": "photography hobby",
+      "session_id": "sess_profile_022_07",
+      "created_at": "2026-10-19T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_022_001",
+      "content": "The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Blair Thompson)",
+      "entity_type": "flight",
+      "fact": "LH455",
+      "label": "upcoming flight booking",
+      "session_id": "sess_profile_022_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_002",
+      "content": "The user's verified metro transit card record is monthly subway ORCA transit card reloaded automatically. (Registered for Blair Thompson)",
+      "entity_type": "transit",
+      "fact": "ORCA",
+      "label": "metro transit card",
+      "session_id": "sess_profile_022_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_022_003",
+      "content": "The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Blair Thompson)",
+      "entity_type": "hotel",
+      "fact": "Hyatt",
+      "label": "hotel lodging reservation",
+      "session_id": "sess_profile_022_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_022_01",
+      "content": "The user has an unrecorded PADI master scuba diver certification license 98124.",
+      "entity_type": "scuba_cert",
+      "label": "scuba certification"
+    },
+    {
+      "control_id": "ctrl_profile_022_02",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    },
+    {
+      "control_id": "ctrl_profile_022_03",
+      "content": "The user has an unrecorded handcrafted German antique cello musical instrument.",
+      "entity_type": "cello",
+      "label": "antique cello instrument"
+    },
+    {
+      "control_id": "ctrl_profile_022_04",
+      "content": "The user has an unrecorded national competitive sabre fencing tournament medal.",
+      "entity_type": "fencing",
+      "label": "fencing sports rank"
+    }
+  ]
+}

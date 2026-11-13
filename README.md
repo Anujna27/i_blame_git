@@ -2,6 +2,36 @@
 
 MNEMOSYNE is an auditable memory system combining session-scoped entities, a knowledge graph, vector retrieval, lifecycle auditing, and residual-risk reporting.
 
+## ChatGPT memory bridge
+
+The bridge imports a Gemini chat export and exposes MNEMOSYNE memory through a FastAPI endpoint for a Custom GPT Action.
+
+Install the bridge dependencies:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+Place the Gemini export at `data/gemini_import/gemini_chat.json`, then run ingestion from the repository root:
+
+```powershell
+python ingest_gemini.py
+```
+
+Start the API server:
+
+```powershell
+uvicorn api_server:app --port 8000
+```
+
+In another terminal, expose it with Ngrok:
+
+```powershell
+ngrok http 8000
+```
+
+In the Custom GPT editor, add an Action using the root `openapi.json` file. Replace its `servers[0].url` value with the HTTPS Ngrok URL shown by `ngrok http 8000` (without a trailing slash), then import or paste the updated schema into the Action configuration. The Action sends `{"query":"..."}` to `POST /search_memory` and receives `{"answer":"..."}`.
+
 ## Claim audit framework
 
 The claim audit is a standalone testing tool. It does not modify the application implementation. It runs tests under `tests/claims/` and `tests/adversarial/`, prints a terminal summary, and writes judge-facing reports under `data/claims/`.

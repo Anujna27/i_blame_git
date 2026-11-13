@@ -1,24 +1,13 @@
 [
   {
-    "operation_id": "16a3206b-2c58-4911-bba6-c0f898660497",
-    "entity_id": "52420439-7ebd-46f8-b491-f9ff317b42cc",
+    "operation_id": "b99f7b23-681e-4f7f-b01d-53e3ea5f6aed",
+    "entity_id": "037fedbc-11e2-4e62-99a9-18b7c64cac06",
     "actor": "user",
     "reason": "user_requested_erasure",
-    "started_at": "2026-11-13T08:37:49.926830+00:00",
+    "started_at": "2026-11-13T16:27:31.784847+00:00",
     "phase": "completed",
     "completed": true,
-    "verdict": "partially_deleted",
-    "completed_at": "2026-11-13T08:37:49.960411+00:00"
-  },
-  {
-    "operation_id": "91fc8cda-345f-406b-86a0-f498d6f85e81",
-    "entity_id": "100749a3-fb93-4e40-9a9d-016fc37069d4",
-    "actor": "ollama-agent-c",
-    "reason": "user_requested_erasure",
-    "started_at": "2026-11-13T17:52:24.629614+00:00",
-    "phase": "completed",
-    "completed": true,
-    "verdict": "failed",
-    "completed_at": "2026-11-13T17:52:24.675231+00:00"
+    "verdict": "fully_deleted",
+    "completed_at": "2026-11-13T16:27:31.815986+00:00"
   }
 ]

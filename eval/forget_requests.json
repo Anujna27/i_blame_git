@@ -1,0 +1,2903 @@
+[
+  {
+    "request_id": "req_001",
+    "profile_id": "profile_001",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_001_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_001_002",
+      "ent_profile_001_003",
+      "ent_profile_001_004",
+      "ent_profile_001_005",
+      "ent_profile_001_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_001_01",
+      "ctrl_profile_001_02",
+      "ctrl_profile_001_03",
+      "ctrl_profile_001_04"
+    ]
+  },
+  {
+    "request_id": "req_002",
+    "profile_id": "profile_001",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_001_001",
+      "ent_profile_001_002",
+      "ent_profile_001_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_001_004",
+      "ent_profile_001_005",
+      "ent_profile_001_006",
+      "ent_profile_001_007",
+      "ent_profile_001_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_001_01",
+      "ctrl_profile_001_02",
+      "ctrl_profile_001_03",
+      "ctrl_profile_001_04"
+    ]
+  },
+  {
+    "request_id": "req_003",
+    "profile_id": "profile_001",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_001_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_001_002",
+      "ent_profile_001_003",
+      "ent_profile_001_004",
+      "ent_profile_001_005",
+      "ent_profile_001_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_001_01",
+      "ctrl_profile_001_02",
+      "ctrl_profile_001_03",
+      "ctrl_profile_001_04"
+    ]
+  },
+  {
+    "request_id": "req_004",
+    "profile_id": "profile_002",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_002_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_002_002",
+      "ent_profile_002_003",
+      "ent_profile_002_004",
+      "ent_profile_002_005",
+      "ent_profile_002_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_002_01",
+      "ctrl_profile_002_02",
+      "ctrl_profile_002_03",
+      "ctrl_profile_002_04"
+    ]
+  },
+  {
+    "request_id": "req_005",
+    "profile_id": "profile_002",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_002_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_002_002",
+      "ent_profile_002_003",
+      "ent_profile_002_004",
+      "ent_profile_002_005",
+      "ent_profile_002_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_002_01",
+      "ctrl_profile_002_02",
+      "ctrl_profile_002_03",
+      "ctrl_profile_002_04"
+    ]
+  },
+  {
+    "request_id": "req_006",
+    "profile_id": "profile_002",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_002_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_002_002",
+      "ent_profile_002_003",
+      "ent_profile_002_004",
+      "ent_profile_002_005",
+      "ent_profile_002_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_002_01",
+      "ctrl_profile_002_02",
+      "ctrl_profile_002_03",
+      "ctrl_profile_002_04"
+    ]
+  },
+  {
+    "request_id": "req_007",
+    "profile_id": "profile_003",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_003_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_003_002",
+      "ent_profile_003_003",
+      "ent_profile_003_004",
+      "ent_profile_003_005",
+      "ent_profile_003_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_003_01",
+      "ctrl_profile_003_02",
+      "ctrl_profile_003_03",
+      "ctrl_profile_003_04"
+    ]
+  },
+  {
+    "request_id": "req_008",
+    "profile_id": "profile_003",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_003_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_003_002",
+      "ent_profile_003_003",
+      "ent_profile_003_004",
+      "ent_profile_003_005",
+      "ent_profile_003_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_003_01",
+      "ctrl_profile_003_02",
+      "ctrl_profile_003_03",
+      "ctrl_profile_003_04"
+    ]
+  },
+  {
+    "request_id": "req_009",
+    "profile_id": "profile_003",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_003_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_003_002",
+      "ent_profile_003_003",
+      "ent_profile_003_004",
+      "ent_profile_003_005",
+      "ent_profile_003_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_003_01",
+      "ctrl_profile_003_02",
+      "ctrl_profile_003_03",
+      "ctrl_profile_003_04"
+    ]
+  },
+  {
+    "request_id": "req_010",
+    "profile_id": "profile_004",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_004_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_004_002",
+      "ent_profile_004_003",
+      "ent_profile_004_004",
+      "ent_profile_004_005",
+      "ent_profile_004_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_004_01",
+      "ctrl_profile_004_02",
+      "ctrl_profile_004_03",
+      "ctrl_profile_004_04"
+    ]
+  },
+  {
+    "request_id": "req_011",
+    "profile_id": "profile_004",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_004_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_004_002",
+      "ent_profile_004_003",
+      "ent_profile_004_004",
+      "ent_profile_004_005",
+      "ent_profile_004_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_004_01",
+      "ctrl_profile_004_02",
+      "ctrl_profile_004_03",
+      "ctrl_profile_004_04"
+    ]
+  },
+  {
+    "request_id": "req_012",
+    "profile_id": "profile_005",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_005_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_005_002",
+      "ent_profile_005_003",
+      "ent_profile_005_004",
+      "ent_profile_005_005",
+      "ent_profile_005_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_005_01",
+      "ctrl_profile_005_02",
+      "ctrl_profile_005_03",
+      "ctrl_profile_005_04"
+    ]
+  },
+  {
+    "request_id": "req_013",
+    "profile_id": "profile_005",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_005_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_005_002",
+      "ent_profile_005_003",
+      "ent_profile_005_004",
+      "ent_profile_005_005",
+      "ent_profile_005_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_005_01",
+      "ctrl_profile_005_02",
+      "ctrl_profile_005_03",
+      "ctrl_profile_005_04"
+    ]
+  },
+  {
+    "request_id": "req_014",
+    "profile_id": "profile_005",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_005_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_005_002",
+      "ent_profile_005_003",
+      "ent_profile_005_004",
+      "ent_profile_005_005",
+      "ent_profile_005_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_005_01",
+      "ctrl_profile_005_02",
+      "ctrl_profile_005_03",
+      "ctrl_profile_005_04"
+    ]
+  },
+  {
+    "request_id": "req_015",
+    "profile_id": "profile_006",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_006_001",
+      "ent_profile_006_002",
+      "ent_profile_006_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_006_004",
+      "ent_profile_006_005",
+      "ent_profile_006_006",
+      "ent_profile_006_007",
+      "ent_profile_006_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_006_01",
+      "ctrl_profile_006_02",
+      "ctrl_profile_006_03",
+      "ctrl_profile_006_04"
+    ]
+  },
+  {
+    "request_id": "req_016",
+    "profile_id": "profile_006",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_006_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_006_002",
+      "ent_profile_006_003",
+      "ent_profile_006_004",
+      "ent_profile_006_005",
+      "ent_profile_006_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_006_01",
+      "ctrl_profile_006_02",
+      "ctrl_profile_006_03",
+      "ctrl_profile_006_04"
+    ]
+  },
+  {
+    "request_id": "req_017",
+    "profile_id": "profile_007",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_007_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_007_002",
+      "ent_profile_007_003",
+      "ent_profile_007_004",
+      "ent_profile_007_005",
+      "ent_profile_007_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_007_01",
+      "ctrl_profile_007_02",
+      "ctrl_profile_007_03",
+      "ctrl_profile_007_04"
+    ]
+  },
+  {
+    "request_id": "req_018",
+    "profile_id": "profile_007",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_007_001",
+      "ent_profile_007_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_007_003",
+      "ent_profile_007_004",
+      "ent_profile_007_005",
+      "ent_profile_007_006",
+      "ent_profile_007_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_007_01",
+      "ctrl_profile_007_02",
+      "ctrl_profile_007_03",
+      "ctrl_profile_007_04"
+    ]
+  },
+  {
+    "request_id": "req_019",
+    "profile_id": "profile_007",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_007_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_007_002",
+      "ent_profile_007_003",
+      "ent_profile_007_004",
+      "ent_profile_007_005",
+      "ent_profile_007_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_007_01",
+      "ctrl_profile_007_02",
+      "ctrl_profile_007_03",
+      "ctrl_profile_007_04"
+    ]
+  },
+  {
+    "request_id": "req_020",
+    "profile_id": "profile_008",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_008_001",
+      "ent_profile_008_002",
+      "ent_profile_008_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_008_004",
+      "ent_profile_008_005",
+      "ent_profile_008_006",
+      "ent_profile_008_007",
+      "ent_profile_008_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_008_01",
+      "ctrl_profile_008_02",
+      "ctrl_profile_008_03",
+      "ctrl_profile_008_04"
+    ]
+  },
+  {
+    "request_id": "req_021",
+    "profile_id": "profile_008",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_008_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_008_002",
+      "ent_profile_008_003",
+      "ent_profile_008_004",
+      "ent_profile_008_005",
+      "ent_profile_008_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_008_01",
+      "ctrl_profile_008_02",
+      "ctrl_profile_008_03",
+      "ctrl_profile_008_04"
+    ]
+  },
+  {
+    "request_id": "req_022",
+    "profile_id": "profile_008",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_008_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_008_002",
+      "ent_profile_008_003",
+      "ent_profile_008_004",
+      "ent_profile_008_005",
+      "ent_profile_008_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_008_01",
+      "ctrl_profile_008_02",
+      "ctrl_profile_008_03",
+      "ctrl_profile_008_04"
+    ]
+  },
+  {
+    "request_id": "req_023",
+    "profile_id": "profile_009",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_009_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_009_002",
+      "ent_profile_009_003",
+      "ent_profile_009_004",
+      "ent_profile_009_005",
+      "ent_profile_009_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_009_01",
+      "ctrl_profile_009_02",
+      "ctrl_profile_009_03",
+      "ctrl_profile_009_04"
+    ]
+  },
+  {
+    "request_id": "req_024",
+    "profile_id": "profile_009",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_009_001",
+      "ent_profile_009_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_009_003",
+      "ent_profile_009_004",
+      "ent_profile_009_005",
+      "ent_profile_009_006",
+      "ent_profile_009_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_009_01",
+      "ctrl_profile_009_02",
+      "ctrl_profile_009_03",
+      "ctrl_profile_009_04"
+    ]
+  },
+  {
+    "request_id": "req_025",
+    "profile_id": "profile_009",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_009_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_009_002",
+      "ent_profile_009_003",
+      "ent_profile_009_004",
+      "ent_profile_009_005",
+      "ent_profile_009_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_009_01",
+      "ctrl_profile_009_02",
+      "ctrl_profile_009_03",
+      "ctrl_profile_009_04"
+    ]
+  },
+  {
+    "request_id": "req_026",
+    "profile_id": "profile_010",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_010_001",
+      "ent_profile_010_002",
+      "ent_profile_010_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_010_004",
+      "ent_profile_010_005",
+      "ent_profile_010_006",
+      "ent_profile_010_007",
+      "ent_profile_010_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_010_01",
+      "ctrl_profile_010_02",
+      "ctrl_profile_010_03",
+      "ctrl_profile_010_04"
+    ]
+  },
+  {
+    "request_id": "req_027",
+    "profile_id": "profile_010",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_010_001",
+      "ent_profile_010_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_010_003",
+      "ent_profile_010_004",
+      "ent_profile_010_005",
+      "ent_profile_010_006",
+      "ent_profile_010_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_010_01",
+      "ctrl_profile_010_02",
+      "ctrl_profile_010_03",
+      "ctrl_profile_010_04"
+    ]
+  },
+  {
+    "request_id": "req_028",
+    "profile_id": "profile_010",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_010_001",
+      "ent_profile_010_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_010_003",
+      "ent_profile_010_004",
+      "ent_profile_010_005",
+      "ent_profile_010_006",
+      "ent_profile_010_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_010_01",
+      "ctrl_profile_010_02",
+      "ctrl_profile_010_03",
+      "ctrl_profile_010_04"
+    ]
+  },
+  {
+    "request_id": "req_029",
+    "profile_id": "profile_011",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_011_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_011_002",
+      "ent_profile_011_003",
+      "ent_profile_011_004",
+      "ent_profile_011_005",
+      "ent_profile_011_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_011_01",
+      "ctrl_profile_011_02",
+      "ctrl_profile_011_03",
+      "ctrl_profile_011_04"
+    ]
+  },
+  {
+    "request_id": "req_030",
+    "profile_id": "profile_011",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_011_001",
+      "ent_profile_011_002",
+      "ent_profile_011_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_011_004",
+      "ent_profile_011_005",
+      "ent_profile_011_006",
+      "ent_profile_011_007",
+      "ent_profile_011_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_011_01",
+      "ctrl_profile_011_02",
+      "ctrl_profile_011_03",
+      "ctrl_profile_011_04"
+    ]
+  },
+  {
+    "request_id": "req_031",
+    "profile_id": "profile_011",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_011_001",
+      "ent_profile_011_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_011_003",
+      "ent_profile_011_004",
+      "ent_profile_011_005",
+      "ent_profile_011_006",
+      "ent_profile_011_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_011_01",
+      "ctrl_profile_011_02",
+      "ctrl_profile_011_03",
+      "ctrl_profile_011_04"
+    ]
+  },
+  {
+    "request_id": "req_032",
+    "profile_id": "profile_012",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_012_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_012_002",
+      "ent_profile_012_003",
+      "ent_profile_012_004",
+      "ent_profile_012_005",
+      "ent_profile_012_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_012_01",
+      "ctrl_profile_012_02",
+      "ctrl_profile_012_03",
+      "ctrl_profile_012_04"
+    ]
+  },
+  {
+    "request_id": "req_033",
+    "profile_id": "profile_012",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_012_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_012_002",
+      "ent_profile_012_003",
+      "ent_profile_012_004",
+      "ent_profile_012_005",
+      "ent_profile_012_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_012_01",
+      "ctrl_profile_012_02",
+      "ctrl_profile_012_03",
+      "ctrl_profile_012_04"
+    ]
+  },
+  {
+    "request_id": "req_034",
+    "profile_id": "profile_012",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_012_001",
+      "ent_profile_012_002",
+      "ent_profile_012_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_012_004",
+      "ent_profile_012_005",
+      "ent_profile_012_006",
+      "ent_profile_012_007",
+      "ent_profile_012_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_012_01",
+      "ctrl_profile_012_02",
+      "ctrl_profile_012_03",
+      "ctrl_profile_012_04"
+    ]
+  },
+  {
+    "request_id": "req_035",
+    "profile_id": "profile_013",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_013_001",
+      "ent_profile_013_002",
+      "ent_profile_013_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_013_004",
+      "ent_profile_013_005",
+      "ent_profile_013_006",
+      "ent_profile_013_007",
+      "ent_profile_013_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_013_01",
+      "ctrl_profile_013_02",
+      "ctrl_profile_013_03",
+      "ctrl_profile_013_04"
+    ]
+  },
+  {
+    "request_id": "req_036",
+    "profile_id": "profile_013",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_013_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_013_002",
+      "ent_profile_013_003",
+      "ent_profile_013_004",
+      "ent_profile_013_005",
+      "ent_profile_013_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_013_01",
+      "ctrl_profile_013_02",
+      "ctrl_profile_013_03",
+      "ctrl_profile_013_04"
+    ]
+  },
+  {
+    "request_id": "req_037",
+    "profile_id": "profile_014",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_014_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_014_002",
+      "ent_profile_014_003",
+      "ent_profile_014_004",
+      "ent_profile_014_005",
+      "ent_profile_014_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_014_01",
+      "ctrl_profile_014_02",
+      "ctrl_profile_014_03",
+      "ctrl_profile_014_04"
+    ]
+  },
+  {
+    "request_id": "req_038",
+    "profile_id": "profile_014",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_014_001",
+      "ent_profile_014_002",
+      "ent_profile_014_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_014_004",
+      "ent_profile_014_005",
+      "ent_profile_014_006",
+      "ent_profile_014_007",
+      "ent_profile_014_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_014_01",
+      "ctrl_profile_014_02",
+      "ctrl_profile_014_03",
+      "ctrl_profile_014_04"
+    ]
+  },
+  {
+    "request_id": "req_039",
+    "profile_id": "profile_015",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_015_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_015_002",
+      "ent_profile_015_003",
+      "ent_profile_015_004",
+      "ent_profile_015_005",
+      "ent_profile_015_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_015_01",
+      "ctrl_profile_015_02",
+      "ctrl_profile_015_03",
+      "ctrl_profile_015_04"
+    ]
+  },
+  {
+    "request_id": "req_040",
+    "profile_id": "profile_015",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_015_001",
+      "ent_profile_015_002",
+      "ent_profile_015_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_015_004",
+      "ent_profile_015_005",
+      "ent_profile_015_006",
+      "ent_profile_015_007",
+      "ent_profile_015_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_015_01",
+      "ctrl_profile_015_02",
+      "ctrl_profile_015_03",
+      "ctrl_profile_015_04"
+    ]
+  },
+  {
+    "request_id": "req_041",
+    "profile_id": "profile_015",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_015_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_015_002",
+      "ent_profile_015_003",
+      "ent_profile_015_004",
+      "ent_profile_015_005",
+      "ent_profile_015_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_015_01",
+      "ctrl_profile_015_02",
+      "ctrl_profile_015_03",
+      "ctrl_profile_015_04"
+    ]
+  },
+  {
+    "request_id": "req_042",
+    "profile_id": "profile_016",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_016_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_016_002",
+      "ent_profile_016_003",
+      "ent_profile_016_004",
+      "ent_profile_016_005",
+      "ent_profile_016_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_016_01",
+      "ctrl_profile_016_02",
+      "ctrl_profile_016_03",
+      "ctrl_profile_016_04"
+    ]
+  },
+  {
+    "request_id": "req_043",
+    "profile_id": "profile_016",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_016_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_016_002",
+      "ent_profile_016_003",
+      "ent_profile_016_004",
+      "ent_profile_016_005",
+      "ent_profile_016_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_016_01",
+      "ctrl_profile_016_02",
+      "ctrl_profile_016_03",
+      "ctrl_profile_016_04"
+    ]
+  },
+  {
+    "request_id": "req_044",
+    "profile_id": "profile_017",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_017_001",
+      "ent_profile_017_002",
+      "ent_profile_017_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_017_004",
+      "ent_profile_017_005",
+      "ent_profile_017_006",
+      "ent_profile_017_007",
+      "ent_profile_017_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_017_01",
+      "ctrl_profile_017_02",
+      "ctrl_profile_017_03",
+      "ctrl_profile_017_04"
+    ]
+  },
+  {
+    "request_id": "req_045",
+    "profile_id": "profile_017",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_017_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_017_002",
+      "ent_profile_017_003",
+      "ent_profile_017_004",
+      "ent_profile_017_005",
+      "ent_profile_017_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_017_01",
+      "ctrl_profile_017_02",
+      "ctrl_profile_017_03",
+      "ctrl_profile_017_04"
+    ]
+  },
+  {
+    "request_id": "req_046",
+    "profile_id": "profile_017",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_017_001",
+      "ent_profile_017_002",
+      "ent_profile_017_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_017_004",
+      "ent_profile_017_005",
+      "ent_profile_017_006",
+      "ent_profile_017_007",
+      "ent_profile_017_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_017_01",
+      "ctrl_profile_017_02",
+      "ctrl_profile_017_03",
+      "ctrl_profile_017_04"
+    ]
+  },
+  {
+    "request_id": "req_047",
+    "profile_id": "profile_018",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_018_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_018_002",
+      "ent_profile_018_003",
+      "ent_profile_018_004",
+      "ent_profile_018_005",
+      "ent_profile_018_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_018_01",
+      "ctrl_profile_018_02",
+      "ctrl_profile_018_03",
+      "ctrl_profile_018_04"
+    ]
+  },
+  {
+    "request_id": "req_048",
+    "profile_id": "profile_018",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_018_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_018_002",
+      "ent_profile_018_003",
+      "ent_profile_018_004",
+      "ent_profile_018_005",
+      "ent_profile_018_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_018_01",
+      "ctrl_profile_018_02",
+      "ctrl_profile_018_03",
+      "ctrl_profile_018_04"
+    ]
+  },
+  {
+    "request_id": "req_049",
+    "profile_id": "profile_019",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_019_001",
+      "ent_profile_019_002",
+      "ent_profile_019_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_019_004",
+      "ent_profile_019_005",
+      "ent_profile_019_006",
+      "ent_profile_019_007",
+      "ent_profile_019_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_019_01",
+      "ctrl_profile_019_02",
+      "ctrl_profile_019_03",
+      "ctrl_profile_019_04"
+    ]
+  },
+  {
+    "request_id": "req_050",
+    "profile_id": "profile_019",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_019_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_019_002",
+      "ent_profile_019_003",
+      "ent_profile_019_004",
+      "ent_profile_019_005",
+      "ent_profile_019_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_019_01",
+      "ctrl_profile_019_02",
+      "ctrl_profile_019_03",
+      "ctrl_profile_019_04"
+    ]
+  },
+  {
+    "request_id": "req_051",
+    "profile_id": "profile_019",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_019_001",
+      "ent_profile_019_002",
+      "ent_profile_019_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_019_004",
+      "ent_profile_019_005",
+      "ent_profile_019_006",
+      "ent_profile_019_007",
+      "ent_profile_019_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_019_01",
+      "ctrl_profile_019_02",
+      "ctrl_profile_019_03",
+      "ctrl_profile_019_04"
+    ]
+  },
+  {
+    "request_id": "req_052",
+    "profile_id": "profile_020",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_020_001",
+      "ent_profile_020_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_020_003",
+      "ent_profile_020_004",
+      "ent_profile_020_005",
+      "ent_profile_020_006",
+      "ent_profile_020_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_020_01",
+      "ctrl_profile_020_02",
+      "ctrl_profile_020_03",
+      "ctrl_profile_020_04"
+    ]
+  },
+  {
+    "request_id": "req_053",
+    "profile_id": "profile_020",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_020_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_020_002",
+      "ent_profile_020_003",
+      "ent_profile_020_004",
+      "ent_profile_020_005",
+      "ent_profile_020_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_020_01",
+      "ctrl_profile_020_02",
+      "ctrl_profile_020_03",
+      "ctrl_profile_020_04"
+    ]
+  },
+  {
+    "request_id": "req_054",
+    "profile_id": "profile_020",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_020_001",
+      "ent_profile_020_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_020_003",
+      "ent_profile_020_004",
+      "ent_profile_020_005",
+      "ent_profile_020_006",
+      "ent_profile_020_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_020_01",
+      "ctrl_profile_020_02",
+      "ctrl_profile_020_03",
+      "ctrl_profile_020_04"
+    ]
+  },
+  {
+    "request_id": "req_055",
+    "profile_id": "profile_021",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_021_001",
+      "ent_profile_021_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_021_003",
+      "ent_profile_021_004",
+      "ent_profile_021_005",
+      "ent_profile_021_006",
+      "ent_profile_021_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_021_01",
+      "ctrl_profile_021_02",
+      "ctrl_profile_021_03",
+      "ctrl_profile_021_04"
+    ]
+  },
+  {
+    "request_id": "req_056",
+    "profile_id": "profile_021",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_021_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_021_002",
+      "ent_profile_021_003",
+      "ent_profile_021_004",
+      "ent_profile_021_005",
+      "ent_profile_021_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_021_01",
+      "ctrl_profile_021_02",
+      "ctrl_profile_021_03",
+      "ctrl_profile_021_04"
+    ]
+  },
+  {
+    "request_id": "req_057",
+    "profile_id": "profile_021",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_021_001",
+      "ent_profile_021_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_021_003",
+      "ent_profile_021_004",
+      "ent_profile_021_005",
+      "ent_profile_021_006",
+      "ent_profile_021_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_021_01",
+      "ctrl_profile_021_02",
+      "ctrl_profile_021_03",
+      "ctrl_profile_021_04"
+    ]
+  },
+  {
+    "request_id": "req_058",
+    "profile_id": "profile_022",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_022_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_022_002",
+      "ent_profile_022_003",
+      "ent_profile_022_004",
+      "ent_profile_022_005",
+      "ent_profile_022_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_022_01",
+      "ctrl_profile_022_02",
+      "ctrl_profile_022_03",
+      "ctrl_profile_022_04"
+    ]
+  },
+  {
+    "request_id": "req_059",
+    "profile_id": "profile_022",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_022_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_022_002",
+      "ent_profile_022_003",
+      "ent_profile_022_004",
+      "ent_profile_022_005",
+      "ent_profile_022_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_022_01",
+      "ctrl_profile_022_02",
+      "ctrl_profile_022_03",
+      "ctrl_profile_022_04"
+    ]
+  },
+  {
+    "request_id": "req_060",
+    "profile_id": "profile_022",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_022_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_022_002",
+      "ent_profile_022_003",
+      "ent_profile_022_004",
+      "ent_profile_022_005",
+      "ent_profile_022_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_022_01",
+      "ctrl_profile_022_02",
+      "ctrl_profile_022_03",
+      "ctrl_profile_022_04"
+    ]
+  },
+  {
+    "request_id": "req_061",
+    "profile_id": "profile_023",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_023_001",
+      "ent_profile_023_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_023_003",
+      "ent_profile_023_004",
+      "ent_profile_023_005",
+      "ent_profile_023_006",
+      "ent_profile_023_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_023_01",
+      "ctrl_profile_023_02",
+      "ctrl_profile_023_03",
+      "ctrl_profile_023_04"
+    ]
+  },
+  {
+    "request_id": "req_062",
+    "profile_id": "profile_023",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_023_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_023_002",
+      "ent_profile_023_003",
+      "ent_profile_023_004",
+      "ent_profile_023_005",
+      "ent_profile_023_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_023_01",
+      "ctrl_profile_023_02",
+      "ctrl_profile_023_03",
+      "ctrl_profile_023_04"
+    ]
+  },
+  {
+    "request_id": "req_063",
+    "profile_id": "profile_023",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_023_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_023_002",
+      "ent_profile_023_003",
+      "ent_profile_023_004",
+      "ent_profile_023_005",
+      "ent_profile_023_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_023_01",
+      "ctrl_profile_023_02",
+      "ctrl_profile_023_03",
+      "ctrl_profile_023_04"
+    ]
+  },
+  {
+    "request_id": "req_064",
+    "profile_id": "profile_024",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_024_001",
+      "ent_profile_024_002",
+      "ent_profile_024_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_024_004",
+      "ent_profile_024_005",
+      "ent_profile_024_006",
+      "ent_profile_024_007",
+      "ent_profile_024_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_024_01",
+      "ctrl_profile_024_02",
+      "ctrl_profile_024_03",
+      "ctrl_profile_024_04"
+    ]
+  },
+  {
+    "request_id": "req_065",
+    "profile_id": "profile_024",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_024_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_024_002",
+      "ent_profile_024_003",
+      "ent_profile_024_004",
+      "ent_profile_024_005",
+      "ent_profile_024_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_024_01",
+      "ctrl_profile_024_02",
+      "ctrl_profile_024_03",
+      "ctrl_profile_024_04"
+    ]
+  },
+  {
+    "request_id": "req_066",
+    "profile_id": "profile_024",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_024_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_024_002",
+      "ent_profile_024_003",
+      "ent_profile_024_004",
+      "ent_profile_024_005",
+      "ent_profile_024_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_024_01",
+      "ctrl_profile_024_02",
+      "ctrl_profile_024_03",
+      "ctrl_profile_024_04"
+    ]
+  },
+  {
+    "request_id": "req_067",
+    "profile_id": "profile_025",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_025_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_025_002",
+      "ent_profile_025_003",
+      "ent_profile_025_004",
+      "ent_profile_025_005",
+      "ent_profile_025_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_025_01",
+      "ctrl_profile_025_02",
+      "ctrl_profile_025_03",
+      "ctrl_profile_025_04"
+    ]
+  },
+  {
+    "request_id": "req_068",
+    "profile_id": "profile_025",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_025_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_025_002",
+      "ent_profile_025_003",
+      "ent_profile_025_004",
+      "ent_profile_025_005",
+      "ent_profile_025_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_025_01",
+      "ctrl_profile_025_02",
+      "ctrl_profile_025_03",
+      "ctrl_profile_025_04"
+    ]
+  },
+  {
+    "request_id": "req_069",
+    "profile_id": "profile_025",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_025_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_025_002",
+      "ent_profile_025_003",
+      "ent_profile_025_004",
+      "ent_profile_025_005",
+      "ent_profile_025_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_025_01",
+      "ctrl_profile_025_02",
+      "ctrl_profile_025_03",
+      "ctrl_profile_025_04"
+    ]
+  },
+  {
+    "request_id": "req_070",
+    "profile_id": "profile_026",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_026_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_026_002",
+      "ent_profile_026_003",
+      "ent_profile_026_004",
+      "ent_profile_026_005",
+      "ent_profile_026_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_026_01",
+      "ctrl_profile_026_02",
+      "ctrl_profile_026_03",
+      "ctrl_profile_026_04"
+    ]
+  },
+  {
+    "request_id": "req_071",
+    "profile_id": "profile_026",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_026_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_026_002",
+      "ent_profile_026_003",
+      "ent_profile_026_004",
+      "ent_profile_026_005",
+      "ent_profile_026_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_026_01",
+      "ctrl_profile_026_02",
+      "ctrl_profile_026_03",
+      "ctrl_profile_026_04"
+    ]
+  },
+  {
+    "request_id": "req_072",
+    "profile_id": "profile_026",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_026_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_026_002",
+      "ent_profile_026_003",
+      "ent_profile_026_004",
+      "ent_profile_026_005",
+      "ent_profile_026_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_026_01",
+      "ctrl_profile_026_02",
+      "ctrl_profile_026_03",
+      "ctrl_profile_026_04"
+    ]
+  },
+  {
+    "request_id": "req_073",
+    "profile_id": "profile_027",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_027_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_027_002",
+      "ent_profile_027_003",
+      "ent_profile_027_004",
+      "ent_profile_027_005",
+      "ent_profile_027_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_027_01",
+      "ctrl_profile_027_02",
+      "ctrl_profile_027_03",
+      "ctrl_profile_027_04"
+    ]
+  },
+  {
+    "request_id": "req_074",
+    "profile_id": "profile_027",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_027_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_027_002",
+      "ent_profile_027_003",
+      "ent_profile_027_004",
+      "ent_profile_027_005",
+      "ent_profile_027_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_027_01",
+      "ctrl_profile_027_02",
+      "ctrl_profile_027_03",
+      "ctrl_profile_027_04"
+    ]
+  },
+  {
+    "request_id": "req_075",
+    "profile_id": "profile_027",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_027_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_027_002",
+      "ent_profile_027_003",
+      "ent_profile_027_004",
+      "ent_profile_027_005",
+      "ent_profile_027_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_027_01",
+      "ctrl_profile_027_02",
+      "ctrl_profile_027_03",
+      "ctrl_profile_027_04"
+    ]
+  },
+  {
+    "request_id": "req_076",
+    "profile_id": "profile_028",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_028_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_028_002",
+      "ent_profile_028_003",
+      "ent_profile_028_004",
+      "ent_profile_028_005",
+      "ent_profile_028_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_028_01",
+      "ctrl_profile_028_02",
+      "ctrl_profile_028_03",
+      "ctrl_profile_028_04"
+    ]
+  },
+  {
+    "request_id": "req_077",
+    "profile_id": "profile_028",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_028_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_028_002",
+      "ent_profile_028_003",
+      "ent_profile_028_004",
+      "ent_profile_028_005",
+      "ent_profile_028_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_028_01",
+      "ctrl_profile_028_02",
+      "ctrl_profile_028_03",
+      "ctrl_profile_028_04"
+    ]
+  },
+  {
+    "request_id": "req_078",
+    "profile_id": "profile_029",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_029_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_029_002",
+      "ent_profile_029_003",
+      "ent_profile_029_004",
+      "ent_profile_029_005",
+      "ent_profile_029_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_029_01",
+      "ctrl_profile_029_02",
+      "ctrl_profile_029_03",
+      "ctrl_profile_029_04"
+    ]
+  },
+  {
+    "request_id": "req_079",
+    "profile_id": "profile_029",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_029_001",
+      "ent_profile_029_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_029_003",
+      "ent_profile_029_004",
+      "ent_profile_029_005",
+      "ent_profile_029_006",
+      "ent_profile_029_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_029_01",
+      "ctrl_profile_029_02",
+      "ctrl_profile_029_03",
+      "ctrl_profile_029_04"
+    ]
+  },
+  {
+    "request_id": "req_080",
+    "profile_id": "profile_029",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_029_001",
+      "ent_profile_029_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_029_003",
+      "ent_profile_029_004",
+      "ent_profile_029_005",
+      "ent_profile_029_006",
+      "ent_profile_029_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_029_01",
+      "ctrl_profile_029_02",
+      "ctrl_profile_029_03",
+      "ctrl_profile_029_04"
+    ]
+  },
+  {
+    "request_id": "req_081",
+    "profile_id": "profile_030",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_030_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_030_002",
+      "ent_profile_030_003",
+      "ent_profile_030_004",
+      "ent_profile_030_005",
+      "ent_profile_030_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_030_01",
+      "ctrl_profile_030_02",
+      "ctrl_profile_030_03",
+      "ctrl_profile_030_04"
+    ]
+  },
+  {
+    "request_id": "req_082",
+    "profile_id": "profile_030",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_030_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_030_002",
+      "ent_profile_030_003",
+      "ent_profile_030_004",
+      "ent_profile_030_005",
+      "ent_profile_030_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_030_01",
+      "ctrl_profile_030_02",
+      "ctrl_profile_030_03",
+      "ctrl_profile_030_04"
+    ]
+  },
+  {
+    "request_id": "req_083",
+    "profile_id": "profile_031",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_031_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_031_002",
+      "ent_profile_031_003",
+      "ent_profile_031_004",
+      "ent_profile_031_005",
+      "ent_profile_031_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_031_01",
+      "ctrl_profile_031_02",
+      "ctrl_profile_031_03",
+      "ctrl_profile_031_04"
+    ]
+  },
+  {
+    "request_id": "req_084",
+    "profile_id": "profile_031",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_031_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_031_002",
+      "ent_profile_031_003",
+      "ent_profile_031_004",
+      "ent_profile_031_005",
+      "ent_profile_031_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_031_01",
+      "ctrl_profile_031_02",
+      "ctrl_profile_031_03",
+      "ctrl_profile_031_04"
+    ]
+  },
+  {
+    "request_id": "req_085",
+    "profile_id": "profile_031",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_031_001",
+      "ent_profile_031_002",
+      "ent_profile_031_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_031_004",
+      "ent_profile_031_005",
+      "ent_profile_031_006",
+      "ent_profile_031_007",
+      "ent_profile_031_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_031_01",
+      "ctrl_profile_031_02",
+      "ctrl_profile_031_03",
+      "ctrl_profile_031_04"
+    ]
+  },
+  {
+    "request_id": "req_086",
+    "profile_id": "profile_032",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_032_001",
+      "ent_profile_032_002",
+      "ent_profile_032_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_032_004",
+      "ent_profile_032_005",
+      "ent_profile_032_006",
+      "ent_profile_032_007",
+      "ent_profile_032_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_032_01",
+      "ctrl_profile_032_02",
+      "ctrl_profile_032_03",
+      "ctrl_profile_032_04"
+    ]
+  },
+  {
+    "request_id": "req_087",
+    "profile_id": "profile_032",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_032_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_032_002",
+      "ent_profile_032_003",
+      "ent_profile_032_004",
+      "ent_profile_032_005",
+      "ent_profile_032_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_032_01",
+      "ctrl_profile_032_02",
+      "ctrl_profile_032_03",
+      "ctrl_profile_032_04"
+    ]
+  },
+  {
+    "request_id": "req_088",
+    "profile_id": "profile_032",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_032_001",
+      "ent_profile_032_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_032_003",
+      "ent_profile_032_004",
+      "ent_profile_032_005",
+      "ent_profile_032_006",
+      "ent_profile_032_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_032_01",
+      "ctrl_profile_032_02",
+      "ctrl_profile_032_03",
+      "ctrl_profile_032_04"
+    ]
+  },
+  {
+    "request_id": "req_089",
+    "profile_id": "profile_033",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_033_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_033_002",
+      "ent_profile_033_003",
+      "ent_profile_033_004",
+      "ent_profile_033_005",
+      "ent_profile_033_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_033_01",
+      "ctrl_profile_033_02",
+      "ctrl_profile_033_03",
+      "ctrl_profile_033_04"
+    ]
+  },
+  {
+    "request_id": "req_090",
+    "profile_id": "profile_033",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_033_001",
+      "ent_profile_033_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_033_003",
+      "ent_profile_033_004",
+      "ent_profile_033_005",
+      "ent_profile_033_006",
+      "ent_profile_033_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_033_01",
+      "ctrl_profile_033_02",
+      "ctrl_profile_033_03",
+      "ctrl_profile_033_04"
+    ]
+  },
+  {
+    "request_id": "req_091",
+    "profile_id": "profile_034",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_034_001",
+      "ent_profile_034_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_034_003",
+      "ent_profile_034_004",
+      "ent_profile_034_005",
+      "ent_profile_034_006",
+      "ent_profile_034_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_034_01",
+      "ctrl_profile_034_02",
+      "ctrl_profile_034_03",
+      "ctrl_profile_034_04"
+    ]
+  },
+  {
+    "request_id": "req_092",
+    "profile_id": "profile_034",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_034_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_034_002",
+      "ent_profile_034_003",
+      "ent_profile_034_004",
+      "ent_profile_034_005",
+      "ent_profile_034_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_034_01",
+      "ctrl_profile_034_02",
+      "ctrl_profile_034_03",
+      "ctrl_profile_034_04"
+    ]
+  },
+  {
+    "request_id": "req_093",
+    "profile_id": "profile_035",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_035_001",
+      "ent_profile_035_002",
+      "ent_profile_035_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_035_004",
+      "ent_profile_035_005",
+      "ent_profile_035_006",
+      "ent_profile_035_007",
+      "ent_profile_035_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_035_01",
+      "ctrl_profile_035_02",
+      "ctrl_profile_035_03",
+      "ctrl_profile_035_04"
+    ]
+  },
+  {
+    "request_id": "req_094",
+    "profile_id": "profile_035",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_035_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_035_002",
+      "ent_profile_035_003",
+      "ent_profile_035_004",
+      "ent_profile_035_005",
+      "ent_profile_035_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_035_01",
+      "ctrl_profile_035_02",
+      "ctrl_profile_035_03",
+      "ctrl_profile_035_04"
+    ]
+  },
+  {
+    "request_id": "req_095",
+    "profile_id": "profile_036",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_036_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_036_002",
+      "ent_profile_036_003",
+      "ent_profile_036_004",
+      "ent_profile_036_005",
+      "ent_profile_036_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_036_01",
+      "ctrl_profile_036_02",
+      "ctrl_profile_036_03",
+      "ctrl_profile_036_04"
+    ]
+  },
+  {
+    "request_id": "req_096",
+    "profile_id": "profile_036",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_036_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_036_002",
+      "ent_profile_036_003",
+      "ent_profile_036_004",
+      "ent_profile_036_005",
+      "ent_profile_036_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_036_01",
+      "ctrl_profile_036_02",
+      "ctrl_profile_036_03",
+      "ctrl_profile_036_04"
+    ]
+  },
+  {
+    "request_id": "req_097",
+    "profile_id": "profile_036",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_036_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_036_002",
+      "ent_profile_036_003",
+      "ent_profile_036_004",
+      "ent_profile_036_005",
+      "ent_profile_036_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_036_01",
+      "ctrl_profile_036_02",
+      "ctrl_profile_036_03",
+      "ctrl_profile_036_04"
+    ]
+  },
+  {
+    "request_id": "req_098",
+    "profile_id": "profile_037",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_037_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_037_002",
+      "ent_profile_037_003",
+      "ent_profile_037_004",
+      "ent_profile_037_005",
+      "ent_profile_037_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_037_01",
+      "ctrl_profile_037_02",
+      "ctrl_profile_037_03",
+      "ctrl_profile_037_04"
+    ]
+  },
+  {
+    "request_id": "req_099",
+    "profile_id": "profile_037",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_037_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_037_002",
+      "ent_profile_037_003",
+      "ent_profile_037_004",
+      "ent_profile_037_005",
+      "ent_profile_037_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_037_01",
+      "ctrl_profile_037_02",
+      "ctrl_profile_037_03",
+      "ctrl_profile_037_04"
+    ]
+  },
+  {
+    "request_id": "req_100",
+    "profile_id": "profile_037",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_037_001",
+      "ent_profile_037_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_037_003",
+      "ent_profile_037_004",
+      "ent_profile_037_005",
+      "ent_profile_037_006",
+      "ent_profile_037_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_037_01",
+      "ctrl_profile_037_02",
+      "ctrl_profile_037_03",
+      "ctrl_profile_037_04"
+    ]
+  },
+  {
+    "request_id": "req_101",
+    "profile_id": "profile_038",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_038_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_038_002",
+      "ent_profile_038_003",
+      "ent_profile_038_004",
+      "ent_profile_038_005",
+      "ent_profile_038_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_038_01",
+      "ctrl_profile_038_02",
+      "ctrl_profile_038_03",
+      "ctrl_profile_038_04"
+    ]
+  },
+  {
+    "request_id": "req_102",
+    "profile_id": "profile_038",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_038_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_038_002",
+      "ent_profile_038_003",
+      "ent_profile_038_004",
+      "ent_profile_038_005",
+      "ent_profile_038_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_038_01",
+      "ctrl_profile_038_02",
+      "ctrl_profile_038_03",
+      "ctrl_profile_038_04"
+    ]
+  },
+  {
+    "request_id": "req_103",
+    "profile_id": "profile_038",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_038_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_038_002",
+      "ent_profile_038_003",
+      "ent_profile_038_004",
+      "ent_profile_038_005",
+      "ent_profile_038_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_038_01",
+      "ctrl_profile_038_02",
+      "ctrl_profile_038_03",
+      "ctrl_profile_038_04"
+    ]
+  },
+  {
+    "request_id": "req_104",
+    "profile_id": "profile_039",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_039_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_039_002",
+      "ent_profile_039_003",
+      "ent_profile_039_004",
+      "ent_profile_039_005",
+      "ent_profile_039_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_039_01",
+      "ctrl_profile_039_02",
+      "ctrl_profile_039_03",
+      "ctrl_profile_039_04"
+    ]
+  },
+  {
+    "request_id": "req_105",
+    "profile_id": "profile_039",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_039_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_039_002",
+      "ent_profile_039_003",
+      "ent_profile_039_004",
+      "ent_profile_039_005",
+      "ent_profile_039_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_039_01",
+      "ctrl_profile_039_02",
+      "ctrl_profile_039_03",
+      "ctrl_profile_039_04"
+    ]
+  },
+  {
+    "request_id": "req_106",
+    "profile_id": "profile_040",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_040_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_040_002",
+      "ent_profile_040_003",
+      "ent_profile_040_004",
+      "ent_profile_040_005",
+      "ent_profile_040_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_040_01",
+      "ctrl_profile_040_02",
+      "ctrl_profile_040_03",
+      "ctrl_profile_040_04"
+    ]
+  },
+  {
+    "request_id": "req_107",
+    "profile_id": "profile_040",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_040_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_040_002",
+      "ent_profile_040_003",
+      "ent_profile_040_004",
+      "ent_profile_040_005",
+      "ent_profile_040_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_040_01",
+      "ctrl_profile_040_02",
+      "ctrl_profile_040_03",
+      "ctrl_profile_040_04"
+    ]
+  },
+  {
+    "request_id": "req_108",
+    "profile_id": "profile_040",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_040_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_040_002",
+      "ent_profile_040_003",
+      "ent_profile_040_004",
+      "ent_profile_040_005",
+      "ent_profile_040_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_040_01",
+      "ctrl_profile_040_02",
+      "ctrl_profile_040_03",
+      "ctrl_profile_040_04"
+    ]
+  },
+  {
+    "request_id": "req_109",
+    "profile_id": "profile_041",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_041_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_041_002",
+      "ent_profile_041_003",
+      "ent_profile_041_004",
+      "ent_profile_041_005",
+      "ent_profile_041_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_041_01",
+      "ctrl_profile_041_02",
+      "ctrl_profile_041_03",
+      "ctrl_profile_041_04"
+    ]
+  },
+  {
+    "request_id": "req_110",
+    "profile_id": "profile_041",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_041_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_041_002",
+      "ent_profile_041_003",
+      "ent_profile_041_004",
+      "ent_profile_041_005",
+      "ent_profile_041_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_041_01",
+      "ctrl_profile_041_02",
+      "ctrl_profile_041_03",
+      "ctrl_profile_041_04"
+    ]
+  },
+  {
+    "request_id": "req_111",
+    "profile_id": "profile_041",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_041_001",
+      "ent_profile_041_002",
+      "ent_profile_041_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_041_004",
+      "ent_profile_041_005",
+      "ent_profile_041_006",
+      "ent_profile_041_007",
+      "ent_profile_041_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_041_01",
+      "ctrl_profile_041_02",
+      "ctrl_profile_041_03",
+      "ctrl_profile_041_04"
+    ]
+  },
+  {
+    "request_id": "req_112",
+    "profile_id": "profile_042",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_042_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_042_002",
+      "ent_profile_042_003",
+      "ent_profile_042_004",
+      "ent_profile_042_005",
+      "ent_profile_042_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_042_01",
+      "ctrl_profile_042_02",
+      "ctrl_profile_042_03",
+      "ctrl_profile_042_04"
+    ]
+  },
+  {
+    "request_id": "req_113",
+    "profile_id": "profile_042",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_042_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_042_002",
+      "ent_profile_042_003",
+      "ent_profile_042_004",
+      "ent_profile_042_005",
+      "ent_profile_042_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_042_01",
+      "ctrl_profile_042_02",
+      "ctrl_profile_042_03",
+      "ctrl_profile_042_04"
+    ]
+  },
+  {
+    "request_id": "req_114",
+    "profile_id": "profile_042",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_042_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_042_002",
+      "ent_profile_042_003",
+      "ent_profile_042_004",
+      "ent_profile_042_005",
+      "ent_profile_042_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_042_01",
+      "ctrl_profile_042_02",
+      "ctrl_profile_042_03",
+      "ctrl_profile_042_04"
+    ]
+  },
+  {
+    "request_id": "req_115",
+    "profile_id": "profile_043",
+    "forget_request_type": "F5",
+    "target_entity_ids": [
+      "ent_profile_043_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_043_002",
+      "ent_profile_043_003",
+      "ent_profile_043_004",
+      "ent_profile_043_005",
+      "ent_profile_043_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_043_01",
+      "ctrl_profile_043_02",
+      "ctrl_profile_043_03",
+      "ctrl_profile_043_04"
+    ]
+  },
+  {
+    "request_id": "req_116",
+    "profile_id": "profile_043",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_043_001",
+      "ent_profile_043_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_043_003",
+      "ent_profile_043_004",
+      "ent_profile_043_005",
+      "ent_profile_043_006",
+      "ent_profile_043_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_043_01",
+      "ctrl_profile_043_02",
+      "ctrl_profile_043_03",
+      "ctrl_profile_043_04"
+    ]
+  },
+  {
+    "request_id": "req_117",
+    "profile_id": "profile_043",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_043_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_043_002",
+      "ent_profile_043_003",
+      "ent_profile_043_004",
+      "ent_profile_043_005",
+      "ent_profile_043_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_043_01",
+      "ctrl_profile_043_02",
+      "ctrl_profile_043_03",
+      "ctrl_profile_043_04"
+    ]
+  },
+  {
+    "request_id": "req_118",
+    "profile_id": "profile_044",
+    "forget_request_type": "F6",
+    "target_entity_ids": [
+      "ent_profile_044_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_044_002",
+      "ent_profile_044_003",
+      "ent_profile_044_004",
+      "ent_profile_044_005",
+      "ent_profile_044_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_044_01",
+      "ctrl_profile_044_02",
+      "ctrl_profile_044_03",
+      "ctrl_profile_044_04"
+    ]
+  },
+  {
+    "request_id": "req_119",
+    "profile_id": "profile_044",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_044_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_044_002",
+      "ent_profile_044_003",
+      "ent_profile_044_004",
+      "ent_profile_044_005",
+      "ent_profile_044_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_044_01",
+      "ctrl_profile_044_02",
+      "ctrl_profile_044_03",
+      "ctrl_profile_044_04"
+    ]
+  },
+  {
+    "request_id": "req_120",
+    "profile_id": "profile_045",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_045_001",
+      "ent_profile_045_002",
+      "ent_profile_045_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_045_004",
+      "ent_profile_045_005",
+      "ent_profile_045_006",
+      "ent_profile_045_007",
+      "ent_profile_045_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_045_01",
+      "ctrl_profile_045_02",
+      "ctrl_profile_045_03",
+      "ctrl_profile_045_04"
+    ]
+  },
+  {
+    "request_id": "req_121",
+    "profile_id": "profile_045",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_045_001",
+      "ent_profile_045_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_045_003",
+      "ent_profile_045_004",
+      "ent_profile_045_005",
+      "ent_profile_045_006",
+      "ent_profile_045_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_045_01",
+      "ctrl_profile_045_02",
+      "ctrl_profile_045_03",
+      "ctrl_profile_045_04"
+    ]
+  },
+  {
+    "request_id": "req_122",
+    "profile_id": "profile_045",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_045_001",
+      "ent_profile_045_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_045_003",
+      "ent_profile_045_004",
+      "ent_profile_045_005",
+      "ent_profile_045_006",
+      "ent_profile_045_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_045_01",
+      "ctrl_profile_045_02",
+      "ctrl_profile_045_03",
+      "ctrl_profile_045_04"
+    ]
+  },
+  {
+    "request_id": "req_123",
+    "profile_id": "profile_046",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_046_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_046_002",
+      "ent_profile_046_003",
+      "ent_profile_046_004",
+      "ent_profile_046_005",
+      "ent_profile_046_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_046_01",
+      "ctrl_profile_046_02",
+      "ctrl_profile_046_03",
+      "ctrl_profile_046_04"
+    ]
+  },
+  {
+    "request_id": "req_124",
+    "profile_id": "profile_046",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_046_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_046_002",
+      "ent_profile_046_003",
+      "ent_profile_046_004",
+      "ent_profile_046_005",
+      "ent_profile_046_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_046_01",
+      "ctrl_profile_046_02",
+      "ctrl_profile_046_03",
+      "ctrl_profile_046_04"
+    ]
+  },
+  {
+    "request_id": "req_125",
+    "profile_id": "profile_047",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_047_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_047_002",
+      "ent_profile_047_003",
+      "ent_profile_047_004",
+      "ent_profile_047_005",
+      "ent_profile_047_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_047_01",
+      "ctrl_profile_047_02",
+      "ctrl_profile_047_03",
+      "ctrl_profile_047_04"
+    ]
+  },
+  {
+    "request_id": "req_126",
+    "profile_id": "profile_047",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_047_001",
+      "ent_profile_047_002",
+      "ent_profile_047_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_047_004",
+      "ent_profile_047_005",
+      "ent_profile_047_006",
+      "ent_profile_047_007",
+      "ent_profile_047_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_047_01",
+      "ctrl_profile_047_02",
+      "ctrl_profile_047_03",
+      "ctrl_profile_047_04"
+    ]
+  },
+  {
+    "request_id": "req_127",
+    "profile_id": "profile_047",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_047_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_047_002",
+      "ent_profile_047_003",
+      "ent_profile_047_004",
+      "ent_profile_047_005",
+      "ent_profile_047_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_047_01",
+      "ctrl_profile_047_02",
+      "ctrl_profile_047_03",
+      "ctrl_profile_047_04"
+    ]
+  },
+  {
+    "request_id": "req_128",
+    "profile_id": "profile_048",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_048_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_048_002",
+      "ent_profile_048_003",
+      "ent_profile_048_004",
+      "ent_profile_048_005",
+      "ent_profile_048_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_048_01",
+      "ctrl_profile_048_02",
+      "ctrl_profile_048_03",
+      "ctrl_profile_048_04"
+    ]
+  },
+  {
+    "request_id": "req_129",
+    "profile_id": "profile_048",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_048_001",
+      "ent_profile_048_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_048_003",
+      "ent_profile_048_004",
+      "ent_profile_048_005",
+      "ent_profile_048_006",
+      "ent_profile_048_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_048_01",
+      "ctrl_profile_048_02",
+      "ctrl_profile_048_03",
+      "ctrl_profile_048_04"
+    ]
+  },
+  {
+    "request_id": "req_130",
+    "profile_id": "profile_048",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_048_001",
+      "ent_profile_048_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_048_003",
+      "ent_profile_048_004",
+      "ent_profile_048_005",
+      "ent_profile_048_006",
+      "ent_profile_048_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_048_01",
+      "ctrl_profile_048_02",
+      "ctrl_profile_048_03",
+      "ctrl_profile_048_04"
+    ]
+  },
+  {
+    "request_id": "req_131",
+    "profile_id": "profile_049",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_049_001",
+      "ent_profile_049_002",
+      "ent_profile_049_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_049_004",
+      "ent_profile_049_005",
+      "ent_profile_049_006",
+      "ent_profile_049_007",
+      "ent_profile_049_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_049_01",
+      "ctrl_profile_049_02",
+      "ctrl_profile_049_03",
+      "ctrl_profile_049_04"
+    ]
+  },
+  {
+    "request_id": "req_132",
+    "profile_id": "profile_049",
+    "forget_request_type": "F3",
+    "target_entity_ids": [
+      "ent_profile_049_001",
+      "ent_profile_049_002",
+      "ent_profile_049_003"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_049_004",
+      "ent_profile_049_005",
+      "ent_profile_049_006",
+      "ent_profile_049_007",
+      "ent_profile_049_008"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_049_01",
+      "ctrl_profile_049_02",
+      "ctrl_profile_049_03",
+      "ctrl_profile_049_04"
+    ]
+  },
+  {
+    "request_id": "req_133",
+    "profile_id": "profile_049",
+    "forget_request_type": "F4",
+    "target_entity_ids": [
+      "ent_profile_049_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_049_002",
+      "ent_profile_049_003",
+      "ent_profile_049_004",
+      "ent_profile_049_005",
+      "ent_profile_049_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_049_01",
+      "ctrl_profile_049_02",
+      "ctrl_profile_049_03",
+      "ctrl_profile_049_04"
+    ]
+  },
+  {
+    "request_id": "req_134",
+    "profile_id": "profile_050",
+    "forget_request_type": "F1",
+    "target_entity_ids": [
+      "ent_profile_050_001"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_050_002",
+      "ent_profile_050_003",
+      "ent_profile_050_004",
+      "ent_profile_050_005",
+      "ent_profile_050_006"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_050_01",
+      "ctrl_profile_050_02",
+      "ctrl_profile_050_03",
+      "ctrl_profile_050_04"
+    ]
+  },
+  {
+    "request_id": "req_135",
+    "profile_id": "profile_050",
+    "forget_request_type": "F2",
+    "target_entity_ids": [
+      "ent_profile_050_001",
+      "ent_profile_050_002"
+    ],
+    "preservation_entity_ids": [
+      "ent_profile_050_003",
+      "ent_profile_050_004",
+      "ent_profile_050_005",
+      "ent_profile_050_006",
+      "ent_profile_050_007"
+    ],
+    "control_entity_ids": [
+      "ctrl_profile_050_01",
+      "ctrl_profile_050_02",
+      "ctrl_profile_050_03",
+      "ctrl_profile_050_04"
+    ]
+  }
+]

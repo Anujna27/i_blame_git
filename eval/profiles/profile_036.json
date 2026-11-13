@@ -1,0 +1,548 @@
+{
+  "profile_id": "profile_036",
+  "name": "Reese Lewis",
+  "domain_bundle": "academic",
+  "sessions": [
+    {
+      "session_id": "sess_profile_036_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_001",
+          "content": "The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society. (Registered for Reese Lewis)",
+          "entity_type": "society",
+          "fact": "Phi Beta Kappa",
+          "label": "academic honor society",
+          "session_id": "sess_profile_036_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my academic honor society. Specifically, The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your academic honor society details."
+        }
+      ],
+      "summary_l1": "Session 1: Reese Lewis confirmed their academic honor society details stating that The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society. (Registered for Reese Lewis)"
+    },
+    {
+      "session_id": "sess_profile_036_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_002",
+          "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Reese Lewis)",
+          "entity_type": "advisor",
+          "fact": "Manning",
+          "label": "thesis academic advisor",
+          "session_id": "sess_profile_036_02",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my thesis academic advisor. Specifically, The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your thesis academic advisor details."
+        }
+      ],
+      "summary_l1": "Session 2: Reese Lewis confirmed their thesis academic advisor details stating that The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Reese Lewis)"
+    },
+    {
+      "session_id": "sess_profile_036_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_003",
+          "content": "The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Reese Lewis)",
+          "entity_type": "grant",
+          "fact": "NSF-19824",
+          "label": "research grant identifier",
+          "session_id": "sess_profile_036_03",
+          "created_at": "2026-10-04T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my research grant identifier. Specifically, The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your research grant identifier details."
+        }
+      ],
+      "summary_l1": "Session 3: Reese Lewis confirmed their research grant identifier details stating that The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Reese Lewis)"
+    },
+    {
+      "session_id": "sess_profile_036_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_004",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Reese Lewis)",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_036_04",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my graduate degree university. Specifically, The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your graduate degree university details."
+        }
+      ],
+      "summary_l1": "Session 4: Reese Lewis confirmed their graduate degree university details stating that The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Reese Lewis)"
+    },
+    {
+      "session_id": "sess_profile_036_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_005",
+          "content": "The user's verified thesis research subject record is thesis published on reinforcement learning optimization. (Registered for Reese Lewis)",
+          "entity_type": "thesis",
+          "fact": "reinforcement",
+          "label": "thesis research subject",
+          "session_id": "sess_profile_036_05",
+          "created_at": "2026-10-06T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my thesis research subject. Specifically, The user's verified thesis research subject record is thesis published on reinforcement learning optimization. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your thesis research subject details."
+        }
+      ],
+      "summary_l1": "Session 5: Reese Lewis confirmed their thesis research subject details stating that The user's verified thesis research subject record is thesis published on reinforcement learning optimization. (Registered for Reese Lewis)"
+    },
+    {
+      "session_id": "sess_profile_036_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_006",
+          "content": "The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Reese Lewis)",
+          "entity_type": "scholarship",
+          "fact": "Dean",
+          "label": "academic scholarship award",
+          "session_id": "sess_profile_036_06",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my academic scholarship award. Specifically, The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your academic scholarship award details."
+        }
+      ],
+      "summary_l1": "Session 6: Reese Lewis confirmed their academic scholarship award details stating that The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Reese Lewis)"
+    },
+    {
+      "session_id": "sess_profile_036_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_007",
+          "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Reese Lewis)",
+          "entity_type": "loyalty",
+          "fact": "Diamond",
+          "label": "airline loyalty status",
+          "session_id": "sess_profile_036_07",
+          "created_at": "2026-10-08T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my airline loyalty status. Specifically, The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your airline loyalty status details."
+        }
+      ],
+      "summary_l1": "Session 7: Reese Lewis confirmed their airline loyalty status details stating that The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Reese Lewis)"
+    },
+    {
+      "session_id": "sess_profile_036_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_008",
+          "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Reese Lewis)",
+          "entity_type": "manager",
+          "fact": "Sarah",
+          "label": "direct reporting manager",
+          "session_id": "sess_profile_036_08",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my direct reporting manager. Specifically, The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your direct reporting manager details."
+        }
+      ],
+      "summary_l1": "Session 8: Reese Lewis confirmed their direct reporting manager details stating that The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Reese Lewis)"
+    },
+    {
+      "session_id": "sess_profile_036_09",
+      "session_index": 9,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_009",
+          "content": "The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Reese Lewis)",
+          "entity_type": "credit_card",
+          "fact": "4921",
+          "label": "primary credit card",
+          "session_id": "sess_profile_036_09",
+          "created_at": "2026-10-10T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my primary credit card. Specifically, The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your primary credit card details."
+        }
+      ],
+      "summary_l1": "Session 9: Reese Lewis confirmed their primary credit card details stating that The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Reese Lewis)"
+    },
+    {
+      "session_id": "sess_profile_036_10",
+      "session_index": 10,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_036_010",
+          "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Reese Lewis)",
+          "entity_type": "employer",
+          "fact": "Acme",
+          "label": "current employer",
+          "session_id": "sess_profile_036_10",
+          "created_at": "2026-10-11T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_036_011",
+          "content": "The user: The user speaks the Japanese foreign language with native fluency. (Registered for Reese Lewis)",
+          "entity_type": "preference",
+          "fact": "Japanese",
+          "label": "foreign language",
+          "session_id": "sess_profile_036_10",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_036_012",
+          "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Reese Lewis)",
+          "entity_type": "preference",
+          "fact": "shelter",
+          "label": "community volunteer work",
+          "session_id": "sess_profile_036_10",
+          "created_at": "2026-10-13T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_036_013",
+          "content": "The user: The user drinks dark roast morning espresso coffee each morning. (Registered for Reese Lewis)",
+          "entity_type": "preference",
+          "fact": "espresso",
+          "label": "morning coffee",
+          "session_id": "sess_profile_036_10",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_036_014",
+          "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Reese Lewis)",
+          "entity_type": "preference",
+          "fact": "photography",
+          "label": "photography hobby",
+          "session_id": "sess_profile_036_10",
+          "created_at": "2026-10-15T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_036_015",
+          "content": "The user: The user collects rare vinyl records from Blue Note Records. (Registered for Reese Lewis)",
+          "entity_type": "preference",
+          "fact": "Blue Note",
+          "label": "vinyl record collection",
+          "session_id": "sess_profile_036_10",
+          "created_at": "2026-10-16T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_036_016",
+          "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Reese Lewis)",
+          "entity_type": "preference",
+          "fact": "sourdough",
+          "label": "artisan bread",
+          "session_id": "sess_profile_036_10",
+          "created_at": "2026-10-17T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_036_017",
+          "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Reese Lewis)",
+          "entity_type": "preference",
+          "fact": "guitar",
+          "label": "musical instrument",
+          "session_id": "sess_profile_036_10",
+          "created_at": "2026-10-18T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my current employer. Specifically, The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Reese. I have recorded your current employer details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my foreign language: The user: The user speaks the Japanese foreign language with native fluency. (Registered for Reese Lewis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with foreign language."
+        }
+      ],
+      "summary_l1": "Session 10: Reese Lewis confirmed their current employer details stating that The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Reese Lewis)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_036_001",
+      "content": "The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society. (Registered for Reese Lewis)",
+      "entity_type": "society",
+      "fact": "Phi Beta Kappa",
+      "label": "academic honor society",
+      "session_id": "sess_profile_036_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_002",
+      "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Reese Lewis)",
+      "entity_type": "advisor",
+      "fact": "Manning",
+      "label": "thesis academic advisor",
+      "session_id": "sess_profile_036_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_003",
+      "content": "The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Reese Lewis)",
+      "entity_type": "grant",
+      "fact": "NSF-19824",
+      "label": "research grant identifier",
+      "session_id": "sess_profile_036_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_004",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Reese Lewis)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_036_04",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_005",
+      "content": "The user's verified thesis research subject record is thesis published on reinforcement learning optimization. (Registered for Reese Lewis)",
+      "entity_type": "thesis",
+      "fact": "reinforcement",
+      "label": "thesis research subject",
+      "session_id": "sess_profile_036_05",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_006",
+      "content": "The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Reese Lewis)",
+      "entity_type": "scholarship",
+      "fact": "Dean",
+      "label": "academic scholarship award",
+      "session_id": "sess_profile_036_06",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_007",
+      "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Reese Lewis)",
+      "entity_type": "loyalty",
+      "fact": "Diamond",
+      "label": "airline loyalty status",
+      "session_id": "sess_profile_036_07",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_008",
+      "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Reese Lewis)",
+      "entity_type": "manager",
+      "fact": "Sarah",
+      "label": "direct reporting manager",
+      "session_id": "sess_profile_036_08",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_009",
+      "content": "The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Reese Lewis)",
+      "entity_type": "credit_card",
+      "fact": "4921",
+      "label": "primary credit card",
+      "session_id": "sess_profile_036_09",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_010",
+      "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Reese Lewis)",
+      "entity_type": "employer",
+      "fact": "Acme",
+      "label": "current employer",
+      "session_id": "sess_profile_036_10",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_011",
+      "content": "The user: The user speaks the Japanese foreign language with native fluency. (Registered for Reese Lewis)",
+      "entity_type": "preference",
+      "fact": "Japanese",
+      "label": "foreign language",
+      "session_id": "sess_profile_036_10",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_012",
+      "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Reese Lewis)",
+      "entity_type": "preference",
+      "fact": "shelter",
+      "label": "community volunteer work",
+      "session_id": "sess_profile_036_10",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_013",
+      "content": "The user: The user drinks dark roast morning espresso coffee each morning. (Registered for Reese Lewis)",
+      "entity_type": "preference",
+      "fact": "espresso",
+      "label": "morning coffee",
+      "session_id": "sess_profile_036_10",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_014",
+      "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Reese Lewis)",
+      "entity_type": "preference",
+      "fact": "photography",
+      "label": "photography hobby",
+      "session_id": "sess_profile_036_10",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_015",
+      "content": "The user: The user collects rare vinyl records from Blue Note Records. (Registered for Reese Lewis)",
+      "entity_type": "preference",
+      "fact": "Blue Note",
+      "label": "vinyl record collection",
+      "session_id": "sess_profile_036_10",
+      "created_at": "2026-10-16T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_016",
+      "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Reese Lewis)",
+      "entity_type": "preference",
+      "fact": "sourdough",
+      "label": "artisan bread",
+      "session_id": "sess_profile_036_10",
+      "created_at": "2026-10-17T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_017",
+      "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Reese Lewis)",
+      "entity_type": "preference",
+      "fact": "guitar",
+      "label": "musical instrument",
+      "session_id": "sess_profile_036_10",
+      "created_at": "2026-10-18T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_036_001",
+      "content": "The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society. (Registered for Reese Lewis)",
+      "entity_type": "society",
+      "fact": "Phi Beta Kappa",
+      "label": "academic honor society",
+      "session_id": "sess_profile_036_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_002",
+      "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Reese Lewis)",
+      "entity_type": "advisor",
+      "fact": "Manning",
+      "label": "thesis academic advisor",
+      "session_id": "sess_profile_036_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_036_003",
+      "content": "The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Reese Lewis)",
+      "entity_type": "grant",
+      "fact": "NSF-19824",
+      "label": "research grant identifier",
+      "session_id": "sess_profile_036_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_036_01",
+      "content": "The user has an unrecorded PADI master scuba diver certification license 98124.",
+      "entity_type": "scuba_cert",
+      "label": "scuba certification"
+    },
+    {
+      "control_id": "ctrl_profile_036_02",
+      "content": "The user has an unrecorded handcrafted German antique cello musical instrument.",
+      "entity_type": "cello",
+      "label": "antique cello instrument"
+    },
+    {
+      "control_id": "ctrl_profile_036_03",
+      "content": "The user has an unrecorded commercial maritime yacht captain license CAPT-4819.",
+      "entity_type": "boat_license",
+      "label": "boat captain license"
+    },
+    {
+      "control_id": "ctrl_profile_036_04",
+      "content": "The user has an unrecorded ceramic pottery wheel studio membership in Portland.",
+      "entity_type": "pottery",
+      "label": "pottery studio membership"
+    }
+  ]
+}
