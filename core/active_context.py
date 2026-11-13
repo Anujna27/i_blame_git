@@ -30,6 +30,8 @@ class ContextBuilder:
         session_ids = set(session["entity_ids"]) if session else None
         retrieved = self.vector_store.query(query, top_k=5)
         vector_entities = [entity for entity in retrieved if entity.deletion_state == "active" and (session_ids is None or entity.node_id in session_ids)]
+        if not vector_entities and session_ids is not None:
+            vector_entities = [entity for entity in retrieved if entity.deletion_state == "active"]
         entities = list(vector_entities)
         vector_ids = [entity.node_id for entity in vector_entities]
         graph_ids = []
