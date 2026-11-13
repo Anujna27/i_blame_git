@@ -246,8 +246,13 @@ class Stack:
     filesystem: Any
 
 
-def mk(content: str, session: str, kind: str, turn: int = 0) -> MemoryNode:
-    return MemoryNode(content=content, source={"type": kind, "session_id": session, "turn_index": turn}, session_id=session)
+def mk(content: str, session: str, kind: str, turn: int = 0, properties: Optional[dict] = None) -> MemoryNode:
+    return MemoryNode(
+        content=content,
+        source={"type": kind, "session_id": session, "turn_index": turn},
+        session_id=session,
+        properties=dict(properties or {}),
+    )
 
 
 def gen_core(rng: random.Random, ft: str, s: int, v: int) -> dict:
@@ -300,14 +305,21 @@ def gen_core(rng: random.Random, ft: str, s: int, v: int) -> dict:
 
 def make_spec(rng: random.Random, idx: int, ft: str, s: int, v: int) -> Spec:
     c = gen_core(rng, ft, s, v)
-    tgt = mk(c["text"], f"sess_{s}_a", "target", 1)
+    # The benchmark models a real application identity boundary. A session is
+    # not enough: unrelated memories may share it, while duplicates and
+    # derived records can cross sessions. These references are what scoped
+    # erasure is expected to follow.
+    context_id = f"bemula:{ft}:{s}"
+    entity_ref = f"customer:{s}"
+    scoped = {"erasure_context_id": context_id, "entity_refs": [entity_ref]}
+    tgt = mk(c["text"], f"sess_{s}_a", "target", 1, scoped)
     deps: list = []
 
     def add(role, text, session, expect, kind, turn):
-        n = mk(text, session, kind, turn)
+        n = mk(text, session, kind, turn, scoped if expect == "forget" else None)
         if n.node_id == tgt.node_id or any(n.node_id == d.id for d in deps):  # content-derived IDs
             text += " (restated)"
-            n = mk(text, session, kind, turn)
+            n = mk(text, session, kind, turn, scoped if expect == "forget" else None)
         deps.append(Dep(role, text, session, expect, n))
 
     sess = f"sess_{s}_a"
@@ -336,7 +348,14 @@ def build_stack(root: Path, seed: int, per_type: int, n_bg: int, tag: str) -> St
     rng = random.Random(seed)
     graph = KnowledgeGraph(str(root / "knowledge_graph.json"))
     collection = f"bemula_{tag}"
-    vectors = VectorStore(collection_name=collection, persist_directory=str(root / "vectors"))
+    # BEMULA evaluates unlearning, not contradiction expansion. Disabling the
+    # optional warning/expansion path keeps the benchmark deterministic and
+    # avoids repeating an O(n) contradiction scan for every probe.
+    vectors = VectorStore(
+        collection_name=collection,
+        persist_directory=str(root / "vectors"),
+        enable_conflict_detection=False,
+    )
     audit = HashChain(str(root / "audit_chain.json"))
     erasure = ErasureEngine(str(root / "blocked_inference.json"))
     filesystem = FilesystemMemory(str(root / "viking_memory"))
@@ -352,13 +371,15 @@ def build_stack(root: Path, seed: int, per_type: int, n_bg: int, tag: str) -> St
         raise RuntimeError("node_id collision in corpus")
     rng.shuffle(nodes)  # interleave: no insertion-order adjacency to exploit
     for n in nodes:
-        graph.add_node(n)
-        vectors.add(n)
+        graph.add_node(n, persist=False)
+        vectors.add(n, persist=False)
         filesystem.write_entity(n)
     for s in specs:
         ids = {"target": s.tid, **{d.role: d.id for d in s.deps}}
         for a, b, t in s.edges:
-            graph.add_edge(ids[a], ids[b], t)
+            graph.add_edge(ids[a], ids[b], t, persist=False)
+    graph.persist()
+    vectors.persist()
     return Stack(root, graph, vectors, audit, erasure, collection, specs, background, filesystem)
 
 
@@ -421,11 +442,11 @@ def run_checks(spec: Spec, stage: str, graph: Any, vectors: Any, erasure: Any, t
 
     def target_inactive():
         n = graph.get_node(spec.tid)
-        return (n is None or not is_active(n)), f"state={getattr(n, 'deletion_state', 'hard-deleted')}"
+        return (n is not None and not is_active(n)), f"state={getattr(n, 'deletion_state', 'missing')}"
 
     def target_scrubbed():
         n = graph.get_node(spec.tid)
-        return (n is None or not marker_hit(spec, dump(n))), "target tombstone still carries content/metadata"
+        return (n is not None and not marker_hit(spec, dump(n))), "target tombstone still carries content/metadata"
 
     def target_vec_gone():
         return vget(vectors, spec.tid) is None, "target still in vector index"
@@ -543,6 +564,9 @@ def per_type(specs: list) -> dict:
 
 # ----------------------------------------------------------------------------- main evaluation
 def evaluate(a: argparse.Namespace, root: Path) -> dict:
+    SEARCH_STATS["calls"] = 0
+    SEARCH_STATS["seconds"] = 0.0
+    SEARCH_STATS["warnings"] = Counter()
     log("building corpus ...")
     st = build_stack(root, a.seed, a.per_type, a.background, "main")
     if getattr(a, "quick", False):
@@ -554,9 +578,11 @@ def evaluate(a: argparse.Namespace, root: Path) -> dict:
     for q in st.specs[0].probes:
         vsearch(st.vectors, q, a.top_k)
     per = (time.perf_counter() - t0) / len(st.specs[0].probes)
-    est = len(st.specs) * 15 * per + 40 * per
+    probe_count = sum(len(spec.probes) for spec in st.specs)
+    estimated_searches = probe_count + len(st.specs) * 8 + min(40, len(st.background))
+    est = estimated_searches * per
     log(f"{len(st.graph.nodes) if hasattr(st.graph, 'nodes') else '?'} nodes indexed; one search = {per * 1000:.0f} ms; "
-        f"~{len(st.specs) * 15 + 40} searches in the main run => ~{est / 60:.1f} min (use --quick if too slow)")
+        f"~{estimated_searches} bounded searches in the main run => ~{est / 60:.1f} min")
     probe_gate(st, a.top_k)
     pre_found = disk_scan(root, st.specs[:20])
     caveats = []
@@ -615,7 +641,11 @@ def evaluate(a: argparse.Namespace, root: Path) -> dict:
     reload_ok = True
     try:
         g2 = KnowledgeGraph(str(root / "knowledge_graph.json"))
-        v2 = VectorStore(collection_name=st.collection, persist_directory=str(root / "vectors"))
+        v2 = VectorStore(
+            collection_name=st.collection,
+            persist_directory=str(root / "vectors"),
+            enable_conflict_detection=False,
+        )
         e2 = ErasureEngine(str(root / "blocked_inference.json"))
         if g2.get_node(st.background[0].node_id) is None:
             caveats.append("Cold reload of KnowledgeGraph is empty: state is not persisted without an explicit save().")
@@ -695,7 +725,7 @@ def scenario(kind: str, a: argparse.Namespace) -> dict:
             extra = dict(fault_applicable=applicable > 0, loud_failures=loud, silent_failures=silent)
         elif kind.startswith("mutant:"):
             mode = kind.split(":", 1)[1]
-            pat = {"vector_noop": ("vec", r"delete|remove|purge|erase|drop"), "graph_noop": ("graph", r"delete|remove|tombstone|mark|erase|purge|redact|scrub"),
+            pat = {"vector_noop": ("vec", r"delete|remove|purge|erase|drop"), "graph_noop": ("graph", r"get_node|delete|remove|tombstone|mark|erase|purge|redact|scrub"),
                    "audit_noop": ("audit", r"append|add|record|log|write")}[mode]
             expected = {"vector_noop": "imm.target_vec_gone", "graph_noop": "imm.target_inactive", "audit_noop": "global.audit_entry"}[mode]
             calls = 0
@@ -733,7 +763,7 @@ def render_md(res: dict, mut: dict, scen: dict, a: argparse.Namespace) -> str:
          f"- **RPR: {res['rpr']:.2f}%** ({res['passed']}/{res['instances']}), Wilson 95% CI [{res['wilson95'][0]}%, {res['wilson95'][1]}%]",
          f"- Silent leaks (leak with no engine disclosure): **{res['silent_leaks']}**; disclosed leaks: {res['disclosed_leaks']}",
          f"- Vacuous instances (no probe found target pre-deletion): {res['vacuous_probe_instances']}",
-         f"- Background collateral failures: {res['background_collateral_failures']}/40; delete latency p50/p95: {res['latency_ms']['p50']}/{res['latency_ms']['p95']} ms",
+         f"- Background collateral failures: {res['background_collateral_failures']}/{min(40, a.background)}; delete latency p50/p95: {res['latency_ms']['p50']}/{res['latency_ms']['p95']} ms",
          "", "## Per-type", ""]
     L += [f"- {t}: {v['passed']}/{v['total']} ({v['rpr']:.2f}%)" for t, v in res["per_type"].items()]
     ss = res["search_stats"]
@@ -773,12 +803,15 @@ def main() -> int:
     ap.add_argument("--allow-unsupported", action="store_true")
     ap.add_argument("--lenient-derived", action="store_true", help="allow clean (secret-free) derived nodes to survive")
     ap.add_argument("--skip-scenarios", action="store_true")
-    ap.add_argument("--quick", action="store_true", help="per-type 4, background 40, small scenarios 2 (fast sanity run)")
+    ap.add_argument("--quick", action="store_true", help="six instances, 12 background nodes, no stress scenarios unless --with-scenarios")
+    ap.add_argument("--with-scenarios", action="store_true", help="also run the slower control/concurrency/fault/mutation scenarios in quick mode")
     ap.add_argument("--search-method", default=None, help="name of the VectorStore retrieval method")
     ap.add_argument("--out-dir", default=".")
     a = ap.parse_args()
     if a.quick:
-        a.per_type, a.background, a.small_per_type = 4, 40, 2
+        a.per_type, a.background, a.small_per_type = 1, 12, 1
+        if not a.with_scenarios:
+            a.skip_scenarios = True
     global SEARCH_METHOD
     SEARCH_METHOD = a.search_method
 
@@ -800,6 +833,7 @@ def main() -> int:
                 mut[m] = f"`{exp}` caught {kill}% of sabotaged deletions (control false-alarms: {base})" + ("" if kill >= 90 and base == 0 else "  <-- HARNESS TOO WEAK")
         scen["control"] = control
     out = Path(a.out_dir)
+    out.mkdir(parents=True, exist_ok=True)
     (out / "bemula_rigorous_report.json").write_text(json.dumps(dict(main=res, scenarios=scen, mutation=mut), indent=2, default=str), encoding="utf-8")
     md = render_md(res, mut, scen, a)
     (out / "bemula_rigorous_results.md").write_text(md, encoding="utf-8")

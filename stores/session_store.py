@@ -33,6 +33,27 @@ class SessionStore:
             if node_id in nodes:
                 node = nodes[node_id]; node.transition("source_removed", actor, reason); self._persist(); return node
         return None
+    def remove_ids(self, node_ids, actor="system", reason=""):
+        """Remove erased IDs from every durable session aggregate.
+
+        The graph/vector/filesystem projections hold the actual entity state;
+        the session store must also stop handing erased IDs to a later agent.
+        """
+        ids = {str(node_id) for node_id in node_ids}
+        if not ids:
+            return 0
+        removed = 0
+        for nodes in self._entities.values():
+            for node_id in list(nodes):
+                if node_id in ids:
+                    nodes[node_id].transition("invalidated", actor, reason)
+                    del nodes[node_id]
+                    removed += 1
+        for record in self._sessions.values():
+            before = list(record.get("entity_ids", []))
+            record["entity_ids"] = [node_id for node_id in before if str(node_id) not in ids]
+        self._persist()
+        return removed
     def _persist(self):
         self.path.parent.mkdir(parents=True, exist_ok=True); self.path.write_text(json.dumps(self._sessions, indent=2), encoding="utf-8")
     def _load(self):

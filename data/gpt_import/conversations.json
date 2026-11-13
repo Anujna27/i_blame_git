@@ -1,0 +1,11 @@
+﻿{
+  "metadata": { "title": "Cats Appreciation" },
+  "messages": [
+    { "role": "Prompt", "say": "i like cats" },
+    { "role": "Response", "say": "Cats are the best!" },
+    { "role": "Prompt", "say": "dogs" },
+    { "role": "Response", "say": "DOGS TOO?!" },
+    { "role": "Prompt", "say": "all animals" },
+    { "role": "Response", "say": "A TRUE ANIMAL LOVER!!" }
+  ]
+}

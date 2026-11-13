@@ -87,10 +87,11 @@ class GraphStore:
         self.kg.persist()
         return attrs
 
-    def remove_entity_edges(self, node_id: str) -> int:
+    def remove_entity_edges(self, node_id: str, persist: bool = True) -> int:
         """Remove all incident edges on node_id and persist."""
-        count = self.kg.remove_entity_edges(node_id)
-        self.kg.persist()
+        count = self.kg.remove_entity_edges(node_id, persist=persist)
+        if persist:
+            self.kg.persist()
         return count
 
     def get_entity(self, node_id: str) -> Optional[dict]:

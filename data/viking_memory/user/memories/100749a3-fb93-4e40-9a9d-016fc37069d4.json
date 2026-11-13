@@ -1,0 +1,42 @@
+{
+  "node_id": "100749a3-fb93-4e40-9a9d-016fc37069d4",
+  "content": "DELETE_TEST_2026 \u2014 my temporary test color is orange",
+  "source": {
+    "type": "conversation_turn",
+    "session_id": "960f2ba8-c7f7-4435-9b45-1ac23a99452d",
+    "turn_index": 0,
+    "timestamp": "2026-11-13T17:40:12.291929+00:00Z",
+    "raw_reference": "960f2ba8-c7f7-4435-9b45-1ac23a99452d_turn_0"
+  },
+  "trust_status": "user_asserted",
+  "derivation_edges": [],
+  "version": 1,
+  "supersedes": null,
+  "contradicts": [],
+  "deletion_state": "active",
+  "is_blocked": false,
+  "created_at": "2026-11-13T17:40:12.292039+00:00",
+  "last_accessed": "2026-11-13T17:40:12.292041+00:00",
+  "access_count": 0,
+  "entity_type": "generic",
+  "properties": {
+    "last_agent_id": "ollama-agent-a"
+  },
+  "session_id": "960f2ba8-c7f7-4435-9b45-1ac23a99452d",
+  "lifecycle": [
+    {
+      "event_id": "dd4dce3f-1deb-4c93-87b4-54434d32ebb0",
+      "state": "created",
+      "actor": "system",
+      "reason": "entity_created",
+      "timestamp": "2026-11-13T17:40:12.292057+00:00",
+      "metadata": {}
+    }
+  ],
+  "deleted_reason": null,
+  "deleted_by": null,
+  "deleted_at": null,
+  "summary_l0": "DELETE_TEST_2026 \u2014 my temporary test color is orange",
+  "summary_l1": "DELETE_TEST_2026 \u2014 my temporary test color is orange",
+  "content_l2": "DELETE_TEST_2026 \u2014 my temporary test color is orange"
+}

@@ -1010,5 +1010,16 @@
     "completed": true,
     "verdict": "fully_deleted",
     "completed_at": "2026-11-13T19:43:11.664594+00:00"
+  },
+  {
+    "operation_id": "b99f7b23-681e-4f7f-b01d-53e3ea5f6aed",
+    "entity_id": "037fedbc-11e2-4e62-99a9-18b7c64cac06",
+    "actor": "user",
+    "reason": "user_requested_erasure",
+    "started_at": "2026-11-13T16:27:31.784847+00:00",
+    "phase": "completed",
+    "completed": true,
+    "verdict": "fully_deleted",
+    "completed_at": "2026-11-13T16:27:31.815986+00:00"
   }
 ]

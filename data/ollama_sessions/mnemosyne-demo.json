@@ -1,0 +1,109 @@
+{
+  "conversation_id": "mnemosyne-demo",
+  "session_id": "28fe2e9e-21b3-4fe8-a2de-7d6ee0fe5348",
+  "agent_id": "ollama-agent-b",
+  "parent_session_id": "a9c71ed9-ac78-411c-93a7-7b9d151f2442",
+  "model": "qwen3",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a local Ollama agent using MNEMOSYNE for durable memory. The runner has already initialized the MNEMOSYNE session. Use recall for context, remember durable facts, and commit_session before exit."
+    },
+    {
+      "role": "system",
+      "content": "MNEMOSYNE context:\n{\n  \"session_id\": \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\",\n  \"agent_id\": \"ollama-agent-a\",\n  \"parent_session_id\": \"2effd394-7bf3-4b79-8c8c-6a28881aa03f\",\n  \"existing\": false,\n  \"session\": null,\n  \"active_memories\": [],\n  \"parent_summary\": {\n    \"session_id\": \"2effd394-7bf3-4b79-8c8c-6a28881aa03f\",\n    \"session\": null,\n    \"active_memories\": [],\n    \"blocked_memory_ids\": [\n      \"01102045-c7fd-4e15-942b-314a431e02b4\",\n      \"0bf83e54-8d6f-4b31-b2d9-790d1965653b\",\n      \"0f20b43e-34fe-4336-8754-20c49b952555\",\n      \"11128324-0cd3-4a65-90fb-335033ea9a19\",\n      \"41982f86-8a12-4627-a403-ec2866a3e806\",\n      \"42da6a37-affa-4683-83d3-484f933dc52e\",\n      \"615cbf53-7c23-4235-8690-35d96fe24daf\",\n      \"63a46b94-b413-4387-bad6-04c270125fc5\",\n      \"7d07c2b5-8ca5-46fa-9978-94ba0b20969d\",\n      \"8d8776ca-d534-47f2-86dd-0a2b781886f2\",\n      \"98580e0a-e70b-47ec-a17d-9250aca8b005\",\n      \"e29dd5b3-d793-4dcb-b1a5-d9662aa1f800\",\n      \"e5714545-d150-42f3-afa0-ef461b9133cb\",\n      \"eeb9812c-f854-4f25-8817-a11428f03196\",\n      \"f65f9244-1a49-4110-93fb-15f6f65f6408\",\n      \"fdd4226c-9f37-4cba-819e-34366966894f\"\n    ],\n    \"last_audit_entry\": {\n      \"entry_id\": \"dc88cbc2-0f72-441c-ad04-582a7290fa73\",\n      \"event_id\": \"dc88cbc2-0f72-441c-ad04-582a7290fa73\",\n      \"operation\": \"deletion_completed\",\n      \"node_id\": \"11128324-0cd3-4a65-90fb-335033ea9a19\",\n      \"entity_id\": \"11128324-0cd3-4a65-90fb-335033ea9a19\",\n      \"actor\": \"agent\",\n      \"reason\": \"erasure_request\",\n      \"metadata\": {},\n      \"details\": {\n        \"verdict\": \"partially_deleted\",\n        \"signature\": \"440b993939d4d7984afc466e6a979f344c405ec4e9e3c436304b8ec1e944feb7\",\n        \"actor\": \"user\",\n        \"reason\": \"user_requested_erasure\",\n        \"content_digest\": \"1d858e1afbbabe082f1c3043a1c7b4860476086add92ed2e22feb2d42e0d2627\",\n        \"content_redacted\": true\n      },\n      \"prev_hash\": \"17d1abe8792e937b31694adf9f6962f03a7c2f209a5c01a526a99c9e14f5e481\",\n      \"timestamp\": \"2026-11-13T06:43:22.435855+00:00\",\n      \"hash\": \"a55424db02a5a243d3eb3b890c86a2573564ad6d93ed79277347a1fc892cb848\"\n    }\n  }\n}"
+    },
+    {
+      "role": "user",
+      "content": "Remember that I prefer dark mode and that this project is called MNEMOSYNE."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Okay, the user wants me to remember two things: their preference for dark mode and the project name MNEMOSYNE. Let me check the tools available.\n\nFirst, there's the 'remember' function. It requires content, session_id, agent_id, source_type, trust_status, and turn_index. The session_id and agent_id are provided in the MNEMOSYNE context. The session_id is \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\" and agent_id is \"ollama-agent-a\". \n\nThe content should be the information the user wants remembered. So, I'll combine both points into one content string: \"User prefers dark mode and the project is called MNEMOSYNE.\" \n\nSource_type is probably \"user\" since it's from the user's request. Trust_status might be \"trusted\" as the user is directly stating their preference. Turn_index is an integer, maybe starting at 1. \n\nI need to make sure all required fields are included. Let me structure the JSON arguments accordingly. Also, since the user mentioned the project name, maybe the source_type is \"project\" or \"user\". Wait, the source_type is likely \"user\" because it's about their preference. \n\nDouble-checking the function parameters: content (string), session_id (string), agent_id (string), source_type (string), trust_status (string), turn_index (integer). All set. I'll format the tool_call with these parameters.\n",
+      "tool_calls": [
+        {
+          "id": "call_ihjezgu9",
+          "function": {
+            "index": 0,
+            "name": "remember",
+            "arguments": {
+              "agent_id": "ollama-agent-a",
+              "source_type": "user",
+              "trust_status": "trusted",
+              "turn_index": 1,
+              "content": "User prefers dark mode and the project is called MNEMOSYNE.",
+              "session_id": "a9c71ed9-ac78-411c-93a7-7b9d151f2442"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_name": "remember",
+      "content": "{\n  \"node_id\": \"10416c5f-6e10-4ea0-add4-3a3a5987ff4d\",\n  \"content\": \"User prefers dark mode and the project is called MNEMOSYNE.\",\n  \"summary\": \"User prefers dark mode and the project is called MNEMOSYNE\",\n  \"deletion_state\": \"active\",\n  \"trust_status\": \"trusted\",\n  \"session_id\": \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\",\n  \"access_count\": 0,\n  \"last_accessed\": \"2026-11-13T16:15:00.948430+00:00\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "Your preferences have been remembered:  \n- **Dark mode** is your preferred setting  \n- The project is named **MNEMOSYNE**  \n\nLet me know if you need anything else! \ud83d\ude0a",
+      "thinking": "Okay, let me process what just happened. The user asked me to remember their preference for dark mode and the project name MNEMOSYNE. I used the 'remember' function to store that information in the MNEMOSYNE system. The response from the tool shows that the memory was successfully stored with a node ID of \"10416c5f-6e10-4ea0-add4-3a3a5987ff4d\". \n\nNow, I need to confirm to the user that their information was remembered. Since the tool response indicates success, I should let them know it's done. I should also mention the project name again to reinforce the context. The user might appreciate a friendly confirmation and a reminder of the project name. Let me make sure the response is clear and concise.\n\nWait, should I offer further assistance? Maybe, but the user's main request was about remembering the details. So, a simple confirmation should suffice. Alright, time to craft the response.\n"
+    },
+    {
+      "role": "user",
+      "content": "What do you remember about my preferences and this project?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Okay, the user is asking what I remember about their preferences and the project. Let me check the tools available. There's the 'recall' function which retrieves deletion-safe context. The session ID is provided in the MNEMOSYNE context, so I should use that.\n\nI need to call the recall function with the query, session_id, and maybe token_budget and top_k parameters. The query is about their preferences and the project name. Since the user mentioned dark mode and the project name MNEMOSYNE before, the recall should fetch that information.\n\nWait, the 'recall' function's parameters include query, session_id, token_budget, and top_k. The user's question is straightforward, so setting token_budget to 1000 and top_k to 5 should give enough context. Let me structure the tool call with these parameters to ensure the relevant memories are retrieved.\n",
+      "tool_calls": [
+        {
+          "id": "call_s7iecteb",
+          "function": {
+            "index": 0,
+            "name": "recall",
+            "arguments": {
+              "session_id": "a9c71ed9-ac78-411c-93a7-7b9d151f2442",
+              "token_budget": 1000,
+              "top_k": 5,
+              "query": "my preferences and this project"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_name": "recall",
+      "content": "{\n  \"answer\": \"User prefers dark mode and the project is called MNEMOSYNE\",\n  \"memory_ids\": [\n    \"10416c5f-6e10-4ea0-add4-3a3a5987ff4d\"\n  ],\n  \"memories\": [\n    {\n      \"node_id\": \"10416c5f-6e10-4ea0-add4-3a3a5987ff4d\",\n      \"content\": \"User prefers dark mode and the project is called MNEMOSYNE.\",\n      \"summary\": \"User prefers dark mode and the project is called MNEMOSYNE\",\n      \"deletion_state\": \"active\",\n      \"trust_status\": \"trusted\",\n      \"session_id\": \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\",\n      \"access_count\": 0,\n      \"last_accessed\": \"2026-11-13T16:15:00.948430+00:00\"\n    }\n  ],\n  \"tokens_used\": 10,\n  \"ranking_explanations\": [\n    {\n      \"node_id\": \"10416c5f-6e10-4ea0-add4-3a3a5987ff4d\",\n      \"source\": \"vector\",\n      \"reason\": \"semantic retrieval\"\n    }\n  ],\n  \"abstained\": false,\n  \"session_id\": \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "I remember:  \n- **Dark mode** is your preferred setting  \n- The project is named **MNEMOSYNE**  \n\nLet me know if you'd like to add more details or adjust these preferences! \ud83d\ude0a",
+      "thinking": "Okay, let me process the user's query. They asked, \"What do you remember about my preferences and this project?\" I need to provide a clear and concise answer based on the tool response.\n\nFirst, the tool response shows that the recall function was called and returned a single memory entry. The content is \"User prefers dark mode and the project is called MNEMOSYNE.\" The memory ID is 10416c5f-6e10-4ea0-add4-3a3a5987ff4d, and it's marked as active with a trust status of trusted.\n\nI should structure the answer to highlight the two pieces of information: the dark mode preference and the project name. Since the user mentioned both in their initial message, it's important to present them clearly. Also, the user might be confirming if the system remembers these details, so reaffirming the recall is necessary.\n\nI need to make sure the response is friendly and offers further assistance. The previous interaction had a smiley emoji, so maintaining that tone would be consistent. No need to mention technical details like memory IDs or deletion states since the user is asking for the remembered information, not the system's internal state.\n\nCheck if there's any additional context from the MNEMOSYNE context provided earlier. The parent session had some blocked memories, but the current session's active memories include the one about dark mode and the project name. No conflicts here, so just present the answer clearly.\n"
+    },
+    {
+      "role": "system",
+      "content": "MNEMOSYNE context:\n{\n  \"session_id\": \"28fe2e9e-21b3-4fe8-a2de-7d6ee0fe5348\",\n  \"agent_id\": \"ollama-agent-b\",\n  \"parent_session_id\": \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\",\n  \"existing\": false,\n  \"session\": null,\n  \"active_memories\": [],\n  \"parent_summary\": {\n    \"session_id\": \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\",\n    \"session\": {\n      \"session_id\": \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\",\n      \"status\": \"active\",\n      \"committed_at\": null,\n      \"committed_by\": null,\n      \"entity_ids\": [\n        \"10416c5f-6e10-4ea0-add4-3a3a5987ff4d\"\n      ]\n    },\n    \"active_memories\": [\n      {\n        \"node_id\": \"10416c5f-6e10-4ea0-add4-3a3a5987ff4d\",\n        \"content\": \"User prefers dark mode and the project is called MNEMOSYNE.\",\n        \"summary\": \"User prefers dark mode and the project is called MNEMOSYNE.\",\n        \"deletion_state\": \"active\",\n        \"trust_status\": \"user_asserted\",\n        \"session_id\": \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\",\n        \"access_count\": 0,\n        \"last_accessed\": \"2026-11-13T16:20:46.115684+00:00\"\n      }\n    ],\n    \"blocked_memory_ids\": [\n      \"01102045-c7fd-4e15-942b-314a431e02b4\",\n      \"0bf83e54-8d6f-4b31-b2d9-790d1965653b\",\n      \"0f20b43e-34fe-4336-8754-20c49b952555\",\n      \"11128324-0cd3-4a65-90fb-335033ea9a19\",\n      \"41982f86-8a12-4627-a403-ec2866a3e806\",\n      \"42da6a37-affa-4683-83d3-484f933dc52e\",\n      \"615cbf53-7c23-4235-8690-35d96fe24daf\",\n      \"63a46b94-b413-4387-bad6-04c270125fc5\",\n      \"7d07c2b5-8ca5-46fa-9978-94ba0b20969d\",\n      \"8d8776ca-d534-47f2-86dd-0a2b781886f2\",\n      \"98580e0a-e70b-47ec-a17d-9250aca8b005\",\n      \"e29dd5b3-d793-4dcb-b1a5-d9662aa1f800\",\n      \"e5714545-d150-42f3-afa0-ef461b9133cb\",\n      \"eeb9812c-f854-4f25-8817-a11428f03196\",\n      \"f65f9244-1a49-4110-93fb-15f6f65f6408\",\n      \"fdd4226c-9f37-4cba-819e-34366966894f\"\n    ],\n    \"last_audit_entry\": {\n      \"entry_id\": \"3483dc3b-c4c6-46fc-aa67-9f8eaef20227\",\n      \"event_id\": \"3483dc3b-c4c6-46fc-aa67-9f8eaef20227\",\n      \"operation\": \"entity_created\",\n      \"node_id\": \"10416c5f-6e10-4ea0-add4-3a3a5987ff4d\",\n      \"entity_id\": \"10416c5f-6e10-4ea0-add4-3a3a5987ff4d\",\n      \"actor\": \"system\",\n      \"reason\": \"mutation\",\n      \"metadata\": {},\n      \"details\": {\n        \"session_id\": \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\",\n        \"trust_status\": \"trusted\"\n      },\n      \"prev_hash\": \"a55424db02a5a243d3eb3b890c86a2573564ad6d93ed79277347a1fc892cb848\",\n      \"timestamp\": \"2026-11-13T16:15:01.110619+00:00\",\n      \"hash\": \"9d9a46c0b023a3be86e529780b315d6359d4fadd1b7c60c83817d048f8c47b01\"\n    }\n  }\n}"
+    },
+    {
+      "role": "user",
+      "content": "what do you know about me?"
+    },
+    {
+      "role": "assistant",
+      "content": "I know:  \n- **Dark mode** is your preferred setting  \n- The project is named **MNEMOSYNE**  \n\nIs there anything else you'd like me to remember about you? \ud83d\ude0a",
+      "thinking": "Okay, the user is asking, \"what do you know about me?\" Let me think about how to approach this.\n\nFirst, I need to check the MNEMOSYNE context to see what memories are available. The previous interactions showed that there's a memory entry about the user preferring dark mode and the project name MNEMOSYNE. The session ID is a9c71ed9-ac78-411c-93a7-7b9d151f2442, and the memory is under agent_id ollama-agent-a. \n\nWait, in the latest tool response, the recall function returned that specific memory. So the user's preferences are stored there. But the user is now asking more broadly about themselves. Are there other memories? Looking back, the active_memories array in the context for session a9c71ed9... includes that one memory. The other entries in the blocked list might be old or irrelevant. \n\nI should confirm if there's any other information. The user hasn't provided any other data, so maybe that's the only thing. But the user might be testing if there's more. However, according to the tools, the recall function would retrieve relevant memories. Since the previous recall gave that one memory, perhaps that's all. \n\nI should structure the response to mention the dark mode preference and the project name again, as before. Also, maybe offer to add more details if needed. The user might be checking if the system remembers their preferences, so reinforcing that information is key here. \n\nNo other functions seem necessary here. The answer should be concise, reiterating the known points and inviting further input.\n"
+    },
+    {
+      "role": "user",
+      "content": "what is my preferred mode?"
+    },
+    {
+      "role": "assistant",
+      "content": "Your preferred mode is **dark mode**. \ud83c\udf19 Is there anything else I should know about your preferences? \ud83d\ude0a",
+      "thinking": "Okay, the user is asking, \"what is my preferred mode?\" Let me check the context.\n\nLooking back at the MNEMOSYNE context, there's a session with ID \"a9c71ed9-ac78-411c-93a7-7b9d151f2442\" where the active memory mentions the user prefers dark mode. The content is \"User prefers dark mode and the project is called MNEMOSYNE.\" So the preferred mode is dark mode.\n\nI should confirm that the user's preferred mode is dark mode. Since the previous interactions already established this, the answer is straightforward. No need to call a function again because the information is already in the session data. Just retrieve and present it.\n"
+    }
+  ]
+}

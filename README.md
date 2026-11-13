@@ -271,6 +271,16 @@ Ollama is local and does not require an API key. The adapter uses its
 OpenAI-compatible `/v1` endpoint. Set `MNEMOSYNE_LLM_PROVIDER=none` to run
 without LLM calls.
 
+For the WSL MCP runner, set these variables in the same WSL terminal before
+starting the runner so core summaries, dreaming escalation, and graph-healing
+suggestions use the same local Ollama model:
+
+```bash
+export MNEMOSYNE_LLM_PROVIDER=ollama
+export MNEMOSYNE_LLM_MODEL=qwen3:1.7b
+export MNEMOSYNE_LLM_BASE_URL=http://127.0.0.1:11434/v1
+```
+
 The default Groq endpoint is `https://api.groq.com/openai/v1`. Override it with `MNEMOSYNE_LLM_BASE_URL` if needed. When using Groq, configure `GROQ_API_KEY`; when using OpenAI or another compatible endpoint, configure `OPENAI_API_KEY`.
 
 The optional Python SDK must be installed in the active environment:
@@ -300,6 +310,203 @@ Remove-Item Env:GROQ_API_KEY -ErrorAction SilentlyContinue
 ```
 
 Never commit API keys or `.env` files containing credentials. Use environment variables or a secret manager.
+
+## WSL Ollama MCP inter-session and inter-agent test
+
+This is the live acceptance test for the local Ollama/MNEMOSYNE workflow. It
+uses Ollama inside WSL, the MCP server over stdio, and the shared persistent
+MNEMOSYNE stores. Observal is not required.
+
+### 1. Prepare WSL
+
+Run these commands in Ubuntu/WSL from the repository root:
+
+```bash
+cd /mnt/d/devhost/mnemosyne
+sudo apt update
+sudo apt install -y python3-venv python3-pip build-essential zstd
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install faiss-cpu
+python -c "import faiss, mcp; print('dependencies ready')"
+```
+
+### 2. Start Ollama in WSL
+
+Use a separate WSL terminal and leave the server running:
+
+```bash
+ollama serve
+```
+
+In another terminal, verify it and install a small tool-capable model:
+
+```bash
+curl http://127.0.0.1:11434/api/tags
+ollama pull qwen3:1.7b
+ollama list
+```
+
+### 2a. Enable the core Ollama provider
+
+Set these variables in the same WSL terminal that launches the MCP runner:
+
+```bash
+export MNEMOSYNE_LLM_PROVIDER=ollama
+export MNEMOSYNE_LLM_MODEL=qwen3:1.7b
+export MNEMOSYNE_LLM_BASE_URL=http://127.0.0.1:11434/v1
+```
+
+The MCP path still uses the core MNEMOSYNE pipeline. `remember` performs the
+normal graph, contradiction, vector, session, and audit work. `recall` applies
+bounded retrieval and abstention. `commit_session` runs entity extraction,
+graph healing, and the dreaming consolidation pass. Laya evaluates dreaming
+candidates locally when its gate checkpoint is available; only ambiguous or
+low-confidence candidates escalate to Ollama. The MCP `dream_session` tool can
+also request an explicit pass.
+
+Repeated preference evidence is consolidated before it is sent to the model.
+For example, 20 active mentions of vanilla and 15 of chocolate produce a
+counted preference summary rather than sending all 35 duplicate sentences.
+
+### 3. Create durable memory with Agent A
+
+From the project root with `.venv` active:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation memory-demo-a \
+  --agent ollama-agent-a
+```
+
+At the `You:` prompt, enter:
+
+```text
+Remember this test fact exactly: DELETE_TEST_2026 — my temporary test color is orange.
+```
+
+The response should show `[tool] remember`. Verify it before exiting:
+
+```text
+Use MNEMOSYNE recall to retrieve DELETE_TEST_2026 and show the exact memory ID.
+```
+
+Record the returned UUID. Exit cleanly:
+
+```text
+/exit
+```
+
+### 4. Resume in a new session and agent
+
+This creates a new session linked to the previous session:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation memory-demo-a \
+  --agent ollama-agent-b \
+  --resume
+```
+
+Ask:
+
+```text
+Use MNEMOSYNE recall to retrieve DELETE_TEST_2026. What temporary color was stored?
+```
+
+The response should show `[tool] recall` and return `orange`. This verifies
+inter-session and inter-agent continuity.
+
+### 5. Recall from an independent conversation
+
+Do not use `--resume` and use a different conversation ID:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation memory-demo-independent \
+  --agent ollama-agent-c
+```
+
+Ask:
+
+```text
+Use MNEMOSYNE recall to find DELETE_TEST_2026. What temporary color was stored?
+```
+
+It should still return `orange`, because durable memories are shared across
+agents and conversations. A normal question without asking the model to use
+recall may not trigger the tool in a small local model.
+
+### 6. Preview and delete from another agent
+
+Start a separate deletion test conversation:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation deletion-demo \
+  --agent ollama-deletion-agent
+```
+
+First retrieve the exact UUID:
+
+```text
+Use MNEMOSYNE recall to find DELETE_TEST_2026 and show the exact memory ID.
+```
+
+Then preview it using the UUID returned by recall, not the text
+`DELETE_TEST_2026`:
+
+```text
+Call preview_delete using the exact memory ID for DELETE_TEST_2026 and show the deletion impact.
+```
+
+Review relevance, access count, descendants, and residual-risk information.
+Only then request deletion:
+
+```text
+Call delete_memory using that exact memory ID with confirmation=true. Delete only DELETE_TEST_2026.
+```
+
+The response should show `[tool] delete_memory` and an erasure verdict. The
+current MCP adapter exposes hard deletion only. It preserves audit metadata
+and removes the active content/vector representation.
+
+Exit with:
+
+```text
+/exit
+```
+
+### 7. Verify deletion from a fresh agent
+
+Start another independent conversation:
+
+```bash
+python scripts/ollama_mcp_cli.py \
+  --model qwen3:1.7b \
+  --conversation deletion-verification \
+  --agent ollama-verification-agent
+```
+
+Ask:
+
+```text
+Use MNEMOSYNE recall to search for DELETE_TEST_2026. Do not rely on chat history.
+```
+
+The deleted memory must not be returned as active context. An abstention or
+`no active memory found` result is expected.
+
+These tests create persistent files under `data/`, including the audit log,
+vector metadata, graph data, session state, and `data/ollama_sessions/`. Use a
+unique test marker and do not use real personal data. The deletion step is
+irreversible.
 
 ## Healing worker and retrieval benchmark
 
@@ -379,9 +586,12 @@ Run an online RLHF smoke update:
 .\.venv-dpo\Scripts\python.exe scripts/rlhf_grpo_compaction.py --max-train-samples 8 --max-steps 2 --output-dir outputs/mnemosyne-rlhf-grpo
 ```
 
-`AgentA.dream_session(session_id)` consolidates active session entities. Laya
-accepts supported candidates locally; unsupported or low-confidence candidates
-are escalated to the configured LLM. Accepted or LLM-resolved summaries are
-stored as derived entities with `DERIVED_FROM` edges and hash-chain records.
+`AgentA.dream_session(session_id)` consolidates active session entities, and
+`commit_session()` invokes it automatically after the session is committed.
+Laya accepts supported candidates locally; unsupported or low-confidence
+candidates are escalated to the configured LLM. Accepted or LLM-resolved
+summaries are stored as derived entities with `DERIVED_FROM` edges and
+hash-chain records. The MCP server also exposes `dream_session` for an
+explicit consolidation pass.
 If Laya is unavailable, the system escalates and does not silently persist the
 candidate.

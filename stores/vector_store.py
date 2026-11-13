@@ -34,6 +34,7 @@ class VectorStore:
         collection_name: str = "memory",
         persist_directory: str = "data/faiss_db",
         dim: int = 384,
+        enable_conflict_detection: bool = True,
     ):
         self.collection_name = collection_name
         self.persist_directory = persist_directory
@@ -47,6 +48,10 @@ class VectorStore:
         self._id_order: list[str] = []
         self.index = faiss.IndexFlatIP(self.dim)
         self.last_warnings: list[str] = []
+        # Unlearning and other high-volume retrieval benchmarks do not need
+        # contradiction expansion on every query.  Keep it enabled by default
+        # for normal application use, but allow callers to opt out explicitly.
+        self.enable_conflict_detection = enable_conflict_detection
         self._contradiction_engine = ContradictionEngine()
 
         self._load()
@@ -84,7 +89,12 @@ class VectorStore:
         else:
             self._rebuild_index()
 
-    def add(self, node: MemoryNode, embedding: Optional[list[float]] = None) -> None:
+    def add(
+        self,
+        node: MemoryNode,
+        embedding: Optional[list[float]] = None,
+        persist: bool = True,
+    ) -> None:
         """Add or update a MemoryNode in the vector store, generating an embedding if omitted."""
         raw_vec = embedding if embedding is not None else embed_text(node.content)
         vec = _normalize_vector(raw_vec)
@@ -105,6 +115,11 @@ class VectorStore:
         else:
             self._id_order.append(node.node_id)
             self.index.add(vec.reshape(1, -1))
+        if persist:
+            self._persist()
+
+    def persist(self) -> None:
+        """Flush the current FAISS index and metadata to disk."""
         self._persist()
 
     def remove(self, node_id: str) -> None:
@@ -113,6 +128,18 @@ class VectorStore:
             return
         del self._records[node_id]
         self._id_order = [nid for nid in self._id_order if nid != node_id]
+        self._rebuild_index()
+        self._persist()
+
+    def remove_many(self, node_ids: list[str] | set[str] | tuple[str, ...]) -> None:
+        """Hard-delete several nodes with one index rebuild and one disk write."""
+        ids = {str(node_id) for node_id in node_ids}
+        existing = ids.intersection(self._records)
+        if not existing:
+            return
+        for node_id in existing:
+            del self._records[node_id]
+        self._id_order = [node_id for node_id in self._id_order if node_id not in existing]
         self._rebuild_index()
         self._persist()
 
@@ -152,6 +179,7 @@ class VectorStore:
         self,
         query_text_or_embedding: Union[str, list[float]],
         top_k: int = 5,
+        include_conflict_warnings: Optional[bool] = None,
     ) -> list[MemoryNode]:
         """Query active documents, prioritizing verified nodes and surfacing user-asserted conflicts."""
         self.last_warnings = []
@@ -186,6 +214,11 @@ class VectorStore:
         scored.sort(key=lambda item: item[0], reverse=True)
         selected: list[MemoryNode] = [node for _, node in scored[:top_k]]
         selected_ids = {node.node_id for node in selected}
+
+        if include_conflict_warnings is None:
+            include_conflict_warnings = self.enable_conflict_detection
+        if not include_conflict_warnings:
+            return selected
 
         # CRITICAL RULE: Never silently pick one when two user_asserted (or contradicted) nodes conflict.
         active_list = list(active_map.values())
