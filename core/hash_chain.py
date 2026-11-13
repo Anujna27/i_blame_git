@@ -2,10 +2,12 @@ import hashlib
 import json
 import os
 import uuid
+import threading
 from datetime import datetime, timezone
 
 
 class HashChain:
+    _write_lock = threading.RLock()
     def __init__(self, log_path: str = "data/audit_log.json"):
         self.log_path = log_path
         if os.path.exists(log_path):
@@ -21,17 +23,20 @@ class HashChain:
         return hashlib.sha256(payload.encode()).hexdigest()
 
     def append(self, operation, node_id, details, actor="system", reason="mutation", metadata=None):
-        event_id = str(uuid.uuid4())
-        entry = {"entry_id": event_id, "event_id": event_id, "operation": operation, "node_id": node_id,
-                 "entity_id": node_id, "actor": actor or "system", "reason": reason or "mutation",
-                 "metadata": metadata or {}, "details": details, "prev_hash": self.get_last_hash(),
-                 "timestamp": datetime.now(timezone.utc).isoformat(), "hash": ""}
-        entry["hash"] = self._digest({k: v for k, v in entry.items() if k != "hash"}, entry["prev_hash"])
-        self.entries.append(entry)
-        os.makedirs(os.path.dirname(self.log_path) or ".", exist_ok=True)
-        with open(self.log_path, "w", encoding="utf-8") as f:
-            json.dump(self.entries, f, indent=2)
-        return entry
+        with self._write_lock:
+            event_id = str(uuid.uuid4())
+            entry = {"entry_id": event_id, "event_id": event_id, "operation": operation, "node_id": node_id,
+                     "entity_id": node_id, "actor": actor or "system", "reason": reason or "mutation",
+                     "metadata": metadata or {}, "details": details, "prev_hash": self.get_last_hash(),
+                     "timestamp": datetime.now(timezone.utc).isoformat(), "hash": ""}
+            entry["hash"] = self._digest({k: v for k, v in entry.items() if k != "hash"}, entry["prev_hash"])
+            self.entries.append(entry)
+            os.makedirs(os.path.dirname(self.log_path) or ".", exist_ok=True)
+            tmp_path = self.log_path + ".tmp"
+            with open(tmp_path, "w", encoding="utf-8") as f:
+                json.dump(self.entries, f, indent=2)
+            os.replace(tmp_path, self.log_path)
+            return entry
 
     def verify_integrity(self):
         errors = []

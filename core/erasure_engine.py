@@ -1,4 +1,4 @@
-import hashlib, json, os
+import hashlib, json, os, threading
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from typing import Literal
@@ -27,6 +27,7 @@ class ErasureReport:
 
 class ErasureEngine:
     _model = None
+    _mutation_lock = threading.RLock()
     def __init__(self, blocked_set_path="data/blocked_inference.json"):
         self.blocked_set_path = blocked_set_path; self.blocked_ids = set()
         if os.path.exists(blocked_set_path):
@@ -47,6 +48,11 @@ class ErasureEngine:
                             ("sk-" in b.lower() or "api key" in b.lower()))
         return max(cosine, 0.80 if security_overlap else 0.0)
     def delete(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested_erasure", deleted_by="user", filesystem_store=None):
+        """Serialize deletion mutations within a process."""
+        with self._mutation_lock:
+            return self._delete_unlocked(node_id, vector_store, graph_store, hash_chain, reason, deleted_by, filesystem_store)
+
+    def _delete_unlocked(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested_erasure", deleted_by="user", filesystem_store=None):
         node = graph_store.get_node(node_id); levels=[]
         timestamp = datetime.now(timezone.utc).isoformat()
         entity_type = getattr(node, "entity_type", "memory") if node else "memory"
@@ -129,14 +135,20 @@ class ErasureEngine:
                 if filesystem_store is not None and hasattr(filesystem_store, "delete_entity"):
                     filesystem_store.delete_entity(cid)
         # Persist graph state so deletion_state survives restart
+        persistence_error = None
         if hasattr(graph_store, "persist"):
             try:
                 graph_store.persist()
             except Exception as e:
-                pass  # do not fail deletion if persistence has an issue
+                persistence_error = str(e)
         elif hasattr(graph_store, "save"):
             try:
                 graph_store.save()
             except Exception as e:
-                pass
+                persistence_error = str(e)
+        if persistence_error:
+            levels[0].status = "partial"
+            levels[0].details += f" Graph persistence failed: {persistence_error}"
+            hash_chain.append("deletion_persistence_failed", node_id, {"error": persistence_error}, actor="agent", reason="erasure_request")
+            report.verdict = "failed"
         return report

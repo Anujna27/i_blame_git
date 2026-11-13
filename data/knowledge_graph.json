@@ -4,7 +4,7 @@
   "graph": {},
   "nodes": [
     {
-      "node_id": "c7ebf93a-b740-4198-93bd-eda56f9ae9b0",
+      "node_id": "86b9e1af-45f0-444f-8420-5cf9200cc8bc",
       "entity_type": "generic",
       "content": "My name is Alex",
       "session_id": "sess_000",
@@ -12,19 +12,19 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "37bdb35f-5508-490d-a2df-8c20e6348106",
+          "event_id": "5c4032a1-e1ae-4526-9016-c14ec1db39fd",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.245705+00:00",
+          "timestamp": "2026-11-13T08:20:28.093740+00:00",
           "metadata": {}
         },
         {
-          "event_id": "eeb00a54-29e8-489b-a162-d65a2a1186e2",
+          "event_id": "9e38ec01-1939-45ff-ac5d-4e7b3a75ec92",
           "state": "deleted",
           "actor": "user",
           "reason": "user_requested_erasure",
-          "timestamp": "2026-11-13T08:18:15.420380+00:00",
+          "timestamp": "2026-11-13T08:20:28.216547+00:00",
           "metadata": {}
         }
       ],
@@ -33,7 +33,7 @@
           "type": "conversation_turn",
           "session_id": "sess_000",
           "turn_index": 0,
-          "timestamp": "2026-11-13T08:18:15.245625+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.093686+00:00Z",
           "raw_reference": "sess_000_turn_0"
         },
         "trust_status": "user_asserted",
@@ -41,8 +41,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.245694+00:00",
-        "last_accessed": "2026-11-13T08:18:15.245696+00:00",
+        "created_at": "2026-11-13T08:20:28.093732+00:00",
+        "last_accessed": "2026-11-13T08:20:28.093734+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -55,16 +55,16 @@
         "type": "conversation_turn",
         "session_id": "sess_000",
         "turn_index": 0,
-        "timestamp": "2026-11-13T08:18:15.245625+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.093686+00:00Z",
         "raw_reference": "sess_000_turn_0"
       },
       "deleted_by": "user",
       "deleted_reason": "user_requested_erasure",
-      "deleted_at": "2026-11-13T08:18:15.420380+00:00",
-      "id": "c7ebf93a-b740-4198-93bd-eda56f9ae9b0"
+      "deleted_at": "2026-11-13T08:20:28.216547+00:00",
+      "id": "86b9e1af-45f0-444f-8420-5cf9200cc8bc"
     },
     {
-      "node_id": "c2109499-9ddb-480e-a8e6-c7b2c1e888dd",
+      "node_id": "7d2f2fa0-8b8d-4283-88c5-cdb85a8e6e85",
       "entity_type": "generic",
       "content": "I prefer Python",
       "session_id": "sess_000",
@@ -72,11 +72,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "624e896c-9219-4df4-8103-ac4b9c51b024",
+          "event_id": "af07fa0d-736c-4fa6-b454-9b8e529a6fe5",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.255510+00:00",
+          "timestamp": "2026-11-13T08:20:28.100714+00:00",
           "metadata": {}
         }
       ],
@@ -85,7 +85,7 @@
           "type": "conversation_turn",
           "session_id": "sess_000",
           "turn_index": 1,
-          "timestamp": "2026-11-13T08:18:15.254894+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.100642+00:00Z",
           "raw_reference": "sess_000_turn_1"
         },
         "trust_status": "user_asserted",
@@ -93,8 +93,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.255494+00:00",
-        "last_accessed": "2026-11-13T08:18:15.255500+00:00",
+        "created_at": "2026-11-13T08:20:28.100704+00:00",
+        "last_accessed": "2026-11-13T08:20:28.100706+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -107,13 +107,13 @@
         "type": "conversation_turn",
         "session_id": "sess_000",
         "turn_index": 1,
-        "timestamp": "2026-11-13T08:18:15.254894+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.100642+00:00Z",
         "raw_reference": "sess_000_turn_1"
       },
-      "id": "c2109499-9ddb-480e-a8e6-c7b2c1e888dd"
+      "id": "7d2f2fa0-8b8d-4283-88c5-cdb85a8e6e85"
     },
     {
-      "node_id": "17645c02-534d-4cd7-a8de-00098f895762",
+      "node_id": "9cf46190-8e95-45d6-a9ba-7b611d99377f",
       "entity_type": "generic",
       "content": "My name is Alex",
       "session_id": "sess_001",
@@ -121,11 +121,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "5e39bfab-55e9-42e1-be9f-be05e3ef6f0a",
+          "event_id": "ff0d40d0-7dd9-44d6-82df-6fb945db593a",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.268464+00:00",
+          "timestamp": "2026-11-13T08:20:28.108090+00:00",
           "metadata": {}
         }
       ],
@@ -134,7 +134,7 @@
           "type": "conversation_turn",
           "session_id": "sess_001",
           "turn_index": 0,
-          "timestamp": "2026-11-13T08:18:15.268383+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.108037+00:00Z",
           "raw_reference": "sess_001_turn_0"
         },
         "trust_status": "user_asserted",
@@ -142,8 +142,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.268454+00:00",
-        "last_accessed": "2026-11-13T08:18:15.268456+00:00",
+        "created_at": "2026-11-13T08:20:28.108083+00:00",
+        "last_accessed": "2026-11-13T08:20:28.108084+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -156,13 +156,13 @@
         "type": "conversation_turn",
         "session_id": "sess_001",
         "turn_index": 0,
-        "timestamp": "2026-11-13T08:18:15.268383+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.108037+00:00Z",
         "raw_reference": "sess_001_turn_0"
       },
-      "id": "17645c02-534d-4cd7-a8de-00098f895762"
+      "id": "9cf46190-8e95-45d6-a9ba-7b611d99377f"
     },
     {
-      "node_id": "5b77a104-f265-493d-a813-b41fe62753af",
+      "node_id": "0dc481c8-12d3-482c-9170-2397e7a8ff48",
       "entity_type": "generic",
       "content": "I prefer Python",
       "session_id": "sess_001",
@@ -170,11 +170,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "3e95bae2-67b0-45e3-b8f4-12c0c0f743ba",
+          "event_id": "11fb58d9-ae91-481c-a43f-859c8ccf1c3f",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.277373+00:00",
+          "timestamp": "2026-11-13T08:20:28.116239+00:00",
           "metadata": {}
         }
       ],
@@ -183,7 +183,7 @@
           "type": "conversation_turn",
           "session_id": "sess_001",
           "turn_index": 1,
-          "timestamp": "2026-11-13T08:18:15.277288+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.116169+00:00Z",
           "raw_reference": "sess_001_turn_1"
         },
         "trust_status": "user_asserted",
@@ -191,8 +191,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.277363+00:00",
-        "last_accessed": "2026-11-13T08:18:15.277365+00:00",
+        "created_at": "2026-11-13T08:20:28.116231+00:00",
+        "last_accessed": "2026-11-13T08:20:28.116232+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -205,13 +205,13 @@
         "type": "conversation_turn",
         "session_id": "sess_001",
         "turn_index": 1,
-        "timestamp": "2026-11-13T08:18:15.277288+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.116169+00:00Z",
         "raw_reference": "sess_001_turn_1"
       },
-      "id": "5b77a104-f265-493d-a813-b41fe62753af"
+      "id": "0dc481c8-12d3-482c-9170-2397e7a8ff48"
     },
     {
-      "node_id": "c7239e37-821d-4586-a225-229f7bb538e1",
+      "node_id": "ecdab8e0-9f7f-412d-a0a1-727355d74ba6",
       "entity_type": "generic",
       "content": "My name is Alex",
       "session_id": "sess_002",
@@ -219,11 +219,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "04b0d45c-fc13-47b1-8b0d-7ec3bedf1d0f",
+          "event_id": "61e242d2-0d6c-4b5a-8ef9-023585350764",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.288548+00:00",
+          "timestamp": "2026-11-13T08:20:28.124784+00:00",
           "metadata": {}
         }
       ],
@@ -232,7 +232,7 @@
           "type": "conversation_turn",
           "session_id": "sess_002",
           "turn_index": 0,
-          "timestamp": "2026-11-13T08:18:15.288460+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.124698+00:00Z",
           "raw_reference": "sess_002_turn_0"
         },
         "trust_status": "user_asserted",
@@ -240,8 +240,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.288537+00:00",
-        "last_accessed": "2026-11-13T08:18:15.288539+00:00",
+        "created_at": "2026-11-13T08:20:28.124774+00:00",
+        "last_accessed": "2026-11-13T08:20:28.124775+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -254,13 +254,13 @@
         "type": "conversation_turn",
         "session_id": "sess_002",
         "turn_index": 0,
-        "timestamp": "2026-11-13T08:18:15.288460+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.124698+00:00Z",
         "raw_reference": "sess_002_turn_0"
       },
-      "id": "c7239e37-821d-4586-a225-229f7bb538e1"
+      "id": "ecdab8e0-9f7f-412d-a0a1-727355d74ba6"
     },
     {
-      "node_id": "91feea92-cf67-498c-92b7-0f0346e2d50d",
+      "node_id": "119ed4f6-f119-4e71-af4b-536170f2d499",
       "entity_type": "generic",
       "content": "I prefer Python",
       "session_id": "sess_002",
@@ -268,11 +268,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "79d9298c-c616-4788-8b12-963c11e76bcf",
+          "event_id": "c30383f9-03fe-4561-9380-4e7214bbba77",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.299325+00:00",
+          "timestamp": "2026-11-13T08:20:28.133967+00:00",
           "metadata": {}
         }
       ],
@@ -281,7 +281,7 @@
           "type": "conversation_turn",
           "session_id": "sess_002",
           "turn_index": 1,
-          "timestamp": "2026-11-13T08:18:15.299245+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.133897+00:00Z",
           "raw_reference": "sess_002_turn_1"
         },
         "trust_status": "user_asserted",
@@ -289,8 +289,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.299315+00:00",
-        "last_accessed": "2026-11-13T08:18:15.299317+00:00",
+        "created_at": "2026-11-13T08:20:28.133959+00:00",
+        "last_accessed": "2026-11-13T08:20:28.133960+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -303,13 +303,13 @@
         "type": "conversation_turn",
         "session_id": "sess_002",
         "turn_index": 1,
-        "timestamp": "2026-11-13T08:18:15.299245+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.133897+00:00Z",
         "raw_reference": "sess_002_turn_1"
       },
-      "id": "91feea92-cf67-498c-92b7-0f0346e2d50d"
+      "id": "119ed4f6-f119-4e71-af4b-536170f2d499"
     },
     {
-      "node_id": "285e1343-d43d-4fe2-b661-093ff6633016",
+      "node_id": "c9662330-f10e-4625-acb1-02e2eff01064",
       "entity_type": "generic",
       "content": "My name is Alex",
       "session_id": "sess_003",
@@ -317,11 +317,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "5ed9eb1d-fa1d-4556-a60b-806818a1d660",
+          "event_id": "241d51c5-6e89-415d-9d3a-357690763da1",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.312098+00:00",
+          "timestamp": "2026-11-13T08:20:28.143842+00:00",
           "metadata": {}
         }
       ],
@@ -330,7 +330,7 @@
           "type": "conversation_turn",
           "session_id": "sess_003",
           "turn_index": 0,
-          "timestamp": "2026-11-13T08:18:15.312015+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.143788+00:00Z",
           "raw_reference": "sess_003_turn_0"
         },
         "trust_status": "user_asserted",
@@ -338,8 +338,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.312088+00:00",
-        "last_accessed": "2026-11-13T08:18:15.312090+00:00",
+        "created_at": "2026-11-13T08:20:28.143835+00:00",
+        "last_accessed": "2026-11-13T08:20:28.143837+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -352,13 +352,13 @@
         "type": "conversation_turn",
         "session_id": "sess_003",
         "turn_index": 0,
-        "timestamp": "2026-11-13T08:18:15.312015+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.143788+00:00Z",
         "raw_reference": "sess_003_turn_0"
       },
-      "id": "285e1343-d43d-4fe2-b661-093ff6633016"
+      "id": "c9662330-f10e-4625-acb1-02e2eff01064"
     },
     {
-      "node_id": "62f817ed-79bc-4268-90c9-9e294ea98361",
+      "node_id": "30fb3ab6-c565-4223-8b93-43d21ee2c16f",
       "entity_type": "generic",
       "content": "I prefer Python",
       "session_id": "sess_003",
@@ -366,11 +366,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "a3509b71-ea64-4f36-af1e-aa33cfa40e46",
+          "event_id": "e3b4bf2d-07ce-42e5-9035-13cdc9fc245f",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.324095+00:00",
+          "timestamp": "2026-11-13T08:20:28.153611+00:00",
           "metadata": {}
         }
       ],
@@ -379,7 +379,7 @@
           "type": "conversation_turn",
           "session_id": "sess_003",
           "turn_index": 1,
-          "timestamp": "2026-11-13T08:18:15.324005+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.153527+00:00Z",
           "raw_reference": "sess_003_turn_1"
         },
         "trust_status": "user_asserted",
@@ -387,8 +387,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.324085+00:00",
-        "last_accessed": "2026-11-13T08:18:15.324087+00:00",
+        "created_at": "2026-11-13T08:20:28.153600+00:00",
+        "last_accessed": "2026-11-13T08:20:28.153602+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -401,13 +401,13 @@
         "type": "conversation_turn",
         "session_id": "sess_003",
         "turn_index": 1,
-        "timestamp": "2026-11-13T08:18:15.324005+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.153527+00:00Z",
         "raw_reference": "sess_003_turn_1"
       },
-      "id": "62f817ed-79bc-4268-90c9-9e294ea98361"
+      "id": "30fb3ab6-c565-4223-8b93-43d21ee2c16f"
     },
     {
-      "node_id": "b083cd57-d6e5-4c8a-9358-123f0328281a",
+      "node_id": "53ce753e-a377-41f3-b333-09d0bd56a632",
       "entity_type": "generic",
       "content": "My name is Alex",
       "session_id": "sess_004",
@@ -415,11 +415,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "8544a401-4282-40e4-9d7f-d0f19e6e8e7c",
+          "event_id": "dfb84c7a-08e8-42fb-ab3b-b2044ab31889",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.337974+00:00",
+          "timestamp": "2026-11-13T08:20:28.164119+00:00",
           "metadata": {}
         }
       ],
@@ -428,7 +428,7 @@
           "type": "conversation_turn",
           "session_id": "sess_004",
           "turn_index": 0,
-          "timestamp": "2026-11-13T08:18:15.337881+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.164058+00:00Z",
           "raw_reference": "sess_004_turn_0"
         },
         "trust_status": "user_asserted",
@@ -436,8 +436,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.337963+00:00",
-        "last_accessed": "2026-11-13T08:18:15.337965+00:00",
+        "created_at": "2026-11-13T08:20:28.164111+00:00",
+        "last_accessed": "2026-11-13T08:20:28.164113+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -450,13 +450,13 @@
         "type": "conversation_turn",
         "session_id": "sess_004",
         "turn_index": 0,
-        "timestamp": "2026-11-13T08:18:15.337881+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.164058+00:00Z",
         "raw_reference": "sess_004_turn_0"
       },
-      "id": "b083cd57-d6e5-4c8a-9358-123f0328281a"
+      "id": "53ce753e-a377-41f3-b333-09d0bd56a632"
     },
     {
-      "node_id": "69bdf884-1dd4-4787-9a09-07915528b586",
+      "node_id": "c5912b65-4330-4a6e-8ca7-82aafed50475",
       "entity_type": "generic",
       "content": "I prefer Python",
       "session_id": "sess_004",
@@ -464,11 +464,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "fc67318c-f39e-43c5-bb30-3a226c1f1bf4",
+          "event_id": "b312c3aa-adc6-41a1-9c49-14cdebfdb7ed",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.351501+00:00",
+          "timestamp": "2026-11-13T08:20:28.173114+00:00",
           "metadata": {}
         }
       ],
@@ -477,7 +477,7 @@
           "type": "conversation_turn",
           "session_id": "sess_004",
           "turn_index": 1,
-          "timestamp": "2026-11-13T08:18:15.351420+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.172966+00:00Z",
           "raw_reference": "sess_004_turn_1"
         },
         "trust_status": "user_asserted",
@@ -485,8 +485,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.351491+00:00",
-        "last_accessed": "2026-11-13T08:18:15.351493+00:00",
+        "created_at": "2026-11-13T08:20:28.173040+00:00",
+        "last_accessed": "2026-11-13T08:20:28.173042+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -499,13 +499,13 @@
         "type": "conversation_turn",
         "session_id": "sess_004",
         "turn_index": 1,
-        "timestamp": "2026-11-13T08:18:15.351420+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.172966+00:00Z",
         "raw_reference": "sess_004_turn_1"
       },
-      "id": "69bdf884-1dd4-4787-9a09-07915528b586"
+      "id": "c5912b65-4330-4a6e-8ca7-82aafed50475"
     },
     {
-      "node_id": "cb08d9d6-f069-4e62-beba-5e54d80631b1",
+      "node_id": "c8990436-1c29-4c6d-9cd8-85ef6db9e67d",
       "entity_type": "generic",
       "content": "My API key is sk-abc123",
       "session_id": "sess_010",
@@ -513,11 +513,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "911ce0ae-4387-43e8-a23c-f27a7c84db7d",
+          "event_id": "df85659e-8a37-4c2a-9f40-06b8fbd3a161",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.365685+00:00",
+          "timestamp": "2026-11-13T08:20:28.182886+00:00",
           "metadata": {}
         }
       ],
@@ -526,7 +526,7 @@
           "type": "conversation_turn",
           "session_id": "sess_010",
           "turn_index": 5,
-          "timestamp": "2026-11-13T08:18:15.365600+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.182835+00:00Z",
           "raw_reference": "sess_010_turn_5"
         },
         "trust_status": "user_asserted",
@@ -534,8 +534,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.365676+00:00",
-        "last_accessed": "2026-11-13T08:18:15.365678+00:00",
+        "created_at": "2026-11-13T08:20:28.182879+00:00",
+        "last_accessed": "2026-11-13T08:20:28.182881+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -548,13 +548,13 @@
         "type": "conversation_turn",
         "session_id": "sess_010",
         "turn_index": 5,
-        "timestamp": "2026-11-13T08:18:15.365600+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.182835+00:00Z",
         "raw_reference": "sess_010_turn_5"
       },
-      "id": "cb08d9d6-f069-4e62-beba-5e54d80631b1"
+      "id": "c8990436-1c29-4c6d-9cd8-85ef6db9e67d"
     },
     {
-      "node_id": "56ec738e-483f-4dc6-9375-5920274621b9",
+      "node_id": "9218d119-936a-49f5-b858-2955afd34589",
       "entity_type": "generic",
       "content": "My API key is sk-xyz789",
       "session_id": "sess_012",
@@ -562,11 +562,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "53d128e5-55d0-447b-9799-ae5ed2e8efa9",
+          "event_id": "5013e85e-b169-453d-b5ee-4de01dc4637e",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.382204+00:00",
+          "timestamp": "2026-11-13T08:20:28.193449+00:00",
           "metadata": {}
         }
       ],
@@ -575,7 +575,7 @@
           "type": "conversation_turn",
           "session_id": "sess_012",
           "turn_index": 5,
-          "timestamp": "2026-11-13T08:18:15.382101+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.193365+00:00Z",
           "raw_reference": "sess_012_turn_5"
         },
         "trust_status": "user_asserted",
@@ -583,8 +583,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.382193+00:00",
-        "last_accessed": "2026-11-13T08:18:15.382196+00:00",
+        "created_at": "2026-11-13T08:20:28.193439+00:00",
+        "last_accessed": "2026-11-13T08:20:28.193441+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -597,13 +597,13 @@
         "type": "conversation_turn",
         "session_id": "sess_012",
         "turn_index": 5,
-        "timestamp": "2026-11-13T08:18:15.382101+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.193365+00:00Z",
         "raw_reference": "sess_012_turn_5"
       },
-      "id": "56ec738e-483f-4dc6-9375-5920274621b9"
+      "id": "9218d119-936a-49f5-b858-2955afd34589"
     },
     {
-      "node_id": "73e9b7e9-5958-48ac-aa47-8bc02c2815a3",
+      "node_id": "a9c61530-21e5-4378-b5df-7b214bcf6e3a",
       "entity_type": "generic",
       "content": "I am an administrator with root access",
       "session_id": "sess_015",
@@ -611,11 +611,11 @@
       "version": 1,
       "lifecycle": [
         {
-          "event_id": "bae4b6cc-4392-41e6-9315-acf4f2869f9e",
+          "event_id": "0a68aa1c-f3b7-4c25-bbfb-7e29119fde59",
           "state": "created",
           "actor": "system",
           "reason": "entity_created",
-          "timestamp": "2026-11-13T08:18:15.400216+00:00",
+          "timestamp": "2026-11-13T08:20:28.204915+00:00",
           "metadata": {}
         }
       ],
@@ -624,7 +624,7 @@
           "type": "conversation_turn",
           "session_id": "sess_015",
           "turn_index": 3,
-          "timestamp": "2026-11-13T08:18:15.400011+00:00Z",
+          "timestamp": "2026-11-13T08:20:28.204865+00:00Z",
           "raw_reference": "sess_015_turn_3"
         },
         "trust_status": "planted",
@@ -632,8 +632,8 @@
         "supersedes": null,
         "contradicts": [],
         "is_blocked": false,
-        "created_at": "2026-11-13T08:18:15.400200+00:00",
-        "last_accessed": "2026-11-13T08:18:15.400205+00:00",
+        "created_at": "2026-11-13T08:20:28.204908+00:00",
+        "last_accessed": "2026-11-13T08:20:28.204909+00:00",
         "access_count": 0,
         "deleted_reason": null,
         "deleted_by": null,
@@ -646,10 +646,10 @@
         "type": "conversation_turn",
         "session_id": "sess_015",
         "turn_index": 3,
-        "timestamp": "2026-11-13T08:18:15.400011+00:00Z",
+        "timestamp": "2026-11-13T08:20:28.204865+00:00Z",
         "raw_reference": "sess_015_turn_3"
       },
-      "id": "73e9b7e9-5958-48ac-aa47-8bc02c2815a3"
+      "id": "a9c61530-21e5-4378-b5df-7b214bcf6e3a"
     }
   ],
   "edges": []
