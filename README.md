@@ -162,7 +162,7 @@ python scripts/ollama_mcp_cli.py --model qwen3:1.7b --conversation memory-demo-a
 Ask:
 
 ```text
-Use MNEMOSYNE recall to retrieve DELETE_TEST_2026. What temporary color was stored?
+What do I love drinking?
 ```
 
 The answer should be `orange`. This proves handoff across a new session and agent.
@@ -200,7 +200,7 @@ python scripts/ollama_mcp_cli.py --model qwen3:1.7b --conversation deletion-veri
 Ask:
 
 ```text
-Use MNEMOSYNE recall to search for DELETE_TEST_2026. Do not rely on chat history.
+Use MNEMOSYNE recall to search for DEMO_AGENT_2026. Do not rely on chat history.
 ```
 
 The deleted memory must not be returned as active context. The deletion response should include the actor, reason, timestamp, lifecycle result, and residual-risk checks. This test writes persistent state under `data/`, including `data/ollama_sessions/`; use synthetic markers only.

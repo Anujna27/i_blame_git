@@ -10868,5 +10868,359 @@
     "prev_hash": "54a9b964df622e8d4f398c216d75abbfadf5c01e7f5b2989118dcef8e6655145",
     "timestamp": "2026-11-13T17:52:24.648458+00:00",
     "hash": "24520bf9f134eaac6073a979a6983ff8f4775691f06ecc81d36e2e31e92e8a55"
+  },
+  {
+    "entry_id": "259a404f-ee6c-4df3-b036-ce4d4917dcaf",
+    "event_id": "259a404f-ee6c-4df3-b036-ce4d4917dcaf",
+    "operation": "entity_created",
+    "node_id": "422f9906-9356-4f8a-ab8a-b72cd1684043",
+    "entity_id": "422f9906-9356-4f8a-ab8a-b72cd1684043",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+      "trust_status": "user_asserted"
+    },
+    "prev_hash": "24520bf9f134eaac6073a979a6983ff8f4775691f06ecc81d36e2e31e92e8a55",
+    "timestamp": "2026-11-13T20:58:38.894824+00:00",
+    "hash": "b8c238fa5e9e54ecb336ddf359e5087beb94759fad79ab86e23744c8ea1a579c"
+  },
+  {
+    "entry_id": "40f947ce-0560-4a4b-93b0-b74daf77a2d8",
+    "event_id": "40f947ce-0560-4a4b-93b0-b74daf77a2d8",
+    "operation": "session_commit",
+    "node_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+    "entity_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+      "status": "committed",
+      "committed_at": "2026-11-13T21:01:00.915121+00:00",
+      "committed_by": "ollama-agent-a",
+      "entity_ids": [
+        "422f9906-9356-4f8a-ab8a-b72cd1684043"
+      ],
+      "reason": "cli_exit"
+    },
+    "prev_hash": "b8c238fa5e9e54ecb336ddf359e5087beb94759fad79ab86e23744c8ea1a579c",
+    "timestamp": "2026-11-13T21:01:00.920162+00:00",
+    "hash": "b173151b5ae93c046dc5ed9f0d464db4216fdab4047c7a9fe5bc17055d8b1b88"
+  },
+  {
+    "entry_id": "760dd298-08ec-4336-a3e3-0f9366db9fdc",
+    "event_id": "760dd298-08ec-4336-a3e3-0f9366db9fdc",
+    "operation": "graph_orphan_detected",
+    "node_id": "422f9906-9356-4f8a-ab8a-b72cd1684043",
+    "entity_id": "422f9906-9356-4f8a-ab8a-b72cd1684043",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "orphan_type": "orphaned_session",
+      "method": "detection",
+      "confidence": 1.0,
+      "target_node_id": null,
+      "reason": "Entity belongs to vanished session 'cc184011-30ad-46df-ada1-c1ab86e19a81' and has no edges",
+      "actor": "graph_healer",
+      "timestamp": "2026-11-13T21:01:00.949791+00:00"
+    },
+    "prev_hash": "b173151b5ae93c046dc5ed9f0d464db4216fdab4047c7a9fe5bc17055d8b1b88",
+    "timestamp": "2026-11-13T21:01:00.949850+00:00",
+    "hash": "ec17dd1153ad7ffa572a2a9a83d0f87f70fdb2f6f60a96874e63c9c1029a7ccc"
+  },
+  {
+    "entry_id": "dd5cf21e-32ee-428e-b190-2dcccb345626",
+    "event_id": "dd5cf21e-32ee-428e-b190-2dcccb345626",
+    "operation": "session_commit",
+    "node_id": "054a38fc-56b2-4e94-9dcb-8a07c320a69a",
+    "entity_id": "054a38fc-56b2-4e94-9dcb-8a07c320a69a",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "054a38fc-56b2-4e94-9dcb-8a07c320a69a",
+      "status": "committed",
+      "committed_at": "2026-11-13T21:06:46.484441+00:00",
+      "committed_by": "ollama-agent-b",
+      "entity_ids": [],
+      "reason": "cli_exit"
+    },
+    "prev_hash": "ec17dd1153ad7ffa572a2a9a83d0f87f70fdb2f6f60a96874e63c9c1029a7ccc",
+    "timestamp": "2026-11-13T21:06:46.495430+00:00",
+    "hash": "6b641ada512d85fe883fe6830211faf01ef2400f44f5de288c81b08cbbe9e685"
+  },
+  {
+    "entry_id": "f077aeca-75a7-47cf-b3d9-81dec1eee449",
+    "event_id": "f077aeca-75a7-47cf-b3d9-81dec1eee449",
+    "operation": "session_commit",
+    "node_id": "0c80bd9b-4d89-4a6e-b92d-33668ed5e5aa",
+    "entity_id": "0c80bd9b-4d89-4a6e-b92d-33668ed5e5aa",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "0c80bd9b-4d89-4a6e-b92d-33668ed5e5aa",
+      "status": "committed",
+      "committed_at": "2026-11-13T21:35:30.071631+00:00",
+      "committed_by": "ollama-agent-c",
+      "entity_ids": [],
+      "reason": "cli_exit"
+    },
+    "prev_hash": "6b641ada512d85fe883fe6830211faf01ef2400f44f5de288c81b08cbbe9e685",
+    "timestamp": "2026-11-13T21:35:30.084137+00:00",
+    "hash": "8cf6ebd1acc8fec068861ebced7f62be4ac408661576dff7e0814a5fd63ea94a"
+  },
+  {
+    "entry_id": "e1807b2e-644f-481f-8771-fc61d07c409a",
+    "event_id": "e1807b2e-644f-481f-8771-fc61d07c409a",
+    "operation": "entity_created",
+    "node_id": "ee2fa4b2-75af-42c5-af34-eb34c29419df",
+    "entity_id": "ee2fa4b2-75af-42c5-af34-eb34c29419df",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+      "trust_status": "user_asserted"
+    },
+    "prev_hash": "8cf6ebd1acc8fec068861ebced7f62be4ac408661576dff7e0814a5fd63ea94a",
+    "timestamp": "2026-11-13T21:49:48.311749+00:00",
+    "hash": "53963b456aed7cc3168ac416eda6ce4328aa7d2c77c28d8f7756eaef9c848bce"
+  },
+  {
+    "entry_id": "f0d6826c-49ef-45bd-98ab-67d4d94388b2",
+    "event_id": "f0d6826c-49ef-45bd-98ab-67d4d94388b2",
+    "operation": "session_commit",
+    "node_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+    "entity_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+      "status": "committed",
+      "committed_at": "2026-11-13T21:52:53.023598+00:00",
+      "committed_by": "ollama-agent-a",
+      "entity_ids": [
+        "ee2fa4b2-75af-42c5-af34-eb34c29419df"
+      ],
+      "reason": "cli_exit"
+    },
+    "prev_hash": "53963b456aed7cc3168ac416eda6ce4328aa7d2c77c28d8f7756eaef9c848bce",
+    "timestamp": "2026-11-13T21:52:53.031281+00:00",
+    "hash": "b1bbbf5dfa5167f34c10ece7c0f3c9cb572c2b4d6929635deee7ef9cd91a132b"
+  },
+  {
+    "entry_id": "d1003f9a-b0bd-4aa7-8471-f030cbd310b7",
+    "event_id": "d1003f9a-b0bd-4aa7-8471-f030cbd310b7",
+    "operation": "graph_orphan_detected",
+    "node_id": "ee2fa4b2-75af-42c5-af34-eb34c29419df",
+    "entity_id": "ee2fa4b2-75af-42c5-af34-eb34c29419df",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "orphan_type": "orphaned_session",
+      "method": "detection",
+      "confidence": 1.0,
+      "target_node_id": null,
+      "reason": "Entity belongs to vanished session '05edf4ab-dbf1-4d0b-8bda-ad9423f744ca' and has no edges",
+      "actor": "graph_healer",
+      "timestamp": "2026-11-13T21:52:53.059378+00:00"
+    },
+    "prev_hash": "b1bbbf5dfa5167f34c10ece7c0f3c9cb572c2b4d6929635deee7ef9cd91a132b",
+    "timestamp": "2026-11-13T21:52:53.059432+00:00",
+    "hash": "93acadee8adae32314c1f6038759165b2a4aeb0e442b9d32e4f86e1bd82f06b6"
+  },
+  {
+    "entry_id": "e73f7109-0457-4f3b-9992-3847021ddb03",
+    "event_id": "e73f7109-0457-4f3b-9992-3847021ddb03",
+    "operation": "session_commit",
+    "node_id": "b5f32195-b7e1-41d1-8b47-610f1843dcc0",
+    "entity_id": "b5f32195-b7e1-41d1-8b47-610f1843dcc0",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "b5f32195-b7e1-41d1-8b47-610f1843dcc0",
+      "status": "committed",
+      "committed_at": "2026-11-13T21:59:27.225553+00:00",
+      "committed_by": "ollama-agent-b",
+      "entity_ids": [],
+      "reason": "cli_exit"
+    },
+    "prev_hash": "93acadee8adae32314c1f6038759165b2a4aeb0e442b9d32e4f86e1bd82f06b6",
+    "timestamp": "2026-11-13T21:59:27.235670+00:00",
+    "hash": "c62adcc81dc7a9da98d3109d9ff3d49bb2bca4415a3dfbfbb756bd0d57ba48aa"
+  },
+  {
+    "entry_id": "4394dad3-8302-4da9-99f9-9310fda360e0",
+    "event_id": "4394dad3-8302-4da9-99f9-9310fda360e0",
+    "operation": "dreaming_consolidated",
+    "node_id": "fc99f9d7-574a-4d87-9c03-05d93066a0fc",
+    "entity_id": "fc99f9d7-574a-4d87-9c03-05d93066a0fc",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "b5f32195-b7e1-41d1-8b47-610f1843dcc0",
+      "actor": "ollama-agent-b",
+      "source_node_ids": [],
+      "decision": "resolved_by_llm",
+      "reason": "after_session_commit"
+    },
+    "prev_hash": "c62adcc81dc7a9da98d3109d9ff3d49bb2bca4415a3dfbfbb756bd0d57ba48aa",
+    "timestamp": "2026-11-13T22:00:15.023010+00:00",
+    "hash": "350fe1080be350aba5b80b17a0dd7dd618d1fa596b151f1e9dc6d6779b5262d0"
+  },
+  {
+    "entry_id": "d59d5489-8877-4c19-9140-418741e8e2dc",
+    "event_id": "d59d5489-8877-4c19-9140-418741e8e2dc",
+    "operation": "entity_created",
+    "node_id": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+    "entity_id": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+      "trust_status": "user_asserted"
+    },
+    "prev_hash": "350fe1080be350aba5b80b17a0dd7dd618d1fa596b151f1e9dc6d6779b5262d0",
+    "timestamp": "2026-11-13T22:02:45.108258+00:00",
+    "hash": "0aab3c106242e5c62a8437650ca9d50f8a0b1d43ee75031cb639b8925ceeeb17"
+  },
+  {
+    "entry_id": "32994764-da7b-4bb3-b3ca-662d71d44340",
+    "event_id": "32994764-da7b-4bb3-b3ca-662d71d44340",
+    "operation": "session_commit",
+    "node_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+    "entity_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+      "status": "committed",
+      "committed_at": "2026-11-13T22:03:10.160134+00:00",
+      "committed_by": "ollama-agent-a",
+      "entity_ids": [
+        "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9"
+      ],
+      "reason": "cli_exit"
+    },
+    "prev_hash": "0aab3c106242e5c62a8437650ca9d50f8a0b1d43ee75031cb639b8925ceeeb17",
+    "timestamp": "2026-11-13T22:03:10.170467+00:00",
+    "hash": "e1f9b7ecac86c422095f2f0f7b6c4c2f66fb4576ff6a92478a806f04b5964a87"
+  },
+  {
+    "entry_id": "98f99a45-0d97-4ed5-9a1e-c3b45d75e7b9",
+    "event_id": "98f99a45-0d97-4ed5-9a1e-c3b45d75e7b9",
+    "operation": "graph_orphan_detected",
+    "node_id": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+    "entity_id": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "orphan_type": "orphaned_session",
+      "method": "detection",
+      "confidence": 1.0,
+      "target_node_id": null,
+      "reason": "Entity belongs to vanished session '256c6eca-6b1e-4bad-85a6-7c5597fe2a8c' and has no edges",
+      "actor": "graph_healer",
+      "timestamp": "2026-11-13T22:03:10.200266+00:00"
+    },
+    "prev_hash": "e1f9b7ecac86c422095f2f0f7b6c4c2f66fb4576ff6a92478a806f04b5964a87",
+    "timestamp": "2026-11-13T22:03:10.200323+00:00",
+    "hash": "1e15d7f6b1b9184a356db4f0bb4dfa2aa09e0c86e68866a5fa2ab11f9f4931fa"
+  },
+  {
+    "entry_id": "86a5be11-cb6c-4681-b2c5-e8412ac44ea7",
+    "event_id": "86a5be11-cb6c-4681-b2c5-e8412ac44ea7",
+    "operation": "graph_orphan_healed",
+    "node_id": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+    "entity_id": "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "orphan_type": "orphaned_session",
+      "method": "vector_similarity",
+      "confidence": 1.0,
+      "target_node_id": "ee2fa4b2-75af-42c5-af34-eb34c29419df",
+      "reason": "Linked via high-confidence vector similarity",
+      "actor": "graph_healer",
+      "timestamp": "2026-11-13T22:04:12.538693+00:00"
+    },
+    "prev_hash": "1e15d7f6b1b9184a356db4f0bb4dfa2aa09e0c86e68866a5fa2ab11f9f4931fa",
+    "timestamp": "2026-11-13T22:04:12.538750+00:00",
+    "hash": "6e86f5edaecc46e89657941d6db922a27bc042f0d7330b8083f3d0cf63cb62a1"
+  },
+  {
+    "entry_id": "01639f47-1158-48b1-b7c8-87a6f09095c2",
+    "event_id": "01639f47-1158-48b1-b7c8-87a6f09095c2",
+    "operation": "dreaming_consolidated",
+    "node_id": "e343fe64-8695-4e89-998f-aa6b091cb7d1",
+    "entity_id": "e343fe64-8695-4e89-998f-aa6b091cb7d1",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "256c6eca-6b1e-4bad-85a6-7c5597fe2a8c",
+      "actor": "ollama-agent-a",
+      "source_node_ids": [
+        "0e79c45b-8043-4c57-9c9c-9d64cf5cdbd9"
+      ],
+      "decision": "resolved_by_llm",
+      "reason": "after_session_commit"
+    },
+    "prev_hash": "6e86f5edaecc46e89657941d6db922a27bc042f0d7330b8083f3d0cf63cb62a1",
+    "timestamp": "2026-11-13T22:05:37.011387+00:00",
+    "hash": "3a1a83eaeece2f94a23c6b5f7a5991dc532ca19e30ab46b83e101c87347e1f21"
+  },
+  {
+    "entry_id": "780749d5-99b1-4733-b8ee-88fb1127f864",
+    "event_id": "780749d5-99b1-4733-b8ee-88fb1127f864",
+    "operation": "session_commit",
+    "node_id": "a8ce2e14-090c-4655-b69d-137554bfa2c1",
+    "entity_id": "a8ce2e14-090c-4655-b69d-137554bfa2c1",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "a8ce2e14-090c-4655-b69d-137554bfa2c1",
+      "status": "committed",
+      "committed_at": "2026-11-13T22:10:47.145067+00:00",
+      "committed_by": "ollama-agent-b",
+      "entity_ids": [],
+      "reason": "cli_exit"
+    },
+    "prev_hash": "3a1a83eaeece2f94a23c6b5f7a5991dc532ca19e30ab46b83e101c87347e1f21",
+    "timestamp": "2026-11-13T22:10:47.153211+00:00",
+    "hash": "8942ba568f0b2568180d02645d1edbe3eb078eec1133a9dbfead7a53be55ca04"
+  },
+  {
+    "entry_id": "7ac005d5-b95d-4f51-b897-496e1697a8bf",
+    "event_id": "7ac005d5-b95d-4f51-b897-496e1697a8bf",
+    "operation": "dreaming_consolidated",
+    "node_id": "53d4bc2a-8153-46db-99fa-9be5bba85006",
+    "entity_id": "53d4bc2a-8153-46db-99fa-9be5bba85006",
+    "actor": "system",
+    "reason": "mutation",
+    "metadata": {},
+    "details": {
+      "session_id": "a8ce2e14-090c-4655-b69d-137554bfa2c1",
+      "actor": "ollama-agent-b",
+      "source_node_ids": [],
+      "decision": "resolved_by_llm",
+      "reason": "after_session_commit"
+    },
+    "prev_hash": "8942ba568f0b2568180d02645d1edbe3eb078eec1133a9dbfead7a53be55ca04",
+    "timestamp": "2026-11-13T22:11:38.987954+00:00",
+    "hash": "b7ba271bee0b40eeead9a59461d81ef9f4227d38c4077b380192a34e57536720"
   }
 ]

@@ -100,6 +100,30 @@ def _message_from_response(message: Any) -> dict[str, Any]:
     return message if isinstance(message, dict) else {"role": "assistant", "content": str(message)}
 
 
+def _normalize_tool_arguments(
+    name: str | None,
+    arguments: Any,
+    user_text: str,
+    session_id: str,
+) -> dict[str, Any]:
+    """Repair common small-model omissions before MCP validation."""
+    normalized = dict(arguments) if isinstance(arguments, dict) else {}
+    if name == "recall":
+        query = normalized.get("query")
+        if not isinstance(query, str) or not query.strip():
+            query = user_text
+        active_session = normalized.get("session_id")
+        if not isinstance(active_session, str) or not active_session.strip():
+            active_session = session_id
+        normalized["query"] = query
+        normalized["session_id"] = active_session
+        if not isinstance(normalized.get("token_budget"), int):
+            normalized["token_budget"] = 2000
+        if not isinstance(normalized.get("top_k"), int):
+            normalized["top_k"] = 5
+    return normalized
+
+
 async def run(args: argparse.Namespace) -> None:
     previous = _load_state(args.conversation)
     if args.resume and previous is None:
@@ -164,6 +188,22 @@ async def run(args: argparse.Namespace) -> None:
                 break
 
             messages.append({"role": "user", "content": user_text})
+            # Do not rely on a small local model to decide whether a question
+            # needs memory or to construct a valid recall schema.  Prefetching
+            # makes independent agents see shared durable memory reliably.
+            automatic_recall = await mcp_client.call_tool(
+                "recall",
+                {"query": user_text, "session_id": session_id, "token_budget": 2000, "top_k": 5},
+            )
+            messages.append({
+                "role": "system",
+                "content": (
+                    "Automatic MNEMOSYNE recall for this user turn. Use it as "
+                    "durable evidence and do not claim that memory is unavailable:\n"
+                    f"{_content_text(automatic_recall)}"
+                ),
+            })
+            print("[auto] recall")
             while True:
                 response = _json_request(
                     args.ollama_url,
@@ -182,6 +222,7 @@ async def run(args: argparse.Namespace) -> None:
                     arguments = function.get("arguments", {})
                     if isinstance(arguments, str):
                         arguments = json.loads(arguments)
+                    arguments = _normalize_tool_arguments(name, arguments, user_text, session_id)
                     result = await mcp_client.call_tool(name, arguments)
                     messages.append({"role": "tool", "tool_name": name, "content": _content_text(result)})
                     print(f"[tool] {name}")

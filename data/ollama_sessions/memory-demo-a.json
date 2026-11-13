@@ -1,0 +1,63 @@
+{
+  "conversation_id": "memory-demo-a",
+  "session_id": "054a38fc-56b2-4e94-9dcb-8a07c320a69a",
+  "agent_id": "ollama-agent-b",
+  "parent_session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+  "model": "qwen3:1.7b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a local Ollama agent using MNEMOSYNE for durable memory. The runner has already initialized the MNEMOSYNE session. Use recall for context, remember durable facts, and commit_session before exit. Commit automatically runs the core dreaming consolidation; use dream_session when an explicit consolidation pass is needed."
+    },
+    {
+      "role": "system",
+      "content": "MNEMOSYNE context:\n{\n  \"session_id\": \"cc184011-30ad-46df-ada1-c1ab86e19a81\",\n  \"agent_id\": \"ollama-agent-a\",\n  \"parent_session_id\": null,\n  \"existing\": false,\n  \"session\": null,\n  \"active_memories\": [],\n  \"parent_summary\": null\n}"
+    },
+    {
+      "role": "user",
+      "content": "remember that i love drinking coffee"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Okay, the user wants to remember that they love drinking coffee. Let me check the available tools. There's the 'remember' function which requires content, session_id, and agent_id. The user hasn't provided session_id or agent_id yet, but since the MNEMOSYNE session is already initialized, I can use the session_id from the context. The session_id is cc184011-30ad-46df-ada1-c1ab86e19a81, and the agent_id is ollama-agent-a. So I'll call the remember function with the content \"i love drinking coffee\", the session_id, and agent_id. That should store the memory durablely.\n",
+      "tool_calls": [
+        {
+          "id": "call_li8j4rgg",
+          "function": {
+            "index": 0,
+            "name": "remember",
+            "arguments": {
+              "content": "i love drinking coffee",
+              "session_id": "cc184011-30ad-46df-ada1-c1ab86e19a81",
+              "agent_id": "ollama-agent-a"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_name": "remember",
+      "content": "{\n  \"node_id\": \"422f9906-9356-4f8a-ab8a-b72cd1684043\",\n  \"content\": \"i love drinking coffee\",\n  \"summary\": \"This passion for coffee reflects a deep appreciation for its role in daily life and its ability to provide energy and enjoyment. It's a simple yet satisfying habit that many find rewarding.\",\n  \"deletion_state\": \"active\",\n  \"trust_status\": \"user_asserted\",\n  \"session_id\": \"cc184011-30ad-46df-ada1-c1ab86e19a81\",\n  \"access_count\": 0,\n  \"last_accessed\": \"2026-11-13T20:58:06.593887+00:00\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "The memory \"I love drinking coffee\" has been successfully stored durably. This reflects a positive association with coffee as a comforting and energizing habit. Would you like to explore related topics or share additional memories?",
+      "thinking": "Okay, the user wanted to remember that they love drinking coffee. I used the remember function with the session ID and agent ID. The response from the tool shows that the memory was successfully stored with a node ID and a summary. The deletion state is active, meaning it's not yet deleted, and the trust status is user asserted, which means the user confirmed it. Now, I should let the user know that the memory was added and maybe offer further assistance. Since the user hasn't asked anything else, a simple confirmation should suffice. I should check if there's anything else they need, but keep it brief.\n"
+    },
+    {
+      "role": "system",
+      "content": "MNEMOSYNE context:\n{\n  \"session_id\": \"054a38fc-56b2-4e94-9dcb-8a07c320a69a\",\n  \"agent_id\": \"ollama-agent-b\",\n  \"parent_session_id\": \"cc184011-30ad-46df-ada1-c1ab86e19a81\",\n  \"existing\": false,\n  \"session\": null,\n  \"active_memories\": [],\n  \"parent_summary\": {\n    \"session_id\": \"cc184011-30ad-46df-ada1-c1ab86e19a81\",\n    \"session\": {\n      \"session_id\": \"cc184011-30ad-46df-ada1-c1ab86e19a81\",\n      \"status\": \"committed\",\n      \"committed_at\": \"2026-11-13T21:01:00.915121+00:00\",\n      \"committed_by\": \"ollama-agent-a\",\n      \"entity_ids\": [\n        \"422f9906-9356-4f8a-ab8a-b72cd1684043\"\n      ]\n    },\n    \"active_memories\": [\n      {\n        \"node_id\": \"422f9906-9356-4f8a-ab8a-b72cd1684043\",\n        \"content\": \"i love drinking coffee\",\n        \"summary\": \"This passion for coffee reflects a deep appreciation for its role in daily life and its ability to provide energy and enjoyment. It's a simple yet satisfying habit that many find rewarding.\",\n        \"deletion_state\": \"active\",\n        \"trust_status\": \"user_asserted\",\n        \"session_id\": \"cc184011-30ad-46df-ada1-c1ab86e19a81\",\n        \"access_count\": 0,\n        \"last_accessed\": \"2026-11-13T20:58:06.593887+00:00\"\n      }\n    ],\n    \"blocked_memory_ids\": [\n      \"01102045-c7fd-4e15-942b-314a431e02b4\",\n      \"0bf83e54-8d6f-4b31-b2d9-790d1965653b\",\n      \"0f20b43e-34fe-4336-8754-20c49b952555\",\n      \"11128324-0cd3-4a65-90fb-335033ea9a19\",\n      \"41982f86-8a12-4627-a403-ec2866a3e806\",\n      \"42da6a37-affa-4683-83d3-484f933dc52e\",\n      \"615cbf53-7c23-4235-8690-35d96fe24daf\",\n      \"63a46b94-b413-4387-bad6-04c270125fc5\",\n      \"7d07c2b5-8ca5-46fa-9978-94ba0b20969d\",\n      \"8d8776ca-d534-47f2-86dd-0a2b781886f2\",\n      \"98580e0a-e70b-47ec-a17d-9250aca8b005\",\n      \"e29dd5b3-d793-4dcb-b1a5-d9662aa1f800\",\n      \"e5714545-d150-42f3-afa0-ef461b9133cb\",\n      \"eeb9812c-f854-4f25-8817-a11428f03196\",\n      \"f65f9244-1a49-4110-93fb-15f6f65f6408\",\n      \"fdd4226c-9f37-4cba-819e-34366966894f\"\n    ],\n    \"last_audit_entry\": {\n      \"entry_id\": \"760dd298-08ec-4336-a3e3-0f9366db9fdc\",\n      \"event_id\": \"760dd298-08ec-4336-a3e3-0f9366db9fdc\",\n      \"operation\": \"graph_orphan_detected\",\n      \"node_id\": \"422f9906-9356-4f8a-ab8a-b72cd1684043\",\n      \"entity_id\": \"422f9906-9356-4f8a-ab8a-b72cd1684043\",\n      \"actor\": \"system\",\n      \"reason\": \"mutation\",\n      \"metadata\": {},\n      \"details\": {\n        \"orphan_type\": \"orphaned_session\",\n        \"method\": \"detection\",\n        \"confidence\": 1.0,\n        \"target_node_id\": null,\n        \"reason\": \"Entity belongs to vanished session 'cc184011-30ad-46df-ada1-c1ab86e19a81' and has no edges\",\n        \"actor\": \"graph_healer\",\n        \"timestamp\": \"2026-11-13T21:01:00.949791+00:00\"\n      },\n      \"prev_hash\": \"b173151b5ae93c046dc5ed9f0d464db4216fdab4047c7a9fe5bc17055d8b1b88\",\n      \"timestamp\": \"2026-11-13T21:01:00.949850+00:00\",\n      \"hash\": \"ec17dd1153ad7ffa572a2a9a83d0f87f70fdb2f6f60a96874e63c9c1029a7ccc\"\n    }\n  }\n}"
+    },
+    {
+      "role": "user",
+      "content": "what do i love drinking?"
+    },
+    {
+      "role": "assistant",
+      "content": "The memory confirms that you love drinking coffee, which provides energy and enjoyment. Would you like to explore related topics or share additional memories?",
+      "thinking": "Okay, the user is asking, \"what do i love drinking?\" Based on the context, they previously mentioned they love drinking coffee. Now they're asking about what they love drinking, which is a follow-up question.\n\nFirst, I need to recall the previous interaction. The user remembered that they love drinking coffee, and the assistant confirmed that. Now, the user is asking for what they love drinking, which is a bit redundant since they already stated they love coffee. But maybe they want to know more about the reasons or other beverages they might love.\n\nLooking at the tools available, the 'recall' function can be used to retrieve deletion-safe context. The session_id is \"cc184011-30ad-46df-ada1-c1ab86e19a81\", and the user's previous memory is stored with node_id \"422f9906-9356-4f8a-ab8a-b72cd1684043\". The recall function can fetch the summary again to confirm the details.\n\nThe summary from the previous response mentions that it's a simple yet satisfying habit, providing energy and enjoyment. So, the answer should reaffirm that they love coffee and perhaps mention the reasons why, like its role in daily life or the enjoyment it brings.\n\nSince the user is asking for what they love drinking, and they already stated coffee, the answer should be concise, confirming the preference and maybe adding a bit more context about why coffee is cherished. Also, the assistant should check if there's any other memory related to this, but based on the provided context, there's only the coffee memory. So, the response should be straightforward.\n"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "conversation_id": "demo-session-a",
+  "session_id": "b5f32195-b7e1-41d1-8b47-610f1843dcc0",
+  "agent_id": "ollama-agent-b",
+  "parent_session_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+  "model": "qwen3:1.7b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a local Ollama agent using MNEMOSYNE for durable memory. The runner has already initialized the MNEMOSYNE session. Use recall for context, remember durable facts, and commit_session before exit. Commit automatically runs the core dreaming consolidation; use dream_session when an explicit consolidation pass is needed."
+    },
+    {
+      "role": "system",
+      "content": "MNEMOSYNE context:\n{\n  \"session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\",\n  \"agent_id\": \"ollama-agent-a\",\n  \"parent_session_id\": null,\n  \"existing\": false,\n  \"session\": null,\n  \"active_memories\": [],\n  \"parent_summary\": null\n}"
+    },
+    {
+      "role": "user",
+      "content": "remember that i like apple"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Okay, the user wants to remember that they like apples. Let me check the available functions. There's the 'remember' function which stores durable memory. The parameters needed are content, session_id, and agent_id. The session_id and agent_id are provided in the MNEMOSYNE context. The user's message is \"remember that i like apple\", so the content should be \"I like apples\". I need to make sure to use the correct session_id and agent_id from the context. Since the existing field is false, it's a new session. I'll call the remember function with the content, session_id, and agent_id. No need for other functions here. Just store the memory.\n",
+      "tool_calls": [
+        {
+          "id": "call_hny9yu4q",
+          "function": {
+            "index": 0,
+            "name": "remember",
+            "arguments": {
+              "content": "I like apples",
+              "session_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+              "agent_id": "ollama-agent-a"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_name": "remember",
+      "content": "{\n  \"node_id\": \"ee2fa4b2-75af-42c5-af34-eb34c29419df\",\n  \"content\": \"I like apples\",\n  \"summary\": \"The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.\",\n  \"deletion_state\": \"active\",\n  \"trust_status\": \"user_asserted\",\n  \"session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\",\n  \"access_count\": 0,\n  \"last_accessed\": \"2026-11-13T21:48:59.982981+00:00\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "Your preference for apples has been recorded in the session. Apples are rich in vitamins and have a natural sweetness, making them a healthy choice! Would you like to consolidate this memory further or explore related topics?",
+      "thinking": "Okay, the user wanted to remember that they like apples. I used the remember function to store that in the session. The response from the tool shows the node ID and some details about the memory. Now, I need to confirm that the memory was successfully stored. The deletion state is active, which means it's still in the session and can be accessed later. The trust status is user_asserted, so it's based on the user's own assertion. I should let the user know that their preference was recorded and maybe mention the benefits of apples, like their nutritional value. Also, check if they need anything else related to their memory or if they want to consolidate it further. Since the tool response is successful, I can proceed to inform the user and offer further assistance.\n"
+    },
+    {
+      "role": "user",
+      "content": "what do i like?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Okay, the user is asking, \"what do i like?\" Let me think about how to approach this.\n\nFirst, I need to check the context. The previous interaction involved the user remembering they like apples. Now, they're asking about their preferences. Since the session is active and the memory about apples is still active, I should retrieve that information.\n\nThe function to use here would be 'recall' to get the deletion-safe context. The parameters needed are the session ID and a query. The session ID is known from the initial setup, which is \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\". The query should be \"what do i like?\".\n\nI need to make sure the recall function is called with the correct parameters. The response from the recall function will give back the memory details, which I can then present to the user. The user probably wants to know their preferences, so the answer should include the memory content and maybe some additional info about apples.\n\nWait, the previous remember function stored the content as \"I like apples\". So the recall should return that. The summary from the tool response says \"The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.\" So I can mention that.\n\nI should structure the response to inform the user of their preference and maybe add a friendly note about apples being healthy. Also, check if they want to consolidate this memory or explore more topics. But since the user just asked what they like, the main answer is their preference for apples.\n",
+      "tool_calls": [
+        {
+          "id": "call_srq6d0zo",
+          "function": {
+            "index": 0,
+            "name": "recall",
+            "arguments": {
+              "session_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca",
+              "query": "what do i like?"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_name": "recall",
+      "content": "{\n  \"answer\": \"The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.\",\n  \"memory_ids\": [\n    \"ee2fa4b2-75af-42c5-af34-eb34c29419df\"\n  ],\n  \"memories\": [\n    {\n      \"node_id\": \"ee2fa4b2-75af-42c5-af34-eb34c29419df\",\n      \"content\": \"I like apples\",\n      \"summary\": \"The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.\",\n      \"deletion_state\": \"active\",\n      \"trust_status\": \"user_asserted\",\n      \"session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\",\n      \"access_count\": 0,\n      \"last_accessed\": \"2026-11-13T21:48:59.982981+00:00\"\n    }\n  ],\n  \"tokens_used\": 17,\n  \"ranking_explanations\": [\n    {\n      \"node_id\": \"ee2fa4b2-75af-42c5-af34-eb34c29419df\",\n      \"source\": \"vector\",\n      \"reason\": \"semantic retrieval\"\n    }\n  ],\n  \"abstained\": false,\n  \"abstention_reason\": \"\",\n  \"session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "Your preference for apples is recorded in the session. Apples are rich in vitamins and have a natural sweetness\u2014great for a healthy snack! Would you like to consolidate this memory further or explore related topics?",
+      "thinking": "Okay, the user asked, \"what do i like?\" and I used the recall function to retrieve the memory. The response says the user prefers apples, which are rich in vitamins and sweet. So I need to present this information clearly.\n\nFirst, confirm the preference for apples. Then, add a note about their health benefits to make it helpful. Since the user might want to explore more, I can offer to consolidate this memory or discuss other topics. Make sure the tone is friendly and informative.\n"
+    },
+    {
+      "role": "system",
+      "content": "MNEMOSYNE context:\n{\n  \"session_id\": \"b5f32195-b7e1-41d1-8b47-610f1843dcc0\",\n  \"agent_id\": \"ollama-agent-b\",\n  \"parent_session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\",\n  \"existing\": false,\n  \"session\": null,\n  \"active_memories\": [],\n  \"parent_summary\": {\n    \"session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\",\n    \"session\": {\n      \"session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\",\n      \"status\": \"committed\",\n      \"committed_at\": \"2026-11-13T21:52:53.023598+00:00\",\n      \"committed_by\": \"ollama-agent-a\",\n      \"entity_ids\": [\n        \"ee2fa4b2-75af-42c5-af34-eb34c29419df\"\n      ]\n    },\n    \"active_memories\": [\n      {\n        \"node_id\": \"ee2fa4b2-75af-42c5-af34-eb34c29419df\",\n        \"content\": \"I like apples\",\n        \"summary\": \"The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.\",\n        \"deletion_state\": \"active\",\n        \"trust_status\": \"user_asserted\",\n        \"session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\",\n        \"access_count\": 0,\n        \"last_accessed\": \"2026-11-13T21:48:59.982981+00:00\"\n      }\n    ],\n    \"blocked_memory_ids\": [\n      \"01102045-c7fd-4e15-942b-314a431e02b4\",\n      \"0bf83e54-8d6f-4b31-b2d9-790d1965653b\",\n      \"0f20b43e-34fe-4336-8754-20c49b952555\",\n      \"11128324-0cd3-4a65-90fb-335033ea9a19\",\n      \"41982f86-8a12-4627-a403-ec2866a3e806\",\n      \"42da6a37-affa-4683-83d3-484f933dc52e\",\n      \"615cbf53-7c23-4235-8690-35d96fe24daf\",\n      \"63a46b94-b413-4387-bad6-04c270125fc5\",\n      \"7d07c2b5-8ca5-46fa-9978-94ba0b20969d\",\n      \"8d8776ca-d534-47f2-86dd-0a2b781886f2\",\n      \"98580e0a-e70b-47ec-a17d-9250aca8b005\",\n      \"e29dd5b3-d793-4dcb-b1a5-d9662aa1f800\",\n      \"e5714545-d150-42f3-afa0-ef461b9133cb\",\n      \"eeb9812c-f854-4f25-8817-a11428f03196\",\n      \"f65f9244-1a49-4110-93fb-15f6f65f6408\",\n      \"fdd4226c-9f37-4cba-819e-34366966894f\"\n    ],\n    \"last_audit_entry\": {\n      \"entry_id\": \"d1003f9a-b0bd-4aa7-8471-f030cbd310b7\",\n      \"event_id\": \"d1003f9a-b0bd-4aa7-8471-f030cbd310b7\",\n      \"operation\": \"graph_orphan_detected\",\n      \"node_id\": \"ee2fa4b2-75af-42c5-af34-eb34c29419df\",\n      \"entity_id\": \"ee2fa4b2-75af-42c5-af34-eb34c29419df\",\n      \"actor\": \"system\",\n      \"reason\": \"mutation\",\n      \"metadata\": {},\n      \"details\": {\n        \"orphan_type\": \"orphaned_session\",\n        \"method\": \"detection\",\n        \"confidence\": 1.0,\n        \"target_node_id\": null,\n        \"reason\": \"Entity belongs to vanished session '05edf4ab-dbf1-4d0b-8bda-ad9423f744ca' and has no edges\",\n        \"actor\": \"graph_healer\",\n        \"timestamp\": \"2026-11-13T21:52:53.059378+00:00\"\n      },\n      \"prev_hash\": \"b1bbbf5dfa5167f34c10ece7c0f3c9cb572c2b4d6929635deee7ef9cd91a132b\",\n      \"timestamp\": \"2026-11-13T21:52:53.059432+00:00\",\n      \"hash\": \"93acadee8adae32314c1f6038759165b2a4aeb0e442b9d32e4f86e1bd82f06b6\"\n    }\n  }\n}"
+    },
+    {
+      "role": "user",
+      "content": "recall what i like"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Okay, the user is asking to recall what they like. Let me check the context.\n\nEarlier, the user mentioned they like apples. The session has a memory entry with node_id \"ee2fa4b2-75af-42c5-af34-eb34c29419df\" containing \"I like apples\" and a summary about their nutritional value. The recall function was used before, and the response included that summary. Now, the user is asking to recall the same information again.\n\nI need to use the recall function again with the same query. The parameters are query \"what do i like?\" and session_id \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\". The previous response had the answer and the memory details. The user probably wants the same information presented again, maybe to confirm or to use it elsewhere.\n\nI should structure the tool call with the correct arguments. The function name is \"recall\", and the arguments are the query and session_id. The response will include the answer and the memory IDs, which I can then present back to the user in a friendly manner.\n",
+      "tool_calls": [
+        {
+          "id": "call_mesgo6qq",
+          "function": {
+            "index": 0,
+            "name": "recall",
+            "arguments": {
+              "query": "what do i like?",
+              "session_id": "05edf4ab-dbf1-4d0b-8bda-ad9423f744ca"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_name": "recall",
+      "content": "{\n  \"answer\": \"The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.\",\n  \"memory_ids\": [\n    \"ee2fa4b2-75af-42c5-af34-eb34c29419df\"\n  ],\n  \"memories\": [\n    {\n      \"node_id\": \"ee2fa4b2-75af-42c5-af34-eb34c29419df\",\n      \"content\": \"I like apples\",\n      \"summary\": \"The user expresses a preference for apples, which are rich in vitamins and have a sweet flavor.\",\n      \"deletion_state\": \"active\",\n      \"trust_status\": \"user_asserted\",\n      \"session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\",\n      \"access_count\": 0,\n      \"last_accessed\": \"2026-11-13T21:48:59.982981+00:00\"\n    }\n  ],\n  \"tokens_used\": 17,\n  \"ranking_explanations\": [\n    {\n      \"node_id\": \"ee2fa4b2-75af-42c5-af34-eb34c29419df\",\n      \"source\": \"vector\",\n      \"reason\": \"semantic retrieval\"\n    }\n  ],\n  \"abstained\": false,\n  \"abstention_reason\": \"\",\n  \"session_id\": \"05edf4ab-dbf1-4d0b-8bda-ad9423f744ca\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "Your preference for apples is recorded in the session. Apples are rich in vitamins and have a natural sweetness\u2014great for a healthy snack! Would you like to consolidate this memory further or explore related topics?",
+      "thinking": "Okay, the user is asking to recall what they like. From the previous interaction, I know that the user mentioned liking apples. The session has a memory entry with the content \"I like apples\" and a summary about their nutritional value. The recall function was used before, and the response included that information.\n\nNow, the user is asking again to recall this information. I need to make sure to present the answer clearly. The answer from the tool response is that the user expresses a preference for apples, which are rich in vitamins and have a sweet flavor. The memory IDs are listed, but the user might just want the main point.\n\nI should format the response in a friendly way, maybe starting with confirming the preference for apples, then mentioning the nutritional benefits. Also, check if there's any need to suggest further actions, like consolidating the memory or exploring related topics. Since the user hasn't asked for a specific action, just recalling, I'll keep it straightforward but helpful.\n"
+    }
+  ]
+}
