@@ -69,9 +69,10 @@ class AgentA:
         self.dreaming = HonchoDreaming()
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0,
-                 trust_status="user_asserted", context_id=None, entity_refs=None):
-        source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
-                  "timestamp": datetime.now(timezone.utc).isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
+                 trust_status="user_asserted", context_id=None, entity_refs=None, source=None, **kwargs):
+        if source is None:
+            source = {"type": source_type, "session_id": session_id, "turn_index": turn_index,
+                      "timestamp": datetime.now(timezone.utc).isoformat() + "Z", "raw_reference": f"{session_id}_turn_{turn_index}"}
         properties = {}
         if context_id:
             properties["erasure_context_id"] = context_id
@@ -214,14 +215,15 @@ class AgentA:
             return {"answer": "Retrieval error.", "sources": [], "tokens_used": 0, "ranking_explanations": [], "abstained": True, "reason": str(error)}
         return {"answer": context.text, "sources": [entity.node_id for entity in context.entities], "tokens_used": context.token_count, "ranking_explanations": context.ranking_explanations, "abstained": not bool(context.entities)}
 
-    def forget(self, node_id, reason="user_requested_erasure", deleted_by="user", context_id=None, entity_refs=None):
+    def forget(self, node_id, reason="user_requested_erasure", deleted_by="user", context_id=None, entity_refs=None, actor=None, **kwargs):
+        actor_name = actor or deleted_by
         report = self.erasure.delete(
             node_id,
             self.vector_store,
             self.graph,
             self.hash_chain,
             reason=reason,
-            deleted_by=deleted_by,
+            deleted_by=actor_name,
             filesystem_store=self.filesystem_memory,
             semantic_cleanup=True,
             context_id=context_id,
