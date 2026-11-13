@@ -135,9 +135,13 @@ class AgentA:
         session = self.sessions.commit_session(session_id, entity_ids, actor)
         self.hash_chain.append("session_commit", session_id, {**session, "reason": reason})
         self.graph_healer.heal_orphans(session_id=session_id)
-        session["dreaming"] = self.dream_session(
+        dreaming_report = self.dream_session(
             session_id, actor=actor, reason="after_session_commit"
         )
+        session["dreaming"] = dreaming_report
+        if hasattr(self.sessions, "_sessions") and session_id in self.sessions._sessions:
+            self.sessions._sessions[session_id]["dreaming"] = dreaming_report
+            self.sessions._persist()
         return session
 
     def dream_session(self, session_id, actor="honcho", reason="dreaming_consolidation", token_budget=256):

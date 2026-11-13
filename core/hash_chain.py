@@ -35,7 +35,21 @@ class HashChain:
             tmp_path = self.log_path + ".tmp"
             with open(tmp_path, "w", encoding="utf-8") as f:
                 json.dump(self.entries, f, indent=2)
-            os.replace(tmp_path, self.log_path)
+            try:
+                os.replace(tmp_path, self.log_path)
+            except OSError:
+                import time
+                time.sleep(0.01)
+                try:
+                    os.replace(tmp_path, self.log_path)
+                except OSError:
+                    with open(self.log_path, "w", encoding="utf-8") as f:
+                        json.dump(self.entries, f, indent=2)
+                    if os.path.exists(tmp_path):
+                        try:
+                            os.remove(tmp_path)
+                        except OSError:
+                            pass
             return entry
 
     def verify_integrity(self):
