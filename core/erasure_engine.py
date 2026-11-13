@@ -1,8 +1,9 @@
-import hashlib, json, os
+import hashlib, json, os, re, threading
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from typing import Literal
 from .residual_risk import ResidualRisk
+from .erasure_journal import ErasureJournal
 
 @dataclass
 class LevelResult:
@@ -27,8 +28,10 @@ class ErasureReport:
 
 class ErasureEngine:
     _model = None
-    def __init__(self, blocked_set_path="data/blocked_inference.json"):
+    _mutation_lock = threading.RLock()
+    def __init__(self, blocked_set_path="data/blocked_inference.json", journal_path="data/erasure_journal.json"):
         self.blocked_set_path = blocked_set_path; self.blocked_ids = set()
+        self.journal = ErasureJournal(journal_path)
         if os.path.exists(blocked_set_path):
             with open(blocked_set_path, encoding="utf-8") as f: self.blocked_ids = set(json.load(f))
     def _save_blocked_set(self):
@@ -46,7 +49,20 @@ class ErasureEngine:
                             ("sk-" in a.lower() or "api key" in a.lower()) and
                             ("sk-" in b.lower() or "api key" in b.lower()))
         return max(cosine, 0.80 if security_overlap else 0.0)
-    def delete(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested_erasure", deleted_by="user"):
+    def delete(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested_erasure", deleted_by="user", filesystem_store=None, semantic_cleanup=False):
+        """Serialize deletion mutations within a process."""
+        with self._mutation_lock:
+            operation_id = self.journal.begin(node_id, deleted_by, reason)
+            try:
+                self.journal.advance(operation_id, "mutating")
+                report = self._delete_unlocked(node_id, vector_store, graph_store, hash_chain, reason, deleted_by, filesystem_store, semantic_cleanup)
+                self.journal.complete(operation_id, report.verdict)
+                return report
+            except Exception as error:
+                self.journal.advance(operation_id, "failed", {"error": str(error)})
+                raise
+
+    def _delete_unlocked(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested_erasure", deleted_by="user", filesystem_store=None, semantic_cleanup=False):
         node = graph_store.get_node(node_id); levels=[]
         timestamp = datetime.now(timezone.utc).isoformat()
         entity_type = getattr(node, "entity_type", "memory") if node else "memory"
@@ -66,7 +82,8 @@ class ErasureEngine:
             vector_store.remove_from_active_index(node_id)
         hash_chain.append("delete_level_1", node_id, {"action":"source_removed", "actor":deleted_by, "reason":reason, "timestamp":timestamp}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=1, level_name="Source Record Removed", status="passed" if node else "failed", details="Source record removed from active store and index.", evidence={"vector_store_cleared": bool(node), "graph_deletion_state": "source_removed" if node else None}))
-        descendants=graph_store.get_descendants(node_id); invalidated=[]; failed=[]
+        descendant_fn = getattr(graph_store, "get_derived_descendants", graph_store.get_descendants)
+        descendants=descendant_fn(node_id); invalidated=[]; failed=[]
         for cid in descendants:
             child=graph_store.get_node(cid)
             if child: child.transition("invalidated", deleted_by, f"derived from deleted entity: {reason}"); vector_store.remove_from_active_index(cid); invalidated.append(cid)
@@ -87,12 +104,25 @@ class ErasureEngine:
             candidates.extend(candidate for candidate in graph_candidates if candidate.node_id not in seen_ids)
         except Exception:
             if not candidates: candidates=[]
+        semantic_invalidated = []
         for n in candidates:
             if n.node_id == node_id: continue
             sim=self._similar(original_content, n.content)
-            if sim > .75: risks.append(ResidualRisk(risk_type="semantic_neighbor_proximity", cluster=n.node_id, description=f"Deleted content may be partially reconstructable from {n.node_id} (similarity {sim:.2f}); related content: {n.content}", severity="high" if sim>.85 else "medium", affected_node_ids=[n.node_id]))
+            if sim > .75:
+                sensitive_tokens = [token.strip(".,;:()[]{}") for token in original_content.split() if ("@" in token or "sk-" in token or (len(token) >= 8 and any(char.isdigit() for char in token) and any(char.isalpha() for char in token)))]
+                exact_sensitive_overlap = any(token and token in n.content for token in sensitive_tokens)
+                if semantic_cleanup and exact_sensitive_overlap:
+                    n.transition("invalidated", deleted_by, f"semantic dependent of deleted entity: {reason}")
+                    n.content = n.summary_l0 = n.summary_l1 = n.content_l2 = ""
+                    n.properties = {}
+                    if hasattr(vector_store, "remove"): vector_store.remove(n.node_id)
+                    if hasattr(graph_store, "remove_entity_edges"): graph_store.remove_entity_edges(n.node_id)
+                    if filesystem_store is not None and hasattr(filesystem_store, "delete_entity"): filesystem_store.delete_entity(n.node_id)
+                    semantic_invalidated.append(n.node_id)
+                else:
+                    risks.append(ResidualRisk(risk_type="semantic_neighbor_proximity", cluster=n.node_id, description=f"Deleted content may be partially reconstructable from {n.node_id} (similarity {sim:.2f}); related content: {n.content}", severity="high" if sim>.85 else "medium", affected_node_ids=[n.node_id]))
         hash_chain.append("delete_level_4", node_id, {"risks_found":len(risks)}, actor="agent", reason="erasure_request")
-        levels.append(LevelResult(level_number=4, level_name="Non-Inferability Checked", status="partial" if risks else "passed", details="No semantic neighbors above threshold." if not risks else f"{len(risks)} semantic neighbor(s) may partially reconstruct the deleted content.", evidence={"neighbors_checked":len(candidates),"risks_found":len(risks),"risks":[asdict(r) for r in risks]}))
+        levels.append(LevelResult(level_number=4, level_name="Non-Inferability Checked", status="partial" if risks else "passed", details="No unresolved semantic neighbors above threshold." if not risks else f"{len(risks)} semantic neighbor(s) may partially reconstruct the deleted content.", evidence={"neighbors_checked":len(candidates),"risks_found":len(risks),"risks":[asdict(r) for r in risks],"semantic_invalidated":semantic_invalidated}))
         st5="failed" if descendants else "passed"; detail5=(f"LLM consolidation is non-deterministic. {len(descendants)} derived artifacts were generated from the deleted content and cannot be deterministically reversed. Return to 'never-written' state is not guaranteed." if descendants else "No derived artifacts were generated; state restoration is possible.")
         hash_chain.append("delete_level_5", node_id, {"non_reversible_artifacts":descendants}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=5, level_name="State Restoration Checked", status=st5, details=detail5, evidence={"non_reversible_artifacts":descendants}))
@@ -114,6 +144,8 @@ class ErasureEngine:
                 graph_store.remove_entity_edges(node_id)
             elif hasattr(graph_store, "graph") and graph_store.graph.has_node(node_id):
                 graph_store.graph.remove_edges_from(list(graph_store.graph.in_edges(node_id)) + list(graph_store.graph.out_edges(node_id)))
+            if filesystem_store is not None and hasattr(filesystem_store, "delete_entity"):
+                filesystem_store.delete_entity(node_id)
         for cid in invalidated:
             child = graph_store.get_node(cid)
             if child:
@@ -124,15 +156,23 @@ class ErasureEngine:
                 child.properties = {}
                 if hasattr(vector_store, "remove"):
                     vector_store.remove(cid)
+                if filesystem_store is not None and hasattr(filesystem_store, "delete_entity"):
+                    filesystem_store.delete_entity(cid)
         # Persist graph state so deletion_state survives restart
+        persistence_error = None
         if hasattr(graph_store, "persist"):
             try:
                 graph_store.persist()
             except Exception as e:
-                pass  # do not fail deletion if persistence has an issue
+                persistence_error = str(e)
         elif hasattr(graph_store, "save"):
             try:
                 graph_store.save()
             except Exception as e:
-                pass
+                persistence_error = str(e)
+        if persistence_error:
+            levels[0].status = "partial"
+            levels[0].details += f" Graph persistence failed: {persistence_error}"
+            hash_chain.append("deletion_persistence_failed", node_id, {"error": persistence_error}, actor="agent", reason="erasure_request")
+            report.verdict = "failed"
         return report

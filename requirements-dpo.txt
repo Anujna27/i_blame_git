@@ -1,0 +1,12 @@
+# PyTorch must be installed for the local CUDA version first:
+# https://pytorch.org/get-started/locally/
+# On Windows, re-assert the CUDA Torch wheel after this file is installed;
+# see docs/FINETUNE_DPO.md. Do not rely on the generic resolver for Torch.
+unsloth
+transformers>=4.45
+trl>=0.12
+datasets>=2.20
+accelerate>=0.34
+bitsandbytes>=0.43
+laya
+faiss-cpu

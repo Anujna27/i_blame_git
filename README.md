@@ -227,6 +227,20 @@ $env:MNEMOSYNE_LLM_MODEL = "llama-3.1-8b-instant"
 $env:GROQ_API_KEY = "your-groq-api-key"
 ```
 
+For a local Ollama demo, start Ollama and pull a model:
+
+```powershell
+ollama pull llama3.2:3b
+$env:MNEMOSYNE_LLM_PROVIDER = "ollama"
+$env:MNEMOSYNE_LLM_MODEL = "llama3.2:3b"
+# Optional remote Ollama endpoint:
+# $env:MNEMOSYNE_LLM_BASE_URL = "http://127.0.0.1:11434/v1"
+```
+
+Ollama is local and does not require an API key. The adapter uses its
+OpenAI-compatible `/v1` endpoint. Set `MNEMOSYNE_LLM_PROVIDER=none` to run
+without LLM calls.
+
 The default Groq endpoint is `https://api.groq.com/openai/v1`. Override it with `MNEMOSYNE_LLM_BASE_URL` if needed. When using Groq, configure `GROQ_API_KEY`; when using OpenAI or another compatible endpoint, configure `OPENAI_API_KEY`.
 
 The optional Python SDK must be installed in the active environment:
@@ -277,6 +291,22 @@ Benchmark hybrid retrieval:
 python scripts/benchmark_retrieval.py --sessions 30 --token-budget 500
 ```
 
+Benchmark end-to-end deletion completion over an isolated synthetic corpus:
+
+```powershell
+python scripts/benchmark_deletion_rate.py --count 1000
+```
+
+The benchmark creates a target, a derived child, an unrelated entity, and filesystem-memory records for every request in a temporary directory. It simulates a restart and counts a request as successful only when the target and derived records are non-active in the graph, absent from vectors, redacted from filesystem memory, inference-blocked, auditable, and unrelated data remains available. It compares this strict operational rate with the 1.5% benchmark baseline. Use `--count 1000` for a larger run. The benchmark does not modify the repository's normal `data/` stores.
+
+Simulate a realistic customer account-erasure request:
+
+```powershell
+python scripts/simulate_real_life_deletion.py
+```
+
+This creates a customer profile, preferences, purchase history, a derived support summary, and an unrelated second customer. It then deletes the first customer's profile and prints the deletion report plus a post-erasure inventory. The expected result is that the first customer's records are non-active, redacted, and absent from the vector store, while the unrelated customer's record remains active. A `partially_deleted` verdict is expected when derived history prevents a literal return to a never-written state; this is distinct from failure to remove active records.
+
 LLM usage telemetry is available from an `AgentA` instance:
 
 ```python
@@ -284,3 +314,44 @@ agent.llm_telemetry()
 ```
 
 It reports provider, model, calls, failures, and token counts without exposing credentials.
+
+## Preference fine-tuning (Path B)
+
+The synthetic compaction corpus can be used for DPO fine-tuning of a causal
+multilingual model. The recommended small baseline is
+`Qwen/Qwen2.5-1.5B-Instruct`; `convaiinnovations/laya-multilingual` is a
+classification model and is not a direct DPO generation target. See
+[docs/FINETUNE_DPO.md](docs/FINETUNE_DPO.md) for environment setup, a
+dataset-only validation command, a 10-step GPU smoke run, and the full
+1,920-example training command.
+
+## RLHF and Honcho dreaming
+
+The training/runtime layers are:
+
+```text
+Qwen DPO adapter -> policy/generator
+Laya gate        -> local reward and accept/escalate decision
+GRPO             -> online RLHF-style policy update using Laya rewards
+Honcho dreaming  -> session consolidation and LLM escalation
+```
+
+Train the Laya gate:
+
+```powershell
+$env:HF_HUB_DISABLE_XET = "1"
+.\.venv-dpo\Scripts\python.exe scripts/finetune_laya_gate.py --epochs 1 --output-dir outputs/laya-mnemosyne-gate
+```
+
+Run an online RLHF smoke update:
+
+```powershell
+.\.venv-dpo\Scripts\python.exe scripts/rlhf_grpo_compaction.py --max-train-samples 8 --max-steps 2 --output-dir outputs/mnemosyne-rlhf-grpo
+```
+
+`AgentA.dream_session(session_id)` consolidates active session entities. Laya
+accepts supported candidates locally; unsupported or low-confidence candidates
+are escalated to the configured LLM. Accepted or LLM-resolved summaries are
+stored as derived entities with `DERIVED_FROM` edges and hash-chain records.
+If Laya is unavailable, the system escalates and does not silently persist the
+candidate.

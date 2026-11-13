@@ -487,6 +487,28 @@ class KnowledgeGraph:
     def get_descendants(self, node_id: str) -> list[str]:
         return list(nx.descendants(self.graph, node_id)) if node_id in self.graph else []
 
+    def get_derived_descendants(self, node_id: str) -> list[str]:
+        """Return only nodes explicitly derived from the source.
+
+        RELATED_TO, CO_OCCURRED_IN_SESSION, and other associative edges must
+        not cause collateral deletion.
+        """
+        if node_id not in self.graph:
+            return []
+        derived = {"DERIVED_FROM", "DERIVED"}
+        found, queue = [], [node_id]
+        seen = {node_id}
+        while queue:
+            parent = queue.pop(0)
+            for _, child, attrs in self.graph.out_edges(parent, data=True):
+                relationship = str(attrs.get("relationship", attrs.get("type", attrs.get("edge_type", "")))).upper()
+                if relationship not in derived or child in seen:
+                    continue
+                seen.add(child)
+                found.append(child)
+                queue.append(child)
+        return found
+
     def get_ancestors(self, node_id: str) -> list[str]:
         return list(nx.ancestors(self.graph, node_id)) if node_id in self.graph else []
 
