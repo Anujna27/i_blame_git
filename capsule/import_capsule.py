@@ -13,11 +13,12 @@ class CapsuleImporter:
         if not valid:
             raise ValueError(f"Capsule validation failed for target {target_agent}: {errors}")
         deleted = capsule["deletion_audit"]["deleted_nodes"]
+        blocked_inference = set(capsule.get("deletion_audit", {}).get("blocked_inference_ids", []))
         lifecycle_history = capsule.get("lifecycle_history", {})
         nodes = []
         for node_dict in capsule["memory_nodes"]:
             node = MemoryNode.from_jsonld(node_dict)
-            if node.node_id in deleted or node.deletion_state != "active":
+            if node.node_id in deleted or node.node_id in blocked_inference or node.deletion_state != "active":
                 node.is_blocked = True
             if node.node_id in lifecycle_history:
                 setattr(node, "lifecycle", lifecycle_history[node.node_id])
@@ -27,4 +28,5 @@ class CapsuleImporter:
                        "audit_entries": capsule.get("hash_chain", {}).get("entries", []),
                        "source_agent": capsule["source_agent"],
                        "session_commits": capsule.get("session_commits", {}),
-                       "graph": capsule.get("derivation_graph", {})}
+                       "graph": capsule.get("derivation_graph", {}),
+                       "vector_snapshot": capsule.get("vector_snapshot")}

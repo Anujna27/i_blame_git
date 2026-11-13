@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "instances": 102,
+    "passed": 102,
+    "rpr_percent": 100.0,
+    "per_type": {
+      "F1 (Factual)": {
+        "passed": 17,
+        "total": 17,
+        "rpr_percent": 100.0
+      },
+      "F2 (Compositional)": {
+        "passed": 17,
+        "total": 17,
+        "rpr_percent": 100.0
+      },
+      "F3 (Semantic Category)": {
+        "passed": 17,
+        "total": 17,
+        "rpr_percent": 100.0
+      },
+      "F4 (Inferential)": {
+        "passed": 17,
+        "total": 17,
+        "rpr_percent": 100.0
+      },
+      "F5 (Temporal)": {
+        "passed": 17,
+        "total": 17,
+        "rpr_percent": 100.0
+      },
+      "F6 (Replacement)": {
+        "passed": 17,
+        "total": 17,
+        "rpr_percent": 100.0
+      }
+    },
+    "semantic_leaks": 0,
+    "semantic_leak_rate_percent": 0.0,
+    "forget_only": 0,
+    "preservation_only": 0,
+    "both": 0,
+    "baseline_percent": 1.5
+  },
+  "leaks": []
+}

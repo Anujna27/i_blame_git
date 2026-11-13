@@ -123,6 +123,17 @@ class VectorStore:
         self._records[node_id]["active"] = False
         self._persist()
 
+    def export_snapshot(self) -> dict:
+        """Export rebuildable FAISS metadata and embeddings for capsule portability."""
+        return {"dim": self.dim, "id_order": list(self._id_order), "records": self._records}
+
+    def import_snapshot(self, snapshot: dict) -> None:
+        self.dim = int(snapshot.get("dim", self.dim))
+        self._id_order = list(snapshot.get("id_order", []))
+        self._records = dict(snapshot.get("records", {}))
+        self._rebuild_index()
+        self._persist()
+
     def get_by_id(self, node_id: str) -> Optional[MemoryNode]:
         """Fetch a MemoryNode by its ID, or return None if absent."""
         rec = self._records.get(node_id)

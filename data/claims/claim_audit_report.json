@@ -1,0 +1,300 @@
+{
+  "timestamp": "2026-11-12T19:44:19.242478+00:00",
+  "commit": "316f12d",
+  "python_version": "3.14.6",
+  "context": {
+    "claims_only": false,
+    "adversarial_only": false,
+    "claim": null,
+    "adversarial": null,
+    "node_count": 1,
+    "sessions": 30,
+    "token_budget": 200,
+    "seed": 42,
+    "heal_threshold": 0.75,
+    "list": false,
+    "output": "both",
+    "quiet": true
+  },
+  "claims": [
+    {
+      "name": "Five-level erasure runs correctly on all scenarios",
+      "status": "PASS",
+      "details": "five-level report evaluated",
+      "evidence": {
+        "levels": 5,
+        "verdict": "partially_deleted"
+      },
+      "error": null
+    },
+    {
+      "name": "Deletion state survives restart",
+      "status": "PASS",
+      "details": "reload checked",
+      "evidence": {
+        "parent_state": "source_removed",
+        "child_state": "invalidated",
+        "hash_ok": true
+      },
+      "error": null
+    },
+    {
+      "name": "Hash chain detects tampering",
+      "status": "PASS",
+      "details": "in-memory tamper checked",
+      "evidence": {
+        "original_ok": true,
+        "post_tamper_ok": false
+      },
+      "error": null
+    },
+    {
+      "name": "Capsule export preserves deletion state",
+      "status": "PASS",
+      "details": "capsule deletion state checked",
+      "evidence": {
+        "parent_blocked": true,
+        "child_state": "invalidated"
+      },
+      "error": null
+    },
+    {
+      "name": "Capsule import preserves residual risks",
+      "status": "PASS",
+      "details": "residual-risk registry compared",
+      "evidence": {
+        "original_risk_count": 1,
+        "imported_risk_count": 1,
+        "match": true
+      },
+      "error": null
+    },
+    {
+      "name": "Session commit auto-triggers healing",
+      "status": "PASS",
+      "details": "healing checked",
+      "evidence": {
+        "isolated_before": 1,
+        "isolated_after": 1,
+        "quarantined": 1
+      },
+      "error": null
+    },
+    {
+      "name": "Vector retrieval respects trust filter",
+      "status": "PASS",
+      "details": "trust ordering checked",
+      "evidence": {
+        "verified_rank": 0,
+        "planted_returned": true
+      },
+      "error": null
+    },
+    {
+      "name": "Token budget is respected",
+      "status": "PASS",
+      "details": "bounded active context checked",
+      "evidence": {
+        "budget": 200,
+        "actual_tokens": 100
+      },
+      "error": null
+    },
+    {
+      "name": "Contradiction detection returns both nodes",
+      "status": "PASS",
+      "details": "contradiction engine checked",
+      "evidence": {
+        "conflict_detected": true
+      },
+      "error": null
+    },
+    {
+      "name": "Abstention triggers on insufficient evidence",
+      "status": "PASS",
+      "details": "I don't have verified information about unknown fact. No relevant memories were retrieved.",
+      "evidence": {
+        "abstained": true,
+        "reason": "I don't have verified information about unknown fact. No relevant memories were retrieved."
+      },
+      "error": null
+    },
+    {
+      "name": "Lifecycle audit records who/what/when/why",
+      "status": "PASS",
+      "details": "audit entry checked",
+      "evidence": {
+        "entry": {
+          "entry_id": "b017bb00-f74e-4a1d-9224-622d2b1291ad",
+          "event_id": "b017bb00-f74e-4a1d-9224-622d2b1291ad",
+          "operation": "deletion_completed",
+          "node_id": "69c45427-7569-4258-8a4d-758fb1afa722",
+          "entity_id": "69c45427-7569-4258-8a4d-758fb1afa722",
+          "actor": "agent",
+          "reason": "erasure_request",
+          "metadata": {},
+          "details": {
+            "verdict": "fully_deleted",
+            "signature": "b1a5ac1e2f9fc99e1001f26403a746492df6e1a3bdbcff27d4504d4deb36bbd4",
+            "actor": "alice",
+            "reason": "GDPR request",
+            "content_digest": "b19b2022fbca5eebe2f23af94ff755f30bbd176d59e5e1c746e11b0adde61a7a",
+            "content_redacted": true
+          },
+          "prev_hash": "b4aa1f5d8aaf7e6742a86e5f0f06bc4e6e43beca3e17a5f438e5a1c136243293",
+          "timestamp": "2026-11-12T19:44:18.325524+00:00",
+          "hash": "e87b8a1cffdd0333348cc5b6416ffe60523e2ffda0e3a6d81cd60c41bbba6b4f"
+        },
+        "has_actor": true,
+        "has_reason": true,
+        "has_timestamp": true
+      },
+      "error": null
+    },
+    {
+      "name": "Legacy capsules import correctly",
+      "status": "PASS",
+      "details": "legacy capsule imported",
+      "evidence": {
+        "import_ok": true,
+        "node_count": 1,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "name": "30 sessions survive restart",
+      "status": "PASS",
+      "details": "sessions reloaded",
+      "evidence": {
+        "sessions_written": 30,
+        "sessions_reloaded": 30,
+        "hash_ok": true
+      },
+      "error": null
+    },
+    {
+      "name": "Cross-agent hand-over mid-task preserves task state",
+      "status": "PASS",
+      "details": "task capsule checked",
+      "evidence": {
+        "task_context_preserved": true,
+        "memories_preserved": 2,
+        "deleted_blocked": true
+      },
+      "error": null
+    }
+  ],
+  "adversarial": [
+    {
+      "name": "Adversarial: Import broken capsule",
+      "status": "PASS",
+      "details": "broken capsule rejected",
+      "evidence": {
+        "rejected": true
+      },
+      "error": null
+    },
+    {
+      "name": "Adversarial: Delete missing node",
+      "status": "PASS",
+      "details": "missing deletion checked",
+      "evidence": {
+        "verdict": "failed",
+        "level_1": "failed"
+      },
+      "error": null
+    },
+    {
+      "name": "Adversarial: Delete twice",
+      "status": "PASS",
+      "details": "double deletion checked",
+      "evidence": {
+        "second_verdict": "failed",
+        "hash_ok": true
+      },
+      "error": null
+    },
+    {
+      "name": "Contradiction detection returns both nodes",
+      "status": "PASS",
+      "details": "contradiction engine checked",
+      "evidence": {
+        "conflict_detected": true
+      },
+      "error": null
+    },
+    {
+      "name": "Abstention triggers on insufficient evidence",
+      "status": "PASS",
+      "details": "I don't have verified information about unknown fact. No relevant memories were retrieved.",
+      "evidence": {
+        "abstained": true,
+        "reason": "I don't have verified information about unknown fact. No relevant memories were retrieved."
+      },
+      "error": null
+    },
+    {
+      "name": "Vector retrieval respects trust filter",
+      "status": "PASS",
+      "details": "trust ordering checked",
+      "evidence": {
+        "verified_rank": 0,
+        "planted_returned": true
+      },
+      "error": null
+    },
+    {
+      "name": "Abstention triggers on insufficient evidence",
+      "status": "PASS",
+      "details": "I don't have verified information about unknown fact. No relevant memories were retrieved.",
+      "evidence": {
+        "abstained": true,
+        "reason": "I don't have verified information about unknown fact. No relevant memories were retrieved."
+      },
+      "error": null
+    },
+    {
+      "name": "Deletion state survives restart",
+      "status": "PASS",
+      "details": "reload checked",
+      "evidence": {
+        "parent_state": "source_removed",
+        "child_state": "invalidated",
+        "hash_ok": true
+      },
+      "error": null
+    },
+    {
+      "name": "Hash chain detects tampering",
+      "status": "PASS",
+      "details": "in-memory tamper checked",
+      "evidence": {
+        "original_ok": true,
+        "post_tamper_ok": false
+      },
+      "error": null
+    },
+    {
+      "name": "Token budget is respected",
+      "status": "PASS",
+      "details": "bounded active context checked",
+      "evidence": {
+        "budget": 10,
+        "actual_tokens": 0
+      },
+      "error": null
+    }
+  ],
+  "summary": {
+    "claims_total": 14,
+    "claims_passed": 14,
+    "claims_failed": 0,
+    "claims_skipped": 0,
+    "adversarial_total": 10,
+    "adversarial_passed": 10,
+    "adversarial_failed": 0,
+    "adversarial_skipped": 0,
+    "overall_status": "GREEN"
+  }
+}

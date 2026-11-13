@@ -4,3 +4,7 @@ chromadb
 rich
 pytest
 streamlit
+openai
+beautifulsoup4
+fastapi
+uvicorn

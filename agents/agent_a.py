@@ -14,6 +14,13 @@ from agents.blocked_loader import load_blocked_ids
 from stores.session_store import SessionStore
 from core.active_context import ActiveContext, ContextBuilder
 from core.healing_scheduler import HealingScheduler
+from core.entity_extractor import EntityExtractor
+from core.summary_generator import SummaryGenerator
+from stores.filesystem_memory import FilesystemMemory
+from core.llm_config import ConfiguredLLM
+from core.graph_healer import GraphHealer
+from core.erasure_recovery import ErasureRecovery
+from core.dreaming import HonchoDreaming
 
 
 class AgentA:
@@ -44,6 +51,8 @@ class AgentA:
 
         self.erasure_engine = self.erasure
         self.graph_store = self.graph
+        self.pending_erasures = self.erasure.journal.pending() if hasattr(self.erasure, "journal") and hasattr(self.erasure.journal, "pending") else []
+        self.erasure_recovery = ErasureRecovery(self.erasure)
         self.contradiction = ContradictionEngine()
         self.abstention = AbstentionEngine()
         self.residual_risks = []
@@ -51,6 +60,13 @@ class AgentA:
         self.last_report = None
         self.sessions = self.session_store
         self.healing_scheduler = HealingScheduler(self.build_knowledge_graph)
+        self.llm = ConfiguredLLM()
+        self.entity_extractor = EntityExtractor(self.llm if self.llm.enabled else None)
+        self.summary_generator = SummaryGenerator(self.llm if self.llm.enabled else None)
+        self.filesystem_memory = FilesystemMemory()
+        self.graph_healer = GraphHealer(self.graph, self.vector_store, self.hash_chain,
+                                        llm_suggester=self.llm.suggest_link if self.llm.enabled else None)
+        self.dreaming = HonchoDreaming()
 
     def remember(self, content, source_type="conversation_turn", session_id="sess_001", turn_index=0, trust_status="user_asserted", source=None, **kwargs):
         if source is None:
@@ -72,6 +88,8 @@ class AgentA:
                 if "raw_reference" not in source:
                     source["raw_reference"] = f"{session_id}_turn_{turn_index}"
         node = MemoryNode(content=content, source=source, session_id=session_id, trust_status=trust_status)
+        summaries = self.summary_generator.generate(content)
+        node.summary_l0, node.summary_l1, node.content_l2 = summaries["l0"], summaries["l1"], summaries["l2"]
         try:
             conflicts = self.contradiction.detect(node, self.graph.get_all_active_nodes())
             if conflicts:
@@ -114,10 +132,53 @@ class AgentA:
 
     def commit_session(self, session_id, actor="harness", reason="session_end"):
         entity_ids = [node.node_id for node in self.all_nodes.values() if node.session_id == session_id]
+        session_nodes = [self.all_nodes[node_id] for node_id in entity_ids if node_id in self.all_nodes]
+        self.entity_extractor.extract([node.content for node in session_nodes])
+        for node in session_nodes:
+            self.filesystem_memory.write_entity(node)
         session = self.sessions.commit_session(session_id, entity_ids, actor)
         self.hash_chain.append("session_commit", session_id, {**session, "reason": reason})
-        self.graph.heal_orphans(actor=actor, vector_store=self.vector_store, hash_chain=self.hash_chain)
+        self.graph_healer.heal_orphans(session_id=session_id)
         return session
+
+    def dream_session(self, session_id, actor="honcho", reason="dreaming_consolidation", token_budget=256):
+        """Run local Laya gating, escalate ambiguity to the configured LLM, and persist accepted memory."""
+        source_nodes = [node for node in self.all_nodes.values()
+                        if node.session_id == session_id and node.deletion_state == "active"]
+        decision = self.dreaming.consolidate(source_nodes, llm=self.llm if self.llm.enabled else None,
+                                             token_budget=token_budget)
+        report = decision.to_dict()
+        report["session_id"] = session_id
+        report["source_node_ids"] = [node.node_id for node in source_nodes]
+        if decision.action not in {"accept", "resolved_by_llm"} or not decision.candidate.strip():
+            return report
+
+        source = {"type": "dreaming_summary", "session_id": session_id,
+                  "source_node_ids": report["source_node_ids"],
+                  "actor": actor, "reason": reason}
+        summary = self.summary_generator.generate(decision.candidate)
+        node = MemoryNode(content=decision.candidate, source=source, session_id=session_id,
+                          trust_status="derived", entity_type="dream_summary",
+                          properties={"dreaming_decision": report})
+        node.summary_l0, node.summary_l1, node.content_l2 = summary["l0"], summary["l1"], summary["l2"]
+        self.vector_store.add(node)
+        self.graph.add_node(node)
+        self.all_nodes[node.node_id] = node
+        for parent in source_nodes:
+            self.graph.add_edge(parent.node_id, node.node_id, edge_type="DERIVED_FROM",
+                                 actor=actor, source_session=session_id)
+        session = self.sessions.get_session(session_id) or {}
+        entity_ids = list(dict.fromkeys(session.get("entity_ids", []) + [node.node_id]))
+        self.sessions.save_session(session_id, entity_ids=entity_ids,
+                                   status=session.get("status", "active"),
+                                   committed_at=session.get("committed_at"),
+                                   committed_by=session.get("committed_by"))
+        self.hash_chain.append("dreaming_consolidated", node.node_id,
+                               {"session_id": session_id, "actor": actor,
+                                "source_node_ids": report["source_node_ids"],
+                                "decision": decision.action, "reason": reason})
+        report["persisted_node_id"] = node.node_id
+        return report
 
     def build_active_context(self, query, token_budget=2000):
         retrieved = self.vector_store.query(query, top_k=5)
@@ -138,6 +199,13 @@ class AgentA:
             selected.append(entity); tokens += cost
         return ActiveContext(query, selected, tokens, vector_ids, graph_ids)
 
+    def merge_duplicate_entities(self, keep_node_id, remove_node_id, actor="user", reason="explicit_duplicate_merge"):
+        from core.graph_healer import GraphHealer
+        healer = GraphHealer(self.graph, self.vector_store, self.hash_chain)
+        result = healer.merge_duplicate(keep_node_id, remove_node_id, actor, reason)
+        self.all_nodes.pop(remove_node_id, None)
+        return result
+
     def recall(self, query, token_budget=2000):
         try:
             builder = ContextBuilder(self.vector_store, self.graph, self.session_store, token_budget)
@@ -148,7 +216,16 @@ class AgentA:
 
     def forget(self, node_id, reason="user_requested_erasure", deleted_by="user", actor=None, **kwargs):
         actor_name = actor or deleted_by
-        report = self.erasure.delete(node_id, self.vector_store, self.graph, self.hash_chain, reason=reason, deleted_by=actor_name)
+        report = self.erasure.delete(
+            node_id,
+            self.vector_store,
+            self.graph,
+            self.hash_chain,
+            reason=reason,
+            deleted_by=actor_name,
+            filesystem_store=getattr(self, "filesystem_memory", None),
+            semantic_cleanup=True,
+        )
         self.last_report = report
         self.residual_risks.extend(report.residual_risks)
         blocked_path = os.path.join(self.data_dir, "blocked_inference.json") if self.data_dir else "data/blocked_inference.json"
@@ -160,7 +237,9 @@ class AgentA:
         return report
 
     def build_knowledge_graph(self):
-        return self.graph_store.build_knowledge_graph(self.vector_store, self.hash_chain)
+        report = self.graph_healer.heal_orphans()
+        return {"orphans_found": len(report.orphans_found), "healed": report.healed_count,
+                "quarantined": len(report.quarantined), "actions": [a.__dict__ for a in report.actions_taken]}
 
     def start_graph_healing(self, interval_seconds=900):
         self.healing_scheduler.interval_seconds = interval_seconds
@@ -169,12 +248,28 @@ class AgentA:
     def stop_graph_healing(self):
         self.healing_scheduler.stop()
 
+    def llm_telemetry(self):
+        return self.llm.telemetry()
+
+    def recover_pending_erasures(self):
+        result = self.erasure_recovery.reconcile(
+            self.vector_store,
+            self.graph,
+            self.hash_chain,
+            self.filesystem_memory,
+        )
+        self.pending_erasures = self.erasure.journal.pending()
+        return result
+
+    def save_healing_schedule(self):
+        self.healing_scheduler.save_config()
+
     def recall_session(self, session_id):
         return [n for n in self.all_nodes.values() if n.session_id == session_id and n.deletion_state == "active"]
 
     def export_memory(self):
         return CapsuleExporter().export("agent_a", list(self.all_nodes.values()), self.graph, self.hash_chain,
-                                        self.residual_risks, session_commits=self.sessions._sessions)
+                                        self.residual_risks, session_commits=self.sessions._sessions, vector_store=self.vector_store)
 
     def restart(self):
         if self.data_dir:
