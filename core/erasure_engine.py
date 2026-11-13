@@ -3,6 +3,7 @@ from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from typing import Literal
 from .residual_risk import ResidualRisk
+from .erasure_journal import ErasureJournal
 
 @dataclass
 class LevelResult:
@@ -28,8 +29,9 @@ class ErasureReport:
 class ErasureEngine:
     _model = None
     _mutation_lock = threading.RLock()
-    def __init__(self, blocked_set_path="data/blocked_inference.json"):
+    def __init__(self, blocked_set_path="data/blocked_inference.json", journal_path="data/erasure_journal.json"):
         self.blocked_set_path = blocked_set_path; self.blocked_ids = set()
+        self.journal = ErasureJournal(journal_path)
         if os.path.exists(blocked_set_path):
             with open(blocked_set_path, encoding="utf-8") as f: self.blocked_ids = set(json.load(f))
     def _save_blocked_set(self):
@@ -50,7 +52,15 @@ class ErasureEngine:
     def delete(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested_erasure", deleted_by="user", filesystem_store=None):
         """Serialize deletion mutations within a process."""
         with self._mutation_lock:
-            return self._delete_unlocked(node_id, vector_store, graph_store, hash_chain, reason, deleted_by, filesystem_store)
+            operation_id = self.journal.begin(node_id, deleted_by, reason)
+            try:
+                self.journal.advance(operation_id, "mutating")
+                report = self._delete_unlocked(node_id, vector_store, graph_store, hash_chain, reason, deleted_by, filesystem_store)
+                self.journal.complete(operation_id, report.verdict)
+                return report
+            except Exception as error:
+                self.journal.advance(operation_id, "failed", {"error": str(error)})
+                raise
 
     def _delete_unlocked(self, node_id, vector_store, graph_store, hash_chain, reason="user_requested_erasure", deleted_by="user", filesystem_store=None):
         node = graph_store.get_node(node_id); levels=[]

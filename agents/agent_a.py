@@ -26,6 +26,7 @@ class AgentA:
         self.graph_store = self.graph
         self.hash_chain = HashChain()
         self.erasure = ErasureEngine()
+        self.pending_erasures = self.erasure.journal.pending()
         self.contradiction = ContradictionEngine()
         self.abstention = AbstentionEngine()
         self.residual_risks = []
