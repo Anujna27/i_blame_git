@@ -1,5 +1,0 @@
-VALIDATION: True errors=[]
-ASSERT deleted node imported blocked: PASS
-ASSERT residual risks inherited: PASS
-ASSERT hash chain integrity preserved: PASS
-CAPSULE ROUNDTRIP PASSED

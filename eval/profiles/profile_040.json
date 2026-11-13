@@ -1,0 +1,588 @@
+{
+  "profile_id": "profile_040",
+  "name": "Harper Allen",
+  "domain_bundle": "travel",
+  "sessions": [
+    {
+      "session_id": "sess_profile_040_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_040_001",
+          "content": "The user's verified metro transit card record is monthly subway ORCA transit card reloaded automatically. (Registered for Harper Allen)",
+          "entity_type": "transit",
+          "fact": "ORCA",
+          "label": "metro transit card",
+          "session_id": "sess_profile_040_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_002",
+          "content": "The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Harper Allen)",
+          "entity_type": "destination",
+          "fact": "Reykjavik",
+          "label": "international travel destination",
+          "session_id": "sess_profile_040_01",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my metro transit card. Specifically, The user's verified metro transit card record is monthly subway ORCA transit card reloaded automatically. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your metro transit card details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my international travel destination: The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with international travel destination."
+        }
+      ],
+      "summary_l1": "Session 1: Harper Allen confirmed their metro transit card details stating that The user's verified metro transit card record is monthly subway ORCA transit card reloaded automatically. (Registered for Harper Allen)"
+    },
+    {
+      "session_id": "sess_profile_040_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_040_003",
+          "content": "The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Harper Allen)",
+          "entity_type": "hotel",
+          "fact": "Hyatt",
+          "label": "hotel lodging reservation",
+          "session_id": "sess_profile_040_02",
+          "created_at": "2026-10-04T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_004",
+          "content": "The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Harper Allen)",
+          "entity_type": "flight",
+          "fact": "LH455",
+          "label": "upcoming flight booking",
+          "session_id": "sess_profile_040_02",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my hotel lodging reservation. Specifically, The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your hotel lodging reservation details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my upcoming flight booking: The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with upcoming flight booking."
+        }
+      ],
+      "summary_l1": "Session 2: Harper Allen confirmed their hotel lodging reservation details stating that The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Harper Allen)"
+    },
+    {
+      "session_id": "sess_profile_040_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_040_005",
+          "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Harper Allen)",
+          "entity_type": "passport",
+          "fact": "USA-P98124019",
+          "label": "passport travel number",
+          "session_id": "sess_profile_040_03",
+          "created_at": "2026-10-06T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_006",
+          "content": "The user's verified known traveler number record is TSA PreCheck and Global Entry membership PASSID-982104. (Registered for Harper Allen)",
+          "entity_type": "tsa",
+          "fact": "PASSID-982104",
+          "label": "known traveler number",
+          "session_id": "sess_profile_040_03",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my passport travel number. Specifically, The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your passport travel number details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my known traveler number: The user's verified known traveler number record is TSA PreCheck and Global Entry membership PASSID-982104. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with known traveler number."
+        }
+      ],
+      "summary_l1": "Session 3: Harper Allen confirmed their passport travel number details stating that The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Harper Allen)"
+    },
+    {
+      "session_id": "sess_profile_040_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_040_007",
+          "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Harper Allen)",
+          "entity_type": "employer",
+          "fact": "Acme",
+          "label": "current employer",
+          "session_id": "sess_profile_040_04",
+          "created_at": "2026-10-08T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_008",
+          "content": "The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Harper Allen)",
+          "entity_type": "anniversary",
+          "fact": "June 18th",
+          "label": "wedding anniversary date",
+          "session_id": "sess_profile_040_04",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my current employer. Specifically, The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your current employer details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my wedding anniversary date: The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with wedding anniversary date."
+        }
+      ],
+      "summary_l1": "Session 4: Harper Allen confirmed their current employer details stating that The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Harper Allen)"
+    },
+    {
+      "session_id": "sess_profile_040_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_040_009",
+          "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Harper Allen)",
+          "entity_type": "allergy",
+          "fact": "penicillin",
+          "label": "medical allergies",
+          "session_id": "sess_profile_040_05",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_010",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Harper Allen)",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_040_05",
+          "created_at": "2026-10-11T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my medical allergies. Specifically, The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your medical allergies details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my graduate degree university: The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with graduate degree university."
+        }
+      ],
+      "summary_l1": "Session 5: Harper Allen confirmed their medical allergies details stating that The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Harper Allen)"
+    },
+    {
+      "session_id": "sess_profile_040_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_040_011",
+          "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Harper Allen)",
+          "entity_type": "preference",
+          "fact": "Arch Linux",
+          "label": "Linux distribution",
+          "session_id": "sess_profile_040_06",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_012",
+          "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Harper Allen)",
+          "entity_type": "preference",
+          "fact": "telescope",
+          "label": "stargazing equipment",
+          "session_id": "sess_profile_040_06",
+          "created_at": "2026-10-13T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my Linux distribution. Specifically, The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your Linux distribution details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my stargazing equipment: The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with stargazing equipment."
+        }
+      ],
+      "summary_l1": "Session 6: Harper Allen confirmed their Linux distribution details stating that The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Harper Allen)"
+    },
+    {
+      "session_id": "sess_profile_040_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_040_013",
+          "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Harper Allen)",
+          "entity_type": "preference",
+          "fact": "photography",
+          "label": "photography hobby",
+          "session_id": "sess_profile_040_07",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_014",
+          "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Harper Allen)",
+          "entity_type": "preference",
+          "fact": "shelter",
+          "label": "community volunteer work",
+          "session_id": "sess_profile_040_07",
+          "created_at": "2026-10-15T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my photography hobby. Specifically, The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your photography hobby details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my community volunteer work: The user: The user volunteers weekly at a local community animal shelter. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with community volunteer work."
+        }
+      ],
+      "summary_l1": "Session 7: Harper Allen confirmed their photography hobby details stating that The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Harper Allen)"
+    },
+    {
+      "session_id": "sess_profile_040_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_040_015",
+          "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Harper Allen)",
+          "entity_type": "preference",
+          "fact": "guitar",
+          "label": "musical instrument",
+          "session_id": "sess_profile_040_08",
+          "created_at": "2026-10-16T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_016",
+          "content": "The user: The user enjoys programming in the Rust language for systems software. (Registered for Harper Allen)",
+          "entity_type": "preference",
+          "fact": "Rust",
+          "label": "programming language",
+          "session_id": "sess_profile_040_08",
+          "created_at": "2026-10-17T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_017",
+          "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Harper Allen)",
+          "entity_type": "preference",
+          "fact": "Rainier",
+          "label": "backcountry hiking destination",
+          "session_id": "sess_profile_040_08",
+          "created_at": "2026-10-18T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_040_018",
+          "content": "The user: The user drinks dark roast morning espresso coffee each morning. (Registered for Harper Allen)",
+          "entity_type": "preference",
+          "fact": "espresso",
+          "label": "morning coffee",
+          "session_id": "sess_profile_040_08",
+          "created_at": "2026-10-19T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my musical instrument. Specifically, The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your musical instrument details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my programming language: The user: The user enjoys programming in the Rust language for systems software. (Registered for Harper Allen)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with programming language."
+        }
+      ],
+      "summary_l1": "Session 8: Harper Allen confirmed their musical instrument details stating that The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Harper Allen)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_040_001",
+      "content": "The user's verified metro transit card record is monthly subway ORCA transit card reloaded automatically. (Registered for Harper Allen)",
+      "entity_type": "transit",
+      "fact": "ORCA",
+      "label": "metro transit card",
+      "session_id": "sess_profile_040_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_002",
+      "content": "The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Harper Allen)",
+      "entity_type": "destination",
+      "fact": "Reykjavik",
+      "label": "international travel destination",
+      "session_id": "sess_profile_040_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_003",
+      "content": "The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Harper Allen)",
+      "entity_type": "hotel",
+      "fact": "Hyatt",
+      "label": "hotel lodging reservation",
+      "session_id": "sess_profile_040_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_004",
+      "content": "The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Harper Allen)",
+      "entity_type": "flight",
+      "fact": "LH455",
+      "label": "upcoming flight booking",
+      "session_id": "sess_profile_040_02",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_005",
+      "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Harper Allen)",
+      "entity_type": "passport",
+      "fact": "USA-P98124019",
+      "label": "passport travel number",
+      "session_id": "sess_profile_040_03",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_006",
+      "content": "The user's verified known traveler number record is TSA PreCheck and Global Entry membership PASSID-982104. (Registered for Harper Allen)",
+      "entity_type": "tsa",
+      "fact": "PASSID-982104",
+      "label": "known traveler number",
+      "session_id": "sess_profile_040_03",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_007",
+      "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Harper Allen)",
+      "entity_type": "employer",
+      "fact": "Acme",
+      "label": "current employer",
+      "session_id": "sess_profile_040_04",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_008",
+      "content": "The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Harper Allen)",
+      "entity_type": "anniversary",
+      "fact": "June 18th",
+      "label": "wedding anniversary date",
+      "session_id": "sess_profile_040_04",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_009",
+      "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Harper Allen)",
+      "entity_type": "allergy",
+      "fact": "penicillin",
+      "label": "medical allergies",
+      "session_id": "sess_profile_040_05",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_010",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Harper Allen)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_040_05",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_011",
+      "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Harper Allen)",
+      "entity_type": "preference",
+      "fact": "Arch Linux",
+      "label": "Linux distribution",
+      "session_id": "sess_profile_040_06",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_012",
+      "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Harper Allen)",
+      "entity_type": "preference",
+      "fact": "telescope",
+      "label": "stargazing equipment",
+      "session_id": "sess_profile_040_06",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_013",
+      "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Harper Allen)",
+      "entity_type": "preference",
+      "fact": "photography",
+      "label": "photography hobby",
+      "session_id": "sess_profile_040_07",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_014",
+      "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Harper Allen)",
+      "entity_type": "preference",
+      "fact": "shelter",
+      "label": "community volunteer work",
+      "session_id": "sess_profile_040_07",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_015",
+      "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Harper Allen)",
+      "entity_type": "preference",
+      "fact": "guitar",
+      "label": "musical instrument",
+      "session_id": "sess_profile_040_08",
+      "created_at": "2026-10-16T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_016",
+      "content": "The user: The user enjoys programming in the Rust language for systems software. (Registered for Harper Allen)",
+      "entity_type": "preference",
+      "fact": "Rust",
+      "label": "programming language",
+      "session_id": "sess_profile_040_08",
+      "created_at": "2026-10-17T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_017",
+      "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Harper Allen)",
+      "entity_type": "preference",
+      "fact": "Rainier",
+      "label": "backcountry hiking destination",
+      "session_id": "sess_profile_040_08",
+      "created_at": "2026-10-18T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_018",
+      "content": "The user: The user drinks dark roast morning espresso coffee each morning. (Registered for Harper Allen)",
+      "entity_type": "preference",
+      "fact": "espresso",
+      "label": "morning coffee",
+      "session_id": "sess_profile_040_08",
+      "created_at": "2026-10-19T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_040_001",
+      "content": "The user's verified metro transit card record is monthly subway ORCA transit card reloaded automatically. (Registered for Harper Allen)",
+      "entity_type": "transit",
+      "fact": "ORCA",
+      "label": "metro transit card",
+      "session_id": "sess_profile_040_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_002",
+      "content": "The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Harper Allen)",
+      "entity_type": "destination",
+      "fact": "Reykjavik",
+      "label": "international travel destination",
+      "session_id": "sess_profile_040_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_040_003",
+      "content": "The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Harper Allen)",
+      "entity_type": "hotel",
+      "fact": "Hyatt",
+      "label": "hotel lodging reservation",
+      "session_id": "sess_profile_040_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_040_01",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    },
+    {
+      "control_id": "ctrl_profile_040_02",
+      "content": "The user has an unrecorded ceramic pottery wheel studio membership in Portland.",
+      "entity_type": "pottery",
+      "label": "pottery studio membership"
+    },
+    {
+      "control_id": "ctrl_profile_040_03",
+      "content": "The user has an unrecorded FCC amateur radio operator callsign K9XYZ.",
+      "entity_type": "ham_radio",
+      "label": "amateur radio callsign"
+    },
+    {
+      "control_id": "ctrl_profile_040_04",
+      "content": "The user has an unrecorded commercial maritime yacht captain license CAPT-4819.",
+      "entity_type": "boat_license",
+      "label": "boat captain license"
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "profile_id": "profile_027",
+  "name": "Remi Young",
+  "domain_bundle": "professional",
+  "sessions": [
+    {
+      "session_id": "sess_profile_027_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_027_001",
+          "content": "The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Remi Young)",
+          "entity_type": "office",
+          "fact": "Seattle",
+          "label": "office campus location",
+          "session_id": "sess_profile_027_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my office campus location. Specifically, The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Remi. I have recorded your office campus location details."
+        }
+      ],
+      "summary_l1": "Session 1: Remi Young confirmed their office campus location details stating that The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Remi Young)"
+    },
+    {
+      "session_id": "sess_profile_027_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_027_002",
+          "content": "The user's verified conference presentations record is keynote speaker at CloudNativeCon annual conference. (Registered for Remi Young)",
+          "entity_type": "conference",
+          "fact": "CloudNativeCon",
+          "label": "conference presentations",
+          "session_id": "sess_profile_027_02",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my conference presentations. Specifically, The user's verified conference presentations record is keynote speaker at CloudNativeCon annual conference. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Remi. I have recorded your conference presentations details."
+        }
+      ],
+      "summary_l1": "Session 2: Remi Young confirmed their conference presentations details stating that The user's verified conference presentations record is keynote speaker at CloudNativeCon annual conference. (Registered for Remi Young)"
+    },
+    {
+      "session_id": "sess_profile_027_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_027_003",
+          "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Remi Young)",
+          "entity_type": "employer",
+          "fact": "Acme",
+          "label": "current employer",
+          "session_id": "sess_profile_027_03",
+          "created_at": "2026-10-04T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my current employer. Specifically, The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Remi. I have recorded your current employer details."
+        }
+      ],
+      "summary_l1": "Session 3: Remi Young confirmed their current employer details stating that The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Remi Young)"
+    },
+    {
+      "session_id": "sess_profile_027_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_027_004",
+          "content": "The user's verified security clearance status record is holds public trust security clearance verification. (Registered for Remi Young)",
+          "entity_type": "clearance",
+          "fact": "clearance",
+          "label": "security clearance status",
+          "session_id": "sess_profile_027_04",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my security clearance status. Specifically, The user's verified security clearance status record is holds public trust security clearance verification. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Remi. I have recorded your security clearance status details."
+        }
+      ],
+      "summary_l1": "Session 4: Remi Young confirmed their security clearance status details stating that The user's verified security clearance status record is holds public trust security clearance verification. (Registered for Remi Young)"
+    },
+    {
+      "session_id": "sess_profile_027_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_027_005",
+          "content": "The user's verified production API key record is OpenAI production API key sk-proj-982347102934. (Registered for Remi Young)",
+          "entity_type": "credential",
+          "fact": "sk-proj-982347102934",
+          "label": "production API key",
+          "session_id": "sess_profile_027_05",
+          "created_at": "2026-10-06T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my production API key. Specifically, The user's verified production API key record is OpenAI production API key sk-proj-982347102934. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Remi. I have recorded your production API key details."
+        }
+      ],
+      "summary_l1": "Session 5: Remi Young confirmed their production API key details stating that The user's verified production API key record is OpenAI production API key sk-proj-982347102934. (Registered for Remi Young)"
+    },
+    {
+      "session_id": "sess_profile_027_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_027_006",
+          "content": "The user's verified professional role assignment record is serves as remote cloud infrastructure DevOps lead. (Registered for Remi Young)",
+          "entity_type": "role",
+          "fact": "DevOps",
+          "label": "professional role assignment",
+          "session_id": "sess_profile_027_06",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my professional role assignment. Specifically, The user's verified professional role assignment record is serves as remote cloud infrastructure DevOps lead. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Remi. I have recorded your professional role assignment details."
+        }
+      ],
+      "summary_l1": "Session 6: Remi Young confirmed their professional role assignment details stating that The user's verified professional role assignment record is serves as remote cloud infrastructure DevOps lead. (Registered for Remi Young)"
+    },
+    {
+      "session_id": "sess_profile_027_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_027_007",
+          "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Remi Young)",
+          "entity_type": "allergy",
+          "fact": "penicillin",
+          "label": "medical allergies",
+          "session_id": "sess_profile_027_07",
+          "created_at": "2026-10-08T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my medical allergies. Specifically, The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Remi. I have recorded your medical allergies details."
+        }
+      ],
+      "summary_l1": "Session 7: Remi Young confirmed their medical allergies details stating that The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Remi Young)"
+    },
+    {
+      "session_id": "sess_profile_027_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_027_008",
+          "content": "The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Remi Young)",
+          "entity_type": "checking",
+          "fact": "Chase-8839201948",
+          "label": "bank checking account",
+          "session_id": "sess_profile_027_08",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my bank checking account. Specifically, The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Remi. I have recorded your bank checking account details."
+        }
+      ],
+      "summary_l1": "Session 8: Remi Young confirmed their bank checking account details stating that The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Remi Young)"
+    },
+    {
+      "session_id": "sess_profile_027_09",
+      "session_index": 9,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_027_009",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Remi Young)",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_027_09",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_027_010",
+          "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Remi Young)",
+          "entity_type": "loyalty",
+          "fact": "Diamond",
+          "label": "airline loyalty status",
+          "session_id": "sess_profile_027_09",
+          "created_at": "2026-10-11T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_027_011",
+          "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Remi Young)",
+          "entity_type": "preference",
+          "fact": "photography",
+          "label": "photography hobby",
+          "session_id": "sess_profile_027_09",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_027_012",
+          "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Remi Young)",
+          "entity_type": "preference",
+          "fact": "telescope",
+          "label": "stargazing equipment",
+          "session_id": "sess_profile_027_09",
+          "created_at": "2026-10-13T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_027_013",
+          "content": "The user: The user practices morning Vinyasa yoga style for physical flexibility. (Registered for Remi Young)",
+          "entity_type": "preference",
+          "fact": "Vinyasa",
+          "label": "yoga style",
+          "session_id": "sess_profile_027_09",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_027_014",
+          "content": "The user: The user speaks the Japanese foreign language with native fluency. (Registered for Remi Young)",
+          "entity_type": "preference",
+          "fact": "Japanese",
+          "label": "foreign language",
+          "session_id": "sess_profile_027_09",
+          "created_at": "2026-10-15T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_027_015",
+          "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. (Registered for Remi Young)",
+          "entity_type": "preference",
+          "fact": "matcha",
+          "label": "breakfast tea beverage",
+          "session_id": "sess_profile_027_09",
+          "created_at": "2026-10-16T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_027_016",
+          "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Remi Young)",
+          "entity_type": "preference",
+          "fact": "sourdough",
+          "label": "artisan bread",
+          "session_id": "sess_profile_027_09",
+          "created_at": "2026-10-17T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my graduate degree university. Specifically, The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Remi. I have recorded your graduate degree university details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my airline loyalty status: The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Remi Young)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with airline loyalty status."
+        }
+      ],
+      "summary_l1": "Session 9: Remi Young confirmed their graduate degree university details stating that The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Remi Young)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_027_001",
+      "content": "The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Remi Young)",
+      "entity_type": "office",
+      "fact": "Seattle",
+      "label": "office campus location",
+      "session_id": "sess_profile_027_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_002",
+      "content": "The user's verified conference presentations record is keynote speaker at CloudNativeCon annual conference. (Registered for Remi Young)",
+      "entity_type": "conference",
+      "fact": "CloudNativeCon",
+      "label": "conference presentations",
+      "session_id": "sess_profile_027_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_003",
+      "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Remi Young)",
+      "entity_type": "employer",
+      "fact": "Acme",
+      "label": "current employer",
+      "session_id": "sess_profile_027_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_004",
+      "content": "The user's verified security clearance status record is holds public trust security clearance verification. (Registered for Remi Young)",
+      "entity_type": "clearance",
+      "fact": "clearance",
+      "label": "security clearance status",
+      "session_id": "sess_profile_027_04",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_005",
+      "content": "The user's verified production API key record is OpenAI production API key sk-proj-982347102934. (Registered for Remi Young)",
+      "entity_type": "credential",
+      "fact": "sk-proj-982347102934",
+      "label": "production API key",
+      "session_id": "sess_profile_027_05",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_006",
+      "content": "The user's verified professional role assignment record is serves as remote cloud infrastructure DevOps lead. (Registered for Remi Young)",
+      "entity_type": "role",
+      "fact": "DevOps",
+      "label": "professional role assignment",
+      "session_id": "sess_profile_027_06",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_007",
+      "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Remi Young)",
+      "entity_type": "allergy",
+      "fact": "penicillin",
+      "label": "medical allergies",
+      "session_id": "sess_profile_027_07",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_008",
+      "content": "The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Remi Young)",
+      "entity_type": "checking",
+      "fact": "Chase-8839201948",
+      "label": "bank checking account",
+      "session_id": "sess_profile_027_08",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_009",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Remi Young)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_027_09",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_010",
+      "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Remi Young)",
+      "entity_type": "loyalty",
+      "fact": "Diamond",
+      "label": "airline loyalty status",
+      "session_id": "sess_profile_027_09",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_011",
+      "content": "The user: The user enjoys landscape photography using vintage 35mm film cameras. (Registered for Remi Young)",
+      "entity_type": "preference",
+      "fact": "photography",
+      "label": "photography hobby",
+      "session_id": "sess_profile_027_09",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_012",
+      "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Remi Young)",
+      "entity_type": "preference",
+      "fact": "telescope",
+      "label": "stargazing equipment",
+      "session_id": "sess_profile_027_09",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_013",
+      "content": "The user: The user practices morning Vinyasa yoga style for physical flexibility. (Registered for Remi Young)",
+      "entity_type": "preference",
+      "fact": "Vinyasa",
+      "label": "yoga style",
+      "session_id": "sess_profile_027_09",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_014",
+      "content": "The user: The user speaks the Japanese foreign language with native fluency. (Registered for Remi Young)",
+      "entity_type": "preference",
+      "fact": "Japanese",
+      "label": "foreign language",
+      "session_id": "sess_profile_027_09",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_015",
+      "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. (Registered for Remi Young)",
+      "entity_type": "preference",
+      "fact": "matcha",
+      "label": "breakfast tea beverage",
+      "session_id": "sess_profile_027_09",
+      "created_at": "2026-10-16T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_016",
+      "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Remi Young)",
+      "entity_type": "preference",
+      "fact": "sourdough",
+      "label": "artisan bread",
+      "session_id": "sess_profile_027_09",
+      "created_at": "2026-10-17T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_027_001",
+      "content": "The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Remi Young)",
+      "entity_type": "office",
+      "fact": "Seattle",
+      "label": "office campus location",
+      "session_id": "sess_profile_027_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_002",
+      "content": "The user's verified conference presentations record is keynote speaker at CloudNativeCon annual conference. (Registered for Remi Young)",
+      "entity_type": "conference",
+      "fact": "CloudNativeCon",
+      "label": "conference presentations",
+      "session_id": "sess_profile_027_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_027_003",
+      "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Remi Young)",
+      "entity_type": "employer",
+      "fact": "Acme",
+      "label": "current employer",
+      "session_id": "sess_profile_027_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_027_01",
+      "content": "The user has an unrecorded handcrafted German antique cello musical instrument.",
+      "entity_type": "cello",
+      "label": "antique cello instrument"
+    },
+    {
+      "control_id": "ctrl_profile_027_02",
+      "content": "The user has an unrecorded national competitive sabre fencing tournament medal.",
+      "entity_type": "fencing",
+      "label": "fencing sports rank"
+    },
+    {
+      "control_id": "ctrl_profile_027_03",
+      "content": "The user has an unrecorded vintage Harley Davidson Road King motorcycle registration.",
+      "entity_type": "motorcycle",
+      "label": "motorcycle registration"
+    },
+    {
+      "control_id": "ctrl_profile_027_04",
+      "content": "The user has an unrecorded FCC amateur radio operator callsign K9XYZ.",
+      "entity_type": "ham_radio",
+      "label": "amateur radio callsign"
+    }
+  ]
+}

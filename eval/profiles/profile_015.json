@@ -1,0 +1,494 @@
+{
+  "profile_id": "profile_015",
+  "name": "Lee Hall",
+  "domain_bundle": "professional",
+  "sessions": [
+    {
+      "session_id": "sess_profile_015_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_001",
+          "content": "The user's verified primary project leadership record is leads technical architecture for Project Apollo. (Registered for Lee Hall)",
+          "entity_type": "project",
+          "fact": "Apollo",
+          "label": "primary project leadership",
+          "session_id": "sess_profile_015_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my primary project leadership. Specifically, The user's verified primary project leadership record is leads technical architecture for Project Apollo. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your primary project leadership details."
+        }
+      ],
+      "summary_l1": "Session 1: Lee Hall confirmed their primary project leadership details stating that The user's verified primary project leadership record is leads technical architecture for Project Apollo. (Registered for Lee Hall)"
+    },
+    {
+      "session_id": "sess_profile_015_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_002",
+          "content": "The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Lee Hall)",
+          "entity_type": "office",
+          "fact": "Seattle",
+          "label": "office campus location",
+          "session_id": "sess_profile_015_02",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my office campus location. Specifically, The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your office campus location details."
+        }
+      ],
+      "summary_l1": "Session 2: Lee Hall confirmed their office campus location details stating that The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Lee Hall)"
+    },
+    {
+      "session_id": "sess_profile_015_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_003",
+          "content": "The user's verified professional role assignment record is serves as remote cloud infrastructure DevOps lead. (Registered for Lee Hall)",
+          "entity_type": "role",
+          "fact": "DevOps",
+          "label": "professional role assignment",
+          "session_id": "sess_profile_015_03",
+          "created_at": "2026-10-04T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my professional role assignment. Specifically, The user's verified professional role assignment record is serves as remote cloud infrastructure DevOps lead. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your professional role assignment details."
+        }
+      ],
+      "summary_l1": "Session 3: Lee Hall confirmed their professional role assignment details stating that The user's verified professional role assignment record is serves as remote cloud infrastructure DevOps lead. (Registered for Lee Hall)"
+    },
+    {
+      "session_id": "sess_profile_015_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_004",
+          "content": "The user's verified security clearance status record is holds public trust security clearance verification. (Registered for Lee Hall)",
+          "entity_type": "clearance",
+          "fact": "clearance",
+          "label": "security clearance status",
+          "session_id": "sess_profile_015_04",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my security clearance status. Specifically, The user's verified security clearance status record is holds public trust security clearance verification. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your security clearance status details."
+        }
+      ],
+      "summary_l1": "Session 4: Lee Hall confirmed their security clearance status details stating that The user's verified security clearance status record is holds public trust security clearance verification. (Registered for Lee Hall)"
+    },
+    {
+      "session_id": "sess_profile_015_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_005",
+          "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Lee Hall)",
+          "entity_type": "manager",
+          "fact": "Sarah",
+          "label": "direct reporting manager",
+          "session_id": "sess_profile_015_05",
+          "created_at": "2026-10-06T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my direct reporting manager. Specifically, The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your direct reporting manager details."
+        }
+      ],
+      "summary_l1": "Session 5: Lee Hall confirmed their direct reporting manager details stating that The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Lee Hall)"
+    },
+    {
+      "session_id": "sess_profile_015_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_006",
+          "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Lee Hall)",
+          "entity_type": "employer",
+          "fact": "Acme",
+          "label": "current employer",
+          "session_id": "sess_profile_015_06",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my current employer. Specifically, The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your current employer details."
+        }
+      ],
+      "summary_l1": "Session 6: Lee Hall confirmed their current employer details stating that The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Lee Hall)"
+    },
+    {
+      "session_id": "sess_profile_015_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_007",
+          "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Lee Hall)",
+          "entity_type": "passport",
+          "fact": "USA-P98124019",
+          "label": "passport travel number",
+          "session_id": "sess_profile_015_07",
+          "created_at": "2026-10-08T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my passport travel number. Specifically, The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your passport travel number details."
+        }
+      ],
+      "summary_l1": "Session 7: Lee Hall confirmed their passport travel number details stating that The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Lee Hall)"
+    },
+    {
+      "session_id": "sess_profile_015_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_008",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Lee Hall)",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_015_08",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my graduate degree university. Specifically, The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your graduate degree university details."
+        }
+      ],
+      "summary_l1": "Session 8: Lee Hall confirmed their graduate degree university details stating that The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Lee Hall)"
+    },
+    {
+      "session_id": "sess_profile_015_09",
+      "session_index": 9,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_009",
+          "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Lee Hall)",
+          "entity_type": "prescription",
+          "fact": "Ventolin",
+          "label": "prescription medications",
+          "session_id": "sess_profile_015_09",
+          "created_at": "2026-10-10T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my prescription medications. Specifically, The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your prescription medications details."
+        }
+      ],
+      "summary_l1": "Session 9: Lee Hall confirmed their prescription medications details stating that The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Lee Hall)"
+    },
+    {
+      "session_id": "sess_profile_015_10",
+      "session_index": 10,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_015_010",
+          "content": "The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Lee Hall)",
+          "entity_type": "credit_card",
+          "fact": "4921",
+          "label": "primary credit card",
+          "session_id": "sess_profile_015_10",
+          "created_at": "2026-10-11T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_015_011",
+          "content": "The user: The user collects rare vinyl records from Blue Note Records. (Registered for Lee Hall)",
+          "entity_type": "preference",
+          "fact": "Blue Note",
+          "label": "vinyl record collection",
+          "session_id": "sess_profile_015_10",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_015_012",
+          "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Lee Hall)",
+          "entity_type": "preference",
+          "fact": "Tesla",
+          "label": "electric vehicle model",
+          "session_id": "sess_profile_015_10",
+          "created_at": "2026-10-13T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_015_013",
+          "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Lee Hall)",
+          "entity_type": "preference",
+          "fact": "sourdough",
+          "label": "artisan bread",
+          "session_id": "sess_profile_015_10",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_015_014",
+          "content": "The user: The user is studying the conversational Mandarin foreign language. (Registered for Lee Hall)",
+          "entity_type": "preference",
+          "fact": "Mandarin",
+          "label": "language study",
+          "session_id": "sess_profile_015_10",
+          "created_at": "2026-10-15T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my primary credit card. Specifically, The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Lee. I have recorded your primary credit card details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my vinyl record collection: The user: The user collects rare vinyl records from Blue Note Records. (Registered for Lee Hall)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with vinyl record collection."
+        }
+      ],
+      "summary_l1": "Session 10: Lee Hall confirmed their primary credit card details stating that The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Lee Hall)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_015_001",
+      "content": "The user's verified primary project leadership record is leads technical architecture for Project Apollo. (Registered for Lee Hall)",
+      "entity_type": "project",
+      "fact": "Apollo",
+      "label": "primary project leadership",
+      "session_id": "sess_profile_015_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_002",
+      "content": "The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Lee Hall)",
+      "entity_type": "office",
+      "fact": "Seattle",
+      "label": "office campus location",
+      "session_id": "sess_profile_015_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_003",
+      "content": "The user's verified professional role assignment record is serves as remote cloud infrastructure DevOps lead. (Registered for Lee Hall)",
+      "entity_type": "role",
+      "fact": "DevOps",
+      "label": "professional role assignment",
+      "session_id": "sess_profile_015_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_004",
+      "content": "The user's verified security clearance status record is holds public trust security clearance verification. (Registered for Lee Hall)",
+      "entity_type": "clearance",
+      "fact": "clearance",
+      "label": "security clearance status",
+      "session_id": "sess_profile_015_04",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_005",
+      "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Lee Hall)",
+      "entity_type": "manager",
+      "fact": "Sarah",
+      "label": "direct reporting manager",
+      "session_id": "sess_profile_015_05",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_006",
+      "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Lee Hall)",
+      "entity_type": "employer",
+      "fact": "Acme",
+      "label": "current employer",
+      "session_id": "sess_profile_015_06",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_007",
+      "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Lee Hall)",
+      "entity_type": "passport",
+      "fact": "USA-P98124019",
+      "label": "passport travel number",
+      "session_id": "sess_profile_015_07",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_008",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Lee Hall)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_015_08",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_009",
+      "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Lee Hall)",
+      "entity_type": "prescription",
+      "fact": "Ventolin",
+      "label": "prescription medications",
+      "session_id": "sess_profile_015_09",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_010",
+      "content": "The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Lee Hall)",
+      "entity_type": "credit_card",
+      "fact": "4921",
+      "label": "primary credit card",
+      "session_id": "sess_profile_015_10",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_011",
+      "content": "The user: The user collects rare vinyl records from Blue Note Records. (Registered for Lee Hall)",
+      "entity_type": "preference",
+      "fact": "Blue Note",
+      "label": "vinyl record collection",
+      "session_id": "sess_profile_015_10",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_012",
+      "content": "The user: The user drives an electric vehicle car, a white Tesla Model 3. (Registered for Lee Hall)",
+      "entity_type": "preference",
+      "fact": "Tesla",
+      "label": "electric vehicle model",
+      "session_id": "sess_profile_015_10",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_013",
+      "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Lee Hall)",
+      "entity_type": "preference",
+      "fact": "sourdough",
+      "label": "artisan bread",
+      "session_id": "sess_profile_015_10",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_014",
+      "content": "The user: The user is studying the conversational Mandarin foreign language. (Registered for Lee Hall)",
+      "entity_type": "preference",
+      "fact": "Mandarin",
+      "label": "language study",
+      "session_id": "sess_profile_015_10",
+      "created_at": "2026-10-15T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_015_001",
+      "content": "The user's verified primary project leadership record is leads technical architecture for Project Apollo. (Registered for Lee Hall)",
+      "entity_type": "project",
+      "fact": "Apollo",
+      "label": "primary project leadership",
+      "session_id": "sess_profile_015_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_002",
+      "content": "The user's verified office campus location record is assigned to Seattle engineering headquarters building 4. (Registered for Lee Hall)",
+      "entity_type": "office",
+      "fact": "Seattle",
+      "label": "office campus location",
+      "session_id": "sess_profile_015_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_015_003",
+      "content": "The user's verified professional role assignment record is serves as remote cloud infrastructure DevOps lead. (Registered for Lee Hall)",
+      "entity_type": "role",
+      "fact": "DevOps",
+      "label": "professional role assignment",
+      "session_id": "sess_profile_015_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_015_01",
+      "content": "The user has an unrecorded ceramic pottery wheel studio membership in Portland.",
+      "entity_type": "pottery",
+      "label": "pottery studio membership"
+    },
+    {
+      "control_id": "ctrl_profile_015_02",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    },
+    {
+      "control_id": "ctrl_profile_015_03",
+      "content": "The user has an unrecorded handcrafted German antique cello musical instrument.",
+      "entity_type": "cello",
+      "label": "antique cello instrument"
+    },
+    {
+      "control_id": "ctrl_profile_015_04",
+      "content": "The user has an unrecorded commercial maritime yacht captain license CAPT-4819.",
+      "entity_type": "boat_license",
+      "label": "boat captain license"
+    }
+  ]
+}

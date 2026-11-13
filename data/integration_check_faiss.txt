@@ -1,7 +1,0 @@
-[PASS] MemoryNode schema
-[PASS] VectorStore contract
-[PASS] GraphStore contract
-[INTEGRATION REPORT] partially_deleted
-[PASS] Real end-to-end integration
-PASSED: 4
-FAILED: 0

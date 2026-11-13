@@ -1,0 +1,513 @@
+{
+  "profile_id": "profile_016",
+  "name": "Avery Davis",
+  "domain_bundle": "travel",
+  "sessions": [
+    {
+      "session_id": "sess_profile_016_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_016_001",
+          "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Avery Davis)",
+          "entity_type": "passport",
+          "fact": "USA-P98124019",
+          "label": "passport travel number",
+          "session_id": "sess_profile_016_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my passport travel number. Specifically, The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your passport travel number details."
+        }
+      ],
+      "summary_l1": "Session 1: Avery Davis confirmed their passport travel number details stating that The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Avery Davis)"
+    },
+    {
+      "session_id": "sess_profile_016_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_016_002",
+          "content": "The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Avery Davis)",
+          "entity_type": "destination",
+          "fact": "Reykjavik",
+          "label": "international travel destination",
+          "session_id": "sess_profile_016_02",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my international travel destination. Specifically, The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your international travel destination details."
+        }
+      ],
+      "summary_l1": "Session 2: Avery Davis confirmed their international travel destination details stating that The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Avery Davis)"
+    },
+    {
+      "session_id": "sess_profile_016_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_016_003",
+          "content": "The user's verified car rental loyalty tier record is National Car Rental Executive Elite club member. (Registered for Avery Davis)",
+          "entity_type": "rental",
+          "fact": "National",
+          "label": "car rental loyalty tier",
+          "session_id": "sess_profile_016_03",
+          "created_at": "2026-10-04T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my car rental loyalty tier. Specifically, The user's verified car rental loyalty tier record is National Car Rental Executive Elite club member. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your car rental loyalty tier details."
+        }
+      ],
+      "summary_l1": "Session 3: Avery Davis confirmed their car rental loyalty tier details stating that The user's verified car rental loyalty tier record is National Car Rental Executive Elite club member. (Registered for Avery Davis)"
+    },
+    {
+      "session_id": "sess_profile_016_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_016_004",
+          "content": "The user's verified known traveler number record is TSA PreCheck and Global Entry membership PASSID-982104. (Registered for Avery Davis)",
+          "entity_type": "tsa",
+          "fact": "PASSID-982104",
+          "label": "known traveler number",
+          "session_id": "sess_profile_016_04",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my known traveler number. Specifically, The user's verified known traveler number record is TSA PreCheck and Global Entry membership PASSID-982104. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your known traveler number details."
+        }
+      ],
+      "summary_l1": "Session 4: Avery Davis confirmed their known traveler number details stating that The user's verified known traveler number record is TSA PreCheck and Global Entry membership PASSID-982104. (Registered for Avery Davis)"
+    },
+    {
+      "session_id": "sess_profile_016_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_016_005",
+          "content": "The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Avery Davis)",
+          "entity_type": "flight",
+          "fact": "LH455",
+          "label": "upcoming flight booking",
+          "session_id": "sess_profile_016_05",
+          "created_at": "2026-10-06T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my upcoming flight booking. Specifically, The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your upcoming flight booking details."
+        }
+      ],
+      "summary_l1": "Session 5: Avery Davis confirmed their upcoming flight booking details stating that The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Avery Davis)"
+    },
+    {
+      "session_id": "sess_profile_016_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_016_006",
+          "content": "The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Avery Davis)",
+          "entity_type": "hotel",
+          "fact": "Hyatt",
+          "label": "hotel lodging reservation",
+          "session_id": "sess_profile_016_06",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my hotel lodging reservation. Specifically, The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your hotel lodging reservation details."
+        }
+      ],
+      "summary_l1": "Session 6: Avery Davis confirmed their hotel lodging reservation details stating that The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Avery Davis)"
+    },
+    {
+      "session_id": "sess_profile_016_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_016_007",
+          "content": "The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Avery Davis)",
+          "entity_type": "checking",
+          "fact": "Chase-8839201948",
+          "label": "bank checking account",
+          "session_id": "sess_profile_016_07",
+          "created_at": "2026-10-08T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my bank checking account. Specifically, The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your bank checking account details."
+        }
+      ],
+      "summary_l1": "Session 7: Avery Davis confirmed their bank checking account details stating that The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Avery Davis)"
+    },
+    {
+      "session_id": "sess_profile_016_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_016_008",
+          "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Avery Davis)",
+          "entity_type": "advisor",
+          "fact": "Manning",
+          "label": "thesis academic advisor",
+          "session_id": "sess_profile_016_08",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my thesis academic advisor. Specifically, The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your thesis academic advisor details."
+        }
+      ],
+      "summary_l1": "Session 8: Avery Davis confirmed their thesis academic advisor details stating that The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Avery Davis)"
+    },
+    {
+      "session_id": "sess_profile_016_09",
+      "session_index": 9,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_016_009",
+          "content": "The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Avery Davis)",
+          "entity_type": "anniversary",
+          "fact": "June 18th",
+          "label": "wedding anniversary date",
+          "session_id": "sess_profile_016_09",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_016_010",
+          "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Avery Davis)",
+          "entity_type": "manager",
+          "fact": "Sarah",
+          "label": "direct reporting manager",
+          "session_id": "sess_profile_016_09",
+          "created_at": "2026-10-11T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_016_011",
+          "content": "The user: The user practices morning Vinyasa yoga style for physical flexibility. (Registered for Avery Davis)",
+          "entity_type": "preference",
+          "fact": "Vinyasa",
+          "label": "yoga style",
+          "session_id": "sess_profile_016_09",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_016_012",
+          "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Avery Davis)",
+          "entity_type": "preference",
+          "fact": "Rainier",
+          "label": "backcountry hiking destination",
+          "session_id": "sess_profile_016_09",
+          "created_at": "2026-10-13T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_016_013",
+          "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. (Registered for Avery Davis)",
+          "entity_type": "preference",
+          "fact": "matcha",
+          "label": "breakfast tea beverage",
+          "session_id": "sess_profile_016_09",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_016_014",
+          "content": "The user: The user cooks traditional Indian butter chicken curry on weekends. (Registered for Avery Davis)",
+          "entity_type": "preference",
+          "fact": "butter chicken",
+          "label": "cooking curry",
+          "session_id": "sess_profile_016_09",
+          "created_at": "2026-10-15T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_016_015",
+          "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Avery Davis)",
+          "entity_type": "preference",
+          "fact": "guitar",
+          "label": "musical instrument",
+          "session_id": "sess_profile_016_09",
+          "created_at": "2026-10-16T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_016_016",
+          "content": "The user: The user is studying the conversational Mandarin foreign language. (Registered for Avery Davis)",
+          "entity_type": "preference",
+          "fact": "Mandarin",
+          "label": "language study",
+          "session_id": "sess_profile_016_09",
+          "created_at": "2026-10-17T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my wedding anniversary date. Specifically, The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your wedding anniversary date details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my direct reporting manager: The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Avery Davis)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with direct reporting manager."
+        }
+      ],
+      "summary_l1": "Session 9: Avery Davis confirmed their wedding anniversary date details stating that The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Avery Davis)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_016_001",
+      "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Avery Davis)",
+      "entity_type": "passport",
+      "fact": "USA-P98124019",
+      "label": "passport travel number",
+      "session_id": "sess_profile_016_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_002",
+      "content": "The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Avery Davis)",
+      "entity_type": "destination",
+      "fact": "Reykjavik",
+      "label": "international travel destination",
+      "session_id": "sess_profile_016_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_003",
+      "content": "The user's verified car rental loyalty tier record is National Car Rental Executive Elite club member. (Registered for Avery Davis)",
+      "entity_type": "rental",
+      "fact": "National",
+      "label": "car rental loyalty tier",
+      "session_id": "sess_profile_016_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_004",
+      "content": "The user's verified known traveler number record is TSA PreCheck and Global Entry membership PASSID-982104. (Registered for Avery Davis)",
+      "entity_type": "tsa",
+      "fact": "PASSID-982104",
+      "label": "known traveler number",
+      "session_id": "sess_profile_016_04",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_005",
+      "content": "The user's verified upcoming flight booking record is booked transatlantic flight Lufthansa LH455 to Frankfurt. (Registered for Avery Davis)",
+      "entity_type": "flight",
+      "fact": "LH455",
+      "label": "upcoming flight booking",
+      "session_id": "sess_profile_016_05",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_006",
+      "content": "The user's verified hotel lodging reservation record is reserved king suite at Park Hyatt Tokyo for November. (Registered for Avery Davis)",
+      "entity_type": "hotel",
+      "fact": "Hyatt",
+      "label": "hotel lodging reservation",
+      "session_id": "sess_profile_016_06",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_007",
+      "content": "The user's verified bank checking account record is direct deposit checking account number Chase-8839201948. (Registered for Avery Davis)",
+      "entity_type": "checking",
+      "fact": "Chase-8839201948",
+      "label": "bank checking account",
+      "session_id": "sess_profile_016_07",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_008",
+      "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Avery Davis)",
+      "entity_type": "advisor",
+      "fact": "Manning",
+      "label": "thesis academic advisor",
+      "session_id": "sess_profile_016_08",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_009",
+      "content": "The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Avery Davis)",
+      "entity_type": "anniversary",
+      "fact": "June 18th",
+      "label": "wedding anniversary date",
+      "session_id": "sess_profile_016_09",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_010",
+      "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Avery Davis)",
+      "entity_type": "manager",
+      "fact": "Sarah",
+      "label": "direct reporting manager",
+      "session_id": "sess_profile_016_09",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_011",
+      "content": "The user: The user practices morning Vinyasa yoga style for physical flexibility. (Registered for Avery Davis)",
+      "entity_type": "preference",
+      "fact": "Vinyasa",
+      "label": "yoga style",
+      "session_id": "sess_profile_016_09",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_012",
+      "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Avery Davis)",
+      "entity_type": "preference",
+      "fact": "Rainier",
+      "label": "backcountry hiking destination",
+      "session_id": "sess_profile_016_09",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_013",
+      "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. (Registered for Avery Davis)",
+      "entity_type": "preference",
+      "fact": "matcha",
+      "label": "breakfast tea beverage",
+      "session_id": "sess_profile_016_09",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_014",
+      "content": "The user: The user cooks traditional Indian butter chicken curry on weekends. (Registered for Avery Davis)",
+      "entity_type": "preference",
+      "fact": "butter chicken",
+      "label": "cooking curry",
+      "session_id": "sess_profile_016_09",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_015",
+      "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Avery Davis)",
+      "entity_type": "preference",
+      "fact": "guitar",
+      "label": "musical instrument",
+      "session_id": "sess_profile_016_09",
+      "created_at": "2026-10-16T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_016",
+      "content": "The user: The user is studying the conversational Mandarin foreign language. (Registered for Avery Davis)",
+      "entity_type": "preference",
+      "fact": "Mandarin",
+      "label": "language study",
+      "session_id": "sess_profile_016_09",
+      "created_at": "2026-10-17T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_016_001",
+      "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Avery Davis)",
+      "entity_type": "passport",
+      "fact": "USA-P98124019",
+      "label": "passport travel number",
+      "session_id": "sess_profile_016_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_002",
+      "content": "The user's verified international travel destination record is visited Reykjavik Iceland for northern lights photography. (Registered for Avery Davis)",
+      "entity_type": "destination",
+      "fact": "Reykjavik",
+      "label": "international travel destination",
+      "session_id": "sess_profile_016_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_016_003",
+      "content": "The user's verified car rental loyalty tier record is National Car Rental Executive Elite club member. (Registered for Avery Davis)",
+      "entity_type": "rental",
+      "fact": "National",
+      "label": "car rental loyalty tier",
+      "session_id": "sess_profile_016_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_016_01",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    },
+    {
+      "control_id": "ctrl_profile_016_02",
+      "content": "The user has an unrecorded commercial maritime yacht captain license CAPT-4819.",
+      "entity_type": "boat_license",
+      "label": "boat captain license"
+    },
+    {
+      "control_id": "ctrl_profile_016_03",
+      "content": "The user has an unrecorded FCC amateur radio operator callsign K9XYZ.",
+      "entity_type": "ham_radio",
+      "label": "amateur radio callsign"
+    },
+    {
+      "control_id": "ctrl_profile_016_04",
+      "content": "The user has an unrecorded handcrafted German antique cello musical instrument.",
+      "entity_type": "cello",
+      "label": "antique cello instrument"
+    }
+  ]
+}

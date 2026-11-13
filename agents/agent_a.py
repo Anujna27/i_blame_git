@@ -1,4 +1,6 @@
+import os
 from datetime import datetime, timezone
+from typing import Optional
 
 from core.abstention import AbstentionEngine
 from core.contradiction import ContradictionEngine
@@ -22,21 +24,40 @@ from core.dreaming import HonchoDreaming
 
 
 class AgentA:
-    def __init__(self):
-        self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")
-        self.graph = KnowledgeGraph()
+    def __init__(self, data_dir: Optional[str] = None, *args, **kwargs):
+        backend = kwargs.get("backend", None) or (args[0] if args else None)
+        self.backend = backend
+        data_dir = data_dir or kwargs.get("data_dir", None) or kwargs.get("path", None)
+        self.data_dir = str(data_dir).rstrip("/\\") if data_dir else None
+
+        if self.data_dir:
+            os.makedirs(self.data_dir, exist_ok=True)
+            self.vector_store = VectorStore(
+                collection_name="agent_a",
+                persist_directory=os.path.join(self.data_dir, "chroma_db"),
+            )
+            self.graph = KnowledgeGraph(path=os.path.join(self.data_dir, "knowledge_graph.json"))
+            self.hash_chain = HashChain(log_path=os.path.join(self.data_dir, "audit_log.json"))
+            self.erasure = ErasureEngine(blocked_set_path=os.path.join(self.data_dir, "blocked_inference.json"))
+            self.session_store = SessionStore(path=os.path.join(self.data_dir, "sessions.json"))
+            self.blocked_ids = load_blocked_ids(path=os.path.join(self.data_dir, "blocked_inference.json"))
+        else:
+            self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")
+            self.graph = KnowledgeGraph()
+            self.hash_chain = HashChain()
+            self.erasure = ErasureEngine()
+            self.session_store = SessionStore()
+            self.blocked_ids = load_blocked_ids()
+
+        self.erasure_engine = self.erasure
         self.graph_store = self.graph
-        self.hash_chain = HashChain()
-        self.erasure = ErasureEngine()
-        self.pending_erasures = self.erasure.journal.pending()
+        self.pending_erasures = self.erasure.journal.pending() if hasattr(self.erasure, "journal") and hasattr(self.erasure.journal, "pending") else []
         self.erasure_recovery = ErasureRecovery(self.erasure)
         self.contradiction = ContradictionEngine()
         self.abstention = AbstentionEngine()
         self.residual_risks = []
-        self.blocked_ids = load_blocked_ids()
         self.all_nodes = dict(self.graph.nodes)
         self.last_report = None
-        self.session_store = SessionStore()
         self.sessions = self.session_store
         self.healing_scheduler = HealingScheduler(self.build_knowledge_graph)
         self.llm = ConfiguredLLM()
@@ -248,10 +269,18 @@ class AgentA:
                                         self.residual_risks, session_commits=self.sessions._sessions, vector_store=self.vector_store)
 
     def restart(self):
-        self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")
-        self.graph = KnowledgeGraph()
-        self.hash_chain = HashChain()
-        self.blocked_ids = load_blocked_ids()
+        if self.data_dir:
+            self.vector_store = VectorStore(collection_name="agent_a", persist_directory=os.path.join(self.data_dir, "chroma_db"))
+            self.graph = KnowledgeGraph(path=os.path.join(self.data_dir, "knowledge_graph.json"))
+            self.hash_chain = HashChain(log_path=os.path.join(self.data_dir, "audit_log.json"))
+            blocked_path = os.path.join(self.data_dir, "blocked_inference.json")
+            self.blocked_ids = load_blocked_ids(path=blocked_path)
+            self.session_store = SessionStore(path=os.path.join(self.data_dir, "sessions.json"))
+        else:
+            self.vector_store = VectorStore(collection_name="agent_a", persist_directory="data/chroma_db")
+            self.graph = KnowledgeGraph()
+            self.hash_chain = HashChain()
+            self.blocked_ids = load_blocked_ids()
+            self.session_store = SessionStore()
         self.all_nodes = dict(self.graph.nodes)
-        self.session_store = SessionStore()
         self.sessions = self.session_store

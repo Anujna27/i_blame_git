@@ -1,0 +1,494 @@
+{
+  "profile_id": "profile_026",
+  "name": "Kelly Wilson",
+  "domain_bundle": "financial",
+  "sessions": [
+    {
+      "session_id": "sess_profile_026_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_001",
+          "content": "The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Kelly Wilson)",
+          "entity_type": "loan",
+          "fact": "Nelnet",
+          "label": "education loan provider",
+          "session_id": "sess_profile_026_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my education loan provider. Specifically, The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your education loan provider details."
+        }
+      ],
+      "summary_l1": "Session 1: Kelly Wilson confirmed their education loan provider details stating that The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Kelly Wilson)"
+    },
+    {
+      "session_id": "sess_profile_026_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_002",
+          "content": "The user's verified tax preparation accountant record is CPA accountant Marcus Vance preparing annual 1040 return. (Registered for Kelly Wilson)",
+          "entity_type": "tax_filing",
+          "fact": "Marcus",
+          "label": "tax preparation accountant",
+          "session_id": "sess_profile_026_02",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my tax preparation accountant. Specifically, The user's verified tax preparation accountant record is CPA accountant Marcus Vance preparing annual 1040 return. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your tax preparation accountant details."
+        }
+      ],
+      "summary_l1": "Session 2: Kelly Wilson confirmed their tax preparation accountant details stating that The user's verified tax preparation accountant record is CPA accountant Marcus Vance preparing annual 1040 return. (Registered for Kelly Wilson)"
+    },
+    {
+      "session_id": "sess_profile_026_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_003",
+          "content": "The user's verified brokerage investments record is forty shares of index ETF VOO held in Vanguard. (Registered for Kelly Wilson)",
+          "entity_type": "brokerage",
+          "fact": "VOO",
+          "label": "brokerage investments",
+          "session_id": "sess_profile_026_03",
+          "created_at": "2026-10-04T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my brokerage investments. Specifically, The user's verified brokerage investments record is forty shares of index ETF VOO held in Vanguard. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your brokerage investments details."
+        }
+      ],
+      "summary_l1": "Session 3: Kelly Wilson confirmed their brokerage investments details stating that The user's verified brokerage investments record is forty shares of index ETF VOO held in Vanguard. (Registered for Kelly Wilson)"
+    },
+    {
+      "session_id": "sess_profile_026_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_004",
+          "content": "The user's verified retirement account strategy record is annual backdoor Roth IRA contributions maximized. (Registered for Kelly Wilson)",
+          "entity_type": "retirement",
+          "fact": "Roth",
+          "label": "retirement account strategy",
+          "session_id": "sess_profile_026_04",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my retirement account strategy. Specifically, The user's verified retirement account strategy record is annual backdoor Roth IRA contributions maximized. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your retirement account strategy details."
+        }
+      ],
+      "summary_l1": "Session 4: Kelly Wilson confirmed their retirement account strategy details stating that The user's verified retirement account strategy record is annual backdoor Roth IRA contributions maximized. (Registered for Kelly Wilson)"
+    },
+    {
+      "session_id": "sess_profile_026_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_005",
+          "content": "The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Kelly Wilson)",
+          "entity_type": "credit_card",
+          "fact": "4921",
+          "label": "primary credit card",
+          "session_id": "sess_profile_026_05",
+          "created_at": "2026-10-06T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my primary credit card. Specifically, The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your primary credit card details."
+        }
+      ],
+      "summary_l1": "Session 5: Kelly Wilson confirmed their primary credit card details stating that The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Kelly Wilson)"
+    },
+    {
+      "session_id": "sess_profile_026_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_006",
+          "content": "The user's verified credit score rating record is FICO credit score of 785 recorded in September. (Registered for Kelly Wilson)",
+          "entity_type": "credit_score",
+          "fact": "785",
+          "label": "credit score rating",
+          "session_id": "sess_profile_026_06",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my credit score rating. Specifically, The user's verified credit score rating record is FICO credit score of 785 recorded in September. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your credit score rating details."
+        }
+      ],
+      "summary_l1": "Session 6: Kelly Wilson confirmed their credit score rating details stating that The user's verified credit score rating record is FICO credit score of 785 recorded in September. (Registered for Kelly Wilson)"
+    },
+    {
+      "session_id": "sess_profile_026_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_007",
+          "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Kelly Wilson)",
+          "entity_type": "loyalty",
+          "fact": "Diamond",
+          "label": "airline loyalty status",
+          "session_id": "sess_profile_026_07",
+          "created_at": "2026-10-08T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my airline loyalty status. Specifically, The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your airline loyalty status details."
+        }
+      ],
+      "summary_l1": "Session 7: Kelly Wilson confirmed their airline loyalty status details stating that The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Kelly Wilson)"
+    },
+    {
+      "session_id": "sess_profile_026_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_008",
+          "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Kelly Wilson)",
+          "entity_type": "spouse",
+          "fact": "David",
+          "label": "spouse name",
+          "session_id": "sess_profile_026_08",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my spouse name. Specifically, The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your spouse name details."
+        }
+      ],
+      "summary_l1": "Session 8: Kelly Wilson confirmed their spouse name details stating that The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Kelly Wilson)"
+    },
+    {
+      "session_id": "sess_profile_026_09",
+      "session_index": 9,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_009",
+          "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Kelly Wilson)",
+          "entity_type": "advisor",
+          "fact": "Manning",
+          "label": "thesis academic advisor",
+          "session_id": "sess_profile_026_09",
+          "created_at": "2026-10-10T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my thesis academic advisor. Specifically, The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your thesis academic advisor details."
+        }
+      ],
+      "summary_l1": "Session 9: Kelly Wilson confirmed their thesis academic advisor details stating that The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Kelly Wilson)"
+    },
+    {
+      "session_id": "sess_profile_026_10",
+      "session_index": 10,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_026_010",
+          "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Kelly Wilson)",
+          "entity_type": "allergy",
+          "fact": "penicillin",
+          "label": "medical allergies",
+          "session_id": "sess_profile_026_10",
+          "created_at": "2026-10-11T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_026_011",
+          "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Kelly Wilson)",
+          "entity_type": "preference",
+          "fact": "marathon",
+          "label": "athletic marathon race",
+          "session_id": "sess_profile_026_10",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_026_012",
+          "content": "The user: The user's favorite sci-fi author is science fiction writer Isaac Asimov. (Registered for Kelly Wilson)",
+          "entity_type": "preference",
+          "fact": "Asimov",
+          "label": "favorite sci-fi author",
+          "session_id": "sess_profile_026_10",
+          "created_at": "2026-10-13T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_026_013",
+          "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Kelly Wilson)",
+          "entity_type": "preference",
+          "fact": "shelter",
+          "label": "community volunteer work",
+          "session_id": "sess_profile_026_10",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_026_014",
+          "content": "The user: The user practices morning Vinyasa yoga style for physical flexibility. (Registered for Kelly Wilson)",
+          "entity_type": "preference",
+          "fact": "Vinyasa",
+          "label": "yoga style",
+          "session_id": "sess_profile_026_10",
+          "created_at": "2026-10-15T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my medical allergies. Specifically, The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Kelly. I have recorded your medical allergies details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my athletic marathon race: The user: The user completed an athletic marathon race in Chicago last October. (Registered for Kelly Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with athletic marathon race."
+        }
+      ],
+      "summary_l1": "Session 10: Kelly Wilson confirmed their medical allergies details stating that The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Kelly Wilson)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_026_001",
+      "content": "The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Kelly Wilson)",
+      "entity_type": "loan",
+      "fact": "Nelnet",
+      "label": "education loan provider",
+      "session_id": "sess_profile_026_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_002",
+      "content": "The user's verified tax preparation accountant record is CPA accountant Marcus Vance preparing annual 1040 return. (Registered for Kelly Wilson)",
+      "entity_type": "tax_filing",
+      "fact": "Marcus",
+      "label": "tax preparation accountant",
+      "session_id": "sess_profile_026_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_003",
+      "content": "The user's verified brokerage investments record is forty shares of index ETF VOO held in Vanguard. (Registered for Kelly Wilson)",
+      "entity_type": "brokerage",
+      "fact": "VOO",
+      "label": "brokerage investments",
+      "session_id": "sess_profile_026_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_004",
+      "content": "The user's verified retirement account strategy record is annual backdoor Roth IRA contributions maximized. (Registered for Kelly Wilson)",
+      "entity_type": "retirement",
+      "fact": "Roth",
+      "label": "retirement account strategy",
+      "session_id": "sess_profile_026_04",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_005",
+      "content": "The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Kelly Wilson)",
+      "entity_type": "credit_card",
+      "fact": "4921",
+      "label": "primary credit card",
+      "session_id": "sess_profile_026_05",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_006",
+      "content": "The user's verified credit score rating record is FICO credit score of 785 recorded in September. (Registered for Kelly Wilson)",
+      "entity_type": "credit_score",
+      "fact": "785",
+      "label": "credit score rating",
+      "session_id": "sess_profile_026_06",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_007",
+      "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Kelly Wilson)",
+      "entity_type": "loyalty",
+      "fact": "Diamond",
+      "label": "airline loyalty status",
+      "session_id": "sess_profile_026_07",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_008",
+      "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Kelly Wilson)",
+      "entity_type": "spouse",
+      "fact": "David",
+      "label": "spouse name",
+      "session_id": "sess_profile_026_08",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_009",
+      "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Kelly Wilson)",
+      "entity_type": "advisor",
+      "fact": "Manning",
+      "label": "thesis academic advisor",
+      "session_id": "sess_profile_026_09",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_010",
+      "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Kelly Wilson)",
+      "entity_type": "allergy",
+      "fact": "penicillin",
+      "label": "medical allergies",
+      "session_id": "sess_profile_026_10",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_011",
+      "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Kelly Wilson)",
+      "entity_type": "preference",
+      "fact": "marathon",
+      "label": "athletic marathon race",
+      "session_id": "sess_profile_026_10",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_012",
+      "content": "The user: The user's favorite sci-fi author is science fiction writer Isaac Asimov. (Registered for Kelly Wilson)",
+      "entity_type": "preference",
+      "fact": "Asimov",
+      "label": "favorite sci-fi author",
+      "session_id": "sess_profile_026_10",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_013",
+      "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Kelly Wilson)",
+      "entity_type": "preference",
+      "fact": "shelter",
+      "label": "community volunteer work",
+      "session_id": "sess_profile_026_10",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_014",
+      "content": "The user: The user practices morning Vinyasa yoga style for physical flexibility. (Registered for Kelly Wilson)",
+      "entity_type": "preference",
+      "fact": "Vinyasa",
+      "label": "yoga style",
+      "session_id": "sess_profile_026_10",
+      "created_at": "2026-10-15T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_026_001",
+      "content": "The user's verified education loan provider record is federal student loan balance with Nelnet servicer. (Registered for Kelly Wilson)",
+      "entity_type": "loan",
+      "fact": "Nelnet",
+      "label": "education loan provider",
+      "session_id": "sess_profile_026_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_002",
+      "content": "The user's verified tax preparation accountant record is CPA accountant Marcus Vance preparing annual 1040 return. (Registered for Kelly Wilson)",
+      "entity_type": "tax_filing",
+      "fact": "Marcus",
+      "label": "tax preparation accountant",
+      "session_id": "sess_profile_026_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_026_003",
+      "content": "The user's verified brokerage investments record is forty shares of index ETF VOO held in Vanguard. (Registered for Kelly Wilson)",
+      "entity_type": "brokerage",
+      "fact": "VOO",
+      "label": "brokerage investments",
+      "session_id": "sess_profile_026_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_026_01",
+      "content": "The user has an unrecorded PADI master scuba diver certification license 98124.",
+      "entity_type": "scuba_cert",
+      "label": "scuba certification"
+    },
+    {
+      "control_id": "ctrl_profile_026_02",
+      "content": "The user has an unrecorded private collection of Bordeaux grand cru vintage wines.",
+      "entity_type": "wine_cellar",
+      "label": "wine cellar collection"
+    },
+    {
+      "control_id": "ctrl_profile_026_03",
+      "content": "The user has an unrecorded FCC amateur radio operator callsign K9XYZ.",
+      "entity_type": "ham_radio",
+      "label": "amateur radio callsign"
+    },
+    {
+      "control_id": "ctrl_profile_026_04",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    }
+  ]
+}

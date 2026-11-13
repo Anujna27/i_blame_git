@@ -1,0 +1,588 @@
+{
+  "profile_id": "profile_024",
+  "name": "Avery Martin",
+  "domain_bundle": "academic",
+  "sessions": [
+    {
+      "session_id": "sess_profile_024_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_024_001",
+          "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Avery Martin)",
+          "entity_type": "advisor",
+          "fact": "Manning",
+          "label": "thesis academic advisor",
+          "session_id": "sess_profile_024_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_002",
+          "content": "The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society. (Registered for Avery Martin)",
+          "entity_type": "society",
+          "fact": "Phi Beta Kappa",
+          "label": "academic honor society",
+          "session_id": "sess_profile_024_01",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my thesis academic advisor. Specifically, The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your thesis academic advisor details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my academic honor society: The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with academic honor society."
+        }
+      ],
+      "summary_l1": "Session 1: Avery Martin confirmed their thesis academic advisor details stating that The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Avery Martin)"
+    },
+    {
+      "session_id": "sess_profile_024_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_024_003",
+          "content": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Avery Martin)",
+          "entity_type": "gpa",
+          "fact": "3.92",
+          "label": "undergraduate GPA",
+          "session_id": "sess_profile_024_02",
+          "created_at": "2026-10-04T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_004",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Avery Martin)",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_024_02",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my undergraduate GPA. Specifically, The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your undergraduate GPA details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my graduate degree university: The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with graduate degree university."
+        }
+      ],
+      "summary_l1": "Session 2: Avery Martin confirmed their undergraduate GPA details stating that The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Avery Martin)"
+    },
+    {
+      "session_id": "sess_profile_024_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_024_005",
+          "content": "The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Avery Martin)",
+          "entity_type": "scholarship",
+          "fact": "Dean",
+          "label": "academic scholarship award",
+          "session_id": "sess_profile_024_03",
+          "created_at": "2026-10-06T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_006",
+          "content": "The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Avery Martin)",
+          "entity_type": "grant",
+          "fact": "NSF-19824",
+          "label": "research grant identifier",
+          "session_id": "sess_profile_024_03",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my academic scholarship award. Specifically, The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your academic scholarship award details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my research grant identifier: The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with research grant identifier."
+        }
+      ],
+      "summary_l1": "Session 3: Avery Martin confirmed their academic scholarship award details stating that The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Avery Martin)"
+    },
+    {
+      "session_id": "sess_profile_024_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_024_007",
+          "content": "The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Avery Martin)",
+          "entity_type": "anniversary",
+          "fact": "June 18th",
+          "label": "wedding anniversary date",
+          "session_id": "sess_profile_024_04",
+          "created_at": "2026-10-08T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_008",
+          "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Avery Martin)",
+          "entity_type": "manager",
+          "fact": "Sarah",
+          "label": "direct reporting manager",
+          "session_id": "sess_profile_024_04",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my wedding anniversary date. Specifically, The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your wedding anniversary date details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my direct reporting manager: The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with direct reporting manager."
+        }
+      ],
+      "summary_l1": "Session 4: Avery Martin confirmed their wedding anniversary date details stating that The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Avery Martin)"
+    },
+    {
+      "session_id": "sess_profile_024_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_024_009",
+          "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Avery Martin)",
+          "entity_type": "passport",
+          "fact": "USA-P98124019",
+          "label": "passport travel number",
+          "session_id": "sess_profile_024_05",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_010",
+          "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Avery Martin)",
+          "entity_type": "prescription",
+          "fact": "Ventolin",
+          "label": "prescription medications",
+          "session_id": "sess_profile_024_05",
+          "created_at": "2026-10-11T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my passport travel number. Specifically, The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your passport travel number details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my prescription medications: The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with prescription medications."
+        }
+      ],
+      "summary_l1": "Session 5: Avery Martin confirmed their passport travel number details stating that The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Avery Martin)"
+    },
+    {
+      "session_id": "sess_profile_024_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_024_011",
+          "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Avery Martin)",
+          "entity_type": "preference",
+          "fact": "marathon",
+          "label": "athletic marathon race",
+          "session_id": "sess_profile_024_06",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_012",
+          "content": "The user: The user enjoys programming in the Rust language for systems software. (Registered for Avery Martin)",
+          "entity_type": "preference",
+          "fact": "Rust",
+          "label": "programming language",
+          "session_id": "sess_profile_024_06",
+          "created_at": "2026-10-13T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my athletic marathon race. Specifically, The user: The user completed an athletic marathon race in Chicago last October. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your athletic marathon race details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my programming language: The user: The user enjoys programming in the Rust language for systems software. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with programming language."
+        }
+      ],
+      "summary_l1": "Session 6: Avery Martin confirmed their athletic marathon race details stating that The user: The user completed an athletic marathon race in Chicago last October. (Registered for Avery Martin)"
+    },
+    {
+      "session_id": "sess_profile_024_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_024_013",
+          "content": "The user: The user speaks the Japanese foreign language with native fluency. (Registered for Avery Martin)",
+          "entity_type": "preference",
+          "fact": "Japanese",
+          "label": "foreign language",
+          "session_id": "sess_profile_024_07",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_014",
+          "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Avery Martin)",
+          "entity_type": "preference",
+          "fact": "sourdough",
+          "label": "artisan bread",
+          "session_id": "sess_profile_024_07",
+          "created_at": "2026-10-15T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my foreign language. Specifically, The user: The user speaks the Japanese foreign language with native fluency. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your foreign language details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my artisan bread: The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with artisan bread."
+        }
+      ],
+      "summary_l1": "Session 7: Avery Martin confirmed their foreign language details stating that The user: The user speaks the Japanese foreign language with native fluency. (Registered for Avery Martin)"
+    },
+    {
+      "session_id": "sess_profile_024_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_024_015",
+          "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Avery Martin)",
+          "entity_type": "preference",
+          "fact": "Arch Linux",
+          "label": "Linux distribution",
+          "session_id": "sess_profile_024_08",
+          "created_at": "2026-10-16T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_016",
+          "content": "The user: The user collects rare vinyl records from Blue Note Records. (Registered for Avery Martin)",
+          "entity_type": "preference",
+          "fact": "Blue Note",
+          "label": "vinyl record collection",
+          "session_id": "sess_profile_024_08",
+          "created_at": "2026-10-17T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_017",
+          "content": "The user: The user drinks dark roast morning espresso coffee each morning. (Registered for Avery Martin)",
+          "entity_type": "preference",
+          "fact": "espresso",
+          "label": "morning coffee",
+          "session_id": "sess_profile_024_08",
+          "created_at": "2026-10-18T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_024_018",
+          "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Avery Martin)",
+          "entity_type": "preference",
+          "fact": "telescope",
+          "label": "stargazing equipment",
+          "session_id": "sess_profile_024_08",
+          "created_at": "2026-10-19T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my Linux distribution. Specifically, The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Avery. I have recorded your Linux distribution details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my vinyl record collection: The user: The user collects rare vinyl records from Blue Note Records. (Registered for Avery Martin)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with vinyl record collection."
+        }
+      ],
+      "summary_l1": "Session 8: Avery Martin confirmed their Linux distribution details stating that The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Avery Martin)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_024_001",
+      "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Avery Martin)",
+      "entity_type": "advisor",
+      "fact": "Manning",
+      "label": "thesis academic advisor",
+      "session_id": "sess_profile_024_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_002",
+      "content": "The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society. (Registered for Avery Martin)",
+      "entity_type": "society",
+      "fact": "Phi Beta Kappa",
+      "label": "academic honor society",
+      "session_id": "sess_profile_024_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_003",
+      "content": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Avery Martin)",
+      "entity_type": "gpa",
+      "fact": "3.92",
+      "label": "undergraduate GPA",
+      "session_id": "sess_profile_024_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_004",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Avery Martin)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_024_02",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_005",
+      "content": "The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Avery Martin)",
+      "entity_type": "scholarship",
+      "fact": "Dean",
+      "label": "academic scholarship award",
+      "session_id": "sess_profile_024_03",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_006",
+      "content": "The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Avery Martin)",
+      "entity_type": "grant",
+      "fact": "NSF-19824",
+      "label": "research grant identifier",
+      "session_id": "sess_profile_024_03",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_007",
+      "content": "The user's verified wedding anniversary date record is celebrates wedding anniversary on June 18th. (Registered for Avery Martin)",
+      "entity_type": "anniversary",
+      "fact": "June 18th",
+      "label": "wedding anniversary date",
+      "session_id": "sess_profile_024_04",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_008",
+      "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Avery Martin)",
+      "entity_type": "manager",
+      "fact": "Sarah",
+      "label": "direct reporting manager",
+      "session_id": "sess_profile_024_04",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_009",
+      "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Avery Martin)",
+      "entity_type": "passport",
+      "fact": "USA-P98124019",
+      "label": "passport travel number",
+      "session_id": "sess_profile_024_05",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_010",
+      "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Avery Martin)",
+      "entity_type": "prescription",
+      "fact": "Ventolin",
+      "label": "prescription medications",
+      "session_id": "sess_profile_024_05",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_011",
+      "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Avery Martin)",
+      "entity_type": "preference",
+      "fact": "marathon",
+      "label": "athletic marathon race",
+      "session_id": "sess_profile_024_06",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_012",
+      "content": "The user: The user enjoys programming in the Rust language for systems software. (Registered for Avery Martin)",
+      "entity_type": "preference",
+      "fact": "Rust",
+      "label": "programming language",
+      "session_id": "sess_profile_024_06",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_013",
+      "content": "The user: The user speaks the Japanese foreign language with native fluency. (Registered for Avery Martin)",
+      "entity_type": "preference",
+      "fact": "Japanese",
+      "label": "foreign language",
+      "session_id": "sess_profile_024_07",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_014",
+      "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Avery Martin)",
+      "entity_type": "preference",
+      "fact": "sourdough",
+      "label": "artisan bread",
+      "session_id": "sess_profile_024_07",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_015",
+      "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Avery Martin)",
+      "entity_type": "preference",
+      "fact": "Arch Linux",
+      "label": "Linux distribution",
+      "session_id": "sess_profile_024_08",
+      "created_at": "2026-10-16T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_016",
+      "content": "The user: The user collects rare vinyl records from Blue Note Records. (Registered for Avery Martin)",
+      "entity_type": "preference",
+      "fact": "Blue Note",
+      "label": "vinyl record collection",
+      "session_id": "sess_profile_024_08",
+      "created_at": "2026-10-17T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_017",
+      "content": "The user: The user drinks dark roast morning espresso coffee each morning. (Registered for Avery Martin)",
+      "entity_type": "preference",
+      "fact": "espresso",
+      "label": "morning coffee",
+      "session_id": "sess_profile_024_08",
+      "created_at": "2026-10-18T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_018",
+      "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Avery Martin)",
+      "entity_type": "preference",
+      "fact": "telescope",
+      "label": "stargazing equipment",
+      "session_id": "sess_profile_024_08",
+      "created_at": "2026-10-19T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_024_001",
+      "content": "The user's verified thesis academic advisor record is graduate research thesis advised by Dr. Manning. (Registered for Avery Martin)",
+      "entity_type": "advisor",
+      "fact": "Manning",
+      "label": "thesis academic advisor",
+      "session_id": "sess_profile_024_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_002",
+      "content": "The user's verified academic honor society record is inducted member of Phi Beta Kappa honor society. (Registered for Avery Martin)",
+      "entity_type": "society",
+      "fact": "Phi Beta Kappa",
+      "label": "academic honor society",
+      "session_id": "sess_profile_024_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_024_003",
+      "content": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Avery Martin)",
+      "entity_type": "gpa",
+      "fact": "3.92",
+      "label": "undergraduate GPA",
+      "session_id": "sess_profile_024_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_024_01",
+      "content": "The user has an unrecorded us patent granted for quantum semiconductor waveguide.",
+      "entity_type": "patents",
+      "label": "quantum waveguide patent"
+    },
+    {
+      "control_id": "ctrl_profile_024_02",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    },
+    {
+      "control_id": "ctrl_profile_024_03",
+      "content": "The user has an unrecorded commercial maritime yacht captain license CAPT-4819.",
+      "entity_type": "boat_license",
+      "label": "boat captain license"
+    },
+    {
+      "control_id": "ctrl_profile_024_04",
+      "content": "The user has an unrecorded FCC amateur radio operator callsign K9XYZ.",
+      "entity_type": "ham_radio",
+      "label": "amateur radio callsign"
+    }
+  ]
+}
