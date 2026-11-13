@@ -1,0 +1,128 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "node_id": "e0f06395-8303-46f2-9b44-e89512e97759",
+      "entity_type": "generic",
+      "content": "User likes dark mode in IDE",
+      "session_id": "sess_001",
+      "deletion_state": "source_removed",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "519d89f1-15c1-496e-8707-ea211eb0752d",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T13:28:49.626630+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "c9f3dd0d-b23b-41e5-96de-926fe26a3340",
+          "state": "deleted",
+          "actor": "user",
+          "reason": "user_requested_erasure",
+          "timestamp": "2026-11-13T13:28:49.641190+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "conversation_turn",
+          "session_id": "sess_001",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T13:28:49.626528+00:00Z",
+          "raw_reference": "sess_001_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T13:28:49.626618+00:00",
+        "last_accessed": "2026-11-13T13:28:49.626621+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "User likes dark mode in IDE",
+        "summary_l1": "User likes dark mode in IDE",
+        "content_l2": "User likes dark mode in IDE"
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_001",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T13:28:49.626528+00:00Z",
+        "raw_reference": "sess_001_turn_0"
+      },
+      "deleted_by": "user",
+      "deleted_reason": "user_requested_erasure",
+      "deleted_at": "2026-11-13T13:28:49.641190+00:00",
+      "id": "e0f06395-8303-46f2-9b44-e89512e97759"
+    },
+    {
+      "node_id": "1e6aea76-12bc-4e09-82a3-380d5e137b12",
+      "entity_type": "generic",
+      "content": "calisthenics is good",
+      "session_id": "sess_001",
+      "deletion_state": "source_removed",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "0915118c-75a5-4da5-ae78-63c0f38d6f81",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T13:30:02.221560+00:00",
+          "metadata": {}
+        },
+        {
+          "event_id": "480965d2-44fb-4da6-9f4e-2ef7a691a732",
+          "state": "deleted",
+          "actor": "user",
+          "reason": "user_requested_erasure",
+          "timestamp": "2026-11-13T13:30:02.236425+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "conversation_turn",
+          "session_id": "sess_001",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T13:30:02.221489+00:00Z",
+          "raw_reference": "sess_001_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T13:30:02.221549+00:00",
+        "last_accessed": "2026-11-13T13:30:02.221551+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "calisthenics is good",
+        "summary_l1": "calisthenics is good",
+        "content_l2": "calisthenics is good"
+      },
+      "source": {
+        "type": "conversation_turn",
+        "session_id": "sess_001",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T13:30:02.221489+00:00Z",
+        "raw_reference": "sess_001_turn_0"
+      },
+      "deleted_by": "user",
+      "deleted_reason": "user_requested_erasure",
+      "deleted_at": "2026-11-13T13:30:02.236425+00:00",
+      "id": "1e6aea76-12bc-4e09-82a3-380d5e137b12"
+    }
+  ],
+  "edges": []
+}

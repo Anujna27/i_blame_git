@@ -1,0 +1,495 @@
+{
+  "profile_id": "profile_035",
+  "name": "Harper Mitchell",
+  "domain_bundle": "family",
+  "sessions": [
+    {
+      "session_id": "sess_profile_035_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_035_001",
+          "content": "The user's verified childhood hometown record is raised in suburban Minneapolis Minnesota until college. (Registered for Harper Mitchell)",
+          "entity_type": "hometown",
+          "fact": "Minneapolis",
+          "label": "childhood hometown",
+          "session_id": "sess_profile_035_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my childhood hometown. Specifically, The user's verified childhood hometown record is raised in suburban Minneapolis Minnesota until college. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your childhood hometown details."
+        }
+      ],
+      "summary_l1": "Session 1: Harper Mitchell confirmed their childhood hometown details stating that The user's verified childhood hometown record is raised in suburban Minneapolis Minnesota until college. (Registered for Harper Mitchell)"
+    },
+    {
+      "session_id": "sess_profile_035_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_035_002",
+          "content": "The user's verified home residential street address record is residential home street address 789 Pine Avenue in Denver. (Registered for Harper Mitchell)",
+          "entity_type": "address",
+          "fact": "789 Pine",
+          "label": "home residential street address",
+          "session_id": "sess_profile_035_02",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my home residential street address. Specifically, The user's verified home residential street address record is residential home street address 789 Pine Avenue in Denver. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your home residential street address details."
+        }
+      ],
+      "summary_l1": "Session 2: Harper Mitchell confirmed their home residential street address details stating that The user's verified home residential street address record is residential home street address 789 Pine Avenue in Denver. (Registered for Harper Mitchell)"
+    },
+    {
+      "session_id": "sess_profile_035_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_035_003",
+          "content": "The user's verified child name and grade record is daughter Maya attending elementary school grade two. (Registered for Harper Mitchell)",
+          "entity_type": "child",
+          "fact": "Maya",
+          "label": "child name and grade",
+          "session_id": "sess_profile_035_03",
+          "created_at": "2026-10-04T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my child name and grade. Specifically, The user's verified child name and grade record is daughter Maya attending elementary school grade two. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your child name and grade details."
+        }
+      ],
+      "summary_l1": "Session 3: Harper Mitchell confirmed their child name and grade details stating that The user's verified child name and grade record is daughter Maya attending elementary school grade two. (Registered for Harper Mitchell)"
+    },
+    {
+      "session_id": "sess_profile_035_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_035_004",
+          "content": "The user's verified emergency contact person record is emergency contact younger sister Clara Wilson. (Registered for Harper Mitchell)",
+          "entity_type": "emergency",
+          "fact": "Clara",
+          "label": "emergency contact person",
+          "session_id": "sess_profile_035_04",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my emergency contact person. Specifically, The user's verified emergency contact person record is emergency contact younger sister Clara Wilson. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your emergency contact person details."
+        }
+      ],
+      "summary_l1": "Session 4: Harper Mitchell confirmed their emergency contact person details stating that The user's verified emergency contact person record is emergency contact younger sister Clara Wilson. (Registered for Harper Mitchell)"
+    },
+    {
+      "session_id": "sess_profile_035_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_035_005",
+          "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Harper Mitchell)",
+          "entity_type": "spouse",
+          "fact": "David",
+          "label": "spouse name",
+          "session_id": "sess_profile_035_05",
+          "created_at": "2026-10-06T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my spouse name. Specifically, The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your spouse name details."
+        }
+      ],
+      "summary_l1": "Session 5: Harper Mitchell confirmed their spouse name details stating that The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Harper Mitchell)"
+    },
+    {
+      "session_id": "sess_profile_035_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_035_006",
+          "content": "The user's verified pet name and breed record is adopted Siamese cat pet named Mochi. (Registered for Harper Mitchell)",
+          "entity_type": "pet",
+          "fact": "Mochi",
+          "label": "pet name and breed",
+          "session_id": "sess_profile_035_06",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my pet name and breed. Specifically, The user's verified pet name and breed record is adopted Siamese cat pet named Mochi. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your pet name and breed details."
+        }
+      ],
+      "summary_l1": "Session 6: Harper Mitchell confirmed their pet name and breed details stating that The user's verified pet name and breed record is adopted Siamese cat pet named Mochi. (Registered for Harper Mitchell)"
+    },
+    {
+      "session_id": "sess_profile_035_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_035_007",
+          "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Harper Mitchell)",
+          "entity_type": "allergy",
+          "fact": "penicillin",
+          "label": "medical allergies",
+          "session_id": "sess_profile_035_07",
+          "created_at": "2026-10-08T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my medical allergies. Specifically, The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your medical allergies details."
+        }
+      ],
+      "summary_l1": "Session 7: Harper Mitchell confirmed their medical allergies details stating that The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Harper Mitchell)"
+    },
+    {
+      "session_id": "sess_profile_035_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_035_008",
+          "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Harper Mitchell)",
+          "entity_type": "manager",
+          "fact": "Sarah",
+          "label": "direct reporting manager",
+          "session_id": "sess_profile_035_08",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my direct reporting manager. Specifically, The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your direct reporting manager details."
+        }
+      ],
+      "summary_l1": "Session 8: Harper Mitchell confirmed their direct reporting manager details stating that The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Harper Mitchell)"
+    },
+    {
+      "session_id": "sess_profile_035_09",
+      "session_index": 9,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_035_009",
+          "content": "The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Harper Mitchell)",
+          "entity_type": "credit_card",
+          "fact": "4921",
+          "label": "primary credit card",
+          "session_id": "sess_profile_035_09",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_035_010",
+          "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Harper Mitchell)",
+          "entity_type": "employer",
+          "fact": "Acme",
+          "label": "current employer",
+          "session_id": "sess_profile_035_09",
+          "created_at": "2026-10-11T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_035_011",
+          "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. (Registered for Harper Mitchell)",
+          "entity_type": "preference",
+          "fact": "matcha",
+          "label": "breakfast tea beverage",
+          "session_id": "sess_profile_035_09",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_035_012",
+          "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Harper Mitchell)",
+          "entity_type": "preference",
+          "fact": "shelter",
+          "label": "community volunteer work",
+          "session_id": "sess_profile_035_09",
+          "created_at": "2026-10-13T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_035_013",
+          "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Harper Mitchell)",
+          "entity_type": "preference",
+          "fact": "telescope",
+          "label": "stargazing equipment",
+          "session_id": "sess_profile_035_09",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_035_014",
+          "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Harper Mitchell)",
+          "entity_type": "preference",
+          "fact": "Rainier",
+          "label": "backcountry hiking destination",
+          "session_id": "sess_profile_035_09",
+          "created_at": "2026-10-15T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_035_015",
+          "content": "The user: The user practices morning Vinyasa yoga style for physical flexibility. (Registered for Harper Mitchell)",
+          "entity_type": "preference",
+          "fact": "Vinyasa",
+          "label": "yoga style",
+          "session_id": "sess_profile_035_09",
+          "created_at": "2026-10-16T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my primary credit card. Specifically, The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Harper. I have recorded your primary credit card details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my current employer: The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Harper Mitchell)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with current employer."
+        }
+      ],
+      "summary_l1": "Session 9: Harper Mitchell confirmed their primary credit card details stating that The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Harper Mitchell)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_035_001",
+      "content": "The user's verified childhood hometown record is raised in suburban Minneapolis Minnesota until college. (Registered for Harper Mitchell)",
+      "entity_type": "hometown",
+      "fact": "Minneapolis",
+      "label": "childhood hometown",
+      "session_id": "sess_profile_035_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_002",
+      "content": "The user's verified home residential street address record is residential home street address 789 Pine Avenue in Denver. (Registered for Harper Mitchell)",
+      "entity_type": "address",
+      "fact": "789 Pine",
+      "label": "home residential street address",
+      "session_id": "sess_profile_035_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_003",
+      "content": "The user's verified child name and grade record is daughter Maya attending elementary school grade two. (Registered for Harper Mitchell)",
+      "entity_type": "child",
+      "fact": "Maya",
+      "label": "child name and grade",
+      "session_id": "sess_profile_035_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_004",
+      "content": "The user's verified emergency contact person record is emergency contact younger sister Clara Wilson. (Registered for Harper Mitchell)",
+      "entity_type": "emergency",
+      "fact": "Clara",
+      "label": "emergency contact person",
+      "session_id": "sess_profile_035_04",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_005",
+      "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Harper Mitchell)",
+      "entity_type": "spouse",
+      "fact": "David",
+      "label": "spouse name",
+      "session_id": "sess_profile_035_05",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_006",
+      "content": "The user's verified pet name and breed record is adopted Siamese cat pet named Mochi. (Registered for Harper Mitchell)",
+      "entity_type": "pet",
+      "fact": "Mochi",
+      "label": "pet name and breed",
+      "session_id": "sess_profile_035_06",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_007",
+      "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Harper Mitchell)",
+      "entity_type": "allergy",
+      "fact": "penicillin",
+      "label": "medical allergies",
+      "session_id": "sess_profile_035_07",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_008",
+      "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Harper Mitchell)",
+      "entity_type": "manager",
+      "fact": "Sarah",
+      "label": "direct reporting manager",
+      "session_id": "sess_profile_035_08",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_009",
+      "content": "The user's verified primary credit card record is Sapphire Reserve credit card ending in 4921. (Registered for Harper Mitchell)",
+      "entity_type": "credit_card",
+      "fact": "4921",
+      "label": "primary credit card",
+      "session_id": "sess_profile_035_09",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_010",
+      "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Harper Mitchell)",
+      "entity_type": "employer",
+      "fact": "Acme",
+      "label": "current employer",
+      "session_id": "sess_profile_035_09",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_011",
+      "content": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. (Registered for Harper Mitchell)",
+      "entity_type": "preference",
+      "fact": "matcha",
+      "label": "breakfast tea beverage",
+      "session_id": "sess_profile_035_09",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_012",
+      "content": "The user: The user volunteers weekly at a local community animal shelter. (Registered for Harper Mitchell)",
+      "entity_type": "preference",
+      "fact": "shelter",
+      "label": "community volunteer work",
+      "session_id": "sess_profile_035_09",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_013",
+      "content": "The user: The user uses an amateur refractor telescope equipment for stargazing. (Registered for Harper Mitchell)",
+      "entity_type": "preference",
+      "fact": "telescope",
+      "label": "stargazing equipment",
+      "session_id": "sess_profile_035_09",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_014",
+      "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Harper Mitchell)",
+      "entity_type": "preference",
+      "fact": "Rainier",
+      "label": "backcountry hiking destination",
+      "session_id": "sess_profile_035_09",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_015",
+      "content": "The user: The user practices morning Vinyasa yoga style for physical flexibility. (Registered for Harper Mitchell)",
+      "entity_type": "preference",
+      "fact": "Vinyasa",
+      "label": "yoga style",
+      "session_id": "sess_profile_035_09",
+      "created_at": "2026-10-16T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_035_001",
+      "content": "The user's verified childhood hometown record is raised in suburban Minneapolis Minnesota until college. (Registered for Harper Mitchell)",
+      "entity_type": "hometown",
+      "fact": "Minneapolis",
+      "label": "childhood hometown",
+      "session_id": "sess_profile_035_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_002",
+      "content": "The user's verified home residential street address record is residential home street address 789 Pine Avenue in Denver. (Registered for Harper Mitchell)",
+      "entity_type": "address",
+      "fact": "789 Pine",
+      "label": "home residential street address",
+      "session_id": "sess_profile_035_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_035_003",
+      "content": "The user's verified child name and grade record is daughter Maya attending elementary school grade two. (Registered for Harper Mitchell)",
+      "entity_type": "child",
+      "fact": "Maya",
+      "label": "child name and grade",
+      "session_id": "sess_profile_035_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_035_01",
+      "content": "The user has an unrecorded us patent granted for quantum semiconductor waveguide.",
+      "entity_type": "patents",
+      "label": "quantum waveguide patent"
+    },
+    {
+      "control_id": "ctrl_profile_035_02",
+      "content": "The user has an unrecorded commercial maritime yacht captain license CAPT-4819.",
+      "entity_type": "boat_license",
+      "label": "boat captain license"
+    },
+    {
+      "control_id": "ctrl_profile_035_03",
+      "content": "The user has an unrecorded private collection of Bordeaux grand cru vintage wines.",
+      "entity_type": "wine_cellar",
+      "label": "wine cellar collection"
+    },
+    {
+      "control_id": "ctrl_profile_035_04",
+      "content": "The user has an unrecorded vintage Harley Davidson Road King motorcycle registration.",
+      "entity_type": "motorcycle",
+      "label": "motorcycle registration"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-﻿# Python
+# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -18,3 +18,4 @@ data/*_stub.json
 *.swp
 
 data/chroma_db/
+data/mcp_live_demo/

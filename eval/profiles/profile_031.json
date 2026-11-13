@@ -1,0 +1,460 @@
+{
+  "profile_id": "profile_031",
+  "name": "Phoenix Wilson",
+  "domain_bundle": "medical",
+  "sessions": [
+    {
+      "session_id": "sess_profile_031_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_031_001",
+          "content": "The user's verified blood type record is blood type O-negative registered with Red Cross. (Registered for Phoenix Wilson)",
+          "entity_type": "blood_type",
+          "fact": "O-negative",
+          "label": "blood type",
+          "session_id": "sess_profile_031_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my blood type. Specifically, The user's verified blood type record is blood type O-negative registered with Red Cross. (Registered for Phoenix Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Phoenix. I have recorded your blood type details."
+        }
+      ],
+      "summary_l1": "Session 1: Phoenix Wilson confirmed their blood type details stating that The user's verified blood type record is blood type O-negative registered with Red Cross. (Registered for Phoenix Wilson)"
+    },
+    {
+      "session_id": "sess_profile_031_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_031_002",
+          "content": "The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October. (Registered for Phoenix Wilson)",
+          "entity_type": "vaccination",
+          "fact": "influenza",
+          "label": "recent immunizations",
+          "session_id": "sess_profile_031_02",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my recent immunizations. Specifically, The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October. (Registered for Phoenix Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Phoenix. I have recorded your recent immunizations details."
+        }
+      ],
+      "summary_l1": "Session 2: Phoenix Wilson confirmed their recent immunizations details stating that The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October. (Registered for Phoenix Wilson)"
+    },
+    {
+      "session_id": "sess_profile_031_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_031_003",
+          "content": "The user's verified health insurance policy ID record is health insurance policy member ID POL-8829104-BCBS. (Registered for Phoenix Wilson)",
+          "entity_type": "insurance",
+          "fact": "POL-8829104",
+          "label": "health insurance policy ID",
+          "session_id": "sess_profile_031_03",
+          "created_at": "2026-10-04T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my health insurance policy ID. Specifically, The user's verified health insurance policy ID record is health insurance policy member ID POL-8829104-BCBS. (Registered for Phoenix Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Phoenix. I have recorded your health insurance policy ID details."
+        }
+      ],
+      "summary_l1": "Session 3: Phoenix Wilson confirmed their health insurance policy ID details stating that The user's verified health insurance policy ID record is health insurance policy member ID POL-8829104-BCBS. (Registered for Phoenix Wilson)"
+    },
+    {
+      "session_id": "sess_profile_031_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_031_004",
+          "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Phoenix Wilson)",
+          "entity_type": "prescription",
+          "fact": "Ventolin",
+          "label": "prescription medications",
+          "session_id": "sess_profile_031_04",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my prescription medications. Specifically, The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Phoenix Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Phoenix. I have recorded your prescription medications details."
+        }
+      ],
+      "summary_l1": "Session 4: Phoenix Wilson confirmed their prescription medications details stating that The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Phoenix Wilson)"
+    },
+    {
+      "session_id": "sess_profile_031_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_031_005",
+          "content": "The user's verified skin conditions record is moderate eczema managed by Dr. Harris. (Registered for Phoenix Wilson)",
+          "entity_type": "condition",
+          "fact": "Harris",
+          "label": "skin conditions",
+          "session_id": "sess_profile_031_05",
+          "created_at": "2026-10-06T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my skin conditions. Specifically, The user's verified skin conditions record is moderate eczema managed by Dr. Harris. (Registered for Phoenix Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Phoenix. I have recorded your skin conditions details."
+        }
+      ],
+      "summary_l1": "Session 5: Phoenix Wilson confirmed their skin conditions details stating that The user's verified skin conditions record is moderate eczema managed by Dr. Harris. (Registered for Phoenix Wilson)"
+    },
+    {
+      "session_id": "sess_profile_031_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_031_006",
+          "content": "The user's verified primary care physician record is primary care physician Dr. Evelyn Reed at Denver Health. (Registered for Phoenix Wilson)",
+          "entity_type": "doctor",
+          "fact": "Reed",
+          "label": "primary care physician",
+          "session_id": "sess_profile_031_06",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my primary care physician. Specifically, The user's verified primary care physician record is primary care physician Dr. Evelyn Reed at Denver Health. (Registered for Phoenix Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Phoenix. I have recorded your primary care physician details."
+        }
+      ],
+      "summary_l1": "Session 6: Phoenix Wilson confirmed their primary care physician details stating that The user's verified primary care physician record is primary care physician Dr. Evelyn Reed at Denver Health. (Registered for Phoenix Wilson)"
+    },
+    {
+      "session_id": "sess_profile_031_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_031_007",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Phoenix Wilson)",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_031_07",
+          "created_at": "2026-10-08T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my graduate degree university. Specifically, The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Phoenix Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Phoenix. I have recorded your graduate degree university details."
+        }
+      ],
+      "summary_l1": "Session 7: Phoenix Wilson confirmed their graduate degree university details stating that The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Phoenix Wilson)"
+    },
+    {
+      "session_id": "sess_profile_031_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_031_008",
+          "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Phoenix Wilson)",
+          "entity_type": "spouse",
+          "fact": "David",
+          "label": "spouse name",
+          "session_id": "sess_profile_031_08",
+          "created_at": "2026-10-09T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_031_009",
+          "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Phoenix Wilson)",
+          "entity_type": "loyalty",
+          "fact": "Diamond",
+          "label": "airline loyalty status",
+          "session_id": "sess_profile_031_08",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_031_010",
+          "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Phoenix Wilson)",
+          "entity_type": "passport",
+          "fact": "USA-P98124019",
+          "label": "passport travel number",
+          "session_id": "sess_profile_031_08",
+          "created_at": "2026-10-11T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_031_011",
+          "content": "The user: The user's favorite sci-fi author is science fiction writer Isaac Asimov. (Registered for Phoenix Wilson)",
+          "entity_type": "preference",
+          "fact": "Asimov",
+          "label": "favorite sci-fi author",
+          "session_id": "sess_profile_031_08",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_031_012",
+          "content": "The user: The user is studying the conversational Mandarin foreign language. (Registered for Phoenix Wilson)",
+          "entity_type": "preference",
+          "fact": "Mandarin",
+          "label": "language study",
+          "session_id": "sess_profile_031_08",
+          "created_at": "2026-10-13T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_031_013",
+          "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Phoenix Wilson)",
+          "entity_type": "preference",
+          "fact": "Rainier",
+          "label": "backcountry hiking destination",
+          "session_id": "sess_profile_031_08",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_031_014",
+          "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Phoenix Wilson)",
+          "entity_type": "preference",
+          "fact": "Arch Linux",
+          "label": "Linux distribution",
+          "session_id": "sess_profile_031_08",
+          "created_at": "2026-10-15T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my spouse name. Specifically, The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Phoenix Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Phoenix. I have recorded your spouse name details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my airline loyalty status: The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Phoenix Wilson)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with airline loyalty status."
+        }
+      ],
+      "summary_l1": "Session 8: Phoenix Wilson confirmed their spouse name details stating that The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Phoenix Wilson)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_031_001",
+      "content": "The user's verified blood type record is blood type O-negative registered with Red Cross. (Registered for Phoenix Wilson)",
+      "entity_type": "blood_type",
+      "fact": "O-negative",
+      "label": "blood type",
+      "session_id": "sess_profile_031_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_002",
+      "content": "The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October. (Registered for Phoenix Wilson)",
+      "entity_type": "vaccination",
+      "fact": "influenza",
+      "label": "recent immunizations",
+      "session_id": "sess_profile_031_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_003",
+      "content": "The user's verified health insurance policy ID record is health insurance policy member ID POL-8829104-BCBS. (Registered for Phoenix Wilson)",
+      "entity_type": "insurance",
+      "fact": "POL-8829104",
+      "label": "health insurance policy ID",
+      "session_id": "sess_profile_031_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_004",
+      "content": "The user's verified prescription medications record is daily prescription Ventolin inhaler for asthma. (Registered for Phoenix Wilson)",
+      "entity_type": "prescription",
+      "fact": "Ventolin",
+      "label": "prescription medications",
+      "session_id": "sess_profile_031_04",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_005",
+      "content": "The user's verified skin conditions record is moderate eczema managed by Dr. Harris. (Registered for Phoenix Wilson)",
+      "entity_type": "condition",
+      "fact": "Harris",
+      "label": "skin conditions",
+      "session_id": "sess_profile_031_05",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_006",
+      "content": "The user's verified primary care physician record is primary care physician Dr. Evelyn Reed at Denver Health. (Registered for Phoenix Wilson)",
+      "entity_type": "doctor",
+      "fact": "Reed",
+      "label": "primary care physician",
+      "session_id": "sess_profile_031_06",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_007",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Phoenix Wilson)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_031_07",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_008",
+      "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Phoenix Wilson)",
+      "entity_type": "spouse",
+      "fact": "David",
+      "label": "spouse name",
+      "session_id": "sess_profile_031_08",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_009",
+      "content": "The user's verified airline loyalty status record is Delta Diamond Medallion frequent flyer status. (Registered for Phoenix Wilson)",
+      "entity_type": "loyalty",
+      "fact": "Diamond",
+      "label": "airline loyalty status",
+      "session_id": "sess_profile_031_08",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_010",
+      "content": "The user's verified passport travel number record is international passport travel number USA-P98124019. (Registered for Phoenix Wilson)",
+      "entity_type": "passport",
+      "fact": "USA-P98124019",
+      "label": "passport travel number",
+      "session_id": "sess_profile_031_08",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_011",
+      "content": "The user: The user's favorite sci-fi author is science fiction writer Isaac Asimov. (Registered for Phoenix Wilson)",
+      "entity_type": "preference",
+      "fact": "Asimov",
+      "label": "favorite sci-fi author",
+      "session_id": "sess_profile_031_08",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_012",
+      "content": "The user: The user is studying the conversational Mandarin foreign language. (Registered for Phoenix Wilson)",
+      "entity_type": "preference",
+      "fact": "Mandarin",
+      "label": "language study",
+      "session_id": "sess_profile_031_08",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_013",
+      "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Phoenix Wilson)",
+      "entity_type": "preference",
+      "fact": "Rainier",
+      "label": "backcountry hiking destination",
+      "session_id": "sess_profile_031_08",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_014",
+      "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Phoenix Wilson)",
+      "entity_type": "preference",
+      "fact": "Arch Linux",
+      "label": "Linux distribution",
+      "session_id": "sess_profile_031_08",
+      "created_at": "2026-10-15T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_031_001",
+      "content": "The user's verified blood type record is blood type O-negative registered with Red Cross. (Registered for Phoenix Wilson)",
+      "entity_type": "blood_type",
+      "fact": "O-negative",
+      "label": "blood type",
+      "session_id": "sess_profile_031_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_002",
+      "content": "The user's verified recent immunizations record is annual quadrivalent influenza vaccination received in October. (Registered for Phoenix Wilson)",
+      "entity_type": "vaccination",
+      "fact": "influenza",
+      "label": "recent immunizations",
+      "session_id": "sess_profile_031_02",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_031_003",
+      "content": "The user's verified health insurance policy ID record is health insurance policy member ID POL-8829104-BCBS. (Registered for Phoenix Wilson)",
+      "entity_type": "insurance",
+      "fact": "POL-8829104",
+      "label": "health insurance policy ID",
+      "session_id": "sess_profile_031_03",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_031_01",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    },
+    {
+      "control_id": "ctrl_profile_031_02",
+      "content": "The user has an unrecorded PADI master scuba diver certification license 98124.",
+      "entity_type": "scuba_cert",
+      "label": "scuba certification"
+    },
+    {
+      "control_id": "ctrl_profile_031_03",
+      "content": "The user has an unrecorded private collection of Bordeaux grand cru vintage wines.",
+      "entity_type": "wine_cellar",
+      "label": "wine cellar collection"
+    },
+    {
+      "control_id": "ctrl_profile_031_04",
+      "content": "The user has an unrecorded ceramic pottery wheel studio membership in Portland.",
+      "entity_type": "pottery",
+      "label": "pottery studio membership"
+    }
+  ]
+}

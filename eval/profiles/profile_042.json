@@ -1,0 +1,552 @@
+{
+  "profile_id": "profile_042",
+  "name": "Val Taylor",
+  "domain_bundle": "academic",
+  "sessions": [
+    {
+      "session_id": "sess_profile_042_01",
+      "session_index": 1,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_042_001",
+          "content": "The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Val Taylor)",
+          "entity_type": "scholarship",
+          "fact": "Dean",
+          "label": "academic scholarship award",
+          "session_id": "sess_profile_042_01",
+          "created_at": "2026-10-02T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_042_002",
+          "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Val Taylor)",
+          "entity_type": "degree",
+          "fact": "Stanford",
+          "label": "graduate degree university",
+          "session_id": "sess_profile_042_01",
+          "created_at": "2026-10-03T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my academic scholarship award. Specifically, The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Val. I have recorded your academic scholarship award details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my graduate degree university: The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with graduate degree university."
+        }
+      ],
+      "summary_l1": "Session 1: Val Taylor confirmed their academic scholarship award details stating that The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Val Taylor)"
+    },
+    {
+      "session_id": "sess_profile_042_02",
+      "session_index": 2,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_042_003",
+          "content": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Val Taylor)",
+          "entity_type": "gpa",
+          "fact": "3.92",
+          "label": "undergraduate GPA",
+          "session_id": "sess_profile_042_02",
+          "created_at": "2026-10-04T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_042_004",
+          "content": "The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Val Taylor)",
+          "entity_type": "grant",
+          "fact": "NSF-19824",
+          "label": "research grant identifier",
+          "session_id": "sess_profile_042_02",
+          "created_at": "2026-10-05T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my undergraduate GPA. Specifically, The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Val. I have recorded your undergraduate GPA details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my research grant identifier: The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with research grant identifier."
+        }
+      ],
+      "summary_l1": "Session 2: Val Taylor confirmed their undergraduate GPA details stating that The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Val Taylor)"
+    },
+    {
+      "session_id": "sess_profile_042_03",
+      "session_index": 3,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_042_005",
+          "content": "The user's verified thesis research subject record is thesis published on reinforcement learning optimization. (Registered for Val Taylor)",
+          "entity_type": "thesis",
+          "fact": "reinforcement",
+          "label": "thesis research subject",
+          "session_id": "sess_profile_042_03",
+          "created_at": "2026-10-06T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_042_006",
+          "content": "The user's verified academic research laboratory record is conducted robotics research at Artificial Intelligence Laboratory. (Registered for Val Taylor)",
+          "entity_type": "lab",
+          "fact": "Robotics",
+          "label": "academic research laboratory",
+          "session_id": "sess_profile_042_03",
+          "created_at": "2026-10-07T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my thesis research subject. Specifically, The user's verified thesis research subject record is thesis published on reinforcement learning optimization. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Val. I have recorded your thesis research subject details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my academic research laboratory: The user's verified academic research laboratory record is conducted robotics research at Artificial Intelligence Laboratory. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with academic research laboratory."
+        }
+      ],
+      "summary_l1": "Session 3: Val Taylor confirmed their thesis research subject details stating that The user's verified thesis research subject record is thesis published on reinforcement learning optimization. (Registered for Val Taylor)"
+    },
+    {
+      "session_id": "sess_profile_042_04",
+      "session_index": 4,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_042_007",
+          "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Val Taylor)",
+          "entity_type": "employer",
+          "fact": "Acme",
+          "label": "current employer",
+          "session_id": "sess_profile_042_04",
+          "created_at": "2026-10-08T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_042_008",
+          "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Val Taylor)",
+          "entity_type": "manager",
+          "fact": "Sarah",
+          "label": "direct reporting manager",
+          "session_id": "sess_profile_042_04",
+          "created_at": "2026-10-09T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my current employer. Specifically, The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Val. I have recorded your current employer details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my direct reporting manager: The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with direct reporting manager."
+        }
+      ],
+      "summary_l1": "Session 4: Val Taylor confirmed their current employer details stating that The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Val Taylor)"
+    },
+    {
+      "session_id": "sess_profile_042_05",
+      "session_index": 5,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_042_009",
+          "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Val Taylor)",
+          "entity_type": "spouse",
+          "fact": "David",
+          "label": "spouse name",
+          "session_id": "sess_profile_042_05",
+          "created_at": "2026-10-10T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_042_010",
+          "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Val Taylor)",
+          "entity_type": "allergy",
+          "fact": "penicillin",
+          "label": "medical allergies",
+          "session_id": "sess_profile_042_05",
+          "created_at": "2026-10-11T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my spouse name. Specifically, The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Val. I have recorded your spouse name details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my medical allergies: The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with medical allergies."
+        }
+      ],
+      "summary_l1": "Session 5: Val Taylor confirmed their spouse name details stating that The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Val Taylor)"
+    },
+    {
+      "session_id": "sess_profile_042_06",
+      "session_index": 6,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_042_011",
+          "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Val Taylor)",
+          "entity_type": "preference",
+          "fact": "Arch Linux",
+          "label": "Linux distribution",
+          "session_id": "sess_profile_042_06",
+          "created_at": "2026-10-12T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_042_012",
+          "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Val Taylor)",
+          "entity_type": "preference",
+          "fact": "guitar",
+          "label": "musical instrument",
+          "session_id": "sess_profile_042_06",
+          "created_at": "2026-10-13T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my Linux distribution. Specifically, The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Val. I have recorded your Linux distribution details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my musical instrument: The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with musical instrument."
+        }
+      ],
+      "summary_l1": "Session 6: Val Taylor confirmed their Linux distribution details stating that The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Val Taylor)"
+    },
+    {
+      "session_id": "sess_profile_042_07",
+      "session_index": 7,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_042_013",
+          "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Val Taylor)",
+          "entity_type": "preference",
+          "fact": "sourdough",
+          "label": "artisan bread",
+          "session_id": "sess_profile_042_07",
+          "created_at": "2026-10-14T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_042_014",
+          "content": "The user: The user's favorite sci-fi author is science fiction writer Isaac Asimov. (Registered for Val Taylor)",
+          "entity_type": "preference",
+          "fact": "Asimov",
+          "label": "favorite sci-fi author",
+          "session_id": "sess_profile_042_07",
+          "created_at": "2026-10-15T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my artisan bread. Specifically, The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Val. I have recorded your artisan bread details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my favorite sci-fi author: The user: The user's favorite sci-fi author is science fiction writer Isaac Asimov. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with favorite sci-fi author."
+        }
+      ],
+      "summary_l1": "Session 7: Val Taylor confirmed their artisan bread details stating that The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Val Taylor)"
+    },
+    {
+      "session_id": "sess_profile_042_08",
+      "session_index": 8,
+      "entities_introduced": [
+        {
+          "node_id": "ent_profile_042_015",
+          "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Val Taylor)",
+          "entity_type": "preference",
+          "fact": "marathon",
+          "label": "athletic marathon race",
+          "session_id": "sess_profile_042_08",
+          "created_at": "2026-10-16T10:00:00Z"
+        },
+        {
+          "node_id": "ent_profile_042_016",
+          "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Val Taylor)",
+          "entity_type": "preference",
+          "fact": "Rainier",
+          "label": "backcountry hiking destination",
+          "session_id": "sess_profile_042_08",
+          "created_at": "2026-10-17T10:00:00Z"
+        }
+      ],
+      "dialogue_turns": [
+        {
+          "role": "user",
+          "text": "Hello, I want to update you about my athletic marathon race. Specifically, The user: The user completed an athletic marathon race in Chicago last October. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Thank you, Val. I have recorded your athletic marathon race details."
+        },
+        {
+          "role": "user",
+          "text": "Also please remember my backcountry hiking destination: The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Val Taylor)"
+        },
+        {
+          "role": "assistant",
+          "text": "Understood, I have updated your record with backcountry hiking destination."
+        }
+      ],
+      "summary_l1": "Session 8: Val Taylor confirmed their athletic marathon race details stating that The user: The user completed an athletic marathon race in Chicago last October. (Registered for Val Taylor)"
+    }
+  ],
+  "ground_truth_entities": [
+    {
+      "node_id": "ent_profile_042_001",
+      "content": "The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Val Taylor)",
+      "entity_type": "scholarship",
+      "fact": "Dean",
+      "label": "academic scholarship award",
+      "session_id": "sess_profile_042_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_002",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Val Taylor)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_042_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_003",
+      "content": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Val Taylor)",
+      "entity_type": "gpa",
+      "fact": "3.92",
+      "label": "undergraduate GPA",
+      "session_id": "sess_profile_042_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_004",
+      "content": "The user's verified research grant identifier record is funded by National Science Foundation grant NSF-19824. (Registered for Val Taylor)",
+      "entity_type": "grant",
+      "fact": "NSF-19824",
+      "label": "research grant identifier",
+      "session_id": "sess_profile_042_02",
+      "created_at": "2026-10-05T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_005",
+      "content": "The user's verified thesis research subject record is thesis published on reinforcement learning optimization. (Registered for Val Taylor)",
+      "entity_type": "thesis",
+      "fact": "reinforcement",
+      "label": "thesis research subject",
+      "session_id": "sess_profile_042_03",
+      "created_at": "2026-10-06T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_006",
+      "content": "The user's verified academic research laboratory record is conducted robotics research at Artificial Intelligence Laboratory. (Registered for Val Taylor)",
+      "entity_type": "lab",
+      "fact": "Robotics",
+      "label": "academic research laboratory",
+      "session_id": "sess_profile_042_03",
+      "created_at": "2026-10-07T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_007",
+      "content": "The user's verified current employer record is employed as Principal Architect at Acme Corp. (Registered for Val Taylor)",
+      "entity_type": "employer",
+      "fact": "Acme",
+      "label": "current employer",
+      "session_id": "sess_profile_042_04",
+      "created_at": "2026-10-08T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_008",
+      "content": "The user's verified direct reporting manager record is reports directly to engineering VP Sarah Chen. (Registered for Val Taylor)",
+      "entity_type": "manager",
+      "fact": "Sarah",
+      "label": "direct reporting manager",
+      "session_id": "sess_profile_042_04",
+      "created_at": "2026-10-09T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_009",
+      "content": "The user's verified spouse name record is married to pediatrician spouse named David. (Registered for Val Taylor)",
+      "entity_type": "spouse",
+      "fact": "David",
+      "label": "spouse name",
+      "session_id": "sess_profile_042_05",
+      "created_at": "2026-10-10T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_010",
+      "content": "The user's verified medical allergies record is mild penicillin allergy diagnosed in 2021. (Registered for Val Taylor)",
+      "entity_type": "allergy",
+      "fact": "penicillin",
+      "label": "medical allergies",
+      "session_id": "sess_profile_042_05",
+      "created_at": "2026-10-11T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_011",
+      "content": "The user: The user runs the Arch Linux distribution on their primary laptop. (Registered for Val Taylor)",
+      "entity_type": "preference",
+      "fact": "Arch Linux",
+      "label": "Linux distribution",
+      "session_id": "sess_profile_042_06",
+      "created_at": "2026-10-12T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_012",
+      "content": "The user: The user plays the acoustic guitar musical instrument in the evening. (Registered for Val Taylor)",
+      "entity_type": "preference",
+      "fact": "guitar",
+      "label": "musical instrument",
+      "session_id": "sess_profile_042_06",
+      "created_at": "2026-10-13T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_013",
+      "content": "The user: The user bakes fresh artisanal sourdough bread loaves on weekends. (Registered for Val Taylor)",
+      "entity_type": "preference",
+      "fact": "sourdough",
+      "label": "artisan bread",
+      "session_id": "sess_profile_042_07",
+      "created_at": "2026-10-14T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_014",
+      "content": "The user: The user's favorite sci-fi author is science fiction writer Isaac Asimov. (Registered for Val Taylor)",
+      "entity_type": "preference",
+      "fact": "Asimov",
+      "label": "favorite sci-fi author",
+      "session_id": "sess_profile_042_07",
+      "created_at": "2026-10-15T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_015",
+      "content": "The user: The user completed an athletic marathon race in Chicago last October. (Registered for Val Taylor)",
+      "entity_type": "preference",
+      "fact": "marathon",
+      "label": "athletic marathon race",
+      "session_id": "sess_profile_042_08",
+      "created_at": "2026-10-16T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_016",
+      "content": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Park. (Registered for Val Taylor)",
+      "entity_type": "preference",
+      "fact": "Rainier",
+      "label": "backcountry hiking destination",
+      "session_id": "sess_profile_042_08",
+      "created_at": "2026-10-17T10:00:00Z"
+    }
+  ],
+  "secret_entities": [
+    {
+      "node_id": "ent_profile_042_001",
+      "content": "The user's verified academic scholarship award record is awarded prestigious Dean Merit Scholarship in 2018. (Registered for Val Taylor)",
+      "entity_type": "scholarship",
+      "fact": "Dean",
+      "label": "academic scholarship award",
+      "session_id": "sess_profile_042_01",
+      "created_at": "2026-10-02T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_002",
+      "content": "The user's verified graduate degree university record is earned Master of Science in Computer Science from Stanford. (Registered for Val Taylor)",
+      "entity_type": "degree",
+      "fact": "Stanford",
+      "label": "graduate degree university",
+      "session_id": "sess_profile_042_01",
+      "created_at": "2026-10-03T10:00:00Z"
+    },
+    {
+      "node_id": "ent_profile_042_003",
+      "content": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.92 in Mathematics. (Registered for Val Taylor)",
+      "entity_type": "gpa",
+      "fact": "3.92",
+      "label": "undergraduate GPA",
+      "session_id": "sess_profile_042_02",
+      "created_at": "2026-10-04T10:00:00Z"
+    }
+  ],
+  "control_entities": [
+    {
+      "control_id": "ctrl_profile_042_01",
+      "content": "The user has an unrecorded handcrafted German antique cello musical instrument.",
+      "entity_type": "cello",
+      "label": "antique cello instrument"
+    },
+    {
+      "control_id": "ctrl_profile_042_02",
+      "content": "The user has an unrecorded private pilot aviation license license number FAA-88214.",
+      "entity_type": "pilot_license",
+      "label": "private pilot license"
+    },
+    {
+      "control_id": "ctrl_profile_042_03",
+      "content": "The user has an unrecorded FCC amateur radio operator callsign K9XYZ.",
+      "entity_type": "ham_radio",
+      "label": "amateur radio callsign"
+    },
+    {
+      "control_id": "ctrl_profile_042_04",
+      "content": "The user has an unrecorded vintage Harley Davidson Road King motorcycle registration.",
+      "entity_type": "motorcycle",
+      "label": "motorcycle registration"
+    }
+  ]
+}

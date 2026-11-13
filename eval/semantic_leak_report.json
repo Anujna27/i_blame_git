@@ -1,0 +1,4967 @@
+{
+  "generated_at": "2026-11-13T09:40:45.911515+00:00",
+  "scope": "BEMULA-scale synthetic replication (50 profiles, 135 requests)",
+  "total_requests": 135,
+  "requests_with_leaks": 135,
+  "leak_rate": 100.0,
+  "by_type": {
+    "F1": {
+      "requests": 25,
+      "leaks": 25,
+      "leak_rate": 100.0
+    },
+    "F2": {
+      "requests": 22,
+      "leaks": 22,
+      "leak_rate": 100.0
+    },
+    "F3": {
+      "requests": 22,
+      "leaks": 22,
+      "leak_rate": 100.0
+    },
+    "F4": {
+      "requests": 22,
+      "leaks": 22,
+      "leak_rate": 100.0
+    },
+    "F5": {
+      "requests": 22,
+      "leaks": 22,
+      "leak_rate": 100.0
+    },
+    "F6": {
+      "requests": 22,
+      "leaks": 22,
+      "leak_rate": 100.0
+    }
+  },
+  "per_request": [
+    {
+      "request_id": "req_001",
+      "forget_type": "F1",
+      "profile_id": "profile_001",
+      "deleted_ids": [
+        "ent_profile_001_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_001_sum_01",
+          "content_preview": "Session 1: Reese Patel confirmed their recent immunizations details stating that",
+          "similarity": 0.8266
+        },
+        {
+          "neighbor_id": "ent_profile_001_003",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.1447
+        },
+        {
+          "neighbor_id": "ent_profile_001_007",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.1387
+        },
+        {
+          "neighbor_id": "ent_profile_001_009",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.1359
+        },
+        {
+          "neighbor_id": "ent_profile_001_010",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.1283
+        }
+      ]
+    },
+    {
+      "request_id": "req_002",
+      "forget_type": "F3",
+      "profile_id": "profile_001",
+      "deleted_ids": [
+        "ent_profile_001_001",
+        "ent_profile_001_002",
+        "ent_profile_001_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_001_sum_01",
+          "content_preview": "Session 1: Reese Patel confirmed their recent immunizations details stating that",
+          "similarity": 0.8266
+        },
+        {
+          "neighbor_id": "ent_profile_001_sum_02",
+          "content_preview": "Session 2: Reese Patel confirmed their past surgical procedures details stating ",
+          "similarity": 0.8163
+        },
+        {
+          "neighbor_id": "ent_profile_001_sum_03",
+          "content_preview": "Session 3: Reese Patel confirmed their skin conditions details stating that The ",
+          "similarity": 0.7865
+        },
+        {
+          "neighbor_id": "ent_profile_001_010",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.259
+        },
+        {
+          "neighbor_id": "ent_profile_001_009",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.2465
+        }
+      ]
+    },
+    {
+      "request_id": "req_003",
+      "forget_type": "F6",
+      "profile_id": "profile_001",
+      "deleted_ids": [
+        "ent_profile_001_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_001_sum_01",
+          "content_preview": "Session 1: Reese Patel confirmed their recent immunizations details stating that",
+          "similarity": 0.8266
+        },
+        {
+          "neighbor_id": "ent_profile_001_003",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.1447
+        },
+        {
+          "neighbor_id": "ent_profile_001_007",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.1387
+        },
+        {
+          "neighbor_id": "ent_profile_001_009",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.1359
+        },
+        {
+          "neighbor_id": "ent_profile_001_010",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.1283
+        }
+      ]
+    },
+    {
+      "request_id": "req_004",
+      "forget_type": "F1",
+      "profile_id": "profile_002",
+      "deleted_ids": [
+        "ent_profile_002_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_002_sum_01",
+          "content_preview": "Session 1: Riley Stewart confirmed their credit score rating details stating tha",
+          "similarity": 0.8632
+        },
+        {
+          "neighbor_id": "ent_profile_002_002",
+          "content_preview": "The user's verified crypto asset storage record is cold hardware storage wallet ",
+          "similarity": 0.2813
+        },
+        {
+          "neighbor_id": "ent_profile_002_008",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.2627
+        },
+        {
+          "neighbor_id": "ent_profile_002_010",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.2498
+        },
+        {
+          "neighbor_id": "ent_profile_002_007",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.2334
+        }
+      ]
+    },
+    {
+      "request_id": "req_005",
+      "forget_type": "F6",
+      "profile_id": "profile_002",
+      "deleted_ids": [
+        "ent_profile_002_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_002_sum_01",
+          "content_preview": "Session 1: Riley Stewart confirmed their credit score rating details stating tha",
+          "similarity": 0.8632
+        },
+        {
+          "neighbor_id": "ent_profile_002_002",
+          "content_preview": "The user's verified crypto asset storage record is cold hardware storage wallet ",
+          "similarity": 0.2813
+        },
+        {
+          "neighbor_id": "ent_profile_002_008",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.2627
+        },
+        {
+          "neighbor_id": "ent_profile_002_010",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.2498
+        },
+        {
+          "neighbor_id": "ent_profile_002_007",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.2334
+        }
+      ]
+    },
+    {
+      "request_id": "req_006",
+      "forget_type": "F1",
+      "profile_id": "profile_002",
+      "deleted_ids": [
+        "ent_profile_002_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_002_sum_01",
+          "content_preview": "Session 1: Riley Stewart confirmed their credit score rating details stating tha",
+          "similarity": 0.8632
+        },
+        {
+          "neighbor_id": "ent_profile_002_002",
+          "content_preview": "The user's verified crypto asset storage record is cold hardware storage wallet ",
+          "similarity": 0.2813
+        },
+        {
+          "neighbor_id": "ent_profile_002_008",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.2627
+        },
+        {
+          "neighbor_id": "ent_profile_002_010",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.2498
+        },
+        {
+          "neighbor_id": "ent_profile_002_007",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.2334
+        }
+      ]
+    },
+    {
+      "request_id": "req_007",
+      "forget_type": "F4",
+      "profile_id": "profile_003",
+      "deleted_ids": [
+        "ent_profile_003_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_003_sum_01",
+          "content_preview": "Session 1: Amari Evans confirmed their professional role assignment details stat",
+          "similarity": 0.8418
+        },
+        {
+          "neighbor_id": "ent_profile_003_005",
+          "content_preview": "The user's verified primary project leadership record is leads technical archite",
+          "similarity": 0.2278
+        },
+        {
+          "neighbor_id": "ent_profile_003_002",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.2004
+        },
+        {
+          "neighbor_id": "ent_profile_003_003",
+          "content_preview": "The user's verified security clearance status record is holds public trust secur",
+          "similarity": 0.1823
+        },
+        {
+          "neighbor_id": "ent_profile_003_007",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.1759
+        }
+      ]
+    },
+    {
+      "request_id": "req_008",
+      "forget_type": "F5",
+      "profile_id": "profile_003",
+      "deleted_ids": [
+        "ent_profile_003_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_003_sum_01",
+          "content_preview": "Session 1: Amari Evans confirmed their professional role assignment details stat",
+          "similarity": 0.8418
+        },
+        {
+          "neighbor_id": "ent_profile_003_005",
+          "content_preview": "The user's verified primary project leadership record is leads technical archite",
+          "similarity": 0.2278
+        },
+        {
+          "neighbor_id": "ent_profile_003_002",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.2004
+        },
+        {
+          "neighbor_id": "ent_profile_003_003",
+          "content_preview": "The user's verified security clearance status record is holds public trust secur",
+          "similarity": 0.1823
+        },
+        {
+          "neighbor_id": "ent_profile_003_007",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.1759
+        }
+      ]
+    },
+    {
+      "request_id": "req_009",
+      "forget_type": "F4",
+      "profile_id": "profile_003",
+      "deleted_ids": [
+        "ent_profile_003_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_003_sum_01",
+          "content_preview": "Session 1: Amari Evans confirmed their professional role assignment details stat",
+          "similarity": 0.8418
+        },
+        {
+          "neighbor_id": "ent_profile_003_005",
+          "content_preview": "The user's verified primary project leadership record is leads technical archite",
+          "similarity": 0.2278
+        },
+        {
+          "neighbor_id": "ent_profile_003_002",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.2004
+        },
+        {
+          "neighbor_id": "ent_profile_003_003",
+          "content_preview": "The user's verified security clearance status record is holds public trust secur",
+          "similarity": 0.1823
+        },
+        {
+          "neighbor_id": "ent_profile_003_007",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.1759
+        }
+      ]
+    },
+    {
+      "request_id": "req_010",
+      "forget_type": "F5",
+      "profile_id": "profile_004",
+      "deleted_ids": [
+        "ent_profile_004_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_004_sum_01",
+          "content_preview": "Session 1: Kerry Gonzalez confirmed their known traveler number details stating ",
+          "similarity": 0.8329
+        },
+        {
+          "neighbor_id": "ent_profile_004_010",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.2098
+        },
+        {
+          "neighbor_id": "ent_profile_004_006",
+          "content_preview": "The user's verified car rental loyalty tier record is National Car Rental Execut",
+          "similarity": 0.2095
+        },
+        {
+          "neighbor_id": "ent_profile_004_003",
+          "content_preview": "The user's verified hotel lodging reservation record is reserved king suite at P",
+          "similarity": 0.1844
+        },
+        {
+          "neighbor_id": "ent_profile_004_005",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.1633
+        }
+      ]
+    },
+    {
+      "request_id": "req_011",
+      "forget_type": "F1",
+      "profile_id": "profile_004",
+      "deleted_ids": [
+        "ent_profile_004_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_004_sum_01",
+          "content_preview": "Session 1: Kerry Gonzalez confirmed their known traveler number details stating ",
+          "similarity": 0.8329
+        },
+        {
+          "neighbor_id": "ent_profile_004_010",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.2098
+        },
+        {
+          "neighbor_id": "ent_profile_004_006",
+          "content_preview": "The user's verified car rental loyalty tier record is National Car Rental Execut",
+          "similarity": 0.2095
+        },
+        {
+          "neighbor_id": "ent_profile_004_003",
+          "content_preview": "The user's verified hotel lodging reservation record is reserved king suite at P",
+          "similarity": 0.1844
+        },
+        {
+          "neighbor_id": "ent_profile_004_005",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.1633
+        }
+      ]
+    },
+    {
+      "request_id": "req_012",
+      "forget_type": "F6",
+      "profile_id": "profile_005",
+      "deleted_ids": [
+        "ent_profile_005_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_005_sum_01",
+          "content_preview": "Session 1: Elliot Mitchell confirmed their child name and grade details stating ",
+          "similarity": 0.8562
+        },
+        {
+          "neighbor_id": "ent_profile_005_005",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.1843
+        },
+        {
+          "neighbor_id": "ent_profile_005_sum_03",
+          "content_preview": "Session 3: Elliot Mitchell confirmed their spouse name details stating that The ",
+          "similarity": 0.1666
+        },
+        {
+          "neighbor_id": "ent_profile_005_009",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.1617
+        },
+        {
+          "neighbor_id": "ent_profile_005_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records.",
+          "similarity": 0.1485
+        }
+      ]
+    },
+    {
+      "request_id": "req_013",
+      "forget_type": "F5",
+      "profile_id": "profile_005",
+      "deleted_ids": [
+        "ent_profile_005_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_005_sum_01",
+          "content_preview": "Session 1: Elliot Mitchell confirmed their child name and grade details stating ",
+          "similarity": 0.8562
+        },
+        {
+          "neighbor_id": "ent_profile_005_005",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.1843
+        },
+        {
+          "neighbor_id": "ent_profile_005_sum_03",
+          "content_preview": "Session 3: Elliot Mitchell confirmed their spouse name details stating that The ",
+          "similarity": 0.1666
+        },
+        {
+          "neighbor_id": "ent_profile_005_009",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.1617
+        },
+        {
+          "neighbor_id": "ent_profile_005_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records.",
+          "similarity": 0.1485
+        }
+      ]
+    },
+    {
+      "request_id": "req_014",
+      "forget_type": "F5",
+      "profile_id": "profile_005",
+      "deleted_ids": [
+        "ent_profile_005_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_005_sum_01",
+          "content_preview": "Session 1: Elliot Mitchell confirmed their child name and grade details stating ",
+          "similarity": 0.8562
+        },
+        {
+          "neighbor_id": "ent_profile_005_005",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.1843
+        },
+        {
+          "neighbor_id": "ent_profile_005_sum_03",
+          "content_preview": "Session 3: Elliot Mitchell confirmed their spouse name details stating that The ",
+          "similarity": 0.1666
+        },
+        {
+          "neighbor_id": "ent_profile_005_009",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.1617
+        },
+        {
+          "neighbor_id": "ent_profile_005_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records.",
+          "similarity": 0.1485
+        }
+      ]
+    },
+    {
+      "request_id": "req_015",
+      "forget_type": "F3",
+      "profile_id": "profile_006",
+      "deleted_ids": [
+        "ent_profile_006_001",
+        "ent_profile_006_002",
+        "ent_profile_006_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_006_sum_01",
+          "content_preview": "Session 1: Casey Hall confirmed their undergraduate GPA details stating that The",
+          "similarity": 0.8758
+        },
+        {
+          "neighbor_id": "ent_profile_006_004",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.4365
+        },
+        {
+          "neighbor_id": "ent_profile_006_sum_02",
+          "content_preview": "Session 2: Casey Hall confirmed their thesis academic advisor details stating th",
+          "similarity": 0.3711
+        },
+        {
+          "neighbor_id": "ent_profile_006_010",
+          "content_preview": "The user's verified prescription medications record is daily prescription Ventol",
+          "similarity": 0.357
+        },
+        {
+          "neighbor_id": "ent_profile_006_007",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3131
+        }
+      ]
+    },
+    {
+      "request_id": "req_016",
+      "forget_type": "F5",
+      "profile_id": "profile_006",
+      "deleted_ids": [
+        "ent_profile_006_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_006_sum_01",
+          "content_preview": "Session 1: Casey Hall confirmed their undergraduate GPA details stating that The",
+          "similarity": 0.8758
+        },
+        {
+          "neighbor_id": "ent_profile_006_004",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.2714
+        },
+        {
+          "neighbor_id": "ent_profile_006_010",
+          "content_preview": "The user's verified prescription medications record is daily prescription Ventol",
+          "similarity": 0.2399
+        },
+        {
+          "neighbor_id": "ent_profile_006_005",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.2329
+        },
+        {
+          "neighbor_id": "ent_profile_006_002",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.1984
+        }
+      ]
+    },
+    {
+      "request_id": "req_017",
+      "forget_type": "F5",
+      "profile_id": "profile_007",
+      "deleted_ids": [
+        "ent_profile_007_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_007_sum_01",
+          "content_preview": "Session 1: Sage Scott confirmed their recent immunizations details stating that ",
+          "similarity": 0.8725
+        },
+        {
+          "neighbor_id": "ent_profile_007_014",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.4577
+        },
+        {
+          "neighbor_id": "ent_profile_007_015",
+          "content_preview": "The user: The user completed an athletic marathon race in Chicago last October. ",
+          "similarity": 0.377
+        },
+        {
+          "neighbor_id": "ent_profile_007_003",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.3153
+        },
+        {
+          "neighbor_id": "ent_profile_007_004",
+          "content_preview": "The user's verified past surgical procedures record is knee arthroscopy performe",
+          "similarity": 0.2965
+        }
+      ]
+    },
+    {
+      "request_id": "req_018",
+      "forget_type": "F2",
+      "profile_id": "profile_007",
+      "deleted_ids": [
+        "ent_profile_007_001",
+        "ent_profile_007_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_007_sum_01",
+          "content_preview": "Session 1: Sage Scott confirmed their recent immunizations details stating that ",
+          "similarity": 0.8725
+        },
+        {
+          "neighbor_id": "ent_profile_007_014",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.4577
+        },
+        {
+          "neighbor_id": "ent_profile_007_015",
+          "content_preview": "The user: The user completed an athletic marathon race in Chicago last October. ",
+          "similarity": 0.377
+        },
+        {
+          "neighbor_id": "ent_profile_007_003",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.3153
+        },
+        {
+          "neighbor_id": "ent_profile_007_004",
+          "content_preview": "The user's verified past surgical procedures record is knee arthroscopy performe",
+          "similarity": 0.2965
+        }
+      ]
+    },
+    {
+      "request_id": "req_019",
+      "forget_type": "F1",
+      "profile_id": "profile_007",
+      "deleted_ids": [
+        "ent_profile_007_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_007_sum_01",
+          "content_preview": "Session 1: Sage Scott confirmed their recent immunizations details stating that ",
+          "similarity": 0.8725
+        },
+        {
+          "neighbor_id": "ent_profile_007_014",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.4577
+        },
+        {
+          "neighbor_id": "ent_profile_007_015",
+          "content_preview": "The user: The user completed an athletic marathon race in Chicago last October. ",
+          "similarity": 0.377
+        },
+        {
+          "neighbor_id": "ent_profile_007_003",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.3153
+        },
+        {
+          "neighbor_id": "ent_profile_007_004",
+          "content_preview": "The user's verified past surgical procedures record is knee arthroscopy performe",
+          "similarity": 0.2965
+        }
+      ]
+    },
+    {
+      "request_id": "req_020",
+      "forget_type": "F3",
+      "profile_id": "profile_008",
+      "deleted_ids": [
+        "ent_profile_008_001",
+        "ent_profile_008_002",
+        "ent_profile_008_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_008_sum_01",
+          "content_preview": "Session 1: Noel Jackson confirmed their credit score rating details stating that",
+          "similarity": 0.8987
+        },
+        {
+          "neighbor_id": "ent_profile_008_sum_02",
+          "content_preview": "Session 2: Noel Jackson confirmed their brokerage investments details stating th",
+          "similarity": 0.8647
+        },
+        {
+          "neighbor_id": "ent_profile_008_008",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3945
+        },
+        {
+          "neighbor_id": "ent_profile_008_006",
+          "content_preview": "The user's verified crypto asset storage record is cold hardware storage wallet ",
+          "similarity": 0.3754
+        },
+        {
+          "neighbor_id": "ent_profile_008_009",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3696
+        }
+      ]
+    },
+    {
+      "request_id": "req_021",
+      "forget_type": "F1",
+      "profile_id": "profile_008",
+      "deleted_ids": [
+        "ent_profile_008_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_008_sum_01",
+          "content_preview": "Session 1: Noel Jackson confirmed their credit score rating details stating that",
+          "similarity": 0.8987
+        },
+        {
+          "neighbor_id": "ent_profile_008_008",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3945
+        },
+        {
+          "neighbor_id": "ent_profile_008_006",
+          "content_preview": "The user's verified crypto asset storage record is cold hardware storage wallet ",
+          "similarity": 0.3754
+        },
+        {
+          "neighbor_id": "ent_profile_008_009",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3696
+        },
+        {
+          "neighbor_id": "ent_profile_008_007",
+          "content_preview": "The user's verified wedding anniversary date record is celebrates wedding annive",
+          "similarity": 0.333
+        }
+      ]
+    },
+    {
+      "request_id": "req_022",
+      "forget_type": "F5",
+      "profile_id": "profile_008",
+      "deleted_ids": [
+        "ent_profile_008_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_008_sum_01",
+          "content_preview": "Session 1: Noel Jackson confirmed their credit score rating details stating that",
+          "similarity": 0.8987
+        },
+        {
+          "neighbor_id": "ent_profile_008_008",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3945
+        },
+        {
+          "neighbor_id": "ent_profile_008_006",
+          "content_preview": "The user's verified crypto asset storage record is cold hardware storage wallet ",
+          "similarity": 0.3754
+        },
+        {
+          "neighbor_id": "ent_profile_008_009",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3696
+        },
+        {
+          "neighbor_id": "ent_profile_008_007",
+          "content_preview": "The user's verified wedding anniversary date record is celebrates wedding annive",
+          "similarity": 0.333
+        }
+      ]
+    },
+    {
+      "request_id": "req_023",
+      "forget_type": "F1",
+      "profile_id": "profile_009",
+      "deleted_ids": [
+        "ent_profile_009_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_009_sum_01",
+          "content_preview": "Session 1: Ellis Miller confirmed their conference presentations details stating",
+          "similarity": 0.8802
+        },
+        {
+          "neighbor_id": "ent_profile_009_002",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3009
+        },
+        {
+          "neighbor_id": "ent_profile_009_010",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.2937
+        },
+        {
+          "neighbor_id": "ent_profile_009_007",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.2935
+        },
+        {
+          "neighbor_id": "ent_profile_009_006",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.2892
+        }
+      ]
+    },
+    {
+      "request_id": "req_024",
+      "forget_type": "F2",
+      "profile_id": "profile_009",
+      "deleted_ids": [
+        "ent_profile_009_001",
+        "ent_profile_009_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_009_sum_01",
+          "content_preview": "Session 1: Ellis Miller confirmed their conference presentations details stating",
+          "similarity": 0.8802
+        },
+        {
+          "neighbor_id": "ent_profile_009_006",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3881
+        },
+        {
+          "neighbor_id": "ent_profile_009_003",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3624
+        },
+        {
+          "neighbor_id": "ent_profile_009_007",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3546
+        },
+        {
+          "neighbor_id": "ent_profile_009_009",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.3459
+        }
+      ]
+    },
+    {
+      "request_id": "req_025",
+      "forget_type": "F5",
+      "profile_id": "profile_009",
+      "deleted_ids": [
+        "ent_profile_009_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_009_sum_01",
+          "content_preview": "Session 1: Ellis Miller confirmed their conference presentations details stating",
+          "similarity": 0.8802
+        },
+        {
+          "neighbor_id": "ent_profile_009_002",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3009
+        },
+        {
+          "neighbor_id": "ent_profile_009_010",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.2937
+        },
+        {
+          "neighbor_id": "ent_profile_009_007",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.2935
+        },
+        {
+          "neighbor_id": "ent_profile_009_006",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.2892
+        }
+      ]
+    },
+    {
+      "request_id": "req_026",
+      "forget_type": "F3",
+      "profile_id": "profile_010",
+      "deleted_ids": [
+        "ent_profile_010_001",
+        "ent_profile_010_002",
+        "ent_profile_010_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_010_sum_01",
+          "content_preview": "Session 1: Kelly Carter confirmed their upcoming flight booking details stating ",
+          "similarity": 0.9057
+        },
+        {
+          "neighbor_id": "ent_profile_010_sum_03",
+          "content_preview": "Session 3: Kelly Carter confirmed their known traveler number details stating th",
+          "similarity": 0.892
+        },
+        {
+          "neighbor_id": "ent_profile_010_sum_02",
+          "content_preview": "Session 2: Kelly Carter confirmed their hotel lodging reservation details statin",
+          "similarity": 0.8573
+        },
+        {
+          "neighbor_id": "ent_profile_010_007",
+          "content_preview": "The user's verified prescription medications record is daily prescription Ventol",
+          "similarity": 0.378
+        },
+        {
+          "neighbor_id": "ent_profile_010_011",
+          "content_preview": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Pa",
+          "similarity": 0.3705
+        }
+      ]
+    },
+    {
+      "request_id": "req_027",
+      "forget_type": "F2",
+      "profile_id": "profile_010",
+      "deleted_ids": [
+        "ent_profile_010_001",
+        "ent_profile_010_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_010_sum_01",
+          "content_preview": "Session 1: Kelly Carter confirmed their upcoming flight booking details stating ",
+          "similarity": 0.9057
+        },
+        {
+          "neighbor_id": "ent_profile_010_sum_02",
+          "content_preview": "Session 2: Kelly Carter confirmed their hotel lodging reservation details statin",
+          "similarity": 0.8573
+        },
+        {
+          "neighbor_id": "ent_profile_010_007",
+          "content_preview": "The user's verified prescription medications record is daily prescription Ventol",
+          "similarity": 0.378
+        },
+        {
+          "neighbor_id": "ent_profile_010_011",
+          "content_preview": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Pa",
+          "similarity": 0.3705
+        },
+        {
+          "neighbor_id": "ent_profile_010_006",
+          "content_preview": "The user's verified car rental loyalty tier record is National Car Rental Execut",
+          "similarity": 0.351
+        }
+      ]
+    },
+    {
+      "request_id": "req_028",
+      "forget_type": "F2",
+      "profile_id": "profile_010",
+      "deleted_ids": [
+        "ent_profile_010_001",
+        "ent_profile_010_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_010_sum_01",
+          "content_preview": "Session 1: Kelly Carter confirmed their upcoming flight booking details stating ",
+          "similarity": 0.9057
+        },
+        {
+          "neighbor_id": "ent_profile_010_sum_02",
+          "content_preview": "Session 2: Kelly Carter confirmed their hotel lodging reservation details statin",
+          "similarity": 0.8573
+        },
+        {
+          "neighbor_id": "ent_profile_010_007",
+          "content_preview": "The user's verified prescription medications record is daily prescription Ventol",
+          "similarity": 0.378
+        },
+        {
+          "neighbor_id": "ent_profile_010_011",
+          "content_preview": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Pa",
+          "similarity": 0.3705
+        },
+        {
+          "neighbor_id": "ent_profile_010_006",
+          "content_preview": "The user's verified car rental loyalty tier record is National Car Rental Execut",
+          "similarity": 0.351
+        }
+      ]
+    },
+    {
+      "request_id": "req_029",
+      "forget_type": "F5",
+      "profile_id": "profile_011",
+      "deleted_ids": [
+        "ent_profile_011_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_011_sum_01",
+          "content_preview": "Session 1: Casey Green confirmed their wedding anniversary date details stating ",
+          "similarity": 0.9133
+        },
+        {
+          "neighbor_id": "ent_profile_011_007",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3904
+        },
+        {
+          "neighbor_id": "ent_profile_011_sum_04",
+          "content_preview": "Session 4: Casey Green confirmed their current employer details stating that The",
+          "similarity": 0.3592
+        },
+        {
+          "neighbor_id": "ent_profile_011_008",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3404
+        },
+        {
+          "neighbor_id": "ent_profile_011_003",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3134
+        }
+      ]
+    },
+    {
+      "request_id": "req_030",
+      "forget_type": "F3",
+      "profile_id": "profile_011",
+      "deleted_ids": [
+        "ent_profile_011_001",
+        "ent_profile_011_002",
+        "ent_profile_011_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_011_sum_01",
+          "content_preview": "Session 1: Casey Green confirmed their wedding anniversary date details stating ",
+          "similarity": 0.9133
+        },
+        {
+          "neighbor_id": "ent_profile_011_sum_02",
+          "content_preview": "Session 2: Casey Green confirmed their spouse name details stating that The user",
+          "similarity": 0.8696
+        },
+        {
+          "neighbor_id": "ent_profile_011_007",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3904
+        },
+        {
+          "neighbor_id": "ent_profile_011_sum_04",
+          "content_preview": "Session 4: Casey Green confirmed their current employer details stating that The",
+          "similarity": 0.3592
+        },
+        {
+          "neighbor_id": "ent_profile_011_sum_03",
+          "content_preview": "Session 3: Casey Green confirmed their child name and grade details stating that",
+          "similarity": 0.3489
+        }
+      ]
+    },
+    {
+      "request_id": "req_031",
+      "forget_type": "F2",
+      "profile_id": "profile_011",
+      "deleted_ids": [
+        "ent_profile_011_001",
+        "ent_profile_011_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_011_sum_01",
+          "content_preview": "Session 1: Casey Green confirmed their wedding anniversary date details stating ",
+          "similarity": 0.9133
+        },
+        {
+          "neighbor_id": "ent_profile_011_007",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3904
+        },
+        {
+          "neighbor_id": "ent_profile_011_sum_04",
+          "content_preview": "Session 4: Casey Green confirmed their current employer details stating that The",
+          "similarity": 0.3592
+        },
+        {
+          "neighbor_id": "ent_profile_011_008",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3404
+        },
+        {
+          "neighbor_id": "ent_profile_011_009",
+          "content_preview": "The user's verified prescription medications record is daily prescription Ventol",
+          "similarity": 0.3362
+        }
+      ]
+    },
+    {
+      "request_id": "req_032",
+      "forget_type": "F4",
+      "profile_id": "profile_012",
+      "deleted_ids": [
+        "ent_profile_012_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_012_sum_01",
+          "content_preview": "Session 1: Tracy Chen confirmed their undergraduate GPA details stating that The",
+          "similarity": 0.9092
+        },
+        {
+          "neighbor_id": "ent_profile_012_002",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.4196
+        },
+        {
+          "neighbor_id": "ent_profile_012_sum_02",
+          "content_preview": "Session 2: Tracy Chen confirmed their thesis academic advisor details stating th",
+          "similarity": 0.3818
+        },
+        {
+          "neighbor_id": "ent_profile_012_005",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3522
+        },
+        {
+          "neighbor_id": "ent_profile_012_006",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.3418
+        }
+      ]
+    },
+    {
+      "request_id": "req_033",
+      "forget_type": "F4",
+      "profile_id": "profile_012",
+      "deleted_ids": [
+        "ent_profile_012_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_012_sum_01",
+          "content_preview": "Session 1: Tracy Chen confirmed their undergraduate GPA details stating that The",
+          "similarity": 0.9092
+        },
+        {
+          "neighbor_id": "ent_profile_012_002",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.4196
+        },
+        {
+          "neighbor_id": "ent_profile_012_sum_02",
+          "content_preview": "Session 2: Tracy Chen confirmed their thesis academic advisor details stating th",
+          "similarity": 0.3818
+        },
+        {
+          "neighbor_id": "ent_profile_012_005",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3522
+        },
+        {
+          "neighbor_id": "ent_profile_012_006",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.3418
+        }
+      ]
+    },
+    {
+      "request_id": "req_034",
+      "forget_type": "F3",
+      "profile_id": "profile_012",
+      "deleted_ids": [
+        "ent_profile_012_001",
+        "ent_profile_012_002",
+        "ent_profile_012_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_012_sum_03",
+          "content_preview": "Session 3: Tracy Chen confirmed their academic scholarship award details stating",
+          "similarity": 0.918
+        },
+        {
+          "neighbor_id": "ent_profile_012_sum_01",
+          "content_preview": "Session 1: Tracy Chen confirmed their undergraduate GPA details stating that The",
+          "similarity": 0.9092
+        },
+        {
+          "neighbor_id": "ent_profile_012_sum_02",
+          "content_preview": "Session 2: Tracy Chen confirmed their thesis academic advisor details stating th",
+          "similarity": 0.8951
+        },
+        {
+          "neighbor_id": "ent_profile_012_005",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.4443
+        },
+        {
+          "neighbor_id": "ent_profile_012_sum_06",
+          "content_preview": "Session 6: Tracy Chen confirmed their academic research laboratory details stati",
+          "similarity": 0.4271
+        }
+      ]
+    },
+    {
+      "request_id": "req_035",
+      "forget_type": "F3",
+      "profile_id": "profile_013",
+      "deleted_ids": [
+        "ent_profile_013_001",
+        "ent_profile_013_002",
+        "ent_profile_013_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_013_sum_01",
+          "content_preview": "Session 1: Kelly Evans confirmed their primary care physician details stating th",
+          "similarity": 0.8999
+        },
+        {
+          "neighbor_id": "ent_profile_013_sum_02",
+          "content_preview": "Session 2: Kelly Evans confirmed their blood type details stating that The user'",
+          "similarity": 0.8893
+        },
+        {
+          "neighbor_id": "ent_profile_013_008",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.4078
+        },
+        {
+          "neighbor_id": "ent_profile_013_003",
+          "content_preview": "The user's verified blood type record is blood type O-negative registered with R",
+          "similarity": 0.4029
+        },
+        {
+          "neighbor_id": "ent_profile_013_011",
+          "content_preview": "The user: The user cooks traditional Indian butter chicken curry on weekends. (R",
+          "similarity": 0.4002
+        }
+      ]
+    },
+    {
+      "request_id": "req_036",
+      "forget_type": "F4",
+      "profile_id": "profile_013",
+      "deleted_ids": [
+        "ent_profile_013_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_013_sum_01",
+          "content_preview": "Session 1: Kelly Evans confirmed their primary care physician details stating th",
+          "similarity": 0.8999
+        },
+        {
+          "neighbor_id": "ent_profile_013_002",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.2249
+        },
+        {
+          "neighbor_id": "ent_profile_013_007",
+          "content_preview": "The user's verified wedding anniversary date record is celebrates wedding annive",
+          "similarity": 0.1915
+        },
+        {
+          "neighbor_id": "ent_profile_013_003",
+          "content_preview": "The user's verified blood type record is blood type O-negative registered with R",
+          "similarity": 0.1863
+        },
+        {
+          "neighbor_id": "ent_profile_013_006",
+          "content_preview": "The user's verified past surgical procedures record is knee arthroscopy performe",
+          "similarity": 0.1786
+        }
+      ]
+    },
+    {
+      "request_id": "req_037",
+      "forget_type": "F6",
+      "profile_id": "profile_014",
+      "deleted_ids": [
+        "ent_profile_014_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_014_sum_01",
+          "content_preview": "Session 1: Shiloh Taylor confirmed their bank checking account details stating t",
+          "similarity": 0.9169
+        },
+        {
+          "neighbor_id": "ent_profile_014_006",
+          "content_preview": "The user's verified retirement account strategy record is annual backdoor Roth I",
+          "similarity": 0.4086
+        },
+        {
+          "neighbor_id": "ent_profile_014_sum_06",
+          "content_preview": "Session 6: Shiloh Taylor confirmed their retirement account strategy details sta",
+          "similarity": 0.3917
+        },
+        {
+          "neighbor_id": "ent_profile_014_007",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3645
+        },
+        {
+          "neighbor_id": "ent_profile_014_004",
+          "content_preview": "The user's verified crypto asset storage record is cold hardware storage wallet ",
+          "similarity": 0.342
+        }
+      ]
+    },
+    {
+      "request_id": "req_038",
+      "forget_type": "F3",
+      "profile_id": "profile_014",
+      "deleted_ids": [
+        "ent_profile_014_001",
+        "ent_profile_014_002",
+        "ent_profile_014_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_014_sum_03",
+          "content_preview": "Session 3: Shiloh Taylor confirmed their primary credit card details stating tha",
+          "similarity": 0.9215
+        },
+        {
+          "neighbor_id": "ent_profile_014_sum_01",
+          "content_preview": "Session 1: Shiloh Taylor confirmed their bank checking account details stating t",
+          "similarity": 0.9169
+        },
+        {
+          "neighbor_id": "ent_profile_014_sum_02",
+          "content_preview": "Session 2: Shiloh Taylor confirmed their credit score rating details stating tha",
+          "similarity": 0.897
+        },
+        {
+          "neighbor_id": "ent_profile_014_003",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.5164
+        },
+        {
+          "neighbor_id": "ent_profile_014_sum_02",
+          "content_preview": "Session 2: Shiloh Taylor confirmed their credit score rating details stating tha",
+          "similarity": 0.4982
+        }
+      ]
+    },
+    {
+      "request_id": "req_039",
+      "forget_type": "F1",
+      "profile_id": "profile_015",
+      "deleted_ids": [
+        "ent_profile_015_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_015_sum_01",
+          "content_preview": "Session 1: Lee Hall confirmed their primary project leadership details stating t",
+          "similarity": 0.8821
+        },
+        {
+          "neighbor_id": "ent_profile_015_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3975
+        },
+        {
+          "neighbor_id": "ent_profile_015_006",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3938
+        },
+        {
+          "neighbor_id": "ent_profile_015_010",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3577
+        },
+        {
+          "neighbor_id": "ent_profile_015_003",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3524
+        }
+      ]
+    },
+    {
+      "request_id": "req_040",
+      "forget_type": "F3",
+      "profile_id": "profile_015",
+      "deleted_ids": [
+        "ent_profile_015_001",
+        "ent_profile_015_002",
+        "ent_profile_015_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_015_sum_03",
+          "content_preview": "Session 3: Lee Hall confirmed their professional role assignment details stating",
+          "similarity": 0.8907
+        },
+        {
+          "neighbor_id": "ent_profile_015_sum_01",
+          "content_preview": "Session 1: Lee Hall confirmed their primary project leadership details stating t",
+          "similarity": 0.8821
+        },
+        {
+          "neighbor_id": "ent_profile_015_sum_02",
+          "content_preview": "Session 2: Lee Hall confirmed their office campus location details stating that ",
+          "similarity": 0.8695
+        },
+        {
+          "neighbor_id": "ent_profile_015_005",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.4359
+        },
+        {
+          "neighbor_id": "ent_profile_015_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.4042
+        }
+      ]
+    },
+    {
+      "request_id": "req_041",
+      "forget_type": "F6",
+      "profile_id": "profile_015",
+      "deleted_ids": [
+        "ent_profile_015_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_015_sum_01",
+          "content_preview": "Session 1: Lee Hall confirmed their primary project leadership details stating t",
+          "similarity": 0.8821
+        },
+        {
+          "neighbor_id": "ent_profile_015_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3975
+        },
+        {
+          "neighbor_id": "ent_profile_015_006",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3938
+        },
+        {
+          "neighbor_id": "ent_profile_015_010",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3577
+        },
+        {
+          "neighbor_id": "ent_profile_015_003",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3524
+        }
+      ]
+    },
+    {
+      "request_id": "req_042",
+      "forget_type": "F6",
+      "profile_id": "profile_016",
+      "deleted_ids": [
+        "ent_profile_016_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_016_sum_01",
+          "content_preview": "Session 1: Avery Davis confirmed their passport travel number details stating th",
+          "similarity": 0.9217
+        },
+        {
+          "neighbor_id": "ent_profile_016_002",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.4755
+        },
+        {
+          "neighbor_id": "ent_profile_016_sum_02",
+          "content_preview": "Session 2: Avery Davis confirmed their international travel destination details ",
+          "similarity": 0.4524
+        },
+        {
+          "neighbor_id": "ent_profile_016_sum_04",
+          "content_preview": "Session 4: Avery Davis confirmed their known traveler number details stating tha",
+          "similarity": 0.4499
+        },
+        {
+          "neighbor_id": "ent_profile_016_004",
+          "content_preview": "The user's verified known traveler number record is TSA PreCheck and Global Entr",
+          "similarity": 0.4384
+        }
+      ]
+    },
+    {
+      "request_id": "req_043",
+      "forget_type": "F1",
+      "profile_id": "profile_016",
+      "deleted_ids": [
+        "ent_profile_016_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_016_sum_01",
+          "content_preview": "Session 1: Avery Davis confirmed their passport travel number details stating th",
+          "similarity": 0.9217
+        },
+        {
+          "neighbor_id": "ent_profile_016_002",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.4755
+        },
+        {
+          "neighbor_id": "ent_profile_016_sum_02",
+          "content_preview": "Session 2: Avery Davis confirmed their international travel destination details ",
+          "similarity": 0.4524
+        },
+        {
+          "neighbor_id": "ent_profile_016_sum_04",
+          "content_preview": "Session 4: Avery Davis confirmed their known traveler number details stating tha",
+          "similarity": 0.4499
+        },
+        {
+          "neighbor_id": "ent_profile_016_004",
+          "content_preview": "The user's verified known traveler number record is TSA PreCheck and Global Entr",
+          "similarity": 0.4384
+        }
+      ]
+    },
+    {
+      "request_id": "req_044",
+      "forget_type": "F3",
+      "profile_id": "profile_017",
+      "deleted_ids": [
+        "ent_profile_017_001",
+        "ent_profile_017_002",
+        "ent_profile_017_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_017_sum_01",
+          "content_preview": "Session 1: Dakota Perez confirmed their wedding anniversary date details stating",
+          "similarity": 0.9093
+        },
+        {
+          "neighbor_id": "ent_profile_017_006",
+          "content_preview": "The user's verified pet name and breed record is adopted Siamese cat pet named M",
+          "similarity": 0.451
+        },
+        {
+          "neighbor_id": "ent_profile_017_006",
+          "content_preview": "The user's verified pet name and breed record is adopted Siamese cat pet named M",
+          "similarity": 0.3897
+        },
+        {
+          "neighbor_id": "ent_profile_017_010",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3756
+        },
+        {
+          "neighbor_id": "ent_profile_017_004",
+          "content_preview": "The user's verified childhood hometown record is raised in suburban Minneapolis ",
+          "similarity": 0.3733
+        }
+      ]
+    },
+    {
+      "request_id": "req_045",
+      "forget_type": "F5",
+      "profile_id": "profile_017",
+      "deleted_ids": [
+        "ent_profile_017_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_017_sum_01",
+          "content_preview": "Session 1: Dakota Perez confirmed their wedding anniversary date details stating",
+          "similarity": 0.9093
+        },
+        {
+          "neighbor_id": "ent_profile_017_004",
+          "content_preview": "The user's verified childhood hometown record is raised in suburban Minneapolis ",
+          "similarity": 0.3733
+        },
+        {
+          "neighbor_id": "ent_profile_017_008",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3311
+        },
+        {
+          "neighbor_id": "ent_profile_017_010",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3133
+        },
+        {
+          "neighbor_id": "ent_profile_017_002",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3092
+        }
+      ]
+    },
+    {
+      "request_id": "req_046",
+      "forget_type": "F3",
+      "profile_id": "profile_017",
+      "deleted_ids": [
+        "ent_profile_017_001",
+        "ent_profile_017_002",
+        "ent_profile_017_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_017_sum_01",
+          "content_preview": "Session 1: Dakota Perez confirmed their wedding anniversary date details stating",
+          "similarity": 0.9093
+        },
+        {
+          "neighbor_id": "ent_profile_017_006",
+          "content_preview": "The user's verified pet name and breed record is adopted Siamese cat pet named M",
+          "similarity": 0.451
+        },
+        {
+          "neighbor_id": "ent_profile_017_006",
+          "content_preview": "The user's verified pet name and breed record is adopted Siamese cat pet named M",
+          "similarity": 0.3897
+        },
+        {
+          "neighbor_id": "ent_profile_017_010",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3756
+        },
+        {
+          "neighbor_id": "ent_profile_017_004",
+          "content_preview": "The user's verified childhood hometown record is raised in suburban Minneapolis ",
+          "similarity": 0.3733
+        }
+      ]
+    },
+    {
+      "request_id": "req_047",
+      "forget_type": "F4",
+      "profile_id": "profile_018",
+      "deleted_ids": [
+        "ent_profile_018_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_018_sum_01",
+          "content_preview": "Session 1: Tracy Stewart confirmed their research grant identifier details stati",
+          "similarity": 0.8474
+        },
+        {
+          "neighbor_id": "ent_profile_018_005",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.2896
+        },
+        {
+          "neighbor_id": "ent_profile_018_002",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.263
+        },
+        {
+          "neighbor_id": "ent_profile_018_010",
+          "content_preview": "The user's verified prescription medications record is daily prescription Ventol",
+          "similarity": 0.2351
+        },
+        {
+          "neighbor_id": "ent_profile_018_006",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.1992
+        }
+      ]
+    },
+    {
+      "request_id": "req_048",
+      "forget_type": "F4",
+      "profile_id": "profile_018",
+      "deleted_ids": [
+        "ent_profile_018_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_018_sum_01",
+          "content_preview": "Session 1: Tracy Stewart confirmed their research grant identifier details stati",
+          "similarity": 0.8474
+        },
+        {
+          "neighbor_id": "ent_profile_018_005",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.2896
+        },
+        {
+          "neighbor_id": "ent_profile_018_002",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.263
+        },
+        {
+          "neighbor_id": "ent_profile_018_010",
+          "content_preview": "The user's verified prescription medications record is daily prescription Ventol",
+          "similarity": 0.2351
+        },
+        {
+          "neighbor_id": "ent_profile_018_006",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.1992
+        }
+      ]
+    },
+    {
+      "request_id": "req_049",
+      "forget_type": "F3",
+      "profile_id": "profile_019",
+      "deleted_ids": [
+        "ent_profile_019_001",
+        "ent_profile_019_002",
+        "ent_profile_019_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_019_sum_01",
+          "content_preview": "Session 1: Sloan Thompson confirmed their medical allergies details stating that",
+          "similarity": 0.9091
+        },
+        {
+          "neighbor_id": "ent_profile_019_sum_03",
+          "content_preview": "Session 3: Sloan Thompson confirmed their prescription medications details stati",
+          "similarity": 0.9077
+        },
+        {
+          "neighbor_id": "ent_profile_019_sum_02",
+          "content_preview": "Session 2: Sloan Thompson confirmed their recent immunizations details stating t",
+          "similarity": 0.8703
+        },
+        {
+          "neighbor_id": "ent_profile_019_006",
+          "content_preview": "The user's verified past surgical procedures record is knee arthroscopy performe",
+          "similarity": 0.4142
+        },
+        {
+          "neighbor_id": "ent_profile_019_015",
+          "content_preview": "The user: The user plays the acoustic guitar musical instrument in the evening. ",
+          "similarity": 0.4129
+        }
+      ]
+    },
+    {
+      "request_id": "req_050",
+      "forget_type": "F6",
+      "profile_id": "profile_019",
+      "deleted_ids": [
+        "ent_profile_019_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_019_sum_01",
+          "content_preview": "Session 1: Sloan Thompson confirmed their medical allergies details stating that",
+          "similarity": 0.9091
+        },
+        {
+          "neighbor_id": "ent_profile_019_006",
+          "content_preview": "The user's verified past surgical procedures record is knee arthroscopy performe",
+          "similarity": 0.4142
+        },
+        {
+          "neighbor_id": "ent_profile_019_015",
+          "content_preview": "The user: The user plays the acoustic guitar musical instrument in the evening. ",
+          "similarity": 0.4129
+        },
+        {
+          "neighbor_id": "ent_profile_019_sum_06",
+          "content_preview": "Session 6: Sloan Thompson confirmed their past surgical procedures details stati",
+          "similarity": 0.3897
+        },
+        {
+          "neighbor_id": "ent_profile_019_005",
+          "content_preview": "The user's verified blood type record is blood type O-negative registered with R",
+          "similarity": 0.3547
+        }
+      ]
+    },
+    {
+      "request_id": "req_051",
+      "forget_type": "F3",
+      "profile_id": "profile_019",
+      "deleted_ids": [
+        "ent_profile_019_001",
+        "ent_profile_019_002",
+        "ent_profile_019_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_019_sum_01",
+          "content_preview": "Session 1: Sloan Thompson confirmed their medical allergies details stating that",
+          "similarity": 0.9091
+        },
+        {
+          "neighbor_id": "ent_profile_019_sum_03",
+          "content_preview": "Session 3: Sloan Thompson confirmed their prescription medications details stati",
+          "similarity": 0.9077
+        },
+        {
+          "neighbor_id": "ent_profile_019_sum_02",
+          "content_preview": "Session 2: Sloan Thompson confirmed their recent immunizations details stating t",
+          "similarity": 0.8703
+        },
+        {
+          "neighbor_id": "ent_profile_019_006",
+          "content_preview": "The user's verified past surgical procedures record is knee arthroscopy performe",
+          "similarity": 0.4142
+        },
+        {
+          "neighbor_id": "ent_profile_019_015",
+          "content_preview": "The user: The user plays the acoustic guitar musical instrument in the evening. ",
+          "similarity": 0.4129
+        }
+      ]
+    },
+    {
+      "request_id": "req_052",
+      "forget_type": "F2",
+      "profile_id": "profile_020",
+      "deleted_ids": [
+        "ent_profile_020_001",
+        "ent_profile_020_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_020_sum_01",
+          "content_preview": "Session 1: Jordan Collins confirmed their primary credit card details stating th",
+          "similarity": 0.9043
+        },
+        {
+          "neighbor_id": "ent_profile_020_sum_02",
+          "content_preview": "Session 2: Jordan Collins confirmed their education loan provider details statin",
+          "similarity": 0.8812
+        },
+        {
+          "neighbor_id": "ent_profile_020_005",
+          "content_preview": "The user's verified credit score rating record is FICO credit score of 785 recor",
+          "similarity": 0.5279
+        },
+        {
+          "neighbor_id": "ent_profile_020_sum_05",
+          "content_preview": "Session 5: Jordan Collins confirmed their credit score rating details stating th",
+          "similarity": 0.499
+        },
+        {
+          "neighbor_id": "ent_profile_020_007",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.4194
+        }
+      ]
+    },
+    {
+      "request_id": "req_053",
+      "forget_type": "F6",
+      "profile_id": "profile_020",
+      "deleted_ids": [
+        "ent_profile_020_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_020_sum_01",
+          "content_preview": "Session 1: Jordan Collins confirmed their primary credit card details stating th",
+          "similarity": 0.9043
+        },
+        {
+          "neighbor_id": "ent_profile_020_005",
+          "content_preview": "The user's verified credit score rating record is FICO credit score of 785 recor",
+          "similarity": 0.5279
+        },
+        {
+          "neighbor_id": "ent_profile_020_sum_05",
+          "content_preview": "Session 5: Jordan Collins confirmed their credit score rating details stating th",
+          "similarity": 0.499
+        },
+        {
+          "neighbor_id": "ent_profile_020_007",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.4194
+        },
+        {
+          "neighbor_id": "ent_profile_020_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3724
+        }
+      ]
+    },
+    {
+      "request_id": "req_054",
+      "forget_type": "F2",
+      "profile_id": "profile_020",
+      "deleted_ids": [
+        "ent_profile_020_001",
+        "ent_profile_020_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_020_sum_01",
+          "content_preview": "Session 1: Jordan Collins confirmed their primary credit card details stating th",
+          "similarity": 0.9043
+        },
+        {
+          "neighbor_id": "ent_profile_020_sum_02",
+          "content_preview": "Session 2: Jordan Collins confirmed their education loan provider details statin",
+          "similarity": 0.8812
+        },
+        {
+          "neighbor_id": "ent_profile_020_005",
+          "content_preview": "The user's verified credit score rating record is FICO credit score of 785 recor",
+          "similarity": 0.5279
+        },
+        {
+          "neighbor_id": "ent_profile_020_sum_05",
+          "content_preview": "Session 5: Jordan Collins confirmed their credit score rating details stating th",
+          "similarity": 0.499
+        },
+        {
+          "neighbor_id": "ent_profile_020_007",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.4194
+        }
+      ]
+    },
+    {
+      "request_id": "req_055",
+      "forget_type": "F2",
+      "profile_id": "profile_021",
+      "deleted_ids": [
+        "ent_profile_021_001",
+        "ent_profile_021_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_021_sum_01",
+          "content_preview": "Session 1: Val Hernandez confirmed their direct reporting manager details statin",
+          "similarity": 0.8892
+        },
+        {
+          "neighbor_id": "ent_profile_021_sum_02",
+          "content_preview": "Session 2: Val Hernandez confirmed their current employer details stating that T",
+          "similarity": 0.8685
+        },
+        {
+          "neighbor_id": "ent_profile_021_003",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.4223
+        },
+        {
+          "neighbor_id": "ent_profile_021_009",
+          "content_preview": "The user's verified wedding anniversary date record is celebrates wedding annive",
+          "similarity": 0.3932
+        },
+        {
+          "neighbor_id": "ent_profile_021_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3897
+        }
+      ]
+    },
+    {
+      "request_id": "req_056",
+      "forget_type": "F6",
+      "profile_id": "profile_021",
+      "deleted_ids": [
+        "ent_profile_021_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_021_sum_01",
+          "content_preview": "Session 1: Val Hernandez confirmed their direct reporting manager details statin",
+          "similarity": 0.8892
+        },
+        {
+          "neighbor_id": "ent_profile_021_003",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.4223
+        },
+        {
+          "neighbor_id": "ent_profile_021_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3897
+        },
+        {
+          "neighbor_id": "ent_profile_021_002",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3851
+        },
+        {
+          "neighbor_id": "ent_profile_021_006",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3759
+        }
+      ]
+    },
+    {
+      "request_id": "req_057",
+      "forget_type": "F2",
+      "profile_id": "profile_021",
+      "deleted_ids": [
+        "ent_profile_021_001",
+        "ent_profile_021_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_021_sum_01",
+          "content_preview": "Session 1: Val Hernandez confirmed their direct reporting manager details statin",
+          "similarity": 0.8892
+        },
+        {
+          "neighbor_id": "ent_profile_021_sum_02",
+          "content_preview": "Session 2: Val Hernandez confirmed their current employer details stating that T",
+          "similarity": 0.8685
+        },
+        {
+          "neighbor_id": "ent_profile_021_003",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.4223
+        },
+        {
+          "neighbor_id": "ent_profile_021_009",
+          "content_preview": "The user's verified wedding anniversary date record is celebrates wedding annive",
+          "similarity": 0.3932
+        },
+        {
+          "neighbor_id": "ent_profile_021_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3897
+        }
+      ]
+    },
+    {
+      "request_id": "req_058",
+      "forget_type": "F5",
+      "profile_id": "profile_022",
+      "deleted_ids": [
+        "ent_profile_022_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_022_sum_01",
+          "content_preview": "Session 1: Blair Thompson confirmed their upcoming flight booking details statin",
+          "similarity": 0.9042
+        },
+        {
+          "neighbor_id": "ent_profile_022_002",
+          "content_preview": "The user's verified metro transit card record is monthly subway ORCA transit car",
+          "similarity": 0.3127
+        },
+        {
+          "neighbor_id": "ent_profile_022_010",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3083
+        },
+        {
+          "neighbor_id": "ent_profile_022_007",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.2905
+        },
+        {
+          "neighbor_id": "ent_profile_022_004",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.2902
+        }
+      ]
+    },
+    {
+      "request_id": "req_059",
+      "forget_type": "F5",
+      "profile_id": "profile_022",
+      "deleted_ids": [
+        "ent_profile_022_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_022_sum_01",
+          "content_preview": "Session 1: Blair Thompson confirmed their upcoming flight booking details statin",
+          "similarity": 0.9042
+        },
+        {
+          "neighbor_id": "ent_profile_022_002",
+          "content_preview": "The user's verified metro transit card record is monthly subway ORCA transit car",
+          "similarity": 0.3127
+        },
+        {
+          "neighbor_id": "ent_profile_022_010",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3083
+        },
+        {
+          "neighbor_id": "ent_profile_022_007",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.2905
+        },
+        {
+          "neighbor_id": "ent_profile_022_004",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.2902
+        }
+      ]
+    },
+    {
+      "request_id": "req_060",
+      "forget_type": "F1",
+      "profile_id": "profile_022",
+      "deleted_ids": [
+        "ent_profile_022_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_022_sum_01",
+          "content_preview": "Session 1: Blair Thompson confirmed their upcoming flight booking details statin",
+          "similarity": 0.9042
+        },
+        {
+          "neighbor_id": "ent_profile_022_002",
+          "content_preview": "The user's verified metro transit card record is monthly subway ORCA transit car",
+          "similarity": 0.3127
+        },
+        {
+          "neighbor_id": "ent_profile_022_010",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3083
+        },
+        {
+          "neighbor_id": "ent_profile_022_007",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.2905
+        },
+        {
+          "neighbor_id": "ent_profile_022_004",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.2902
+        }
+      ]
+    },
+    {
+      "request_id": "req_061",
+      "forget_type": "F2",
+      "profile_id": "profile_023",
+      "deleted_ids": [
+        "ent_profile_023_001",
+        "ent_profile_023_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_023_sum_01",
+          "content_preview": "Session 1: Kelly Rodriguez confirmed their emergency contact person details stat",
+          "similarity": 0.9099
+        },
+        {
+          "neighbor_id": "ent_profile_023_009",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.4244
+        },
+        {
+          "neighbor_id": "ent_profile_023_005",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3908
+        },
+        {
+          "neighbor_id": "ent_profile_023_sum_03",
+          "content_preview": "Session 3: Kelly Rodriguez confirmed their spouse name details stating that The ",
+          "similarity": 0.388
+        },
+        {
+          "neighbor_id": "ent_profile_023_sum_05",
+          "content_preview": "Session 5: Kelly Rodriguez confirmed their current employer details stating that",
+          "similarity": 0.3862
+        }
+      ]
+    },
+    {
+      "request_id": "req_062",
+      "forget_type": "F5",
+      "profile_id": "profile_023",
+      "deleted_ids": [
+        "ent_profile_023_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_023_sum_01",
+          "content_preview": "Session 1: Kelly Rodriguez confirmed their emergency contact person details stat",
+          "similarity": 0.9099
+        },
+        {
+          "neighbor_id": "ent_profile_023_010",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3524
+        },
+        {
+          "neighbor_id": "ent_profile_023_016",
+          "content_preview": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. ",
+          "similarity": 0.345
+        },
+        {
+          "neighbor_id": "ent_profile_023_009",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3328
+        },
+        {
+          "neighbor_id": "ent_profile_023_008",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3289
+        }
+      ]
+    },
+    {
+      "request_id": "req_063",
+      "forget_type": "F6",
+      "profile_id": "profile_023",
+      "deleted_ids": [
+        "ent_profile_023_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_023_sum_01",
+          "content_preview": "Session 1: Kelly Rodriguez confirmed their emergency contact person details stat",
+          "similarity": 0.9099
+        },
+        {
+          "neighbor_id": "ent_profile_023_010",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3524
+        },
+        {
+          "neighbor_id": "ent_profile_023_016",
+          "content_preview": "The user: The user orders an iced ceremonial matcha tea beverage for breakfast. ",
+          "similarity": 0.345
+        },
+        {
+          "neighbor_id": "ent_profile_023_009",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3328
+        },
+        {
+          "neighbor_id": "ent_profile_023_008",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3289
+        }
+      ]
+    },
+    {
+      "request_id": "req_064",
+      "forget_type": "F3",
+      "profile_id": "profile_024",
+      "deleted_ids": [
+        "ent_profile_024_001",
+        "ent_profile_024_002",
+        "ent_profile_024_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_024_sum_02",
+          "content_preview": "Session 2: Avery Martin confirmed their undergraduate GPA details stating that T",
+          "similarity": 0.908
+        },
+        {
+          "neighbor_id": "ent_profile_024_sum_01",
+          "content_preview": "Session 1: Avery Martin confirmed their thesis academic advisor details stating ",
+          "similarity": 0.9033
+        },
+        {
+          "neighbor_id": "ent_profile_024_004",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.4731
+        },
+        {
+          "neighbor_id": "ent_profile_024_003",
+          "content_preview": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.9",
+          "similarity": 0.436
+        },
+        {
+          "neighbor_id": "ent_profile_024_016",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.4206
+        }
+      ]
+    },
+    {
+      "request_id": "req_065",
+      "forget_type": "F5",
+      "profile_id": "profile_024",
+      "deleted_ids": [
+        "ent_profile_024_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_024_sum_01",
+          "content_preview": "Session 1: Avery Martin confirmed their thesis academic advisor details stating ",
+          "similarity": 0.9033
+        },
+        {
+          "neighbor_id": "ent_profile_024_004",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.4731
+        },
+        {
+          "neighbor_id": "ent_profile_024_003",
+          "content_preview": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.9",
+          "similarity": 0.436
+        },
+        {
+          "neighbor_id": "ent_profile_024_016",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.404
+        },
+        {
+          "neighbor_id": "ent_profile_024_008",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3942
+        }
+      ]
+    },
+    {
+      "request_id": "req_066",
+      "forget_type": "F4",
+      "profile_id": "profile_024",
+      "deleted_ids": [
+        "ent_profile_024_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_024_sum_01",
+          "content_preview": "Session 1: Avery Martin confirmed their thesis academic advisor details stating ",
+          "similarity": 0.9033
+        },
+        {
+          "neighbor_id": "ent_profile_024_004",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.4731
+        },
+        {
+          "neighbor_id": "ent_profile_024_003",
+          "content_preview": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.9",
+          "similarity": 0.436
+        },
+        {
+          "neighbor_id": "ent_profile_024_016",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.404
+        },
+        {
+          "neighbor_id": "ent_profile_024_008",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3942
+        }
+      ]
+    },
+    {
+      "request_id": "req_067",
+      "forget_type": "F4",
+      "profile_id": "profile_025",
+      "deleted_ids": [
+        "ent_profile_025_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_025_sum_01",
+          "content_preview": "Session 1: Pat Hall confirmed their past surgical procedures details stating tha",
+          "similarity": 0.8599
+        },
+        {
+          "neighbor_id": "ent_profile_025_006",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3802
+        },
+        {
+          "neighbor_id": "ent_profile_025_sum_06",
+          "content_preview": "Session 6: Pat Hall confirmed their medical allergies details stating that The u",
+          "similarity": 0.3412
+        },
+        {
+          "neighbor_id": "ent_profile_025_010",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3308
+        },
+        {
+          "neighbor_id": "ent_profile_025_005",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.3187
+        }
+      ]
+    },
+    {
+      "request_id": "req_068",
+      "forget_type": "F5",
+      "profile_id": "profile_025",
+      "deleted_ids": [
+        "ent_profile_025_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_025_sum_01",
+          "content_preview": "Session 1: Pat Hall confirmed their past surgical procedures details stating tha",
+          "similarity": 0.8599
+        },
+        {
+          "neighbor_id": "ent_profile_025_006",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3802
+        },
+        {
+          "neighbor_id": "ent_profile_025_sum_06",
+          "content_preview": "Session 6: Pat Hall confirmed their medical allergies details stating that The u",
+          "similarity": 0.3412
+        },
+        {
+          "neighbor_id": "ent_profile_025_010",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3308
+        },
+        {
+          "neighbor_id": "ent_profile_025_005",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.3187
+        }
+      ]
+    },
+    {
+      "request_id": "req_069",
+      "forget_type": "F4",
+      "profile_id": "profile_025",
+      "deleted_ids": [
+        "ent_profile_025_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_025_sum_01",
+          "content_preview": "Session 1: Pat Hall confirmed their past surgical procedures details stating tha",
+          "similarity": 0.8599
+        },
+        {
+          "neighbor_id": "ent_profile_025_006",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3802
+        },
+        {
+          "neighbor_id": "ent_profile_025_sum_06",
+          "content_preview": "Session 6: Pat Hall confirmed their medical allergies details stating that The u",
+          "similarity": 0.3412
+        },
+        {
+          "neighbor_id": "ent_profile_025_010",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3308
+        },
+        {
+          "neighbor_id": "ent_profile_025_005",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.3187
+        }
+      ]
+    },
+    {
+      "request_id": "req_070",
+      "forget_type": "F6",
+      "profile_id": "profile_026",
+      "deleted_ids": [
+        "ent_profile_026_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_026_sum_01",
+          "content_preview": "Session 1: Kelly Wilson confirmed their education loan provider details stating ",
+          "similarity": 0.8807
+        },
+        {
+          "neighbor_id": "ent_profile_026_sum_03",
+          "content_preview": "Session 3: Kelly Wilson confirmed their brokerage investments details stating th",
+          "similarity": 0.3468
+        },
+        {
+          "neighbor_id": "ent_profile_026_003",
+          "content_preview": "The user's verified brokerage investments record is forty shares of index ETF VO",
+          "similarity": 0.3394
+        },
+        {
+          "neighbor_id": "ent_profile_026_007",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.328
+        },
+        {
+          "neighbor_id": "ent_profile_026_009",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.3233
+        }
+      ]
+    },
+    {
+      "request_id": "req_071",
+      "forget_type": "F4",
+      "profile_id": "profile_026",
+      "deleted_ids": [
+        "ent_profile_026_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_026_sum_01",
+          "content_preview": "Session 1: Kelly Wilson confirmed their education loan provider details stating ",
+          "similarity": 0.8807
+        },
+        {
+          "neighbor_id": "ent_profile_026_sum_03",
+          "content_preview": "Session 3: Kelly Wilson confirmed their brokerage investments details stating th",
+          "similarity": 0.3468
+        },
+        {
+          "neighbor_id": "ent_profile_026_003",
+          "content_preview": "The user's verified brokerage investments record is forty shares of index ETF VO",
+          "similarity": 0.3394
+        },
+        {
+          "neighbor_id": "ent_profile_026_007",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.328
+        },
+        {
+          "neighbor_id": "ent_profile_026_009",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.3233
+        }
+      ]
+    },
+    {
+      "request_id": "req_072",
+      "forget_type": "F4",
+      "profile_id": "profile_026",
+      "deleted_ids": [
+        "ent_profile_026_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_026_sum_01",
+          "content_preview": "Session 1: Kelly Wilson confirmed their education loan provider details stating ",
+          "similarity": 0.8807
+        },
+        {
+          "neighbor_id": "ent_profile_026_sum_03",
+          "content_preview": "Session 3: Kelly Wilson confirmed their brokerage investments details stating th",
+          "similarity": 0.3468
+        },
+        {
+          "neighbor_id": "ent_profile_026_003",
+          "content_preview": "The user's verified brokerage investments record is forty shares of index ETF VO",
+          "similarity": 0.3394
+        },
+        {
+          "neighbor_id": "ent_profile_026_007",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.328
+        },
+        {
+          "neighbor_id": "ent_profile_026_009",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.3233
+        }
+      ]
+    },
+    {
+      "request_id": "req_073",
+      "forget_type": "F4",
+      "profile_id": "profile_027",
+      "deleted_ids": [
+        "ent_profile_027_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_027_sum_01",
+          "content_preview": "Session 1: Remi Young confirmed their office campus location details stating tha",
+          "similarity": 0.8745
+        },
+        {
+          "neighbor_id": "ent_profile_027_003",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3923
+        },
+        {
+          "neighbor_id": "ent_profile_027_006",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3808
+        },
+        {
+          "neighbor_id": "ent_profile_027_010",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.379
+        },
+        {
+          "neighbor_id": "ent_profile_027_008",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3759
+        }
+      ]
+    },
+    {
+      "request_id": "req_074",
+      "forget_type": "F6",
+      "profile_id": "profile_027",
+      "deleted_ids": [
+        "ent_profile_027_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_027_sum_01",
+          "content_preview": "Session 1: Remi Young confirmed their office campus location details stating tha",
+          "similarity": 0.8745
+        },
+        {
+          "neighbor_id": "ent_profile_027_003",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3923
+        },
+        {
+          "neighbor_id": "ent_profile_027_006",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3808
+        },
+        {
+          "neighbor_id": "ent_profile_027_010",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.379
+        },
+        {
+          "neighbor_id": "ent_profile_027_008",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3759
+        }
+      ]
+    },
+    {
+      "request_id": "req_075",
+      "forget_type": "F4",
+      "profile_id": "profile_027",
+      "deleted_ids": [
+        "ent_profile_027_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_027_sum_01",
+          "content_preview": "Session 1: Remi Young confirmed their office campus location details stating tha",
+          "similarity": 0.8745
+        },
+        {
+          "neighbor_id": "ent_profile_027_003",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3923
+        },
+        {
+          "neighbor_id": "ent_profile_027_006",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3808
+        },
+        {
+          "neighbor_id": "ent_profile_027_010",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.379
+        },
+        {
+          "neighbor_id": "ent_profile_027_008",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3759
+        }
+      ]
+    },
+    {
+      "request_id": "req_076",
+      "forget_type": "F1",
+      "profile_id": "profile_028",
+      "deleted_ids": [
+        "ent_profile_028_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_028_sum_01",
+          "content_preview": "Session 1: Brett Wilson confirmed their passport travel number details stating t",
+          "similarity": 0.9201
+        },
+        {
+          "neighbor_id": "ent_profile_028_sum_03",
+          "content_preview": "Session 3: Brett Wilson confirmed their international travel destination details",
+          "similarity": 0.4613
+        },
+        {
+          "neighbor_id": "ent_profile_028_005",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.4586
+        },
+        {
+          "neighbor_id": "ent_profile_028_004",
+          "content_preview": "The user's verified metro transit card record is monthly subway ORCA transit car",
+          "similarity": 0.407
+        },
+        {
+          "neighbor_id": "ent_profile_028_008",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3692
+        }
+      ]
+    },
+    {
+      "request_id": "req_077",
+      "forget_type": "F1",
+      "profile_id": "profile_028",
+      "deleted_ids": [
+        "ent_profile_028_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_028_sum_01",
+          "content_preview": "Session 1: Brett Wilson confirmed their passport travel number details stating t",
+          "similarity": 0.9201
+        },
+        {
+          "neighbor_id": "ent_profile_028_sum_03",
+          "content_preview": "Session 3: Brett Wilson confirmed their international travel destination details",
+          "similarity": 0.4613
+        },
+        {
+          "neighbor_id": "ent_profile_028_005",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.4586
+        },
+        {
+          "neighbor_id": "ent_profile_028_004",
+          "content_preview": "The user's verified metro transit card record is monthly subway ORCA transit car",
+          "similarity": 0.407
+        },
+        {
+          "neighbor_id": "ent_profile_028_008",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3692
+        }
+      ]
+    },
+    {
+      "request_id": "req_078",
+      "forget_type": "F4",
+      "profile_id": "profile_029",
+      "deleted_ids": [
+        "ent_profile_029_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_029_sum_01",
+          "content_preview": "Session 1: Quinn Anderson confirmed their spouse name details stating that The u",
+          "similarity": 0.8752
+        },
+        {
+          "neighbor_id": "ent_profile_029_006",
+          "content_preview": "The user's verified childhood hometown record is raised in suburban Minneapolis ",
+          "similarity": 0.3761
+        },
+        {
+          "neighbor_id": "ent_profile_029_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3741
+        },
+        {
+          "neighbor_id": "ent_profile_029_005",
+          "content_preview": "The user's verified child name and grade record is daughter Maya attending eleme",
+          "similarity": 0.3611
+        },
+        {
+          "neighbor_id": "ent_profile_029_014",
+          "content_preview": "The user: The user drives an electric vehicle car, a white Tesla Model 3. (Regis",
+          "similarity": 0.3584
+        }
+      ]
+    },
+    {
+      "request_id": "req_079",
+      "forget_type": "F2",
+      "profile_id": "profile_029",
+      "deleted_ids": [
+        "ent_profile_029_001",
+        "ent_profile_029_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_029_sum_02",
+          "content_preview": "Session 2: Quinn Anderson confirmed their annual family tradition details statin",
+          "similarity": 0.9008
+        },
+        {
+          "neighbor_id": "ent_profile_029_sum_01",
+          "content_preview": "Session 1: Quinn Anderson confirmed their spouse name details stating that The u",
+          "similarity": 0.8752
+        },
+        {
+          "neighbor_id": "ent_profile_029_006",
+          "content_preview": "The user's verified childhood hometown record is raised in suburban Minneapolis ",
+          "similarity": 0.3761
+        },
+        {
+          "neighbor_id": "ent_profile_029_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3741
+        },
+        {
+          "neighbor_id": "ent_profile_029_005",
+          "content_preview": "The user's verified child name and grade record is daughter Maya attending eleme",
+          "similarity": 0.3611
+        }
+      ]
+    },
+    {
+      "request_id": "req_080",
+      "forget_type": "F2",
+      "profile_id": "profile_029",
+      "deleted_ids": [
+        "ent_profile_029_001",
+        "ent_profile_029_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_029_sum_02",
+          "content_preview": "Session 2: Quinn Anderson confirmed their annual family tradition details statin",
+          "similarity": 0.9008
+        },
+        {
+          "neighbor_id": "ent_profile_029_sum_01",
+          "content_preview": "Session 1: Quinn Anderson confirmed their spouse name details stating that The u",
+          "similarity": 0.8752
+        },
+        {
+          "neighbor_id": "ent_profile_029_006",
+          "content_preview": "The user's verified childhood hometown record is raised in suburban Minneapolis ",
+          "similarity": 0.3761
+        },
+        {
+          "neighbor_id": "ent_profile_029_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3741
+        },
+        {
+          "neighbor_id": "ent_profile_029_005",
+          "content_preview": "The user's verified child name and grade record is daughter Maya attending eleme",
+          "similarity": 0.3611
+        }
+      ]
+    },
+    {
+      "request_id": "req_081",
+      "forget_type": "F6",
+      "profile_id": "profile_030",
+      "deleted_ids": [
+        "ent_profile_030_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_030_sum_01",
+          "content_preview": "Session 1: Blake Turner confirmed their academic research laboratory details sta",
+          "similarity": 0.9113
+        },
+        {
+          "neighbor_id": "ent_profile_030_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3878
+        },
+        {
+          "neighbor_id": "ent_profile_030_006",
+          "content_preview": "The user's verified research grant identifier record is funded by National Scien",
+          "similarity": 0.3832
+        },
+        {
+          "neighbor_id": "ent_profile_030_002",
+          "content_preview": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.9",
+          "similarity": 0.3372
+        },
+        {
+          "neighbor_id": "ent_profile_030_003",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.331
+        }
+      ]
+    },
+    {
+      "request_id": "req_082",
+      "forget_type": "F1",
+      "profile_id": "profile_030",
+      "deleted_ids": [
+        "ent_profile_030_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_030_sum_01",
+          "content_preview": "Session 1: Blake Turner confirmed their academic research laboratory details sta",
+          "similarity": 0.9113
+        },
+        {
+          "neighbor_id": "ent_profile_030_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3878
+        },
+        {
+          "neighbor_id": "ent_profile_030_006",
+          "content_preview": "The user's verified research grant identifier record is funded by National Scien",
+          "similarity": 0.3832
+        },
+        {
+          "neighbor_id": "ent_profile_030_002",
+          "content_preview": "The user's verified undergraduate GPA record is undergraduate cumulative GPA 3.9",
+          "similarity": 0.3372
+        },
+        {
+          "neighbor_id": "ent_profile_030_003",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.331
+        }
+      ]
+    },
+    {
+      "request_id": "req_083",
+      "forget_type": "F5",
+      "profile_id": "profile_031",
+      "deleted_ids": [
+        "ent_profile_031_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_031_sum_01",
+          "content_preview": "Session 1: Phoenix Wilson confirmed their blood type details stating that The us",
+          "similarity": 0.8902
+        },
+        {
+          "neighbor_id": "ent_profile_031_005",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.4124
+        },
+        {
+          "neighbor_id": "ent_profile_031_007",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3955
+        },
+        {
+          "neighbor_id": "ent_profile_031_013",
+          "content_preview": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Pa",
+          "similarity": 0.3925
+        },
+        {
+          "neighbor_id": "ent_profile_031_008",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.362
+        }
+      ]
+    },
+    {
+      "request_id": "req_084",
+      "forget_type": "F1",
+      "profile_id": "profile_031",
+      "deleted_ids": [
+        "ent_profile_031_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_031_sum_01",
+          "content_preview": "Session 1: Phoenix Wilson confirmed their blood type details stating that The us",
+          "similarity": 0.8902
+        },
+        {
+          "neighbor_id": "ent_profile_031_005",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.4124
+        },
+        {
+          "neighbor_id": "ent_profile_031_007",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3955
+        },
+        {
+          "neighbor_id": "ent_profile_031_013",
+          "content_preview": "The user: The user goes backcountry hiking outdoors in Mount Rainier National Pa",
+          "similarity": 0.3925
+        },
+        {
+          "neighbor_id": "ent_profile_031_008",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.362
+        }
+      ]
+    },
+    {
+      "request_id": "req_085",
+      "forget_type": "F3",
+      "profile_id": "profile_031",
+      "deleted_ids": [
+        "ent_profile_031_001",
+        "ent_profile_031_002",
+        "ent_profile_031_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_031_sum_03",
+          "content_preview": "Session 3: Phoenix Wilson confirmed their health insurance policy ID details sta",
+          "similarity": 0.9391
+        },
+        {
+          "neighbor_id": "ent_profile_031_sum_01",
+          "content_preview": "Session 1: Phoenix Wilson confirmed their blood type details stating that The us",
+          "similarity": 0.8902
+        },
+        {
+          "neighbor_id": "ent_profile_031_sum_02",
+          "content_preview": "Session 2: Phoenix Wilson confirmed their recent immunizations details stating t",
+          "similarity": 0.8526
+        },
+        {
+          "neighbor_id": "ent_profile_031_005",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.4124
+        },
+        {
+          "neighbor_id": "ent_profile_031_007",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3955
+        }
+      ]
+    },
+    {
+      "request_id": "req_086",
+      "forget_type": "F3",
+      "profile_id": "profile_032",
+      "deleted_ids": [
+        "ent_profile_032_001",
+        "ent_profile_032_002",
+        "ent_profile_032_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_032_sum_02",
+          "content_preview": "Session 2: Elliot Perez confirmed their credit score rating details stating that",
+          "similarity": 0.898
+        },
+        {
+          "neighbor_id": "ent_profile_032_sum_01",
+          "content_preview": "Session 1: Elliot Perez confirmed their education loan provider details stating ",
+          "similarity": 0.8913
+        },
+        {
+          "neighbor_id": "ent_profile_032_018",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.4553
+        },
+        {
+          "neighbor_id": "ent_profile_032_004",
+          "content_preview": "The user's verified tax preparation accountant record is CPA accountant Marcus V",
+          "similarity": 0.3959
+        },
+        {
+          "neighbor_id": "ent_profile_032_018",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3783
+        }
+      ]
+    },
+    {
+      "request_id": "req_087",
+      "forget_type": "F1",
+      "profile_id": "profile_032",
+      "deleted_ids": [
+        "ent_profile_032_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_032_sum_01",
+          "content_preview": "Session 1: Elliot Perez confirmed their education loan provider details stating ",
+          "similarity": 0.8913
+        },
+        {
+          "neighbor_id": "ent_profile_032_018",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3783
+        },
+        {
+          "neighbor_id": "ent_profile_032_006",
+          "content_preview": "The user's verified brokerage investments record is forty shares of index ETF VO",
+          "similarity": 0.3709
+        },
+        {
+          "neighbor_id": "ent_profile_032_008",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.3467
+        },
+        {
+          "neighbor_id": "ent_profile_032_010",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3333
+        }
+      ]
+    },
+    {
+      "request_id": "req_088",
+      "forget_type": "F2",
+      "profile_id": "profile_032",
+      "deleted_ids": [
+        "ent_profile_032_001",
+        "ent_profile_032_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_032_sum_01",
+          "content_preview": "Session 1: Elliot Perez confirmed their education loan provider details stating ",
+          "similarity": 0.8913
+        },
+        {
+          "neighbor_id": "ent_profile_032_004",
+          "content_preview": "The user's verified tax preparation accountant record is CPA accountant Marcus V",
+          "similarity": 0.3959
+        },
+        {
+          "neighbor_id": "ent_profile_032_018",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3783
+        },
+        {
+          "neighbor_id": "ent_profile_032_006",
+          "content_preview": "The user's verified brokerage investments record is forty shares of index ETF VO",
+          "similarity": 0.3709
+        },
+        {
+          "neighbor_id": "ent_profile_032_008",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.3467
+        }
+      ]
+    },
+    {
+      "request_id": "req_089",
+      "forget_type": "F6",
+      "profile_id": "profile_033",
+      "deleted_ids": [
+        "ent_profile_033_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_033_sum_01",
+          "content_preview": "Session 1: Blake Hernandez confirmed their direct reporting manager details stat",
+          "similarity": 0.89
+        },
+        {
+          "neighbor_id": "ent_profile_033_005",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.4215
+        },
+        {
+          "neighbor_id": "ent_profile_033_003",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.395
+        },
+        {
+          "neighbor_id": "ent_profile_033_010",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3916
+        },
+        {
+          "neighbor_id": "ent_profile_033_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.387
+        }
+      ]
+    },
+    {
+      "request_id": "req_090",
+      "forget_type": "F2",
+      "profile_id": "profile_033",
+      "deleted_ids": [
+        "ent_profile_033_001",
+        "ent_profile_033_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_033_sum_01",
+          "content_preview": "Session 1: Blake Hernandez confirmed their direct reporting manager details stat",
+          "similarity": 0.89
+        },
+        {
+          "neighbor_id": "ent_profile_033_sum_02",
+          "content_preview": "Session 2: Blake Hernandez confirmed their primary project leadership details st",
+          "similarity": 0.8795
+        },
+        {
+          "neighbor_id": "ent_profile_033_005",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.4215
+        },
+        {
+          "neighbor_id": "ent_profile_033_003",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.395
+        },
+        {
+          "neighbor_id": "ent_profile_033_003",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3943
+        }
+      ]
+    },
+    {
+      "request_id": "req_091",
+      "forget_type": "F2",
+      "profile_id": "profile_034",
+      "deleted_ids": [
+        "ent_profile_034_001",
+        "ent_profile_034_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_034_sum_01",
+          "content_preview": "Session 1: Skyler Wright confirmed their known traveler number details stating t",
+          "similarity": 0.8733
+        },
+        {
+          "neighbor_id": "ent_profile_034_005",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.4229
+        },
+        {
+          "neighbor_id": "ent_profile_034_sum_03",
+          "content_preview": "Session 3: Skyler Wright confirmed their passport travel number details stating ",
+          "similarity": 0.4093
+        },
+        {
+          "neighbor_id": "ent_profile_034_007",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3612
+        },
+        {
+          "neighbor_id": "ent_profile_034_003",
+          "content_preview": "The user's verified hotel lodging reservation record is reserved king suite at P",
+          "similarity": 0.3409
+        }
+      ]
+    },
+    {
+      "request_id": "req_092",
+      "forget_type": "F1",
+      "profile_id": "profile_034",
+      "deleted_ids": [
+        "ent_profile_034_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_034_sum_01",
+          "content_preview": "Session 1: Skyler Wright confirmed their known traveler number details stating t",
+          "similarity": 0.8733
+        },
+        {
+          "neighbor_id": "ent_profile_034_005",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.4229
+        },
+        {
+          "neighbor_id": "ent_profile_034_sum_03",
+          "content_preview": "Session 3: Skyler Wright confirmed their passport travel number details stating ",
+          "similarity": 0.4093
+        },
+        {
+          "neighbor_id": "ent_profile_034_007",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3612
+        },
+        {
+          "neighbor_id": "ent_profile_034_003",
+          "content_preview": "The user's verified hotel lodging reservation record is reserved king suite at P",
+          "similarity": 0.3409
+        }
+      ]
+    },
+    {
+      "request_id": "req_093",
+      "forget_type": "F3",
+      "profile_id": "profile_035",
+      "deleted_ids": [
+        "ent_profile_035_001",
+        "ent_profile_035_002",
+        "ent_profile_035_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_035_sum_02",
+          "content_preview": "Session 2: Harper Mitchell confirmed their home residential street address detai",
+          "similarity": 0.9299
+        },
+        {
+          "neighbor_id": "ent_profile_035_sum_03",
+          "content_preview": "Session 3: Harper Mitchell confirmed their child name and grade details stating ",
+          "similarity": 0.9062
+        },
+        {
+          "neighbor_id": "ent_profile_035_sum_01",
+          "content_preview": "Session 1: Harper Mitchell confirmed their childhood hometown details stating th",
+          "similarity": 0.8483
+        },
+        {
+          "neighbor_id": "ent_profile_035_010",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.4253
+        },
+        {
+          "neighbor_id": "ent_profile_035_010",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.4098
+        }
+      ]
+    },
+    {
+      "request_id": "req_094",
+      "forget_type": "F6",
+      "profile_id": "profile_035",
+      "deleted_ids": [
+        "ent_profile_035_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_035_sum_01",
+          "content_preview": "Session 1: Harper Mitchell confirmed their childhood hometown details stating th",
+          "similarity": 0.8483
+        },
+        {
+          "neighbor_id": "ent_profile_035_010",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.4253
+        },
+        {
+          "neighbor_id": "ent_profile_035_008",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3619
+        },
+        {
+          "neighbor_id": "ent_profile_035_005",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3594
+        },
+        {
+          "neighbor_id": "ent_profile_035_006",
+          "content_preview": "The user's verified pet name and breed record is adopted Siamese cat pet named M",
+          "similarity": 0.344
+        }
+      ]
+    },
+    {
+      "request_id": "req_095",
+      "forget_type": "F1",
+      "profile_id": "profile_036",
+      "deleted_ids": [
+        "ent_profile_036_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_036_sum_01",
+          "content_preview": "Session 1: Reese Lewis confirmed their academic honor society details stating th",
+          "similarity": 0.9089
+        },
+        {
+          "neighbor_id": "ent_profile_036_002",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.3619
+        },
+        {
+          "neighbor_id": "ent_profile_036_sum_02",
+          "content_preview": "Session 2: Reese Lewis confirmed their thesis academic advisor details stating t",
+          "similarity": 0.3204
+        },
+        {
+          "neighbor_id": "ent_profile_036_003",
+          "content_preview": "The user's verified research grant identifier record is funded by National Scien",
+          "similarity": 0.3115
+        },
+        {
+          "neighbor_id": "ent_profile_036_015",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3111
+        }
+      ]
+    },
+    {
+      "request_id": "req_096",
+      "forget_type": "F5",
+      "profile_id": "profile_036",
+      "deleted_ids": [
+        "ent_profile_036_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_036_sum_01",
+          "content_preview": "Session 1: Reese Lewis confirmed their academic honor society details stating th",
+          "similarity": 0.9089
+        },
+        {
+          "neighbor_id": "ent_profile_036_002",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.3619
+        },
+        {
+          "neighbor_id": "ent_profile_036_sum_02",
+          "content_preview": "Session 2: Reese Lewis confirmed their thesis academic advisor details stating t",
+          "similarity": 0.3204
+        },
+        {
+          "neighbor_id": "ent_profile_036_003",
+          "content_preview": "The user's verified research grant identifier record is funded by National Scien",
+          "similarity": 0.3115
+        },
+        {
+          "neighbor_id": "ent_profile_036_015",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3111
+        }
+      ]
+    },
+    {
+      "request_id": "req_097",
+      "forget_type": "F6",
+      "profile_id": "profile_036",
+      "deleted_ids": [
+        "ent_profile_036_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_036_sum_01",
+          "content_preview": "Session 1: Reese Lewis confirmed their academic honor society details stating th",
+          "similarity": 0.9089
+        },
+        {
+          "neighbor_id": "ent_profile_036_002",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.3619
+        },
+        {
+          "neighbor_id": "ent_profile_036_sum_02",
+          "content_preview": "Session 2: Reese Lewis confirmed their thesis academic advisor details stating t",
+          "similarity": 0.3204
+        },
+        {
+          "neighbor_id": "ent_profile_036_003",
+          "content_preview": "The user's verified research grant identifier record is funded by National Scien",
+          "similarity": 0.3115
+        },
+        {
+          "neighbor_id": "ent_profile_036_015",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3111
+        }
+      ]
+    },
+    {
+      "request_id": "req_098",
+      "forget_type": "F1",
+      "profile_id": "profile_037",
+      "deleted_ids": [
+        "ent_profile_037_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_037_sum_01",
+          "content_preview": "Session 1: Charlie Mitchell confirmed their blood type details stating that The ",
+          "similarity": 0.8851
+        },
+        {
+          "neighbor_id": "ent_profile_037_004",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.4087
+        },
+        {
+          "neighbor_id": "ent_profile_037_007",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3915
+        },
+        {
+          "neighbor_id": "ent_profile_037_008",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3712
+        },
+        {
+          "neighbor_id": "ent_profile_037_009",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.3497
+        }
+      ]
+    },
+    {
+      "request_id": "req_099",
+      "forget_type": "F5",
+      "profile_id": "profile_037",
+      "deleted_ids": [
+        "ent_profile_037_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_037_sum_01",
+          "content_preview": "Session 1: Charlie Mitchell confirmed their blood type details stating that The ",
+          "similarity": 0.8851
+        },
+        {
+          "neighbor_id": "ent_profile_037_004",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.4087
+        },
+        {
+          "neighbor_id": "ent_profile_037_007",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3915
+        },
+        {
+          "neighbor_id": "ent_profile_037_008",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3712
+        },
+        {
+          "neighbor_id": "ent_profile_037_009",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.3497
+        }
+      ]
+    },
+    {
+      "request_id": "req_100",
+      "forget_type": "F2",
+      "profile_id": "profile_037",
+      "deleted_ids": [
+        "ent_profile_037_001",
+        "ent_profile_037_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_037_sum_02",
+          "content_preview": "Session 2: Charlie Mitchell confirmed their prescription medications details sta",
+          "similarity": 0.8935
+        },
+        {
+          "neighbor_id": "ent_profile_037_sum_01",
+          "content_preview": "Session 1: Charlie Mitchell confirmed their blood type details stating that The ",
+          "similarity": 0.8851
+        },
+        {
+          "neighbor_id": "ent_profile_037_004",
+          "content_preview": "The user's verified skin conditions record is moderate eczema managed by Dr. Har",
+          "similarity": 0.4087
+        },
+        {
+          "neighbor_id": "ent_profile_037_007",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3915
+        },
+        {
+          "neighbor_id": "ent_profile_037_007",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3843
+        }
+      ]
+    },
+    {
+      "request_id": "req_101",
+      "forget_type": "F6",
+      "profile_id": "profile_038",
+      "deleted_ids": [
+        "ent_profile_038_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_038_sum_01",
+          "content_preview": "Session 1: Harper Davis confirmed their tax preparation accountant details stati",
+          "similarity": 0.8902
+        },
+        {
+          "neighbor_id": "ent_profile_038_002",
+          "content_preview": "The user's verified retirement account strategy record is annual backdoor Roth I",
+          "similarity": 0.424
+        },
+        {
+          "neighbor_id": "ent_profile_038_005",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3466
+        },
+        {
+          "neighbor_id": "ent_profile_038_006",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3232
+        },
+        {
+          "neighbor_id": "ent_profile_038_sum_03",
+          "content_preview": "Session 3: Harper Davis confirmed their bank checking account details stating th",
+          "similarity": 0.321
+        }
+      ]
+    },
+    {
+      "request_id": "req_102",
+      "forget_type": "F5",
+      "profile_id": "profile_038",
+      "deleted_ids": [
+        "ent_profile_038_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_038_sum_01",
+          "content_preview": "Session 1: Harper Davis confirmed their tax preparation accountant details stati",
+          "similarity": 0.8902
+        },
+        {
+          "neighbor_id": "ent_profile_038_002",
+          "content_preview": "The user's verified retirement account strategy record is annual backdoor Roth I",
+          "similarity": 0.424
+        },
+        {
+          "neighbor_id": "ent_profile_038_005",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3466
+        },
+        {
+          "neighbor_id": "ent_profile_038_006",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3232
+        },
+        {
+          "neighbor_id": "ent_profile_038_sum_03",
+          "content_preview": "Session 3: Harper Davis confirmed their bank checking account details stating th",
+          "similarity": 0.321
+        }
+      ]
+    },
+    {
+      "request_id": "req_103",
+      "forget_type": "F1",
+      "profile_id": "profile_038",
+      "deleted_ids": [
+        "ent_profile_038_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_038_sum_01",
+          "content_preview": "Session 1: Harper Davis confirmed their tax preparation accountant details stati",
+          "similarity": 0.8902
+        },
+        {
+          "neighbor_id": "ent_profile_038_002",
+          "content_preview": "The user's verified retirement account strategy record is annual backdoor Roth I",
+          "similarity": 0.424
+        },
+        {
+          "neighbor_id": "ent_profile_038_005",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3466
+        },
+        {
+          "neighbor_id": "ent_profile_038_006",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3232
+        },
+        {
+          "neighbor_id": "ent_profile_038_sum_03",
+          "content_preview": "Session 3: Harper Davis confirmed their bank checking account details stating th",
+          "similarity": 0.321
+        }
+      ]
+    },
+    {
+      "request_id": "req_104",
+      "forget_type": "F5",
+      "profile_id": "profile_039",
+      "deleted_ids": [
+        "ent_profile_039_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_039_sum_01",
+          "content_preview": "Session 1: Riley Hill confirmed their security clearance status details stating ",
+          "similarity": 0.9095
+        },
+        {
+          "neighbor_id": "ent_profile_039_008",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3348
+        },
+        {
+          "neighbor_id": "ent_profile_039_003",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3263
+        },
+        {
+          "neighbor_id": "ent_profile_039_006",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3093
+        },
+        {
+          "neighbor_id": "ent_profile_039_005",
+          "content_preview": "The user's verified conference presentations record is keynote speaker at CloudN",
+          "similarity": 0.3084
+        }
+      ]
+    },
+    {
+      "request_id": "req_105",
+      "forget_type": "F1",
+      "profile_id": "profile_039",
+      "deleted_ids": [
+        "ent_profile_039_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_039_sum_01",
+          "content_preview": "Session 1: Riley Hill confirmed their security clearance status details stating ",
+          "similarity": 0.9095
+        },
+        {
+          "neighbor_id": "ent_profile_039_008",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3348
+        },
+        {
+          "neighbor_id": "ent_profile_039_003",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.3263
+        },
+        {
+          "neighbor_id": "ent_profile_039_006",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3093
+        },
+        {
+          "neighbor_id": "ent_profile_039_005",
+          "content_preview": "The user's verified conference presentations record is keynote speaker at CloudN",
+          "similarity": 0.3084
+        }
+      ]
+    },
+    {
+      "request_id": "req_106",
+      "forget_type": "F5",
+      "profile_id": "profile_040",
+      "deleted_ids": [
+        "ent_profile_040_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_040_sum_01",
+          "content_preview": "Session 1: Harper Allen confirmed their metro transit card details stating that ",
+          "similarity": 0.9061
+        },
+        {
+          "neighbor_id": "ent_profile_040_005",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3869
+        },
+        {
+          "neighbor_id": "ent_profile_040_sum_03",
+          "content_preview": "Session 3: Harper Allen confirmed their passport travel number details stating t",
+          "similarity": 0.3677
+        },
+        {
+          "neighbor_id": "ent_profile_040_002",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.3204
+        },
+        {
+          "neighbor_id": "ent_profile_040_003",
+          "content_preview": "The user's verified hotel lodging reservation record is reserved king suite at P",
+          "similarity": 0.3173
+        }
+      ]
+    },
+    {
+      "request_id": "req_107",
+      "forget_type": "F6",
+      "profile_id": "profile_040",
+      "deleted_ids": [
+        "ent_profile_040_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_040_sum_01",
+          "content_preview": "Session 1: Harper Allen confirmed their metro transit card details stating that ",
+          "similarity": 0.9061
+        },
+        {
+          "neighbor_id": "ent_profile_040_005",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3869
+        },
+        {
+          "neighbor_id": "ent_profile_040_sum_03",
+          "content_preview": "Session 3: Harper Allen confirmed their passport travel number details stating t",
+          "similarity": 0.3677
+        },
+        {
+          "neighbor_id": "ent_profile_040_002",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.3204
+        },
+        {
+          "neighbor_id": "ent_profile_040_003",
+          "content_preview": "The user's verified hotel lodging reservation record is reserved king suite at P",
+          "similarity": 0.3173
+        }
+      ]
+    },
+    {
+      "request_id": "req_108",
+      "forget_type": "F6",
+      "profile_id": "profile_040",
+      "deleted_ids": [
+        "ent_profile_040_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_040_sum_01",
+          "content_preview": "Session 1: Harper Allen confirmed their metro transit card details stating that ",
+          "similarity": 0.9061
+        },
+        {
+          "neighbor_id": "ent_profile_040_005",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3869
+        },
+        {
+          "neighbor_id": "ent_profile_040_sum_03",
+          "content_preview": "Session 3: Harper Allen confirmed their passport travel number details stating t",
+          "similarity": 0.3677
+        },
+        {
+          "neighbor_id": "ent_profile_040_002",
+          "content_preview": "The user's verified international travel destination record is visited Reykjavik",
+          "similarity": 0.3204
+        },
+        {
+          "neighbor_id": "ent_profile_040_003",
+          "content_preview": "The user's verified hotel lodging reservation record is reserved king suite at P",
+          "similarity": 0.3173
+        }
+      ]
+    },
+    {
+      "request_id": "req_109",
+      "forget_type": "F6",
+      "profile_id": "profile_041",
+      "deleted_ids": [
+        "ent_profile_041_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_041_sum_01",
+          "content_preview": "Session 1: Eden Edwards confirmed their annual family tradition details stating ",
+          "similarity": 0.899
+        },
+        {
+          "neighbor_id": "ent_profile_041_sum_03",
+          "content_preview": "Session 3: Eden Edwards confirmed their wedding anniversary date details stating",
+          "similarity": 0.2987
+        },
+        {
+          "neighbor_id": "ent_profile_041_003",
+          "content_preview": "The user's verified wedding anniversary date record is celebrates wedding annive",
+          "similarity": 0.286
+        },
+        {
+          "neighbor_id": "ent_profile_041_007",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.2814
+        },
+        {
+          "neighbor_id": "ent_profile_041_009",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.2765
+        }
+      ]
+    },
+    {
+      "request_id": "req_110",
+      "forget_type": "F6",
+      "profile_id": "profile_041",
+      "deleted_ids": [
+        "ent_profile_041_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_041_sum_01",
+          "content_preview": "Session 1: Eden Edwards confirmed their annual family tradition details stating ",
+          "similarity": 0.899
+        },
+        {
+          "neighbor_id": "ent_profile_041_sum_03",
+          "content_preview": "Session 3: Eden Edwards confirmed their wedding anniversary date details stating",
+          "similarity": 0.2987
+        },
+        {
+          "neighbor_id": "ent_profile_041_003",
+          "content_preview": "The user's verified wedding anniversary date record is celebrates wedding annive",
+          "similarity": 0.286
+        },
+        {
+          "neighbor_id": "ent_profile_041_007",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.2814
+        },
+        {
+          "neighbor_id": "ent_profile_041_009",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.2765
+        }
+      ]
+    },
+    {
+      "request_id": "req_111",
+      "forget_type": "F3",
+      "profile_id": "profile_041",
+      "deleted_ids": [
+        "ent_profile_041_001",
+        "ent_profile_041_002",
+        "ent_profile_041_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_041_sum_03",
+          "content_preview": "Session 3: Eden Edwards confirmed their wedding anniversary date details stating",
+          "similarity": 0.9208
+        },
+        {
+          "neighbor_id": "ent_profile_041_sum_02",
+          "content_preview": "Session 2: Eden Edwards confirmed their emergency contact person details stating",
+          "similarity": 0.9141
+        },
+        {
+          "neighbor_id": "ent_profile_041_sum_01",
+          "content_preview": "Session 1: Eden Edwards confirmed their annual family tradition details stating ",
+          "similarity": 0.899
+        },
+        {
+          "neighbor_id": "ent_profile_041_004",
+          "content_preview": "The user's verified childhood hometown record is raised in suburban Minneapolis ",
+          "similarity": 0.392
+        },
+        {
+          "neighbor_id": "ent_profile_041_007",
+          "content_preview": "The user's verified primary credit card record is Sapphire Reserve credit card e",
+          "similarity": 0.3534
+        }
+      ]
+    },
+    {
+      "request_id": "req_112",
+      "forget_type": "F4",
+      "profile_id": "profile_042",
+      "deleted_ids": [
+        "ent_profile_042_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_042_sum_01",
+          "content_preview": "Session 1: Val Taylor confirmed their academic scholarship award details stating",
+          "similarity": 0.9162
+        },
+        {
+          "neighbor_id": "ent_profile_042_006",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.3028
+        },
+        {
+          "neighbor_id": "ent_profile_042_007",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.2977
+        },
+        {
+          "neighbor_id": "ent_profile_042_005",
+          "content_preview": "The user's verified thesis research subject record is thesis published on reinfo",
+          "similarity": 0.2899
+        },
+        {
+          "neighbor_id": "ent_profile_042_004",
+          "content_preview": "The user's verified research grant identifier record is funded by National Scien",
+          "similarity": 0.2723
+        }
+      ]
+    },
+    {
+      "request_id": "req_113",
+      "forget_type": "F4",
+      "profile_id": "profile_042",
+      "deleted_ids": [
+        "ent_profile_042_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_042_sum_01",
+          "content_preview": "Session 1: Val Taylor confirmed their academic scholarship award details stating",
+          "similarity": 0.9162
+        },
+        {
+          "neighbor_id": "ent_profile_042_006",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.3028
+        },
+        {
+          "neighbor_id": "ent_profile_042_007",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.2977
+        },
+        {
+          "neighbor_id": "ent_profile_042_005",
+          "content_preview": "The user's verified thesis research subject record is thesis published on reinfo",
+          "similarity": 0.2899
+        },
+        {
+          "neighbor_id": "ent_profile_042_004",
+          "content_preview": "The user's verified research grant identifier record is funded by National Scien",
+          "similarity": 0.2723
+        }
+      ]
+    },
+    {
+      "request_id": "req_114",
+      "forget_type": "F4",
+      "profile_id": "profile_042",
+      "deleted_ids": [
+        "ent_profile_042_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_042_sum_01",
+          "content_preview": "Session 1: Val Taylor confirmed their academic scholarship award details stating",
+          "similarity": 0.9162
+        },
+        {
+          "neighbor_id": "ent_profile_042_006",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.3028
+        },
+        {
+          "neighbor_id": "ent_profile_042_007",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.2977
+        },
+        {
+          "neighbor_id": "ent_profile_042_005",
+          "content_preview": "The user's verified thesis research subject record is thesis published on reinfo",
+          "similarity": 0.2899
+        },
+        {
+          "neighbor_id": "ent_profile_042_004",
+          "content_preview": "The user's verified research grant identifier record is funded by National Scien",
+          "similarity": 0.2723
+        }
+      ]
+    },
+    {
+      "request_id": "req_115",
+      "forget_type": "F5",
+      "profile_id": "profile_043",
+      "deleted_ids": [
+        "ent_profile_043_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_043_sum_01",
+          "content_preview": "Session 1: Alex Kim confirmed their skin conditions details stating that The use",
+          "similarity": 0.8497
+        },
+        {
+          "neighbor_id": "ent_profile_043_009",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3802
+        },
+        {
+          "neighbor_id": "ent_profile_043_003",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.376
+        },
+        {
+          "neighbor_id": "ent_profile_043_010",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3651
+        },
+        {
+          "neighbor_id": "ent_profile_043_002",
+          "content_preview": "The user's verified past surgical procedures record is knee arthroscopy performe",
+          "similarity": 0.3557
+        }
+      ]
+    },
+    {
+      "request_id": "req_116",
+      "forget_type": "F2",
+      "profile_id": "profile_043",
+      "deleted_ids": [
+        "ent_profile_043_001",
+        "ent_profile_043_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_043_sum_01",
+          "content_preview": "Session 1: Alex Kim confirmed their skin conditions details stating that The use",
+          "similarity": 0.8497
+        },
+        {
+          "neighbor_id": "ent_profile_043_008",
+          "content_preview": "The user's verified current employer record is employed as Principal Architect a",
+          "similarity": 0.4178
+        },
+        {
+          "neighbor_id": "ent_profile_043_010",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3992
+        },
+        {
+          "neighbor_id": "ent_profile_043_003",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3867
+        },
+        {
+          "neighbor_id": "ent_profile_043_009",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3802
+        }
+      ]
+    },
+    {
+      "request_id": "req_117",
+      "forget_type": "F4",
+      "profile_id": "profile_043",
+      "deleted_ids": [
+        "ent_profile_043_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_043_sum_01",
+          "content_preview": "Session 1: Alex Kim confirmed their skin conditions details stating that The use",
+          "similarity": 0.8497
+        },
+        {
+          "neighbor_id": "ent_profile_043_009",
+          "content_preview": "The user's verified spouse name record is married to pediatrician spouse named D",
+          "similarity": 0.3802
+        },
+        {
+          "neighbor_id": "ent_profile_043_003",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.376
+        },
+        {
+          "neighbor_id": "ent_profile_043_010",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.3651
+        },
+        {
+          "neighbor_id": "ent_profile_043_002",
+          "content_preview": "The user's verified past surgical procedures record is knee arthroscopy performe",
+          "similarity": 0.3557
+        }
+      ]
+    },
+    {
+      "request_id": "req_118",
+      "forget_type": "F6",
+      "profile_id": "profile_044",
+      "deleted_ids": [
+        "ent_profile_044_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_044_sum_01",
+          "content_preview": "Session 1: Ashley Vance confirmed their retirement account strategy details stat",
+          "similarity": 0.8661
+        },
+        {
+          "neighbor_id": "ent_profile_044_004",
+          "content_preview": "The user's verified tax preparation accountant record is CPA accountant Marcus V",
+          "similarity": 0.4384
+        },
+        {
+          "neighbor_id": "ent_profile_044_005",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.4022
+        },
+        {
+          "neighbor_id": "ent_profile_044_sum_03",
+          "content_preview": "Session 3: Ashley Vance confirmed their bank checking account details stating th",
+          "similarity": 0.3855
+        },
+        {
+          "neighbor_id": "ent_profile_044_016",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3552
+        }
+      ]
+    },
+    {
+      "request_id": "req_119",
+      "forget_type": "F4",
+      "profile_id": "profile_044",
+      "deleted_ids": [
+        "ent_profile_044_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_044_sum_01",
+          "content_preview": "Session 1: Ashley Vance confirmed their retirement account strategy details stat",
+          "similarity": 0.8661
+        },
+        {
+          "neighbor_id": "ent_profile_044_004",
+          "content_preview": "The user's verified tax preparation accountant record is CPA accountant Marcus V",
+          "similarity": 0.4384
+        },
+        {
+          "neighbor_id": "ent_profile_044_005",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.4022
+        },
+        {
+          "neighbor_id": "ent_profile_044_sum_03",
+          "content_preview": "Session 3: Ashley Vance confirmed their bank checking account details stating th",
+          "similarity": 0.3855
+        },
+        {
+          "neighbor_id": "ent_profile_044_016",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3552
+        }
+      ]
+    },
+    {
+      "request_id": "req_120",
+      "forget_type": "F3",
+      "profile_id": "profile_045",
+      "deleted_ids": [
+        "ent_profile_045_001",
+        "ent_profile_045_002",
+        "ent_profile_045_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_045_sum_01",
+          "content_preview": "Session 1: Kai Lewis confirmed their production API key details stating that The",
+          "similarity": 0.9111
+        },
+        {
+          "neighbor_id": "ent_profile_045_sum_02",
+          "content_preview": "Session 2: Kai Lewis confirmed their conference presentations details stating th",
+          "similarity": 0.8782
+        },
+        {
+          "neighbor_id": "ent_profile_045_006",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.4253
+        },
+        {
+          "neighbor_id": "ent_profile_045_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3981
+        },
+        {
+          "neighbor_id": "ent_profile_045_010",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.37
+        }
+      ]
+    },
+    {
+      "request_id": "req_121",
+      "forget_type": "F2",
+      "profile_id": "profile_045",
+      "deleted_ids": [
+        "ent_profile_045_001",
+        "ent_profile_045_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_045_sum_01",
+          "content_preview": "Session 1: Kai Lewis confirmed their production API key details stating that The",
+          "similarity": 0.9111
+        },
+        {
+          "neighbor_id": "ent_profile_045_006",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.4253
+        },
+        {
+          "neighbor_id": "ent_profile_045_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3981
+        },
+        {
+          "neighbor_id": "ent_profile_045_010",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.37
+        },
+        {
+          "neighbor_id": "ent_profile_045_004",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3657
+        }
+      ]
+    },
+    {
+      "request_id": "req_122",
+      "forget_type": "F2",
+      "profile_id": "profile_045",
+      "deleted_ids": [
+        "ent_profile_045_001",
+        "ent_profile_045_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_045_sum_01",
+          "content_preview": "Session 1: Kai Lewis confirmed their production API key details stating that The",
+          "similarity": 0.9111
+        },
+        {
+          "neighbor_id": "ent_profile_045_006",
+          "content_preview": "The user's verified office campus location record is assigned to Seattle enginee",
+          "similarity": 0.4253
+        },
+        {
+          "neighbor_id": "ent_profile_045_008",
+          "content_preview": "The user's verified passport travel number record is international passport trav",
+          "similarity": 0.3981
+        },
+        {
+          "neighbor_id": "ent_profile_045_010",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.37
+        },
+        {
+          "neighbor_id": "ent_profile_045_004",
+          "content_preview": "The user's verified professional role assignment record is serves as remote clou",
+          "similarity": 0.3657
+        }
+      ]
+    },
+    {
+      "request_id": "req_123",
+      "forget_type": "F1",
+      "profile_id": "profile_046",
+      "deleted_ids": [
+        "ent_profile_046_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_046_sum_01",
+          "content_preview": "Session 1: Kelly Allen confirmed their car rental loyalty tier details stating t",
+          "similarity": 0.8954
+        },
+        {
+          "neighbor_id": "ent_profile_046_003",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.3738
+        },
+        {
+          "neighbor_id": "ent_profile_046_004",
+          "content_preview": "The user's verified hotel lodging reservation record is reserved king suite at P",
+          "similarity": 0.335
+        },
+        {
+          "neighbor_id": "ent_profile_046_005",
+          "content_preview": "The user's verified known traveler number record is TSA PreCheck and Global Entr",
+          "similarity": 0.3223
+        },
+        {
+          "neighbor_id": "ent_profile_046_007",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3168
+        }
+      ]
+    },
+    {
+      "request_id": "req_124",
+      "forget_type": "F1",
+      "profile_id": "profile_046",
+      "deleted_ids": [
+        "ent_profile_046_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_046_sum_01",
+          "content_preview": "Session 1: Kelly Allen confirmed their car rental loyalty tier details stating t",
+          "similarity": 0.8954
+        },
+        {
+          "neighbor_id": "ent_profile_046_003",
+          "content_preview": "The user's verified airline loyalty status record is Delta Diamond Medallion fre",
+          "similarity": 0.3738
+        },
+        {
+          "neighbor_id": "ent_profile_046_004",
+          "content_preview": "The user's verified hotel lodging reservation record is reserved king suite at P",
+          "similarity": 0.335
+        },
+        {
+          "neighbor_id": "ent_profile_046_005",
+          "content_preview": "The user's verified known traveler number record is TSA PreCheck and Global Entr",
+          "similarity": 0.3223
+        },
+        {
+          "neighbor_id": "ent_profile_046_007",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3168
+        }
+      ]
+    },
+    {
+      "request_id": "req_125",
+      "forget_type": "F1",
+      "profile_id": "profile_047",
+      "deleted_ids": [
+        "ent_profile_047_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_047_sum_01",
+          "content_preview": "Session 1: Charlie Campbell confirmed their pet name and breed details stating t",
+          "similarity": 0.8872
+        },
+        {
+          "neighbor_id": "ent_profile_047_sum_03",
+          "content_preview": "Session 3: Charlie Campbell confirmed their child name and grade details stating",
+          "similarity": 0.4276
+        },
+        {
+          "neighbor_id": "ent_profile_047_003",
+          "content_preview": "The user's verified child name and grade record is daughter Maya attending eleme",
+          "similarity": 0.3908
+        },
+        {
+          "neighbor_id": "ent_profile_047_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3654
+        },
+        {
+          "neighbor_id": "ent_profile_047_009",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3294
+        }
+      ]
+    },
+    {
+      "request_id": "req_126",
+      "forget_type": "F3",
+      "profile_id": "profile_047",
+      "deleted_ids": [
+        "ent_profile_047_001",
+        "ent_profile_047_002",
+        "ent_profile_047_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_047_sum_02",
+          "content_preview": "Session 2: Charlie Campbell confirmed their emergency contact person details sta",
+          "similarity": 0.9114
+        },
+        {
+          "neighbor_id": "ent_profile_047_sum_03",
+          "content_preview": "Session 3: Charlie Campbell confirmed their child name and grade details stating",
+          "similarity": 0.9013
+        },
+        {
+          "neighbor_id": "ent_profile_047_sum_01",
+          "content_preview": "Session 1: Charlie Campbell confirmed their pet name and breed details stating t",
+          "similarity": 0.8872
+        },
+        {
+          "neighbor_id": "ent_profile_047_sum_03",
+          "content_preview": "Session 3: Charlie Campbell confirmed their child name and grade details stating",
+          "similarity": 0.4276
+        },
+        {
+          "neighbor_id": "ent_profile_047_003",
+          "content_preview": "The user's verified child name and grade record is daughter Maya attending eleme",
+          "similarity": 0.3908
+        }
+      ]
+    },
+    {
+      "request_id": "req_127",
+      "forget_type": "F4",
+      "profile_id": "profile_047",
+      "deleted_ids": [
+        "ent_profile_047_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_047_sum_01",
+          "content_preview": "Session 1: Charlie Campbell confirmed their pet name and breed details stating t",
+          "similarity": 0.8872
+        },
+        {
+          "neighbor_id": "ent_profile_047_sum_03",
+          "content_preview": "Session 3: Charlie Campbell confirmed their child name and grade details stating",
+          "similarity": 0.4276
+        },
+        {
+          "neighbor_id": "ent_profile_047_003",
+          "content_preview": "The user's verified child name and grade record is daughter Maya attending eleme",
+          "similarity": 0.3908
+        },
+        {
+          "neighbor_id": "ent_profile_047_011",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3654
+        },
+        {
+          "neighbor_id": "ent_profile_047_009",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3294
+        }
+      ]
+    },
+    {
+      "request_id": "req_128",
+      "forget_type": "F1",
+      "profile_id": "profile_048",
+      "deleted_ids": [
+        "ent_profile_048_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_048_sum_01",
+          "content_preview": "Session 1: Elliot Adams confirmed their thesis academic advisor details stating ",
+          "similarity": 0.898
+        },
+        {
+          "neighbor_id": "ent_profile_048_sum_03",
+          "content_preview": "Session 3: Elliot Adams confirmed their thesis research subject details stating ",
+          "similarity": 0.5478
+        },
+        {
+          "neighbor_id": "ent_profile_048_005",
+          "content_preview": "The user's verified thesis research subject record is thesis published on reinfo",
+          "similarity": 0.541
+        },
+        {
+          "neighbor_id": "ent_profile_048_002",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.449
+        },
+        {
+          "neighbor_id": "ent_profile_048_003",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.4313
+        }
+      ]
+    },
+    {
+      "request_id": "req_129",
+      "forget_type": "F2",
+      "profile_id": "profile_048",
+      "deleted_ids": [
+        "ent_profile_048_001",
+        "ent_profile_048_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_048_sum_01",
+          "content_preview": "Session 1: Elliot Adams confirmed their thesis academic advisor details stating ",
+          "similarity": 0.898
+        },
+        {
+          "neighbor_id": "ent_profile_048_sum_03",
+          "content_preview": "Session 3: Elliot Adams confirmed their thesis research subject details stating ",
+          "similarity": 0.5478
+        },
+        {
+          "neighbor_id": "ent_profile_048_005",
+          "content_preview": "The user's verified thesis research subject record is thesis published on reinfo",
+          "similarity": 0.541
+        },
+        {
+          "neighbor_id": "ent_profile_048_002",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.449
+        },
+        {
+          "neighbor_id": "ent_profile_048_003",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.4313
+        }
+      ]
+    },
+    {
+      "request_id": "req_130",
+      "forget_type": "F2",
+      "profile_id": "profile_048",
+      "deleted_ids": [
+        "ent_profile_048_001",
+        "ent_profile_048_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_048_sum_01",
+          "content_preview": "Session 1: Elliot Adams confirmed their thesis academic advisor details stating ",
+          "similarity": 0.898
+        },
+        {
+          "neighbor_id": "ent_profile_048_sum_03",
+          "content_preview": "Session 3: Elliot Adams confirmed their thesis research subject details stating ",
+          "similarity": 0.5478
+        },
+        {
+          "neighbor_id": "ent_profile_048_005",
+          "content_preview": "The user's verified thesis research subject record is thesis published on reinfo",
+          "similarity": 0.541
+        },
+        {
+          "neighbor_id": "ent_profile_048_002",
+          "content_preview": "The user's verified graduate degree university record is earned Master of Scienc",
+          "similarity": 0.449
+        },
+        {
+          "neighbor_id": "ent_profile_048_003",
+          "content_preview": "The user's verified academic research laboratory record is conducted robotics re",
+          "similarity": 0.4313
+        }
+      ]
+    },
+    {
+      "request_id": "req_131",
+      "forget_type": "F3",
+      "profile_id": "profile_049",
+      "deleted_ids": [
+        "ent_profile_049_001",
+        "ent_profile_049_002",
+        "ent_profile_049_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_049_sum_02",
+          "content_preview": "Session 2: Amari Allen confirmed their primary care physician details stating th",
+          "similarity": 0.92
+        },
+        {
+          "neighbor_id": "ent_profile_049_sum_03",
+          "content_preview": "Session 3: Amari Allen confirmed their recent immunizations details stating that",
+          "similarity": 0.8829
+        },
+        {
+          "neighbor_id": "ent_profile_049_sum_01",
+          "content_preview": "Session 1: Amari Allen confirmed their past surgical procedures details stating ",
+          "similarity": 0.8568
+        },
+        {
+          "neighbor_id": "ent_profile_049_012",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.4478
+        },
+        {
+          "neighbor_id": "ent_profile_049_006",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3903
+        }
+      ]
+    },
+    {
+      "request_id": "req_132",
+      "forget_type": "F3",
+      "profile_id": "profile_049",
+      "deleted_ids": [
+        "ent_profile_049_001",
+        "ent_profile_049_002",
+        "ent_profile_049_003"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_049_sum_02",
+          "content_preview": "Session 2: Amari Allen confirmed their primary care physician details stating th",
+          "similarity": 0.92
+        },
+        {
+          "neighbor_id": "ent_profile_049_sum_03",
+          "content_preview": "Session 3: Amari Allen confirmed their recent immunizations details stating that",
+          "similarity": 0.8829
+        },
+        {
+          "neighbor_id": "ent_profile_049_sum_01",
+          "content_preview": "Session 1: Amari Allen confirmed their past surgical procedures details stating ",
+          "similarity": 0.8568
+        },
+        {
+          "neighbor_id": "ent_profile_049_012",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.4478
+        },
+        {
+          "neighbor_id": "ent_profile_049_006",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3903
+        }
+      ]
+    },
+    {
+      "request_id": "req_133",
+      "forget_type": "F4",
+      "profile_id": "profile_049",
+      "deleted_ids": [
+        "ent_profile_049_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_049_sum_01",
+          "content_preview": "Session 1: Amari Allen confirmed their past surgical procedures details stating ",
+          "similarity": 0.8568
+        },
+        {
+          "neighbor_id": "ent_profile_049_006",
+          "content_preview": "The user's verified medical allergies record is mild penicillin allergy diagnose",
+          "similarity": 0.3903
+        },
+        {
+          "neighbor_id": "ent_profile_049_007",
+          "content_preview": "The user's verified thesis academic advisor record is graduate research thesis a",
+          "similarity": 0.3834
+        },
+        {
+          "neighbor_id": "ent_profile_049_012",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3702
+        },
+        {
+          "neighbor_id": "ent_profile_049_sum_06",
+          "content_preview": "Session 6: Amari Allen confirmed their medical allergies details stating that Th",
+          "similarity": 0.3574
+        }
+      ]
+    },
+    {
+      "request_id": "req_134",
+      "forget_type": "F1",
+      "profile_id": "profile_050",
+      "deleted_ids": [
+        "ent_profile_050_001"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_050_sum_01",
+          "content_preview": "Session 1: Logan Edwards confirmed their crypto asset storage details stating th",
+          "similarity": 0.8914
+        },
+        {
+          "neighbor_id": "ent_profile_050_005",
+          "content_preview": "The user's verified credit score rating record is FICO credit score of 785 recor",
+          "similarity": 0.3828
+        },
+        {
+          "neighbor_id": "ent_profile_050_007",
+          "content_preview": "The user's verified direct reporting manager record is reports directly to engin",
+          "similarity": 0.3649
+        },
+        {
+          "neighbor_id": "ent_profile_050_003",
+          "content_preview": "The user's verified bank checking account record is direct deposit checking acco",
+          "similarity": 0.3485
+        },
+        {
+          "neighbor_id": "ent_profile_050_012",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3417
+        }
+      ]
+    },
+    {
+      "request_id": "req_135",
+      "forget_type": "F2",
+      "profile_id": "profile_050",
+      "deleted_ids": [
+        "ent_profile_050_001",
+        "ent_profile_050_002"
+      ],
+      "leak_detected": true,
+      "top_neighbors": [
+        {
+          "neighbor_id": "ent_profile_050_sum_01",
+          "content_preview": "Session 1: Logan Edwards confirmed their crypto asset storage details stating th",
+          "similarity": 0.8914
+        },
+        {
+          "neighbor_id": "ent_profile_050_sum_03",
+          "content_preview": "Session 3: Logan Edwards confirmed their credit score rating details stating tha",
+          "similarity": 0.533
+        },
+        {
+          "neighbor_id": "ent_profile_050_005",
+          "content_preview": "The user's verified credit score rating record is FICO credit score of 785 recor",
+          "similarity": 0.523
+        },
+        {
+          "neighbor_id": "ent_profile_050_005",
+          "content_preview": "The user's verified credit score rating record is FICO credit score of 785 recor",
+          "similarity": 0.3828
+        },
+        {
+          "neighbor_id": "ent_profile_050_012",
+          "content_preview": "The user: The user collects rare vinyl records from Blue Note Records. (Register",
+          "similarity": 0.3705
+        }
+      ]
+    }
+  ]
+}
