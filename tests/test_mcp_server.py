@@ -9,7 +9,7 @@ Tests for the FastMCP memory server (mcp_server.py) exposing:
 
 import json
 import pytest
-from mcp_server import mcp, remember, recall, forget, forget_topic
+from mcp_server import mcp, remember, recall, forget, forget_topic, run_automated_benchmark
 
 
 def test_mcp_server_initialization():
@@ -89,4 +89,14 @@ def test_forget_topic_no_matches():
     res = forget_topic("NonExistentTopic99999XYZ", reason="test")
     assert isinstance(res, str)
     assert ("No memories found" in res) or ("none explicitly contained" in res) or ("Nothing deleted" in res)
+
+
+def test_run_automated_benchmark_tool():
+    report = run_automated_benchmark(num_profiles=2)
+    assert isinstance(report, str)
+    assert "=== AUTOMATED SYNTHETIC BENCHMARK ===" in report
+    assert "Profiles Tested: 2" in report
+    assert "Request Pass Rate (RPR): 100.00%" in report
+    assert "Deletion Accuracy: 100.00% (0 leaks)" in report
+    assert "Preservation Accuracy: 100.00%" in report
 

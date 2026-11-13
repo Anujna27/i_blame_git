@@ -236,6 +236,18 @@ class AgentA:
                 self.all_nodes[nid] = refreshed
         return report
 
+    def forget_topic(self, topic, reason="user_requested_erasure", deleted_by="user", actor=None):
+        actor_name = actor or deleted_by
+        results = self.vector_store.query(topic, top_k=50)
+        reports = []
+        for node in results:
+            nid = getattr(node, "node_id", None) or (node.get("node_id") if isinstance(node, dict) else None)
+            l2 = getattr(node, "content_l2", "") or getattr(node, "content", "") or ""
+            if topic.lower() in l2.lower():
+                r = self.forget(nid, reason=reason, deleted_by=actor_name)
+                reports.append(r)
+        return reports
+
     def build_knowledge_graph(self):
         report = self.graph_healer.heal_orphans()
         return {"orphans_found": len(report.orphans_found), "healed": report.healed_count,
