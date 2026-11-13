@@ -38,6 +38,7 @@ from core.erasure_engine import ErasureEngine
 from core.hash_chain import HashChain
 from core.knowledge_graph import KnowledgeGraph
 from core.memory_node import MemoryNode
+from stores.filesystem_memory import FilesystemMemory
 from stores.vector_store import VectorStore
 
 F1, F2, F3, F4, F5, F6 = ("F1 (Factual)", "F2 (Compositional)", "F3 (Semantic Category)",
@@ -242,6 +243,7 @@ class Stack:
     collection: str
     specs: list
     background: list
+    filesystem: Any
 
 
 def mk(content: str, session: str, kind: str, turn: int = 0) -> MemoryNode:
@@ -337,6 +339,7 @@ def build_stack(root: Path, seed: int, per_type: int, n_bg: int, tag: str) -> St
     vectors = VectorStore(collection_name=collection, persist_directory=str(root / "vectors"))
     audit = HashChain(str(root / "audit_chain.json"))
     erasure = ErasureEngine(str(root / "blocked_inference.json"))
+    filesystem = FilesystemMemory(str(root / "viking_memory"))
     subjects = rng.sample([x for x in range(1, 1000) if x % 10], per_type * len(TYPES))  # never multiples of 10
     specs, idx = [], 0
     for ft in TYPES:
@@ -351,11 +354,12 @@ def build_stack(root: Path, seed: int, per_type: int, n_bg: int, tag: str) -> St
     for n in nodes:
         graph.add_node(n)
         vectors.add(n)
+        filesystem.write_entity(n)
     for s in specs:
         ids = {"target": s.tid, **{d.role: d.id for d in s.deps}}
         for a, b, t in s.edges:
             graph.add_edge(ids[a], ids[b], t)
-    return Stack(root, graph, vectors, audit, erasure, collection, specs, background)
+    return Stack(root, graph, vectors, audit, erasure, collection, specs, background, filesystem)
 
 
 # ----------------------------------------------------------------------------- execution
@@ -363,7 +367,7 @@ def do_delete(st: Stack, node_id: str, g=None, v=None, a=None):
     t = time.perf_counter()
     try:
         rep = st.erasure.delete(node_id, v or st.vectors, g or st.graph, a or st.audit,
-                                reason="BEMULA rigorous unlearning request", deleted_by="bemula-rigorous-harness", semantic_cleanup=True)
+                                reason="BEMULA rigorous unlearning request", deleted_by="bemula-rigorous-harness", semantic_cleanup=True, filesystem_store=st.filesystem)
         return rep, None, time.perf_counter() - t
     except Exception as e:  # noqa: BLE001
         return None, e, time.perf_counter() - t
@@ -541,6 +545,11 @@ def per_type(specs: list) -> dict:
 def evaluate(a: argparse.Namespace, root: Path) -> dict:
     log("building corpus ...")
     st = build_stack(root, a.seed, a.per_type, a.background, "main")
+    if getattr(a, "quick", False):
+        # Keep one semantic and one exact probe per instance so quick mode is
+        # still meaningful without performing the full production probe set.
+        for spec in st.specs:
+            spec.probes = spec.probes[:2]
     t0 = time.perf_counter()
     for q in st.specs[0].probes:
         vsearch(st.vectors, q, a.top_k)

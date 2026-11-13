@@ -1,4 +1,4 @@
-import hashlib, json, os, threading
+import hashlib, json, os, re, threading
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from typing import Literal
@@ -82,7 +82,8 @@ class ErasureEngine:
             vector_store.remove_from_active_index(node_id)
         hash_chain.append("delete_level_1", node_id, {"action":"source_removed", "actor":deleted_by, "reason":reason, "timestamp":timestamp}, actor="agent", reason="erasure_request")
         levels.append(LevelResult(level_number=1, level_name="Source Record Removed", status="passed" if node else "failed", details="Source record removed from active store and index.", evidence={"vector_store_cleared": bool(node), "graph_deletion_state": "source_removed" if node else None}))
-        descendants=graph_store.get_descendants(node_id); invalidated=[]; failed=[]
+        descendant_fn = getattr(graph_store, "get_derived_descendants", graph_store.get_descendants)
+        descendants=descendant_fn(node_id); invalidated=[]; failed=[]
         for cid in descendants:
             child=graph_store.get_node(cid)
             if child: child.transition("invalidated", deleted_by, f"derived from deleted entity: {reason}"); vector_store.remove_from_active_index(cid); invalidated.append(cid)
@@ -108,9 +109,9 @@ class ErasureEngine:
             if n.node_id == node_id: continue
             sim=self._similar(original_content, n.content)
             if sim > .75:
-                same_session = bool(node and getattr(n, "session_id", "") == getattr(node, "session_id", ""))
-                exact_sensitive_overlap = any(token in n.content for token in original_content.split() if ("@" in token or "sk-" in token or any(char.isdigit() for char in token)))
-                if semantic_cleanup and (same_session or exact_sensitive_overlap):
+                sensitive_tokens = [token.strip(".,;:()[]{}") for token in original_content.split() if ("@" in token or "sk-" in token or (len(token) >= 8 and any(char.isdigit() for char in token) and any(char.isalpha() for char in token)))]
+                exact_sensitive_overlap = any(token and token in n.content for token in sensitive_tokens)
+                if semantic_cleanup and exact_sensitive_overlap:
                     n.transition("invalidated", deleted_by, f"semantic dependent of deleted entity: {reason}")
                     n.content = n.summary_l0 = n.summary_l1 = n.content_l2 = ""
                     n.properties = {}
