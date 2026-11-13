@@ -9,5 +9,38 @@
     "completed": true,
     "verdict": "partially_deleted",
     "completed_at": "2026-11-13T08:37:49.960411+00:00"
+  },
+  {
+    "operation_id": "188a184f-724c-428b-9bc6-af50897fe493",
+    "entity_id": "177f2981-b07d-4a04-acc1-8eca3725a99e",
+    "actor": "user",
+    "reason": "User GDPR deletion request",
+    "started_at": "2026-11-13T15:45:33.613210+00:00",
+    "phase": "completed",
+    "completed": true,
+    "verdict": "fully_deleted",
+    "completed_at": "2026-11-13T15:45:33.651138+00:00"
+  },
+  {
+    "operation_id": "60d80d34-16a0-4fb0-9989-ed7d82f6c1dd",
+    "entity_id": "a2972a20-0853-4df1-a79c-13657610d155",
+    "actor": "user",
+    "reason": "Erase all Rust language knowledge",
+    "started_at": "2026-11-13T15:45:33.702369+00:00",
+    "phase": "completed",
+    "completed": true,
+    "verdict": "fully_deleted",
+    "completed_at": "2026-11-13T15:45:33.746787+00:00"
+  },
+  {
+    "operation_id": "bb529ff5-0d31-404b-bf52-75a8652479f9",
+    "entity_id": "49f54118-2eca-4123-8fef-bc9c3ce4b5a8",
+    "actor": "user",
+    "reason": "Erase all Rust language knowledge",
+    "started_at": "2026-11-13T15:45:33.749612+00:00",
+    "phase": "completed",
+    "completed": true,
+    "verdict": "fully_deleted",
+    "completed_at": "2026-11-13T15:45:33.794322+00:00"
   }
 ]

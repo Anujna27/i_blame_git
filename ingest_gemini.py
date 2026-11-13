@@ -10,6 +10,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 try:
+    # pyrefly: ignore[missing-import]
     from bs4 import BeautifulSoup
 except ImportError:
     BeautifulSoup = None
