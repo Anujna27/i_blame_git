@@ -20,14 +20,20 @@ class ConfiguredLLM:
     def __init__(self):
         _load_dotenv()
         self.provider = os.getenv("MNEMOSYNE_LLM_PROVIDER", "none").lower()
-        self.model = os.getenv("MNEMOSYNE_LLM_MODEL", "llama-3.1-8b-instant" if self.provider == "groq" else "gpt-4o-mini")
-        self.api_key = os.getenv("GROQ_API_KEY") if self.provider == "groq" else os.getenv("OPENAI_API_KEY")
+        default_model = {"groq": "llama-3.1-8b-instant", "ollama": "llama3.2:3b"}.get(self.provider, "gpt-4o-mini")
+        self.model = os.getenv("MNEMOSYNE_LLM_MODEL", default_model)
+        if self.provider == "groq":
+            self.api_key = os.getenv("GROQ_API_KEY")
+        elif self.provider == "ollama":
+            self.api_key = os.getenv("OLLAMA_API_KEY", "ollama-local")
+        else:
+            self.api_key = os.getenv("OPENAI_API_KEY")
         self._client = None
         self.calls = 0; self.failures = 0; self.input_tokens = 0; self.output_tokens = 0
 
     @property
     def enabled(self):
-        return self.provider in {"openai", "openai_compatible", "groq"} and bool(self.api_key)
+        return self.provider in {"openai", "openai_compatible", "groq", "ollama"} and bool(self.api_key)
 
     def _get_client(self):
         if not self.enabled: return None
@@ -37,6 +43,8 @@ class ConfiguredLLM:
             base_url = os.getenv("MNEMOSYNE_LLM_BASE_URL")
             if self.provider == "groq" and not base_url:
                 base_url = "https://api.groq.com/openai/v1"
+            if self.provider == "ollama" and not base_url:
+                base_url = "http://127.0.0.1:11434/v1"
             if base_url: kwargs["base_url"] = base_url
             self._client = OpenAI(**kwargs)
         return self._client

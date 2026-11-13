@@ -1,0 +1,25 @@
+{
+  "format": "jsonl",
+  "records": 2400,
+  "splits": {
+    "train": 1920,
+    "validation": 240,
+    "test": 240
+  },
+  "tasks": [
+    "compaction",
+    "token",
+    "contradiction",
+    "session",
+    "deletion",
+    "dreaming"
+  ],
+  "fields": {
+    "prompt": "instruction, query, token_budget",
+    "context": "session-scoped synthetic entities",
+    "chosen": "preferred compaction/action with reward dimensions",
+    "rejected": "negative preference with failure reason",
+    "preference": "ranking label and reward margin"
+  },
+  "safety": "Synthetic identifiers and facts only; no real personal data or secrets."
+}
