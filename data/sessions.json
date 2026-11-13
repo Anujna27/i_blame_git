@@ -551,5 +551,21 @@
     "entity_ids": [
       "5ccf9891-c5d3-4977-b395-b3f6dbc6cf2f"
     ]
+  },
+  "gemini_bridge": {
+    "session_id": "gemini_bridge",
+    "status": "active",
+    "committed_at": null,
+    "committed_by": null,
+    "entity_ids": [
+      "2927aa07-2217-4647-8bc5-b9e2c9683660",
+      "82371b30-d4ca-43b6-aa16-bffd34ae05f5",
+      "e054c0be-92da-499e-9311-ef06c31f13ff",
+      "62957fab-088d-4116-bf54-a758ad7e8573",
+      "ece81273-4b01-4de9-b58c-398fa29fc0cf",
+      "06fa4fda-1359-434a-bc90-0f698c62b67e",
+      "10578539-4bf0-4c9a-a4f4-3b28ece5eb1e",
+      "88106099-b153-4465-b985-aa176d0f44b3"
+    ]
   }
 }

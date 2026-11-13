@@ -983,6 +983,398 @@
       "deleted_reason": "no safe relationship could be inferred",
       "deleted_at": "2026-11-12T20:58:51.967485+00:00",
       "id": "5ccf9891-c5d3-4977-b395-b3f6dbc6cf2f"
+    },
+    {
+      "node_id": "2927aa07-2217-4647-8bc5-b9e2c9683660",
+      "entity_type": "generic",
+      "content": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?4. Explain how researchers can use bibliographic databases to find relevant literature.5. How technical reading is different from general reading? 6. Write the general steps followed for technical reading.7. Explain the three main functions of citation.8. Explain basic search operators used in search option.9. How do the title and keywords of a research paper influence its citation impact10. What does the Author should acknowledge? List and explain.",
+      "session_id": "gemini_bridge",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "4148f3af-c19a-4ae7-a897-9b3e8bde363b",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T12:23:18.653027+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "gemini_user",
+          "session_id": "gemini_bridge",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T12:23:18.653027+00:00Z",
+          "raw_reference": "gemini_bridge_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T12:23:18.653027+00:00",
+        "last_accessed": "2026-11-13T12:23:18.653027+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Explain how searching is an iterative process",
+        "summary_l1": "Explain how searching is an iterative process. 2. Describe the role of bibliographic databases in academic research. 3",
+        "content_l2": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?4. Explain how researchers can use bibliographic databases to find relevant literature.5. How technical reading is different from general reading? 6. Write the general steps followed for technical reading.7. Explain the three main functions of citation.8. Explain basic search operators used in search option.9. How do the title and keywords of a research paper influence its citation impact10. What does the Author should acknowledge? List and explain."
+      },
+      "source": {
+        "type": "gemini_user",
+        "session_id": "gemini_bridge",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T12:23:18.653027+00:00Z",
+        "raw_reference": "gemini_bridge_turn_0"
+      },
+      "id": "2927aa07-2217-4647-8bc5-b9e2c9683660"
+    },
+    {
+      "node_id": "82371b30-d4ca-43b6-aa16-bffd34ae05f5",
+      "entity_type": "generic",
+      "content": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows . Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators . Module 2 Evaluate and assess results, and use filters . Module 2 Modify the search as needed . Module 2 Look at the citations and references of relevant articles when they are found . Module 2 Perform this entire process multiple times as a continuous and cyclical routine that goes back and forth until the end of the research project . Module 2 2. Describe the role of bibliographic databases in academic research Bibliographic databases function as abstracting and indexing services that are useful for collecting citation-related information and abstracts of research articles from scholarly literature, making them available through search . Their roles and benefits include: Module 2 Allowing researchers to perform simultaneous searches across large collections of literature . Module 2 Providing access to peer-reviewed journal articles, conference proceedings, and other scholarly resources with better quality control and search functionality compared to open web searches . Module 2 + 1 Assisting researchers in evaluating, narrowing, or broadening search results based on subject areas, dates, publication types, and built-in fields (such as title, author, and topic) . Module 2 + 2 3. Explain the different ways that research choices matter from an ethical perspective and influence the effects of technology? (Note: The provided text focuses on literature review, technical reading, citations, and acknowledgments, and does not contain information regarding ethical choices and their specific influence on the effects of technology.) 4. Explain how researchers can use bibliographic databases to find relevant literature Researchers can use bibliographic databases to find relevant literature by: Selecting databases that match their specific subject area, date coverage, and publication type . Module 2 Using built-in dropdown fields (such as title, topic, author, or address) to target specific areas of interest . Module 2 Utilizing tools like the \"Cited reference search\" to trace articles that have cited a previously published paper, revealing how a familiar idea has been applied, improved, or extended . Module 2 Applying filters, narrowing panels, and sorting options (such as sorting by highest-to-lowest citations or publication date) to isolate peer-reviewed journal articles and relevant materials . Module 2 5. How technical reading is different from general reading? Technical reading differs from general reading (such as reading a newspaper) in several distinct ways: Goal: The goal of reading an engineering research paper is to understand the specific technical contributions made by the authors . Module 2 Complexity & Audience: Scholarly content is written for fellow experts and students at the edge of knowledge; it is considerably more complex and advanced than general magazines or newspapers . Module 2 + 1 Time and Effort: Technical reading is not a quick read; it requires a purposeful approach, can take many hours, and often necessitates rereading the paper multiple times . Module 2 + 1 6. Write the general steps followed for technical reading The general steps for skimming and reading a technical paper include: Title and Keywords: Read these first to see if they catch your interest; if not, stop and look elsewhere . Module 2 Abstract: Read the abstract to get an overview of the paper in minimum time. Stop reading further if it is not relevant to your field . Module 2 Conclusions, Figures, and Tables: If the abstract is interesting, skip to the conclusions, then read the figures, tables, and their captions to gain a broad idea of what was done . Module 2 Introduction: Delve into the introduction to understand background information, why the study was conducted, and how it furthers the state of the art . Module 2 Results and Discussion: Read these sections next, as they form the \"heart of the paper\" . Module 2 Experimental Setup / Modeling: Read these deeper technical sections only if you are deeply interested and need to understand exactly how the data was gathered and interpreted . Module 2 7. Explain the three main functions of citation The three main functions of citation are: Verification function: Offers readers a chance to ascertain whether an original source is justified, whether assertions are properly described, and allows for the detection of intentional or unintentional distortions or misleading statements . Module 2 Acknowledgment function: Gives researchers credit for their work, playing a crucial role in individual promotions, continued employment, reputation enhancement, and securing research funding from reputed organizations . Module 2 + 1 Documentation function: Used to document scientific concepts and trace the historical progress of a particular technology over the years . Module 2 8. Explain basic search operators used in search option The basic search operators include: OR: Broadens the search by capturing synonyms or variant spellings of a concept . Module 2 Brackets / Parentheses () : Gathers \"OR'd\" synonyms of a concept together while combining them with another concept . Module 2 Quotation marks \"\" : Narrows the search by finding words together as an exact phrase rather than separately . Module 2 Site: Limits the search results to a specific domain or website . Module 2 File type: Limits the search results to a specific file extension (such as PDFs, PowerPoint presentations, or Excel spreadsheets) . Module 2 9. How do the title and keywords of a research paper influence its citation impact Titles: The title is the most important attribute for making a paper traceable and marketing it during a literature survey . Module 2 + 1 Longer titles that include study methodology and/or results in more detail tend to attract more attention and citations . Module 2 Titles containing question marks, colons, or geographical references are generally associated with lower citation rates, while result-describing titles usually receive more citations than method-describing titles . Module 2 Keywords: Including at least two keywords in the title increases the chances of an article being found, read, and cited . Module 2 Keywords represent the essential information and main content of an article, which search engines, digital libraries, and indexing services use to categorize the topic and direct it to the relevant audience . Module 2 10. What does the Author should acknowledge? List and explain. Authors should acknowledge the contributions of others to demonstrate academic integrity . According to the text, authors should acknowledge: Module 2 + 2 Quotations: Direct quotations (exact words/sentences in original order enclosed in quotation marks) and indirect quotations (summarized or paraphrased quotes) must be properly acknowledged with names, dates, and proper attribution . Module 2 Ideas, Facts, and Paraphrasing: External concepts, facts, or paraphrased insights used in the text must be credited to their original creators . Module 2 People (Scientific and Technical Guidance): Acknowledge individuals who provided technical guidance, participated in discussions, shared information, or assisted experimentally and theoretically (such as assistants, students, or technicians) . Module 2 + 1 Funding Organizations: If financial grants were used in the reported work, full details of the funding program and grant number must be acknowledged . Module 2 Oral Discussions or Support: Contributions from discussions or moral/technical support should be credited . Module 2 + 1 Laboratory and Computer Work: Services, facilities, or computational work utilized from centers or organizations with which the authors are not formally affiliated should be gratefully acknowledged . Module 2 + 1",
+      "session_id": "gemini_bridge",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "f7ee50c6-8bc4-4cd8-8dbc-2cc47c81bbc8",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T12:24:02.239370+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "gemini_ai",
+          "session_id": "gemini_bridge",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T12:24:02.239370+00:00Z",
+          "raw_reference": "gemini_bridge_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T12:24:02.239370+00:00",
+        "last_accessed": "2026-11-13T12:24:02.239370+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Based on the provided source document, here are the answers to your questions: 1",
+        "summary_l1": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows. Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators. Module 2 Evaluate and assess results, and use filters",
+        "content_l2": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows . Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators . Module 2 Evaluate and assess results, and use filters . Module 2 Modify the search as needed . Module 2 Look at the citations and references of relevant articles when they are found . Module 2 Perform this entire process multiple times as a continuous and cyclical routine that goes back and forth until the end of the research project . Module 2 2. Describe the role of bibliographic databases in academic research Bibliographic databases function as abstracting and indexing services that are useful for collecting citation-related information and abstracts of research articles from scholarly literature, making them available through search . Their roles and benefits include: Module 2 Allowing researchers to perform simultaneous searches across large collections of literature . Module 2 Providing access to peer-reviewed journal articles, conference proceedings, and other scholarly resources with better quality control and search functionality compared to open web searches . Module 2 + 1 Assisting researchers in evaluating, narrowing, or broadening search results based on subject areas, dates, publication types, and built-in fields (such as title, author, and topic) . Module 2 + 2 3. Explain the different ways that research choices matter from an ethical perspective and influence the effects of technology? (Note: The provided text focuses on literature review, technical reading, citations, and acknowledgments, and does not contain information regarding ethical choices and their specific influence on the effects of technology.) 4. Explain how researchers can use bibliographic databases to find relevant literature Researchers can use bibliographic databases to find relevant literature by: Selecting databases that match their specific subject area, date coverage, and publication type . Module 2 Using built-in dropdown fields (such as title, topic, author, or address) to target specific areas of interest . Module 2 Utilizing tools like the \"Cited reference search\" to trace articles that have cited a previously published paper, revealing how a familiar idea has been applied, improved, or extended . Module 2 Applying filters, narrowing panels, and sorting options (such as sorting by highest-to-lowest citations or publication date) to isolate peer-reviewed journal articles and relevant materials . Module 2 5. How technical reading is different from general reading? Technical reading differs from general reading (such as reading a newspaper) in several distinct ways: Goal: The goal of reading an engineering research paper is to understand the specific technical contributions made by the authors . Module 2 Complexity & Audience: Scholarly content is written for fellow experts and students at the edge of knowledge; it is considerably more complex and advanced than general magazines or newspapers . Module 2 + 1 Time and Effort: Technical reading is not a quick read; it requires a purposeful approach, can take many hours, and often necessitates rereading the paper multiple times . Module 2 + 1 6. Write the general steps followed for technical reading The general steps for skimming and reading a technical paper include: Title and Keywords: Read these first to see if they catch your interest; if not, stop and look elsewhere . Module 2 Abstract: Read the abstract to get an overview of the paper in minimum time. Stop reading further if it is not relevant to your field . Module 2 Conclusions, Figures, and Tables: If the abstract is interesting, skip to the conclusions, then read the figures, tables, and their captions to gain a broad idea of what was done . Module 2 Introduction: Delve into the introduction to understand background information, why the study was conducted, and how it furthers the state of the art . Module 2 Results and Discussion: Read these sections next, as they form the \"heart of the paper\" . Module 2 Experimental Setup / Modeling: Read these deeper technical sections only if you are deeply interested and need to understand exactly how the data was gathered and interpreted . Module 2 7. Explain the three main functions of citation The three main functions of citation are: Verification function: Offers readers a chance to ascertain whether an original source is justified, whether assertions are properly described, and allows for the detection of intentional or unintentional distortions or misleading statements . Module 2 Acknowledgment function: Gives researchers credit for their work, playing a crucial role in individual promotions, continued employment, reputation enhancement, and securing research funding from reputed organizations . Module 2 + 1 Documentation function: Used to document scientific concepts and trace the historical progress of a particular technology over the years . Module 2 8. Explain basic search operators used in search option The basic search operators include: OR: Broadens the search by capturing synonyms or variant spellings of a concept . Module 2 Brackets / Parentheses () : Gathers \"OR'd\" synonyms of a concept together while combining them with another concept . Module 2 Quotation marks \"\" : Narrows the search by finding words together as an exact phrase rather than separately . Module 2 Site: Limits the search results to a specific domain or website . Module 2 File type: Limits the search results to a specific file extension (such as PDFs, PowerPoint presentations, or Excel spreadsheets) . Module 2 9. How do the title and keywords of a research paper influence its citation impact Titles: The title is the most important attribute for making a paper traceable and marketing it during a literature survey . Module 2 + 1 Longer titles that include study methodology and/or results in more detail tend to attract more attention and citations . Module 2 Titles containing question marks, colons, or geographical references are generally associated with lower citation rates, while result-describing titles usually receive more citations than method-describing titles . Module 2 Keywords: Including at least two keywords in the title increases the chances of an article being found, read, and cited . Module 2 Keywords represent the essential information and main content of an article, which search engines, digital libraries, and indexing services use to categorize the topic and direct it to the relevant audience . Module 2 10. What does the Author should acknowledge? List and explain. Authors should acknowledge the contributions of others to demonstrate academic integrity . According to the text, authors should acknowledge: Module 2 + 2 Quotations: Direct quotations (exact words/sentences in original order enclosed in quotation marks) and indirect quotations (summarized or paraphrased quotes) must be properly acknowledged with names, dates, and proper attribution . Module 2 Ideas, Facts, and Paraphrasing: External concepts, facts, or paraphrased insights used in the text must be credited to their original creators . Module 2 People (Scientific and Technical Guidance): Acknowledge individuals who provided technical guidance, participated in discussions, shared information, or assisted experimentally and theoretically (such as assistants, students, or technicians) . Module 2 + 1 Funding Organizations: If financial grants were used in the reported work, full details of the funding program and grant number must be acknowledged . Module 2 Oral Discussions or Support: Contributions from discussions or moral/technical support should be credited . Module 2 + 1 Laboratory and Computer Work: Services, facilities, or computational work utilized from centers or organizations with which the authors are not formally affiliated should be gratefully acknowledged . Module 2 + 1"
+      },
+      "source": {
+        "type": "gemini_ai",
+        "session_id": "gemini_bridge",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T12:24:02.239370+00:00Z",
+        "raw_reference": "gemini_bridge_turn_0"
+      },
+      "id": "82371b30-d4ca-43b6-aa16-bffd34ae05f5"
+    },
+    {
+      "node_id": "e054c0be-92da-499e-9311-ef06c31f13ff",
+      "entity_type": "generic",
+      "content": "Page number",
+      "session_id": "gemini_bridge",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "94bc08b8-aaad-4ee5-a108-3732a8ae429c",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T12:24:02.296648+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "gemini_user",
+          "session_id": "gemini_bridge",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T12:24:02.296648+00:00Z",
+          "raw_reference": "gemini_bridge_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T12:24:02.296648+00:00",
+        "last_accessed": "2026-11-13T12:24:02.296648+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Page number",
+        "summary_l1": "Page number",
+        "content_l2": "Page number"
+      },
+      "source": {
+        "type": "gemini_user",
+        "session_id": "gemini_bridge",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T12:24:02.296648+00:00Z",
+        "raw_reference": "gemini_bridge_turn_0"
+      },
+      "id": "e054c0be-92da-499e-9311-ef06c31f13ff"
+    },
+    {
+      "node_id": "62957fab-088d-4116-bf54-a758ad7e8573",
+      "entity_type": "generic",
+      "content": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5 . Module 2 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?: Not covered in the provided source document. 4. Explain how researchers can use bibliographic databases to find relevant literature: Found on Page 5 . Module 2 5. How technical reading is different from general reading?: Found on Page 8 . Module 2 6. Write the general steps followed for technical reading: Found on Page 9 . Module 2 7. Explain the three main functions of citation: Found on Page 15 . Module 2 8. Explain basic search operators used in search option: Found on Page 6 . Module 2 9. How do the title and keywords of a research paper influence its citation impact: Found on Page 16 and Page 17 . Module 2 + 1 10. What does the Author should acknowledge? List and explain: Found on Page 21 and Page 22 . Module 2 + 1",
+      "session_id": "gemini_bridge",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "751fde99-73ee-4533-8048-0c1ddb2d4e73",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T12:24:02.322111+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "gemini_ai",
+          "session_id": "gemini_bridge",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T12:24:02.322111+00:00Z",
+          "raw_reference": "gemini_bridge_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T12:24:02.322111+00:00",
+        "last_accessed": "2026-11-13T12:24:02.322111+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1",
+        "summary_l1": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8. Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5",
+        "content_l2": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5 . Module 2 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?: Not covered in the provided source document. 4. Explain how researchers can use bibliographic databases to find relevant literature: Found on Page 5 . Module 2 5. How technical reading is different from general reading?: Found on Page 8 . Module 2 6. Write the general steps followed for technical reading: Found on Page 9 . Module 2 7. Explain the three main functions of citation: Found on Page 15 . Module 2 8. Explain basic search operators used in search option: Found on Page 6 . Module 2 9. How do the title and keywords of a research paper influence its citation impact: Found on Page 16 and Page 17 . Module 2 + 1 10. What does the Author should acknowledge? List and explain: Found on Page 21 and Page 22 . Module 2 + 1"
+      },
+      "source": {
+        "type": "gemini_ai",
+        "session_id": "gemini_bridge",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T12:24:02.322111+00:00Z",
+        "raw_reference": "gemini_bridge_turn_0"
+      },
+      "id": "62957fab-088d-4116-bf54-a758ad7e8573"
+    },
+    {
+      "node_id": "ece81273-4b01-4de9-b58c-398fa29fc0cf",
+      "entity_type": "generic",
+      "content": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?4. Explain how researchers can use bibliographic databases to find relevant literature.5. How technical reading is different from general reading? 6. Write the general steps followed for technical reading.7. Explain the three main functions of citation.8. Explain basic search operators used in search option.9. How do the title and keywords of a research paper influence its citation impact10. What does the Author should acknowledge? List and explain.",
+      "session_id": "gemini_bridge",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "b9b97aa6-6009-4aba-8389-5d2ab16ab924",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T12:48:08.978659+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "gemini_user",
+          "session_id": "gemini_bridge",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T12:48:08.978659+00:00Z",
+          "raw_reference": "gemini_bridge_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T12:48:08.978659+00:00",
+        "last_accessed": "2026-11-13T12:48:08.978659+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Explain how searching is an iterative process",
+        "summary_l1": "Explain how searching is an iterative process. 2. Describe the role of bibliographic databases in academic research. 3",
+        "content_l2": "Explain how searching is an iterative process.2. Describe the role of bibliographic databases in academic research. 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?4. Explain how researchers can use bibliographic databases to find relevant literature.5. How technical reading is different from general reading? 6. Write the general steps followed for technical reading.7. Explain the three main functions of citation.8. Explain basic search operators used in search option.9. How do the title and keywords of a research paper influence its citation impact10. What does the Author should acknowledge? List and explain."
+      },
+      "source": {
+        "type": "gemini_user",
+        "session_id": "gemini_bridge",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T12:48:08.978659+00:00Z",
+        "raw_reference": "gemini_bridge_turn_0"
+      },
+      "id": "ece81273-4b01-4de9-b58c-398fa29fc0cf"
+    },
+    {
+      "node_id": "06fa4fda-1359-434a-bc90-0f698c62b67e",
+      "entity_type": "generic",
+      "content": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows . Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators . Module 2 Evaluate and assess results, and use filters . Module 2 Modify the search as needed . Module 2 Look at the citations and references of relevant articles when they are found . Module 2 Perform this entire process multiple times as a continuous and cyclical routine that goes back and forth until the end of the research project . Module 2 2. Describe the role of bibliographic databases in academic research Bibliographic databases function as abstracting and indexing services that are useful for collecting citation-related information and abstracts of research articles from scholarly literature, making them available through search . Their roles and benefits include: Module 2 Allowing researchers to perform simultaneous searches across large collections of literature . Module 2 Providing access to peer-reviewed journal articles, conference proceedings, and other scholarly resources with better quality control and search functionality compared to open web searches . Module 2 + 1 Assisting researchers in evaluating, narrowing, or broadening search results based on subject areas, dates, publication types, and built-in fields (such as title, author, and topic) . Module 2 + 2 3. Explain the different ways that research choices matter from an ethical perspective and influence the effects of technology? (Note: The provided text focuses on literature review, technical reading, citations, and acknowledgments, and does not contain information regarding ethical choices and their specific influence on the effects of technology.) 4. Explain how researchers can use bibliographic databases to find relevant literature Researchers can use bibliographic databases to find relevant literature by: Selecting databases that match their specific subject area, date coverage, and publication type . Module 2 Using built-in dropdown fields (such as title, topic, author, or address) to target specific areas of interest . Module 2 Utilizing tools like the \"Cited reference search\" to trace articles that have cited a previously published paper, revealing how a familiar idea has been applied, improved, or extended . Module 2 Applying filters, narrowing panels, and sorting options (such as sorting by highest-to-lowest citations or publication date) to isolate peer-reviewed journal articles and relevant materials . Module 2 5. How technical reading is different from general reading? Technical reading differs from general reading (such as reading a newspaper) in several distinct ways: Goal: The goal of reading an engineering research paper is to understand the specific technical contributions made by the authors . Module 2 Complexity & Audience: Scholarly content is written for fellow experts and students at the edge of knowledge; it is considerably more complex and advanced than general magazines or newspapers . Module 2 + 1 Time and Effort: Technical reading is not a quick read; it requires a purposeful approach, can take many hours, and often necessitates rereading the paper multiple times . Module 2 + 1 6. Write the general steps followed for technical reading The general steps for skimming and reading a technical paper include: Title and Keywords: Read these first to see if they catch your interest; if not, stop and look elsewhere . Module 2 Abstract: Read the abstract to get an overview of the paper in minimum time. Stop reading further if it is not relevant to your field . Module 2 Conclusions, Figures, and Tables: If the abstract is interesting, skip to the conclusions, then read the figures, tables, and their captions to gain a broad idea of what was done . Module 2 Introduction: Delve into the introduction to understand background information, why the study was conducted, and how it furthers the state of the art . Module 2 Results and Discussion: Read these sections next, as they form the \"heart of the paper\" . Module 2 Experimental Setup / Modeling: Read these deeper technical sections only if you are deeply interested and need to understand exactly how the data was gathered and interpreted . Module 2 7. Explain the three main functions of citation The three main functions of citation are: Verification function: Offers readers a chance to ascertain whether an original source is justified, whether assertions are properly described, and allows for the detection of intentional or unintentional distortions or misleading statements . Module 2 Acknowledgment function: Gives researchers credit for their work, playing a crucial role in individual promotions, continued employment, reputation enhancement, and securing research funding from reputed organizations . Module 2 + 1 Documentation function: Used to document scientific concepts and trace the historical progress of a particular technology over the years . Module 2 8. Explain basic search operators used in search option The basic search operators include: OR: Broadens the search by capturing synonyms or variant spellings of a concept . Module 2 Brackets / Parentheses () : Gathers \"OR'd\" synonyms of a concept together while combining them with another concept . Module 2 Quotation marks \"\" : Narrows the search by finding words together as an exact phrase rather than separately . Module 2 Site: Limits the search results to a specific domain or website . Module 2 File type: Limits the search results to a specific file extension (such as PDFs, PowerPoint presentations, or Excel spreadsheets) . Module 2 9. How do the title and keywords of a research paper influence its citation impact Titles: The title is the most important attribute for making a paper traceable and marketing it during a literature survey . Module 2 + 1 Longer titles that include study methodology and/or results in more detail tend to attract more attention and citations . Module 2 Titles containing question marks, colons, or geographical references are generally associated with lower citation rates, while result-describing titles usually receive more citations than method-describing titles . Module 2 Keywords: Including at least two keywords in the title increases the chances of an article being found, read, and cited . Module 2 Keywords represent the essential information and main content of an article, which search engines, digital libraries, and indexing services use to categorize the topic and direct it to the relevant audience . Module 2 10. What does the Author should acknowledge? List and explain. Authors should acknowledge the contributions of others to demonstrate academic integrity . According to the text, authors should acknowledge: Module 2 + 2 Quotations: Direct quotations (exact words/sentences in original order enclosed in quotation marks) and indirect quotations (summarized or paraphrased quotes) must be properly acknowledged with names, dates, and proper attribution . Module 2 Ideas, Facts, and Paraphrasing: External concepts, facts, or paraphrased insights used in the text must be credited to their original creators . Module 2 People (Scientific and Technical Guidance): Acknowledge individuals who provided technical guidance, participated in discussions, shared information, or assisted experimentally and theoretically (such as assistants, students, or technicians) . Module 2 + 1 Funding Organizations: If financial grants were used in the reported work, full details of the funding program and grant number must be acknowledged . Module 2 Oral Discussions or Support: Contributions from discussions or moral/technical support should be credited . Module 2 + 1 Laboratory and Computer Work: Services, facilities, or computational work utilized from centers or organizations with which the authors are not formally affiliated should be gratefully acknowledged . Module 2 + 1",
+      "session_id": "gemini_bridge",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "a7434e33-030e-46ee-88ce-0ee2b120cb92",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T12:48:25.332163+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "gemini_ai",
+          "session_id": "gemini_bridge",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T12:48:25.332163+00:00Z",
+          "raw_reference": "gemini_bridge_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T12:48:25.332163+00:00",
+        "last_accessed": "2026-11-13T12:48:25.332163+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Based on the provided source document, here are the answers to your questions: 1",
+        "summary_l1": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows. Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators. Module 2 Evaluate and assess results, and use filters",
+        "content_l2": "Based on the provided source document, here are the answers to your questions: 1. How searching is an iterative process Searching is described as an iterative process because it involves repeating and refining steps as your understanding grows . Specifically, a researcher must: Module 2 + 1 Experiment with different keywords and operators . Module 2 Evaluate and assess results, and use filters . Module 2 Modify the search as needed . Module 2 Look at the citations and references of relevant articles when they are found . Module 2 Perform this entire process multiple times as a continuous and cyclical routine that goes back and forth until the end of the research project . Module 2 2. Describe the role of bibliographic databases in academic research Bibliographic databases function as abstracting and indexing services that are useful for collecting citation-related information and abstracts of research articles from scholarly literature, making them available through search . Their roles and benefits include: Module 2 Allowing researchers to perform simultaneous searches across large collections of literature . Module 2 Providing access to peer-reviewed journal articles, conference proceedings, and other scholarly resources with better quality control and search functionality compared to open web searches . Module 2 + 1 Assisting researchers in evaluating, narrowing, or broadening search results based on subject areas, dates, publication types, and built-in fields (such as title, author, and topic) . Module 2 + 2 3. Explain the different ways that research choices matter from an ethical perspective and influence the effects of technology? (Note: The provided text focuses on literature review, technical reading, citations, and acknowledgments, and does not contain information regarding ethical choices and their specific influence on the effects of technology.) 4. Explain how researchers can use bibliographic databases to find relevant literature Researchers can use bibliographic databases to find relevant literature by: Selecting databases that match their specific subject area, date coverage, and publication type . Module 2 Using built-in dropdown fields (such as title, topic, author, or address) to target specific areas of interest . Module 2 Utilizing tools like the \"Cited reference search\" to trace articles that have cited a previously published paper, revealing how a familiar idea has been applied, improved, or extended . Module 2 Applying filters, narrowing panels, and sorting options (such as sorting by highest-to-lowest citations or publication date) to isolate peer-reviewed journal articles and relevant materials . Module 2 5. How technical reading is different from general reading? Technical reading differs from general reading (such as reading a newspaper) in several distinct ways: Goal: The goal of reading an engineering research paper is to understand the specific technical contributions made by the authors . Module 2 Complexity & Audience: Scholarly content is written for fellow experts and students at the edge of knowledge; it is considerably more complex and advanced than general magazines or newspapers . Module 2 + 1 Time and Effort: Technical reading is not a quick read; it requires a purposeful approach, can take many hours, and often necessitates rereading the paper multiple times . Module 2 + 1 6. Write the general steps followed for technical reading The general steps for skimming and reading a technical paper include: Title and Keywords: Read these first to see if they catch your interest; if not, stop and look elsewhere . Module 2 Abstract: Read the abstract to get an overview of the paper in minimum time. Stop reading further if it is not relevant to your field . Module 2 Conclusions, Figures, and Tables: If the abstract is interesting, skip to the conclusions, then read the figures, tables, and their captions to gain a broad idea of what was done . Module 2 Introduction: Delve into the introduction to understand background information, why the study was conducted, and how it furthers the state of the art . Module 2 Results and Discussion: Read these sections next, as they form the \"heart of the paper\" . Module 2 Experimental Setup / Modeling: Read these deeper technical sections only if you are deeply interested and need to understand exactly how the data was gathered and interpreted . Module 2 7. Explain the three main functions of citation The three main functions of citation are: Verification function: Offers readers a chance to ascertain whether an original source is justified, whether assertions are properly described, and allows for the detection of intentional or unintentional distortions or misleading statements . Module 2 Acknowledgment function: Gives researchers credit for their work, playing a crucial role in individual promotions, continued employment, reputation enhancement, and securing research funding from reputed organizations . Module 2 + 1 Documentation function: Used to document scientific concepts and trace the historical progress of a particular technology over the years . Module 2 8. Explain basic search operators used in search option The basic search operators include: OR: Broadens the search by capturing synonyms or variant spellings of a concept . Module 2 Brackets / Parentheses () : Gathers \"OR'd\" synonyms of a concept together while combining them with another concept . Module 2 Quotation marks \"\" : Narrows the search by finding words together as an exact phrase rather than separately . Module 2 Site: Limits the search results to a specific domain or website . Module 2 File type: Limits the search results to a specific file extension (such as PDFs, PowerPoint presentations, or Excel spreadsheets) . Module 2 9. How do the title and keywords of a research paper influence its citation impact Titles: The title is the most important attribute for making a paper traceable and marketing it during a literature survey . Module 2 + 1 Longer titles that include study methodology and/or results in more detail tend to attract more attention and citations . Module 2 Titles containing question marks, colons, or geographical references are generally associated with lower citation rates, while result-describing titles usually receive more citations than method-describing titles . Module 2 Keywords: Including at least two keywords in the title increases the chances of an article being found, read, and cited . Module 2 Keywords represent the essential information and main content of an article, which search engines, digital libraries, and indexing services use to categorize the topic and direct it to the relevant audience . Module 2 10. What does the Author should acknowledge? List and explain. Authors should acknowledge the contributions of others to demonstrate academic integrity . According to the text, authors should acknowledge: Module 2 + 2 Quotations: Direct quotations (exact words/sentences in original order enclosed in quotation marks) and indirect quotations (summarized or paraphrased quotes) must be properly acknowledged with names, dates, and proper attribution . Module 2 Ideas, Facts, and Paraphrasing: External concepts, facts, or paraphrased insights used in the text must be credited to their original creators . Module 2 People (Scientific and Technical Guidance): Acknowledge individuals who provided technical guidance, participated in discussions, shared information, or assisted experimentally and theoretically (such as assistants, students, or technicians) . Module 2 + 1 Funding Organizations: If financial grants were used in the reported work, full details of the funding program and grant number must be acknowledged . Module 2 Oral Discussions or Support: Contributions from discussions or moral/technical support should be credited . Module 2 + 1 Laboratory and Computer Work: Services, facilities, or computational work utilized from centers or organizations with which the authors are not formally affiliated should be gratefully acknowledged . Module 2 + 1"
+      },
+      "source": {
+        "type": "gemini_ai",
+        "session_id": "gemini_bridge",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T12:48:25.332163+00:00Z",
+        "raw_reference": "gemini_bridge_turn_0"
+      },
+      "id": "06fa4fda-1359-434a-bc90-0f698c62b67e"
+    },
+    {
+      "node_id": "10578539-4bf0-4c9a-a4f4-3b28ece5eb1e",
+      "entity_type": "generic",
+      "content": "Page number",
+      "session_id": "gemini_bridge",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "b83c0dae-1669-4207-8a53-60d5c9d6c730",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T12:48:25.417142+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "gemini_user",
+          "session_id": "gemini_bridge",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T12:48:25.417142+00:00Z",
+          "raw_reference": "gemini_bridge_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T12:48:25.417142+00:00",
+        "last_accessed": "2026-11-13T12:48:25.417142+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Page number",
+        "summary_l1": "Page number",
+        "content_l2": "Page number"
+      },
+      "source": {
+        "type": "gemini_user",
+        "session_id": "gemini_bridge",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T12:48:25.417142+00:00Z",
+        "raw_reference": "gemini_bridge_turn_0"
+      },
+      "id": "10578539-4bf0-4c9a-a4f4-3b28ece5eb1e"
+    },
+    {
+      "node_id": "88106099-b153-4465-b985-aa176d0f44b3",
+      "entity_type": "generic",
+      "content": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5 . Module 2 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?: Not covered in the provided source document. 4. Explain how researchers can use bibliographic databases to find relevant literature: Found on Page 5 . Module 2 5. How technical reading is different from general reading?: Found on Page 8 . Module 2 6. Write the general steps followed for technical reading: Found on Page 9 . Module 2 7. Explain the three main functions of citation: Found on Page 15 . Module 2 8. Explain basic search operators used in search option: Found on Page 6 . Module 2 9. How do the title and keywords of a research paper influence its citation impact: Found on Page 16 and Page 17 . Module 2 + 1 10. What does the Author should acknowledge? List and explain: Found on Page 21 and Page 22 . Module 2 + 1",
+      "session_id": "gemini_bridge",
+      "deletion_state": "active",
+      "version": 1,
+      "lifecycle": [
+        {
+          "event_id": "cf055b7f-ed77-4e0d-a4f7-de5cd05d49d5",
+          "state": "created",
+          "actor": "system",
+          "reason": "entity_created",
+          "timestamp": "2026-11-13T12:48:25.446762+00:00",
+          "metadata": {}
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "gemini_ai",
+          "session_id": "gemini_bridge",
+          "turn_index": 0,
+          "timestamp": "2026-11-13T12:48:25.446762+00:00Z",
+          "raw_reference": "gemini_bridge_turn_0"
+        },
+        "trust_status": "user_asserted",
+        "derivation_edges": [],
+        "supersedes": null,
+        "contradicts": [],
+        "is_blocked": false,
+        "created_at": "2026-11-13T12:48:25.446762+00:00",
+        "last_accessed": "2026-11-13T12:48:25.446762+00:00",
+        "access_count": 0,
+        "deleted_reason": null,
+        "deleted_by": null,
+        "deleted_at": null,
+        "summary_l0": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1",
+        "summary_l1": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8. Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5",
+        "content_l2": "Based on the provided source document, here are the page numbers corresponding to each of the questions: 1. How searching is an iterative process: Found on Page 7 and Page 8 . Module 2 + 1 2. Describe the role of bibliographic databases in academic research: Found on Page 5 . Module 2 3. Explain the different ways that research choices that matter from an ethical perspective and influence the effects of technology?: Not covered in the provided source document. 4. Explain how researchers can use bibliographic databases to find relevant literature: Found on Page 5 . Module 2 5. How technical reading is different from general reading?: Found on Page 8 . Module 2 6. Write the general steps followed for technical reading: Found on Page 9 . Module 2 7. Explain the three main functions of citation: Found on Page 15 . Module 2 8. Explain basic search operators used in search option: Found on Page 6 . Module 2 9. How do the title and keywords of a research paper influence its citation impact: Found on Page 16 and Page 17 . Module 2 + 1 10. What does the Author should acknowledge? List and explain: Found on Page 21 and Page 22 . Module 2 + 1"
+      },
+      "source": {
+        "type": "gemini_ai",
+        "session_id": "gemini_bridge",
+        "turn_index": 0,
+        "timestamp": "2026-11-13T12:48:25.446762+00:00Z",
+        "raw_reference": "gemini_bridge_turn_0"
+      },
+      "id": "88106099-b153-4465-b985-aa176d0f44b3"
     }
   ],
   "edges": []

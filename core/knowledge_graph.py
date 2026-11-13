@@ -371,7 +371,7 @@ class KnowledgeGraph:
                 if hasattr(node, "lifecycle") and node.lifecycle:
                     self.graph.nodes[nid]["lifecycle"] = list(node.lifecycle)
 
-        data = nx.node_link_data(self.graph)
+        data = nx.node_link_data(self.graph, edges="edges")
 
         def _json_serial(obj):
             if hasattr(obj, "isoformat"):
@@ -406,7 +406,8 @@ class KnowledgeGraph:
                 except Exception:
                     pass
         else:
-            self.graph = nx.node_link_graph(data, directed=True)
+            edge_key = "edges" if "edges" in data else "links"
+            self.graph = nx.node_link_graph(data, directed=True, edges=edge_key)
 
         for nid in list(self.graph.nodes):
             if "node_id" not in self.graph.nodes[nid]:
